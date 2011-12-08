@@ -43,11 +43,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Entity"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Relation" eSuperTypes="#//AbstractElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="origin" eType="#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinalityFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RelationType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinalityTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="destination" eType="#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RelationType">

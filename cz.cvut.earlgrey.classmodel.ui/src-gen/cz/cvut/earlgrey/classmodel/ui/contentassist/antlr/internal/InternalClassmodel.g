@@ -1603,9 +1603,9 @@ rule__Relation__Group__0__Impl
     }
 :
 (
-{ before(grammarAccess.getRelationAccess().getFromAssignment_0()); }
-(rule__Relation__FromAssignment_0)
-{ after(grammarAccess.getRelationAccess().getFromAssignment_0()); }
+{ before(grammarAccess.getRelationAccess().getOriginAssignment_0()); }
+(rule__Relation__OriginAssignment_0)
+{ after(grammarAccess.getRelationAccess().getOriginAssignment_0()); }
 )
 
 ;
@@ -1719,9 +1719,9 @@ rule__Relation__Group__4__Impl
     }
 :
 (
-{ before(grammarAccess.getRelationAccess().getToAssignment_4()); }
-(rule__Relation__ToAssignment_4)
-{ after(grammarAccess.getRelationAccess().getToAssignment_4()); }
+{ before(grammarAccess.getRelationAccess().getDestinationAssignment_4()); }
+(rule__Relation__DestinationAssignment_4)
+{ after(grammarAccess.getRelationAccess().getDestinationAssignment_4()); }
 )
 
 ;
@@ -2318,18 +2318,18 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Relation__FromAssignment_0
+rule__Relation__OriginAssignment_0
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getRelationAccess().getFromEntityCrossReference_0_0()); }
+{ before(grammarAccess.getRelationAccess().getOriginEntityCrossReference_0_0()); }
 (
-{ before(grammarAccess.getRelationAccess().getFromEntityQualifiedNameParserRuleCall_0_0_1()); }
-	ruleQualifiedName{ after(grammarAccess.getRelationAccess().getFromEntityQualifiedNameParserRuleCall_0_0_1()); }
+{ before(grammarAccess.getRelationAccess().getOriginEntityQualifiedNameParserRuleCall_0_0_1()); }
+	ruleQualifiedName{ after(grammarAccess.getRelationAccess().getOriginEntityQualifiedNameParserRuleCall_0_0_1()); }
 )
-{ after(grammarAccess.getRelationAccess().getFromEntityCrossReference_0_0()); }
+{ after(grammarAccess.getRelationAccess().getOriginEntityCrossReference_0_0()); }
 )
 
 ;
@@ -2382,18 +2382,18 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Relation__ToAssignment_4
+rule__Relation__DestinationAssignment_4
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getRelationAccess().getToEntityCrossReference_4_0()); }
+{ before(grammarAccess.getRelationAccess().getDestinationEntityCrossReference_4_0()); }
 (
-{ before(grammarAccess.getRelationAccess().getToEntityQualifiedNameParserRuleCall_4_0_1()); }
-	ruleQualifiedName{ after(grammarAccess.getRelationAccess().getToEntityQualifiedNameParserRuleCall_4_0_1()); }
+{ before(grammarAccess.getRelationAccess().getDestinationEntityQualifiedNameParserRuleCall_4_0_1()); }
+	ruleQualifiedName{ after(grammarAccess.getRelationAccess().getDestinationEntityQualifiedNameParserRuleCall_4_0_1()); }
 )
-{ after(grammarAccess.getRelationAccess().getToEntityCrossReference_4_0()); }
+{ after(grammarAccess.getRelationAccess().getDestinationEntityCrossReference_4_0()); }
 )
 
 ;

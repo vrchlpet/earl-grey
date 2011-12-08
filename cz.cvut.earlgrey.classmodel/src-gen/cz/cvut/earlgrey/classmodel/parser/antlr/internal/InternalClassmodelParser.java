@@ -1690,7 +1690,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             	        }
                     
              
-            	        newCompositeNode(grammarAccess.getRelationAccess().getFromEntityCrossReference_0_0()); 
+            	        newCompositeNode(grammarAccess.getRelationAccess().getOriginEntityCrossReference_0_0()); 
             	    
             pushFollow(FOLLOW_ruleQualifiedName_in_ruleRelation1330);
             ruleQualifiedName();
@@ -1823,7 +1823,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             	        }
                     
              
-            	        newCompositeNode(grammarAccess.getRelationAccess().getToEntityCrossReference_4_0()); 
+            	        newCompositeNode(grammarAccess.getRelationAccess().getDestinationEntityCrossReference_4_0()); 
             	    
             pushFollow(FOLLOW_ruleQualifiedName_in_ruleRelation1420);
             ruleQualifiedName();

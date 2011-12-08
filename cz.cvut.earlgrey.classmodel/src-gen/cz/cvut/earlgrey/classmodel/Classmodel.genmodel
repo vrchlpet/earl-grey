@@ -63,11 +63,11 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Attribute/type"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Relation">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Relation/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Relation/origin"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relation/cardinalityFrom"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relation/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relation/cardinalityTo"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Relation/to"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Relation/destination"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relation/label"/>
     </genClasses>
   </genPackages>

@@ -386,13 +386,13 @@ public interface ClassmodelPackage extends EPackage
   int RELATION = 8;
 
   /**
-   * The feature id for the '<em><b>From</b></em>' reference.
+   * The feature id for the '<em><b>Origin</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RELATION__FROM = ABSTRACT_ELEMENT_FEATURE_COUNT + 0;
+  int RELATION__ORIGIN = ABSTRACT_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Cardinality From</b></em>' attribute.
@@ -422,13 +422,13 @@ public interface ClassmodelPackage extends EPackage
   int RELATION__CARDINALITY_TO = ABSTRACT_ELEMENT_FEATURE_COUNT + 3;
 
   /**
-   * The feature id for the '<em><b>To</b></em>' reference.
+   * The feature id for the '<em><b>Destination</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RELATION__TO = ABSTRACT_ELEMENT_FEATURE_COUNT + 4;
+  int RELATION__DESTINATION = ABSTRACT_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Label</b></em>' attribute.
@@ -768,15 +768,15 @@ public interface ClassmodelPackage extends EPackage
   EClass getRelation();
 
   /**
-   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getFrom <em>From</em>}'.
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getOrigin <em>Origin</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>From</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Relation#getFrom()
+   * @return the meta object for the reference '<em>Origin</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Relation#getOrigin()
    * @see #getRelation()
    * @generated
    */
-  EReference getRelation_From();
+  EReference getRelation_Origin();
 
   /**
    * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getCardinalityFrom <em>Cardinality From</em>}'.
@@ -812,15 +812,15 @@ public interface ClassmodelPackage extends EPackage
   EAttribute getRelation_CardinalityTo();
 
   /**
-   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getTo <em>To</em>}'.
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getDestination <em>Destination</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>To</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Relation#getTo()
+   * @return the meta object for the reference '<em>Destination</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Relation#getDestination()
    * @see #getRelation()
    * @generated
    */
-  EReference getRelation_To();
+  EReference getRelation_Destination();
 
   /**
    * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getLabel <em>Label</em>}'.
@@ -1121,12 +1121,12 @@ public interface ClassmodelPackage extends EPackage
     EClass RELATION = eINSTANCE.getRelation();
 
     /**
-     * The meta object literal for the '<em><b>From</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Origin</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference RELATION__FROM = eINSTANCE.getRelation_From();
+    EReference RELATION__ORIGIN = eINSTANCE.getRelation_Origin();
 
     /**
      * The meta object literal for the '<em><b>Cardinality From</b></em>' attribute feature.
@@ -1153,12 +1153,12 @@ public interface ClassmodelPackage extends EPackage
     EAttribute RELATION__CARDINALITY_TO = eINSTANCE.getRelation_CardinalityTo();
 
     /**
-     * The meta object literal for the '<em><b>To</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Destination</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference RELATION__TO = eINSTANCE.getRelation_To();
+    EReference RELATION__DESTINATION = eINSTANCE.getRelation_Destination();
 
     /**
      * The meta object literal for the '<em><b>Label</b></em>' attribute feature.

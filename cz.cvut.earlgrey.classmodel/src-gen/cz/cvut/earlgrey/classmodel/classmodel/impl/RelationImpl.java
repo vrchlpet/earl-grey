@@ -25,11 +25,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationImpl#getFrom <em>From</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationImpl#getOrigin <em>Origin</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationImpl#getCardinalityFrom <em>Cardinality From</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationImpl#getType <em>Type</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationImpl#getCardinalityTo <em>Cardinality To</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationImpl#getTo <em>To</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationImpl#getDestination <em>Destination</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationImpl#getLabel <em>Label</em>}</li>
  * </ul>
  * </p>
@@ -39,14 +39,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class RelationImpl extends AbstractElementImpl implements Relation
 {
   /**
-   * The cached value of the '{@link #getFrom() <em>From</em>}' reference.
+   * The cached value of the '{@link #getOrigin() <em>Origin</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFrom()
+   * @see #getOrigin()
    * @generated
    * @ordered
    */
-  protected Entity from;
+  protected Entity origin;
 
   /**
    * The default value of the '{@link #getCardinalityFrom() <em>Cardinality From</em>}' attribute.
@@ -109,14 +109,14 @@ public class RelationImpl extends AbstractElementImpl implements Relation
   protected String cardinalityTo = CARDINALITY_TO_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getTo() <em>To</em>}' reference.
+   * The cached value of the '{@link #getDestination() <em>Destination</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTo()
+   * @see #getDestination()
    * @generated
    * @ordered
    */
-  protected Entity to;
+  protected Entity destination;
 
   /**
    * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
@@ -164,19 +164,19 @@ public class RelationImpl extends AbstractElementImpl implements Relation
    * <!-- end-user-doc -->
    * @generated
    */
-  public Entity getFrom()
+  public Entity getOrigin()
   {
-    if (from != null && from.eIsProxy())
+    if (origin != null && origin.eIsProxy())
     {
-      InternalEObject oldFrom = (InternalEObject)from;
-      from = (Entity)eResolveProxy(oldFrom);
-      if (from != oldFrom)
+      InternalEObject oldOrigin = (InternalEObject)origin;
+      origin = (Entity)eResolveProxy(oldOrigin);
+      if (origin != oldOrigin)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassmodelPackage.RELATION__FROM, oldFrom, from));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassmodelPackage.RELATION__ORIGIN, oldOrigin, origin));
       }
     }
-    return from;
+    return origin;
   }
 
   /**
@@ -184,9 +184,9 @@ public class RelationImpl extends AbstractElementImpl implements Relation
    * <!-- end-user-doc -->
    * @generated
    */
-  public Entity basicGetFrom()
+  public Entity basicGetOrigin()
   {
-    return from;
+    return origin;
   }
 
   /**
@@ -194,12 +194,12 @@ public class RelationImpl extends AbstractElementImpl implements Relation
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setFrom(Entity newFrom)
+  public void setOrigin(Entity newOrigin)
   {
-    Entity oldFrom = from;
-    from = newFrom;
+    Entity oldOrigin = origin;
+    origin = newOrigin;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.RELATION__FROM, oldFrom, from));
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.RELATION__ORIGIN, oldOrigin, origin));
   }
 
   /**
@@ -276,19 +276,19 @@ public class RelationImpl extends AbstractElementImpl implements Relation
    * <!-- end-user-doc -->
    * @generated
    */
-  public Entity getTo()
+  public Entity getDestination()
   {
-    if (to != null && to.eIsProxy())
+    if (destination != null && destination.eIsProxy())
     {
-      InternalEObject oldTo = (InternalEObject)to;
-      to = (Entity)eResolveProxy(oldTo);
-      if (to != oldTo)
+      InternalEObject oldDestination = (InternalEObject)destination;
+      destination = (Entity)eResolveProxy(oldDestination);
+      if (destination != oldDestination)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassmodelPackage.RELATION__TO, oldTo, to));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassmodelPackage.RELATION__DESTINATION, oldDestination, destination));
       }
     }
-    return to;
+    return destination;
   }
 
   /**
@@ -296,9 +296,9 @@ public class RelationImpl extends AbstractElementImpl implements Relation
    * <!-- end-user-doc -->
    * @generated
    */
-  public Entity basicGetTo()
+  public Entity basicGetDestination()
   {
-    return to;
+    return destination;
   }
 
   /**
@@ -306,12 +306,12 @@ public class RelationImpl extends AbstractElementImpl implements Relation
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTo(Entity newTo)
+  public void setDestination(Entity newDestination)
   {
-    Entity oldTo = to;
-    to = newTo;
+    Entity oldDestination = destination;
+    destination = newDestination;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.RELATION__TO, oldTo, to));
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.RELATION__DESTINATION, oldDestination, destination));
   }
 
   /**
@@ -347,18 +347,18 @@ public class RelationImpl extends AbstractElementImpl implements Relation
   {
     switch (featureID)
     {
-      case ClassmodelPackage.RELATION__FROM:
-        if (resolve) return getFrom();
-        return basicGetFrom();
+      case ClassmodelPackage.RELATION__ORIGIN:
+        if (resolve) return getOrigin();
+        return basicGetOrigin();
       case ClassmodelPackage.RELATION__CARDINALITY_FROM:
         return getCardinalityFrom();
       case ClassmodelPackage.RELATION__TYPE:
         return getType();
       case ClassmodelPackage.RELATION__CARDINALITY_TO:
         return getCardinalityTo();
-      case ClassmodelPackage.RELATION__TO:
-        if (resolve) return getTo();
-        return basicGetTo();
+      case ClassmodelPackage.RELATION__DESTINATION:
+        if (resolve) return getDestination();
+        return basicGetDestination();
       case ClassmodelPackage.RELATION__LABEL:
         return getLabel();
     }
@@ -375,8 +375,8 @@ public class RelationImpl extends AbstractElementImpl implements Relation
   {
     switch (featureID)
     {
-      case ClassmodelPackage.RELATION__FROM:
-        setFrom((Entity)newValue);
+      case ClassmodelPackage.RELATION__ORIGIN:
+        setOrigin((Entity)newValue);
         return;
       case ClassmodelPackage.RELATION__CARDINALITY_FROM:
         setCardinalityFrom((String)newValue);
@@ -387,8 +387,8 @@ public class RelationImpl extends AbstractElementImpl implements Relation
       case ClassmodelPackage.RELATION__CARDINALITY_TO:
         setCardinalityTo((String)newValue);
         return;
-      case ClassmodelPackage.RELATION__TO:
-        setTo((Entity)newValue);
+      case ClassmodelPackage.RELATION__DESTINATION:
+        setDestination((Entity)newValue);
         return;
       case ClassmodelPackage.RELATION__LABEL:
         setLabel((String)newValue);
@@ -407,8 +407,8 @@ public class RelationImpl extends AbstractElementImpl implements Relation
   {
     switch (featureID)
     {
-      case ClassmodelPackage.RELATION__FROM:
-        setFrom((Entity)null);
+      case ClassmodelPackage.RELATION__ORIGIN:
+        setOrigin((Entity)null);
         return;
       case ClassmodelPackage.RELATION__CARDINALITY_FROM:
         setCardinalityFrom(CARDINALITY_FROM_EDEFAULT);
@@ -419,8 +419,8 @@ public class RelationImpl extends AbstractElementImpl implements Relation
       case ClassmodelPackage.RELATION__CARDINALITY_TO:
         setCardinalityTo(CARDINALITY_TO_EDEFAULT);
         return;
-      case ClassmodelPackage.RELATION__TO:
-        setTo((Entity)null);
+      case ClassmodelPackage.RELATION__DESTINATION:
+        setDestination((Entity)null);
         return;
       case ClassmodelPackage.RELATION__LABEL:
         setLabel(LABEL_EDEFAULT);
@@ -439,16 +439,16 @@ public class RelationImpl extends AbstractElementImpl implements Relation
   {
     switch (featureID)
     {
-      case ClassmodelPackage.RELATION__FROM:
-        return from != null;
+      case ClassmodelPackage.RELATION__ORIGIN:
+        return origin != null;
       case ClassmodelPackage.RELATION__CARDINALITY_FROM:
         return CARDINALITY_FROM_EDEFAULT == null ? cardinalityFrom != null : !CARDINALITY_FROM_EDEFAULT.equals(cardinalityFrom);
       case ClassmodelPackage.RELATION__TYPE:
         return type != TYPE_EDEFAULT;
       case ClassmodelPackage.RELATION__CARDINALITY_TO:
         return CARDINALITY_TO_EDEFAULT == null ? cardinalityTo != null : !CARDINALITY_TO_EDEFAULT.equals(cardinalityTo);
-      case ClassmodelPackage.RELATION__TO:
-        return to != null;
+      case ClassmodelPackage.RELATION__DESTINATION:
+        return destination != null;
       case ClassmodelPackage.RELATION__LABEL:
         return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
     }

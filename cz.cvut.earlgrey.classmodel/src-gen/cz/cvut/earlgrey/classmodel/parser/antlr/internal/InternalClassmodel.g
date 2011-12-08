@@ -660,7 +660,7 @@ ruleRelation returns [EObject current=null]
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getRelationAccess().getFromEntityCrossReference_0_0()); 
+	        newCompositeNode(grammarAccess.getRelationAccess().getOriginEntityCrossReference_0_0()); 
 	    }
 		ruleQualifiedName		{ 
 	        afterParserOrEnumRuleCall();
@@ -729,7 +729,7 @@ ruleRelation returns [EObject current=null]
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getRelationAccess().getToEntityCrossReference_4_0()); 
+	        newCompositeNode(grammarAccess.getRelationAccess().getDestinationEntityCrossReference_4_0()); 
 	    }
 		ruleQualifiedName		{ 
 	        afterParserOrEnumRuleCall();

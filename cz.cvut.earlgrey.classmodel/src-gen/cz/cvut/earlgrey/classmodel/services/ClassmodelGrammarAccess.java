@@ -53,6 +53,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRelationParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		////TODO: Add short-class declaration?
+		//
 		//AbstractElement:
 		//	Package | Entity | Relation;
 		public ParserRule getRule() { return rule; }
@@ -118,7 +119,9 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_0 = (RuleCall)cImportedNamespaceAssignment_1.eContents().get(0);
 		
 		////FIXME: importing works without 'import' declaration
+		//
 		////FIXME: file import
+		//
 		//Import:
 		//	"import" importedNamespace=QualifiedNameWithWildcard;
 		public ParserRule getRule() { return rule; }
@@ -151,6 +154,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		////TODO: add generic types support (class A<T> {} ?)
+		//
 		//Entity:
 		//	type=EntityType name=ID "{" attribute+=Attribute* method+=Method* "}";
 		public ParserRule getRule() { return rule; }
@@ -211,6 +215,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cReturnEntityQualifiedNameParserRuleCall_6_0_1 = (RuleCall)cReturnEntityCrossReference_6_0.eContents().get(1);
 		
 		////TODO: change 'return' so it can handle generic types
+		//
 		//Method:
 		//	modifier=Visibility? name=ID "(" (parameters+=Parameter ("," parameters+=Parameter)*)? ")" ":"
 		//	return=[Entity|QualifiedName];
@@ -282,6 +287,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		
 		////TODO: change 'type' so it can handle generic types
+		//
 		//Parameter:
 		//	type=[Entity|QualifiedName] name=ID;
 		public ParserRule getRule() { return rule; }
@@ -318,6 +324,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTypeEntityQualifiedNameParserRuleCall_3_0_1 = (RuleCall)cTypeEntityCrossReference_3_0.eContents().get(1);
 		
 		////TODO: change 'type' so it can handle generic types
+		//
 		//Attribute:
 		//	modifier=Visibility? name=ID ":" type=[Entity|QualifiedName];
 		public ParserRule getRule() { return rule; }
@@ -353,41 +360,40 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	public class RelationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Relation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cFromAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final CrossReference cFromEntityCrossReference_0_0 = (CrossReference)cFromAssignment_0.eContents().get(0);
-		private final RuleCall cFromEntityQualifiedNameParserRuleCall_0_0_1 = (RuleCall)cFromEntityCrossReference_0_0.eContents().get(1);
+		private final Assignment cOriginAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final CrossReference cOriginEntityCrossReference_0_0 = (CrossReference)cOriginAssignment_0.eContents().get(0);
+		private final RuleCall cOriginEntityQualifiedNameParserRuleCall_0_0_1 = (RuleCall)cOriginEntityCrossReference_0_0.eContents().get(1);
 		private final Assignment cCardinalityFromAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cCardinalityFromSTRINGTerminalRuleCall_1_0 = (RuleCall)cCardinalityFromAssignment_1.eContents().get(0);
 		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cTypeRelationTypeEnumRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
 		private final Assignment cCardinalityToAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cCardinalityToSTRINGTerminalRuleCall_3_0 = (RuleCall)cCardinalityToAssignment_3.eContents().get(0);
-		private final Assignment cToAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cToEntityCrossReference_4_0 = (CrossReference)cToAssignment_4.eContents().get(0);
-		private final RuleCall cToEntityQualifiedNameParserRuleCall_4_0_1 = (RuleCall)cToEntityCrossReference_4_0.eContents().get(1);
+		private final Assignment cDestinationAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cDestinationEntityCrossReference_4_0 = (CrossReference)cDestinationAssignment_4.eContents().get(0);
+		private final RuleCall cDestinationEntityQualifiedNameParserRuleCall_4_0_1 = (RuleCall)cDestinationEntityCrossReference_4_0.eContents().get(1);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Keyword cColonKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
 		private final Assignment cLabelAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
 		private final RuleCall cLabelSTRINGTerminalRuleCall_5_1_0 = (RuleCall)cLabelAssignment_5_1.eContents().get(0);
 		
-		////FIXME: rename from/to
 		//Relation:
-		//	from=[Entity|QualifiedName] cardinalityFrom=STRING? type=RelationType cardinalityTo=STRING? to=[Entity|QualifiedName]
-		//	(":" label=STRING)?;
+		//	origin=[Entity|QualifiedName] cardinalityFrom=STRING? type=RelationType cardinalityTo=STRING?
+		//	destination=[Entity|QualifiedName] (":" label=STRING)?;
 		public ParserRule getRule() { return rule; }
 
-		//from=[Entity|QualifiedName] cardinalityFrom=STRING? type=RelationType cardinalityTo=STRING? to=[Entity|QualifiedName]
-		//(":" label=STRING)?
+		//origin=[Entity|QualifiedName] cardinalityFrom=STRING? type=RelationType cardinalityTo=STRING?
+		//destination=[Entity|QualifiedName] (":" label=STRING)?
 		public Group getGroup() { return cGroup; }
 
-		//from=[Entity|QualifiedName]
-		public Assignment getFromAssignment_0() { return cFromAssignment_0; }
+		//origin=[Entity|QualifiedName]
+		public Assignment getOriginAssignment_0() { return cOriginAssignment_0; }
 
 		//[Entity|QualifiedName]
-		public CrossReference getFromEntityCrossReference_0_0() { return cFromEntityCrossReference_0_0; }
+		public CrossReference getOriginEntityCrossReference_0_0() { return cOriginEntityCrossReference_0_0; }
 
 		//QualifiedName
-		public RuleCall getFromEntityQualifiedNameParserRuleCall_0_0_1() { return cFromEntityQualifiedNameParserRuleCall_0_0_1; }
+		public RuleCall getOriginEntityQualifiedNameParserRuleCall_0_0_1() { return cOriginEntityQualifiedNameParserRuleCall_0_0_1; }
 
 		//cardinalityFrom=STRING?
 		public Assignment getCardinalityFromAssignment_1() { return cCardinalityFromAssignment_1; }
@@ -407,14 +413,14 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getCardinalityToSTRINGTerminalRuleCall_3_0() { return cCardinalityToSTRINGTerminalRuleCall_3_0; }
 
-		//to=[Entity|QualifiedName]
-		public Assignment getToAssignment_4() { return cToAssignment_4; }
+		//destination=[Entity|QualifiedName]
+		public Assignment getDestinationAssignment_4() { return cDestinationAssignment_4; }
 
 		//[Entity|QualifiedName]
-		public CrossReference getToEntityCrossReference_4_0() { return cToEntityCrossReference_4_0; }
+		public CrossReference getDestinationEntityCrossReference_4_0() { return cDestinationEntityCrossReference_4_0; }
 
 		//QualifiedName
-		public RuleCall getToEntityQualifiedNameParserRuleCall_4_0_1() { return cToEntityQualifiedNameParserRuleCall_4_0_1; }
+		public RuleCall getDestinationEntityQualifiedNameParserRuleCall_4_0_1() { return cDestinationEntityQualifiedNameParserRuleCall_4_0_1; }
 
 		//(":" label=STRING)?
 		public Group getGroup_5() { return cGroup_5; }
@@ -495,70 +501,95 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCOMPOSITIONComposesKeyword_5_0 = (Keyword)cCOMPOSITIONEnumLiteralDeclaration_5.eContents().get(0);
 		
 		////A in relationship with B
+		//
 		//enum RelationType:
 		//	ASSOCIATION= //A is in assocition with B
+		//
 		//	"associates" | DEPENCY= // A depends on B
+		//
 		//	"depends" | GENERALIZATION= // A extends B
+		//
 		//	"extends" | REALIZATION= // A implements B
+		//
 		//	"implements" | AGGREGATION= //A aggregates B (A consists of B(s), but A can exist without B)
+		//
 		//	"aggregates" | COMPOSITION= //A x B (A is composed of B(s), but cant exist without B)
+		//
 		//	"composes";
 		public EnumRule getRule() { return rule; }
 
 		//ASSOCIATION= //A is in assocition with B
+		//
 		//"associates" | DEPENCY= // A depends on B
+		//
 		//"depends" | GENERALIZATION= // A extends B
+		//
 		//"extends" | REALIZATION= // A implements B
+		//
 		//"implements" | AGGREGATION= //A aggregates B (A consists of B(s), but A can exist without B)
+		//
 		//"aggregates" | COMPOSITION= //A x B (A is composed of B(s), but cant exist without B)
+		//
 		//"composes"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//ASSOCIATION= //A is in assocition with B
+		//
 		//"associates"
 		public EnumLiteralDeclaration getASSOCIATIONEnumLiteralDeclaration_0() { return cASSOCIATIONEnumLiteralDeclaration_0; }
 
 		////A is in assocition with B
+		//
 		//"associates"
 		public Keyword getASSOCIATIONAssociatesKeyword_0_0() { return cASSOCIATIONAssociatesKeyword_0_0; }
 
 		//DEPENCY= // A depends on B
+		//
 		//"depends"
 		public EnumLiteralDeclaration getDEPENCYEnumLiteralDeclaration_1() { return cDEPENCYEnumLiteralDeclaration_1; }
 
 		//// A depends on B
+		//
 		//"depends"
 		public Keyword getDEPENCYDependsKeyword_1_0() { return cDEPENCYDependsKeyword_1_0; }
 
 		//GENERALIZATION= // A extends B
+		//
 		//"extends"
 		public EnumLiteralDeclaration getGENERALIZATIONEnumLiteralDeclaration_2() { return cGENERALIZATIONEnumLiteralDeclaration_2; }
 
 		//// A extends B
+		//
 		//"extends"
 		public Keyword getGENERALIZATIONExtendsKeyword_2_0() { return cGENERALIZATIONExtendsKeyword_2_0; }
 
 		//REALIZATION= // A implements B
+		//
 		//"implements"
 		public EnumLiteralDeclaration getREALIZATIONEnumLiteralDeclaration_3() { return cREALIZATIONEnumLiteralDeclaration_3; }
 
 		//// A implements B
+		//
 		//"implements"
 		public Keyword getREALIZATIONImplementsKeyword_3_0() { return cREALIZATIONImplementsKeyword_3_0; }
 
 		//AGGREGATION= //A aggregates B (A consists of B(s), but A can exist without B)
+		//
 		//"aggregates"
 		public EnumLiteralDeclaration getAGGREGATIONEnumLiteralDeclaration_4() { return cAGGREGATIONEnumLiteralDeclaration_4; }
 
 		////A aggregates B (A consists of B(s), but A can exist without B)
+		//
 		//"aggregates"
 		public Keyword getAGGREGATIONAggregatesKeyword_4_0() { return cAGGREGATIONAggregatesKeyword_4_0; }
 
 		//COMPOSITION= //A x B (A is composed of B(s), but cant exist without B)
+		//
 		//"composes"
 		public EnumLiteralDeclaration getCOMPOSITIONEnumLiteralDeclaration_5() { return cCOMPOSITIONEnumLiteralDeclaration_5; }
 
 		////A x B (A is composed of B(s), but cant exist without B)
+		//
 		//"composes"
 		public Keyword getCOMPOSITIONComposesKeyword_5_0() { return cCOMPOSITIONComposesKeyword_5_0; }
 	}
@@ -698,6 +729,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	////TODO: Add short-class declaration?
+	//
 	//AbstractElement:
 	//	Package | Entity | Relation;
 	public AbstractElementElements getAbstractElementAccess() {
@@ -719,7 +751,9 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	////FIXME: importing works without 'import' declaration
+	//
 	////FIXME: file import
+	//
 	//Import:
 	//	"import" importedNamespace=QualifiedNameWithWildcard;
 	public ImportElements getImportAccess() {
@@ -731,6 +765,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	////TODO: add generic types support (class A<T> {} ?)
+	//
 	//Entity:
 	//	type=EntityType name=ID "{" attribute+=Attribute* method+=Method* "}";
 	public EntityElements getEntityAccess() {
@@ -742,6 +777,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	////TODO: change 'return' so it can handle generic types
+	//
 	//Method:
 	//	modifier=Visibility? name=ID "(" (parameters+=Parameter ("," parameters+=Parameter)*)? ")" ":"
 	//	return=[Entity|QualifiedName];
@@ -754,6 +790,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	////TODO: change 'type' so it can handle generic types
+	//
 	//Parameter:
 	//	type=[Entity|QualifiedName] name=ID;
 	public ParameterElements getParameterAccess() {
@@ -765,6 +802,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	////TODO: change 'type' so it can handle generic types
+	//
 	//Attribute:
 	//	modifier=Visibility? name=ID ":" type=[Entity|QualifiedName];
 	public AttributeElements getAttributeAccess() {
@@ -775,10 +813,9 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getAttributeAccess().getRule();
 	}
 
-	////FIXME: rename from/to
 	//Relation:
-	//	from=[Entity|QualifiedName] cardinalityFrom=STRING? type=RelationType cardinalityTo=STRING? to=[Entity|QualifiedName]
-	//	(":" label=STRING)?;
+	//	origin=[Entity|QualifiedName] cardinalityFrom=STRING? type=RelationType cardinalityTo=STRING?
+	//	destination=[Entity|QualifiedName] (":" label=STRING)?;
 	public RelationElements getRelationAccess() {
 		return (pRelation != null) ? pRelation : (pRelation = new RelationElements());
 	}
@@ -788,13 +825,20 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	////A in relationship with B
+	//
 	//enum RelationType:
 	//	ASSOCIATION= //A is in assocition with B
+	//
 	//	"associates" | DEPENCY= // A depends on B
+	//
 	//	"depends" | GENERALIZATION= // A extends B
+	//
 	//	"extends" | REALIZATION= // A implements B
+	//
 	//	"implements" | AGGREGATION= //A aggregates B (A consists of B(s), but A can exist without B)
+	//
 	//	"aggregates" | COMPOSITION= //A x B (A is composed of B(s), but cant exist without B)
+	//
 	//	"composes";
 	public RelationTypeElements getRelationTypeAccess() {
 		return (unknownRuleRelationType != null) ? unknownRuleRelationType : (unknownRuleRelationType = new RelationTypeElements());

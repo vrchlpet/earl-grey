@@ -15,11 +15,11 @@ package cz.cvut.earlgrey.classmodel.classmodel;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getFrom <em>From</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getOrigin <em>Origin</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getCardinalityFrom <em>Cardinality From</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getType <em>Type</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getCardinalityTo <em>Cardinality To</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getTo <em>To</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getDestination <em>Destination</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getLabel <em>Label</em>}</li>
  * </ul>
  * </p>
@@ -31,30 +31,30 @@ package cz.cvut.earlgrey.classmodel.classmodel;
 public interface Relation extends AbstractElement
 {
   /**
-   * Returns the value of the '<em><b>From</b></em>' reference.
+   * Returns the value of the '<em><b>Origin</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>From</em>' reference isn't clear,
+   * If the meaning of the '<em>Origin</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>From</em>' reference.
-   * @see #setFrom(Entity)
-   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getRelation_From()
+   * @return the value of the '<em>Origin</em>' reference.
+   * @see #setOrigin(Entity)
+   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getRelation_Origin()
    * @model
    * @generated
    */
-  Entity getFrom();
+  Entity getOrigin();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getFrom <em>From</em>}' reference.
+   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getOrigin <em>Origin</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>From</em>' reference.
-   * @see #getFrom()
+   * @param value the new value of the '<em>Origin</em>' reference.
+   * @see #getOrigin()
    * @generated
    */
-  void setFrom(Entity value);
+  void setOrigin(Entity value);
 
   /**
    * Returns the value of the '<em><b>Cardinality From</b></em>' attribute.
@@ -138,30 +138,30 @@ public interface Relation extends AbstractElement
   void setCardinalityTo(String value);
 
   /**
-   * Returns the value of the '<em><b>To</b></em>' reference.
+   * Returns the value of the '<em><b>Destination</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>To</em>' reference isn't clear,
+   * If the meaning of the '<em>Destination</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>To</em>' reference.
-   * @see #setTo(Entity)
-   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getRelation_To()
+   * @return the value of the '<em>Destination</em>' reference.
+   * @see #setDestination(Entity)
+   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getRelation_Destination()
    * @model
    * @generated
    */
-  Entity getTo();
+  Entity getDestination();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getTo <em>To</em>}' reference.
+   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Relation#getDestination <em>Destination</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>To</em>' reference.
-   * @see #getTo()
+   * @param value the new value of the '<em>Destination</em>' reference.
+   * @see #getDestination()
    * @generated
    */
-  void setTo(Entity value);
+  void setDestination(Entity value);
 
   /**
    * Returns the value of the '<em><b>Label</b></em>' attribute.

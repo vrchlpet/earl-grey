@@ -458,7 +458,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRelation_From()
+  public EReference getRelation_Origin()
   {
     return (EReference)relationEClass.getEStructuralFeatures().get(0);
   }
@@ -498,7 +498,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRelation_To()
+  public EReference getRelation_Destination()
   {
     return (EReference)relationEClass.getEStructuralFeatures().get(4);
   }
@@ -608,11 +608,11 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     createEReference(attributeEClass, ATTRIBUTE__TYPE);
 
     relationEClass = createEClass(RELATION);
-    createEReference(relationEClass, RELATION__FROM);
+    createEReference(relationEClass, RELATION__ORIGIN);
     createEAttribute(relationEClass, RELATION__CARDINALITY_FROM);
     createEAttribute(relationEClass, RELATION__TYPE);
     createEAttribute(relationEClass, RELATION__CARDINALITY_TO);
-    createEReference(relationEClass, RELATION__TO);
+    createEReference(relationEClass, RELATION__DESTINATION);
     createEAttribute(relationEClass, RELATION__LABEL);
 
     // Create enums
@@ -690,11 +690,11 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     initEReference(getAttribute_Type(), this.getEntity(), null, "type", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(relationEClass, Relation.class, "Relation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRelation_From(), this.getEntity(), null, "from", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRelation_Origin(), this.getEntity(), null, "origin", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRelation_CardinalityFrom(), ecorePackage.getEString(), "cardinalityFrom", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRelation_Type(), this.getRelationType(), "type", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRelation_CardinalityTo(), ecorePackage.getEString(), "cardinalityTo", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRelation_To(), this.getEntity(), null, "to", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRelation_Destination(), this.getEntity(), null, "destination", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRelation_Label(), ecorePackage.getEString(), "label", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals

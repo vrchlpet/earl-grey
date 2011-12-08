@@ -189,11 +189,11 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	/**
 	 * Constraint:
 	 *     (
-	 *         from=[Entity|QualifiedName] 
+	 *         origin=[Entity|QualifiedName] 
 	 *         cardinalityFrom=STRING? 
 	 *         type=RelationType 
 	 *         cardinalityTo=STRING? 
-	 *         to=[Entity|QualifiedName] 
+	 *         destination=[Entity|QualifiedName] 
 	 *         label=STRING?
 	 *     )
 	 */

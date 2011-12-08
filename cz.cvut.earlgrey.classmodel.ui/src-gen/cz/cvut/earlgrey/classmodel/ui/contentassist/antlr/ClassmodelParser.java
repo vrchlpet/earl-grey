@@ -74,11 +74,11 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAttributeAccess().getModifierAssignment_0(), "rule__Attribute__ModifierAssignment_0");
 					put(grammarAccess.getAttributeAccess().getNameAssignment_1(), "rule__Attribute__NameAssignment_1");
 					put(grammarAccess.getAttributeAccess().getTypeAssignment_3(), "rule__Attribute__TypeAssignment_3");
-					put(grammarAccess.getRelationAccess().getFromAssignment_0(), "rule__Relation__FromAssignment_0");
+					put(grammarAccess.getRelationAccess().getOriginAssignment_0(), "rule__Relation__OriginAssignment_0");
 					put(grammarAccess.getRelationAccess().getCardinalityFromAssignment_1(), "rule__Relation__CardinalityFromAssignment_1");
 					put(grammarAccess.getRelationAccess().getTypeAssignment_2(), "rule__Relation__TypeAssignment_2");
 					put(grammarAccess.getRelationAccess().getCardinalityToAssignment_3(), "rule__Relation__CardinalityToAssignment_3");
-					put(grammarAccess.getRelationAccess().getToAssignment_4(), "rule__Relation__ToAssignment_4");
+					put(grammarAccess.getRelationAccess().getDestinationAssignment_4(), "rule__Relation__DestinationAssignment_4");
 					put(grammarAccess.getRelationAccess().getLabelAssignment_5_1(), "rule__Relation__LabelAssignment_5_1");
 				}
 			};

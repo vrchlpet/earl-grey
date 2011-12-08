@@ -39,10 +39,9 @@ Parameter:
 Attribute:
     (modifier=Visibility)? name=ID ':' type=[Entity|QualifiedName];
 
-    //FIXME: rename from/to
 Relation:
-    from=[Entity|QualifiedName] (cardinalityFrom=STRING)? type=RelationType (cardinalityTo=STRING)?
-    to=[Entity|QualifiedName] (':' label=STRING)?;
+    origin=[Entity|QualifiedName] (cardinalityFrom=STRING)? type=RelationType (cardinalityTo=STRING)?
+    destination=[Entity|QualifiedName] (':' label=STRING)?;
 
     //A in relationship with B
 enum RelationType:
