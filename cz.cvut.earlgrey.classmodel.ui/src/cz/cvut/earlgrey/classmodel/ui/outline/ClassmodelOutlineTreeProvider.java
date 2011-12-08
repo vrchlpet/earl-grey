@@ -75,6 +75,9 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	 * @return label as StyledString
 	 */
 	public Object _text(Relation element) {
+		if (element.getOrigin().getName() == null) {
+			return null;
+		}
 		StyledString styled = new StyledString(element.getOrigin().getName()
 				+ " ");
 		styled.append(new StyledString(element.getType().getLiteral(),
@@ -86,6 +89,11 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		return styled;
 	}
 
+	/**
+	 * Creates TextStyle object with specified color.
+	 * 
+	 * @return
+	 */
 	private TextStyle getTypeTextStyle() {
 		TextStyle textStyle = new TextStyle();
 		textStyle.setColor(new RGB(149, 125, 71));

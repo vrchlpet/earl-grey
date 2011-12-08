@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+	<template autoinsert="true"
+		context="cz.cvut.earlgrey.classmodel.Classmodel.Entity" id="cz.cvut.earlgrey.classmodel.ui.templates.Entity"
+		description="creates new type" enabled="true" name="class">${type:Enum('EntityType')} ${name} {
+    
+}</template>
+    <template autoinsert="true"
+		context="cz.cvut.earlgrey.classmodel.Classmodel.Relation" id="cz.cvut.earlgrey.classmodel.ui.templates.Relation"
+		description="creates new relation"
+		enabled="true" name="relation">${origin:CrossReference(Relation.origin)} ${type:Enum('RelationType')} ${destination:CrossReference(Relation.destination)}</template>
+</templates>

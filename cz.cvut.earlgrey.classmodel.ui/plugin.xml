@@ -52,7 +52,7 @@
         <page
             class="cz.cvut.earlgrey.classmodel.ui.ClassmodelExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
             id="cz.cvut.earlgrey.classmodel.Classmodel"
-            name="Classmodel">
+            name="ClassModel">
             <keywordReference id="cz.cvut.earlgrey.classmodel.ui.keyword_Classmodel"/>
         </page>
         <page
