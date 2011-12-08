@@ -1,0 +1,68 @@
+grammar cz.cvut.earlgrey.classmodel.Classmodel with org.eclipse.xtext.common.Terminals
+
+generate classmodel "http://www.cvut.cz/earlgrey/classmodel/Classmodel"
+
+Classmodel:
+    (imports+=Import)* (elements+=AbstractElement)*;
+
+//TODO: Add short-class declaration?
+AbstractElement:
+    Package | Entity | Relation;
+
+Package:
+    'package' name=QualifiedName '{'
+    (elements+=AbstractElement)*
+    '}';
+
+    //FIXME: importing works without 'import' declaration
+//FIXME: file import
+Import:
+    'import' importedNamespace=QualifiedNameWithWildcard;
+
+    //TODO: add generic types support (class A<T> {} ?)
+Entity:
+    type=EntityType name=ID '{'
+    attribute+=Attribute*
+    method+=Method*
+    '}';
+
+    //TODO: change 'return' so it can handle generic types
+Method:
+    (modifier=Visibility)? name=ID '(' (parameters+=Parameter (',' parameters+=Parameter)*)? ')' ':'
+    return=[Entity|QualifiedName];
+
+    //TODO: change 'type' so it can handle generic types
+Parameter:
+    type=[Entity|QualifiedName] name=ID;
+
+    //TODO: change 'type' so it can handle generic types
+Attribute:
+    (modifier=Visibility)? name=ID ':' type=[Entity|QualifiedName];
+
+    //FIXME: rename from/to
+Relation:
+    from=[Entity|QualifiedName] (cardinalityFrom=STRING)? type=RelationType (cardinalityTo=STRING)?
+    to=[Entity|QualifiedName] (':' label=STRING)?;
+
+    //A in relationship with B
+enum RelationType:
+    ASSOCIATION='associates' //A is in assocition with B
+    | DEPENCY='depends' // A depends on B
+    | GENERALIZATION='extends' // A extends B
+    | REALIZATION='implements' // A implements B
+    | AGGREGATION='aggregates' //A aggregates B (A consists of B(s), but A can exist without B)
+    | COMPOSITION='composes' //A x B (A is composed of B(s), but cant exist without B)
+;
+
+enum Visibility:
+    PUBLIC='+' | PRIVATE='-' | PROTECTED='#' | PACKAGE_PRIVATE='~';
+
+enum EntityType:
+    CLASS='class' | INTERFACE='interface' | ABSTRACT='abstract' | ENUM='enum';
+
+QualifiedName:
+    ID ('.' ID)*;
+
+QualifiedNameWithWildcard:
+    QualifiedName '.*'?;
+    
