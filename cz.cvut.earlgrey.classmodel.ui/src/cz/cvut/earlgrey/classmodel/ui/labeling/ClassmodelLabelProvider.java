@@ -106,7 +106,7 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 	 * @return image's filename as String
 	 */
 	String image(Classmodel ele) {
-		return "file_obj.gif";
+		return "model_obj.gif";
 	}
 
 	/**

@@ -6,12 +6,13 @@
     <extension
             point="org.eclipse.ui.editors">
         <editor
-            class="cz.cvut.earlgrey.classmodel.ui.ClassmodelExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
-            contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
-            default="true"
-            extensions="cm"
-            id="cz.cvut.earlgrey.classmodel.Classmodel"
-            name="Classmodel Editor">
+              class="cz.cvut.earlgrey.classmodel.ui.ClassmodelExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+              contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
+              default="true"
+              extensions="cm"
+              icon="icons/model_obj.gif"
+              id="cz.cvut.earlgrey.classmodel.Classmodel"
+              name="Classmodel Editor">
         </editor>
     </extension>
     <extension
@@ -276,6 +277,30 @@
             class="cz.cvut.earlgrey.classmodel.ui.ClassmodelExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
             extensions="cm">
     </provider>
+  </extension>
+  <extension
+        point="org.eclipse.ui.newWizards">
+     <category
+           id="cz.cvut.earlgrey.classmodel.ui"
+           name="Earl Grey">
+     </category>
+     <wizard
+           category="cz.cvut.earlgrey.classmodel.ui"
+           class="cz.cvut.earlgrey.classmodel.ui.wizards.NewWizard"
+           icon="icons/model_obj.gif"
+           id="cz.cvut.earlgrey.classmodel.ui.wizards.NewWizard"
+           name="Class Model">
+     </wizard>
+  </extension>
+  <extension
+        point="org.eclipse.core.contenttype.contentTypes">
+     <content-type
+           base-type="org.eclipse.core.runtime.text"
+           file-extensions="cm,CM"
+           id="cz.cvut.earlgrey.classmodel.ui.content.cm"
+           name="Classmodel"
+           priority="normal">
+     </content-type>
   </extension>
 
 </plugin>
