@@ -14,6 +14,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
 import cz.cvut.earlgrey.classmodel.classmodel.Method;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
+import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relation;
 
 import org.eclipse.emf.ecore.EObject;
@@ -118,6 +119,13 @@ public class ClassmodelSwitch<T> extends Switch<T>
         Entity entity = (Entity)theEObject;
         T result = caseEntity(entity);
         if (result == null) result = caseAbstractElement(entity);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ClassmodelPackage.REFERENCE:
+      {
+        Reference reference = (Reference)theEObject;
+        T result = caseReference(reference);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -230,6 +238,22 @@ public class ClassmodelSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseEntity(Entity object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Reference</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Reference</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseReference(Reference object)
   {
     return null;
   }

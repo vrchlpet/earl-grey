@@ -52,8 +52,6 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cEntityParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cRelationParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
-		////TODO: Add short-class declaration?
-		//
 		//AbstractElement:
 		//	Package | Entity | Relation;
 		public ParserRule getRule() { return rule; }
@@ -153,8 +151,6 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMethodMethodParserRuleCall_4_0 = (RuleCall)cMethodAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		////TODO: add generic types support (class A<T> {} ?)
-		//
 		//Entity:
 		//	type=EntityType name=ID "{" attribute+=Attribute* method+=Method* "}";
 		public ParserRule getRule() { return rule; }
@@ -193,6 +189,87 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
+	public class ReferenceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Reference");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final CrossReference cTypeEntityCrossReference_0_0 = (CrossReference)cTypeAssignment_0.eContents().get(0);
+		private final RuleCall cTypeEntityQualifiedNameParserRuleCall_0_0_1 = (RuleCall)cTypeEntityCrossReference_0_0.eContents().get(1);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cLessThanSignKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cGenericAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cGenericReferenceParserRuleCall_1_1_0 = (RuleCall)cGenericAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final Keyword cCommaKeyword_1_2_0 = (Keyword)cGroup_1_2.eContents().get(0);
+		private final Assignment cGenericAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cGenericReferenceParserRuleCall_1_2_1_0 = (RuleCall)cGenericAssignment_1_2_1.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Group cGroup_2_0 = (Group)cGroup_2.eContents().get(0);
+		private final Assignment cDimensionAssignment_2_0_0 = (Assignment)cGroup_2_0.eContents().get(0);
+		private final Keyword cDimensionLeftSquareBracketKeyword_2_0_0_0 = (Keyword)cDimensionAssignment_2_0_0.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_2_0_1 = (Keyword)cGroup_2_0.eContents().get(1);
+		
+		////Entity reference, supports n-dimension arrays, generic types
+		//Reference:
+		//	type=[Entity|QualifiedName] ("<" generic+=Reference ("," generic+=Reference)* ">")? => (dimension+="[" "]")*;
+		public ParserRule getRule() { return rule; }
+
+		//type=[Entity|QualifiedName] ("<" generic+=Reference ("," generic+=Reference)* ">")? => (dimension+="[" "]")*
+		public Group getGroup() { return cGroup; }
+
+		//type=[Entity|QualifiedName]
+		public Assignment getTypeAssignment_0() { return cTypeAssignment_0; }
+
+		//[Entity|QualifiedName]
+		public CrossReference getTypeEntityCrossReference_0_0() { return cTypeEntityCrossReference_0_0; }
+
+		//QualifiedName
+		public RuleCall getTypeEntityQualifiedNameParserRuleCall_0_0_1() { return cTypeEntityQualifiedNameParserRuleCall_0_0_1; }
+
+		//(=> "<" generic+=Reference ("," generic+=Reference)* ">")?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//=> "<"
+		public Keyword getLessThanSignKeyword_1_0() { return cLessThanSignKeyword_1_0; }
+
+		//generic+=Reference
+		public Assignment getGenericAssignment_1_1() { return cGenericAssignment_1_1; }
+
+		//Reference
+		public RuleCall getGenericReferenceParserRuleCall_1_1_0() { return cGenericReferenceParserRuleCall_1_1_0; }
+
+		//("," generic+=Reference)*
+		public Group getGroup_1_2() { return cGroup_1_2; }
+
+		//","
+		public Keyword getCommaKeyword_1_2_0() { return cCommaKeyword_1_2_0; }
+
+		//generic+=Reference
+		public Assignment getGenericAssignment_1_2_1() { return cGenericAssignment_1_2_1; }
+
+		//Reference
+		public RuleCall getGenericReferenceParserRuleCall_1_2_1_0() { return cGenericReferenceParserRuleCall_1_2_1_0; }
+
+		//">"
+		public Keyword getGreaterThanSignKeyword_1_3() { return cGreaterThanSignKeyword_1_3; }
+
+		//=> (dimension+="[" "]")*
+		public Group getGroup_2() { return cGroup_2; }
+
+		//dimension+="[" "]"
+		public Group getGroup_2_0() { return cGroup_2_0; }
+
+		//dimension+="["
+		public Assignment getDimensionAssignment_2_0_0() { return cDimensionAssignment_2_0_0; }
+
+		//"["
+		public Keyword getDimensionLeftSquareBracketKeyword_2_0_0_0() { return cDimensionLeftSquareBracketKeyword_2_0_0_0; }
+
+		//"]"
+		public Keyword getRightSquareBracketKeyword_2_0_1() { return cRightSquareBracketKeyword_2_0_1; }
+	}
+
 	public class MethodElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Method");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -211,18 +288,13 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cColonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cReturnAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final CrossReference cReturnEntityCrossReference_6_0 = (CrossReference)cReturnAssignment_6.eContents().get(0);
-		private final RuleCall cReturnEntityQualifiedNameParserRuleCall_6_0_1 = (RuleCall)cReturnEntityCrossReference_6_0.eContents().get(1);
+		private final RuleCall cReturnReferenceParserRuleCall_6_0 = (RuleCall)cReturnAssignment_6.eContents().get(0);
 		
-		////TODO: change 'return' so it can handle generic types
-		//
 		//Method:
-		//	modifier=Visibility? name=ID "(" (parameters+=Parameter ("," parameters+=Parameter)*)? ")" ":"
-		//	return=[Entity|QualifiedName];
+		//	modifier=Visibility? name=ID "(" (parameters+=Parameter ("," parameters+=Parameter)*)? ")" ":" return=Reference;
 		public ParserRule getRule() { return rule; }
 
-		//modifier=Visibility? name=ID "(" (parameters+=Parameter ("," parameters+=Parameter)*)? ")" ":"
-		//return=[Entity|QualifiedName]
+		//modifier=Visibility? name=ID "(" (parameters+=Parameter ("," parameters+=Parameter)*)? ")" ":" return=Reference
 		public Group getGroup() { return cGroup; }
 
 		//modifier=Visibility?
@@ -267,42 +339,33 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_5() { return cColonKeyword_5; }
 
-		//return=[Entity|QualifiedName]
+		//return=Reference
 		public Assignment getReturnAssignment_6() { return cReturnAssignment_6; }
 
-		//[Entity|QualifiedName]
-		public CrossReference getReturnEntityCrossReference_6_0() { return cReturnEntityCrossReference_6_0; }
-
-		//QualifiedName
-		public RuleCall getReturnEntityQualifiedNameParserRuleCall_6_0_1() { return cReturnEntityQualifiedNameParserRuleCall_6_0_1; }
+		//Reference
+		public RuleCall getReturnReferenceParserRuleCall_6_0() { return cReturnReferenceParserRuleCall_6_0; }
 	}
 
 	public class ParameterElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Parameter");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final CrossReference cTypeEntityCrossReference_0_0 = (CrossReference)cTypeAssignment_0.eContents().get(0);
-		private final RuleCall cTypeEntityQualifiedNameParserRuleCall_0_0_1 = (RuleCall)cTypeEntityCrossReference_0_0.eContents().get(1);
+		private final RuleCall cTypeReferenceParserRuleCall_0_0 = (RuleCall)cTypeAssignment_0.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		
-		////TODO: change 'type' so it can handle generic types
-		//
 		//Parameter:
-		//	type=[Entity|QualifiedName] name=ID;
+		//	type=Reference name=ID;
 		public ParserRule getRule() { return rule; }
 
-		//type=[Entity|QualifiedName] name=ID
+		//type=Reference name=ID
 		public Group getGroup() { return cGroup; }
 
-		//type=[Entity|QualifiedName]
+		//type=Reference
 		public Assignment getTypeAssignment_0() { return cTypeAssignment_0; }
 
-		//[Entity|QualifiedName]
-		public CrossReference getTypeEntityCrossReference_0_0() { return cTypeEntityCrossReference_0_0; }
-
-		//QualifiedName
-		public RuleCall getTypeEntityQualifiedNameParserRuleCall_0_0_1() { return cTypeEntityQualifiedNameParserRuleCall_0_0_1; }
+		//Reference
+		public RuleCall getTypeReferenceParserRuleCall_0_0() { return cTypeReferenceParserRuleCall_0_0; }
 
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -320,16 +383,13 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cTypeEntityCrossReference_3_0 = (CrossReference)cTypeAssignment_3.eContents().get(0);
-		private final RuleCall cTypeEntityQualifiedNameParserRuleCall_3_0_1 = (RuleCall)cTypeEntityCrossReference_3_0.eContents().get(1);
+		private final RuleCall cTypeReferenceParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
 		
-		////TODO: change 'type' so it can handle generic types
-		//
 		//Attribute:
-		//	modifier=Visibility? name=ID ":" type=[Entity|QualifiedName];
+		//	modifier=Visibility? name=ID ":" type=Reference;
 		public ParserRule getRule() { return rule; }
 
-		//modifier=Visibility? name=ID ":" type=[Entity|QualifiedName]
+		//modifier=Visibility? name=ID ":" type=Reference
 		public Group getGroup() { return cGroup; }
 
 		//modifier=Visibility?
@@ -347,14 +407,11 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
 
-		//type=[Entity|QualifiedName]
+		//type=Reference
 		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
 
-		//[Entity|QualifiedName]
-		public CrossReference getTypeEntityCrossReference_3_0() { return cTypeEntityCrossReference_3_0; }
-
-		//QualifiedName
-		public RuleCall getTypeEntityQualifiedNameParserRuleCall_3_0_1() { return cTypeEntityQualifiedNameParserRuleCall_3_0_1; }
+		//Reference
+		public RuleCall getTypeReferenceParserRuleCall_3_0() { return cTypeReferenceParserRuleCall_3_0; }
 	}
 
 	public class RelationElements extends AbstractParserRuleElementFinder {
@@ -500,16 +557,16 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cCOMPOSITIONEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
 		private final Keyword cCOMPOSITIONComposesKeyword_5_0 = (Keyword)cCOMPOSITIONEnumLiteralDeclaration_5.eContents().get(0);
 		
-		////A in relationship with B
+		////A is in relationship with B
 		//
 		//enum RelationType:
 		//	ASSOCIATION= //A is in assocition with B
 		//
-		//	"associates" | DEPENCY= // A depends on B
+		//	"associates" | DEPENCY= //A depends on B
 		//
-		//	"depends" | GENERALIZATION= // A extends B
+		//	"depends" | GENERALIZATION= //A extends B
 		//
-		//	"extends" | REALIZATION= // A implements B
+		//	"extends" | REALIZATION= //A implements B
 		//
 		//	"implements" | AGGREGATION= //A aggregates B (A consists of B(s), but A can exist without B)
 		//
@@ -520,11 +577,11 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ASSOCIATION= //A is in assocition with B
 		//
-		//"associates" | DEPENCY= // A depends on B
+		//"associates" | DEPENCY= //A depends on B
 		//
-		//"depends" | GENERALIZATION= // A extends B
+		//"depends" | GENERALIZATION= //A extends B
 		//
-		//"extends" | REALIZATION= // A implements B
+		//"extends" | REALIZATION= //A implements B
 		//
 		//"implements" | AGGREGATION= //A aggregates B (A consists of B(s), but A can exist without B)
 		//
@@ -543,32 +600,32 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		//"associates"
 		public Keyword getASSOCIATIONAssociatesKeyword_0_0() { return cASSOCIATIONAssociatesKeyword_0_0; }
 
-		//DEPENCY= // A depends on B
+		//DEPENCY= //A depends on B
 		//
 		//"depends"
 		public EnumLiteralDeclaration getDEPENCYEnumLiteralDeclaration_1() { return cDEPENCYEnumLiteralDeclaration_1; }
 
-		//// A depends on B
+		////A depends on B
 		//
 		//"depends"
 		public Keyword getDEPENCYDependsKeyword_1_0() { return cDEPENCYDependsKeyword_1_0; }
 
-		//GENERALIZATION= // A extends B
+		//GENERALIZATION= //A extends B
 		//
 		//"extends"
 		public EnumLiteralDeclaration getGENERALIZATIONEnumLiteralDeclaration_2() { return cGENERALIZATIONEnumLiteralDeclaration_2; }
 
-		//// A extends B
+		////A extends B
 		//
 		//"extends"
 		public Keyword getGENERALIZATIONExtendsKeyword_2_0() { return cGENERALIZATIONExtendsKeyword_2_0; }
 
-		//REALIZATION= // A implements B
+		//REALIZATION= //A implements B
 		//
 		//"implements"
 		public EnumLiteralDeclaration getREALIZATIONEnumLiteralDeclaration_3() { return cREALIZATIONEnumLiteralDeclaration_3; }
 
-		//// A implements B
+		////A implements B
 		//
 		//"implements"
 		public Keyword getREALIZATIONImplementsKeyword_3_0() { return cREALIZATIONImplementsKeyword_3_0; }
@@ -687,6 +744,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	private PackageElements pPackage;
 	private ImportElements pImport;
 	private EntityElements pEntity;
+	private ReferenceElements pReference;
 	private MethodElements pMethod;
 	private ParameterElements pParameter;
 	private AttributeElements pAttribute;
@@ -728,8 +786,6 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getClassmodelAccess().getRule();
 	}
 
-	////TODO: Add short-class declaration?
-	//
 	//AbstractElement:
 	//	Package | Entity | Relation;
 	public AbstractElementElements getAbstractElementAccess() {
@@ -764,8 +820,6 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getImportAccess().getRule();
 	}
 
-	////TODO: add generic types support (class A<T> {} ?)
-	//
 	//Entity:
 	//	type=EntityType name=ID "{" attribute+=Attribute* method+=Method* "}";
 	public EntityElements getEntityAccess() {
@@ -776,11 +830,19 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getEntityAccess().getRule();
 	}
 
-	////TODO: change 'return' so it can handle generic types
-	//
+	////Entity reference, supports n-dimension arrays, generic types
+	//Reference:
+	//	type=[Entity|QualifiedName] ("<" generic+=Reference ("," generic+=Reference)* ">")? => (dimension+="[" "]")*;
+	public ReferenceElements getReferenceAccess() {
+		return (pReference != null) ? pReference : (pReference = new ReferenceElements());
+	}
+	
+	public ParserRule getReferenceRule() {
+		return getReferenceAccess().getRule();
+	}
+
 	//Method:
-	//	modifier=Visibility? name=ID "(" (parameters+=Parameter ("," parameters+=Parameter)*)? ")" ":"
-	//	return=[Entity|QualifiedName];
+	//	modifier=Visibility? name=ID "(" (parameters+=Parameter ("," parameters+=Parameter)*)? ")" ":" return=Reference;
 	public MethodElements getMethodAccess() {
 		return (pMethod != null) ? pMethod : (pMethod = new MethodElements());
 	}
@@ -789,10 +851,8 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getMethodAccess().getRule();
 	}
 
-	////TODO: change 'type' so it can handle generic types
-	//
 	//Parameter:
-	//	type=[Entity|QualifiedName] name=ID;
+	//	type=Reference name=ID;
 	public ParameterElements getParameterAccess() {
 		return (pParameter != null) ? pParameter : (pParameter = new ParameterElements());
 	}
@@ -801,10 +861,8 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getParameterAccess().getRule();
 	}
 
-	////TODO: change 'type' so it can handle generic types
-	//
 	//Attribute:
-	//	modifier=Visibility? name=ID ":" type=[Entity|QualifiedName];
+	//	modifier=Visibility? name=ID ":" type=Reference;
 	public AttributeElements getAttributeAccess() {
 		return (pAttribute != null) ? pAttribute : (pAttribute = new AttributeElements());
 	}
@@ -824,16 +882,16 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getRelationAccess().getRule();
 	}
 
-	////A in relationship with B
+	////A is in relationship with B
 	//
 	//enum RelationType:
 	//	ASSOCIATION= //A is in assocition with B
 	//
-	//	"associates" | DEPENCY= // A depends on B
+	//	"associates" | DEPENCY= //A depends on B
 	//
-	//	"depends" | GENERALIZATION= // A extends B
+	//	"depends" | GENERALIZATION= //A extends B
 	//
-	//	"extends" | REALIZATION= // A implements B
+	//	"extends" | REALIZATION= //A implements B
 	//
 	//	"implements" | AGGREGATION= //A aggregates B (A consists of B(s), but A can exist without B)
 	//

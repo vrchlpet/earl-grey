@@ -5,7 +5,6 @@ generate classmodel "http://www.cvut.cz/earlgrey/classmodel/Classmodel"
 Classmodel:
     (imports+=Import)* (elements+=AbstractElement)*;
 
-//TODO: Add short-class declaration?
 AbstractElement:
     Package | Entity | Relation;
 
@@ -14,41 +13,45 @@ Package:
     (elements+=AbstractElement)*
     '}';
 
-    //FIXME: importing works without 'import' declaration
+//FIXME: importing works without 'import' declaration
 //FIXME: file import
 Import:
     'import' importedNamespace=QualifiedNameWithWildcard;
 
-    //TODO: add generic types support (class A<T> {} ?)
+//TODO: Generic types? i.e.: class Name<T> {/*body*/} ?
 Entity:
-    type=EntityType name=ID '{'
+    type=EntityType name=ID
+    '{'
     attribute+=Attribute*
     method+=Method*
     '}';
+    
+//Entity reference, supports n-dimension arrays, generic types
+Reference:
+    type=[Entity|QualifiedName] (=> '<' generic+=Reference (',' generic+=Reference)* '>')?
+    => (dimension+='[' ']')*;
 
-    //TODO: change 'return' so it can handle generic types
 Method:
     (modifier=Visibility)? name=ID '(' (parameters+=Parameter (',' parameters+=Parameter)*)? ')' ':'
-    return=[Entity|QualifiedName];
+    return=Reference;
 
-    //TODO: change 'type' so it can handle generic types
 Parameter:
-    type=[Entity|QualifiedName] name=ID;
+    type=Reference
+    name=ID;
 
-    //TODO: change 'type' so it can handle generic types
 Attribute:
-    (modifier=Visibility)? name=ID ':' type=[Entity|QualifiedName];
+    (modifier=Visibility)? name=ID ':' type=Reference;
 
 Relation:
     origin=[Entity|QualifiedName] (cardinalityFrom=STRING)? type=RelationType (cardinalityTo=STRING)?
     destination=[Entity|QualifiedName] (':' label=STRING)?;
 
-    //A in relationship with B
+//A is in relationship with B
 enum RelationType:
     ASSOCIATION='associates' //A is in assocition with B
-    | DEPENCY='depends' // A depends on B
-    | GENERALIZATION='extends' // A extends B
-    | REALIZATION='implements' // A implements B
+    | DEPENCY='depends' //A depends on B
+    | GENERALIZATION='extends' //A extends B
+    | REALIZATION='implements' //A implements B
     | AGGREGATION='aggregates' //A aggregates B (A consists of B(s), but A can exist without B)
     | COMPOSITION='composes' //A x B (A is composed of B(s), but cant exist without B)
 ;

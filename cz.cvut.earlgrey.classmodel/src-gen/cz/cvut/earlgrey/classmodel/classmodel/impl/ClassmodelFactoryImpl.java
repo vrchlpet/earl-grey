@@ -16,6 +16,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.EntityType;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
 import cz.cvut.earlgrey.classmodel.classmodel.Method;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
+import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relation;
 import cz.cvut.earlgrey.classmodel.classmodel.RelationType;
 import cz.cvut.earlgrey.classmodel.classmodel.Visibility;
@@ -86,6 +87,7 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
       case ClassmodelPackage.PACKAGE: return createPackage();
       case ClassmodelPackage.IMPORT: return createImport();
       case ClassmodelPackage.ENTITY: return createEntity();
+      case ClassmodelPackage.REFERENCE: return createReference();
       case ClassmodelPackage.METHOD: return createMethod();
       case ClassmodelPackage.PARAMETER: return createParameter();
       case ClassmodelPackage.ATTRIBUTE: return createAttribute();
@@ -190,6 +192,17 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
   {
     EntityImpl entity = new EntityImpl();
     return entity;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Reference createReference()
+  {
+    ReferenceImpl reference = new ReferenceImpl();
+    return reference;
   }
 
   /**

@@ -7,9 +7,9 @@
 package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
-import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.Method;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
+import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Visibility;
 
 import java.util.Collection;
@@ -97,14 +97,14 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method
   protected EList<Parameter> parameters;
 
   /**
-   * The cached value of the '{@link #getReturn() <em>Return</em>}' reference.
+   * The cached value of the '{@link #getReturn() <em>Return</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getReturn()
    * @generated
    * @ordered
    */
-  protected Entity return_;
+  protected Reference return_;
 
   /**
    * <!-- begin-user-doc -->
@@ -192,27 +192,7 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method
    * <!-- end-user-doc -->
    * @generated
    */
-  public Entity getReturn()
-  {
-    if (return_ != null && return_.eIsProxy())
-    {
-      InternalEObject oldReturn = (InternalEObject)return_;
-      return_ = (Entity)eResolveProxy(oldReturn);
-      if (return_ != oldReturn)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassmodelPackage.METHOD__RETURN, oldReturn, return_));
-      }
-    }
-    return return_;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Entity basicGetReturn()
+  public Reference getReturn()
   {
     return return_;
   }
@@ -222,12 +202,37 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setReturn(Entity newReturn)
+  public NotificationChain basicSetReturn(Reference newReturn, NotificationChain msgs)
   {
-    Entity oldReturn = return_;
+    Reference oldReturn = return_;
     return_ = newReturn;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.METHOD__RETURN, oldReturn, return_));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ClassmodelPackage.METHOD__RETURN, oldReturn, newReturn);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setReturn(Reference newReturn)
+  {
+    if (newReturn != return_)
+    {
+      NotificationChain msgs = null;
+      if (return_ != null)
+        msgs = ((InternalEObject)return_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ClassmodelPackage.METHOD__RETURN, null, msgs);
+      if (newReturn != null)
+        msgs = ((InternalEObject)newReturn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ClassmodelPackage.METHOD__RETURN, null, msgs);
+      msgs = basicSetReturn(newReturn, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.METHOD__RETURN, newReturn, newReturn));
   }
 
   /**
@@ -242,6 +247,8 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method
     {
       case ClassmodelPackage.METHOD__PARAMETERS:
         return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
+      case ClassmodelPackage.METHOD__RETURN:
+        return basicSetReturn(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -263,8 +270,7 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method
       case ClassmodelPackage.METHOD__PARAMETERS:
         return getParameters();
       case ClassmodelPackage.METHOD__RETURN:
-        if (resolve) return getReturn();
-        return basicGetReturn();
+        return getReturn();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -291,7 +297,7 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method
         getParameters().addAll((Collection<? extends Parameter>)newValue);
         return;
       case ClassmodelPackage.METHOD__RETURN:
-        setReturn((Entity)newValue);
+        setReturn((Reference)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -317,7 +323,7 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method
         getParameters().clear();
         return;
       case ClassmodelPackage.METHOD__RETURN:
-        setReturn((Entity)null);
+        setReturn((Reference)null);
         return;
     }
     super.eUnset(featureID);

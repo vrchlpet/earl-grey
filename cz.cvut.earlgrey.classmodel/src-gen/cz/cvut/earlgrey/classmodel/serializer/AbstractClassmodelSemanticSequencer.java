@@ -9,6 +9,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
 import cz.cvut.earlgrey.classmodel.classmodel.Method;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
+import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relation;
 import cz.cvut.earlgrey.classmodel.services.ClassmodelGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
@@ -95,6 +96,12 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 					return; 
 				}
 				else break;
+			case ClassmodelPackage.REFERENCE:
+				if(context == grammarAccess.getReferenceRule()) {
+					sequence_Reference(context, (Reference) semanticObject); 
+					return; 
+				}
+				else break;
 			case ClassmodelPackage.RELATION:
 				if(context == grammarAccess.getAbstractElementRule() ||
 				   context == grammarAccess.getRelationRule()) {
@@ -108,7 +115,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (modifier=Visibility? name=ID type=[Entity|QualifiedName])
+	 *     (modifier=Visibility? name=ID type=Reference)
 	 */
 	protected void sequence_Attribute(EObject context, Attribute semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -151,7 +158,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (modifier=Visibility? name=ID (parameters+=Parameter parameters+=Parameter*)? return=[Entity|QualifiedName])
+	 *     (modifier=Visibility? name=ID (parameters+=Parameter parameters+=Parameter*)? return=Reference)
 	 */
 	protected void sequence_Method(EObject context, Method semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -169,7 +176,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (type=[Entity|QualifiedName] name=ID)
+	 *     (type=Reference name=ID)
 	 */
 	protected void sequence_Parameter(EObject context, Parameter semanticObject) {
 		if(errorAcceptor != null) {
@@ -180,9 +187,18 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getParameterAccess().getTypeEntityQualifiedNameParserRuleCall_0_0_1(), semanticObject.getType());
+		feeder.accept(grammarAccess.getParameterAccess().getTypeReferenceParserRuleCall_0_0(), semanticObject.getType());
 		feeder.accept(grammarAccess.getParameterAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (type=[Entity|QualifiedName] (generic+=Reference generic+=Reference*)? dimension+='['*)
+	 */
+	protected void sequence_Reference(EObject context, Reference semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

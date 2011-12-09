@@ -14,6 +14,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
 import cz.cvut.earlgrey.classmodel.classmodel.Method;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
+import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relation;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -110,6 +111,11 @@ public class ClassmodelAdapterFactory extends AdapterFactoryImpl
       public Adapter caseEntity(Entity object)
       {
         return createEntityAdapter();
+      }
+      @Override
+      public Adapter caseReference(Reference object)
+      {
+        return createReferenceAdapter();
       }
       @Override
       public Adapter caseMethod(Method object)
@@ -224,6 +230,21 @@ public class ClassmodelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createEntityAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.classmodel.classmodel.Reference <em>Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Reference
+   * @generated
+   */
+  public Adapter createReferenceAdapter()
   {
     return null;
   }

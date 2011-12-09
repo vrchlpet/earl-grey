@@ -47,20 +47,25 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Entity/attribute"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Entity/method"/>
     </genClasses>
+    <genClasses ecoreClass="Classmodel.ecore#//Reference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Reference/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Reference/generic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Reference/dimension"/>
+    </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Method">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Method/modifier"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Method/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Method/parameters"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Method/return"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Method/return"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Parameter">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Parameter/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Parameter/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Parameter/name"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Attribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Attribute/modifier"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Attribute/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Attribute/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Attribute/type"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Relation">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Relation/origin"/>

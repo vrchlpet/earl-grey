@@ -8,10 +8,11 @@ package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
-import cz.cvut.earlgrey.classmodel.classmodel.Entity;
+import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Visibility;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -77,14 +78,14 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' reference.
+   * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getType()
    * @generated
    * @ordered
    */
-  protected Entity type;
+  protected Reference type;
 
   /**
    * <!-- begin-user-doc -->
@@ -158,27 +159,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
    * <!-- end-user-doc -->
    * @generated
    */
-  public Entity getType()
-  {
-    if (type != null && type.eIsProxy())
-    {
-      InternalEObject oldType = (InternalEObject)type;
-      type = (Entity)eResolveProxy(oldType);
-      if (type != oldType)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassmodelPackage.ATTRIBUTE__TYPE, oldType, type));
-      }
-    }
-    return type;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Entity basicGetType()
+  public Reference getType()
   {
     return type;
   }
@@ -188,12 +169,53 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(Entity newType)
+  public NotificationChain basicSetType(Reference newType, NotificationChain msgs)
   {
-    Entity oldType = type;
+    Reference oldType = type;
     type = newType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.ATTRIBUTE__TYPE, oldType, type));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ClassmodelPackage.ATTRIBUTE__TYPE, oldType, newType);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType(Reference newType)
+  {
+    if (newType != type)
+    {
+      NotificationChain msgs = null;
+      if (type != null)
+        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ClassmodelPackage.ATTRIBUTE__TYPE, null, msgs);
+      if (newType != null)
+        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ClassmodelPackage.ATTRIBUTE__TYPE, null, msgs);
+      msgs = basicSetType(newType, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.ATTRIBUTE__TYPE, newType, newType));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case ClassmodelPackage.ATTRIBUTE__TYPE:
+        return basicSetType(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -211,8 +233,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
       case ClassmodelPackage.ATTRIBUTE__NAME:
         return getName();
       case ClassmodelPackage.ATTRIBUTE__TYPE:
-        if (resolve) return getType();
-        return basicGetType();
+        return getType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -234,7 +255,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
         setName((String)newValue);
         return;
       case ClassmodelPackage.ATTRIBUTE__TYPE:
-        setType((Entity)newValue);
+        setType((Reference)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -257,7 +278,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
         setName(NAME_EDEFAULT);
         return;
       case ClassmodelPackage.ATTRIBUTE__TYPE:
-        setType((Entity)null);
+        setType((Reference)null);
         return;
     }
     super.eUnset(featureID);

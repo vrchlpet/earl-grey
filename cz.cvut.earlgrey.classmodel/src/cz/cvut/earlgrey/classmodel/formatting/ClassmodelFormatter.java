@@ -39,6 +39,16 @@ public class ClassmodelFormatter extends AbstractDeclarativeFormatter {
 			c.setNoSpace().before(pair.getSecond());
 		}
 
+		for (Pair<Keyword, Keyword> pair : f.findKeywordPairs("<", ">")) {
+			c.setNoSpace().around(pair.getFirst());
+			c.setNoSpace().before(pair.getSecond());
+		}
+
+		for (Pair<Keyword, Keyword> pair : f.findKeywordPairs("[", "]")) {
+			c.setNoSpace().around(pair.getFirst());
+			c.setNoSpace().before(pair.getSecond());
+		}
+
 		for (Keyword comma : f.findKeywords(",")) {
 			c.setNoSpace().before(comma);
 		}

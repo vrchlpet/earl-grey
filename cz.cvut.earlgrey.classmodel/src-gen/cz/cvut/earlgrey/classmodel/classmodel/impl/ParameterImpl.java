@@ -7,10 +7,11 @@
 package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
-import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
+import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -35,14 +36,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class ParameterImpl extends MinimalEObjectImpl.Container implements Parameter
 {
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' reference.
+   * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getType()
    * @generated
    * @ordered
    */
-  protected Entity type;
+  protected Reference type;
 
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -90,27 +91,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * <!-- end-user-doc -->
    * @generated
    */
-  public Entity getType()
-  {
-    if (type != null && type.eIsProxy())
-    {
-      InternalEObject oldType = (InternalEObject)type;
-      type = (Entity)eResolveProxy(oldType);
-      if (type != oldType)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassmodelPackage.PARAMETER__TYPE, oldType, type));
-      }
-    }
-    return type;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Entity basicGetType()
+  public Reference getType()
   {
     return type;
   }
@@ -120,12 +101,37 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(Entity newType)
+  public NotificationChain basicSetType(Reference newType, NotificationChain msgs)
   {
-    Entity oldType = type;
+    Reference oldType = type;
     type = newType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.PARAMETER__TYPE, oldType, type));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ClassmodelPackage.PARAMETER__TYPE, oldType, newType);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType(Reference newType)
+  {
+    if (newType != type)
+    {
+      NotificationChain msgs = null;
+      if (type != null)
+        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ClassmodelPackage.PARAMETER__TYPE, null, msgs);
+      if (newType != null)
+        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ClassmodelPackage.PARAMETER__TYPE, null, msgs);
+      msgs = basicSetType(newType, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.PARAMETER__TYPE, newType, newType));
   }
 
   /**
@@ -157,13 +163,28 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * @generated
    */
   @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case ClassmodelPackage.PARAMETER__TYPE:
+        return basicSetType(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
       case ClassmodelPackage.PARAMETER__TYPE:
-        if (resolve) return getType();
-        return basicGetType();
+        return getType();
       case ClassmodelPackage.PARAMETER__NAME:
         return getName();
     }
@@ -181,7 +202,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
     switch (featureID)
     {
       case ClassmodelPackage.PARAMETER__TYPE:
-        setType((Entity)newValue);
+        setType((Reference)newValue);
         return;
       case ClassmodelPackage.PARAMETER__NAME:
         setName((String)newValue);
@@ -201,7 +222,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
     switch (featureID)
     {
       case ClassmodelPackage.PARAMETER__TYPE:
-        setType((Entity)null);
+        setType((Reference)null);
         return;
       case ClassmodelPackage.PARAMETER__NAME:
         setName(NAME_EDEFAULT);
