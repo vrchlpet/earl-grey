@@ -57,11 +57,13 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		out += "(";
 		int count = 0;
 		for (Parameter params : ele.getParameters()) {
-			if (count > 0) {
-				out += ", ";
+			if (params.getType() != null) {
+				if (count > 0) {
+					out += ", ";
+				}
+				out += params.getType().getName();
+				++count;
 			}
-			out += params.getType().getName();
-			++count;
 		}
 		out += ")";
 		return styleType(out, ele.getReturn());
