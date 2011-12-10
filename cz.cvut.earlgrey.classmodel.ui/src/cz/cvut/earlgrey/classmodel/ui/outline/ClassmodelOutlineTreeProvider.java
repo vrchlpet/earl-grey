@@ -22,6 +22,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.Relation;
  */
 public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 
+	private static final String ARRAY = "[]";
 	private static final int COLOR_B = 71;
 	private static final int COLOR_G = 125;
 	private static final int COLOR_R = 149;
@@ -170,6 +171,10 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 						++counter;
 					}
 					buffer.append(GREATER_THAN);
+				}
+
+				for (int i = 0; i < ref.getDimension().size(); ++i) {
+					buffer.append(ARRAY);
 				}
 			}
 		}
