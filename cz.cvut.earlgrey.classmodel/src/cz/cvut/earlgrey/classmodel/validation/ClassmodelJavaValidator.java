@@ -16,8 +16,8 @@ public class ClassmodelJavaValidator extends AbstractClassmodelJavaValidator {
 	@Check
 	public void checkImportUri(Import importResource) {
 		String uri = importResource.getImportURI();
-		if (uri == null || uri.trim().length() < 1) {
-			error("Imported resource couldn't be resolved",
+		if (uri == null || uri.length() == 0) {
+			error("Imported resource could not be found.",
 					ClassmodelPackage.Literals.IMPORT__IMPORT_URI);
 			return;
 		}

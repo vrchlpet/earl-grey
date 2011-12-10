@@ -61,23 +61,23 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RelationType">
-    <eLiterals name="ASSOCIATION" literal="associates"/>
-    <eLiterals name="DEPENCY" value="1" literal="depends"/>
-    <eLiterals name="GENERALIZATION" value="2" literal="extends"/>
-    <eLiterals name="REALIZATION" value="3" literal="implements"/>
-    <eLiterals name="AGGREGATION" value="4" literal="aggregates"/>
-    <eLiterals name="COMPOSITION" value="5" literal="composedOf"/>
+    <eLiterals name="ASSOCIATION"/>
+    <eLiterals name="DEPENCY" value="1"/>
+    <eLiterals name="GENERALIZATION" value="2"/>
+    <eLiterals name="REALIZATION" value="3"/>
+    <eLiterals name="AGGREGATION" value="4"/>
+    <eLiterals name="COMPOSITION" value="5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Visibility">
-    <eLiterals name="PUBLIC" literal="+"/>
-    <eLiterals name="PRIVATE" value="1" literal="-"/>
-    <eLiterals name="PROTECTED" value="2" literal="#"/>
-    <eLiterals name="PACKAGE_PRIVATE" value="3" literal="~"/>
+    <eLiterals name="PUBLIC"/>
+    <eLiterals name="PRIVATE" value="1"/>
+    <eLiterals name="PROTECTED" value="2"/>
+    <eLiterals name="PACKAGE_PRIVATE" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EntityType">
-    <eLiterals name="CLASS" literal="class"/>
-    <eLiterals name="INTERFACE" value="1" literal="interface"/>
-    <eLiterals name="ABSTRACT" value="2" literal="abstract"/>
-    <eLiterals name="ENUM" value="3" literal="enum"/>
+    <eLiterals name="CLASS"/>
+    <eLiterals name="INTERFACE" value="1"/>
+    <eLiterals name="ABSTRACT" value="2"/>
+    <eLiterals name="ENUM" value="3"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -1,0 +1,16 @@
+class byte{}
+class short{}
+class Short{}
+class int{}
+class Integer{}
+class long{}
+class Long{}
+class float{}
+class Float{}
+class double{}
+class Double{}
+class boolean{}
+class Boolean{}
+class char{}
+class Character{}
+class String{}
