@@ -167,7 +167,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (name=QualifiedName elements+=AbstractElement*)
+	 *     (name=ID elements+=AbstractElement*)
 	 */
 	protected void sequence_Package(EObject context, cz.cvut.earlgrey.classmodel.classmodel.Package semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

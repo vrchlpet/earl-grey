@@ -81,7 +81,7 @@ public enum RelationType implements Enumerator
    * @generated
    * @ordered
    */
-  COMPOSITION(5, "COMPOSITION", "composes");
+  COMPOSITION(5, "COMPOSITION", "composedOf");
 
   /**
    * The '<em><b>ASSOCIATION</b></em>' literal value.
@@ -167,7 +167,7 @@ public enum RelationType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #COMPOSITION
-   * @model literal="composes"
+   * @model literal="composedOf"
    * @generated
    * @ordered
    */

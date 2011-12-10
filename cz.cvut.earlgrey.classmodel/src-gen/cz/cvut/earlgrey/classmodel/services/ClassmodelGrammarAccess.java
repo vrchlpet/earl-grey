@@ -25,7 +25,10 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cElementsAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cElementsAbstractElementParserRuleCall_1_0 = (RuleCall)cElementsAssignment_1.eContents().get(0);
 		
-		//Classmodel:
+		/// **
+		// * Defines root node of a model.
+		// * Resource imports must be defined before other elements.
+		// * / Classmodel:
 		//	imports+=Import* elements+=AbstractElement*;
 		public ParserRule getRule() { return rule; }
 
@@ -74,27 +77,27 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPackageKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameQualifiedNameParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cElementsAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cElementsAbstractElementParserRuleCall_3_0 = (RuleCall)cElementsAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Package:
-		//	"package" name=QualifiedName "{" elements+=AbstractElement* "}";
+		//	"package" name=ID "{" elements+=AbstractElement* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"package" name=QualifiedName "{" elements+=AbstractElement* "}"
+		//"package" name=ID "{" elements+=AbstractElement* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"package"
 		public Keyword getPackageKeyword_0() { return cPackageKeyword_0; }
 
-		//name=QualifiedName
+		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//QualifiedName
-		public RuleCall getNameQualifiedNameParserRuleCall_1_0() { return cNameQualifiedNameParserRuleCall_1_0; }
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
@@ -116,10 +119,6 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cImportURIAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cImportURISTRINGTerminalRuleCall_1_0 = (RuleCall)cImportURIAssignment_1.eContents().get(0);
 		
-		////FIXME: importing works without 'import' declaration
-		//
-		////FIXME: file import
-		//
 		//Import:
 		//	"import" importURI=STRING;
 		public ParserRule getRule() { return rule; }
@@ -211,8 +210,9 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDimensionLeftSquareBracketKeyword_2_0_0_0 = (Keyword)cDimensionAssignment_2_0_0.eContents().get(0);
 		private final Keyword cRightSquareBracketKeyword_2_0_1 = (Keyword)cGroup_2_0.eContents().get(1);
 		
-		////Entity reference, supports n-dimension arrays, generic types
-		//Reference:
+		/// **
+		// * Entity reference, supports n-dimension arrays, generic types.
+		// * / Reference:
 		//	type=[Entity|QualifiedName] ("<" generic+=Reference ("," generic+=Reference)* ">")? => (dimension+="[" "]")*;
 		public ParserRule getRule() { return rule; }
 
@@ -291,7 +291,9 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cReturnAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cReturnReferenceParserRuleCall_6_0 = (RuleCall)cReturnAssignment_6.eContents().get(0);
 		
-		//Method:
+		/// **
+		// * i.e.: +setAll(Parameter[]) : void
+		// * / Method:
 		//	modifier=Visibility? name=ID "(" (parameters+=Parameter ("," parameters+=Parameter)*)? ")" ":" return=Reference;
 		public ParserRule getRule() { return rule; }
 
@@ -520,26 +522,6 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
 	}
-
-	public class QualifiedNameWithWildcardElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QualifiedNameWithWildcard");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cQualifiedNameParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Keyword cFullStopAsteriskKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		
-		//QualifiedNameWithWildcard:
-		//	QualifiedName ".*"?;
-		public ParserRule getRule() { return rule; }
-
-		//QualifiedName ".*"?
-		public Group getGroup() { return cGroup; }
-
-		//QualifiedName
-		public RuleCall getQualifiedNameParserRuleCall_0() { return cQualifiedNameParserRuleCall_0; }
-
-		//".*"?
-		public Keyword getFullStopAsteriskKeyword_1() { return cFullStopAsteriskKeyword_1; }
-	}
 	
 	
 	public class RelationTypeElements extends AbstractEnumRuleElementFinder {
@@ -556,12 +538,15 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cAGGREGATIONEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
 		private final Keyword cAGGREGATIONAggregatesKeyword_4_0 = (Keyword)cAGGREGATIONEnumLiteralDeclaration_4.eContents().get(0);
 		private final EnumLiteralDeclaration cCOMPOSITIONEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
-		private final Keyword cCOMPOSITIONComposesKeyword_5_0 = (Keyword)cCOMPOSITIONEnumLiteralDeclaration_5.eContents().get(0);
+		private final Keyword cCOMPOSITIONComposedOfKeyword_5_0 = (Keyword)cCOMPOSITIONEnumLiteralDeclaration_5.eContents().get(0);
 		
-		////A is in relationship with B
-		//
-		//enum RelationType:
-		//	ASSOCIATION= //A is in assocition with B
+		/// **
+		// * Relation type:
+		// * A is in relationship with B
+		// * 
+		// * i.e.: A extends B
+		// * / enum RelationType:
+		//	ASSOCIATION= //A is in assocition with B 
 		//
 		//	"associates" | DEPENCY= //A depends on B
 		//
@@ -571,12 +556,12 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		//
 		//	"implements" | AGGREGATION= //A aggregates B (A consists of B(s), but A can exist without B)
 		//
-		//	"aggregates" | COMPOSITION= //A x B (A is composed of B(s), but cant exist without B)
+		//	"aggregates" | COMPOSITION= //A x B (A is composed of B(s), but can't exist without B)
 		//
-		//	"composes";
+		//	"composedOf";
 		public EnumRule getRule() { return rule; }
 
-		//ASSOCIATION= //A is in assocition with B
+		//ASSOCIATION= //A is in assocition with B 
 		//
 		//"associates" | DEPENCY= //A depends on B
 		//
@@ -586,17 +571,17 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		//
 		//"implements" | AGGREGATION= //A aggregates B (A consists of B(s), but A can exist without B)
 		//
-		//"aggregates" | COMPOSITION= //A x B (A is composed of B(s), but cant exist without B)
+		//"aggregates" | COMPOSITION= //A x B (A is composed of B(s), but can't exist without B)
 		//
-		//"composes"
+		//"composedOf"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//ASSOCIATION= //A is in assocition with B
+		//ASSOCIATION= //A is in assocition with B 
 		//
 		//"associates"
 		public EnumLiteralDeclaration getASSOCIATIONEnumLiteralDeclaration_0() { return cASSOCIATIONEnumLiteralDeclaration_0; }
 
-		////A is in assocition with B
+		////A is in assocition with B 
 		//
 		//"associates"
 		public Keyword getASSOCIATIONAssociatesKeyword_0_0() { return cASSOCIATIONAssociatesKeyword_0_0; }
@@ -641,15 +626,15 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		//"aggregates"
 		public Keyword getAGGREGATIONAggregatesKeyword_4_0() { return cAGGREGATIONAggregatesKeyword_4_0; }
 
-		//COMPOSITION= //A x B (A is composed of B(s), but cant exist without B)
+		//COMPOSITION= //A x B (A is composed of B(s), but can't exist without B)
 		//
-		//"composes"
+		//"composedOf"
 		public EnumLiteralDeclaration getCOMPOSITIONEnumLiteralDeclaration_5() { return cCOMPOSITIONEnumLiteralDeclaration_5; }
 
-		////A x B (A is composed of B(s), but cant exist without B)
+		////A x B (A is composed of B(s), but can't exist without B)
 		//
-		//"composes"
-		public Keyword getCOMPOSITIONComposesKeyword_5_0() { return cCOMPOSITIONComposesKeyword_5_0; }
+		//"composedOf"
+		public Keyword getCOMPOSITIONComposedOfKeyword_5_0() { return cCOMPOSITIONComposedOfKeyword_5_0; }
 	}
 
 	public class VisibilityElements extends AbstractEnumRuleElementFinder {
@@ -754,7 +739,6 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	private VisibilityElements unknownRuleVisibility;
 	private EntityTypeElements unknownRuleEntityType;
 	private QualifiedNameElements pQualifiedName;
-	private QualifiedNameWithWildcardElements pQualifiedNameWithWildcard;
 	
 	private final GrammarProvider grammarProvider;
 
@@ -777,7 +761,10 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Classmodel:
+	/// **
+	// * Defines root node of a model.
+	// * Resource imports must be defined before other elements.
+	// * / Classmodel:
 	//	imports+=Import* elements+=AbstractElement*;
 	public ClassmodelElements getClassmodelAccess() {
 		return (pClassmodel != null) ? pClassmodel : (pClassmodel = new ClassmodelElements());
@@ -798,7 +785,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Package:
-	//	"package" name=QualifiedName "{" elements+=AbstractElement* "}";
+	//	"package" name=ID "{" elements+=AbstractElement* "}";
 	public PackageElements getPackageAccess() {
 		return (pPackage != null) ? pPackage : (pPackage = new PackageElements());
 	}
@@ -807,10 +794,6 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getPackageAccess().getRule();
 	}
 
-	////FIXME: importing works without 'import' declaration
-	//
-	////FIXME: file import
-	//
 	//Import:
 	//	"import" importURI=STRING;
 	public ImportElements getImportAccess() {
@@ -832,8 +815,9 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getEntityAccess().getRule();
 	}
 
-	////Entity reference, supports n-dimension arrays, generic types
-	//Reference:
+	/// **
+	// * Entity reference, supports n-dimension arrays, generic types.
+	// * / Reference:
 	//	type=[Entity|QualifiedName] ("<" generic+=Reference ("," generic+=Reference)* ">")? => (dimension+="[" "]")*;
 	public ReferenceElements getReferenceAccess() {
 		return (pReference != null) ? pReference : (pReference = new ReferenceElements());
@@ -843,7 +827,9 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getReferenceAccess().getRule();
 	}
 
-	//Method:
+	/// **
+	// * i.e.: +setAll(Parameter[]) : void
+	// * / Method:
 	//	modifier=Visibility? name=ID "(" (parameters+=Parameter ("," parameters+=Parameter)*)? ")" ":" return=Reference;
 	public MethodElements getMethodAccess() {
 		return (pMethod != null) ? pMethod : (pMethod = new MethodElements());
@@ -884,10 +870,13 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getRelationAccess().getRule();
 	}
 
-	////A is in relationship with B
-	//
-	//enum RelationType:
-	//	ASSOCIATION= //A is in assocition with B
+	/// **
+	// * Relation type:
+	// * A is in relationship with B
+	// * 
+	// * i.e.: A extends B
+	// * / enum RelationType:
+	//	ASSOCIATION= //A is in assocition with B 
 	//
 	//	"associates" | DEPENCY= //A depends on B
 	//
@@ -897,9 +886,9 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	//
 	//	"implements" | AGGREGATION= //A aggregates B (A consists of B(s), but A can exist without B)
 	//
-	//	"aggregates" | COMPOSITION= //A x B (A is composed of B(s), but cant exist without B)
+	//	"aggregates" | COMPOSITION= //A x B (A is composed of B(s), but can't exist without B)
 	//
-	//	"composes";
+	//	"composedOf";
 	public RelationTypeElements getRelationTypeAccess() {
 		return (unknownRuleRelationType != null) ? unknownRuleRelationType : (unknownRuleRelationType = new RelationTypeElements());
 	}
@@ -936,16 +925,6 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getQualifiedNameRule() {
 		return getQualifiedNameAccess().getRule();
-	}
-
-	//QualifiedNameWithWildcard:
-	//	QualifiedName ".*"?;
-	public QualifiedNameWithWildcardElements getQualifiedNameWithWildcardAccess() {
-		return (pQualifiedNameWithWildcard != null) ? pQualifiedNameWithWildcard : (pQualifiedNameWithWildcard = new QualifiedNameWithWildcardElements());
-	}
-	
-	public ParserRule getQualifiedNameWithWildcardRule() {
-		return getQualifiedNameWithWildcardAccess().getRule();
 	}
 
 	//terminal ID:

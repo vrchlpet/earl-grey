@@ -5,6 +5,7 @@ package cz.cvut.earlgrey.classmodel;
 
 import org.eclipse.xtext.naming.IQualifiedNameProvider;
 
+import cz.cvut.earlgrey.classmodel.imports.ImportUriGlobalScopeProvider;
 import cz.cvut.earlgrey.classmodel.naming.ClassmodelNameProvider;
 
 /**
@@ -17,5 +18,10 @@ public class ClassmodelRuntimeModule extends
 	@Override
 	public Class<? extends IQualifiedNameProvider> bindIQualifiedNameProvider() {
 		return ClassmodelNameProvider.class;
+	}
+
+	@Override
+	public Class<? extends org.eclipse.xtext.scoping.IGlobalScopeProvider> bindIGlobalScopeProvider() {
+		return ImportUriGlobalScopeProvider.class;
 	}
 }

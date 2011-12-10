@@ -114,9 +114,9 @@ public abstract class AbstractClassmodelRuntimeModule extends DefaultRuntimeModu
 		binder.bindConstant().annotatedWith(org.eclipse.xtext.scoping.IgnoreCaseLinking.class).to(false);
 	}
 
-	// contributed by org.eclipse.xtext.generator.exporting.SimpleNamesFragment
+	// contributed by org.eclipse.xtext.generator.exporting.QualifiedNamesFragment
 	public Class<? extends org.eclipse.xtext.naming.IQualifiedNameProvider> bindIQualifiedNameProvider() {
-		return org.eclipse.xtext.naming.SimpleNameProvider.class;
+		return org.eclipse.xtext.naming.DefaultDeclarativeQualifiedNameProvider.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.builder.BuilderIntegrationFragment

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalClassmodelLexer extends Lexer {
-    public static final int RULE_ID=5;
+    public static final int RULE_ID=4;
     public static final int T__29=29;
     public static final int T__28=28;
     public static final int T__27=27;
@@ -31,7 +31,7 @@ public class InternalClassmodelLexer extends Lexer {
     public static final int T__19=19;
     public static final int T__31=31;
     public static final int T__32=32;
-    public static final int RULE_STRING=4;
+    public static final int RULE_STRING=5;
     public static final int T__16=16;
     public static final int T__33=33;
     public static final int T__15=15;
@@ -433,10 +433,10 @@ public class InternalClassmodelLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:29:7: ( 'composes' )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:29:9: 'composes'
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:29:7: ( 'composedOf' )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:29:9: 'composedOf'
             {
-            match("composes"); 
+            match("composedOf"); 
 
 
             }
@@ -618,10 +618,10 @@ public class InternalClassmodelLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1036:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1036:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1034:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1034:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1036:11: ( '^' )?
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1034:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -630,7 +630,7 @@ public class InternalClassmodelLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1036:11: '^'
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1034:11: '^'
                     {
                     match('^'); 
 
@@ -648,7 +648,7 @@ public class InternalClassmodelLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1036:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1034:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -697,10 +697,10 @@ public class InternalClassmodelLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1038:10: ( ( '0' .. '9' )+ )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1038:12: ( '0' .. '9' )+
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1036:10: ( ( '0' .. '9' )+ )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1036:12: ( '0' .. '9' )+
             {
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1038:12: ( '0' .. '9' )+
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1036:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -714,7 +714,7 @@ public class InternalClassmodelLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1038:13: '0' .. '9'
+            	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1036:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -746,10 +746,10 @@ public class InternalClassmodelLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1040:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1040:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1038:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1038:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1040:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1038:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -767,10 +767,10 @@ public class InternalClassmodelLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1040:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1038:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1040:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1038:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -786,7 +786,7 @@ public class InternalClassmodelLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1040:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1038:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -802,7 +802,7 @@ public class InternalClassmodelLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1040:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1038:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -827,10 +827,10 @@ public class InternalClassmodelLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1040:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1038:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1040:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1038:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -846,7 +846,7 @@ public class InternalClassmodelLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1040:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1038:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -862,7 +862,7 @@ public class InternalClassmodelLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1040:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1038:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -905,12 +905,12 @@ public class InternalClassmodelLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1042:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1042:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1040:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1040:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1042:24: ( options {greedy=false; } : . )*
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1040:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -935,7 +935,7 @@ public class InternalClassmodelLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1042:52: .
+            	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1040:52: .
             	    {
             	    matchAny(); 
 
@@ -965,12 +965,12 @@ public class InternalClassmodelLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1044:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1044:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1042:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1042:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1044:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1042:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -983,7 +983,7 @@ public class InternalClassmodelLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1044:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1042:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1003,7 +1003,7 @@ public class InternalClassmodelLexer extends Lexer {
                 }
             } while (true);
 
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1044:40: ( ( '\\r' )? '\\n' )?
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1042:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1012,9 +1012,9 @@ public class InternalClassmodelLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1044:41: ( '\\r' )? '\\n'
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1042:41: ( '\\r' )? '\\n'
                     {
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1044:41: ( '\\r' )?
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1042:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1023,7 +1023,7 @@ public class InternalClassmodelLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1044:41: '\\r'
+                            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1042:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1055,10 +1055,10 @@ public class InternalClassmodelLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1046:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1046:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1044:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1044:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1046:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1044:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1112,8 +1112,8 @@ public class InternalClassmodelLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1048:16: ( . )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1048:18: .
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1046:16: ( . )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1046:18: .
             {
             matchAny(); 
 
@@ -1381,10 +1381,10 @@ public class InternalClassmodelLexer extends Lexer {
         "\1\uffff\1\37\2\uffff\1\37\11\uffff\4\37\4\uffff\1\35\2\uffff\3"+
         "\35\2\uffff\1\37\3\uffff\2\37\11\uffff\10\37\11\uffff\24\37\1\136"+
         "\13\37\1\uffff\1\37\1\153\1\37\1\155\10\37\1\uffff\1\166\1\uffff"+
-        "\5\37\1\174\1\175\1\37\1\uffff\4\37\1\u0083\2\uffff\1\u0084\1\37"+
-        "\1\u0086\2\37\2\uffff\1\u0089\1\uffff\1\u008a\1\u008b\3\uffff";
+        "\5\37\1\174\1\175\1\37\1\uffff\4\37\1\u0083\2\uffff\2\37\1\u0086"+
+        "\2\37\1\uffff\1\37\1\u008a\1\uffff\1\u008b\1\u008c\1\u008d\4\uffff";
     static final String DFA12_eofS =
-        "\u008c\uffff";
+        "\u008e\uffff";
     static final String DFA12_minS =
         "\1\0\1\141\2\uffff\1\155\11\uffff\1\142\1\145\1\156\1\154\4\uffff"+
         "\1\101\2\uffff\2\0\1\52\2\uffff\1\143\3\uffff\1\160\1\164\11\uffff"+
@@ -1393,8 +1393,8 @@ public class InternalClassmodelLexer extends Lexer {
         "\1\145\1\162\1\143\1\145\1\162\2\156\1\60\1\157\1\163\1\147\1\164"+
         "\1\155\1\146\1\151\1\147\1\141\2\144\1\uffff\1\163\1\60\1\145\1"+
         "\60\1\145\3\141\1\143\2\163\1\145\1\uffff\1\60\1\uffff\1\156\1\143"+
-        "\3\164\2\60\1\163\1\uffff\1\164\3\145\1\60\2\uffff\1\60\1\163\1"+
-        "\60\2\163\2\uffff\1\60\1\uffff\2\60\3\uffff";
+        "\3\164\2\60\1\144\1\uffff\1\164\3\145\1\60\2\uffff\1\117\1\163\1"+
+        "\60\2\163\1\uffff\1\146\1\60\1\uffff\3\60\4\uffff";
     static final String DFA12_maxS =
         "\1\uffff\1\141\2\uffff\1\156\11\uffff\1\163\1\145\1\170\1\157\4"+
         "\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\143\3\uffff\1\160\1"+
@@ -1403,17 +1403,17 @@ public class InternalClassmodelLexer extends Lexer {
         "\1\141\1\162\1\145\1\162\1\143\1\145\1\162\2\156\1\172\1\157\1\163"+
         "\1\147\1\164\1\155\1\146\1\151\1\147\1\141\2\144\1\uffff\1\163\1"+
         "\172\1\145\1\172\1\145\3\141\1\143\2\163\1\145\1\uffff\1\172\1\uffff"+
-        "\1\156\1\143\3\164\2\172\1\163\1\uffff\1\164\3\145\1\172\2\uffff"+
-        "\1\172\1\163\1\172\2\163\2\uffff\1\172\1\uffff\2\172\3\uffff";
+        "\1\156\1\143\3\164\2\172\1\144\1\uffff\1\164\3\145\1\172\2\uffff"+
+        "\1\117\1\163\1\172\2\163\1\uffff\1\146\1\172\1\uffff\3\172\4\uffff";
     static final String DFA12_acceptS =
         "\2\uffff\1\2\1\3\1\uffff\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1"+
         "\15\4\uffff\1\24\1\25\1\26\1\27\1\uffff\1\34\1\35\3\uffff\1\41\1"+
         "\42\1\uffff\1\34\1\2\1\3\2\uffff\1\5\1\6\1\7\1\10\1\11\1\12\1\13"+
         "\1\14\1\15\10\uffff\1\24\1\25\1\26\1\27\1\35\1\36\1\37\1\40\1\41"+
         "\40\uffff\1\33\14\uffff\1\30\1\uffff\1\4\10\uffff\1\1\5\uffff\1"+
-        "\17\1\20\5\uffff\1\32\1\23\1\uffff\1\31\2\uffff\1\21\1\16\1\22";
+        "\17\1\20\5\uffff\1\32\2\uffff\1\31\3\uffff\1\21\1\16\1\22\1\23";
     static final String DFA12_specialS =
-        "\1\2\30\uffff\1\0\1\1\161\uffff}>";
+        "\1\1\30\uffff\1\0\1\2\163\uffff}>";
     static final String[] DFA12_transitionS = {
             "\11\35\2\34\2\35\1\34\22\35\1\34\1\35\1\31\1\24\3\35\1\32\1"+
             "\12\1\13\1\35\1\22\1\6\1\23\1\15\1\33\12\30\1\14\1\35\1\5\1"+
@@ -1545,17 +1545,19 @@ public class InternalClassmodelLexer extends Lexer {
             "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "",
             "",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\u0084",
             "\1\u0085",
             "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "\1\u0087",
             "\1\u0088",
             "",
-            "",
+            "\1\u0089",
             "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "",
             "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "",
             "",
             "",
             ""
@@ -1608,16 +1610,6 @@ public class InternalClassmodelLexer extends Lexer {
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA12_26 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_26>='\u0000' && LA12_26<='\uFFFF')) ) {s = 58;}
-
-                        else s = 29;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -1678,6 +1670,16 @@ public class InternalClassmodelLexer extends Lexer {
                         else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 28;}
 
                         else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='$' && LA12_0<='&')||LA12_0=='*'||LA12_0==';'||LA12_0=='='||(LA12_0>='?' && LA12_0<='@')||LA12_0=='\\'||LA12_0=='`'||LA12_0=='|'||(LA12_0>='\u007F' && LA12_0<='\uFFFF')) ) {s = 29;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA12_26 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_26>='\u0000' && LA12_26<='\uFFFF')) ) {s = 58;}
+
+                        else s = 29;
 
                         if ( s>=0 ) return s;
                         break;

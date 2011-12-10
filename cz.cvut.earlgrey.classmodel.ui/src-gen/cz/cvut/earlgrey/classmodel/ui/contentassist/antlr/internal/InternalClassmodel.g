@@ -366,8 +366,6 @@ finally {
 
 
 
-
-
 // Rule RelationType
 ruleRelationType
     @init {
@@ -495,7 +493,7 @@ rule__RelationType__Alternatives
 
     |(
 { before(grammarAccess.getRelationTypeAccess().getCOMPOSITIONEnumLiteralDeclaration_5()); }
-(	'composes' 
+(	'composedOf' 
 )
 { after(grammarAccess.getRelationTypeAccess().getCOMPOSITIONEnumLiteralDeclaration_5()); }
 )
@@ -2336,7 +2334,6 @@ finally {
 
 
 
-
 rule__Classmodel__ImportsAssignment_0
     @init {
 		int stackSize = keepStackSize();
@@ -2373,8 +2370,8 @@ rule__Package__NameAssignment_1
     }
 :
 (
-{ before(grammarAccess.getPackageAccess().getNameQualifiedNameParserRuleCall_1_0()); }
-	ruleQualifiedName{ after(grammarAccess.getPackageAccess().getNameQualifiedNameParserRuleCall_1_0()); }
+{ before(grammarAccess.getPackageAccess().getNameIDTerminalRuleCall_1_0()); }
+	RULE_ID{ after(grammarAccess.getPackageAccess().getNameIDTerminalRuleCall_1_0()); }
 )
 
 ;

@@ -191,19 +191,19 @@ rulePackage returns [EObject current=null]
     }
 (
 (
-		{ 
-	        newCompositeNode(grammarAccess.getPackageAccess().getNameQualifiedNameParserRuleCall_1_0()); 
-	    }
-		lv_name_1_0=ruleQualifiedName		{
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getPackageAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getPackageRule());
+	            $current = createModelElement(grammarAccess.getPackageRule());
 	        }
-       		set(
+       		setWithLastConsumed(
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"QualifiedName");
-	        afterParserOrEnumRuleCall();
+        		"ID");
 	    }
 
 )
@@ -926,8 +926,6 @@ ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleT
 
 
 
-
-
 // Rule RelationType
 ruleRelationType returns [Enumerator current=null] 
     @init { enterRule(); }
@@ -962,7 +960,7 @@ ruleRelationType returns [Enumerator current=null]
         newLeafNode(enumLiteral_4, grammarAccess.getRelationTypeAccess().getAGGREGATIONEnumLiteralDeclaration_4()); 
     }
 )
-    |(	enumLiteral_5='composes' 
+    |(	enumLiteral_5='composedOf' 
 	{
         $current = grammarAccess.getRelationTypeAccess().getCOMPOSITIONEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_5, grammarAccess.getRelationTypeAccess().getCOMPOSITIONEnumLiteralDeclaration_5()); 

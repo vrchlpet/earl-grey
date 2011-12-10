@@ -2,6 +2,10 @@ grammar cz.cvut.earlgrey.classmodel.Classmodel with org.eclipse.xtext.common.Ter
 
 generate classmodel "http://www.cvut.cz/earlgrey/classmodel/Classmodel"
 
+/**
+ * Defines root node of a model.
+ * Resource imports must be defined before other elements.
+ */
 Classmodel:
     (imports+=Import)* (elements+=AbstractElement)*;
 
@@ -9,12 +13,10 @@ AbstractElement:
     Package | Entity | Relation;
 
 Package:
-    'package' name=QualifiedName '{'
+    'package' name=ID '{'
     (elements+=AbstractElement)*
     '}';
 
-//FIXME: importing works without 'import' declaration
-//FIXME: file import
 Import:
     'import' importURI=STRING;
 
@@ -26,11 +28,16 @@ Entity:
     method+=Method*
     '}';
     
-//Entity reference, supports n-dimension arrays, generic types
+/**
+ * Entity reference, supports n-dimension arrays, generic types.
+ */
 Reference:
     type=[Entity|QualifiedName] (=> '<' generic+=Reference (',' generic+=Reference)* '>')?
     => (dimension+='[' ']')*;
 
+/**
+ * i.e.: +setAll(Parameter[]) : void
+ */
 Method:
     (modifier=Visibility)? name=ID '(' (parameters+=Parameter (',' parameters+=Parameter)*)? ')' ':'
     return=Reference;
@@ -46,14 +53,19 @@ Relation:
     origin=[Entity|QualifiedName] (cardinalityFrom=STRING)? type=RelationType (cardinalityTo=STRING)?
     destination=[Entity|QualifiedName] (':' label=STRING)?;
 
-//A is in relationship with B
+/**
+ * Relation type:
+ * A is in relationship with B
+ * 
+ * i.e.: A extends B
+ */
 enum RelationType:
-    ASSOCIATION='associates' //A is in assocition with B
+    ASSOCIATION='associates' //A is in assocition with B 
     | DEPENCY='depends' //A depends on B
     | GENERALIZATION='extends' //A extends B
     | REALIZATION='implements' //A implements B
     | AGGREGATION='aggregates' //A aggregates B (A consists of B(s), but A can exist without B)
-    | COMPOSITION='composes' //A x B (A is composed of B(s), but cant exist without B)
+    | COMPOSITION='composedOf' //A x B (A is composed of B(s), but can't exist without B)
 ;
 
 enum Visibility:
