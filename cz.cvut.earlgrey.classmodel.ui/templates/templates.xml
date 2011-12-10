@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<templates>
+	<template autoinsert="true"
+		context="cz.cvut.earlgrey.classmodel.Classmodel.Attribute" deleted="false"
+		id="cz.cvut.earlgrey.classmodel.ui.templates.Attribute"
+		description="new Attribute" enabled="true"
+		name="attribute">${visibility:Enum('Visibility')}${name} : ${type:CrossReference(Attribute.type)}</template>
+	<template autoinsert="true"
+		context="cz.cvut.earlgrey.classmodel.Classmodel.Entity" deleted="false"
+        id="cz.cvut.earlgrey.classmodel.ui.templates.Class"
+		description="new Type" enabled="true" name="class">${type:Enum('EntityType')} ${name} {
+    ${cursor}
+}</template>
+	<template autoinsert="true"
+		context="cz.cvut.earlgrey.classmodel.Classmodel.Entity" deleted="false"
+        id="cz.cvut.earlgrey.classmodel.ui.templates.Entity"
+		description="new Entity" enabled="true"
+		name="entity">${type:Enum('EntityType')} ${name} {
+    ${cursor}
+}</template>
+	<template autoinsert="true"
+		context="cz.cvut.earlgrey.classmodel.Classmodel.Method" deleted="false"
+        id="cz.cvut.earlgrey.classmodel.ui.templates.Method"
+		description="new Method" enabled="true"
+		name="method">${visibility:Enum('Visibility')}${name}() : ${return:CrossReference(Method.return)}</template>
+	<template autoinsert="true"
+		context="cz.cvut.earlgrey.classmodel.Classmodel.Package" deleted="false"
+        id="cz.cvut.earlgrey.classmodel.ui.templates.Package"
+		description="new Package" enabled="true"
+		name="package">package ${name} {
+    ${cursor}
+}</template>
+	<template autoinsert="true"
+		context="cz.cvut.earlgrey.classmodel.Classmodel.Relation" deleted="false"
+		description="new Relation" enabled="true"
+		id="cz.cvut.earlgrey.classmodel.ui.templates.Relation"
+		name="relation">${origin:CrossReference(Relation.origin)} ${type:Enum('RelationType')} ${destination:CrossReference(Relation.destination)}</template>
+</templates>

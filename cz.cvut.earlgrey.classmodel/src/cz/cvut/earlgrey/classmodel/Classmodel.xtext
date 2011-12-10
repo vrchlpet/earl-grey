@@ -1,0 +1,79 @@
+grammar cz.cvut.earlgrey.classmodel.Classmodel with org.eclipse.xtext.common.Terminals
+
+generate classmodel "http://www.cvut.cz/earlgrey/classmodel/Classmodel"
+
+/**
+ * Defines root node of a model.
+ * Resource imports must be defined before other elements.
+ */
+Classmodel:
+    (imports+=Import)* (elements+=AbstractElement)*;
+
+AbstractElement:
+    Package | Entity | Relation;
+
+Package:
+    'package' name=ID '{'
+    (elements+=AbstractElement)*
+    '}';
+
+Import:
+    'import' importURI=STRING;
+
+//TODO: Generic types? i.e.: class Name<T> {/*body*/} ?
+Entity:
+    type=EntityType name=ID
+    '{'
+    attribute+=Attribute*
+    method+=Method*
+    '}';
+    
+/**
+ * Entity reference, supports n-dimension arrays, generic types.
+ */
+Reference:
+    type=[Entity|QualifiedName] (=> '<' generic+=Reference (',' generic+=Reference)* '>')?
+    => (dimension+='[' ']')*;
+
+/**
+ * i.e.: +setAll(Parameter[]) : void
+ */
+Method:
+    (modifier=Visibility)? name=ID '(' (parameters+=Parameter (',' parameters+=Parameter)*)? ')' ':'
+    return=Reference;
+
+Parameter:
+    type=Reference
+    name=ID;
+
+Attribute:
+    (modifier=Visibility)? name=ID ':' type=Reference;
+
+Relation:
+    origin=[Entity|QualifiedName] (cardinalityFrom=STRING)? type=RelationType (cardinalityTo=STRING)?
+    destination=[Entity|QualifiedName] (':' label=STRING)?;
+
+/**
+ * Relation type:
+ * A is in relationship with B
+ * 
+ * i.e.: A extends B
+ */
+enum RelationType:
+    ASSOCIATION='associates' //A is in assocition with B 
+    | DEPENCY='depends' //A depends on B
+    | GENERALIZATION='extends' //A extends B
+    | REALIZATION='implements' //A implements B
+    | AGGREGATION='aggregates' //A aggregates B (A consists of B(s), but A can exist without B)
+    | COMPOSITION='composedOf' //A x B (A is composed of B(s), but can't exist without B)
+;
+
+enum Visibility:
+    PUBLIC='+' | PRIVATE='-' | PROTECTED='#' | PACKAGE_PRIVATE='~';
+
+enum EntityType:
+    CLASS='class' | INTERFACE='interface' | ABSTRACT='abstract' | ENUM='enum';
+
+QualifiedName:
+    ID ('.' ID)*;
+    
