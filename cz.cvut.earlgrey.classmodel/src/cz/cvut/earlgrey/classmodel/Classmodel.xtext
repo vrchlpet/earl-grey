@@ -16,7 +16,7 @@ Package:
 //FIXME: importing works without 'import' declaration
 //FIXME: file import
 Import:
-    'import' importedNamespace=QualifiedNameWithWildcard;
+    'import' importURI=STRING;
 
 //TODO: Generic types? i.e.: class Name<T> {/*body*/} ?
 Entity:
@@ -64,7 +64,4 @@ enum EntityType:
 
 QualifiedName:
     ID ('.' ID)*;
-
-QualifiedNameWithWildcard:
-    QualifiedName '.*'?;
     

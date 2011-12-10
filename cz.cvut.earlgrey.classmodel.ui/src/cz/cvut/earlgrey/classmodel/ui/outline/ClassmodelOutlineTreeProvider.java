@@ -77,6 +77,10 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	 */
 	public Object _text(Method ele) {
 		StringBuffer out = new StringBuffer();
+		String name = ele.getName();
+		if (name == null) {
+			return null;
+		}
 		out.append(ele.getName());
 		out.append(ROUND_BRACKET_LEFT);
 

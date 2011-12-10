@@ -39,7 +39,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Package/elements"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Import">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Import/importedNamespace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Import/importURI"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Entity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Entity/type"/>

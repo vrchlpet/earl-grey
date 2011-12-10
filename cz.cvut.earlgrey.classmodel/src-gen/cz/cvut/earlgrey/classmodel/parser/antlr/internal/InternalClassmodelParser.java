@@ -23,9 +23,9 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalClassmodelParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'package'", "'{'", "'}'", "'import'", "'<'", "','", "'>'", "'['", "']'", "'('", "')'", "':'", "'.'", "'.*'", "'associates'", "'depends'", "'extends'", "'implements'", "'aggregates'", "'composes'", "'+'", "'-'", "'#'", "'~'", "'class'", "'interface'", "'abstract'", "'enum'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'package'", "'{'", "'}'", "'import'", "'<'", "','", "'>'", "'['", "']'", "'('", "')'", "':'", "'.'", "'associates'", "'depends'", "'extends'", "'implements'", "'aggregates'", "'composes'", "'+'", "'-'", "'#'", "'~'", "'class'", "'interface'", "'abstract'", "'enum'"
     };
-    public static final int RULE_ID=4;
+    public static final int RULE_ID=5;
     public static final int T__29=29;
     public static final int T__28=28;
     public static final int T__27=27;
@@ -43,7 +43,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
     public static final int T__30=30;
     public static final int T__19=19;
     public static final int T__31=31;
-    public static final int RULE_STRING=5;
+    public static final int RULE_STRING=4;
     public static final int T__32=32;
     public static final int T__33=33;
     public static final int T__16=16;
@@ -55,7 +55,6 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
     public static final int T__17=17;
     public static final int T__37=37;
     public static final int T__12=12;
-    public static final int T__38=38;
     public static final int T__11=11;
     public static final int T__14=14;
     public static final int T__13=13;
@@ -218,7 +217,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0==RULE_ID||LA2_0==11||(LA2_0>=35 && LA2_0<=38)) ) {
+                if ( (LA2_0==RULE_ID||LA2_0==11||(LA2_0>=34 && LA2_0<=37)) ) {
                     alt2=1;
                 }
 
@@ -353,10 +352,10 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                 alt3=1;
                 }
                 break;
+            case 34:
             case 35:
             case 36:
             case 37:
-            case 38:
                 {
                 alt3=2;
                 }
@@ -578,7 +577,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                 int alt4=2;
                 int LA4_0 = input.LA(1);
 
-                if ( (LA4_0==RULE_ID||LA4_0==11||(LA4_0>=35 && LA4_0<=38)) ) {
+                if ( (LA4_0==RULE_ID||LA4_0==11||(LA4_0>=34 && LA4_0<=37)) ) {
                     alt4=1;
                 }
 
@@ -694,22 +693,21 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImport"
-    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:253:1: ruleImport returns [EObject current=null] : (otherlv_0= 'import' ( (lv_importedNamespace_1_0= ruleQualifiedNameWithWildcard ) ) ) ;
+    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:253:1: ruleImport returns [EObject current=null] : (otherlv_0= 'import' ( (lv_importURI_1_0= RULE_STRING ) ) ) ;
     public final EObject ruleImport() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        AntlrDatatypeRuleToken lv_importedNamespace_1_0 = null;
-
+        Token lv_importURI_1_0=null;
 
          enterRule(); 
             
         try {
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:256:28: ( (otherlv_0= 'import' ( (lv_importedNamespace_1_0= ruleQualifiedNameWithWildcard ) ) ) )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:257:1: (otherlv_0= 'import' ( (lv_importedNamespace_1_0= ruleQualifiedNameWithWildcard ) ) )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:256:28: ( (otherlv_0= 'import' ( (lv_importURI_1_0= RULE_STRING ) ) ) )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:257:1: (otherlv_0= 'import' ( (lv_importURI_1_0= RULE_STRING ) ) )
             {
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:257:1: (otherlv_0= 'import' ( (lv_importedNamespace_1_0= ruleQualifiedNameWithWildcard ) ) )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:257:3: otherlv_0= 'import' ( (lv_importedNamespace_1_0= ruleQualifiedNameWithWildcard ) )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:257:1: (otherlv_0= 'import' ( (lv_importURI_1_0= RULE_STRING ) ) )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:257:3: otherlv_0= 'import' ( (lv_importURI_1_0= RULE_STRING ) )
             {
             otherlv_0=(Token)match(input,14,FOLLOW_14_in_ruleImport533); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -717,33 +715,28 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                   	newLeafNode(otherlv_0, grammarAccess.getImportAccess().getImportKeyword_0());
                   
             }
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:261:1: ( (lv_importedNamespace_1_0= ruleQualifiedNameWithWildcard ) )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:262:1: (lv_importedNamespace_1_0= ruleQualifiedNameWithWildcard )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:261:1: ( (lv_importURI_1_0= RULE_STRING ) )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:262:1: (lv_importURI_1_0= RULE_STRING )
             {
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:262:1: (lv_importedNamespace_1_0= ruleQualifiedNameWithWildcard )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:263:3: lv_importedNamespace_1_0= ruleQualifiedNameWithWildcard
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:262:1: (lv_importURI_1_0= RULE_STRING )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:263:3: lv_importURI_1_0= RULE_STRING
             {
+            lv_importURI_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleImport550); if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               
-              	        newCompositeNode(grammarAccess.getImportAccess().getImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_0()); 
-              	    
-            }
-            pushFollow(FOLLOW_ruleQualifiedNameWithWildcard_in_ruleImport554);
-            lv_importedNamespace_1_0=ruleQualifiedNameWithWildcard();
 
-            state._fsp--;
-            if (state.failed) return current;
+              			newLeafNode(lv_importURI_1_0, grammarAccess.getImportAccess().getImportURISTRINGTerminalRuleCall_1_0()); 
+              		
+            }
             if ( state.backtracking==0 ) {
 
               	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getImportRule());
+              	            current = createModelElement(grammarAccess.getImportRule());
               	        }
-                     		set(
+                     		setWithLastConsumed(
                      			current, 
-                     			"importedNamespace",
-                      		lv_importedNamespace_1_0, 
-                      		"QualifiedNameWithWildcard");
-              	        afterParserOrEnumRuleCall();
+                     			"importURI",
+                      		lv_importURI_1_0, 
+                      		"STRING");
               	    
             }
 
@@ -789,7 +782,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEntityRule()); 
             }
-            pushFollow(FOLLOW_ruleEntity_in_entryRuleEntity590);
+            pushFollow(FOLLOW_ruleEntity_in_entryRuleEntity591);
             iv_ruleEntity=ruleEntity();
 
             state._fsp--;
@@ -797,7 +790,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleEntity; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEntity600); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEntity601); if (state.failed) return current;
 
             }
 
@@ -849,7 +842,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getEntityAccess().getTypeEntityTypeEnumRuleCall_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleEntityType_in_ruleEntity646);
+            pushFollow(FOLLOW_ruleEntityType_in_ruleEntity647);
             lv_type_0_0=ruleEntityType();
 
             state._fsp--;
@@ -879,7 +872,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:319:1: (lv_name_1_0= RULE_ID )
             // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:320:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEntity663); if (state.failed) return current;
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEntity664); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_name_1_0, grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_1_0()); 
@@ -903,7 +896,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_12_in_ruleEntity680); if (state.failed) return current;
+            otherlv_2=(Token)match(input,12,FOLLOW_12_in_ruleEntity681); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getEntityAccess().getLeftCurlyBracketKeyword_2());
@@ -914,7 +907,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             do {
                 int alt5=2;
                 switch ( input.LA(1) ) {
-                case 31:
+                case 30:
                     {
                     int LA5_1 = input.LA(2);
 
@@ -931,7 +924,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-                case 32:
+                case 31:
                     {
                     int LA5_2 = input.LA(2);
 
@@ -948,7 +941,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-                case 33:
+                case 32:
                     {
                     int LA5_3 = input.LA(2);
 
@@ -965,7 +958,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-                case 34:
+                case 33:
                     {
                     int LA5_4 = input.LA(2);
 
@@ -1008,7 +1001,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             	      	        newCompositeNode(grammarAccess.getEntityAccess().getAttributeAttributeParserRuleCall_3_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleAttribute_in_ruleEntity701);
+            	    pushFollow(FOLLOW_ruleAttribute_in_ruleEntity702);
             	    lv_attribute_3_0=ruleAttribute();
 
             	    state._fsp--;
@@ -1044,7 +1037,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                 int alt6=2;
                 int LA6_0 = input.LA(1);
 
-                if ( (LA6_0==RULE_ID||(LA6_0>=31 && LA6_0<=34)) ) {
+                if ( (LA6_0==RULE_ID||(LA6_0>=30 && LA6_0<=33)) ) {
                     alt6=1;
                 }
 
@@ -1061,7 +1054,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             	      	        newCompositeNode(grammarAccess.getEntityAccess().getMethodMethodParserRuleCall_4_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleMethod_in_ruleEntity723);
+            	    pushFollow(FOLLOW_ruleMethod_in_ruleEntity724);
             	    lv_method_4_0=ruleMethod();
 
             	    state._fsp--;
@@ -1091,7 +1084,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_5=(Token)match(input,13,FOLLOW_13_in_ruleEntity736); if (state.failed) return current;
+            otherlv_5=(Token)match(input,13,FOLLOW_13_in_ruleEntity737); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_5, grammarAccess.getEntityAccess().getRightCurlyBracketKeyword_5());
@@ -1134,7 +1127,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getReferenceRule()); 
             }
-            pushFollow(FOLLOW_ruleReference_in_entryRuleReference772);
+            pushFollow(FOLLOW_ruleReference_in_entryRuleReference773);
             iv_ruleReference=ruleReference();
 
             state._fsp--;
@@ -1142,7 +1135,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleReference; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleReference782); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleReference783); if (state.failed) return current;
 
             }
 
@@ -1201,7 +1194,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getReferenceAccess().getTypeEntityCrossReference_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleReference830);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleReference831);
             ruleQualifiedName();
 
             state._fsp--;
@@ -1231,7 +1224,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:416:3: ( ( '<' )=>otherlv_1= '<' )
                     // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:416:4: ( '<' )=>otherlv_1= '<'
                     {
-                    otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleReference851); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleReference852); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getReferenceAccess().getLessThanSignKeyword_1_0());
@@ -1251,7 +1244,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                       	        newCompositeNode(grammarAccess.getReferenceAccess().getGenericReferenceParserRuleCall_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleReference_in_ruleReference873);
+                    pushFollow(FOLLOW_ruleReference_in_ruleReference874);
                     lv_generic_2_0=ruleReference();
 
                     state._fsp--;
@@ -1290,7 +1283,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:439:4: otherlv_3= ',' ( (lv_generic_4_0= ruleReference ) )
                     	    {
-                    	    otherlv_3=(Token)match(input,16,FOLLOW_16_in_ruleReference886); if (state.failed) return current;
+                    	    otherlv_3=(Token)match(input,16,FOLLOW_16_in_ruleReference887); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_3, grammarAccess.getReferenceAccess().getCommaKeyword_1_2_0());
@@ -1307,7 +1300,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     	      	        newCompositeNode(grammarAccess.getReferenceAccess().getGenericReferenceParserRuleCall_1_2_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_ruleReference_in_ruleReference907);
+                    	    pushFollow(FOLLOW_ruleReference_in_ruleReference908);
                     	    lv_generic_4_0=ruleReference();
 
                     	    state._fsp--;
@@ -1340,7 +1333,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_5=(Token)match(input,17,FOLLOW_17_in_ruleReference921); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,17,FOLLOW_17_in_ruleReference922); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_5, grammarAccess.getReferenceAccess().getGreaterThanSignKeyword_1_3());
@@ -1376,7 +1369,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:473:1: (lv_dimension_6_0= '[' )
             	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:474:3: lv_dimension_6_0= '['
             	    {
-            	    lv_dimension_6_0=(Token)match(input,18,FOLLOW_18_in_ruleReference966); if (state.failed) return current;
+            	    lv_dimension_6_0=(Token)match(input,18,FOLLOW_18_in_ruleReference967); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              newLeafNode(lv_dimension_6_0, grammarAccess.getReferenceAccess().getDimensionLeftSquareBracketKeyword_2_0_0_0());
@@ -1396,7 +1389,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_7=(Token)match(input,19,FOLLOW_19_in_ruleReference991); if (state.failed) return current;
+            	    otherlv_7=(Token)match(input,19,FOLLOW_19_in_ruleReference992); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_7, grammarAccess.getReferenceAccess().getRightSquareBracketKeyword_2_0_1());
@@ -1451,7 +1444,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMethodRule()); 
             }
-            pushFollow(FOLLOW_ruleMethod_in_entryRuleMethod1030);
+            pushFollow(FOLLOW_ruleMethod_in_entryRuleMethod1031);
             iv_ruleMethod=ruleMethod();
 
             state._fsp--;
@@ -1459,7 +1452,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleMethod; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMethod1040); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMethod1041); if (state.failed) return current;
 
             }
 
@@ -1508,7 +1501,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( ((LA10_0>=31 && LA10_0<=34)) ) {
+            if ( ((LA10_0>=30 && LA10_0<=33)) ) {
                 alt10=1;
             }
             switch (alt10) {
@@ -1523,7 +1516,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                       	        newCompositeNode(grammarAccess.getMethodAccess().getModifierVisibilityEnumRuleCall_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleVisibility_in_ruleMethod1086);
+                    pushFollow(FOLLOW_ruleVisibility_in_ruleMethod1087);
                     lv_modifier_0_0=ruleVisibility();
 
                     state._fsp--;
@@ -1556,7 +1549,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:531:1: (lv_name_1_0= RULE_ID )
             // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:532:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMethod1104); if (state.failed) return current;
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMethod1105); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_name_1_0, grammarAccess.getMethodAccess().getNameIDTerminalRuleCall_1_0()); 
@@ -1580,7 +1573,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,20,FOLLOW_20_in_ruleMethod1121); if (state.failed) return current;
+            otherlv_2=(Token)match(input,20,FOLLOW_20_in_ruleMethod1122); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getMethodAccess().getLeftParenthesisKeyword_2());
@@ -1608,7 +1601,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                       	        newCompositeNode(grammarAccess.getMethodAccess().getParametersParameterParserRuleCall_3_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleParameter_in_ruleMethod1143);
+                    pushFollow(FOLLOW_ruleParameter_in_ruleMethod1144);
                     lv_parameters_3_0=ruleParameter();
 
                     state._fsp--;
@@ -1647,7 +1640,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:570:4: otherlv_4= ',' ( (lv_parameters_5_0= ruleParameter ) )
                     	    {
-                    	    otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleMethod1156); if (state.failed) return current;
+                    	    otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleMethod1157); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_4, grammarAccess.getMethodAccess().getCommaKeyword_3_1_0());
@@ -1664,7 +1657,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     	      	        newCompositeNode(grammarAccess.getMethodAccess().getParametersParameterParserRuleCall_3_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_ruleParameter_in_ruleMethod1177);
+                    	    pushFollow(FOLLOW_ruleParameter_in_ruleMethod1178);
                     	    lv_parameters_5_0=ruleParameter();
 
                     	    state._fsp--;
@@ -1703,13 +1696,13 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,21,FOLLOW_21_in_ruleMethod1193); if (state.failed) return current;
+            otherlv_6=(Token)match(input,21,FOLLOW_21_in_ruleMethod1194); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_6, grammarAccess.getMethodAccess().getRightParenthesisKeyword_4());
                   
             }
-            otherlv_7=(Token)match(input,22,FOLLOW_22_in_ruleMethod1205); if (state.failed) return current;
+            otherlv_7=(Token)match(input,22,FOLLOW_22_in_ruleMethod1206); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_7, grammarAccess.getMethodAccess().getColonKeyword_5());
@@ -1726,7 +1719,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getMethodAccess().getReturnReferenceParserRuleCall_6_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleReference_in_ruleMethod1226);
+            pushFollow(FOLLOW_ruleReference_in_ruleMethod1227);
             lv_return_8_0=ruleReference();
 
             state._fsp--;
@@ -1787,7 +1780,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getParameterRule()); 
             }
-            pushFollow(FOLLOW_ruleParameter_in_entryRuleParameter1262);
+            pushFollow(FOLLOW_ruleParameter_in_entryRuleParameter1263);
             iv_ruleParameter=ruleParameter();
 
             state._fsp--;
@@ -1795,7 +1788,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleParameter; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleParameter1272); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleParameter1273); if (state.failed) return current;
 
             }
 
@@ -1841,7 +1834,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getParameterAccess().getTypeReferenceParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleReference_in_ruleParameter1318);
+            pushFollow(FOLLOW_ruleReference_in_ruleParameter1319);
             lv_type_0_0=ruleReference();
 
             state._fsp--;
@@ -1871,7 +1864,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:658:1: (lv_name_1_0= RULE_ID )
             // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:659:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleParameter1335); if (state.failed) return current;
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleParameter1336); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_name_1_0, grammarAccess.getParameterAccess().getNameIDTerminalRuleCall_1_0()); 
@@ -1932,7 +1925,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAttributeRule()); 
             }
-            pushFollow(FOLLOW_ruleAttribute_in_entryRuleAttribute1376);
+            pushFollow(FOLLOW_ruleAttribute_in_entryRuleAttribute1377);
             iv_ruleAttribute=ruleAttribute();
 
             state._fsp--;
@@ -1940,7 +1933,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleAttribute; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAttribute1386); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAttribute1387); if (state.failed) return current;
 
             }
 
@@ -1982,7 +1975,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( ((LA13_0>=31 && LA13_0<=34)) ) {
+            if ( ((LA13_0>=30 && LA13_0<=33)) ) {
                 alt13=1;
             }
             switch (alt13) {
@@ -1997,7 +1990,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                       	        newCompositeNode(grammarAccess.getAttributeAccess().getModifierVisibilityEnumRuleCall_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleVisibility_in_ruleAttribute1432);
+                    pushFollow(FOLLOW_ruleVisibility_in_ruleAttribute1433);
                     lv_modifier_0_0=ruleVisibility();
 
                     state._fsp--;
@@ -2030,7 +2023,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:715:1: (lv_name_1_0= RULE_ID )
             // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:716:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAttribute1450); if (state.failed) return current;
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAttribute1451); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_name_1_0, grammarAccess.getAttributeAccess().getNameIDTerminalRuleCall_1_0()); 
@@ -2054,7 +2047,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,22,FOLLOW_22_in_ruleAttribute1467); if (state.failed) return current;
+            otherlv_2=(Token)match(input,22,FOLLOW_22_in_ruleAttribute1468); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getAttributeAccess().getColonKeyword_2());
@@ -2071,7 +2064,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getAttributeAccess().getTypeReferenceParserRuleCall_3_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleReference_in_ruleAttribute1488);
+            pushFollow(FOLLOW_ruleReference_in_ruleAttribute1489);
             lv_type_3_0=ruleReference();
 
             state._fsp--;
@@ -2132,7 +2125,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRelationRule()); 
             }
-            pushFollow(FOLLOW_ruleRelation_in_entryRuleRelation1524);
+            pushFollow(FOLLOW_ruleRelation_in_entryRuleRelation1525);
             iv_ruleRelation=ruleRelation();
 
             state._fsp--;
@@ -2140,7 +2133,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleRelation; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRelation1534); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRelation1535); if (state.failed) return current;
 
             }
 
@@ -2196,7 +2189,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getRelationAccess().getOriginEntityCrossReference_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleRelation1582);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleRelation1583);
             ruleQualifiedName();
 
             state._fsp--;
@@ -2226,7 +2219,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:791:1: (lv_cardinalityFrom_1_0= RULE_STRING )
                     // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:792:3: lv_cardinalityFrom_1_0= RULE_STRING
                     {
-                    lv_cardinalityFrom_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleRelation1599); if (state.failed) return current;
+                    lv_cardinalityFrom_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleRelation1600); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_cardinalityFrom_1_0, grammarAccess.getRelationAccess().getCardinalityFromSTRINGTerminalRuleCall_1_0()); 
@@ -2264,7 +2257,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getRelationAccess().getTypeRelationTypeEnumRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleRelationType_in_ruleRelation1626);
+            pushFollow(FOLLOW_ruleRelationType_in_ruleRelation1627);
             lv_type_2_0=ruleRelationType();
 
             state._fsp--;
@@ -2302,7 +2295,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:827:1: (lv_cardinalityTo_3_0= RULE_STRING )
                     // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:828:3: lv_cardinalityTo_3_0= RULE_STRING
                     {
-                    lv_cardinalityTo_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleRelation1643); if (state.failed) return current;
+                    lv_cardinalityTo_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleRelation1644); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_cardinalityTo_3_0, grammarAccess.getRelationAccess().getCardinalityToSTRINGTerminalRuleCall_3_0()); 
@@ -2347,7 +2340,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getRelationAccess().getDestinationEntityCrossReference_4_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleRelation1672);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleRelation1673);
             ruleQualifiedName();
 
             state._fsp--;
@@ -2374,7 +2367,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:859:4: otherlv_5= ':' ( (lv_label_6_0= RULE_STRING ) )
                     {
-                    otherlv_5=(Token)match(input,22,FOLLOW_22_in_ruleRelation1685); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,22,FOLLOW_22_in_ruleRelation1686); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_5, grammarAccess.getRelationAccess().getColonKeyword_5_0());
@@ -2386,7 +2379,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:864:1: (lv_label_6_0= RULE_STRING )
                     // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:865:3: lv_label_6_0= RULE_STRING
                     {
-                    lv_label_6_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleRelation1702); if (state.failed) return current;
+                    lv_label_6_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleRelation1703); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_label_6_0, grammarAccess.getRelationAccess().getLabelSTRINGTerminalRuleCall_5_1_0()); 
@@ -2453,7 +2446,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQualifiedNameRule()); 
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName1746);
+            pushFollow(FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName1747);
             iv_ruleQualifiedName=ruleQualifiedName();
 
             state._fsp--;
@@ -2461,7 +2454,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleQualifiedName.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedName1757); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedName1758); if (state.failed) return current;
 
             }
 
@@ -2496,7 +2489,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:902:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:902:6: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName1797); if (state.failed) return current;
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName1798); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(this_ID_0);
@@ -2522,14 +2515,14 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:910:2: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,23,FOLLOW_23_in_ruleQualifiedName1816); if (state.failed) return current;
+            	    kw=(Token)match(input,23,FOLLOW_23_in_ruleQualifiedName1817); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              current.merge(kw);
             	              newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
             	          
             	    }
-            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName1831); if (state.failed) return current;
+            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName1832); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      		current.merge(this_ID_2);
@@ -2571,132 +2564,8 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleQualifiedName"
 
 
-    // $ANTLR start "entryRuleQualifiedNameWithWildcard"
-    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:930:1: entryRuleQualifiedNameWithWildcard returns [String current=null] : iv_ruleQualifiedNameWithWildcard= ruleQualifiedNameWithWildcard EOF ;
-    public final String entryRuleQualifiedNameWithWildcard() throws RecognitionException {
-        String current = null;
-
-        AntlrDatatypeRuleToken iv_ruleQualifiedNameWithWildcard = null;
-
-
-        try {
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:931:2: (iv_ruleQualifiedNameWithWildcard= ruleQualifiedNameWithWildcard EOF )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:932:2: iv_ruleQualifiedNameWithWildcard= ruleQualifiedNameWithWildcard EOF
-            {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getQualifiedNameWithWildcardRule()); 
-            }
-            pushFollow(FOLLOW_ruleQualifiedNameWithWildcard_in_entryRuleQualifiedNameWithWildcard1879);
-            iv_ruleQualifiedNameWithWildcard=ruleQualifiedNameWithWildcard();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleQualifiedNameWithWildcard.getText(); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedNameWithWildcard1890); if (state.failed) return current;
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleQualifiedNameWithWildcard"
-
-
-    // $ANTLR start "ruleQualifiedNameWithWildcard"
-    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:939:1: ruleQualifiedNameWithWildcard returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName (kw= '.*' )? ) ;
-    public final AntlrDatatypeRuleToken ruleQualifiedNameWithWildcard() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
-
-        Token kw=null;
-        AntlrDatatypeRuleToken this_QualifiedName_0 = null;
-
-
-         enterRule(); 
-            
-        try {
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:942:28: ( (this_QualifiedName_0= ruleQualifiedName (kw= '.*' )? ) )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:943:1: (this_QualifiedName_0= ruleQualifiedName (kw= '.*' )? )
-            {
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:943:1: (this_QualifiedName_0= ruleQualifiedName (kw= '.*' )? )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:944:5: this_QualifiedName_0= ruleQualifiedName (kw= '.*' )?
-            {
-            if ( state.backtracking==0 ) {
-               
-                      newCompositeNode(grammarAccess.getQualifiedNameWithWildcardAccess().getQualifiedNameParserRuleCall_0()); 
-                  
-            }
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleQualifiedNameWithWildcard1937);
-            this_QualifiedName_0=ruleQualifiedName();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              		current.merge(this_QualifiedName_0);
-                  
-            }
-            if ( state.backtracking==0 ) {
-               
-                      afterParserOrEnumRuleCall();
-                  
-            }
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:954:1: (kw= '.*' )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
-
-            if ( (LA18_0==24) ) {
-                alt18=1;
-            }
-            switch (alt18) {
-                case 1 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:955:2: kw= '.*'
-                    {
-                    kw=(Token)match(input,24,FOLLOW_24_in_ruleQualifiedNameWithWildcard1956); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getQualifiedNameWithWildcardAccess().getFullStopAsteriskKeyword_1()); 
-                          
-                    }
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-
-            }
-
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleQualifiedNameWithWildcard"
-
-
     // $ANTLR start "ruleRelationType"
-    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:968:1: ruleRelationType returns [Enumerator current=null] : ( (enumLiteral_0= 'associates' ) | (enumLiteral_1= 'depends' ) | (enumLiteral_2= 'extends' ) | (enumLiteral_3= 'implements' ) | (enumLiteral_4= 'aggregates' ) | (enumLiteral_5= 'composes' ) ) ;
+    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:932:1: ruleRelationType returns [Enumerator current=null] : ( (enumLiteral_0= 'associates' ) | (enumLiteral_1= 'depends' ) | (enumLiteral_2= 'extends' ) | (enumLiteral_3= 'implements' ) | (enumLiteral_4= 'aggregates' ) | (enumLiteral_5= 'composes' ) ) ;
     public final Enumerator ruleRelationType() throws RecognitionException {
         Enumerator current = null;
 
@@ -2709,58 +2578,58 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:970:28: ( ( (enumLiteral_0= 'associates' ) | (enumLiteral_1= 'depends' ) | (enumLiteral_2= 'extends' ) | (enumLiteral_3= 'implements' ) | (enumLiteral_4= 'aggregates' ) | (enumLiteral_5= 'composes' ) ) )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:971:1: ( (enumLiteral_0= 'associates' ) | (enumLiteral_1= 'depends' ) | (enumLiteral_2= 'extends' ) | (enumLiteral_3= 'implements' ) | (enumLiteral_4= 'aggregates' ) | (enumLiteral_5= 'composes' ) )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:934:28: ( ( (enumLiteral_0= 'associates' ) | (enumLiteral_1= 'depends' ) | (enumLiteral_2= 'extends' ) | (enumLiteral_3= 'implements' ) | (enumLiteral_4= 'aggregates' ) | (enumLiteral_5= 'composes' ) ) )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:935:1: ( (enumLiteral_0= 'associates' ) | (enumLiteral_1= 'depends' ) | (enumLiteral_2= 'extends' ) | (enumLiteral_3= 'implements' ) | (enumLiteral_4= 'aggregates' ) | (enumLiteral_5= 'composes' ) )
             {
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:971:1: ( (enumLiteral_0= 'associates' ) | (enumLiteral_1= 'depends' ) | (enumLiteral_2= 'extends' ) | (enumLiteral_3= 'implements' ) | (enumLiteral_4= 'aggregates' ) | (enumLiteral_5= 'composes' ) )
-            int alt19=6;
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:935:1: ( (enumLiteral_0= 'associates' ) | (enumLiteral_1= 'depends' ) | (enumLiteral_2= 'extends' ) | (enumLiteral_3= 'implements' ) | (enumLiteral_4= 'aggregates' ) | (enumLiteral_5= 'composes' ) )
+            int alt18=6;
             switch ( input.LA(1) ) {
+            case 24:
+                {
+                alt18=1;
+                }
+                break;
             case 25:
                 {
-                alt19=1;
+                alt18=2;
                 }
                 break;
             case 26:
                 {
-                alt19=2;
+                alt18=3;
                 }
                 break;
             case 27:
                 {
-                alt19=3;
+                alt18=4;
                 }
                 break;
             case 28:
                 {
-                alt19=4;
+                alt18=5;
                 }
                 break;
             case 29:
                 {
-                alt19=5;
-                }
-                break;
-            case 30:
-                {
-                alt19=6;
+                alt18=6;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 19, 0, input);
+                    new NoViableAltException("", 18, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt19) {
+            switch (alt18) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:971:2: (enumLiteral_0= 'associates' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:935:2: (enumLiteral_0= 'associates' )
                     {
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:971:2: (enumLiteral_0= 'associates' )
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:971:4: enumLiteral_0= 'associates'
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:935:2: (enumLiteral_0= 'associates' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:935:4: enumLiteral_0= 'associates'
                     {
-                    enumLiteral_0=(Token)match(input,25,FOLLOW_25_in_ruleRelationType2012); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,24,FOLLOW_24_in_ruleRelationType1895); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getRelationTypeAccess().getASSOCIATIONEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -2774,12 +2643,12 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:977:6: (enumLiteral_1= 'depends' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:941:6: (enumLiteral_1= 'depends' )
                     {
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:977:6: (enumLiteral_1= 'depends' )
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:977:8: enumLiteral_1= 'depends'
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:941:6: (enumLiteral_1= 'depends' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:941:8: enumLiteral_1= 'depends'
                     {
-                    enumLiteral_1=(Token)match(input,26,FOLLOW_26_in_ruleRelationType2029); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,25,FOLLOW_25_in_ruleRelationType1912); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getRelationTypeAccess().getDEPENCYEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -2793,12 +2662,12 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:983:6: (enumLiteral_2= 'extends' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:947:6: (enumLiteral_2= 'extends' )
                     {
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:983:6: (enumLiteral_2= 'extends' )
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:983:8: enumLiteral_2= 'extends'
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:947:6: (enumLiteral_2= 'extends' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:947:8: enumLiteral_2= 'extends'
                     {
-                    enumLiteral_2=(Token)match(input,27,FOLLOW_27_in_ruleRelationType2046); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,26,FOLLOW_26_in_ruleRelationType1929); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getRelationTypeAccess().getGENERALIZATIONEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -2812,12 +2681,12 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:989:6: (enumLiteral_3= 'implements' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:953:6: (enumLiteral_3= 'implements' )
                     {
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:989:6: (enumLiteral_3= 'implements' )
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:989:8: enumLiteral_3= 'implements'
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:953:6: (enumLiteral_3= 'implements' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:953:8: enumLiteral_3= 'implements'
                     {
-                    enumLiteral_3=(Token)match(input,28,FOLLOW_28_in_ruleRelationType2063); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,27,FOLLOW_27_in_ruleRelationType1946); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getRelationTypeAccess().getREALIZATIONEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -2831,12 +2700,12 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:995:6: (enumLiteral_4= 'aggregates' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:959:6: (enumLiteral_4= 'aggregates' )
                     {
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:995:6: (enumLiteral_4= 'aggregates' )
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:995:8: enumLiteral_4= 'aggregates'
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:959:6: (enumLiteral_4= 'aggregates' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:959:8: enumLiteral_4= 'aggregates'
                     {
-                    enumLiteral_4=(Token)match(input,29,FOLLOW_29_in_ruleRelationType2080); if (state.failed) return current;
+                    enumLiteral_4=(Token)match(input,28,FOLLOW_28_in_ruleRelationType1963); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getRelationTypeAccess().getAGGREGATIONEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
@@ -2850,12 +2719,12 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1001:6: (enumLiteral_5= 'composes' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:965:6: (enumLiteral_5= 'composes' )
                     {
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1001:6: (enumLiteral_5= 'composes' )
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1001:8: enumLiteral_5= 'composes'
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:965:6: (enumLiteral_5= 'composes' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:965:8: enumLiteral_5= 'composes'
                     {
-                    enumLiteral_5=(Token)match(input,30,FOLLOW_30_in_ruleRelationType2097); if (state.failed) return current;
+                    enumLiteral_5=(Token)match(input,29,FOLLOW_29_in_ruleRelationType1980); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getRelationTypeAccess().getCOMPOSITIONEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
@@ -2891,7 +2760,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVisibility"
-    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1011:1: ruleVisibility returns [Enumerator current=null] : ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) | (enumLiteral_2= '#' ) | (enumLiteral_3= '~' ) ) ;
+    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:975:1: ruleVisibility returns [Enumerator current=null] : ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) | (enumLiteral_2= '#' ) | (enumLiteral_3= '~' ) ) ;
     public final Enumerator ruleVisibility() throws RecognitionException {
         Enumerator current = null;
 
@@ -2902,48 +2771,48 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1013:28: ( ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) | (enumLiteral_2= '#' ) | (enumLiteral_3= '~' ) ) )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1014:1: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) | (enumLiteral_2= '#' ) | (enumLiteral_3= '~' ) )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:977:28: ( ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) | (enumLiteral_2= '#' ) | (enumLiteral_3= '~' ) ) )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:978:1: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) | (enumLiteral_2= '#' ) | (enumLiteral_3= '~' ) )
             {
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1014:1: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) | (enumLiteral_2= '#' ) | (enumLiteral_3= '~' ) )
-            int alt20=4;
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:978:1: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) | (enumLiteral_2= '#' ) | (enumLiteral_3= '~' ) )
+            int alt19=4;
             switch ( input.LA(1) ) {
+            case 30:
+                {
+                alt19=1;
+                }
+                break;
             case 31:
                 {
-                alt20=1;
+                alt19=2;
                 }
                 break;
             case 32:
                 {
-                alt20=2;
+                alt19=3;
                 }
                 break;
             case 33:
                 {
-                alt20=3;
-                }
-                break;
-            case 34:
-                {
-                alt20=4;
+                alt19=4;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 20, 0, input);
+                    new NoViableAltException("", 19, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt20) {
+            switch (alt19) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1014:2: (enumLiteral_0= '+' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:978:2: (enumLiteral_0= '+' )
                     {
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1014:2: (enumLiteral_0= '+' )
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1014:4: enumLiteral_0= '+'
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:978:2: (enumLiteral_0= '+' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:978:4: enumLiteral_0= '+'
                     {
-                    enumLiteral_0=(Token)match(input,31,FOLLOW_31_in_ruleVisibility2142); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,30,FOLLOW_30_in_ruleVisibility2025); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getVisibilityAccess().getPUBLICEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -2957,12 +2826,12 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1020:6: (enumLiteral_1= '-' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:984:6: (enumLiteral_1= '-' )
                     {
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1020:6: (enumLiteral_1= '-' )
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1020:8: enumLiteral_1= '-'
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:984:6: (enumLiteral_1= '-' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:984:8: enumLiteral_1= '-'
                     {
-                    enumLiteral_1=(Token)match(input,32,FOLLOW_32_in_ruleVisibility2159); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,31,FOLLOW_31_in_ruleVisibility2042); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getVisibilityAccess().getPRIVATEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -2976,12 +2845,12 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1026:6: (enumLiteral_2= '#' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:990:6: (enumLiteral_2= '#' )
                     {
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1026:6: (enumLiteral_2= '#' )
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1026:8: enumLiteral_2= '#'
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:990:6: (enumLiteral_2= '#' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:990:8: enumLiteral_2= '#'
                     {
-                    enumLiteral_2=(Token)match(input,33,FOLLOW_33_in_ruleVisibility2176); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,32,FOLLOW_32_in_ruleVisibility2059); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getVisibilityAccess().getPROTECTEDEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -2995,12 +2864,12 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1032:6: (enumLiteral_3= '~' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:996:6: (enumLiteral_3= '~' )
                     {
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1032:6: (enumLiteral_3= '~' )
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1032:8: enumLiteral_3= '~'
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:996:6: (enumLiteral_3= '~' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:996:8: enumLiteral_3= '~'
                     {
-                    enumLiteral_3=(Token)match(input,34,FOLLOW_34_in_ruleVisibility2193); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,33,FOLLOW_33_in_ruleVisibility2076); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getVisibilityAccess().getPACKAGE_PRIVATEEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -3036,7 +2905,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEntityType"
-    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1042:1: ruleEntityType returns [Enumerator current=null] : ( (enumLiteral_0= 'class' ) | (enumLiteral_1= 'interface' ) | (enumLiteral_2= 'abstract' ) | (enumLiteral_3= 'enum' ) ) ;
+    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1006:1: ruleEntityType returns [Enumerator current=null] : ( (enumLiteral_0= 'class' ) | (enumLiteral_1= 'interface' ) | (enumLiteral_2= 'abstract' ) | (enumLiteral_3= 'enum' ) ) ;
     public final Enumerator ruleEntityType() throws RecognitionException {
         Enumerator current = null;
 
@@ -3047,48 +2916,48 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1044:28: ( ( (enumLiteral_0= 'class' ) | (enumLiteral_1= 'interface' ) | (enumLiteral_2= 'abstract' ) | (enumLiteral_3= 'enum' ) ) )
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1045:1: ( (enumLiteral_0= 'class' ) | (enumLiteral_1= 'interface' ) | (enumLiteral_2= 'abstract' ) | (enumLiteral_3= 'enum' ) )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1008:28: ( ( (enumLiteral_0= 'class' ) | (enumLiteral_1= 'interface' ) | (enumLiteral_2= 'abstract' ) | (enumLiteral_3= 'enum' ) ) )
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1009:1: ( (enumLiteral_0= 'class' ) | (enumLiteral_1= 'interface' ) | (enumLiteral_2= 'abstract' ) | (enumLiteral_3= 'enum' ) )
             {
-            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1045:1: ( (enumLiteral_0= 'class' ) | (enumLiteral_1= 'interface' ) | (enumLiteral_2= 'abstract' ) | (enumLiteral_3= 'enum' ) )
-            int alt21=4;
+            // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1009:1: ( (enumLiteral_0= 'class' ) | (enumLiteral_1= 'interface' ) | (enumLiteral_2= 'abstract' ) | (enumLiteral_3= 'enum' ) )
+            int alt20=4;
             switch ( input.LA(1) ) {
+            case 34:
+                {
+                alt20=1;
+                }
+                break;
             case 35:
                 {
-                alt21=1;
+                alt20=2;
                 }
                 break;
             case 36:
                 {
-                alt21=2;
+                alt20=3;
                 }
                 break;
             case 37:
                 {
-                alt21=3;
-                }
-                break;
-            case 38:
-                {
-                alt21=4;
+                alt20=4;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 21, 0, input);
+                    new NoViableAltException("", 20, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt21) {
+            switch (alt20) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1045:2: (enumLiteral_0= 'class' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1009:2: (enumLiteral_0= 'class' )
                     {
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1045:2: (enumLiteral_0= 'class' )
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1045:4: enumLiteral_0= 'class'
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1009:2: (enumLiteral_0= 'class' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1009:4: enumLiteral_0= 'class'
                     {
-                    enumLiteral_0=(Token)match(input,35,FOLLOW_35_in_ruleEntityType2238); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,34,FOLLOW_34_in_ruleEntityType2121); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getEntityTypeAccess().getCLASSEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -3102,12 +2971,12 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1051:6: (enumLiteral_1= 'interface' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1015:6: (enumLiteral_1= 'interface' )
                     {
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1051:6: (enumLiteral_1= 'interface' )
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1051:8: enumLiteral_1= 'interface'
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1015:6: (enumLiteral_1= 'interface' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1015:8: enumLiteral_1= 'interface'
                     {
-                    enumLiteral_1=(Token)match(input,36,FOLLOW_36_in_ruleEntityType2255); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,35,FOLLOW_35_in_ruleEntityType2138); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getEntityTypeAccess().getINTERFACEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -3121,12 +2990,12 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1057:6: (enumLiteral_2= 'abstract' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1021:6: (enumLiteral_2= 'abstract' )
                     {
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1057:6: (enumLiteral_2= 'abstract' )
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1057:8: enumLiteral_2= 'abstract'
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1021:6: (enumLiteral_2= 'abstract' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1021:8: enumLiteral_2= 'abstract'
                     {
-                    enumLiteral_2=(Token)match(input,37,FOLLOW_37_in_ruleEntityType2272); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,36,FOLLOW_36_in_ruleEntityType2155); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getEntityTypeAccess().getABSTRACTEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -3140,12 +3009,12 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1063:6: (enumLiteral_3= 'enum' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1027:6: (enumLiteral_3= 'enum' )
                     {
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1063:6: (enumLiteral_3= 'enum' )
-                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1063:8: enumLiteral_3= 'enum'
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1027:6: (enumLiteral_3= 'enum' )
+                    // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:1027:8: enumLiteral_3= 'enum'
                     {
-                    enumLiteral_3=(Token)match(input,38,FOLLOW_38_in_ruleEntityType2289); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,37,FOLLOW_37_in_ruleEntityType2172); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getEntityTypeAccess().getENUMEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -3184,7 +3053,7 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
         // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:416:4: ( '<' )
         // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:416:6: '<'
         {
-        match(input,15,FOLLOW_15_in_synpred1_InternalClassmodel843); if (state.failed) return ;
+        match(input,15,FOLLOW_15_in_synpred1_InternalClassmodel844); if (state.failed) return ;
 
         }
     }
@@ -3204,14 +3073,14 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
         // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:466:1: ( '[' )
         // ../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/parser/antlr/internal/InternalClassmodel.g:467:2: '['
         {
-        match(input,18,FOLLOW_18_in_synpred2_InternalClassmodel940); if (state.failed) return ;
+        match(input,18,FOLLOW_18_in_synpred2_InternalClassmodel941); if (state.failed) return ;
 
         }
 
 
         }
 
-        match(input,19,FOLLOW_19_in_synpred2_InternalClassmodel950); if (state.failed) return ;
+        match(input,19,FOLLOW_19_in_synpred2_InternalClassmodel951); if (state.failed) return ;
 
         }
 
@@ -3256,8 +3125,8 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_ruleClassmodel_in_entryRuleClassmodel75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleClassmodel85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImport_in_ruleClassmodel131 = new BitSet(new long[]{0x0000007800004812L});
-    public static final BitSet FOLLOW_ruleAbstractElement_in_ruleClassmodel153 = new BitSet(new long[]{0x0000007800000812L});
+    public static final BitSet FOLLOW_ruleImport_in_ruleClassmodel131 = new BitSet(new long[]{0x0000003C00004822L});
+    public static final BitSet FOLLOW_ruleAbstractElement_in_ruleClassmodel153 = new BitSet(new long[]{0x0000003C00000822L});
     public static final BitSet FOLLOW_ruleAbstractElement_in_entryRuleAbstractElement190 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAbstractElement200 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulePackage_in_ruleAbstractElement247 = new BitSet(new long[]{0x0000000000000002L});
@@ -3265,88 +3134,84 @@ public class InternalClassmodelParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleRelation_in_ruleAbstractElement301 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulePackage_in_entryRulePackage336 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulePackage346 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rulePackage383 = new BitSet(new long[]{0x0000007800000810L});
+    public static final BitSet FOLLOW_11_in_rulePackage383 = new BitSet(new long[]{0x0000003C00000820L});
     public static final BitSet FOLLOW_ruleQualifiedName_in_rulePackage404 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_rulePackage416 = new BitSet(new long[]{0x0000007800002810L});
-    public static final BitSet FOLLOW_ruleAbstractElement_in_rulePackage437 = new BitSet(new long[]{0x0000007800002810L});
+    public static final BitSet FOLLOW_12_in_rulePackage416 = new BitSet(new long[]{0x0000003C00002820L});
+    public static final BitSet FOLLOW_ruleAbstractElement_in_rulePackage437 = new BitSet(new long[]{0x0000003C00002820L});
     public static final BitSet FOLLOW_13_in_rulePackage450 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleImport_in_entryRuleImport486 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleImport496 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_ruleImport533 = new BitSet(new long[]{0x0000007800000810L});
-    public static final BitSet FOLLOW_ruleQualifiedNameWithWildcard_in_ruleImport554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntity_in_entryRuleEntity590 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEntity600 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntityType_in_ruleEntity646 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleEntity663 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleEntity680 = new BitSet(new long[]{0x0000000780002010L});
-    public static final BitSet FOLLOW_ruleAttribute_in_ruleEntity701 = new BitSet(new long[]{0x0000000780002010L});
-    public static final BitSet FOLLOW_ruleMethod_in_ruleEntity723 = new BitSet(new long[]{0x0000000780002010L});
-    public static final BitSet FOLLOW_13_in_ruleEntity736 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReference_in_entryRuleReference772 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleReference782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleReference830 = new BitSet(new long[]{0x0000000000048002L});
-    public static final BitSet FOLLOW_15_in_ruleReference851 = new BitSet(new long[]{0x0000007800000810L});
-    public static final BitSet FOLLOW_ruleReference_in_ruleReference873 = new BitSet(new long[]{0x0000000000030000L});
-    public static final BitSet FOLLOW_16_in_ruleReference886 = new BitSet(new long[]{0x0000007800000810L});
-    public static final BitSet FOLLOW_ruleReference_in_ruleReference907 = new BitSet(new long[]{0x0000000000030000L});
-    public static final BitSet FOLLOW_17_in_ruleReference921 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_18_in_ruleReference966 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleReference991 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_ruleMethod_in_entryRuleMethod1030 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMethod1040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVisibility_in_ruleMethod1086 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleMethod1104 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleMethod1121 = new BitSet(new long[]{0x0000007800200810L});
-    public static final BitSet FOLLOW_ruleParameter_in_ruleMethod1143 = new BitSet(new long[]{0x0000000000210000L});
-    public static final BitSet FOLLOW_16_in_ruleMethod1156 = new BitSet(new long[]{0x0000007800000810L});
-    public static final BitSet FOLLOW_ruleParameter_in_ruleMethod1177 = new BitSet(new long[]{0x0000000000210000L});
-    public static final BitSet FOLLOW_21_in_ruleMethod1193 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_22_in_ruleMethod1205 = new BitSet(new long[]{0x0000007800000810L});
-    public static final BitSet FOLLOW_ruleReference_in_ruleMethod1226 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_entryRuleParameter1262 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleParameter1272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReference_in_ruleParameter1318 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleParameter1335 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAttribute_in_entryRuleAttribute1376 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAttribute1386 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVisibility_in_ruleAttribute1432 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleAttribute1450 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_22_in_ruleAttribute1467 = new BitSet(new long[]{0x0000007800000810L});
-    public static final BitSet FOLLOW_ruleReference_in_ruleAttribute1488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRelation_in_entryRuleRelation1524 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRelation1534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleRelation1582 = new BitSet(new long[]{0x000000007E000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleRelation1599 = new BitSet(new long[]{0x000000007E000020L});
-    public static final BitSet FOLLOW_ruleRelationType_in_ruleRelation1626 = new BitSet(new long[]{0x0000007800000830L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleRelation1643 = new BitSet(new long[]{0x0000007800000810L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleRelation1672 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_22_in_ruleRelation1685 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleRelation1702 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName1746 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName1757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName1797 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_23_in_ruleQualifiedName1816 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName1831 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_ruleQualifiedNameWithWildcard_in_entryRuleQualifiedNameWithWildcard1879 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedNameWithWildcard1890 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleQualifiedNameWithWildcard1937 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_24_in_ruleQualifiedNameWithWildcard1956 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleRelationType2012 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleRelationType2029 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_ruleRelationType2046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_ruleRelationType2063 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleRelationType2080 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleRelationType2097 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleVisibility2142 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_ruleVisibility2159 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_ruleVisibility2176 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleVisibility2193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleEntityType2238 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleEntityType2255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleEntityType2272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleEntityType2289 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_synpred1_InternalClassmodel843 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_synpred2_InternalClassmodel940 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_synpred2_InternalClassmodel950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_ruleImport533 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleImport550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEntity_in_entryRuleEntity591 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEntity601 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEntityType_in_ruleEntity647 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleEntity664 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleEntity681 = new BitSet(new long[]{0x00000003C0002020L});
+    public static final BitSet FOLLOW_ruleAttribute_in_ruleEntity702 = new BitSet(new long[]{0x00000003C0002020L});
+    public static final BitSet FOLLOW_ruleMethod_in_ruleEntity724 = new BitSet(new long[]{0x00000003C0002020L});
+    public static final BitSet FOLLOW_13_in_ruleEntity737 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleReference_in_entryRuleReference773 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleReference783 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleReference831 = new BitSet(new long[]{0x0000000000048002L});
+    public static final BitSet FOLLOW_15_in_ruleReference852 = new BitSet(new long[]{0x0000003C00000820L});
+    public static final BitSet FOLLOW_ruleReference_in_ruleReference874 = new BitSet(new long[]{0x0000000000030000L});
+    public static final BitSet FOLLOW_16_in_ruleReference887 = new BitSet(new long[]{0x0000003C00000820L});
+    public static final BitSet FOLLOW_ruleReference_in_ruleReference908 = new BitSet(new long[]{0x0000000000030000L});
+    public static final BitSet FOLLOW_17_in_ruleReference922 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_18_in_ruleReference967 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleReference992 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_ruleMethod_in_entryRuleMethod1031 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMethod1041 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVisibility_in_ruleMethod1087 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleMethod1105 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleMethod1122 = new BitSet(new long[]{0x0000003C00200820L});
+    public static final BitSet FOLLOW_ruleParameter_in_ruleMethod1144 = new BitSet(new long[]{0x0000000000210000L});
+    public static final BitSet FOLLOW_16_in_ruleMethod1157 = new BitSet(new long[]{0x0000003C00000820L});
+    public static final BitSet FOLLOW_ruleParameter_in_ruleMethod1178 = new BitSet(new long[]{0x0000000000210000L});
+    public static final BitSet FOLLOW_21_in_ruleMethod1194 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22_in_ruleMethod1206 = new BitSet(new long[]{0x0000003C00000820L});
+    public static final BitSet FOLLOW_ruleReference_in_ruleMethod1227 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameter_in_entryRuleParameter1263 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleParameter1273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleReference_in_ruleParameter1319 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleParameter1336 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAttribute_in_entryRuleAttribute1377 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAttribute1387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVisibility_in_ruleAttribute1433 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleAttribute1451 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22_in_ruleAttribute1468 = new BitSet(new long[]{0x0000003C00000820L});
+    public static final BitSet FOLLOW_ruleReference_in_ruleAttribute1489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRelation_in_entryRuleRelation1525 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRelation1535 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleRelation1583 = new BitSet(new long[]{0x000000003F000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleRelation1600 = new BitSet(new long[]{0x000000003F000010L});
+    public static final BitSet FOLLOW_ruleRelationType_in_ruleRelation1627 = new BitSet(new long[]{0x0000003C00000830L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleRelation1644 = new BitSet(new long[]{0x0000003C00000820L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleRelation1673 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_22_in_ruleRelation1686 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleRelation1703 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName1747 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName1758 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName1798 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_23_in_ruleQualifiedName1817 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName1832 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_24_in_ruleRelationType1895 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleRelationType1912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_ruleRelationType1929 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleRelationType1946 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_ruleRelationType1963 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleRelationType1980 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleVisibility2025 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleVisibility2042 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleVisibility2059 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleVisibility2076 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_ruleEntityType2121 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleEntityType2138 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_ruleEntityType2155 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleEntityType2172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_synpred1_InternalClassmodel844 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_synpred2_InternalClassmodel941 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_synpred2_InternalClassmodel951 = new BitSet(new long[]{0x0000000000000002L});
 
 }

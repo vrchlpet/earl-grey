@@ -64,7 +64,7 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getClassmodelAccess().getElementsAssignment_1(), "rule__Classmodel__ElementsAssignment_1");
 					put(grammarAccess.getPackageAccess().getNameAssignment_1(), "rule__Package__NameAssignment_1");
 					put(grammarAccess.getPackageAccess().getElementsAssignment_3(), "rule__Package__ElementsAssignment_3");
-					put(grammarAccess.getImportAccess().getImportedNamespaceAssignment_1(), "rule__Import__ImportedNamespaceAssignment_1");
+					put(grammarAccess.getImportAccess().getImportURIAssignment_1(), "rule__Import__ImportURIAssignment_1");
 					put(grammarAccess.getEntityAccess().getTypeAssignment_0(), "rule__Entity__TypeAssignment_0");
 					put(grammarAccess.getEntityAccess().getNameAssignment_1(), "rule__Entity__NameAssignment_1");
 					put(grammarAccess.getEntityAccess().getAttributeAssignment_3(), "rule__Entity__AttributeAssignment_3");

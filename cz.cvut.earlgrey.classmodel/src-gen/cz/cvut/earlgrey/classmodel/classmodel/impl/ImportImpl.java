@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ImportImpl#getImportedNamespace <em>Imported Namespace</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ImportImpl#getImportURI <em>Import URI</em>}</li>
  * </ul>
  * </p>
  *
@@ -32,24 +32,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class ImportImpl extends MinimalEObjectImpl.Container implements Import
 {
   /**
-   * The default value of the '{@link #getImportedNamespace() <em>Imported Namespace</em>}' attribute.
+   * The default value of the '{@link #getImportURI() <em>Import URI</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getImportedNamespace()
+   * @see #getImportURI()
    * @generated
    * @ordered
    */
-  protected static final String IMPORTED_NAMESPACE_EDEFAULT = null;
+  protected static final String IMPORT_URI_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getImportedNamespace() <em>Imported Namespace</em>}' attribute.
+   * The cached value of the '{@link #getImportURI() <em>Import URI</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getImportedNamespace()
+   * @see #getImportURI()
    * @generated
    * @ordered
    */
-  protected String importedNamespace = IMPORTED_NAMESPACE_EDEFAULT;
+  protected String importURI = IMPORT_URI_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -77,9 +77,9 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getImportedNamespace()
+  public String getImportURI()
   {
-    return importedNamespace;
+    return importURI;
   }
 
   /**
@@ -87,12 +87,12 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setImportedNamespace(String newImportedNamespace)
+  public void setImportURI(String newImportURI)
   {
-    String oldImportedNamespace = importedNamespace;
-    importedNamespace = newImportedNamespace;
+    String oldImportURI = importURI;
+    importURI = newImportURI;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.IMPORT__IMPORTED_NAMESPACE, oldImportedNamespace, importedNamespace));
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.IMPORT__IMPORT_URI, oldImportURI, importURI));
   }
 
   /**
@@ -105,8 +105,8 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
   {
     switch (featureID)
     {
-      case ClassmodelPackage.IMPORT__IMPORTED_NAMESPACE:
-        return getImportedNamespace();
+      case ClassmodelPackage.IMPORT__IMPORT_URI:
+        return getImportURI();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -121,8 +121,8 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
   {
     switch (featureID)
     {
-      case ClassmodelPackage.IMPORT__IMPORTED_NAMESPACE:
-        setImportedNamespace((String)newValue);
+      case ClassmodelPackage.IMPORT__IMPORT_URI:
+        setImportURI((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -138,8 +138,8 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
   {
     switch (featureID)
     {
-      case ClassmodelPackage.IMPORT__IMPORTED_NAMESPACE:
-        setImportedNamespace(IMPORTED_NAMESPACE_EDEFAULT);
+      case ClassmodelPackage.IMPORT__IMPORT_URI:
+        setImportURI(IMPORT_URI_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -155,8 +155,8 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
   {
     switch (featureID)
     {
-      case ClassmodelPackage.IMPORT__IMPORTED_NAMESPACE:
-        return IMPORTED_NAMESPACE_EDEFAULT == null ? importedNamespace != null : !IMPORTED_NAMESPACE_EDEFAULT.equals(importedNamespace);
+      case ClassmodelPackage.IMPORT__IMPORT_URI:
+        return IMPORT_URI_EDEFAULT == null ? importURI != null : !IMPORT_URI_EDEFAULT.equals(importURI);
     }
     return super.eIsSet(featureID);
   }
@@ -172,8 +172,8 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (importedNamespace: ");
-    result.append(importedNamespace);
+    result.append(" (importURI: ");
+    result.append(importURI);
     result.append(')');
     return result.toString();
   }

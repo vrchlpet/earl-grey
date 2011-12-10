@@ -165,13 +165,13 @@ public interface ClassmodelPackage extends EPackage
   int IMPORT = 3;
 
   /**
-   * The feature id for the '<em><b>Imported Namespace</b></em>' attribute.
+   * The feature id for the '<em><b>Import URI</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int IMPORT__IMPORTED_NAMESPACE = 0;
+  int IMPORT__IMPORT_URI = 0;
 
   /**
    * The number of structural features of the '<em>Import</em>' class.
@@ -610,15 +610,15 @@ public interface ClassmodelPackage extends EPackage
   EClass getImport();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Import#getImportedNamespace <em>Imported Namespace</em>}'.
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Import#getImportURI <em>Import URI</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Imported Namespace</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Import#getImportedNamespace()
+   * @return the meta object for the attribute '<em>Import URI</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Import#getImportURI()
    * @see #getImport()
    * @generated
    */
-  EAttribute getImport_ImportedNamespace();
+  EAttribute getImport_ImportURI();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Entity <em>Entity</em>}'.
@@ -1048,12 +1048,12 @@ public interface ClassmodelPackage extends EPackage
     EClass IMPORT = eINSTANCE.getImport();
 
     /**
-     * The meta object literal for the '<em><b>Imported Namespace</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Import URI</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute IMPORT__IMPORTED_NAMESPACE = eINSTANCE.getImport_ImportedNamespace();
+    EAttribute IMPORT__IMPORT_URI = eINSTANCE.getImport_ImportURI();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EntityImpl <em>Entity</em>}' class.

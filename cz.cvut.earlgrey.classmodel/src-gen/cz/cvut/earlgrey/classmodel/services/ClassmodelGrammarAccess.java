@@ -113,28 +113,28 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Import");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cImportKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cImportedNamespaceAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_0 = (RuleCall)cImportedNamespaceAssignment_1.eContents().get(0);
+		private final Assignment cImportURIAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cImportURISTRINGTerminalRuleCall_1_0 = (RuleCall)cImportURIAssignment_1.eContents().get(0);
 		
 		////FIXME: importing works without 'import' declaration
 		//
 		////FIXME: file import
 		//
 		//Import:
-		//	"import" importedNamespace=QualifiedNameWithWildcard;
+		//	"import" importURI=STRING;
 		public ParserRule getRule() { return rule; }
 
-		//"import" importedNamespace=QualifiedNameWithWildcard
+		//"import" importURI=STRING
 		public Group getGroup() { return cGroup; }
 
 		//"import"
 		public Keyword getImportKeyword_0() { return cImportKeyword_0; }
 
-		//importedNamespace=QualifiedNameWithWildcard
-		public Assignment getImportedNamespaceAssignment_1() { return cImportedNamespaceAssignment_1; }
+		//importURI=STRING
+		public Assignment getImportURIAssignment_1() { return cImportURIAssignment_1; }
 
-		//QualifiedNameWithWildcard
-		public RuleCall getImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_0() { return cImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_0; }
+		//STRING
+		public RuleCall getImportURISTRINGTerminalRuleCall_1_0() { return cImportURISTRINGTerminalRuleCall_1_0; }
 	}
 
 	public class EntityElements extends AbstractParserRuleElementFinder {
@@ -151,6 +151,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMethodMethodParserRuleCall_4_0 = (RuleCall)cMethodAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
+		////TODO: Generic types? i.e.: class Name<T> {/ *body* /} ?
 		//Entity:
 		//	type=EntityType name=ID "{" attribute+=Attribute* method+=Method* "}";
 		public ParserRule getRule() { return rule; }
@@ -811,7 +812,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	////FIXME: file import
 	//
 	//Import:
-	//	"import" importedNamespace=QualifiedNameWithWildcard;
+	//	"import" importURI=STRING;
 	public ImportElements getImportAccess() {
 		return (pImport != null) ? pImport : (pImport = new ImportElements());
 	}
@@ -820,6 +821,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getImportAccess().getRule();
 	}
 
+	////TODO: Generic types? i.e.: class Name<T> {/ *body* /} ?
 	//Entity:
 	//	type=EntityType name=ID "{" attribute+=Attribute* method+=Method* "}";
 	public EntityElements getEntityAccess() {

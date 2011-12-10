@@ -1,6 +1,7 @@
 package cz.cvut.earlgrey.classmodel.ui.wizards;
 
 import org.eclipse.core.resources.IContainer;
+import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Path;
@@ -116,7 +117,7 @@ public class NewWizardPage extends WizardPage {
 				containerText.setText(container.getFullPath().toString());
 			}
 		}
-		fileText.setText("empty.cm");
+		fileText.setText("");
 	}
 
 	/**
@@ -166,13 +167,27 @@ public class NewWizardPage extends WizardPage {
 			updateStatus("File name must be valid");
 			return;
 		}
+
 		int dotLoc = fileName.lastIndexOf('.');
-		if (dotLoc != -1) {
+		if (dotLoc == 0) {
+			updateStatus("File name must be valid");
+			return;
+		} else if (dotLoc > 0) {
 			String ext = fileName.substring(dotLoc + 1);
 			if (ext.equalsIgnoreCase("cm") == false) {
 				updateStatus("File extension must be \"cm\"");
 				return;
 			}
+		} else if (dotLoc == -1) {
+			updateStatus("File extension must be \"cm\"");
+			return;
+		}
+
+		IContainer cont = (IContainer) container;
+		final IFile file = cont.getFile(new Path(fileName));
+		if (file.exists()) {
+			updateStatus("File " + fileName + " already exists.");
+			return;
 		}
 		updateStatus(null);
 	}
