@@ -1,0 +1,11 @@
+import 'http://www.cvut.cz/earlgrey/classmodel/Classmodel'
+
+package classmodel
+
+    context Import
+        def: asError(verdict : Boolean) : Boolean =
+            if verdict then true else null endif
+        inv ImportNameLength('Test constrain'):
+            importURI.size() >= 10
+
+endpackage
