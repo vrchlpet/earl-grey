@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Reference#getType <em>Type</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Reference#getGeneric <em>Generic</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Reference#getDimension <em>Dimension</em>}</li>
  * </ul>
  * </p>
@@ -55,22 +54,6 @@ public interface Reference extends EObject
    * @generated
    */
   void setType(Entity value);
-
-  /**
-   * Returns the value of the '<em><b>Generic</b></em>' containment reference list.
-   * The list contents are of type {@link cz.cvut.earlgrey.classmodel.classmodel.Reference}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Generic</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Generic</em>' containment reference list.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getReference_Generic()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Reference> getGeneric();
 
   /**
    * Returns the value of the '<em><b>Dimension</b></em>' attribute list.

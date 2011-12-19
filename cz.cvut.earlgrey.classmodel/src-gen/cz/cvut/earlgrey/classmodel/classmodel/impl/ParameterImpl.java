@@ -26,8 +26,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ParameterImpl#getType <em>Type</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ParameterImpl#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ParameterImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -35,16 +35,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class ParameterImpl extends MinimalEObjectImpl.Container implements Parameter
 {
-  /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
-  protected Reference type;
-
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -66,6 +56,16 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
   protected String name = NAME_EDEFAULT;
 
   /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected Reference type;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -84,6 +84,29 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
   protected EClass eStaticClass()
   {
     return ClassmodelPackage.Literals.PARAMETER;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.PARAMETER__NAME, oldName, name));
   }
 
   /**
@@ -139,29 +162,6 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.PARAMETER__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -183,10 +183,10 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
   {
     switch (featureID)
     {
-      case ClassmodelPackage.PARAMETER__TYPE:
-        return getType();
       case ClassmodelPackage.PARAMETER__NAME:
         return getName();
+      case ClassmodelPackage.PARAMETER__TYPE:
+        return getType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -201,11 +201,11 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
   {
     switch (featureID)
     {
-      case ClassmodelPackage.PARAMETER__TYPE:
-        setType((Reference)newValue);
-        return;
       case ClassmodelPackage.PARAMETER__NAME:
         setName((String)newValue);
+        return;
+      case ClassmodelPackage.PARAMETER__TYPE:
+        setType((Reference)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -221,11 +221,11 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
   {
     switch (featureID)
     {
-      case ClassmodelPackage.PARAMETER__TYPE:
-        setType((Reference)null);
-        return;
       case ClassmodelPackage.PARAMETER__NAME:
         setName(NAME_EDEFAULT);
+        return;
+      case ClassmodelPackage.PARAMETER__TYPE:
+        setType((Reference)null);
         return;
     }
     super.eUnset(featureID);
@@ -241,10 +241,10 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
   {
     switch (featureID)
     {
-      case ClassmodelPackage.PARAMETER__TYPE:
-        return type != null;
       case ClassmodelPackage.PARAMETER__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case ClassmodelPackage.PARAMETER__TYPE:
+        return type != null;
     }
     return super.eIsSet(featureID);
   }

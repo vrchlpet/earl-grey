@@ -13,7 +13,6 @@ import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -24,8 +23,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +32,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ReferenceImpl#getType <em>Type</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ReferenceImpl#getGeneric <em>Generic</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ReferenceImpl#getDimension <em>Dimension</em>}</li>
  * </ul>
  * </p>
@@ -53,16 +49,6 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
    * @ordered
    */
   protected Entity type;
-
-  /**
-   * The cached value of the '{@link #getGeneric() <em>Generic</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getGeneric()
-   * @generated
-   * @ordered
-   */
-  protected EList<Reference> generic;
 
   /**
    * The cached value of the '{@link #getDimension() <em>Dimension</em>}' attribute list.
@@ -143,20 +129,6 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Reference> getGeneric()
-  {
-    if (generic == null)
-    {
-      generic = new EObjectContainmentEList<Reference>(Reference.class, this, ClassmodelPackage.REFERENCE__GENERIC);
-    }
-    return generic;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EList<String> getDimension()
   {
     if (dimension == null)
@@ -172,22 +144,6 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
    * @generated
    */
   @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case ClassmodelPackage.REFERENCE__GENERIC:
-        return ((InternalEList<?>)getGeneric()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
@@ -195,8 +151,6 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
       case ClassmodelPackage.REFERENCE__TYPE:
         if (resolve) return getType();
         return basicGetType();
-      case ClassmodelPackage.REFERENCE__GENERIC:
-        return getGeneric();
       case ClassmodelPackage.REFERENCE__DIMENSION:
         return getDimension();
     }
@@ -216,10 +170,6 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
     {
       case ClassmodelPackage.REFERENCE__TYPE:
         setType((Entity)newValue);
-        return;
-      case ClassmodelPackage.REFERENCE__GENERIC:
-        getGeneric().clear();
-        getGeneric().addAll((Collection<? extends Reference>)newValue);
         return;
       case ClassmodelPackage.REFERENCE__DIMENSION:
         getDimension().clear();
@@ -242,9 +192,6 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
       case ClassmodelPackage.REFERENCE__TYPE:
         setType((Entity)null);
         return;
-      case ClassmodelPackage.REFERENCE__GENERIC:
-        getGeneric().clear();
-        return;
       case ClassmodelPackage.REFERENCE__DIMENSION:
         getDimension().clear();
         return;
@@ -264,8 +211,6 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
     {
       case ClassmodelPackage.REFERENCE__TYPE:
         return type != null;
-      case ClassmodelPackage.REFERENCE__GENERIC:
-        return generic != null && !generic.isEmpty();
       case ClassmodelPackage.REFERENCE__DIMENSION:
         return dimension != null && !dimension.isEmpty();
     }

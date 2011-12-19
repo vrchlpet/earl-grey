@@ -413,56 +413,7 @@ ruleReference returns [EObject current=null]
 	    }
 
 )
-)(((	'<' 
-)=>	otherlv_1='<' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getReferenceAccess().getLessThanSignKeyword_1_0());
-    }
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getReferenceAccess().getGenericReferenceParserRuleCall_1_1_0()); 
-	    }
-		lv_generic_2_0=ruleReference		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getReferenceRule());
-	        }
-       		add(
-       			$current, 
-       			"generic",
-        		lv_generic_2_0, 
-        		"Reference");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(	otherlv_3=',' 
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getReferenceAccess().getCommaKeyword_1_2_0());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getReferenceAccess().getGenericReferenceParserRuleCall_1_2_1_0()); 
-	    }
-		lv_generic_4_0=ruleReference		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getReferenceRule());
-	        }
-       		add(
-       			$current, 
-       			"generic",
-        		lv_generic_4_0, 
-        		"Reference");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))*	otherlv_5='>' 
-    {
-    	newLeafNode(otherlv_5, grammarAccess.getReferenceAccess().getGreaterThanSignKeyword_1_3());
-    }
-)?((((
+)((((
 (
 	'[' 
  
@@ -471,24 +422,24 @@ ruleReference returns [EObject current=null]
 )	']' 
 ))=>((
 (
-		lv_dimension_6_0=	'[' 
+		lv_dimension_1_0=	'[' 
     {
-        newLeafNode(lv_dimension_6_0, grammarAccess.getReferenceAccess().getDimensionLeftSquareBracketKeyword_2_0_0_0());
+        newLeafNode(lv_dimension_1_0, grammarAccess.getReferenceAccess().getDimensionLeftSquareBracketKeyword_1_0_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getReferenceRule());
 	        }
-       		addWithLastConsumed($current, "dimension", lv_dimension_6_0, "[");
+       		addWithLastConsumed($current, "dimension", lv_dimension_1_0, "[");
 	    }
 
 )
-)	otherlv_7=']' 
+)	otherlv_2=']' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getReferenceAccess().getRightSquareBracketKeyword_2_0_1());
+    	newLeafNode(otherlv_2, grammarAccess.getReferenceAccess().getRightSquareBracketKeyword_1_0_1());
     }
-))*)
+))?)
 ;
 
 
@@ -549,7 +500,11 @@ ruleMethod returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getMethodAccess().getLeftParenthesisKeyword_2());
     }
-((
+(((
+(
+ruleParameter
+)
+)=>
 (
 		{ 
 	        newCompositeNode(grammarAccess.getMethodAccess().getParametersParameterParserRuleCall_3_0_0()); 
@@ -638,27 +593,9 @@ ruleParameter returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		{ 
-	        newCompositeNode(grammarAccess.getParameterAccess().getTypeReferenceParserRuleCall_0_0()); 
-	    }
-		lv_type_0_0=ruleReference		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getParameterRule());
-	        }
-       		set(
-       			$current, 
-       			"type",
-        		lv_type_0_0, 
-        		"Reference");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
-(
-		lv_name_1_0=RULE_ID
+		lv_name_0_0=RULE_ID
 		{
-			newLeafNode(lv_name_1_0, grammarAccess.getParameterAccess().getNameIDTerminalRuleCall_1_0()); 
+			newLeafNode(lv_name_0_0, grammarAccess.getParameterAccess().getNameIDTerminalRuleCall_0_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -667,8 +604,30 @@ ruleParameter returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"name",
-        		lv_name_1_0, 
+        		lv_name_0_0, 
         		"ID");
+	    }
+
+)
+)	otherlv_1=':' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getParameterAccess().getColonKeyword_1());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getParameterAccess().getTypeReferenceParserRuleCall_2_0()); 
+	    }
+		lv_type_2_0=ruleReference		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getParameterRule());
+	        }
+       		set(
+       			$current, 
+       			"type",
+        		lv_type_2_0, 
+        		"Reference");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )

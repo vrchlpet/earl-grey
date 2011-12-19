@@ -28,8 +28,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Reference">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Entity"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="generic" upperBound="-1"
-        eType="#//Reference" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dimension" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -42,9 +40,9 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Reference"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Attribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modifier" eType="#//Visibility"/>
@@ -61,23 +59,23 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RelationType">
-    <eLiterals name="ASSOCIATION"/>
-    <eLiterals name="DEPENCY" value="1"/>
-    <eLiterals name="GENERALIZATION" value="2"/>
-    <eLiterals name="REALIZATION" value="3"/>
-    <eLiterals name="AGGREGATION" value="4"/>
-    <eLiterals name="COMPOSITION" value="5"/>
+    <eLiterals name="ASSOCIATION" literal="associates"/>
+    <eLiterals name="DEPENCY" value="1" literal="depends"/>
+    <eLiterals name="GENERALIZATION" value="2" literal="extends"/>
+    <eLiterals name="REALIZATION" value="3" literal="implements"/>
+    <eLiterals name="AGGREGATION" value="4" literal="aggregates"/>
+    <eLiterals name="COMPOSITION" value="5" literal="composedOf"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Visibility">
-    <eLiterals name="PUBLIC"/>
-    <eLiterals name="PRIVATE" value="1"/>
-    <eLiterals name="PROTECTED" value="2"/>
-    <eLiterals name="PACKAGE_PRIVATE" value="3"/>
+    <eLiterals name="PUBLIC" literal="+"/>
+    <eLiterals name="PRIVATE" value="1" literal="-"/>
+    <eLiterals name="PROTECTED" value="2" literal="#"/>
+    <eLiterals name="PACKAGE_PRIVATE" value="3" literal="~"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EntityType">
-    <eLiterals name="CLASS"/>
-    <eLiterals name="INTERFACE" value="1"/>
-    <eLiterals name="ABSTRACT" value="2"/>
-    <eLiterals name="ENUM" value="3"/>
+    <eLiterals name="CLASS" literal="class"/>
+    <eLiterals name="INTERFACE" value="1" literal="interface"/>
+    <eLiterals name="ABSTRACT" value="2" literal="abstract"/>
+    <eLiterals name="ENUM" value="3" literal="enum"/>
   </eClassifiers>
 </ecore:EPackage>

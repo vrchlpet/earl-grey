@@ -257,22 +257,13 @@ public interface ClassmodelPackage extends EPackage
   int REFERENCE__TYPE = 0;
 
   /**
-   * The feature id for the '<em><b>Generic</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REFERENCE__GENERIC = 1;
-
-  /**
    * The feature id for the '<em><b>Dimension</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REFERENCE__DIMENSION = 2;
+  int REFERENCE__DIMENSION = 1;
 
   /**
    * The number of structural features of the '<em>Reference</em>' class.
@@ -281,7 +272,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int REFERENCE_FEATURE_COUNT = 3;
+  int REFERENCE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.MethodImpl <em>Method</em>}' class.
@@ -349,22 +340,22 @@ public interface ClassmodelPackage extends EPackage
   int PARAMETER = 7;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER__TYPE = 0;
-
-  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARAMETER__NAME = 1;
+  int PARAMETER__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER__TYPE = 1;
 
   /**
    * The number of structural features of the '<em>Parameter</em>' class.
@@ -696,17 +687,6 @@ public interface ClassmodelPackage extends EPackage
   EReference getReference_Type();
 
   /**
-   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.classmodel.classmodel.Reference#getGeneric <em>Generic</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Generic</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Reference#getGeneric()
-   * @see #getReference()
-   * @generated
-   */
-  EReference getReference_Generic();
-
-  /**
    * Returns the meta object for the attribute list '{@link cz.cvut.earlgrey.classmodel.classmodel.Reference#getDimension <em>Dimension</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -782,17 +762,6 @@ public interface ClassmodelPackage extends EPackage
   EClass getParameter();
 
   /**
-   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Parameter#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Type</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Parameter#getType()
-   * @see #getParameter()
-   * @generated
-   */
-  EReference getParameter_Type();
-
-  /**
    * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Parameter#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -802,6 +771,17 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   EAttribute getParameter_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Parameter#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Parameter#getType()
+   * @see #getParameter()
+   * @generated
+   */
+  EReference getParameter_Type();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute <em>Attribute</em>}'.
@@ -1116,14 +1096,6 @@ public interface ClassmodelPackage extends EPackage
     EReference REFERENCE__TYPE = eINSTANCE.getReference_Type();
 
     /**
-     * The meta object literal for the '<em><b>Generic</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference REFERENCE__GENERIC = eINSTANCE.getReference_Generic();
-
-    /**
      * The meta object literal for the '<em><b>Dimension</b></em>' attribute list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1184,20 +1156,20 @@ public interface ClassmodelPackage extends EPackage
     EClass PARAMETER = eINSTANCE.getParameter();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARAMETER__TYPE = eINSTANCE.getParameter_Type();
-
-    /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute PARAMETER__NAME = eINSTANCE.getParameter_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARAMETER__TYPE = eINSTANCE.getParameter_Type();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl <em>Attribute</em>}' class.

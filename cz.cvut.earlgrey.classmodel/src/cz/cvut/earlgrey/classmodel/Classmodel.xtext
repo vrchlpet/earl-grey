@@ -20,7 +20,6 @@ Package:
 Import:
     'import' importURI=STRING;
 
-//TODO: Generic types? i.e.: class Name<T> {/*body*/} ?
 Entity:
     type=EntityType name=ID
     '{'
@@ -29,22 +28,20 @@ Entity:
     '}';
     
 /**
- * Entity reference, supports n-dimension arrays, generic types.
+ * Entity reference, supports n-dimension arrays.
  */
 Reference:
-    type=[Entity|QualifiedName] (=> '<' generic+=Reference (',' generic+=Reference)* '>')?
-    => (dimension+='[' ']')*;
+    type=[Entity|QualifiedName] (=> (dimension+='[' ']')*)?;
 
 /**
  * i.e.: +setAll(Parameter[]) : void
  */
 Method:
-    (modifier=Visibility)? name=ID '(' (parameters+=Parameter (',' parameters+=Parameter)*)? ')' ':'
+    (modifier=Visibility)? name=ID '(' (=> parameters+=Parameter (',' parameters+=Parameter)*)? ')' ':'
     return=Reference;
 
 Parameter:
-    type=Reference
-    name=ID;
+    name=ID ':' type=Reference;
 
 Attribute:
     (modifier=Visibility)? name=ID ':' type=Reference;

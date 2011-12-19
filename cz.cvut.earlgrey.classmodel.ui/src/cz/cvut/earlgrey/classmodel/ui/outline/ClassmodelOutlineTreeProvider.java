@@ -1,6 +1,5 @@
 package cz.cvut.earlgrey.classmodel.ui.outline;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.jface.viewers.StyledString;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
@@ -26,8 +25,6 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	private static final int COLOR_B = 71;
 	private static final int COLOR_G = 125;
 	private static final int COLOR_R = 149;
-	private static final String GREATER_THAN = ">";
-	private static final String LOWER_THAN = "<";
 	private static final String COLON = " : ";
 	private static final String COMMA = ", ";
 	private static final String ROUND_BRACKET_RIGHT = ")";
@@ -85,9 +82,14 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		out.append(ele.getName());
 		out.append(ROUND_BRACKET_LEFT);
 
+		int counter = 0;
 		for (Parameter params : ele.getParameters()) {
+			if (counter++ > 0) {
+				out.append(COMMA + EMPTY_STRING);
+			}
 			out.append(traverseReference(params.getType()));
 		}
+
 		out.append(ROUND_BRACKET_RIGHT);
 		return styleType(out.toString(), ele.getReturn());
 	}
@@ -158,21 +160,6 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 			Entity type = ref.getType();
 			if (type != null) {
 				buffer.append(type.getName());
-
-				EList<Reference> refs = ref.getGeneric();
-				if (refs.size() > 0) {
-					buffer.append(LOWER_THAN);
-					int counter = 0;
-					for (Reference item : ref.getGeneric()) {
-						if (counter > 0) {
-							buffer.append(COMMA + EMPTY_STRING);
-						}
-						buffer.append(traverseReference(item));
-						++counter;
-					}
-					buffer.append(GREATER_THAN);
-				}
-
 				for (int i = 0; i < ref.getDimension().size(); ++i) {
 					buffer.append(ARRAY);
 				}
