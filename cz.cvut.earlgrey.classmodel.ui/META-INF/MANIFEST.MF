@@ -21,7 +21,7 @@ Require-Bundle: cz.cvut.earlgrey.classmodel;visibility:=reexport,
  org.eclipse.jface.text
 Import-Package: org.apache.log4j,
  org.apache.commons.logging
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: cz.cvut.earlgrey.classmodel.ui.contentassist.antlr,
  cz.cvut.earlgrey.classmodel.ui.internal
 Bundle-Activator: cz.cvut.earlgrey.classmodel.ui.internal.ClassmodelActivator

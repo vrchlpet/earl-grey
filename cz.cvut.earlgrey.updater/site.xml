@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/cz.cvut.earlgrey.feature_1.0.0.201112211611.jar" id="cz.cvut.earlgrey.feature" version="1.0.0.201112211611">
+      <category name="teapot"/>
+   </feature>
+   <category-def name="teapot" label="Tea Pot"/>
+</site>
