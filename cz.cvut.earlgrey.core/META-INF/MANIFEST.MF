@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EarlGrey Core
+Bundle-SymbolicName: cz.cvut.earlgrey.core
+Bundle-Version: 1.0.0.vqualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.xtext;bundle-version="2.1.1"
+Export-Package: cz.cvut.earlgrey.xtext.formatting,
+ cz.cvut.earlgrey.xtext.scoping

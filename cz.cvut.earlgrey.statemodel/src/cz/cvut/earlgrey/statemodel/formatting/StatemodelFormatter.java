@@ -3,14 +3,10 @@
  */
 package cz.cvut.earlgrey.statemodel.formatting;
 
-import java.util.List;
-
-import org.eclipse.xtext.Keyword;
-import org.eclipse.xtext.formatting.impl.AbstractDeclarativeFormatter;
 import org.eclipse.xtext.formatting.impl.FormattingConfig;
-import org.eclipse.xtext.util.Pair;
 
-import cz.cvut.earlgrey.classmodel.services.ClassmodelGrammarAccess;
+import cz.cvut.earlgrey.statemodel.services.StatemodelGrammarAccess;
+import cz.cvut.earlgrey.xtext.formatting.AbstractDefaultFormatter;
 
 /**
  * This class contains custom formatting description.
@@ -21,19 +17,15 @@ import cz.cvut.earlgrey.classmodel.services.ClassmodelGrammarAccess;
  * Also see {@link org.eclipse.xtext.xtext.XtextFormattingTokenSerializer} as an
  * example
  */
-public class StatemodelFormatter extends AbstractDeclarativeFormatter {
+public class StatemodelFormatter extends AbstractDefaultFormatter {
 
 	@Override
 	protected void configureFormatting(FormattingConfig c) {
-		ClassmodelGrammarAccess f = (ClassmodelGrammarAccess) getGrammarAccess();
+		StatemodelGrammarAccess f = (StatemodelGrammarAccess) getGrammarAccess();
 
-		c.setAutoLinewrap(120);
+		c.setLinewrap(1, 2, 3).after(f.getImportRule());
 
-		List<Pair<Keyword, Keyword>> pairs = f.findKeywordPairs("{", "}");
-		for (Pair<Keyword, Keyword> pair : pairs) {
-			c.setLinewrap().after(pair.getFirst());
-			c.setIndentation(pair.getFirst(), pair.getSecond());
-		}
+		initDefault(c, f); // loads default format config
 
 		c.setLinewrap(0, 1, 2).before(f.getSL_COMMENTRule());
 		c.setLinewrap(0, 1, 2).before(f.getML_COMMENTRule());

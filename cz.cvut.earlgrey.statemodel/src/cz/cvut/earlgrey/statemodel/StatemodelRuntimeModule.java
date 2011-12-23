@@ -1,14 +1,11 @@
 package cz.cvut.earlgrey.statemodel;
 
-import org.eclipse.xtext.naming.IQualifiedNameProvider;
-
-import cz.cvut.earlgrey.statemodel.naming.StatemodelNameProvider;
+import cz.cvut.earlgrey.xtext.scoping.ImportUriGlobalScope;
 
 public class StatemodelRuntimeModule extends cz.cvut.earlgrey.statemodel.AbstractStatemodelRuntimeModule {
 
 	@Override
-	public Class<? extends IQualifiedNameProvider> bindIQualifiedNameProvider() {
-		return StatemodelNameProvider.class;
+	public Class<? extends org.eclipse.xtext.scoping.IGlobalScopeProvider> bindIGlobalScopeProvider() {
+		return ImportUriGlobalScope.class;
 	}
-
 }
