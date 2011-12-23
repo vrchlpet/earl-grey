@@ -1,0 +1,26 @@
+grammar cz.cvut.earlgrey.statemodel.Statemodel with org.eclipse.xtext.common.Terminals
+
+import "http://www.cvut.cz/earlgrey/classmodel/Classmodel" as cls
+generate statemodel "http://www.cvut.cz/earlgrey/statemodel/Statemodel"
+
+/**
+ * Defines root node of a model.
+ * Resource imports must be defined before other elements.
+ */
+Statemodel:
+    (imports+=Import)* (statemachine+=Statemachine)* (state+=[State|ID])*;
+
+Statemachine:
+    'statemachine' reference=[cls::Entity|QualifiedName]
+    '{'
+    (element+=[cls::Entity|QualifiedName])* (state+=State)*
+    '}';
+
+State:
+    'state' name=ID;
+
+Import:
+    'import' importURI=STRING;
+
+QualifiedName:
+    ID ('.' ID)*;
