@@ -26,7 +26,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -37,7 +36,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemachineImpl#getReference <em>Reference</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemachineImpl#getElement <em>Element</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemachineImpl#getState <em>State</em>}</li>
  * </ul>
  * </p>
@@ -55,16 +53,6 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
    * @ordered
    */
   protected Entity reference;
-
-  /**
-   * The cached value of the '{@link #getElement() <em>Element</em>}' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getElement()
-   * @generated
-   * @ordered
-   */
-  protected EList<Entity> element;
 
   /**
    * The cached value of the '{@link #getState() <em>State</em>}' containment reference list.
@@ -145,20 +133,6 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Entity> getElement()
-  {
-    if (element == null)
-    {
-      element = new EObjectResolvingEList<Entity>(Entity.class, this, StatemodelPackage.STATEMACHINE__ELEMENT);
-    }
-    return element;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EList<State> getState()
   {
     if (state == null)
@@ -197,8 +171,6 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
       case StatemodelPackage.STATEMACHINE__REFERENCE:
         if (resolve) return getReference();
         return basicGetReference();
-      case StatemodelPackage.STATEMACHINE__ELEMENT:
-        return getElement();
       case StatemodelPackage.STATEMACHINE__STATE:
         return getState();
     }
@@ -218,10 +190,6 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
     {
       case StatemodelPackage.STATEMACHINE__REFERENCE:
         setReference((Entity)newValue);
-        return;
-      case StatemodelPackage.STATEMACHINE__ELEMENT:
-        getElement().clear();
-        getElement().addAll((Collection<? extends Entity>)newValue);
         return;
       case StatemodelPackage.STATEMACHINE__STATE:
         getState().clear();
@@ -244,9 +212,6 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
       case StatemodelPackage.STATEMACHINE__REFERENCE:
         setReference((Entity)null);
         return;
-      case StatemodelPackage.STATEMACHINE__ELEMENT:
-        getElement().clear();
-        return;
       case StatemodelPackage.STATEMACHINE__STATE:
         getState().clear();
         return;
@@ -266,8 +231,6 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
     {
       case StatemodelPackage.STATEMACHINE__REFERENCE:
         return reference != null;
-      case StatemodelPackage.STATEMACHINE__ELEMENT:
-        return element != null && !element.isEmpty();
       case StatemodelPackage.STATEMACHINE__STATE:
         return state != null && !state.isEmpty();
     }

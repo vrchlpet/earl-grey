@@ -9,18 +9,30 @@
     editorPluginID="cz.cvut.earlgrey.statemodel.editor" usedGenPackages="../../../../../../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/Classmodel.genmodel#//classmodel">
   <genPackages prefix="Statemodel" basePackage="cz.cvut.earlgrey.statemodel" disposableProviderFactory="true"
       ecorePackage="Statemodel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Statemodel.ecore#//StateType">
+      <genEnumLiterals ecoreEnumLiteral="Statemodel.ecore#//StateType/NONE"/>
+      <genEnumLiterals ecoreEnumLiteral="Statemodel.ecore#//StateType/INITIAL"/>
+      <genEnumLiterals ecoreEnumLiteral="Statemodel.ecore#//StateType/FINAL"/>
+    </genEnums>
     <genClasses ecoreClass="Statemodel.ecore#//Statemodel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Statemodel.ecore#//Statemodel/imports"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Statemodel.ecore#//Statemodel/statemachine"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Statemodel.ecore#//Statemodel/state"/>
     </genClasses>
     <genClasses ecoreClass="Statemodel.ecore#//Statemachine">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Statemodel.ecore#//Statemachine/reference"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Statemodel.ecore#//Statemachine/element"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Statemodel.ecore#//Statemachine/state"/>
     </genClasses>
     <genClasses ecoreClass="Statemodel.ecore#//State">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//State/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//State/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Statemodel.ecore#//State/transitions"/>
+    </genClasses>
+    <genClasses ecoreClass="Statemodel.ecore#//Transition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Statemodel.ecore#//Transition/event"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Statemodel.ecore#//Transition/state"/>
+    </genClasses>
+    <genClasses ecoreClass="Statemodel.ecore#//Event">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//Event/name"/>
     </genClasses>
     <genClasses ecoreClass="Statemodel.ecore#//Import">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//Import/importURI"/>

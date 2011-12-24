@@ -8,19 +8,35 @@ generate statemodel "http://www.cvut.cz/earlgrey/statemodel/Statemodel"
  * Resource imports must be defined before other elements.
  */
 Statemodel:
-    (imports+=Import)* (statemachine+=Statemachine)* (state+=[State|ID])*;
+    (imports+=Import)* (statemachine+=Statemachine)*;
 
+//TODO: STRING | ID |  [cls::Entity|QualifiedName]
 Statemachine:
     'statemachine' reference=[cls::Entity|QualifiedName]
     '{'
-    (element+=[cls::Entity|QualifiedName])* (state+=State)*
+    (state+=State)*
     '}';
 
 State:
-    'state' name=ID;
+    type=StateType name=ID
+    '{'
+    (transitions+=Transition)*
+    '}';
+
+Transition:
+    event=Event '=>' state=[State];
+
+Event:
+    name=ID;
 
 Import:
     'import' importURI=STRING;
 
+//TODO: remove NONE? causes "NONE state BB {}"
+enum StateType:
+    NONE='state' | INITIAL='initial' | FINAL='final';
+
 QualifiedName:
     ID ('.' ID)*;
+
+//terminal COND    : '(' (!')')* ')'; //wrong (a && (b+4))

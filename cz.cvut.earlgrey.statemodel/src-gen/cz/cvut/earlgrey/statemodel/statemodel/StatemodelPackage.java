@@ -8,6 +8,7 @@ package cz.cvut.earlgrey.statemodel.statemodel;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -89,22 +90,13 @@ public interface StatemodelPackage extends EPackage
   int STATEMODEL__STATEMACHINE = 1;
 
   /**
-   * The feature id for the '<em><b>State</b></em>' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATEMODEL__STATE = 2;
-
-  /**
    * The number of structural features of the '<em>Statemodel</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATEMODEL_FEATURE_COUNT = 3;
+  int STATEMODEL_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemachineImpl <em>Statemachine</em>}' class.
@@ -126,22 +118,13 @@ public interface StatemodelPackage extends EPackage
   int STATEMACHINE__REFERENCE = 0;
 
   /**
-   * The feature id for the '<em><b>Element</b></em>' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATEMACHINE__ELEMENT = 1;
-
-  /**
    * The feature id for the '<em><b>State</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATEMACHINE__STATE = 2;
+  int STATEMACHINE__STATE = 1;
 
   /**
    * The number of structural features of the '<em>Statemachine</em>' class.
@@ -150,7 +133,7 @@ public interface StatemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATEMACHINE_FEATURE_COUNT = 3;
+  int STATEMACHINE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StateImpl <em>State</em>}' class.
@@ -163,13 +146,31 @@ public interface StatemodelPackage extends EPackage
   int STATE = 2;
 
   /**
+   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATE__TYPE = 0;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATE__NAME = 0;
+  int STATE__NAME = 1;
+
+  /**
+   * The feature id for the '<em><b>Transitions</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATE__TRANSITIONS = 2;
 
   /**
    * The number of structural features of the '<em>State</em>' class.
@@ -178,7 +179,72 @@ public interface StatemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATE_FEATURE_COUNT = 1;
+  int STATE_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.statemodel.statemodel.impl.TransitionImpl <em>Transition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.statemodel.statemodel.impl.TransitionImpl
+   * @see cz.cvut.earlgrey.statemodel.statemodel.impl.StatemodelPackageImpl#getTransition()
+   * @generated
+   */
+  int TRANSITION = 3;
+
+  /**
+   * The feature id for the '<em><b>Event</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANSITION__EVENT = 0;
+
+  /**
+   * The feature id for the '<em><b>State</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANSITION__STATE = 1;
+
+  /**
+   * The number of structural features of the '<em>Transition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANSITION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.statemodel.statemodel.impl.EventImpl <em>Event</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.statemodel.statemodel.impl.EventImpl
+   * @see cz.cvut.earlgrey.statemodel.statemodel.impl.StatemodelPackageImpl#getEvent()
+   * @generated
+   */
+  int EVENT = 4;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVENT__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Event</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVENT_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.statemodel.statemodel.impl.ImportImpl <em>Import</em>}' class.
@@ -188,7 +254,7 @@ public interface StatemodelPackage extends EPackage
    * @see cz.cvut.earlgrey.statemodel.statemodel.impl.StatemodelPackageImpl#getImport()
    * @generated
    */
-  int IMPORT = 3;
+  int IMPORT = 5;
 
   /**
    * The feature id for the '<em><b>Import URI</b></em>' attribute.
@@ -207,6 +273,16 @@ public interface StatemodelPackage extends EPackage
    * @ordered
    */
   int IMPORT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.statemodel.statemodel.StateType <em>State Type</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.statemodel.statemodel.StateType
+   * @see cz.cvut.earlgrey.statemodel.statemodel.impl.StatemodelPackageImpl#getStateType()
+   * @generated
+   */
+  int STATE_TYPE = 6;
 
 
   /**
@@ -242,17 +318,6 @@ public interface StatemodelPackage extends EPackage
   EReference getStatemodel_Statemachine();
 
   /**
-   * Returns the meta object for the reference list '{@link cz.cvut.earlgrey.statemodel.statemodel.Statemodel#getState <em>State</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>State</em>'.
-   * @see cz.cvut.earlgrey.statemodel.statemodel.Statemodel#getState()
-   * @see #getStatemodel()
-   * @generated
-   */
-  EReference getStatemodel_State();
-
-  /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.statemodel.statemodel.Statemachine <em>Statemachine</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -272,17 +337,6 @@ public interface StatemodelPackage extends EPackage
    * @generated
    */
   EReference getStatemachine_Reference();
-
-  /**
-   * Returns the meta object for the reference list '{@link cz.cvut.earlgrey.statemodel.statemodel.Statemachine#getElement <em>Element</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Element</em>'.
-   * @see cz.cvut.earlgrey.statemodel.statemodel.Statemachine#getElement()
-   * @see #getStatemachine()
-   * @generated
-   */
-  EReference getStatemachine_Element();
 
   /**
    * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.statemodel.statemodel.Statemachine#getState <em>State</em>}'.
@@ -306,6 +360,17 @@ public interface StatemodelPackage extends EPackage
   EClass getState();
 
   /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.statemodel.statemodel.State#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see cz.cvut.earlgrey.statemodel.statemodel.State#getType()
+   * @see #getState()
+   * @generated
+   */
+  EAttribute getState_Type();
+
+  /**
    * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.statemodel.statemodel.State#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -315,6 +380,70 @@ public interface StatemodelPackage extends EPackage
    * @generated
    */
   EAttribute getState_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.statemodel.statemodel.State#getTransitions <em>Transitions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Transitions</em>'.
+   * @see cz.cvut.earlgrey.statemodel.statemodel.State#getTransitions()
+   * @see #getState()
+   * @generated
+   */
+  EReference getState_Transitions();
+
+  /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.statemodel.statemodel.Transition <em>Transition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Transition</em>'.
+   * @see cz.cvut.earlgrey.statemodel.statemodel.Transition
+   * @generated
+   */
+  EClass getTransition();
+
+  /**
+   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getEvent <em>Event</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Event</em>'.
+   * @see cz.cvut.earlgrey.statemodel.statemodel.Transition#getEvent()
+   * @see #getTransition()
+   * @generated
+   */
+  EReference getTransition_Event();
+
+  /**
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getState <em>State</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>State</em>'.
+   * @see cz.cvut.earlgrey.statemodel.statemodel.Transition#getState()
+   * @see #getTransition()
+   * @generated
+   */
+  EReference getTransition_State();
+
+  /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.statemodel.statemodel.Event <em>Event</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Event</em>'.
+   * @see cz.cvut.earlgrey.statemodel.statemodel.Event
+   * @generated
+   */
+  EClass getEvent();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.statemodel.statemodel.Event#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see cz.cvut.earlgrey.statemodel.statemodel.Event#getName()
+   * @see #getEvent()
+   * @generated
+   */
+  EAttribute getEvent_Name();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.statemodel.statemodel.Import <em>Import</em>}'.
@@ -336,6 +465,16 @@ public interface StatemodelPackage extends EPackage
    * @generated
    */
   EAttribute getImport_ImportURI();
+
+  /**
+   * Returns the meta object for enum '{@link cz.cvut.earlgrey.statemodel.statemodel.StateType <em>State Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>State Type</em>'.
+   * @see cz.cvut.earlgrey.statemodel.statemodel.StateType
+   * @generated
+   */
+  EEnum getStateType();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -387,14 +526,6 @@ public interface StatemodelPackage extends EPackage
     EReference STATEMODEL__STATEMACHINE = eINSTANCE.getStatemodel_Statemachine();
 
     /**
-     * The meta object literal for the '<em><b>State</b></em>' reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference STATEMODEL__STATE = eINSTANCE.getStatemodel_State();
-
-    /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemachineImpl <em>Statemachine</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -411,14 +542,6 @@ public interface StatemodelPackage extends EPackage
      * @generated
      */
     EReference STATEMACHINE__REFERENCE = eINSTANCE.getStatemachine_Reference();
-
-    /**
-     * The meta object literal for the '<em><b>Element</b></em>' reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference STATEMACHINE__ELEMENT = eINSTANCE.getStatemachine_Element();
 
     /**
      * The meta object literal for the '<em><b>State</b></em>' containment reference list feature.
@@ -439,12 +562,72 @@ public interface StatemodelPackage extends EPackage
     EClass STATE = eINSTANCE.getState();
 
     /**
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STATE__TYPE = eINSTANCE.getState_Type();
+
+    /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute STATE__NAME = eINSTANCE.getState_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Transitions</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STATE__TRANSITIONS = eINSTANCE.getState_Transitions();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.statemodel.statemodel.impl.TransitionImpl <em>Transition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.statemodel.statemodel.impl.TransitionImpl
+     * @see cz.cvut.earlgrey.statemodel.statemodel.impl.StatemodelPackageImpl#getTransition()
+     * @generated
+     */
+    EClass TRANSITION = eINSTANCE.getTransition();
+
+    /**
+     * The meta object literal for the '<em><b>Event</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TRANSITION__EVENT = eINSTANCE.getTransition_Event();
+
+    /**
+     * The meta object literal for the '<em><b>State</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TRANSITION__STATE = eINSTANCE.getTransition_State();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.statemodel.statemodel.impl.EventImpl <em>Event</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.statemodel.statemodel.impl.EventImpl
+     * @see cz.cvut.earlgrey.statemodel.statemodel.impl.StatemodelPackageImpl#getEvent()
+     * @generated
+     */
+    EClass EVENT = eINSTANCE.getEvent();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EVENT__NAME = eINSTANCE.getEvent_Name();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.statemodel.statemodel.impl.ImportImpl <em>Import</em>}' class.
@@ -463,6 +646,16 @@ public interface StatemodelPackage extends EPackage
      * @generated
      */
     EAttribute IMPORT__IMPORT_URI = eINSTANCE.getImport_ImportURI();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.statemodel.statemodel.StateType <em>State Type</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.statemodel.statemodel.StateType
+     * @see cz.cvut.earlgrey.statemodel.statemodel.impl.StatemodelPackageImpl#getStateType()
+     * @generated
+     */
+    EEnum STATE_TYPE = eINSTANCE.getStateType();
 
   }
 

@@ -37,19 +37,24 @@ public class StatemodelParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getStateTypeAccess().getAlternatives(), "rule__StateType__Alternatives");
 					put(grammarAccess.getStatemodelAccess().getGroup(), "rule__Statemodel__Group__0");
 					put(grammarAccess.getStatemachineAccess().getGroup(), "rule__Statemachine__Group__0");
 					put(grammarAccess.getStateAccess().getGroup(), "rule__State__Group__0");
+					put(grammarAccess.getTransitionAccess().getGroup(), "rule__Transition__Group__0");
 					put(grammarAccess.getImportAccess().getGroup(), "rule__Import__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 					put(grammarAccess.getStatemodelAccess().getImportsAssignment_0(), "rule__Statemodel__ImportsAssignment_0");
 					put(grammarAccess.getStatemodelAccess().getStatemachineAssignment_1(), "rule__Statemodel__StatemachineAssignment_1");
-					put(grammarAccess.getStatemodelAccess().getStateAssignment_2(), "rule__Statemodel__StateAssignment_2");
 					put(grammarAccess.getStatemachineAccess().getReferenceAssignment_1(), "rule__Statemachine__ReferenceAssignment_1");
-					put(grammarAccess.getStatemachineAccess().getElementAssignment_3(), "rule__Statemachine__ElementAssignment_3");
-					put(grammarAccess.getStatemachineAccess().getStateAssignment_4(), "rule__Statemachine__StateAssignment_4");
+					put(grammarAccess.getStatemachineAccess().getStateAssignment_3(), "rule__Statemachine__StateAssignment_3");
+					put(grammarAccess.getStateAccess().getTypeAssignment_0(), "rule__State__TypeAssignment_0");
 					put(grammarAccess.getStateAccess().getNameAssignment_1(), "rule__State__NameAssignment_1");
+					put(grammarAccess.getStateAccess().getTransitionsAssignment_3(), "rule__State__TransitionsAssignment_3");
+					put(grammarAccess.getTransitionAccess().getEventAssignment_0(), "rule__Transition__EventAssignment_0");
+					put(grammarAccess.getTransitionAccess().getStateAssignment_2(), "rule__Transition__StateAssignment_2");
+					put(grammarAccess.getEventAccess().getNameAssignment(), "rule__Event__NameAssignment");
 					put(grammarAccess.getImportAccess().getImportURIAssignment_1(), "rule__Import__ImportURIAssignment_1");
 				}
 			};

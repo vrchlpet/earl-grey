@@ -7,7 +7,6 @@
 package cz.cvut.earlgrey.statemodel.statemodel.impl;
 
 import cz.cvut.earlgrey.statemodel.statemodel.Import;
-import cz.cvut.earlgrey.statemodel.statemodel.State;
 import cz.cvut.earlgrey.statemodel.statemodel.Statemachine;
 import cz.cvut.earlgrey.statemodel.statemodel.Statemodel;
 import cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage;
@@ -24,7 +23,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -36,7 +34,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemodelImpl#getImports <em>Imports</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemodelImpl#getStatemachine <em>Statemachine</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemodelImpl#getState <em>State</em>}</li>
  * </ul>
  * </p>
  *
@@ -63,16 +60,6 @@ public class StatemodelImpl extends MinimalEObjectImpl.Container implements Stat
    * @ordered
    */
   protected EList<Statemachine> statemachine;
-
-  /**
-   * The cached value of the '{@link #getState() <em>State</em>}' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getState()
-   * @generated
-   * @ordered
-   */
-  protected EList<State> state;
 
   /**
    * <!-- begin-user-doc -->
@@ -128,20 +115,6 @@ public class StatemodelImpl extends MinimalEObjectImpl.Container implements Stat
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<State> getState()
-  {
-    if (state == null)
-    {
-      state = new EObjectResolvingEList<State>(State.class, this, StatemodelPackage.STATEMODEL__STATE);
-    }
-    return state;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -169,8 +142,6 @@ public class StatemodelImpl extends MinimalEObjectImpl.Container implements Stat
         return getImports();
       case StatemodelPackage.STATEMODEL__STATEMACHINE:
         return getStatemachine();
-      case StatemodelPackage.STATEMODEL__STATE:
-        return getState();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -194,10 +165,6 @@ public class StatemodelImpl extends MinimalEObjectImpl.Container implements Stat
         getStatemachine().clear();
         getStatemachine().addAll((Collection<? extends Statemachine>)newValue);
         return;
-      case StatemodelPackage.STATEMODEL__STATE:
-        getState().clear();
-        getState().addAll((Collection<? extends State>)newValue);
-        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -218,9 +185,6 @@ public class StatemodelImpl extends MinimalEObjectImpl.Container implements Stat
       case StatemodelPackage.STATEMODEL__STATEMACHINE:
         getStatemachine().clear();
         return;
-      case StatemodelPackage.STATEMODEL__STATE:
-        getState().clear();
-        return;
     }
     super.eUnset(featureID);
   }
@@ -239,8 +203,6 @@ public class StatemodelImpl extends MinimalEObjectImpl.Container implements Stat
         return imports != null && !imports.isEmpty();
       case StatemodelPackage.STATEMODEL__STATEMACHINE:
         return statemachine != null && !statemachine.isEmpty();
-      case StatemodelPackage.STATEMODEL__STATE:
-        return state != null && !state.isEmpty();
     }
     return super.eIsSet(featureID);
   }

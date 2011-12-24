@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.Statemachine#getReference <em>Reference</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.Statemachine#getElement <em>Element</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.Statemachine#getState <em>State</em>}</li>
  * </ul>
  * </p>
@@ -57,22 +56,6 @@ public interface Statemachine extends EObject
    * @generated
    */
   void setReference(Entity value);
-
-  /**
-   * Returns the value of the '<em><b>Element</b></em>' reference list.
-   * The list contents are of type {@link cz.cvut.earlgrey.classmodel.classmodel.Entity}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Element</em>' reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Element</em>' reference list.
-   * @see cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage#getStatemachine_Element()
-   * @model
-   * @generated
-   */
-  EList<Entity> getElement();
 
   /**
    * Returns the value of the '<em><b>State</b></em>' containment reference list.
