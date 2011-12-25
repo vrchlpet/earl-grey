@@ -11,8 +11,8 @@ import org.eclipse.xtext.util.Pair;
 /**
  * This class contains default formatting for EarlGrey language(s).
  * 
- * Each language should extends this class and then call initDefault method in
- * method configureFormatting.
+ * Each language should extends this class and then call initDefault method in method
+ * configureFormatting.
  * 
  */
 public abstract class AbstractDefaultFormatter extends
@@ -24,10 +24,8 @@ AbstractDeclarativeFormatter {
 	/**
 	 * Inits default formatting configuration. It formats "() <> {} [] ,".
 	 * 
-	 * @param c
-	 *            FormattingConfig instance
-	 * @param f
-	 *            AbstractGrammarElementFinder instance
+	 * @param c FormattingConfig instance
+	 * @param f AbstractGrammarElementFinder instance
 	 */
 	protected void initDefault(FormattingConfig c,
 			AbstractGrammarElementFinder f) {

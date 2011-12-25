@@ -3,15 +3,43 @@
  */
 package cz.cvut.earlgrey.statemodel.scoping;
 
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
+
+import cz.cvut.earlgrey.statemodel.statemodel.Statemachine;
+import cz.cvut.earlgrey.statemodel.statemodel.Transition;
 
 /**
  * This class contains custom scoping description.
  * 
- * see : http://www.eclipse.org/Xtext/documentation/latest/xtext.html#scoping
- * on how and when to use it 
- *
  */
 public class StatemodelScopeProvider extends AbstractDeclarativeScopeProvider {
 
+	/**
+	 * Tries to get states from a Statemachine, which containts this Transition.
+	 * 
+	 * @param call Transition object contains States
+	 * @param ref EReference
+	 * @return IScope
+	 */
+	IScope scope_Transition_state(Transition call, EReference ref) {
+		Statemachine machine = (Statemachine) getParent(call.eContainer());
+		if (machine != null) {
+			return Scopes.scopeFor(machine.getState());
+		}
+		return super.getScope(call, ref);
+	}
+
+	/**
+	 * Get a parent EObject of a EObject.
+	 * 
+	 * @param obj EObject.
+	 * @return null or EObject
+	 */
+	private EObject getParent(EObject obj) {
+		return (obj != null ? obj.eContainer() : null);
+	}
 }

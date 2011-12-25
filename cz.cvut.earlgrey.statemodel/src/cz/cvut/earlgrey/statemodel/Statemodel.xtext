@@ -32,11 +32,10 @@ Event:
 Import:
     'import' importURI=STRING;
 
-//TODO: remove NONE? causes "NONE state BB {}"
 enum StateType:
     NONE='state' | INITIAL='initial' | FINAL='final';
 
 QualifiedName:
     ID ('.' ID)*;
 
-//terminal COND    : '(' (!')')* ')'; //wrong (a && (b+4))
+//terminal COND    : '(' -> ')'; //wrong (a && (b+4))

@@ -10,7 +10,18 @@ import org.eclipse.xtext.scoping.impl.ImportUriGlobalScopeProvider;
 import com.google.common.base.Predicate;
 
 /**
- * Explicit import file containing Classmodel defaults.
+ * This class fixes the bug which occurs when importing invalid file. For more
+ * information see https://github.com/tea-pot/earl-grey/issues/3
+ * 
+ * Use this class in a XXXRuntimeModule as in following example:
+ * 
+ * <pre>
+ * public class StatemodelRuntimeModule extends AbstractStatemodelRuntimeModule {
+ * 	public Class&lt;? extends org.eclipse.xtext.scoping.IGlobalScopeProvider&gt; bindIGlobalScopeProvider() {
+ * 		return ImportUriGlobalScope.class;
+ * 	}
+ * }
+ * </pre>
  */
 public class ImportUriGlobalScope extends ImportUriGlobalScopeProvider {
 
@@ -22,6 +33,7 @@ public class ImportUriGlobalScope extends ImportUriGlobalScopeProvider {
 			return super.createLazyResourceScope(parent, uri, descriptions,
 					type, filter, ignoreCase);
 		} catch (Exception e) {
+			// log ?!
 		}
 		return IScope.NULLSCOPE;
 	}
