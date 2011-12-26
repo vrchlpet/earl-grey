@@ -753,7 +753,30 @@ ruleParameter returns [EObject current=null]
 	    }
 
 )
-))
+)(((	'=' 
+)=>	otherlv_3='=' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getParameterAccess().getEqualsSignKeyword_3_0());
+    }
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getParameterAccess().getImplicitValueParserRuleCall_3_1_0()); 
+	    }
+		lv_implicit_4_0=ruleValue		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getParameterRule());
+	        }
+       		set(
+       			$current, 
+       			"implicit",
+        		lv_implicit_4_0, 
+        		"Value");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))?)
 ;
 
 
@@ -901,7 +924,7 @@ ruleAttribute returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getAttributeRule());
 	        }
-       		set(
+       		add(
        			$current, 
        			"implicit",
         		lv_implicit_7_0, 
@@ -910,7 +933,29 @@ ruleAttribute returns [EObject current=null]
 	    }
 
 )
-))?)
+)(	otherlv_8=',' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getAttributeAccess().getCommaKeyword_4_2_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getAttributeAccess().getImplicitValueParserRuleCall_4_2_1_0()); 
+	    }
+		lv_implicit_9_0=ruleValue		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getAttributeRule());
+	        }
+       		add(
+       			$current, 
+       			"implicit",
+        		lv_implicit_9_0, 
+        		"Value");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*)?)
 ;
 
 

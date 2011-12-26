@@ -45,10 +45,10 @@ Operation:
     return=Reference;
 
 Parameter:
-    name=ID ':' type=Reference;
+    name=ID ':' type=Reference (=> '=' implicit=Value)?;
 
 Attribute:
-    (modifier=Visibility? & static?='static'?) name=ID ':' type=Reference (=> '=' implicit=Value)?;
+    (modifier=Visibility? & static?='static'?) name=ID ':' type=Reference (=> '=' implicit+=Value (',' implicit+=Value)*)?;
 
 Value returns ecore::EString:
    'null' | STRING | INT

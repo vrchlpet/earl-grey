@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ParameterImpl#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ParameterImpl#getType <em>Type</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ParameterImpl#getImplicit <em>Implicit</em>}</li>
  * </ul>
  * </p>
  *
@@ -64,6 +65,26 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * @ordered
    */
   protected Reference type;
+
+  /**
+   * The default value of the '{@link #getImplicit() <em>Implicit</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getImplicit()
+   * @generated
+   * @ordered
+   */
+  protected static final String IMPLICIT_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getImplicit() <em>Implicit</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getImplicit()
+   * @generated
+   * @ordered
+   */
+  protected String implicit = IMPLICIT_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -162,6 +183,29 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getImplicit()
+  {
+    return implicit;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setImplicit(String newImplicit)
+  {
+    String oldImplicit = implicit;
+    implicit = newImplicit;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.PARAMETER__IMPLICIT, oldImplicit, implicit));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -187,6 +231,8 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
         return getName();
       case ClassmodelPackage.PARAMETER__TYPE:
         return getType();
+      case ClassmodelPackage.PARAMETER__IMPLICIT:
+        return getImplicit();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -206,6 +252,9 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
         return;
       case ClassmodelPackage.PARAMETER__TYPE:
         setType((Reference)newValue);
+        return;
+      case ClassmodelPackage.PARAMETER__IMPLICIT:
+        setImplicit((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -227,6 +276,9 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
       case ClassmodelPackage.PARAMETER__TYPE:
         setType((Reference)null);
         return;
+      case ClassmodelPackage.PARAMETER__IMPLICIT:
+        setImplicit(IMPLICIT_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -245,6 +297,8 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case ClassmodelPackage.PARAMETER__TYPE:
         return type != null;
+      case ClassmodelPackage.PARAMETER__IMPLICIT:
+        return IMPLICIT_EDEFAULT == null ? implicit != null : !IMPLICIT_EDEFAULT.equals(implicit);
     }
     return super.eIsSet(featureID);
   }
@@ -262,6 +316,8 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", implicit: ");
+    result.append(implicit);
     result.append(')');
     return result.toString();
   }

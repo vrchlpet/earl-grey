@@ -365,12 +365,16 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cTypeReferenceParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cEqualsSignKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cImplicitAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cImplicitValueParserRuleCall_3_1_0 = (RuleCall)cImplicitAssignment_3_1.eContents().get(0);
 		
 		//Parameter:
-		//	name=ID ":" type=Reference;
+		//	name=ID ":" type=Reference ("=" implicit=Value)?;
 		public ParserRule getRule() { return rule; }
 
-		//name=ID ":" type=Reference
+		//name=ID ":" type=Reference ("=" implicit=Value)?
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -387,6 +391,18 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Reference
 		public RuleCall getTypeReferenceParserRuleCall_2_0() { return cTypeReferenceParserRuleCall_2_0; }
+
+		//(=> "=" implicit=Value)?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//=> "="
+		public Keyword getEqualsSignKeyword_3_0() { return cEqualsSignKeyword_3_0; }
+
+		//implicit=Value
+		public Assignment getImplicitAssignment_3_1() { return cImplicitAssignment_3_1; }
+
+		//Value
+		public RuleCall getImplicitValueParserRuleCall_3_1_0() { return cImplicitValueParserRuleCall_3_1_0; }
 	}
 
 	public class AttributeElements extends AbstractParserRuleElementFinder {
@@ -406,12 +422,16 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEqualsSignKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cImplicitAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cImplicitValueParserRuleCall_4_1_0 = (RuleCall)cImplicitAssignment_4_1.eContents().get(0);
+		private final Group cGroup_4_2 = (Group)cGroup_4.eContents().get(2);
+		private final Keyword cCommaKeyword_4_2_0 = (Keyword)cGroup_4_2.eContents().get(0);
+		private final Assignment cImplicitAssignment_4_2_1 = (Assignment)cGroup_4_2.eContents().get(1);
+		private final RuleCall cImplicitValueParserRuleCall_4_2_1_0 = (RuleCall)cImplicitAssignment_4_2_1.eContents().get(0);
 		
 		//Attribute:
-		//	(modifier=Visibility? & static?="static"?) name=ID ":" type=Reference ("=" implicit=Value)?;
+		//	(modifier=Visibility? & static?="static"?) name=ID ":" type=Reference ("=" implicit+=Value ("," implicit+=Value)*)?;
 		public ParserRule getRule() { return rule; }
 
-		//(modifier=Visibility? & static?="static"?) name=ID ":" type=Reference ("=" implicit=Value)?
+		//(modifier=Visibility? & static?="static"?) name=ID ":" type=Reference ("=" implicit+=Value ("," implicit+=Value)*)?
 		public Group getGroup() { return cGroup; }
 
 		//modifier=Visibility? & static?="static"?
@@ -444,17 +464,29 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		//Reference
 		public RuleCall getTypeReferenceParserRuleCall_3_0() { return cTypeReferenceParserRuleCall_3_0; }
 
-		//(=> "=" implicit=Value)?
+		//(=> "=" implicit+=Value ("," implicit+=Value)*)?
 		public Group getGroup_4() { return cGroup_4; }
 
 		//=> "="
 		public Keyword getEqualsSignKeyword_4_0() { return cEqualsSignKeyword_4_0; }
 
-		//implicit=Value
+		//implicit+=Value
 		public Assignment getImplicitAssignment_4_1() { return cImplicitAssignment_4_1; }
 
 		//Value
 		public RuleCall getImplicitValueParserRuleCall_4_1_0() { return cImplicitValueParserRuleCall_4_1_0; }
+
+		//("," implicit+=Value)*
+		public Group getGroup_4_2() { return cGroup_4_2; }
+
+		//","
+		public Keyword getCommaKeyword_4_2_0() { return cCommaKeyword_4_2_0; }
+
+		//implicit+=Value
+		public Assignment getImplicitAssignment_4_2_1() { return cImplicitAssignment_4_2_1; }
+
+		//Value
+		public RuleCall getImplicitValueParserRuleCall_4_2_1_0() { return cImplicitValueParserRuleCall_4_2_1_0; }
 	}
 
 	public class ValueElements extends AbstractParserRuleElementFinder {
@@ -931,7 +963,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Parameter:
-	//	name=ID ":" type=Reference;
+	//	name=ID ":" type=Reference ("=" implicit=Value)?;
 	public ParameterElements getParameterAccess() {
 		return (pParameter != null) ? pParameter : (pParameter = new ParameterElements());
 	}
@@ -941,7 +973,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Attribute:
-	//	(modifier=Visibility? & static?="static"?) name=ID ":" type=Reference ("=" implicit=Value)?;
+	//	(modifier=Visibility? & static?="static"?) name=ID ":" type=Reference ("=" implicit+=Value ("," implicit+=Value)*)?;
 	public AttributeElements getAttributeAccess() {
 		return (pAttribute != null) ? pAttribute : (pAttribute = new AttributeElements());
 	}

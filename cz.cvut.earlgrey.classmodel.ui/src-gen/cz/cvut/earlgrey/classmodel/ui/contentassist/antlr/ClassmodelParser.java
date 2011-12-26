@@ -53,8 +53,10 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOperationAccess().getGroup_3(), "rule__Operation__Group_3__0");
 					put(grammarAccess.getOperationAccess().getGroup_3_1(), "rule__Operation__Group_3_1__0");
 					put(grammarAccess.getParameterAccess().getGroup(), "rule__Parameter__Group__0");
+					put(grammarAccess.getParameterAccess().getGroup_3(), "rule__Parameter__Group_3__0");
 					put(grammarAccess.getAttributeAccess().getGroup(), "rule__Attribute__Group__0");
 					put(grammarAccess.getAttributeAccess().getGroup_4(), "rule__Attribute__Group_4__0");
+					put(grammarAccess.getAttributeAccess().getGroup_4_2(), "rule__Attribute__Group_4_2__0");
 					put(grammarAccess.getRelationAccess().getGroup(), "rule__Relation__Group__0");
 					put(grammarAccess.getRelationAccess().getGroup_5(), "rule__Relation__Group_5__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
@@ -78,11 +80,13 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOperationAccess().getReturnAssignment_6(), "rule__Operation__ReturnAssignment_6");
 					put(grammarAccess.getParameterAccess().getNameAssignment_0(), "rule__Parameter__NameAssignment_0");
 					put(grammarAccess.getParameterAccess().getTypeAssignment_2(), "rule__Parameter__TypeAssignment_2");
+					put(grammarAccess.getParameterAccess().getImplicitAssignment_3_1(), "rule__Parameter__ImplicitAssignment_3_1");
 					put(grammarAccess.getAttributeAccess().getModifierAssignment_0_0(), "rule__Attribute__ModifierAssignment_0_0");
 					put(grammarAccess.getAttributeAccess().getStaticAssignment_0_1(), "rule__Attribute__StaticAssignment_0_1");
 					put(grammarAccess.getAttributeAccess().getNameAssignment_1(), "rule__Attribute__NameAssignment_1");
 					put(grammarAccess.getAttributeAccess().getTypeAssignment_3(), "rule__Attribute__TypeAssignment_3");
 					put(grammarAccess.getAttributeAccess().getImplicitAssignment_4_1(), "rule__Attribute__ImplicitAssignment_4_1");
+					put(grammarAccess.getAttributeAccess().getImplicitAssignment_4_2_1(), "rule__Attribute__ImplicitAssignment_4_2_1");
 					put(grammarAccess.getRelationAccess().getOriginAssignment_0(), "rule__Relation__OriginAssignment_0");
 					put(grammarAccess.getRelationAccess().getCardinalityFromAssignment_1(), "rule__Relation__CardinalityFromAssignment_1");
 					put(grammarAccess.getRelationAccess().getTypeAssignment_2(), "rule__Relation__TypeAssignment_2");

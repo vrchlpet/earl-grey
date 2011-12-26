@@ -432,13 +432,22 @@ public interface ClassmodelPackage extends EPackage
   int PARAMETER__TYPE = 1;
 
   /**
+   * The feature id for the '<em><b>Implicit</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER__IMPLICIT = 2;
+
+  /**
    * The number of structural features of the '<em>Parameter</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARAMETER_FEATURE_COUNT = 2;
+  int PARAMETER_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl <em>Attribute</em>}' class.
@@ -487,7 +496,7 @@ public interface ClassmodelPackage extends EPackage
   int ATTRIBUTE__TYPE = FEATURE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Implicit</b></em>' attribute.
+   * The feature id for the '<em><b>Implicit</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -907,6 +916,17 @@ public interface ClassmodelPackage extends EPackage
   EReference getParameter_Type();
 
   /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Parameter#getImplicit <em>Implicit</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Implicit</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Parameter#getImplicit()
+   * @see #getParameter()
+   * @generated
+   */
+  EAttribute getParameter_Implicit();
+
+  /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute <em>Attribute</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -928,10 +948,10 @@ public interface ClassmodelPackage extends EPackage
   EReference getAttribute_Type();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute#getImplicit <em>Implicit</em>}'.
+   * Returns the meta object for the attribute list '{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute#getImplicit <em>Implicit</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Implicit</em>'.
+   * @return the meta object for the attribute list '<em>Implicit</em>'.
    * @see cz.cvut.earlgrey.classmodel.classmodel.Attribute#getImplicit()
    * @see #getAttribute()
    * @generated
@@ -1312,6 +1332,14 @@ public interface ClassmodelPackage extends EPackage
     EReference PARAMETER__TYPE = eINSTANCE.getParameter_Type();
 
     /**
+     * The meta object literal for the '<em><b>Implicit</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PARAMETER__IMPLICIT = eINSTANCE.getParameter_Implicit();
+
+    /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl <em>Attribute</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1330,7 +1358,7 @@ public interface ClassmodelPackage extends EPackage
     EReference ATTRIBUTE__TYPE = eINSTANCE.getAttribute_Type();
 
     /**
-     * The meta object literal for the '<em><b>Implicit</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Implicit</b></em>' attribute list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
