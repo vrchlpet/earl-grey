@@ -65,6 +65,10 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 					sequence_Attribute(context, (Attribute) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getEnumConstantRule()) {
+					sequence_EnumConstant(context, (Attribute) semanticObject); 
+					return; 
+				}
 				else break;
 			case ClassmodelPackage.CLASSMODEL:
 				if(context == grammarAccess.getClassmodelRule()) {
@@ -73,9 +77,17 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 				}
 				else break;
 			case ClassmodelPackage.ENTITY:
-				if(context == grammarAccess.getAbstractElementRule() ||
+				if(context == grammarAccess.getClassRule()) {
+					sequence_Class(context, (Entity) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getAbstractElementRule() ||
 				   context == grammarAccess.getEntityRule()) {
 					sequence_Entity(context, (Entity) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getEnumRule()) {
+					sequence_Enum(context, (Entity) semanticObject); 
 					return; 
 				}
 				else break;
@@ -142,6 +154,15 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
+	 *     ((class?='class' | interface?='interface' | abstract?='abstract') name=ID feature+=Feature*)
+	 */
+	protected void sequence_Class(EObject context, Entity semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (imports+=Import* elements+=AbstractElement*)
 	 */
 	protected void sequence_Classmodel(EObject context, Classmodel semanticObject) {
@@ -151,9 +172,30 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (type=EntityType name=ID feature+=Feature*)
+	 *     (
+	 *         ((class?='class' | interface?='interface' | abstract?='abstract') name=ID feature+=Feature*) | 
+	 *         (enumeration?='enum' name=ID feature+=EnumConstant*)
+	 *     )
 	 */
 	protected void sequence_Entity(EObject context, Entity semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID implicit+=IntValue?)
+	 */
+	protected void sequence_EnumConstant(EObject context, Attribute semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (enumeration?='enum' name=ID feature+=EnumConstant*)
+	 */
+	protected void sequence_Enum(EObject context, Entity semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -194,7 +236,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (name=ID type=Reference implicit=Value?)
+	 *     (name=ID type=Reference (implicit+=Value implicit+=Value*)?)
 	 */
 	protected void sequence_Parameter(EObject context, Parameter semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

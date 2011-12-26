@@ -21,10 +21,24 @@ Import:
     'import' importURI=STRING;
 
 Entity:
-    type=EntityType name=ID
+    Class | Enum;
+    
+Class returns Entity:
+    => (class?='class'| interface?='interface'| abstract?='abstract') name=ID
     '{'
     feature+=Feature*
+    '}'
+;
+
+Enum returns Entity:
+    enumeration?='enum' name=ID
+    '{'
+    feature+=EnumConstant*
     '}';
+
+EnumConstant returns Attribute:
+    name=ID (=> '=' implicit+=IntValue)?
+;
 
 /**
  * Entity reference, supports n-dimension arrays.
@@ -45,13 +59,17 @@ Operation:
     return=Reference;
 
 Parameter:
-    name=ID ':' type=Reference (=> '=' implicit=Value)?;
+    name=ID ':' type=Reference (=> '=' implicit+=Value (',' implicit+=Value)*)?;
 
 Attribute:
     (modifier=Visibility? & static?='static'?) name=ID ':' type=Reference (=> '=' implicit+=Value (',' implicit+=Value)*)?;
 
 Value returns ecore::EString:
-   'null' | STRING | INT
+   'null' | STRING | IntValue
+;
+
+IntValue returns ecore::EString:
+    INT
 ;
 
 Relation:
@@ -77,7 +95,8 @@ enum Visibility:
     PUBLIC='+' | PRIVATE='-' | PROTECTED='#' | PACKAGE_PRIVATE='~';
 
 enum EntityType:
-    CLASS='class' | INTERFACE='interface' | ABSTRACT='abstract' | ENUM='enum';
+    CLASS='class' | INTERFACE='interface' | ABSTRACT='abstract' | ENUM='enum'
+    ;
 
 QualifiedName:
     ID ('.' ID)*;

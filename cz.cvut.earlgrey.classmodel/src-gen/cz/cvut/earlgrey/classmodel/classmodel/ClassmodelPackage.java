@@ -193,13 +193,31 @@ public interface ClassmodelPackage extends EPackage
   int ENTITY = 4;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * The feature id for the '<em><b>Class</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ENTITY__TYPE = ABSTRACT_ELEMENT_FEATURE_COUNT + 0;
+  int ENTITY__CLASS = ABSTRACT_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Interface</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENTITY__INTERFACE = ABSTRACT_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Abstract</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENTITY__ABSTRACT = ABSTRACT_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -208,7 +226,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENTITY__NAME = ABSTRACT_ELEMENT_FEATURE_COUNT + 1;
+  int ENTITY__NAME = ABSTRACT_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Feature</b></em>' containment reference list.
@@ -217,7 +235,16 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENTITY__FEATURE = ABSTRACT_ELEMENT_FEATURE_COUNT + 2;
+  int ENTITY__FEATURE = ABSTRACT_ELEMENT_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Enumeration</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENTITY__ENUMERATION = ABSTRACT_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The number of structural features of the '<em>Entity</em>' class.
@@ -226,7 +253,117 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENTITY_FEATURE_COUNT = ABSTRACT_ELEMENT_FEATURE_COUNT + 3;
+  int ENTITY_FEATURE_COUNT = ABSTRACT_ELEMENT_FEATURE_COUNT + 6;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl <em>Feature</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getFeature()
+   * @generated
+   */
+  int FEATURE = 8;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FEATURE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Modifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FEATURE__MODIFIER = 1;
+
+  /**
+   * The feature id for the '<em><b>Static</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FEATURE__STATIC = 2;
+
+  /**
+   * The number of structural features of the '<em>Feature</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FEATURE_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl <em>Attribute</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getAttribute()
+   * @generated
+   */
+  int ATTRIBUTE = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE__NAME = FEATURE__NAME;
+
+  /**
+   * The feature id for the '<em><b>Modifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE__MODIFIER = FEATURE__MODIFIER;
+
+  /**
+   * The feature id for the '<em><b>Static</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE__STATIC = FEATURE__STATIC;
+
+  /**
+   * The feature id for the '<em><b>Implicit</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE__IMPLICIT = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE__TYPE = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Attribute</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ReferenceImpl <em>Reference</em>}' class.
@@ -236,7 +373,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getReference()
    * @generated
    */
-  int REFERENCE = 5;
+  int REFERENCE = 6;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' reference.
@@ -273,7 +410,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getArray()
    * @generated
    */
-  int ARRAY = 6;
+  int ARRAY = 7;
 
   /**
    * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -294,32 +431,14 @@ public interface ClassmodelPackage extends EPackage
   int ARRAY_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl <em>Feature</em>}' class.
+   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.OperationImpl <em>Operation</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl
-   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getFeature()
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.OperationImpl
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getOperation()
    * @generated
    */
-  int FEATURE = 7;
-
-  /**
-   * The feature id for the '<em><b>Modifier</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FEATURE__MODIFIER = 0;
-
-  /**
-   * The feature id for the '<em><b>Static</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FEATURE__STATIC = 1;
+  int OPERATION = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -328,26 +447,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FEATURE__NAME = 2;
-
-  /**
-   * The number of structural features of the '<em>Feature</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FEATURE_FEATURE_COUNT = 3;
-
-  /**
-   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.OperationImpl <em>Operation</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.OperationImpl
-   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getOperation()
-   * @generated
-   */
-  int OPERATION = 8;
+  int OPERATION__NAME = FEATURE__NAME;
 
   /**
    * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -366,15 +466,6 @@ public interface ClassmodelPackage extends EPackage
    * @ordered
    */
   int OPERATION__STATIC = FEATURE__STATIC;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATION__NAME = FEATURE__NAME;
 
   /**
    * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -411,7 +502,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getParameter()
    * @generated
    */
-  int PARAMETER = 9;
+  int PARAMETER = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -432,7 +523,7 @@ public interface ClassmodelPackage extends EPackage
   int PARAMETER__TYPE = 1;
 
   /**
-   * The feature id for the '<em><b>Implicit</b></em>' attribute.
+   * The feature id for the '<em><b>Implicit</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -448,70 +539,6 @@ public interface ClassmodelPackage extends EPackage
    * @ordered
    */
   int PARAMETER_FEATURE_COUNT = 3;
-
-  /**
-   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl <em>Attribute</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl
-   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getAttribute()
-   * @generated
-   */
-  int ATTRIBUTE = 10;
-
-  /**
-   * The feature id for the '<em><b>Modifier</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATTRIBUTE__MODIFIER = FEATURE__MODIFIER;
-
-  /**
-   * The feature id for the '<em><b>Static</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATTRIBUTE__STATIC = FEATURE__STATIC;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATTRIBUTE__NAME = FEATURE__NAME;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATTRIBUTE__TYPE = FEATURE_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Implicit</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATTRIBUTE__IMPLICIT = FEATURE_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Attribute</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATTRIBUTE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationImpl <em>Relation</em>}' class.
@@ -723,15 +750,37 @@ public interface ClassmodelPackage extends EPackage
   EClass getEntity();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#getType <em>Type</em>}'.
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#isClass <em>Class</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Entity#getType()
+   * @return the meta object for the attribute '<em>Class</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Entity#isClass()
    * @see #getEntity()
    * @generated
    */
-  EAttribute getEntity_Type();
+  EAttribute getEntity_Class();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#isInterface <em>Interface</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Interface</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Entity#isInterface()
+   * @see #getEntity()
+   * @generated
+   */
+  EAttribute getEntity_Interface();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#isAbstract <em>Abstract</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Abstract</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Entity#isAbstract()
+   * @see #getEntity()
+   * @generated
+   */
+  EAttribute getEntity_Abstract();
 
   /**
    * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#getName <em>Name</em>}'.
@@ -754,6 +803,49 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   EReference getEntity_Feature();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#isEnumeration <em>Enumeration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Enumeration</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Entity#isEnumeration()
+   * @see #getEntity()
+   * @generated
+   */
+  EAttribute getEntity_Enumeration();
+
+  /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute <em>Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Attribute</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Attribute
+   * @generated
+   */
+  EClass getAttribute();
+
+  /**
+   * Returns the meta object for the attribute list '{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute#getImplicit <em>Implicit</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Implicit</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Attribute#getImplicit()
+   * @see #getAttribute()
+   * @generated
+   */
+  EAttribute getAttribute_Implicit();
+
+  /**
+   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Attribute#getType()
+   * @see #getAttribute()
+   * @generated
+   */
+  EReference getAttribute_Type();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Reference <em>Reference</em>}'.
@@ -819,6 +911,17 @@ public interface ClassmodelPackage extends EPackage
   EClass getFeature();
 
   /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Feature#getName()
+   * @see #getFeature()
+   * @generated
+   */
+  EAttribute getFeature_Name();
+
+  /**
    * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#getModifier <em>Modifier</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -839,17 +942,6 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   EAttribute getFeature_Static();
-
-  /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Feature#getName()
-   * @see #getFeature()
-   * @generated
-   */
-  EAttribute getFeature_Name();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Operation <em>Operation</em>}'.
@@ -916,47 +1008,15 @@ public interface ClassmodelPackage extends EPackage
   EReference getParameter_Type();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Parameter#getImplicit <em>Implicit</em>}'.
+   * Returns the meta object for the attribute list '{@link cz.cvut.earlgrey.classmodel.classmodel.Parameter#getImplicit <em>Implicit</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Implicit</em>'.
+   * @return the meta object for the attribute list '<em>Implicit</em>'.
    * @see cz.cvut.earlgrey.classmodel.classmodel.Parameter#getImplicit()
    * @see #getParameter()
    * @generated
    */
   EAttribute getParameter_Implicit();
-
-  /**
-   * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute <em>Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Attribute</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Attribute
-   * @generated
-   */
-  EClass getAttribute();
-
-  /**
-   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Type</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Attribute#getType()
-   * @see #getAttribute()
-   * @generated
-   */
-  EReference getAttribute_Type();
-
-  /**
-   * Returns the meta object for the attribute list '{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute#getImplicit <em>Implicit</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Implicit</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Attribute#getImplicit()
-   * @see #getAttribute()
-   * @generated
-   */
-  EAttribute getAttribute_Implicit();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Relation <em>Relation</em>}'.
@@ -1178,12 +1238,28 @@ public interface ClassmodelPackage extends EPackage
     EClass ENTITY = eINSTANCE.getEntity();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Class</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ENTITY__TYPE = eINSTANCE.getEntity_Type();
+    EAttribute ENTITY__CLASS = eINSTANCE.getEntity_Class();
+
+    /**
+     * The meta object literal for the '<em><b>Interface</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ENTITY__INTERFACE = eINSTANCE.getEntity_Interface();
+
+    /**
+     * The meta object literal for the '<em><b>Abstract</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ENTITY__ABSTRACT = eINSTANCE.getEntity_Abstract();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1200,6 +1276,40 @@ public interface ClassmodelPackage extends EPackage
      * @generated
      */
     EReference ENTITY__FEATURE = eINSTANCE.getEntity_Feature();
+
+    /**
+     * The meta object literal for the '<em><b>Enumeration</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ENTITY__ENUMERATION = eINSTANCE.getEntity_Enumeration();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl <em>Attribute</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getAttribute()
+     * @generated
+     */
+    EClass ATTRIBUTE = eINSTANCE.getAttribute();
+
+    /**
+     * The meta object literal for the '<em><b>Implicit</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ATTRIBUTE__IMPLICIT = eINSTANCE.getAttribute_Implicit();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ATTRIBUTE__TYPE = eINSTANCE.getAttribute_Type();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ReferenceImpl <em>Reference</em>}' class.
@@ -1256,6 +1366,14 @@ public interface ClassmodelPackage extends EPackage
     EClass FEATURE = eINSTANCE.getFeature();
 
     /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FEATURE__NAME = eINSTANCE.getFeature_Name();
+
+    /**
      * The meta object literal for the '<em><b>Modifier</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1270,14 +1388,6 @@ public interface ClassmodelPackage extends EPackage
      * @generated
      */
     EAttribute FEATURE__STATIC = eINSTANCE.getFeature_Static();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FEATURE__NAME = eINSTANCE.getFeature_Name();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.OperationImpl <em>Operation</em>}' class.
@@ -1332,38 +1442,12 @@ public interface ClassmodelPackage extends EPackage
     EReference PARAMETER__TYPE = eINSTANCE.getParameter_Type();
 
     /**
-     * The meta object literal for the '<em><b>Implicit</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER__IMPLICIT = eINSTANCE.getParameter_Implicit();
-
-    /**
-     * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl <em>Attribute</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl
-     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getAttribute()
-     * @generated
-     */
-    EClass ATTRIBUTE = eINSTANCE.getAttribute();
-
-    /**
-     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ATTRIBUTE__TYPE = eINSTANCE.getAttribute_Type();
-
-    /**
      * The meta object literal for the '<em><b>Implicit</b></em>' attribute list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ATTRIBUTE__IMPLICIT = eINSTANCE.getAttribute_Implicit();
+    EAttribute PARAMETER__IMPLICIT = eINSTANCE.getParameter_Implicit();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationImpl <em>Relation</em>}' class.

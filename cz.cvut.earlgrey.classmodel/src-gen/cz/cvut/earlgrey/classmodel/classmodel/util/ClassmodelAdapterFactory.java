@@ -115,6 +115,11 @@ public class ClassmodelAdapterFactory extends AdapterFactoryImpl
         return createEntityAdapter();
       }
       @Override
+      public Adapter caseAttribute(Attribute object)
+      {
+        return createAttributeAdapter();
+      }
+      @Override
       public Adapter caseReference(Reference object)
       {
         return createReferenceAdapter();
@@ -138,11 +143,6 @@ public class ClassmodelAdapterFactory extends AdapterFactoryImpl
       public Adapter caseParameter(Parameter object)
       {
         return createParameterAdapter();
-      }
-      @Override
-      public Adapter caseAttribute(Attribute object)
-      {
-        return createAttributeAdapter();
       }
       @Override
       public Adapter caseRelation(Relation object)
@@ -247,6 +247,21 @@ public class ClassmodelAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute <em>Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Attribute
+   * @generated
+   */
+  public Adapter createAttributeAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.classmodel.classmodel.Reference <em>Reference</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -317,21 +332,6 @@ public class ClassmodelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createParameterAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute <em>Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Attribute
-   * @generated
-   */
-  public Adapter createAttributeAdapter()
   {
     return null;
   }

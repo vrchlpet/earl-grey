@@ -89,12 +89,12 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
       case ClassmodelPackage.PACKAGE: return createPackage();
       case ClassmodelPackage.IMPORT: return createImport();
       case ClassmodelPackage.ENTITY: return createEntity();
+      case ClassmodelPackage.ATTRIBUTE: return createAttribute();
       case ClassmodelPackage.REFERENCE: return createReference();
       case ClassmodelPackage.ARRAY: return createArray();
       case ClassmodelPackage.FEATURE: return createFeature();
       case ClassmodelPackage.OPERATION: return createOperation();
       case ClassmodelPackage.PARAMETER: return createParameter();
-      case ClassmodelPackage.ATTRIBUTE: return createAttribute();
       case ClassmodelPackage.RELATION: return createRelation();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -203,6 +203,17 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public Attribute createAttribute()
+  {
+    AttributeImpl attribute = new AttributeImpl();
+    return attribute;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Reference createReference()
   {
     ReferenceImpl reference = new ReferenceImpl();
@@ -251,17 +262,6 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
   {
     ParameterImpl parameter = new ParameterImpl();
     return parameter;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Attribute createAttribute()
-  {
-    AttributeImpl attribute = new AttributeImpl();
-    return attribute;
   }
 
   /**

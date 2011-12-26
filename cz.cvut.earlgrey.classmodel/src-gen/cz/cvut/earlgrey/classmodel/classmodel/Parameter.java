@@ -6,6 +6,8 @@
  */
 package cz.cvut.earlgrey.classmodel.classmodel;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -81,29 +83,19 @@ public interface Parameter extends EObject
   void setType(Reference value);
 
   /**
-   * Returns the value of the '<em><b>Implicit</b></em>' attribute.
+   * Returns the value of the '<em><b>Implicit</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Implicit</em>' attribute isn't clear,
+   * If the meaning of the '<em>Implicit</em>' attribute list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Implicit</em>' attribute.
-   * @see #setImplicit(String)
+   * @return the value of the '<em>Implicit</em>' attribute list.
    * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getParameter_Implicit()
-   * @model
+   * @model unique="false"
    * @generated
    */
-  String getImplicit();
-
-  /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Parameter#getImplicit <em>Implicit</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Implicit</em>' attribute.
-   * @see #getImplicit()
-   * @generated
-   */
-  void setImplicit(String value);
+  EList<String> getImplicit();
 
 } // Parameter

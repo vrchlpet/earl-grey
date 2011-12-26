@@ -31,8 +31,8 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl#getType <em>Type</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl#getImplicit <em>Implicit</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -40,16 +40,6 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  */
 public class AttributeImpl extends FeatureImpl implements Attribute
 {
-  /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
-  protected Reference type;
-
   /**
    * The cached value of the '{@link #getImplicit() <em>Implicit</em>}' attribute list.
    * <!-- begin-user-doc -->
@@ -59,6 +49,16 @@ public class AttributeImpl extends FeatureImpl implements Attribute
    * @ordered
    */
   protected EList<String> implicit;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected Reference type;
 
   /**
    * <!-- begin-user-doc -->
@@ -79,6 +79,20 @@ public class AttributeImpl extends FeatureImpl implements Attribute
   protected EClass eStaticClass()
   {
     return ClassmodelPackage.Literals.ATTRIBUTE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<String> getImplicit()
+  {
+    if (implicit == null)
+    {
+      implicit = new EDataTypeEList<String>(String.class, this, ClassmodelPackage.ATTRIBUTE__IMPLICIT);
+    }
+    return implicit;
   }
 
   /**
@@ -134,20 +148,6 @@ public class AttributeImpl extends FeatureImpl implements Attribute
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getImplicit()
-  {
-    if (implicit == null)
-    {
-      implicit = new EDataTypeEList<String>(String.class, this, ClassmodelPackage.ATTRIBUTE__IMPLICIT);
-    }
-    return implicit;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -169,10 +169,10 @@ public class AttributeImpl extends FeatureImpl implements Attribute
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ATTRIBUTE__TYPE:
-        return getType();
       case ClassmodelPackage.ATTRIBUTE__IMPLICIT:
         return getImplicit();
+      case ClassmodelPackage.ATTRIBUTE__TYPE:
+        return getType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -188,12 +188,12 @@ public class AttributeImpl extends FeatureImpl implements Attribute
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ATTRIBUTE__TYPE:
-        setType((Reference)newValue);
-        return;
       case ClassmodelPackage.ATTRIBUTE__IMPLICIT:
         getImplicit().clear();
         getImplicit().addAll((Collection<? extends String>)newValue);
+        return;
+      case ClassmodelPackage.ATTRIBUTE__TYPE:
+        setType((Reference)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -209,11 +209,11 @@ public class AttributeImpl extends FeatureImpl implements Attribute
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ATTRIBUTE__TYPE:
-        setType((Reference)null);
-        return;
       case ClassmodelPackage.ATTRIBUTE__IMPLICIT:
         getImplicit().clear();
+        return;
+      case ClassmodelPackage.ATTRIBUTE__TYPE:
+        setType((Reference)null);
         return;
     }
     super.eUnset(featureID);
@@ -229,10 +229,10 @@ public class AttributeImpl extends FeatureImpl implements Attribute
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ATTRIBUTE__TYPE:
-        return type != null;
       case ClassmodelPackage.ATTRIBUTE__IMPLICIT:
         return implicit != null && !implicit.isEmpty();
+      case ClassmodelPackage.ATTRIBUTE__TYPE:
+        return type != null;
     }
     return super.eIsSet(featureID);
   }

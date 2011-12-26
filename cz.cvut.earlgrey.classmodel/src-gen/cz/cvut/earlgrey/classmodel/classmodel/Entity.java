@@ -16,9 +16,12 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#getType <em>Type</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#isClass <em>Class</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#isInterface <em>Interface</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#isAbstract <em>Abstract</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#getFeature <em>Feature</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#isEnumeration <em>Enumeration</em>}</li>
  * </ul>
  * </p>
  *
@@ -29,33 +32,82 @@ import org.eclipse.emf.common.util.EList;
 public interface Entity extends AbstractElement
 {
   /**
-   * Returns the value of the '<em><b>Type</b></em>' attribute.
-   * The literals are from the enumeration {@link cz.cvut.earlgrey.classmodel.classmodel.EntityType}.
+   * Returns the value of the '<em><b>Class</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Type</em>' attribute isn't clear,
+   * If the meaning of the '<em>Class</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Type</em>' attribute.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.EntityType
-   * @see #setType(EntityType)
-   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getEntity_Type()
+   * @return the value of the '<em>Class</em>' attribute.
+   * @see #setClass(boolean)
+   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getEntity_Class()
    * @model
    * @generated
    */
-  EntityType getType();
+  boolean isClass();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#getType <em>Type</em>}' attribute.
+   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#isClass <em>Class</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' attribute.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.EntityType
-   * @see #getType()
+   * @param value the new value of the '<em>Class</em>' attribute.
+   * @see #isClass()
    * @generated
    */
-  void setType(EntityType value);
+  void setClass(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Interface</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Interface</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Interface</em>' attribute.
+   * @see #setInterface(boolean)
+   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getEntity_Interface()
+   * @model
+   * @generated
+   */
+  boolean isInterface();
+
+  /**
+   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#isInterface <em>Interface</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Interface</em>' attribute.
+   * @see #isInterface()
+   * @generated
+   */
+  void setInterface(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Abstract</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Abstract</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Abstract</em>' attribute.
+   * @see #setAbstract(boolean)
+   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getEntity_Abstract()
+   * @model
+   * @generated
+   */
+  boolean isAbstract();
+
+  /**
+   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#isAbstract <em>Abstract</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Abstract</em>' attribute.
+   * @see #isAbstract()
+   * @generated
+   */
+  void setAbstract(boolean value);
 
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -98,5 +150,31 @@ public interface Entity extends AbstractElement
    * @generated
    */
   EList<Feature> getFeature();
+
+  /**
+   * Returns the value of the '<em><b>Enumeration</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Enumeration</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Enumeration</em>' attribute.
+   * @see #setEnumeration(boolean)
+   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getEntity_Enumeration()
+   * @model
+   * @generated
+   */
+  boolean isEnumeration();
+
+  /**
+   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#isEnumeration <em>Enumeration</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Enumeration</em>' attribute.
+   * @see #isEnumeration()
+   * @generated
+   */
+  void setEnumeration(boolean value);
 
 } // Entity

@@ -24,9 +24,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl#isStatic <em>Static</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -34,6 +34,26 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The default value of the '{@link #getModifier() <em>Modifier</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -75,26 +95,6 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
   protected boolean static_ = STATIC_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
-  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -113,6 +113,29 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
   protected EClass eStaticClass()
   {
     return ClassmodelPackage.Literals.FEATURE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.FEATURE__NAME, oldName, name));
   }
 
   /**
@@ -166,40 +189,17 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.FEATURE__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
+      case ClassmodelPackage.FEATURE__NAME:
+        return getName();
       case ClassmodelPackage.FEATURE__MODIFIER:
         return getModifier();
       case ClassmodelPackage.FEATURE__STATIC:
         return isStatic();
-      case ClassmodelPackage.FEATURE__NAME:
-        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -214,14 +214,14 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
   {
     switch (featureID)
     {
+      case ClassmodelPackage.FEATURE__NAME:
+        setName((String)newValue);
+        return;
       case ClassmodelPackage.FEATURE__MODIFIER:
         setModifier((Visibility)newValue);
         return;
       case ClassmodelPackage.FEATURE__STATIC:
         setStatic((Boolean)newValue);
-        return;
-      case ClassmodelPackage.FEATURE__NAME:
-        setName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -237,14 +237,14 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
   {
     switch (featureID)
     {
+      case ClassmodelPackage.FEATURE__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case ClassmodelPackage.FEATURE__MODIFIER:
         setModifier(MODIFIER_EDEFAULT);
         return;
       case ClassmodelPackage.FEATURE__STATIC:
         setStatic(STATIC_EDEFAULT);
-        return;
-      case ClassmodelPackage.FEATURE__NAME:
-        setName(NAME_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -260,12 +260,12 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
   {
     switch (featureID)
     {
+      case ClassmodelPackage.FEATURE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case ClassmodelPackage.FEATURE__MODIFIER:
         return modifier != MODIFIER_EDEFAULT;
       case ClassmodelPackage.FEATURE__STATIC:
         return static_ != STATIC_EDEFAULT;
-      case ClassmodelPackage.FEATURE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
   }
@@ -281,12 +281,12 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (modifier: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", modifier: ");
     result.append(modifier);
     result.append(", static: ");
     result.append(static_);
-    result.append(", name: ");
-    result.append(name);
     result.append(')');
     return result.toString();
   }

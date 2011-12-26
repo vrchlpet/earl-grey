@@ -16,8 +16,8 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute#getType <em>Type</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute#getImplicit <em>Implicit</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -27,6 +27,22 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Attribute extends Feature
 {
+  /**
+   * Returns the value of the '<em><b>Implicit</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Implicit</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Implicit</em>' attribute list.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getAttribute_Implicit()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getImplicit();
+
   /**
    * Returns the value of the '<em><b>Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
@@ -52,21 +68,5 @@ public interface Attribute extends Feature
    * @generated
    */
   void setType(Reference value);
-
-  /**
-   * Returns the value of the '<em><b>Implicit</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Implicit</em>' attribute list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Implicit</em>' attribute list.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getAttribute_Implicit()
-   * @model unique="false"
-   * @generated
-   */
-  EList<String> getImplicit();
 
 } // Attribute

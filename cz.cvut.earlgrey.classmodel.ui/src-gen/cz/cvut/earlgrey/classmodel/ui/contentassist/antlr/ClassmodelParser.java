@@ -38,6 +38,8 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getAbstractElementAccess().getAlternatives(), "rule__AbstractElement__Alternatives");
+					put(grammarAccess.getEntityAccess().getAlternatives(), "rule__Entity__Alternatives");
+					put(grammarAccess.getClassAccess().getAlternatives_0_0(), "rule__Class__Alternatives_0_0");
 					put(grammarAccess.getFeatureAccess().getAlternatives(), "rule__Feature__Alternatives");
 					put(grammarAccess.getValueAccess().getAlternatives(), "rule__Value__Alternatives");
 					put(grammarAccess.getRelationTypeAccess().getAlternatives(), "rule__RelationType__Alternatives");
@@ -46,7 +48,11 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getClassmodelAccess().getGroup(), "rule__Classmodel__Group__0");
 					put(grammarAccess.getPackageAccess().getGroup(), "rule__Package__Group__0");
 					put(grammarAccess.getImportAccess().getGroup(), "rule__Import__Group__0");
-					put(grammarAccess.getEntityAccess().getGroup(), "rule__Entity__Group__0");
+					put(grammarAccess.getClassAccess().getGroup(), "rule__Class__Group__0");
+					put(grammarAccess.getClassAccess().getGroup_0(), "rule__Class__Group_0__0");
+					put(grammarAccess.getEnumAccess().getGroup(), "rule__Enum__Group__0");
+					put(grammarAccess.getEnumConstantAccess().getGroup(), "rule__EnumConstant__Group__0");
+					put(grammarAccess.getEnumConstantAccess().getGroup_1(), "rule__EnumConstant__Group_1__0");
 					put(grammarAccess.getReferenceAccess().getGroup(), "rule__Reference__Group__0");
 					put(grammarAccess.getArrayAccess().getGroup(), "rule__Array__Group__0");
 					put(grammarAccess.getOperationAccess().getGroup(), "rule__Operation__Group__0");
@@ -54,6 +60,7 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOperationAccess().getGroup_3_1(), "rule__Operation__Group_3_1__0");
 					put(grammarAccess.getParameterAccess().getGroup(), "rule__Parameter__Group__0");
 					put(grammarAccess.getParameterAccess().getGroup_3(), "rule__Parameter__Group_3__0");
+					put(grammarAccess.getParameterAccess().getGroup_3_2(), "rule__Parameter__Group_3_2__0");
 					put(grammarAccess.getAttributeAccess().getGroup(), "rule__Attribute__Group__0");
 					put(grammarAccess.getAttributeAccess().getGroup_4(), "rule__Attribute__Group_4__0");
 					put(grammarAccess.getAttributeAccess().getGroup_4_2(), "rule__Attribute__Group_4_2__0");
@@ -66,9 +73,16 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPackageAccess().getNameAssignment_1(), "rule__Package__NameAssignment_1");
 					put(grammarAccess.getPackageAccess().getElementsAssignment_3(), "rule__Package__ElementsAssignment_3");
 					put(grammarAccess.getImportAccess().getImportURIAssignment_1(), "rule__Import__ImportURIAssignment_1");
-					put(grammarAccess.getEntityAccess().getTypeAssignment_0(), "rule__Entity__TypeAssignment_0");
-					put(grammarAccess.getEntityAccess().getNameAssignment_1(), "rule__Entity__NameAssignment_1");
-					put(grammarAccess.getEntityAccess().getFeatureAssignment_3(), "rule__Entity__FeatureAssignment_3");
+					put(grammarAccess.getClassAccess().getClassAssignment_0_0_0(), "rule__Class__ClassAssignment_0_0_0");
+					put(grammarAccess.getClassAccess().getInterfaceAssignment_0_0_1(), "rule__Class__InterfaceAssignment_0_0_1");
+					put(grammarAccess.getClassAccess().getAbstractAssignment_0_0_2(), "rule__Class__AbstractAssignment_0_0_2");
+					put(grammarAccess.getClassAccess().getNameAssignment_1(), "rule__Class__NameAssignment_1");
+					put(grammarAccess.getClassAccess().getFeatureAssignment_3(), "rule__Class__FeatureAssignment_3");
+					put(grammarAccess.getEnumAccess().getEnumerationAssignment_0(), "rule__Enum__EnumerationAssignment_0");
+					put(grammarAccess.getEnumAccess().getNameAssignment_1(), "rule__Enum__NameAssignment_1");
+					put(grammarAccess.getEnumAccess().getFeatureAssignment_3(), "rule__Enum__FeatureAssignment_3");
+					put(grammarAccess.getEnumConstantAccess().getNameAssignment_0(), "rule__EnumConstant__NameAssignment_0");
+					put(grammarAccess.getEnumConstantAccess().getImplicitAssignment_1_1(), "rule__EnumConstant__ImplicitAssignment_1_1");
 					put(grammarAccess.getReferenceAccess().getTypeAssignment_0(), "rule__Reference__TypeAssignment_0");
 					put(grammarAccess.getReferenceAccess().getArrayAssignment_1(), "rule__Reference__ArrayAssignment_1");
 					put(grammarAccess.getArrayAccess().getSizeAssignment_2(), "rule__Array__SizeAssignment_2");
@@ -81,6 +95,7 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getParameterAccess().getNameAssignment_0(), "rule__Parameter__NameAssignment_0");
 					put(grammarAccess.getParameterAccess().getTypeAssignment_2(), "rule__Parameter__TypeAssignment_2");
 					put(grammarAccess.getParameterAccess().getImplicitAssignment_3_1(), "rule__Parameter__ImplicitAssignment_3_1");
+					put(grammarAccess.getParameterAccess().getImplicitAssignment_3_2_1(), "rule__Parameter__ImplicitAssignment_3_2_1");
 					put(grammarAccess.getAttributeAccess().getModifierAssignment_0_0(), "rule__Attribute__ModifierAssignment_0_0");
 					put(grammarAccess.getAttributeAccess().getStaticAssignment_0_1(), "rule__Attribute__StaticAssignment_0_1");
 					put(grammarAccess.getAttributeAccess().getNameAssignment_1(), "rule__Attribute__NameAssignment_1");

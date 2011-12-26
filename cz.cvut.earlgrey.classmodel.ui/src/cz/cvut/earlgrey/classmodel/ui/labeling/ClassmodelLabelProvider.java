@@ -6,7 +6,6 @@ import com.google.inject.Inject;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.Classmodel;
 import cz.cvut.earlgrey.classmodel.classmodel.Entity;
-import cz.cvut.earlgrey.classmodel.classmodel.EntityType;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Relation;
@@ -28,8 +27,7 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 	/**
 	 * Returns Relation's image used in Outline View.
 	 * 
-	 * @param ele
-	 *            Instance of an Relation
+	 * @param ele Instance of an Relation
 	 * @return image's filename as String
 	 */
 	String image(Relation ele) {
@@ -57,8 +55,7 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 	/**
 	 * Returns Attribute's image used in Outline View.
 	 * 
-	 * @param ele
-	 *            Instance of an Attribute
+	 * @param ele Instance of an Attribute
 	 * @return image's filename as String
 	 */
 	String image(Attribute ele) {
@@ -76,8 +73,7 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 	/**
 	 * Returns Import's image used in Outline View.
 	 * 
-	 * @param ele
-	 *            Instance of an Import
+	 * @param ele Instance of an Import
 	 * @return image's filename as String
 	 */
 	String image(Import ele) {
@@ -87,8 +83,7 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 	/**
 	 * Returns Package's image used in Outline View.
 	 * 
-	 * @param ele
-	 *            Instance of a Package
+	 * @param ele Instance of a Package
 	 * @return image's filename as String
 	 */
 	String image(cz.cvut.earlgrey.classmodel.classmodel.Package ele) {
@@ -98,8 +93,7 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 	/**
 	 * Returns Classmodel's image used in Outline View.
 	 * 
-	 * @param ele
-	 *            Instance of a Classmodel
+	 * @param ele Instance of a Classmodel
 	 * @return image's filename as String
 	 */
 	String image(Classmodel ele) {
@@ -109,16 +103,18 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 	/**
 	 * Returns Entity's image used in Outline View.
 	 * 
-	 * @param ele
-	 *            Instance of an Entity
+	 * @param ele Instance of an Entity
 	 * @return image's filename as String
 	 */
 	String image(Entity ele) {
-		switch (ele.getType().getValue()) {
-		case EntityType.INTERFACE_VALUE:
-			return "int_obj.gif";
-		case EntityType.ENUM_VALUE:
+		if (ele == null) {
+			return null;
+		}
+		if (ele.isEnumeration()) {
 			return "enum_obj.gif";
+		}
+		if (ele.isInterface()) {
+			return "int_obj.gif";
 		}
 		return "class_obj.gif";
 	}

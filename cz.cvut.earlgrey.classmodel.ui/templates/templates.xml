@@ -19,10 +19,10 @@
     ${cursor}
 }</template>
 	<template autoinsert="true"
-		context="cz.cvut.earlgrey.classmodel.Classmodel.Method" deleted="false"
-        id="cz.cvut.earlgrey.classmodel.ui.templates.Method"
+		context="cz.cvut.earlgrey.classmodel.Classmodel.Operation" deleted="false"
+        id="cz.cvut.earlgrey.classmodel.ui.templates.Operation"
 		description="new Method" enabled="true"
-		name="method">${visibility:Enum('Visibility')}${name}() : ${return:CrossReference(Method.return)}</template>
+		name="method">${visibility:Enum('Visibility')}${name}() : ${return:CrossReference(Operation.return)}</template>
 	<template autoinsert="true"
 		context="cz.cvut.earlgrey.classmodel.Classmodel.Package" deleted="false"
         id="cz.cvut.earlgrey.classmodel.ui.templates.Package"
