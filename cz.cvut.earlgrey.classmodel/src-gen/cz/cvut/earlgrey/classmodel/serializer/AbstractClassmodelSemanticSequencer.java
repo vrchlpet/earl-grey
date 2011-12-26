@@ -2,12 +2,13 @@ package cz.cvut.earlgrey.classmodel.serializer;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.Classmodel;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
 import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
-import cz.cvut.earlgrey.classmodel.classmodel.Method;
+import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relation;
@@ -52,8 +53,15 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == ClassmodelPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case ClassmodelPackage.ARRAY:
+				if(context == grammarAccess.getArrayRule()) {
+					sequence_Array(context, (Array) semanticObject); 
+					return; 
+				}
+				else break;
 			case ClassmodelPackage.ATTRIBUTE:
-				if(context == grammarAccess.getAttributeRule()) {
+				if(context == grammarAccess.getAttributeRule() ||
+				   context == grammarAccess.getFeatureRule()) {
 					sequence_Attribute(context, (Attribute) semanticObject); 
 					return; 
 				}
@@ -77,9 +85,10 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 					return; 
 				}
 				else break;
-			case ClassmodelPackage.METHOD:
-				if(context == grammarAccess.getMethodRule()) {
-					sequence_Method(context, (Method) semanticObject); 
+			case ClassmodelPackage.OPERATION:
+				if(context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getOperationRule()) {
+					sequence_Operation(context, (Operation) semanticObject); 
 					return; 
 				}
 				else break;
@@ -115,7 +124,16 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (modifier=Visibility? name=ID type=Reference)
+	 *     (size=INT?)
+	 */
+	protected void sequence_Array(EObject context, Array semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (modifier=Visibility? static?='static'? name=ID type=Reference implicit=Value?)
 	 */
 	protected void sequence_Attribute(EObject context, Attribute semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -133,7 +151,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (type=EntityType name=ID attribute+=Attribute* method+=Method*)
+	 *     (type=EntityType name=ID feature+=Feature*)
 	 */
 	protected void sequence_Entity(EObject context, Entity semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -158,9 +176,9 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (modifier=Visibility? name=ID (parameters+=Parameter parameters+=Parameter*)? return=Reference)
+	 *     (modifier=Visibility? static?='static'? name=ID (parameters+=Parameter parameters+=Parameter*)? return=Reference)
 	 */
-	protected void sequence_Method(EObject context, Method semanticObject) {
+	protected void sequence_Operation(EObject context, Operation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -195,7 +213,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (type=[Entity|QualifiedName] dimension+='['?)
+	 *     (type=[Entity|QualifiedName] array+=Array*)
 	 */
 	protected void sequence_Reference(EObject context, Reference semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

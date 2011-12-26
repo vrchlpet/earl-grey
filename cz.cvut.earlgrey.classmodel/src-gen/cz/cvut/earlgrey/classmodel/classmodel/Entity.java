@@ -18,8 +18,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#getType <em>Type</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#getName <em>Name</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#getAttribute <em>Attribute</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#getMethod <em>Method</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#getFeature <em>Feature</em>}</li>
  * </ul>
  * </p>
  *
@@ -85,35 +84,19 @@ public interface Entity extends AbstractElement
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Attribute</b></em>' containment reference list.
-   * The list contents are of type {@link cz.cvut.earlgrey.classmodel.classmodel.Attribute}.
+   * Returns the value of the '<em><b>Feature</b></em>' containment reference list.
+   * The list contents are of type {@link cz.cvut.earlgrey.classmodel.classmodel.Feature}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Attribute</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Feature</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Attribute</em>' containment reference list.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getEntity_Attribute()
+   * @return the value of the '<em>Feature</em>' containment reference list.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getEntity_Feature()
    * @model containment="true"
    * @generated
    */
-  EList<Attribute> getAttribute();
-
-  /**
-   * Returns the value of the '<em><b>Method</b></em>' containment reference list.
-   * The list contents are of type {@link cz.cvut.earlgrey.classmodel.classmodel.Method}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Method</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Method</em>' containment reference list.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getEntity_Method()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Method> getMethod();
+  EList<Feature> getFeature();
 
 } // Entity

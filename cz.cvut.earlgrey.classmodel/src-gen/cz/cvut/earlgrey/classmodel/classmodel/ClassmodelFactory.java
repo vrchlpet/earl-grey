@@ -81,13 +81,31 @@ public interface ClassmodelFactory extends EFactory
   Reference createReference();
 
   /**
-   * Returns a new object of class '<em>Method</em>'.
+   * Returns a new object of class '<em>Array</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Method</em>'.
+   * @return a new object of class '<em>Array</em>'.
    * @generated
    */
-  Method createMethod();
+  Array createArray();
+
+  /**
+   * Returns a new object of class '<em>Feature</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Feature</em>'.
+   * @generated
+   */
+  Feature createFeature();
+
+  /**
+   * Returns a new object of class '<em>Operation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Operation</em>'.
+   * @generated
+   */
+  Operation createOperation();
 
   /**
    * Returns a new object of class '<em>Parameter</em>'.

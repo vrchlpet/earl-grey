@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Reference#getType <em>Type</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Reference#getDimension <em>Dimension</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Reference#getArray <em>Array</em>}</li>
  * </ul>
  * </p>
  *
@@ -56,19 +56,19 @@ public interface Reference extends EObject
   void setType(Entity value);
 
   /**
-   * Returns the value of the '<em><b>Dimension</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Array</b></em>' containment reference list.
+   * The list contents are of type {@link cz.cvut.earlgrey.classmodel.classmodel.Array}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Dimension</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Array</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Dimension</em>' attribute list.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getReference_Dimension()
-   * @model unique="false"
+   * @return the value of the '<em>Array</em>' containment reference list.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getReference_Array()
+   * @model containment="true"
    * @generated
    */
-  EList<String> getDimension();
+  EList<Array> getArray();
 
 } // Reference

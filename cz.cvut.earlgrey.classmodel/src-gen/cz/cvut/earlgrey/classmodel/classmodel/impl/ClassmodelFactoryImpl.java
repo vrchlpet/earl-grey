@@ -7,14 +7,16 @@
 package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
 import cz.cvut.earlgrey.classmodel.classmodel.AbstractElement;
+import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.Classmodel;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelFactory;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
 import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.EntityType;
+import cz.cvut.earlgrey.classmodel.classmodel.Feature;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
-import cz.cvut.earlgrey.classmodel.classmodel.Method;
+import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relation;
@@ -88,7 +90,9 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
       case ClassmodelPackage.IMPORT: return createImport();
       case ClassmodelPackage.ENTITY: return createEntity();
       case ClassmodelPackage.REFERENCE: return createReference();
-      case ClassmodelPackage.METHOD: return createMethod();
+      case ClassmodelPackage.ARRAY: return createArray();
+      case ClassmodelPackage.FEATURE: return createFeature();
+      case ClassmodelPackage.OPERATION: return createOperation();
       case ClassmodelPackage.PARAMETER: return createParameter();
       case ClassmodelPackage.ATTRIBUTE: return createAttribute();
       case ClassmodelPackage.RELATION: return createRelation();
@@ -210,10 +214,32 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Method createMethod()
+  public Array createArray()
   {
-    MethodImpl method = new MethodImpl();
-    return method;
+    ArrayImpl array = new ArrayImpl();
+    return array;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Feature createFeature()
+  {
+    FeatureImpl feature = new FeatureImpl();
+    return feature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Operation createOperation()
+  {
+    OperationImpl operation = new OperationImpl();
+    return operation;
   }
 
   /**

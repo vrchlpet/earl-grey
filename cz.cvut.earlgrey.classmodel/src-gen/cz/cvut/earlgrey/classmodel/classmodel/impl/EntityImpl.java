@@ -6,11 +6,10 @@
  */
 package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
-import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
 import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.EntityType;
-import cz.cvut.earlgrey.classmodel.classmodel.Method;
+import cz.cvut.earlgrey.classmodel.classmodel.Feature;
 
 import java.util.Collection;
 
@@ -36,8 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EntityImpl#getType <em>Type</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EntityImpl#getName <em>Name</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EntityImpl#getAttribute <em>Attribute</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EntityImpl#getMethod <em>Method</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EntityImpl#getFeature <em>Feature</em>}</li>
  * </ul>
  * </p>
  *
@@ -86,24 +84,14 @@ public class EntityImpl extends AbstractElementImpl implements Entity
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getAttribute() <em>Attribute</em>}' containment reference list.
+   * The cached value of the '{@link #getFeature() <em>Feature</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAttribute()
+   * @see #getFeature()
    * @generated
    * @ordered
    */
-  protected EList<Attribute> attribute;
-
-  /**
-   * The cached value of the '{@link #getMethod() <em>Method</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getMethod()
-   * @generated
-   * @ordered
-   */
-  protected EList<Method> method;
+  protected EList<Feature> feature;
 
   /**
    * <!-- begin-user-doc -->
@@ -177,27 +165,13 @@ public class EntityImpl extends AbstractElementImpl implements Entity
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Attribute> getAttribute()
+  public EList<Feature> getFeature()
   {
-    if (attribute == null)
+    if (feature == null)
     {
-      attribute = new EObjectContainmentEList<Attribute>(Attribute.class, this, ClassmodelPackage.ENTITY__ATTRIBUTE);
+      feature = new EObjectContainmentEList<Feature>(Feature.class, this, ClassmodelPackage.ENTITY__FEATURE);
     }
-    return attribute;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Method> getMethod()
-  {
-    if (method == null)
-    {
-      method = new EObjectContainmentEList<Method>(Method.class, this, ClassmodelPackage.ENTITY__METHOD);
-    }
-    return method;
+    return feature;
   }
 
   /**
@@ -210,10 +184,8 @@ public class EntityImpl extends AbstractElementImpl implements Entity
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ENTITY__ATTRIBUTE:
-        return ((InternalEList<?>)getAttribute()).basicRemove(otherEnd, msgs);
-      case ClassmodelPackage.ENTITY__METHOD:
-        return ((InternalEList<?>)getMethod()).basicRemove(otherEnd, msgs);
+      case ClassmodelPackage.ENTITY__FEATURE:
+        return ((InternalEList<?>)getFeature()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -232,10 +204,8 @@ public class EntityImpl extends AbstractElementImpl implements Entity
         return getType();
       case ClassmodelPackage.ENTITY__NAME:
         return getName();
-      case ClassmodelPackage.ENTITY__ATTRIBUTE:
-        return getAttribute();
-      case ClassmodelPackage.ENTITY__METHOD:
-        return getMethod();
+      case ClassmodelPackage.ENTITY__FEATURE:
+        return getFeature();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -257,13 +227,9 @@ public class EntityImpl extends AbstractElementImpl implements Entity
       case ClassmodelPackage.ENTITY__NAME:
         setName((String)newValue);
         return;
-      case ClassmodelPackage.ENTITY__ATTRIBUTE:
-        getAttribute().clear();
-        getAttribute().addAll((Collection<? extends Attribute>)newValue);
-        return;
-      case ClassmodelPackage.ENTITY__METHOD:
-        getMethod().clear();
-        getMethod().addAll((Collection<? extends Method>)newValue);
+      case ClassmodelPackage.ENTITY__FEATURE:
+        getFeature().clear();
+        getFeature().addAll((Collection<? extends Feature>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -285,11 +251,8 @@ public class EntityImpl extends AbstractElementImpl implements Entity
       case ClassmodelPackage.ENTITY__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case ClassmodelPackage.ENTITY__ATTRIBUTE:
-        getAttribute().clear();
-        return;
-      case ClassmodelPackage.ENTITY__METHOD:
-        getMethod().clear();
+      case ClassmodelPackage.ENTITY__FEATURE:
+        getFeature().clear();
         return;
     }
     super.eUnset(featureID);
@@ -309,10 +272,8 @@ public class EntityImpl extends AbstractElementImpl implements Entity
         return type != TYPE_EDEFAULT;
       case ClassmodelPackage.ENTITY__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case ClassmodelPackage.ENTITY__ATTRIBUTE:
-        return attribute != null && !attribute.isEmpty();
-      case ClassmodelPackage.ENTITY__METHOD:
-        return method != null && !method.isEmpty();
+      case ClassmodelPackage.ENTITY__FEATURE:
+        return feature != null && !feature.isEmpty();
     }
     return super.eIsSet(featureID);
   }

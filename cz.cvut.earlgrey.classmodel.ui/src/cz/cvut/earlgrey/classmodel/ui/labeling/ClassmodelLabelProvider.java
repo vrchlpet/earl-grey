@@ -2,15 +2,13 @@ package cz.cvut.earlgrey.classmodel.ui.labeling;
 
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
-
 import com.google.inject.Inject;
-
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.Classmodel;
 import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.EntityType;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
-import cz.cvut.earlgrey.classmodel.classmodel.Method;
+import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Relation;
 import cz.cvut.earlgrey.classmodel.classmodel.Visibility;
 
@@ -39,13 +37,12 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 	}
 
 	/**
-	 * Returns Attribute's image used in Outline View.
+	 * Returns Operation's image used in Outline View.
 	 * 
-	 * @param ele
-	 *            Instance of an Attribute
+	 * @param ele Instance of an Operation
 	 * @return image's filename as String
 	 */
-	String image(Method ele) {
+	String image(Operation ele) {
 		switch (ele.getModifier().getValue()) {
 		case Visibility.PUBLIC_VALUE:
 			return "methpub_obj.gif";

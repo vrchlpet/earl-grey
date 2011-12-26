@@ -6,7 +6,6 @@
  */
 package cz.cvut.earlgrey.classmodel.classmodel;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,9 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute#getModifier <em>Modifier</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute#getType <em>Type</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute#getImplicit <em>Implicit</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,63 +24,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Attribute extends EObject
+public interface Attribute extends Feature
 {
-  /**
-   * Returns the value of the '<em><b>Modifier</b></em>' attribute.
-   * The literals are from the enumeration {@link cz.cvut.earlgrey.classmodel.classmodel.Visibility}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Modifier</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Modifier</em>' attribute.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Visibility
-   * @see #setModifier(Visibility)
-   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getAttribute_Modifier()
-   * @model
-   * @generated
-   */
-  Visibility getModifier();
-
-  /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute#getModifier <em>Modifier</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Modifier</em>' attribute.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Visibility
-   * @see #getModifier()
-   * @generated
-   */
-  void setModifier(Visibility value);
-
-  /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getAttribute_Name()
-   * @model
-   * @generated
-   */
-  String getName();
-
-  /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
-
   /**
    * Returns the value of the '<em><b>Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
@@ -108,5 +51,31 @@ public interface Attribute extends EObject
    * @generated
    */
   void setType(Reference value);
+
+  /**
+   * Returns the value of the '<em><b>Implicit</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Implicit</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Implicit</em>' attribute.
+   * @see #setImplicit(String)
+   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getAttribute_Implicit()
+   * @model
+   * @generated
+   */
+  String getImplicit();
+
+  /**
+   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Attribute#getImplicit <em>Implicit</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Implicit</em>' attribute.
+   * @see #getImplicit()
+   * @generated
+   */
+  void setImplicit(String value);
 
 } // Attribute

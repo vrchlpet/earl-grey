@@ -22,6 +22,8 @@ State:
     '{'
     (transitions+=Transition)*
     '}';
+    
+    //SimpleState CompositeState ?!
 
 Transition:
     (=> guard=Guard)? (=> event=Event)? '=>' state=[State]

@@ -1,5 +1,5 @@
 grammar cz.cvut.earlgrey.classmodel.Classmodel with org.eclipse.xtext.common.Terminals
-
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 generate classmodel "http://www.cvut.cz/earlgrey/classmodel/Classmodel"
 
 /**
@@ -23,28 +23,36 @@ Import:
 Entity:
     type=EntityType name=ID
     '{'
-    attribute+=Attribute*
-    method+=Method*
+    feature+=Feature*
     '}';
-    
+
 /**
  * Entity reference, supports n-dimension arrays.
  */
 Reference:
-    type=[Entity|QualifiedName] (=> (dimension+='[' ']')*)?;
+    type=[Entity|QualifiedName] array+=Array*;
 
-/**
- * i.e.: +setAll(Parameter[]) : void
- */
-Method:
-    (modifier=Visibility)? name=ID '(' (=> parameters+=Parameter (',' parameters+=Parameter)*)? ')' ':'
+Array:
+    {Array} '[' size=INT? ']';
+
+Feature:
+    Attribute | Operation;
+
+//i.e.: +setAll(Parameter[]) : void
+Operation:
+    (modifier=Visibility? & static?='static'?) name=ID '(' (=> parameters+=Parameter (',' parameters+=Parameter)*)? ')'
+    ':'
     return=Reference;
 
 Parameter:
     name=ID ':' type=Reference;
 
 Attribute:
-    (modifier=Visibility)? name=ID ':' type=Reference;
+    (modifier=Visibility? & static?='static'?) name=ID ':' type=Reference (=> '=' implicit=Value)?;
+
+Value returns ecore::EString:
+   'null' | STRING | INT
+;
 
 Relation:
     origin=[Entity|QualifiedName] (cardinalityFrom=STRING)? type=RelationType (cardinalityTo=STRING)?
@@ -73,4 +81,7 @@ enum EntityType:
 
 QualifiedName:
     ID ('.' ID)*;
+
+//terminal CONSTRAIN:
+//    '{'->'}';
     

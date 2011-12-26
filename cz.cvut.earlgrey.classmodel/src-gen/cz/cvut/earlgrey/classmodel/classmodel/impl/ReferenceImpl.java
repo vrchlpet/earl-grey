@@ -6,6 +6,7 @@
  */
 package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
+import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
 import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
@@ -13,6 +14,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -22,7 +24,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +35,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ReferenceImpl#getType <em>Type</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ReferenceImpl#getDimension <em>Dimension</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ReferenceImpl#getArray <em>Array</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,14 +54,14 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
   protected Entity type;
 
   /**
-   * The cached value of the '{@link #getDimension() <em>Dimension</em>}' attribute list.
+   * The cached value of the '{@link #getArray() <em>Array</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDimension()
+   * @see #getArray()
    * @generated
    * @ordered
    */
-  protected EList<String> dimension;
+  protected EList<Array> array;
 
   /**
    * <!-- begin-user-doc -->
@@ -129,13 +132,29 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getDimension()
+  public EList<Array> getArray()
   {
-    if (dimension == null)
+    if (array == null)
     {
-      dimension = new EDataTypeEList<String>(String.class, this, ClassmodelPackage.REFERENCE__DIMENSION);
+      array = new EObjectContainmentEList<Array>(Array.class, this, ClassmodelPackage.REFERENCE__ARRAY);
     }
-    return dimension;
+    return array;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case ClassmodelPackage.REFERENCE__ARRAY:
+        return ((InternalEList<?>)getArray()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -151,8 +170,8 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
       case ClassmodelPackage.REFERENCE__TYPE:
         if (resolve) return getType();
         return basicGetType();
-      case ClassmodelPackage.REFERENCE__DIMENSION:
-        return getDimension();
+      case ClassmodelPackage.REFERENCE__ARRAY:
+        return getArray();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -171,9 +190,9 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
       case ClassmodelPackage.REFERENCE__TYPE:
         setType((Entity)newValue);
         return;
-      case ClassmodelPackage.REFERENCE__DIMENSION:
-        getDimension().clear();
-        getDimension().addAll((Collection<? extends String>)newValue);
+      case ClassmodelPackage.REFERENCE__ARRAY:
+        getArray().clear();
+        getArray().addAll((Collection<? extends Array>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -192,8 +211,8 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
       case ClassmodelPackage.REFERENCE__TYPE:
         setType((Entity)null);
         return;
-      case ClassmodelPackage.REFERENCE__DIMENSION:
-        getDimension().clear();
+      case ClassmodelPackage.REFERENCE__ARRAY:
+        getArray().clear();
         return;
     }
     super.eUnset(featureID);
@@ -211,27 +230,10 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
     {
       case ClassmodelPackage.REFERENCE__TYPE:
         return type != null;
-      case ClassmodelPackage.REFERENCE__DIMENSION:
-        return dimension != null && !dimension.isEmpty();
+      case ClassmodelPackage.REFERENCE__ARRAY:
+        return array != null && !array.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (dimension: ");
-    result.append(dimension);
-    result.append(')');
-    return result.toString();
   }
 
 } //ReferenceImpl

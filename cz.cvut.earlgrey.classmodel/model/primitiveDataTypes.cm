@@ -14,3 +14,5 @@ class Boolean{}
 class char{}
 class Character{}
 class String{}
+class void{}
+class List{}

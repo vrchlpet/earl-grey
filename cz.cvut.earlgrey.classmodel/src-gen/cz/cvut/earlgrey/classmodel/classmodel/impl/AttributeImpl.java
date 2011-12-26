@@ -9,7 +9,6 @@ package cz.cvut.earlgrey.classmodel.classmodel.impl;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
-import cz.cvut.earlgrey.classmodel.classmodel.Visibility;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -18,7 +17,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,56 +25,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl#getModifier <em>Modifier</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl#getType <em>Type</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl#getImplicit <em>Implicit</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class AttributeImpl extends MinimalEObjectImpl.Container implements Attribute
+public class AttributeImpl extends FeatureImpl implements Attribute
 {
-  /**
-   * The default value of the '{@link #getModifier() <em>Modifier</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getModifier()
-   * @generated
-   * @ordered
-   */
-  protected static final Visibility MODIFIER_EDEFAULT = Visibility.PUBLIC;
-
-  /**
-   * The cached value of the '{@link #getModifier() <em>Modifier</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getModifier()
-   * @generated
-   * @ordered
-   */
-  protected Visibility modifier = MODIFIER_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -86,6 +43,26 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
    * @ordered
    */
   protected Reference type;
+
+  /**
+   * The default value of the '{@link #getImplicit() <em>Implicit</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getImplicit()
+   * @generated
+   * @ordered
+   */
+  protected static final String IMPLICIT_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getImplicit() <em>Implicit</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getImplicit()
+   * @generated
+   * @ordered
+   */
+  protected String implicit = IMPLICIT_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -106,52 +83,6 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
   protected EClass eStaticClass()
   {
     return ClassmodelPackage.Literals.ATTRIBUTE;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Visibility getModifier()
-  {
-    return modifier;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setModifier(Visibility newModifier)
-  {
-    Visibility oldModifier = modifier;
-    modifier = newModifier == null ? MODIFIER_EDEFAULT : newModifier;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.ATTRIBUTE__MODIFIER, oldModifier, modifier));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.ATTRIBUTE__NAME, oldName, name));
   }
 
   /**
@@ -207,6 +138,29 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getImplicit()
+  {
+    return implicit;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setImplicit(String newImplicit)
+  {
+    String oldImplicit = implicit;
+    implicit = newImplicit;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.ATTRIBUTE__IMPLICIT, oldImplicit, implicit));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -228,12 +182,10 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ATTRIBUTE__MODIFIER:
-        return getModifier();
-      case ClassmodelPackage.ATTRIBUTE__NAME:
-        return getName();
       case ClassmodelPackage.ATTRIBUTE__TYPE:
         return getType();
+      case ClassmodelPackage.ATTRIBUTE__IMPLICIT:
+        return getImplicit();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -248,14 +200,11 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ATTRIBUTE__MODIFIER:
-        setModifier((Visibility)newValue);
-        return;
-      case ClassmodelPackage.ATTRIBUTE__NAME:
-        setName((String)newValue);
-        return;
       case ClassmodelPackage.ATTRIBUTE__TYPE:
         setType((Reference)newValue);
+        return;
+      case ClassmodelPackage.ATTRIBUTE__IMPLICIT:
+        setImplicit((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -271,14 +220,11 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ATTRIBUTE__MODIFIER:
-        setModifier(MODIFIER_EDEFAULT);
-        return;
-      case ClassmodelPackage.ATTRIBUTE__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case ClassmodelPackage.ATTRIBUTE__TYPE:
         setType((Reference)null);
+        return;
+      case ClassmodelPackage.ATTRIBUTE__IMPLICIT:
+        setImplicit(IMPLICIT_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -294,12 +240,10 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ATTRIBUTE__MODIFIER:
-        return modifier != MODIFIER_EDEFAULT;
-      case ClassmodelPackage.ATTRIBUTE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case ClassmodelPackage.ATTRIBUTE__TYPE:
         return type != null;
+      case ClassmodelPackage.ATTRIBUTE__IMPLICIT:
+        return IMPLICIT_EDEFAULT == null ? implicit != null : !IMPLICIT_EDEFAULT.equals(implicit);
     }
     return super.eIsSet(featureID);
   }
@@ -315,10 +259,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (modifier: ");
-    result.append(modifier);
-    result.append(", name: ");
-    result.append(name);
+    result.append(" (implicit: ");
+    result.append(implicit);
     result.append(')');
     return result.toString();
   }
