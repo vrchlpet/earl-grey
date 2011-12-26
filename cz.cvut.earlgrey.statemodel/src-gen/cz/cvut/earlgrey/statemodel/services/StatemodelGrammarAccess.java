@@ -53,7 +53,7 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cStatemachineKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNameIdentifierParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cStateAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cStateStateParserRuleCall_3_0 = (RuleCall)cStateAssignment_3.eContents().get(0);
@@ -61,20 +61,20 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		
 		////TODO: STRING | ID |  [cls::Entity|QualifiedName]
 		//Statemachine:
-		//	"statemachine" name=ID "{" state+=State* "}";
+		//	"statemachine" name=Identifier "{" state+=State* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"statemachine" name=ID "{" state+=State* "}"
+		//"statemachine" name=Identifier "{" state+=State* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"statemachine"
 		public Keyword getStatemachineKeyword_0() { return cStatemachineKeyword_0; }
 
-		//name=ID
+		//name=Identifier
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		//Identifier
+		public RuleCall getNameIdentifierParserRuleCall_1_0() { return cNameIdentifierParserRuleCall_1_0; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
@@ -95,17 +95,17 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cTypeStateTypeEnumRuleCall_0_0 = (RuleCall)cTypeAssignment_0.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNameIdentifierParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cTransitionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cTransitionsTransitionParserRuleCall_3_0 = (RuleCall)cTransitionsAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//State:
-		//	type=StateType name=ID "{" transitions+=Transition* "}";
+		//	type=StateType name=Identifier "{" transitions+=Transition* "}";
 		public ParserRule getRule() { return rule; }
 
-		//type=StateType name=ID "{" transitions+=Transition* "}"
+		//type=StateType name=Identifier "{" transitions+=Transition* "}"
 		public Group getGroup() { return cGroup; }
 
 		//type=StateType
@@ -114,11 +114,11 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		//StateType
 		public RuleCall getTypeStateTypeEnumRuleCall_0_0() { return cTypeStateTypeEnumRuleCall_0_0; }
 
-		//name=ID
+		//name=Identifier
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		//Identifier
+		public RuleCall getNameIdentifierParserRuleCall_1_0() { return cNameIdentifierParserRuleCall_1_0; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
@@ -143,13 +143,14 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEqualsSignGreaterThanSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cStateAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final CrossReference cStateStateCrossReference_3_0 = (CrossReference)cStateAssignment_3.eContents().get(0);
-		private final RuleCall cStateStateIDTerminalRuleCall_3_0_1 = (RuleCall)cStateStateCrossReference_3_0.eContents().get(1);
+		private final RuleCall cStateStateIdentifierParserRuleCall_3_0_1 = (RuleCall)cStateStateCrossReference_3_0.eContents().get(1);
 		
+		////SimpleState CompositeState ?!
 		//Transition:
-		//	=> guard=Guard? => event=Event? "=>" state=[State];
+		//	=> guard=Guard? => event=Event? "=>" => state=[State|Identifier];
 		public ParserRule getRule() { return rule; }
 
-		//=> guard=Guard? => event=Event? "=>" state=[State]
+		//=> guard=Guard? => event=Event? "=>" => state=[State|Identifier]
 		public Group getGroup() { return cGroup; }
 
 		//=> guard=Guard?
@@ -167,14 +168,14 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		//"=>"
 		public Keyword getEqualsSignGreaterThanSignKeyword_2() { return cEqualsSignGreaterThanSignKeyword_2; }
 
-		//state=[State]
+		//=> state=[State|Identifier]
 		public Assignment getStateAssignment_3() { return cStateAssignment_3; }
 
-		//[State]
+		//[State|Identifier]
 		public CrossReference getStateStateCrossReference_3_0() { return cStateStateCrossReference_3_0; }
 
-		//ID
-		public RuleCall getStateStateIDTerminalRuleCall_3_0_1() { return cStateStateIDTerminalRuleCall_3_0_1; }
+		//Identifier
+		public RuleCall getStateStateIdentifierParserRuleCall_3_0_1() { return cStateStateIdentifierParserRuleCall_3_0_1; }
 	}
 
 	public class EventElements extends AbstractParserRuleElementFinder {
@@ -198,23 +199,27 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cOnKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cCondAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cCondCONDITIONTerminalRuleCall_1_0 = (RuleCall)cCondAssignment_1.eContents().get(0);
+		private final RuleCall cCondIDTerminalRuleCall_1_0 = (RuleCall)cCondAssignment_1.eContents().get(0);
 		
 		//Guard:
-		//	"on" cond=CONDITION;
+		//	"on" cond= //CONDITION
+		//	ID;
 		public ParserRule getRule() { return rule; }
 
-		//"on" cond=CONDITION
+		//"on" cond= //CONDITION
+		//ID
 		public Group getGroup() { return cGroup; }
 
 		//"on"
 		public Keyword getOnKeyword_0() { return cOnKeyword_0; }
 
-		//cond=CONDITION
+		//cond= //CONDITION
+		//ID
 		public Assignment getCondAssignment_1() { return cCondAssignment_1; }
 
-		//CONDITION
-		public RuleCall getCondCONDITIONTerminalRuleCall_1_0() { return cCondCONDITIONTerminalRuleCall_1_0; }
+		////CONDITION
+		//ID
+		public RuleCall getCondIDTerminalRuleCall_1_0() { return cCondIDTerminalRuleCall_1_0; }
 	}
 
 	public class ImportElements extends AbstractParserRuleElementFinder {
@@ -241,6 +246,26 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getImportURISTRINGTerminalRuleCall_1_0() { return cImportURISTRINGTerminalRuleCall_1_0; }
 	}
 
+	public class IdentifierElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Identifier");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cSTRINGTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Identifier returns ecore::EString:
+		//	ID | STRING;
+		public ParserRule getRule() { return rule; }
+
+		//=> ID | STRING
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//=> ID
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_1() { return cSTRINGTerminalRuleCall_1; }
+	}
+
 	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QualifiedName");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -249,17 +274,22 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
 		
+		////terminal CONDITION    : '(' (!('('|')'|'\n'|'\r'|'\t'))* ')' //FIXME: "(a && (abc))" -> cant use ')'
+		////;
 		//QualifiedName:
 		//	ID ("." ID)*;
 		public ParserRule getRule() { return rule; }
 
-		//ID ("." ID)*
+		//ID ("." ID)* //terminal CONDITION    : '(' (!('('|')'|'\n'|'\r'|'\t'))* ')' //FIXME: "(a && (abc))" -> cant use ')'
+		////;
 		public Group getGroup() { return cGroup; }
 
 		//ID
 		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
 
-		//("." ID)*
+		//("." ID //terminal CONDITION    : '(' (!('('|')'|'\n'|'\r'|'\t'))* ')' //FIXME: "(a && (abc))" -> cant use ')'
+		////;
+		//)*
 		public Group getGroup_1() { return cGroup_1; }
 
 		//"."
@@ -313,9 +343,9 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	private EventElements pEvent;
 	private GuardElements pGuard;
 	private ImportElements pImport;
+	private IdentifierElements pIdentifier;
 	private StateTypeElements unknownRuleStateType;
 	private QualifiedNameElements pQualifiedName;
-	private TerminalRule tCONDITION;
 	
 	private final GrammarProvider grammarProvider;
 
@@ -353,7 +383,7 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 
 	////TODO: STRING | ID |  [cls::Entity|QualifiedName]
 	//Statemachine:
-	//	"statemachine" name=ID "{" state+=State* "}";
+	//	"statemachine" name=Identifier "{" state+=State* "}";
 	public StatemachineElements getStatemachineAccess() {
 		return (pStatemachine != null) ? pStatemachine : (pStatemachine = new StatemachineElements());
 	}
@@ -363,7 +393,7 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//State:
-	//	type=StateType name=ID "{" transitions+=Transition* "}";
+	//	type=StateType name=Identifier "{" transitions+=Transition* "}";
 	public StateElements getStateAccess() {
 		return (pState != null) ? pState : (pState = new StateElements());
 	}
@@ -372,8 +402,9 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getStateAccess().getRule();
 	}
 
+	////SimpleState CompositeState ?!
 	//Transition:
-	//	=> guard=Guard? => event=Event? "=>" state=[State];
+	//	=> guard=Guard? => event=Event? "=>" => state=[State|Identifier];
 	public TransitionElements getTransitionAccess() {
 		return (pTransition != null) ? pTransition : (pTransition = new TransitionElements());
 	}
@@ -393,7 +424,8 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Guard:
-	//	"on" cond=CONDITION;
+	//	"on" cond= //CONDITION
+	//	ID;
 	public GuardElements getGuardAccess() {
 		return (pGuard != null) ? pGuard : (pGuard = new GuardElements());
 	}
@@ -412,6 +444,16 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getImportAccess().getRule();
 	}
 
+	//Identifier returns ecore::EString:
+	//	ID | STRING;
+	public IdentifierElements getIdentifierAccess() {
+		return (pIdentifier != null) ? pIdentifier : (pIdentifier = new IdentifierElements());
+	}
+	
+	public ParserRule getIdentifierRule() {
+		return getIdentifierAccess().getRule();
+	}
+
 	//enum StateType:
 	//	NONE="state" | INITIAL="initial" | FINAL="final";
 	public StateTypeElements getStateTypeAccess() {
@@ -422,6 +464,8 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getStateTypeAccess().getRule();
 	}
 
+	////terminal CONDITION    : '(' (!('('|')'|'\n'|'\r'|'\t'))* ')' //FIXME: "(a && (abc))" -> cant use ')'
+	////;
 	//QualifiedName:
 	//	ID ("." ID)*;
 	public QualifiedNameElements getQualifiedNameAccess() {
@@ -431,13 +475,6 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	public ParserRule getQualifiedNameRule() {
 		return getQualifiedNameAccess().getRule();
 	}
-
-	//terminal CONDITION:
-	//	"(" (.->")") //wrong (a && (b+4))
-	//;
-	public TerminalRule getCONDITIONRule() {
-		return (tCONDITION != null) ? tCONDITION : (tCONDITION = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "CONDITION"));
-	} 
 
 	//terminal ID:
 	//	"^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;

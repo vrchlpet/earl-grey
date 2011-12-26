@@ -42,6 +42,7 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getClassAccess().getAlternatives_0_0(), "rule__Class__Alternatives_0_0");
 					put(grammarAccess.getFeatureAccess().getAlternatives(), "rule__Feature__Alternatives");
 					put(grammarAccess.getValueAccess().getAlternatives(), "rule__Value__Alternatives");
+					put(grammarAccess.getCardinalityValueAccess().getAlternatives(), "rule__CardinalityValue__Alternatives");
 					put(grammarAccess.getRelationTypeAccess().getAlternatives(), "rule__RelationType__Alternatives");
 					put(grammarAccess.getVisibilityAccess().getAlternatives(), "rule__Visibility__Alternatives");
 					put(grammarAccess.getEntityTypeAccess().getAlternatives(), "rule__EntityType__Alternatives");
@@ -66,6 +67,8 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAttributeAccess().getGroup_4_2(), "rule__Attribute__Group_4_2__0");
 					put(grammarAccess.getRelationAccess().getGroup(), "rule__Relation__Group__0");
 					put(grammarAccess.getRelationAccess().getGroup_5(), "rule__Relation__Group_5__0");
+					put(grammarAccess.getCardinalityAccess().getGroup(), "rule__Cardinality__Group__0");
+					put(grammarAccess.getCardinalityAccess().getGroup_1(), "rule__Cardinality__Group_1__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 					put(grammarAccess.getClassmodelAccess().getImportsAssignment_0(), "rule__Classmodel__ImportsAssignment_0");

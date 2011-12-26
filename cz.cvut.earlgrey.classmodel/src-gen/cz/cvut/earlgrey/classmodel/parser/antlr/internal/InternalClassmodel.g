@@ -1341,19 +1341,19 @@ ruleRelation returns [EObject current=null]
 )
 )(
 (
-		lv_cardinalityFrom_1_0=RULE_STRING
-		{
-			newLeafNode(lv_cardinalityFrom_1_0, grammarAccess.getRelationAccess().getCardinalityFromSTRINGTerminalRuleCall_1_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getRelationAccess().getCardinalityFromCardinalityParserRuleCall_1_0()); 
+	    }
+		lv_cardinalityFrom_1_0=ruleCardinality		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getRelationRule());
+	            $current = createModelElementForParent(grammarAccess.getRelationRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"cardinalityFrom",
         		lv_cardinalityFrom_1_0, 
-        		"STRING");
+        		"Cardinality");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -1377,19 +1377,19 @@ ruleRelation returns [EObject current=null]
 )
 )(
 (
-		lv_cardinalityTo_3_0=RULE_STRING
-		{
-			newLeafNode(lv_cardinalityTo_3_0, grammarAccess.getRelationAccess().getCardinalityToSTRINGTerminalRuleCall_3_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getRelationAccess().getCardinalityToCardinalityParserRuleCall_3_0()); 
+	    }
+		lv_cardinalityTo_3_0=ruleCardinality		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getRelationRule());
+	            $current = createModelElementForParent(grammarAccess.getRelationRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"cardinalityTo",
         		lv_cardinalityTo_3_0, 
-        		"STRING");
+        		"Cardinality");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -1432,6 +1432,90 @@ ruleRelation returns [EObject current=null]
 )
 ))?)
 ;
+
+
+
+
+
+// Entry rule entryRuleCardinality
+entryRuleCardinality returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getCardinalityRule()); } 
+	 iv_ruleCardinality=ruleCardinality 
+	 { $current=$iv_ruleCardinality.current.getText(); }  
+	 EOF 
+;
+
+// Rule Cardinality
+ruleCardinality returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getCardinalityAccess().getCardinalityValueParserRuleCall_0()); 
+    }
+    this_CardinalityValue_0=ruleCardinalityValue    {
+		$current.merge(this_CardinalityValue_0);
+    }
+
+    { 
+        afterParserOrEnumRuleCall();
+    }
+(
+	kw='..' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getCardinalityAccess().getFullStopFullStopKeyword_1_0()); 
+    }
+
+    { 
+        newCompositeNode(grammarAccess.getCardinalityAccess().getCardinalityValueParserRuleCall_1_1()); 
+    }
+    this_CardinalityValue_2=ruleCardinalityValue    {
+		$current.merge(this_CardinalityValue_2);
+    }
+
+    { 
+        afterParserOrEnumRuleCall();
+    }
+)?)
+    ;
+
+
+
+
+
+// Entry rule entryRuleCardinalityValue
+entryRuleCardinalityValue returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getCardinalityValueRule()); } 
+	 iv_ruleCardinalityValue=ruleCardinalityValue 
+	 { $current=$iv_ruleCardinalityValue.current.getText(); }  
+	 EOF 
+;
+
+// Rule CardinalityValue
+ruleCardinalityValue returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(    this_INT_0=RULE_INT    {
+		$current.merge(this_INT_0);
+    }
+
+    { 
+    newLeafNode(this_INT_0, grammarAccess.getCardinalityValueAccess().getINTTerminalRuleCall_0()); 
+    }
+
+    |
+	kw='*' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getCardinalityValueAccess().getAsteriskKeyword_1()); 
+    }
+)
+    ;
 
 
 

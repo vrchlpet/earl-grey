@@ -253,6 +253,34 @@ finally {
 
 
 
+// Entry rule entryRuleIdentifier
+entryRuleIdentifier 
+:
+{ before(grammarAccess.getIdentifierRule()); }
+	 ruleIdentifier
+{ after(grammarAccess.getIdentifierRule()); } 
+	 EOF 
+;
+
+// Rule Identifier
+ruleIdentifier
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getIdentifierAccess().getAlternatives()); }
+(rule__Identifier__Alternatives)
+{ after(grammarAccess.getIdentifierAccess().getAlternatives()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
 
 
 
@@ -274,6 +302,28 @@ finally {
 }
 
 
+
+rule__Identifier__Alternatives
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getIdentifierAccess().getIDTerminalRuleCall_0()); }
+(	RULE_ID)
+{ after(grammarAccess.getIdentifierAccess().getIDTerminalRuleCall_0()); }
+)
+
+    |(
+{ before(grammarAccess.getIdentifierAccess().getSTRINGTerminalRuleCall_1()); }
+	RULE_STRING
+{ after(grammarAccess.getIdentifierAccess().getSTRINGTerminalRuleCall_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
 
 rule__StateType__Alternatives
     @init {
@@ -977,8 +1027,8 @@ rule__Statemachine__NameAssignment_1
     }
 :
 (
-{ before(grammarAccess.getStatemachineAccess().getNameIDTerminalRuleCall_1_0()); }
-	RULE_ID{ after(grammarAccess.getStatemachineAccess().getNameIDTerminalRuleCall_1_0()); }
+{ before(grammarAccess.getStatemachineAccess().getNameIdentifierParserRuleCall_1_0()); }
+	ruleIdentifier{ after(grammarAccess.getStatemachineAccess().getNameIdentifierParserRuleCall_1_0()); }
 )
 
 ;
@@ -1022,8 +1072,8 @@ rule__State__NameAssignment_1
     }
 :
 (
-{ before(grammarAccess.getStateAccess().getNameIDTerminalRuleCall_1_0()); }
-	RULE_ID{ after(grammarAccess.getStateAccess().getNameIDTerminalRuleCall_1_0()); }
+{ before(grammarAccess.getStateAccess().getNameIdentifierParserRuleCall_1_0()); }
+	ruleIdentifier{ after(grammarAccess.getStateAccess().getNameIdentifierParserRuleCall_1_0()); }
 )
 
 ;
@@ -1084,8 +1134,8 @@ rule__Transition__StateAssignment_3
 (
 { before(grammarAccess.getTransitionAccess().getStateStateCrossReference_3_0()); }
 (
-{ before(grammarAccess.getTransitionAccess().getStateStateIDTerminalRuleCall_3_0_1()); }
-	RULE_ID{ after(grammarAccess.getTransitionAccess().getStateStateIDTerminalRuleCall_3_0_1()); }
+{ before(grammarAccess.getTransitionAccess().getStateStateIdentifierParserRuleCall_3_0_1()); }
+	ruleIdentifier{ after(grammarAccess.getTransitionAccess().getStateStateIdentifierParserRuleCall_3_0_1()); }
 )
 { after(grammarAccess.getTransitionAccess().getStateStateCrossReference_3_0()); }
 )
@@ -1116,8 +1166,8 @@ rule__Guard__CondAssignment_1
     }
 :
 (
-{ before(grammarAccess.getGuardAccess().getCondCONDITIONTerminalRuleCall_1_0()); }
-	RULE_CONDITION{ after(grammarAccess.getGuardAccess().getCondCONDITIONTerminalRuleCall_1_0()); }
+{ before(grammarAccess.getGuardAccess().getCondIDTerminalRuleCall_1_0()); }
+	RULE_ID{ after(grammarAccess.getGuardAccess().getCondIDTerminalRuleCall_1_0()); }
 )
 
 ;
@@ -1140,8 +1190,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-
-RULE_CONDITION : '(' . ( options {greedy=false;} : . )*')';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

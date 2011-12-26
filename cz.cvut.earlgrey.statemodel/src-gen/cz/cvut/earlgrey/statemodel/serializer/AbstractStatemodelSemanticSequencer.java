@@ -115,7 +115,7 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     cond=CONDITION
+	 *     cond=ID
 	 */
 	protected void sequence_Guard(EObject context, Guard semanticObject) {
 		if(errorAcceptor != null) {
@@ -124,7 +124,7 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getGuardAccess().getCondCONDITIONTerminalRuleCall_1_0(), semanticObject.getCond());
+		feeder.accept(grammarAccess.getGuardAccess().getCondIDTerminalRuleCall_1_0(), semanticObject.getCond());
 		feeder.finish();
 	}
 	
@@ -147,7 +147,7 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (type=StateType name=ID transitions+=Transition*)
+	 *     (type=StateType name=Identifier transitions+=Transition*)
 	 */
 	protected void sequence_State(EObject context, State semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -156,7 +156,7 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (name=ID state+=State*)
+	 *     (name=Identifier state+=State*)
 	 */
 	protected void sequence_Statemachine(EObject context, Statemachine semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -174,7 +174,7 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (guard=Guard? event=Event? state=[State|ID])
+	 *     (guard=Guard? event=Event? state=[State|Identifier])
 	 */
 	protected void sequence_Transition(EObject context, Transition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -37,6 +37,7 @@ public class StatemodelParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getIdentifierAccess().getAlternatives(), "rule__Identifier__Alternatives");
 					put(grammarAccess.getStateTypeAccess().getAlternatives(), "rule__StateType__Alternatives");
 					put(grammarAccess.getStatemodelAccess().getGroup(), "rule__Statemodel__Group__0");
 					put(grammarAccess.getStatemachineAccess().getGroup(), "rule__Statemachine__Group__0");

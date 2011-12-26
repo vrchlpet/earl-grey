@@ -141,19 +141,19 @@ ruleStatemachine returns [EObject current=null]
     }
 (
 (
-		lv_name_1_0=RULE_ID
-		{
-			newLeafNode(lv_name_1_0, grammarAccess.getStatemachineAccess().getNameIDTerminalRuleCall_1_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getStatemachineAccess().getNameIdentifierParserRuleCall_1_0()); 
+	    }
+		lv_name_1_0=ruleIdentifier		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getStatemachineRule());
+	            $current = createModelElementForParent(grammarAccess.getStatemachineRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"Identifier");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -224,19 +224,19 @@ ruleState returns [EObject current=null]
 )
 )(
 (
-		lv_name_1_0=RULE_ID
-		{
-			newLeafNode(lv_name_1_0, grammarAccess.getStateAccess().getNameIDTerminalRuleCall_1_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getStateAccess().getNameIdentifierParserRuleCall_1_0()); 
+	    }
+		lv_name_1_0=ruleIdentifier		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getStateRule());
+	            $current = createModelElementForParent(grammarAccess.getStateRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"Identifier");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -339,17 +339,23 @@ ruleEvent
     {
     	newLeafNode(otherlv_2, grammarAccess.getTransitionAccess().getEqualsSignGreaterThanSignKeyword_2());
     }
+((
 (
+		ruleIdentifier
+)
+)=>
 (
 		{
 			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getTransitionRule());
 	        }
         }
-	otherlv_3=RULE_ID
-	{
-		newLeafNode(otherlv_3, grammarAccess.getTransitionAccess().getStateStateCrossReference_3_0()); 
-	}
+		{ 
+	        newCompositeNode(grammarAccess.getTransitionAccess().getStateStateCrossReference_3_0()); 
+	    }
+		ruleIdentifier		{ 
+	        afterParserOrEnumRuleCall();
+	    }
 
 )
 ))
@@ -418,9 +424,9 @@ ruleGuard returns [EObject current=null]
     }
 (
 (
-		lv_cond_1_0=RULE_CONDITION
+		lv_cond_1_0=RULE_ID
 		{
-			newLeafNode(lv_cond_1_0, grammarAccess.getGuardAccess().getCondCONDITIONTerminalRuleCall_1_0()); 
+			newLeafNode(lv_cond_1_0, grammarAccess.getGuardAccess().getCondIDTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -430,7 +436,7 @@ ruleGuard returns [EObject current=null]
        			$current, 
        			"cond",
         		lv_cond_1_0, 
-        		"CONDITION");
+        		"ID");
 	    }
 
 )
@@ -484,6 +490,42 @@ ruleImport returns [EObject current=null]
 
 
 
+// Entry rule entryRuleIdentifier
+entryRuleIdentifier returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getIdentifierRule()); } 
+	 iv_ruleIdentifier=ruleIdentifier 
+	 { $current=$iv_ruleIdentifier.current.getText(); }  
+	 EOF 
+;
+
+// Rule Identifier
+ruleIdentifier returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((( RULE_ID)=>    this_ID_0=RULE_ID    {
+		$current.merge(this_ID_0);
+    }
+
+    { 
+    newLeafNode(this_ID_0, grammarAccess.getIdentifierAccess().getIDTerminalRuleCall_0()); 
+    }
+)
+    |    this_STRING_1=RULE_STRING    {
+		$current.merge(this_STRING_1);
+    }
+
+    { 
+    newLeafNode(this_STRING_1, grammarAccess.getIdentifierAccess().getSTRINGTerminalRuleCall_1()); 
+    }
+)
+    ;
+
+
+
+
+
 
 
 // Rule StateType
@@ -510,8 +552,6 @@ ruleStateType returns [Enumerator current=null]
 ));
 
 
-
-RULE_CONDITION : '(' . ( options {greedy=false;} : . )*')';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

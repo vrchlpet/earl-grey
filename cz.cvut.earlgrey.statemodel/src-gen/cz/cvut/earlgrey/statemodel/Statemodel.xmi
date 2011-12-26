@@ -4,11 +4,14 @@
     <metamodelDeclarations xsi:type="xtext:ReferencedMetamodel" alias="cls">
       <ePackage href="http://www.cvut.cz/earlgrey/classmodel/Classmodel#/"/>
     </metamodelDeclarations>
+    <metamodelDeclarations xsi:type="xtext:ReferencedMetamodel" alias="ecore">
+      <ePackage href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+    </metamodelDeclarations>
     <metamodelDeclarations xsi:type="xtext:GeneratedMetamodel" name="statemodel">
       <ePackage href="http://www.cvut.cz/earlgrey/statemodel/Statemodel#/"/>
     </metamodelDeclarations>
     <rules xsi:type="xtext:ParserRule" name="Statemodel">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/statemodel/Statemodel#//Statemodel"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -21,13 +24,13 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Statemachine">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/statemodel/Statemodel#//Statemachine"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="statemachine"/>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Assignment" cardinality="*" feature="state" operator="+=">
@@ -37,15 +40,15 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="State">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/statemodel/Statemodel#//State"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Assignment" feature="type" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Assignment" cardinality="*" feature="transitions" operator="+=">
@@ -55,7 +58,7 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Transition">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/statemodel/Statemodel#//Transition"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -66,18 +69,18 @@
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="=>"/>
-        <elements xsi:type="xtext:Assignment" feature="state" operator="=">
+        <elements xsi:type="xtext:Assignment" predicated="true" feature="state" operator="=">
           <terminal xsi:type="xtext:CrossReference">
-            <type metamodel="/0/@metamodelDeclarations.1">
+            <type metamodel="/0/@metamodelDeclarations.2">
               <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/statemodel/Statemodel#//State"/>
             </type>
-            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
           </terminal>
         </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Event">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/statemodel/Statemodel#//Event"/>
       </type>
       <alternatives xsi:type="xtext:Assignment" feature="name" operator="=">
@@ -85,18 +88,18 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Guard">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/statemodel/Statemodel#//Guard"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="on"/>
         <elements xsi:type="xtext:Assignment" feature="cond" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
         </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Import">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/statemodel/Statemodel#//Import"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -106,8 +109,17 @@
         </elements>
       </alternatives>
     </rules>
-    <rules xsi:type="xtext:EnumRule" name="StateType">
+    <rules xsi:type="xtext:ParserRule" name="Identifier">
       <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:RuleCall" predicated="true" rule="/1/@rules.0"/>
+        <elements xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:EnumRule" name="StateType">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EEnum" href="http://www.cvut.cz/earlgrey/statemodel/Statemodel#//StateType"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
@@ -126,7 +138,7 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="QualifiedName">
-      <type metamodel="/1/@metamodelDeclarations.0">
+      <type metamodel="/0/@metamodelDeclarations.1">
         <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -134,20 +146,6 @@
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Keyword" value="."/>
           <elements xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-        </elements>
-      </alternatives>
-    </rules>
-    <rules xsi:type="xtext:TerminalRule" name="CONDITION">
-      <type metamodel="/1/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </type>
-      <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="("/>
-        <elements xsi:type="xtext:Group">
-          <elements xsi:type="xtext:Wildcard"/>
-          <elements xsi:type="xtext:UntilToken">
-            <terminal xsi:type="xtext:Keyword" value=")"/>
-          </elements>
         </elements>
       </alternatives>
     </rules>

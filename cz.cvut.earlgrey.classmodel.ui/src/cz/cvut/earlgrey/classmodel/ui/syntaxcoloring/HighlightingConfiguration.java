@@ -1,5 +1,6 @@
 package cz.cvut.earlgrey.classmodel.ui.syntaxcoloring;
 
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.DefaultHighlightingConfiguration;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfigurationAcceptor;
@@ -30,7 +31,8 @@ public class HighlightingConfiguration extends DefaultHighlightingConfiguration 
 
 	public TextStyle crossReferenceTextStyle() {
 		TextStyle textStyle = new TextStyle();
-		textStyle.setColor(new RGB(128, 128, 128));
+		textStyle.setStyle(SWT.BOLD);
+		textStyle.setColor(new RGB(127, 0, 85));
 		return textStyle;
 	}
 }

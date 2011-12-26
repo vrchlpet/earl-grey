@@ -672,11 +672,11 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cOriginEntityCrossReference_0_0 = (CrossReference)cOriginAssignment_0.eContents().get(0);
 		private final RuleCall cOriginEntityQualifiedNameParserRuleCall_0_0_1 = (RuleCall)cOriginEntityCrossReference_0_0.eContents().get(1);
 		private final Assignment cCardinalityFromAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cCardinalityFromSTRINGTerminalRuleCall_1_0 = (RuleCall)cCardinalityFromAssignment_1.eContents().get(0);
+		private final RuleCall cCardinalityFromCardinalityParserRuleCall_1_0 = (RuleCall)cCardinalityFromAssignment_1.eContents().get(0);
 		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cTypeRelationTypeEnumRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
 		private final Assignment cCardinalityToAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cCardinalityToSTRINGTerminalRuleCall_3_0 = (RuleCall)cCardinalityToAssignment_3.eContents().get(0);
+		private final RuleCall cCardinalityToCardinalityParserRuleCall_3_0 = (RuleCall)cCardinalityToAssignment_3.eContents().get(0);
 		private final Assignment cDestinationAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final CrossReference cDestinationEntityCrossReference_4_0 = (CrossReference)cDestinationAssignment_4.eContents().get(0);
 		private final RuleCall cDestinationEntityQualifiedNameParserRuleCall_4_0_1 = (RuleCall)cDestinationEntityCrossReference_4_0.eContents().get(1);
@@ -686,11 +686,11 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLabelSTRINGTerminalRuleCall_5_1_0 = (RuleCall)cLabelAssignment_5_1.eContents().get(0);
 		
 		//Relation:
-		//	origin=[Entity|QualifiedName] cardinalityFrom=STRING? type=RelationType cardinalityTo=STRING?
+		//	origin=[Entity|QualifiedName] cardinalityFrom=Cardinality? type=RelationType cardinalityTo=Cardinality?
 		//	destination=[Entity|QualifiedName] (":" label=STRING)?;
 		public ParserRule getRule() { return rule; }
 
-		//origin=[Entity|QualifiedName] cardinalityFrom=STRING? type=RelationType cardinalityTo=STRING?
+		//origin=[Entity|QualifiedName] cardinalityFrom=Cardinality? type=RelationType cardinalityTo=Cardinality?
 		//destination=[Entity|QualifiedName] (":" label=STRING)?
 		public Group getGroup() { return cGroup; }
 
@@ -703,11 +703,11 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		//QualifiedName
 		public RuleCall getOriginEntityQualifiedNameParserRuleCall_0_0_1() { return cOriginEntityQualifiedNameParserRuleCall_0_0_1; }
 
-		//cardinalityFrom=STRING?
+		//cardinalityFrom=Cardinality?
 		public Assignment getCardinalityFromAssignment_1() { return cCardinalityFromAssignment_1; }
 
-		//STRING
-		public RuleCall getCardinalityFromSTRINGTerminalRuleCall_1_0() { return cCardinalityFromSTRINGTerminalRuleCall_1_0; }
+		//Cardinality
+		public RuleCall getCardinalityFromCardinalityParserRuleCall_1_0() { return cCardinalityFromCardinalityParserRuleCall_1_0; }
 
 		//type=RelationType
 		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
@@ -715,11 +715,11 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		//RelationType
 		public RuleCall getTypeRelationTypeEnumRuleCall_2_0() { return cTypeRelationTypeEnumRuleCall_2_0; }
 
-		//cardinalityTo=STRING?
+		//cardinalityTo=Cardinality?
 		public Assignment getCardinalityToAssignment_3() { return cCardinalityToAssignment_3; }
 
-		//STRING
-		public RuleCall getCardinalityToSTRINGTerminalRuleCall_3_0() { return cCardinalityToSTRINGTerminalRuleCall_3_0; }
+		//Cardinality
+		public RuleCall getCardinalityToCardinalityParserRuleCall_3_0() { return cCardinalityToCardinalityParserRuleCall_3_0; }
 
 		//destination=[Entity|QualifiedName]
 		public Assignment getDestinationAssignment_4() { return cDestinationAssignment_4; }
@@ -743,6 +743,54 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getLabelSTRINGTerminalRuleCall_5_1_0() { return cLabelSTRINGTerminalRuleCall_5_1_0; }
 	}
 
+	public class CardinalityElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Cardinality");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cCardinalityValueParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cFullStopFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cCardinalityValueParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//Cardinality returns ecore::EString:
+		//	CardinalityValue (".." CardinalityValue)?;
+		public ParserRule getRule() { return rule; }
+
+		//CardinalityValue (".." CardinalityValue)?
+		public Group getGroup() { return cGroup; }
+
+		//CardinalityValue
+		public RuleCall getCardinalityValueParserRuleCall_0() { return cCardinalityValueParserRuleCall_0; }
+
+		//(".." CardinalityValue)?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//".."
+		public Keyword getFullStopFullStopKeyword_1_0() { return cFullStopFullStopKeyword_1_0; }
+
+		//CardinalityValue
+		public RuleCall getCardinalityValueParserRuleCall_1_1() { return cCardinalityValueParserRuleCall_1_1; }
+	}
+
+	public class CardinalityValueElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CardinalityValue");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cINTTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final Keyword cAsteriskKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		
+		//CardinalityValue returns ecore::EString:
+		//	INT | "*";
+		public ParserRule getRule() { return rule; }
+
+		//INT | "*"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//INT
+		public RuleCall getINTTerminalRuleCall_0() { return cINTTerminalRuleCall_0; }
+
+		//"*"
+		public Keyword getAsteriskKeyword_1() { return cAsteriskKeyword_1; }
+	}
+
 	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QualifiedName");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -751,20 +799,23 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
 		
+		////TODO: Add constrain rule
 		////terminal CONSTRAIN:
 		////    '{'->'}';
 		//QualifiedName:
 		//	ID ("." ID)*;
 		public ParserRule getRule() { return rule; }
 
-		//ID ("." ID)* //terminal CONSTRAIN:
+		//ID ("." ID)* //TODO: Add constrain rule
+		////terminal CONSTRAIN:
 		////    '{'->'}';
 		public Group getGroup() { return cGroup; }
 
 		//ID
 		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
 
-		//("." ID //terminal CONSTRAIN:
+		//("." ID //TODO: Add constrain rule
+		////terminal CONSTRAIN:
 		////    '{'->'}';
 		//)*
 		public Group getGroup_1() { return cGroup_1; }
@@ -995,6 +1046,8 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	private ValueElements pValue;
 	private IntValueElements pIntValue;
 	private RelationElements pRelation;
+	private CardinalityElements pCardinality;
+	private CardinalityValueElements pCardinalityValue;
 	private RelationTypeElements unknownRuleRelationType;
 	private VisibilityElements unknownRuleVisibility;
 	private EntityTypeElements unknownRuleEntityType;
@@ -1189,7 +1242,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Relation:
-	//	origin=[Entity|QualifiedName] cardinalityFrom=STRING? type=RelationType cardinalityTo=STRING?
+	//	origin=[Entity|QualifiedName] cardinalityFrom=Cardinality? type=RelationType cardinalityTo=Cardinality?
 	//	destination=[Entity|QualifiedName] (":" label=STRING)?;
 	public RelationElements getRelationAccess() {
 		return (pRelation != null) ? pRelation : (pRelation = new RelationElements());
@@ -1197,6 +1250,26 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getRelationRule() {
 		return getRelationAccess().getRule();
+	}
+
+	//Cardinality returns ecore::EString:
+	//	CardinalityValue (".." CardinalityValue)?;
+	public CardinalityElements getCardinalityAccess() {
+		return (pCardinality != null) ? pCardinality : (pCardinality = new CardinalityElements());
+	}
+	
+	public ParserRule getCardinalityRule() {
+		return getCardinalityAccess().getRule();
+	}
+
+	//CardinalityValue returns ecore::EString:
+	//	INT | "*";
+	public CardinalityValueElements getCardinalityValueAccess() {
+		return (pCardinalityValue != null) ? pCardinalityValue : (pCardinalityValue = new CardinalityValueElements());
+	}
+	
+	public ParserRule getCardinalityValueRule() {
+		return getCardinalityValueAccess().getRule();
 	}
 
 	/// **
@@ -1246,6 +1319,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getEntityTypeAccess().getRule();
 	}
 
+	////TODO: Add constrain rule
 	////terminal CONSTRAIN:
 	////    '{'->'}';
 	//QualifiedName:

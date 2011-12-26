@@ -73,8 +73,16 @@ IntValue returns ecore::EString:
 ;
 
 Relation:
-    origin=[Entity|QualifiedName] (cardinalityFrom=STRING)? type=RelationType (cardinalityTo=STRING)?
+    origin=[Entity|QualifiedName] (cardinalityFrom=Cardinality)? type=RelationType (cardinalityTo=Cardinality)?
     destination=[Entity|QualifiedName] (':' label=STRING)?;
+    
+Cardinality returns ecore::EString:
+    CardinalityValue ('..' CardinalityValue)?
+;
+
+CardinalityValue returns ecore::EString:
+    INT | '*'
+;
 
 /**
  * Relation type:
@@ -100,6 +108,8 @@ enum EntityType:
 
 QualifiedName:
     ID ('.' ID)*;
+
+//TODO: Add constrain rule
 
 //terminal CONSTRAIN:
 //    '{'->'}';
