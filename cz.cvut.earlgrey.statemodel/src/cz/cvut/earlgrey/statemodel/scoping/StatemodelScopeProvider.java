@@ -15,6 +15,7 @@ import cz.cvut.earlgrey.statemodel.statemodel.Transition;
 /**
  * This class contains custom scoping description.
  * 
+ * TODO: add scope for a method
  */
 public class StatemodelScopeProvider extends AbstractDeclarativeScopeProvider {
 
@@ -33,6 +34,48 @@ public class StatemodelScopeProvider extends AbstractDeclarativeScopeProvider {
 		return super.getScope(call, ref);
 	}
 
+	// public IScope scope_Transition_method(Transition call, EReference ref) {
+	// System.out.println("jhgjghjg");
+	// return IScope.NULLSCOPE;
+	// }
+	//
+	// @Override
+	// public IScope getScope(EObject context, EReference reference) {
+	// System.out.println("con >>> " + context + " \nref >>>" + reference);
+	// String methodName = "scope_"
+	// + reference.getEContainingClass().getName() + "_"
+	// + reference.getName();
+	// System.out.println(methodName);
+	//
+	// IScope scope = polymorphicFindScopeForReferenceName(context, reference);
+	// if (scope == null) {
+	// System.out.println("polymorphicFindScopeForReferenceName null");
+	// scope = polymorphicFindScopeForClassName(context, reference);
+	// if (scope == null) {
+	// System.out.println("polymorphicFindScopeForClassName null");
+	// scope = delegateGetScope(context, reference);
+	// }
+	// }
+	// System.out.println(scope);
+	// return scope;
+	// }
+
+	// IScope scope_State_transition(State call, EReference ref) {
+	// System.out.println("being called");
+	// Statemachine machine = (Statemachine) call.eContainer();
+	//
+	// if (machine != null) {
+	// IScope b = Scopes.scopeFor(machine.getReference().getMethod());
+	// Iterable<IEObjectDescription> c = b.getAllElements();
+	// for (IEObjectDescription ieObjectDescription : c) {
+	// System.out.println(ieObjectDescription);
+	// }
+	// return Scopes.scopeFor(machine.getReference().getMethod());
+	// }
+	// return IScope.NULLSCOPE;
+	// // return super.getScope(call, ref);
+	// }
+
 	/**
 	 * Get a parent EObject of a EObject.
 	 * 
@@ -42,4 +85,12 @@ public class StatemodelScopeProvider extends AbstractDeclarativeScopeProvider {
 	private EObject getParent(EObject obj) {
 		return (obj != null ? obj.eContainer() : null);
 	}
+
+	// private EObject findParent(EObject obj, Class<?> c) {
+	// System.out.println(obj + " " + c);
+	// if (c.isInstance(obj)) {
+	// System.out.println(obj + " is true");
+	// }
+	// return null;
+	// }
 }

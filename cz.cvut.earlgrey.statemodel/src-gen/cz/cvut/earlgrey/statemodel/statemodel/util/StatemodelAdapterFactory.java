@@ -104,6 +104,11 @@ public class StatemodelAdapterFactory extends AdapterFactoryImpl
         return createEventAdapter();
       }
       @Override
+      public Adapter caseGuard(Guard object)
+      {
+        return createGuardAdapter();
+      }
+      @Override
       public Adapter caseImport(Import object)
       {
         return createImportAdapter();
@@ -201,6 +206,21 @@ public class StatemodelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createEventAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.statemodel.statemodel.Guard <em>Guard</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.statemodel.statemodel.Guard
+   * @generated
+   */
+  public Adapter createGuardAdapter()
   {
     return null;
   }

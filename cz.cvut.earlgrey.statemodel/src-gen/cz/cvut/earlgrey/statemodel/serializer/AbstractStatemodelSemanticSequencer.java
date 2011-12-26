@@ -4,6 +4,7 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 import cz.cvut.earlgrey.statemodel.services.StatemodelGrammarAccess;
 import cz.cvut.earlgrey.statemodel.statemodel.Event;
+import cz.cvut.earlgrey.statemodel.statemodel.Guard;
 import cz.cvut.earlgrey.statemodel.statemodel.Import;
 import cz.cvut.earlgrey.statemodel.statemodel.State;
 import cz.cvut.earlgrey.statemodel.statemodel.Statemachine;
@@ -53,6 +54,12 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 			case StatemodelPackage.EVENT:
 				if(context == grammarAccess.getEventRule()) {
 					sequence_Event(context, (Event) semanticObject); 
+					return; 
+				}
+				else break;
+			case StatemodelPackage.GUARD:
+				if(context == grammarAccess.getGuardRule()) {
+					sequence_Guard(context, (Guard) semanticObject); 
 					return; 
 				}
 				else break;
@@ -108,6 +115,22 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
+	 *     cond=CONDITION
+	 */
+	protected void sequence_Guard(EObject context, Guard semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, StatemodelPackage.Literals.GUARD__COND) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, StatemodelPackage.Literals.GUARD__COND));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getGuardAccess().getCondCONDITIONTerminalRuleCall_1_0(), semanticObject.getCond());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     importURI=STRING
 	 */
 	protected void sequence_Import(EObject context, Import semanticObject) {
@@ -133,7 +156,7 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (reference=[Entity|QualifiedName] state+=State*)
+	 *     (name=ID state+=State*)
 	 */
 	protected void sequence_Statemachine(EObject context, Statemachine semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -151,19 +174,9 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (event=Event state=[State|ID])
+	 *     (guard=Guard? event=Event? state=[State|ID])
 	 */
 	protected void sequence_Transition(EObject context, Transition semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, StatemodelPackage.Literals.TRANSITION__EVENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, StatemodelPackage.Literals.TRANSITION__EVENT));
-			if(transientValues.isValueTransient(semanticObject, StatemodelPackage.Literals.TRANSITION__STATE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, StatemodelPackage.Literals.TRANSITION__STATE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getTransitionAccess().getEventEventParserRuleCall_0_0(), semanticObject.getEvent());
-		feeder.accept(grammarAccess.getTransitionAccess().getStateStateIDTerminalRuleCall_2_0_1(), semanticObject.getState());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 }

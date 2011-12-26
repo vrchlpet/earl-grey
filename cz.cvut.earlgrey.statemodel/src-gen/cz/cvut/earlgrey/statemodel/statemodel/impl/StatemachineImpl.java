@@ -6,8 +6,6 @@
  */
 package cz.cvut.earlgrey.statemodel.statemodel.impl;
 
-import cz.cvut.earlgrey.classmodel.classmodel.Entity;
-
 import cz.cvut.earlgrey.statemodel.statemodel.State;
 import cz.cvut.earlgrey.statemodel.statemodel.Statemachine;
 import cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage;
@@ -35,7 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemachineImpl#getReference <em>Reference</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemachineImpl#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemachineImpl#getState <em>State</em>}</li>
  * </ul>
  * </p>
@@ -45,14 +43,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class StatemachineImpl extends MinimalEObjectImpl.Container implements Statemachine
 {
   /**
-   * The cached value of the '{@link #getReference() <em>Reference</em>}' reference.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getReference()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected Entity reference;
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getState() <em>State</em>}' containment reference list.
@@ -90,19 +98,9 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
    * <!-- end-user-doc -->
    * @generated
    */
-  public Entity getReference()
+  public String getName()
   {
-    if (reference != null && reference.eIsProxy())
-    {
-      InternalEObject oldReference = (InternalEObject)reference;
-      reference = (Entity)eResolveProxy(oldReference);
-      if (reference != oldReference)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatemodelPackage.STATEMACHINE__REFERENCE, oldReference, reference));
-      }
-    }
-    return reference;
+    return name;
   }
 
   /**
@@ -110,22 +108,12 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
    * <!-- end-user-doc -->
    * @generated
    */
-  public Entity basicGetReference()
+  public void setName(String newName)
   {
-    return reference;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setReference(Entity newReference)
-  {
-    Entity oldReference = reference;
-    reference = newReference;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, StatemodelPackage.STATEMACHINE__REFERENCE, oldReference, reference));
+      eNotify(new ENotificationImpl(this, Notification.SET, StatemodelPackage.STATEMACHINE__NAME, oldName, name));
   }
 
   /**
@@ -168,9 +156,8 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
   {
     switch (featureID)
     {
-      case StatemodelPackage.STATEMACHINE__REFERENCE:
-        if (resolve) return getReference();
-        return basicGetReference();
+      case StatemodelPackage.STATEMACHINE__NAME:
+        return getName();
       case StatemodelPackage.STATEMACHINE__STATE:
         return getState();
     }
@@ -188,8 +175,8 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
   {
     switch (featureID)
     {
-      case StatemodelPackage.STATEMACHINE__REFERENCE:
-        setReference((Entity)newValue);
+      case StatemodelPackage.STATEMACHINE__NAME:
+        setName((String)newValue);
         return;
       case StatemodelPackage.STATEMACHINE__STATE:
         getState().clear();
@@ -209,8 +196,8 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
   {
     switch (featureID)
     {
-      case StatemodelPackage.STATEMACHINE__REFERENCE:
-        setReference((Entity)null);
+      case StatemodelPackage.STATEMACHINE__NAME:
+        setName(NAME_EDEFAULT);
         return;
       case StatemodelPackage.STATEMACHINE__STATE:
         getState().clear();
@@ -229,12 +216,29 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
   {
     switch (featureID)
     {
-      case StatemodelPackage.STATEMACHINE__REFERENCE:
-        return reference != null;
+      case StatemodelPackage.STATEMACHINE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case StatemodelPackage.STATEMACHINE__STATE:
         return state != null && !state.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
   }
 
 } //StatemachineImpl

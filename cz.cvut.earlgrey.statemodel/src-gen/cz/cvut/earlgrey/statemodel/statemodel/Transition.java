@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getGuard <em>Guard</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getEvent <em>Event</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getState <em>State</em>}</li>
  * </ul>
@@ -27,6 +28,32 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Transition extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Guard</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Guard</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Guard</em>' containment reference.
+   * @see #setGuard(Guard)
+   * @see cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage#getTransition_Guard()
+   * @model containment="true"
+   * @generated
+   */
+  Guard getGuard();
+
+  /**
+   * Sets the value of the '{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getGuard <em>Guard</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Guard</em>' containment reference.
+   * @see #getGuard()
+   * @generated
+   */
+  void setGuard(Guard value);
+
   /**
    * Returns the value of the '<em><b>Event</b></em>' containment reference.
    * <!-- begin-user-doc -->

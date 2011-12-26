@@ -74,6 +74,7 @@ public class StatemodelFactoryImpl extends EFactoryImpl implements StatemodelFac
       case StatemodelPackage.STATE: return createState();
       case StatemodelPackage.TRANSITION: return createTransition();
       case StatemodelPackage.EVENT: return createEvent();
+      case StatemodelPackage.GUARD: return createGuard();
       case StatemodelPackage.IMPORT: return createImport();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -167,6 +168,17 @@ public class StatemodelFactoryImpl extends EFactoryImpl implements StatemodelFac
   {
     EventImpl event = new EventImpl();
     return event;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Guard createGuard()
+  {
+    GuardImpl guard = new GuardImpl();
+    return guard;
   }
 
   /**

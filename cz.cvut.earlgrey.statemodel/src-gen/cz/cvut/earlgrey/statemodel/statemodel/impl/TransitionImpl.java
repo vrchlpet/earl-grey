@@ -7,6 +7,7 @@
 package cz.cvut.earlgrey.statemodel.statemodel.impl;
 
 import cz.cvut.earlgrey.statemodel.statemodel.Event;
+import cz.cvut.earlgrey.statemodel.statemodel.Guard;
 import cz.cvut.earlgrey.statemodel.statemodel.State;
 import cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage;
 import cz.cvut.earlgrey.statemodel.statemodel.Transition;
@@ -27,6 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.TransitionImpl#getGuard <em>Guard</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.TransitionImpl#getEvent <em>Event</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.TransitionImpl#getState <em>State</em>}</li>
  * </ul>
@@ -36,6 +38,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class TransitionImpl extends MinimalEObjectImpl.Container implements Transition
 {
+  /**
+   * The cached value of the '{@link #getGuard() <em>Guard</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getGuard()
+   * @generated
+   * @ordered
+   */
+  protected Guard guard;
+
   /**
    * The cached value of the '{@link #getEvent() <em>Event</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -75,6 +87,54 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   protected EClass eStaticClass()
   {
     return StatemodelPackage.Literals.TRANSITION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Guard getGuard()
+  {
+    return guard;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetGuard(Guard newGuard, NotificationChain msgs)
+  {
+    Guard oldGuard = guard;
+    guard = newGuard;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StatemodelPackage.TRANSITION__GUARD, oldGuard, newGuard);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setGuard(Guard newGuard)
+  {
+    if (newGuard != guard)
+    {
+      NotificationChain msgs = null;
+      if (guard != null)
+        msgs = ((InternalEObject)guard).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - StatemodelPackage.TRANSITION__GUARD, null, msgs);
+      if (newGuard != null)
+        msgs = ((InternalEObject)newGuard).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - StatemodelPackage.TRANSITION__GUARD, null, msgs);
+      msgs = basicSetGuard(newGuard, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, StatemodelPackage.TRANSITION__GUARD, newGuard, newGuard));
   }
 
   /**
@@ -178,6 +238,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (featureID)
     {
+      case StatemodelPackage.TRANSITION__GUARD:
+        return basicSetGuard(null, msgs);
       case StatemodelPackage.TRANSITION__EVENT:
         return basicSetEvent(null, msgs);
     }
@@ -194,6 +256,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (featureID)
     {
+      case StatemodelPackage.TRANSITION__GUARD:
+        return getGuard();
       case StatemodelPackage.TRANSITION__EVENT:
         return getEvent();
       case StatemodelPackage.TRANSITION__STATE:
@@ -213,6 +277,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (featureID)
     {
+      case StatemodelPackage.TRANSITION__GUARD:
+        setGuard((Guard)newValue);
+        return;
       case StatemodelPackage.TRANSITION__EVENT:
         setEvent((Event)newValue);
         return;
@@ -233,6 +300,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (featureID)
     {
+      case StatemodelPackage.TRANSITION__GUARD:
+        setGuard((Guard)null);
+        return;
       case StatemodelPackage.TRANSITION__EVENT:
         setEvent((Event)null);
         return;
@@ -253,6 +323,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (featureID)
     {
+      case StatemodelPackage.TRANSITION__GUARD:
+        return guard != null;
       case StatemodelPackage.TRANSITION__EVENT:
         return event != null;
       case StatemodelPackage.TRANSITION__STATE:

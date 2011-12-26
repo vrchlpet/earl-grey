@@ -12,7 +12,7 @@ Statemodel:
 
 //TODO: STRING | ID |  [cls::Entity|QualifiedName]
 Statemachine:
-    'statemachine' reference=[cls::Entity|QualifiedName]
+    'statemachine' name=ID 
     '{'
     (state+=State)*
     '}';
@@ -24,10 +24,16 @@ State:
     '}';
 
 Transition:
-    event=Event '=>' state=[State];
+    (=> guard=Guard)? (=> event=Event)? '=>' state=[State]
+    ;
 
 Event:
-    name=ID;
+   name=ID
+;
+
+Guard:
+    'on' cond=CONDITION
+;
 
 Import:
     'import' importURI=STRING;
@@ -38,4 +44,5 @@ enum StateType:
 QualifiedName:
     ID ('.' ID)*;
 
-//terminal COND    : '(' -> ')'; //wrong (a && (b+4))
+terminal CONDITION    : '(' (. -> ')') //FIXME: "(a && (abc))" -> cant use ')'
+;

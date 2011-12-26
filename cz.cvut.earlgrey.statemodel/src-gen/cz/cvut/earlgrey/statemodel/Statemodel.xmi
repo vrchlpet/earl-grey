@@ -13,7 +13,7 @@
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Assignment" cardinality="*" feature="imports" operator="+=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="*" feature="statemachine" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
@@ -26,13 +26,8 @@
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="statemachine"/>
-        <elements xsi:type="xtext:Assignment" feature="reference" operator="=">
-          <terminal xsi:type="xtext:CrossReference">
-            <type metamodel="/0/@metamodelDeclarations.0">
-              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/classmodel/Classmodel#//Entity"/>
-            </type>
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
-          </terminal>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Assignment" cardinality="*" feature="state" operator="+=">
@@ -47,7 +42,7 @@
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Assignment" feature="type" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
@@ -64,7 +59,10 @@
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/statemodel/Statemodel#//Transition"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Assignment" feature="event" operator="=">
+        <elements xsi:type="xtext:Assignment" cardinality="?" predicated="true" feature="guard" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" predicated="true" feature="event" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="=>"/>
@@ -84,6 +82,17 @@
       </type>
       <alternatives xsi:type="xtext:Assignment" feature="name" operator="=">
         <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Guard">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/statemodel/Statemodel#//Guard"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="on"/>
+        <elements xsi:type="xtext:Assignment" feature="cond" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Import">
@@ -125,6 +134,20 @@
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Keyword" value="."/>
           <elements xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="CONDITION">
+      <type metamodel="/1/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="("/>
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Wildcard"/>
+          <elements xsi:type="xtext:UntilToken">
+            <terminal xsi:type="xtext:Keyword" value=")"/>
+          </elements>
         </elements>
       </alternatives>
     </rules>

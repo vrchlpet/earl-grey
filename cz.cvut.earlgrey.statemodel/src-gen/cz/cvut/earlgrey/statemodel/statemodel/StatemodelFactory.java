@@ -72,6 +72,15 @@ public interface StatemodelFactory extends EFactory
   Event createEvent();
 
   /**
+   * Returns a new object of class '<em>Guard</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Guard</em>'.
+   * @generated
+   */
+  Guard createGuard();
+
+  /**
    * Returns a new object of class '<em>Import</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
