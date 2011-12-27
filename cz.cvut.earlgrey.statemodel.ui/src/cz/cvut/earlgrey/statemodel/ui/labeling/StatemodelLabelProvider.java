@@ -3,6 +3,8 @@
  */
 package cz.cvut.earlgrey.statemodel.ui.labeling;
 
+import java.util.HashMap;
+import java.util.Map;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
 import com.google.inject.Inject;
@@ -21,6 +23,17 @@ import cz.cvut.earlgrey.statemodel.statemodel.Transition;
  */
 public class StatemodelLabelProvider extends DefaultEObjectLabelProvider {
 
+	private static final String STATEMODEL = "Model.gif";
+	private static final String TRANSITION = "Transition.gif";
+	private static final String IMPORT = "Import.gif";
+	private static final String STATEMACHINE = "Statemachine.gif";
+	private static Map<StateType, String> states = new HashMap<StateType, String>();
+	static {
+		states.put(StateType.FINAL, "FinalState.gif");
+		states.put(StateType.INITIAL, "InitialNode.gif");
+		states.put(StateType.NONE, "State.gif");
+	}
+
 	@Inject
 	public StatemodelLabelProvider(AdapterFactoryLabelProvider delegate) {
 		super(delegate);
@@ -33,7 +46,7 @@ public class StatemodelLabelProvider extends DefaultEObjectLabelProvider {
 	 * @return image's filename as String
 	 */
 	String image(Import ele) {
-		return "Import.gif";
+		return IMPORT;
 	}
 
 	/**
@@ -43,7 +56,7 @@ public class StatemodelLabelProvider extends DefaultEObjectLabelProvider {
 	 * @return image's filename as String
 	 */
 	String image(Statemachine ele) {
-		return "Statemachine.gif";
+		return STATEMACHINE;
 	}
 
 	/**
@@ -54,19 +67,9 @@ public class StatemodelLabelProvider extends DefaultEObjectLabelProvider {
 	 */
 	String image(State ele) {
 		if (ele != null) {
-			StateType type = ele.getType();
-			if (type != null) {
-				switch (type.getValue()) {
-				case StateType.FINAL_VALUE:
-					return "FinalState.gif";
-				case StateType.INITIAL_VALUE:
-					return "InitialNode.gif";
-				default:
-					return "State.gif";
-				}
-			}
+			return states.get(ele.getType());
 		}
-		return null;
+		return states.get(StateType.NONE);
 	}
 
 	/**
@@ -76,7 +79,7 @@ public class StatemodelLabelProvider extends DefaultEObjectLabelProvider {
 	 * @return image's filename as String
 	 */
 	String image(Transition ele) {
-		return "Transition.gif";
+		return TRANSITION;
 	}
 
 	/**
@@ -86,6 +89,6 @@ public class StatemodelLabelProvider extends DefaultEObjectLabelProvider {
 	 * @return image's filename as String
 	 */
 	String image(Statemodel ele) {
-		return "Model.gif";
+		return STATEMODEL;
 	}
 }
