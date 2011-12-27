@@ -277,5 +277,24 @@
             extensions="stm">
     </provider>
   </extension>
+  <extension
+        point="org.eclipse.ui.newWizards">
+     <wizard
+           category="cz.cvut.earlgrey.classmodel.ui"
+           class="cz.cvut.earlgrey.statemodel.ui.wizards.NewWizard"
+           id="cz.cvut.earlgrey.statemodel.ui.wizard1"
+           name="State  Model">
+     </wizard>
+  </extension>
+  <extension
+        point="org.eclipse.core.contenttype.contentTypes">
+     <content-type
+           base-type="org.eclipse.core.runtime.text"
+           file-extensions="stm,STM"
+           id="cz.cvut.earlgrey.statemodel.ui.content.stm"
+           name="Statemodel"
+           priority="normal">
+     </content-type>
+  </extension>
 
 </plugin>

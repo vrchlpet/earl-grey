@@ -13,30 +13,51 @@ Statemodel:
 
 //TODO: STRING | ID |  [cls::Entity|QualifiedName]
 Statemachine:
-    'statemachine' name=Identifier 
+    'statemachine' /* (=> ref=[cls::Entity|QualifiedName])?*/ name=QualifiedName
     '{'
     (state+=State)*
     '}';
 
 State:
-    type=StateType name=Identifier
+    type=StateType name=ID
     '{'
-    (transitions+=Transition)*
+    (element+=Element)*
     '}';
     
     //SimpleState CompositeState ?!
 
+Element:
+    Transition | State
+;
+
 Transition:
-    (=> guard=Guard)? (=> event=Event)? '=>' (=> state=[State|Identifier])
+    (=> 'on'? event=Event)? (=> 'if' guard=Guard)? (=> 'do' action=Action)? ('=>'|'goto') (=> state=[State|ID])
     ;
 
 Event:
-   name=ID
+   /*(=> ref=[cls::Operation|ID])?*/ value=CompositeString
 ;
 
 Guard:
-    'on' cond=ID//CONDITION
+    value=CompositeString
 ;
+
+Action:
+   value=CompositeString
+;
+
+CompositeString returns ecore::EString:
+    ID | CONDITION
+;
+
+//Ref:
+//  {Ref}(=> nameRef=[cls::Entity|QualifiedName] | name=Strg )
+//  ;
+
+//Strg returns ecore::EString:
+//    ID | STRING
+//;
+
 
 Import:
     'import' importURI=STRING;
@@ -50,6 +71,6 @@ enum StateType:
 
 QualifiedName:
     ID ('.' ID)*;
-
-//terminal CONDITION    : '(' (!('('|')'|'\n'|'\r'|'\t'))* ')' //FIXME: "(a && (abc))" -> cant use ')'
-//;
+    
+terminal CONDITION    : '(' (!('('|')'|'\n'|'\r'|'\t'))* ')' //FIXME: "(a && (abc))" -> cant use ')'
+;

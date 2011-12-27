@@ -1,4 +1,4 @@
-package cz.cvut.earlgrey.classmodel.ui.wizards;
+package cz.cvut.earlgrey.statemodel.ui.wizards;
 
 import cz.cvut.earlgrey.jface.wizard.DefaultNewWizard;
 
@@ -14,16 +14,16 @@ public class NewWizard extends DefaultNewWizard {
 
 	@Override
 	public String extension() {
-		return "cm";
+		return "stm";
 	}
 
 	@Override
 	public String title() {
-		return "Class Model";
+		return "State Model";
 	}
 
 	@Override
 	public String pluginId() {
-		return "cz.cvut.earlgrey.classmodel.ui";
+		return "cz.cvut.earlgrey.statemodel.ui";
 	}
 }

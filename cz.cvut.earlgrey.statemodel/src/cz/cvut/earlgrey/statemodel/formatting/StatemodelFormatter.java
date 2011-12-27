@@ -4,18 +4,11 @@
 package cz.cvut.earlgrey.statemodel.formatting;
 
 import org.eclipse.xtext.formatting.impl.FormattingConfig;
-
 import cz.cvut.earlgrey.statemodel.services.StatemodelGrammarAccess;
 import cz.cvut.earlgrey.xtext.formatting.AbstractDefaultFormatter;
 
 /**
  * This class contains custom formatting description.
- * 
- * see : http://www.eclipse.org/Xtext/documentation/latest/xtext.html#formatting
- * on how and when to use it
- * 
- * Also see {@link org.eclipse.xtext.xtext.XtextFormattingTokenSerializer} as an
- * example
  */
 public class StatemodelFormatter extends AbstractDefaultFormatter {
 
@@ -24,6 +17,9 @@ public class StatemodelFormatter extends AbstractDefaultFormatter {
 		StatemodelGrammarAccess f = (StatemodelGrammarAccess) getGrammarAccess();
 
 		c.setLinewrap(1, 2, 3).after(f.getImportRule());
+		c.setLinewrap(1, 2, 3).after(f.getStatemachineRule());
+		c.setLinewrap(1, 2, 3).after(f.getStateRule());
+		c.setLinewrap(1, 1, 2).after(f.getTransitionRule());
 
 		initDefault(c, f); // loads default format config
 

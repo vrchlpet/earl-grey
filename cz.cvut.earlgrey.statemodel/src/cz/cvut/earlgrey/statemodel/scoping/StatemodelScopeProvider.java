@@ -8,7 +8,6 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
-
 import cz.cvut.earlgrey.statemodel.statemodel.Statemachine;
 import cz.cvut.earlgrey.statemodel.statemodel.Transition;
 
@@ -38,16 +37,17 @@ public class StatemodelScopeProvider extends AbstractDeclarativeScopeProvider {
 	// System.out.println("jhgjghjg");
 	// return IScope.NULLSCOPE;
 	// }
-	//
+
 	// @Override
 	// public IScope getScope(EObject context, EReference reference) {
-	// System.out.println("con >>> " + context + " \nref >>>" + reference);
+	// // System.out.println("con >>> " + context + " \nref >>>" + reference);
 	// String methodName = "scope_"
 	// + reference.getEContainingClass().getName() + "_"
 	// + reference.getName();
 	// System.out.println(methodName);
 	//
-	// IScope scope = polymorphicFindScopeForReferenceName(context, reference);
+	// IScope scope = polymorphicFindScopeForReferenceName(context,
+	// reference);
 	// if (scope == null) {
 	// System.out.println("polymorphicFindScopeForReferenceName null");
 	// scope = polymorphicFindScopeForClassName(context, reference);
@@ -56,8 +56,13 @@ public class StatemodelScopeProvider extends AbstractDeclarativeScopeProvider {
 	// scope = delegateGetScope(context, reference);
 	// }
 	// }
-	// System.out.println(scope);
-	// return scope;
+	// return super.getScope(context, reference);
+	// }
+
+	// public IScope scope_Event_ref(Event call, EReference ref) {
+	// EObject parent = call.eContainer().eContainer().eContainer();
+	// System.out.println(parent.eClass().toString());
+	// return IScope.NULLSCOPE;
 	// }
 
 	// IScope scope_State_transition(State call, EReference ref) {

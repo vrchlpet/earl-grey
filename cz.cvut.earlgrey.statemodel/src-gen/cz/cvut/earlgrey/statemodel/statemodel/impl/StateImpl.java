@@ -6,10 +6,10 @@
  */
 package cz.cvut.earlgrey.statemodel.statemodel.impl;
 
+import cz.cvut.earlgrey.statemodel.statemodel.Element;
 import cz.cvut.earlgrey.statemodel.statemodel.State;
 import cz.cvut.earlgrey.statemodel.statemodel.StateType;
 import cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage;
-import cz.cvut.earlgrey.statemodel.statemodel.Transition;
 
 import java.util.Collection;
 
@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -36,13 +35,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StateImpl#getType <em>Type</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StateImpl#getName <em>Name</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StateImpl#getTransitions <em>Transitions</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StateImpl#getElement <em>Element</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class StateImpl extends MinimalEObjectImpl.Container implements State
+public class StateImpl extends ElementImpl implements State
 {
   /**
    * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -85,14 +84,14 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getTransitions() <em>Transitions</em>}' containment reference list.
+   * The cached value of the '{@link #getElement() <em>Element</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTransitions()
+   * @see #getElement()
    * @generated
    * @ordered
    */
-  protected EList<Transition> transitions;
+  protected EList<Element> element;
 
   /**
    * <!-- begin-user-doc -->
@@ -166,13 +165,13 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Transition> getTransitions()
+  public EList<Element> getElement()
   {
-    if (transitions == null)
+    if (element == null)
     {
-      transitions = new EObjectContainmentEList<Transition>(Transition.class, this, StatemodelPackage.STATE__TRANSITIONS);
+      element = new EObjectContainmentEList<Element>(Element.class, this, StatemodelPackage.STATE__ELEMENT);
     }
-    return transitions;
+    return element;
   }
 
   /**
@@ -185,8 +184,8 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
   {
     switch (featureID)
     {
-      case StatemodelPackage.STATE__TRANSITIONS:
-        return ((InternalEList<?>)getTransitions()).basicRemove(otherEnd, msgs);
+      case StatemodelPackage.STATE__ELEMENT:
+        return ((InternalEList<?>)getElement()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -205,8 +204,8 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
         return getType();
       case StatemodelPackage.STATE__NAME:
         return getName();
-      case StatemodelPackage.STATE__TRANSITIONS:
-        return getTransitions();
+      case StatemodelPackage.STATE__ELEMENT:
+        return getElement();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -228,9 +227,9 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
       case StatemodelPackage.STATE__NAME:
         setName((String)newValue);
         return;
-      case StatemodelPackage.STATE__TRANSITIONS:
-        getTransitions().clear();
-        getTransitions().addAll((Collection<? extends Transition>)newValue);
+      case StatemodelPackage.STATE__ELEMENT:
+        getElement().clear();
+        getElement().addAll((Collection<? extends Element>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -252,8 +251,8 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
       case StatemodelPackage.STATE__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case StatemodelPackage.STATE__TRANSITIONS:
-        getTransitions().clear();
+      case StatemodelPackage.STATE__ELEMENT:
+        getElement().clear();
         return;
     }
     super.eUnset(featureID);
@@ -273,8 +272,8 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
         return type != TYPE_EDEFAULT;
       case StatemodelPackage.STATE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case StatemodelPackage.STATE__TRANSITIONS:
-        return transitions != null && !transitions.isEmpty();
+      case StatemodelPackage.STATE__ELEMENT:
+        return element != null && !element.isEmpty();
     }
     return super.eIsSet(featureID);
   }

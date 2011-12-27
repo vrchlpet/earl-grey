@@ -3,6 +3,7 @@ package cz.cvut.earlgrey.statemodel.serializer;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import cz.cvut.earlgrey.statemodel.services.StatemodelGrammarAccess;
+import cz.cvut.earlgrey.statemodel.statemodel.Action;
 import cz.cvut.earlgrey.statemodel.statemodel.Event;
 import cz.cvut.earlgrey.statemodel.statemodel.Guard;
 import cz.cvut.earlgrey.statemodel.statemodel.Import;
@@ -51,6 +52,12 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == StatemodelPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case StatemodelPackage.ACTION:
+				if(context == grammarAccess.getActionRule()) {
+					sequence_Action(context, (Action) semanticObject); 
+					return; 
+				}
+				else break;
 			case StatemodelPackage.EVENT:
 				if(context == grammarAccess.getEventRule()) {
 					sequence_Event(context, (Event) semanticObject); 
@@ -70,7 +77,8 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 				}
 				else break;
 			case StatemodelPackage.STATE:
-				if(context == grammarAccess.getStateRule()) {
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getStateRule()) {
 					sequence_State(context, (State) semanticObject); 
 					return; 
 				}
@@ -88,7 +96,8 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 				}
 				else break;
 			case StatemodelPackage.TRANSITION:
-				if(context == grammarAccess.getTransitionRule()) {
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getTransitionRule()) {
 					sequence_Transition(context, (Transition) semanticObject); 
 					return; 
 				}
@@ -99,32 +108,48 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     value=CompositeString
 	 */
-	protected void sequence_Event(EObject context, Event semanticObject) {
+	protected void sequence_Action(EObject context, Action semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, StatemodelPackage.Literals.EVENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, StatemodelPackage.Literals.EVENT__NAME));
+			if(transientValues.isValueTransient(semanticObject, StatemodelPackage.Literals.ACTION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, StatemodelPackage.Literals.ACTION__VALUE));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getEventAccess().getNameIDTerminalRuleCall_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getActionAccess().getValueCompositeStringParserRuleCall_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     cond=ID
+	 *     value=CompositeString
 	 */
-	protected void sequence_Guard(EObject context, Guard semanticObject) {
+	protected void sequence_Event(EObject context, Event semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, StatemodelPackage.Literals.GUARD__COND) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, StatemodelPackage.Literals.GUARD__COND));
+			if(transientValues.isValueTransient(semanticObject, StatemodelPackage.Literals.EVENT__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, StatemodelPackage.Literals.EVENT__VALUE));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getGuardAccess().getCondIDTerminalRuleCall_1_0(), semanticObject.getCond());
+		feeder.accept(grammarAccess.getEventAccess().getValueCompositeStringParserRuleCall_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     value=CompositeString
+	 */
+	protected void sequence_Guard(EObject context, Guard semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, StatemodelPackage.Literals.GUARD__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, StatemodelPackage.Literals.GUARD__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getGuardAccess().getValueCompositeStringParserRuleCall_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -147,7 +172,7 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (type=StateType name=Identifier transitions+=Transition*)
+	 *     (type=StateType name=ID element+=Element*)
 	 */
 	protected void sequence_State(EObject context, State semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -156,7 +181,7 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (name=Identifier state+=State*)
+	 *     (name=QualifiedName state+=State*)
 	 */
 	protected void sequence_Statemachine(EObject context, Statemachine semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -174,7 +199,7 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (guard=Guard? event=Event? state=[State|Identifier])
+	 *     (event=Event? guard=Guard? action=Action? state=[State|ID])
 	 */
 	protected void sequence_Transition(EObject context, Transition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

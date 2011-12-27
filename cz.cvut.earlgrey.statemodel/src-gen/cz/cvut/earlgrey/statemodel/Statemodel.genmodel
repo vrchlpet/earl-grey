@@ -25,18 +25,23 @@
     <genClasses ecoreClass="Statemodel.ecore#//State">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//State/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//State/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Statemodel.ecore#//State/transitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Statemodel.ecore#//State/element"/>
     </genClasses>
+    <genClasses ecoreClass="Statemodel.ecore#//Element"/>
     <genClasses ecoreClass="Statemodel.ecore#//Transition">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Statemodel.ecore#//Transition/guard"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Statemodel.ecore#//Transition/event"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Statemodel.ecore#//Transition/guard"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Statemodel.ecore#//Transition/action"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Statemodel.ecore#//Transition/state"/>
     </genClasses>
     <genClasses ecoreClass="Statemodel.ecore#//Event">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//Event/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//Event/value"/>
     </genClasses>
     <genClasses ecoreClass="Statemodel.ecore#//Guard">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//Guard/cond"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//Guard/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Statemodel.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//Action/value"/>
     </genClasses>
     <genClasses ecoreClass="Statemodel.ecore#//Import">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//Import/importURI"/>

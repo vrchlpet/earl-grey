@@ -1,4 +1,4 @@
-package cz.cvut.earlgrey.classmodel.ui.wizards;
+package cz.cvut.earlgrey.jface.wizard;
 
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
@@ -25,27 +25,33 @@ import org.eclipse.ui.dialogs.ContainerSelectionDialog;
 /**
  * The "New" wizard page allows setting the container for the new file as well
  * as the file name. The page will only accept file name without the extension
- * OR with the extension that matches the expected one (cm).
+ * OR with the extension that matches the expected one.
  */
 
-public class NewWizardPage extends WizardPage {
+public class DefaultNewWizardPage extends WizardPage {
 	private Text containerText;
-
+	private String ext;
 	private Text fileText;
 
 	private ISelection selection;
 
 	/**
-	 * Constructor for SampleNewWizardPage.
+	 * Constructor for NewWizardPage.
 	 * 
-	 * @param pageName
+	 * @param selection
+	 * @param title Wizard's title as String.
+	 * @param ex File extension name as String.
 	 */
-	public NewWizardPage(ISelection selection) {
+	public DefaultNewWizardPage(ISelection selection, String title, String ex) {
 		super("wizardPage");
-		setTitle("Class Model");
-		setDescription("This wizard creates a new file with *.cm extension that represents Class Model.");
+		setTitle(title);
+		setDescription("This wizard creates a new file with *." + ex
+				+ " extension that represents "
+				+ title + ".");
 		this.selection = selection;
+		this.ext = ex;
 	}
+
 
 	/**
 	 * @see IDialogPage#createControl(Composite)
@@ -174,12 +180,12 @@ public class NewWizardPage extends WizardPage {
 			return;
 		} else if (dotLoc > 0) {
 			String ext = fileName.substring(dotLoc + 1);
-			if (ext.equalsIgnoreCase("cm") == false) {
-				updateStatus("File extension must be \"cm\"");
+			if (ext.equalsIgnoreCase(ext) == false) {
+				updateStatus("File extension must be \"" + ext + "\"");
 				return;
 			}
 		} else if (dotLoc == -1) {
-			updateStatus("File extension must be \"cm\"");
+			updateStatus("File extension must be \"" + ext + "\"");
 			return;
 		}
 

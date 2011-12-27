@@ -6,7 +6,7 @@
  */
 package cz.cvut.earlgrey.statemodel.statemodel.impl;
 
-import cz.cvut.earlgrey.statemodel.statemodel.Guard;
+import cz.cvut.earlgrey.statemodel.statemodel.Action;
 import cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -18,18 +18,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Guard</b></em>'.
+ * An implementation of the model object '<em><b>Action</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.GuardImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.ActionImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class GuardImpl extends MinimalEObjectImpl.Container implements Guard
+public class ActionImpl extends MinimalEObjectImpl.Container implements Action
 {
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -56,7 +56,7 @@ public class GuardImpl extends MinimalEObjectImpl.Container implements Guard
    * <!-- end-user-doc -->
    * @generated
    */
-  protected GuardImpl()
+  protected ActionImpl()
   {
     super();
   }
@@ -69,7 +69,7 @@ public class GuardImpl extends MinimalEObjectImpl.Container implements Guard
   @Override
   protected EClass eStaticClass()
   {
-    return StatemodelPackage.Literals.GUARD;
+    return StatemodelPackage.Literals.ACTION;
   }
 
   /**
@@ -92,7 +92,7 @@ public class GuardImpl extends MinimalEObjectImpl.Container implements Guard
     String oldValue = value;
     value = newValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, StatemodelPackage.GUARD__VALUE, oldValue, value));
+      eNotify(new ENotificationImpl(this, Notification.SET, StatemodelPackage.ACTION__VALUE, oldValue, value));
   }
 
   /**
@@ -105,7 +105,7 @@ public class GuardImpl extends MinimalEObjectImpl.Container implements Guard
   {
     switch (featureID)
     {
-      case StatemodelPackage.GUARD__VALUE:
+      case StatemodelPackage.ACTION__VALUE:
         return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -121,7 +121,7 @@ public class GuardImpl extends MinimalEObjectImpl.Container implements Guard
   {
     switch (featureID)
     {
-      case StatemodelPackage.GUARD__VALUE:
+      case StatemodelPackage.ACTION__VALUE:
         setValue((String)newValue);
         return;
     }
@@ -138,7 +138,7 @@ public class GuardImpl extends MinimalEObjectImpl.Container implements Guard
   {
     switch (featureID)
     {
-      case StatemodelPackage.GUARD__VALUE:
+      case StatemodelPackage.ACTION__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
     }
@@ -155,7 +155,7 @@ public class GuardImpl extends MinimalEObjectImpl.Container implements Guard
   {
     switch (featureID)
     {
-      case StatemodelPackage.GUARD__VALUE:
+      case StatemodelPackage.ACTION__VALUE:
         return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
     }
     return super.eIsSet(featureID);
@@ -178,4 +178,4 @@ public class GuardImpl extends MinimalEObjectImpl.Container implements Guard
     return result.toString();
   }
 
-} //GuardImpl
+} //ActionImpl

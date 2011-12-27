@@ -94,6 +94,11 @@ public class StatemodelAdapterFactory extends AdapterFactoryImpl
         return createStateAdapter();
       }
       @Override
+      public Adapter caseElement(Element object)
+      {
+        return createElementAdapter();
+      }
+      @Override
       public Adapter caseTransition(Transition object)
       {
         return createTransitionAdapter();
@@ -107,6 +112,11 @@ public class StatemodelAdapterFactory extends AdapterFactoryImpl
       public Adapter caseGuard(Guard object)
       {
         return createGuardAdapter();
+      }
+      @Override
+      public Adapter caseAction(Action object)
+      {
+        return createActionAdapter();
       }
       @Override
       public Adapter caseImport(Import object)
@@ -181,6 +191,21 @@ public class StatemodelAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.statemodel.statemodel.Element <em>Element</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.statemodel.statemodel.Element
+   * @generated
+   */
+  public Adapter createElementAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.statemodel.statemodel.Transition <em>Transition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -221,6 +246,21 @@ public class StatemodelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createGuardAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.statemodel.statemodel.Action <em>Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.statemodel.statemodel.Action
+   * @generated
+   */
+  public Adapter createActionAdapter()
   {
     return null;
   }

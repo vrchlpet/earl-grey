@@ -6,7 +6,6 @@
  */
 package cz.cvut.earlgrey.statemodel.statemodel;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,8 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getGuard <em>Guard</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getEvent <em>Event</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getGuard <em>Guard</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getAction <em>Action</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getState <em>State</em>}</li>
  * </ul>
  * </p>
@@ -26,8 +26,34 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Transition extends EObject
+public interface Transition extends Element
 {
+  /**
+   * Returns the value of the '<em><b>Event</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Event</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Event</em>' containment reference.
+   * @see #setEvent(Event)
+   * @see cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage#getTransition_Event()
+   * @model containment="true"
+   * @generated
+   */
+  Event getEvent();
+
+  /**
+   * Sets the value of the '{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getEvent <em>Event</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Event</em>' containment reference.
+   * @see #getEvent()
+   * @generated
+   */
+  void setEvent(Event value);
+
   /**
    * Returns the value of the '<em><b>Guard</b></em>' containment reference.
    * <!-- begin-user-doc -->
@@ -55,30 +81,30 @@ public interface Transition extends EObject
   void setGuard(Guard value);
 
   /**
-   * Returns the value of the '<em><b>Event</b></em>' containment reference.
+   * Returns the value of the '<em><b>Action</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Event</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Action</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Event</em>' containment reference.
-   * @see #setEvent(Event)
-   * @see cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage#getTransition_Event()
+   * @return the value of the '<em>Action</em>' containment reference.
+   * @see #setAction(Action)
+   * @see cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage#getTransition_Action()
    * @model containment="true"
    * @generated
    */
-  Event getEvent();
+  Action getAction();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getEvent <em>Event</em>}' containment reference.
+   * Sets the value of the '{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getAction <em>Action</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Event</em>' containment reference.
-   * @see #getEvent()
+   * @param value the new value of the '<em>Action</em>' containment reference.
+   * @see #getAction()
    * @generated
    */
-  void setEvent(Event value);
+  void setAction(Action value);
 
   /**
    * Returns the value of the '<em><b>State</b></em>' reference.

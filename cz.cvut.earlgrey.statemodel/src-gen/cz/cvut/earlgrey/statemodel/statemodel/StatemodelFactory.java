@@ -54,6 +54,15 @@ public interface StatemodelFactory extends EFactory
   State createState();
 
   /**
+   * Returns a new object of class '<em>Element</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Element</em>'.
+   * @generated
+   */
+  Element createElement();
+
+  /**
    * Returns a new object of class '<em>Transition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -79,6 +88,15 @@ public interface StatemodelFactory extends EFactory
    * @generated
    */
   Guard createGuard();
+
+  /**
+   * Returns a new object of class '<em>Action</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Action</em>'.
+   * @generated
+   */
+  Action createAction();
 
   /**
    * Returns a new object of class '<em>Import</em>'.
