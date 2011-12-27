@@ -4,7 +4,8 @@
 package cz.cvut.earlgrey.statemodel.ui.outline;
 
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
-import cz.cvut.earlgrey.statemodel.statemodel.Statemachine;
+import cz.cvut.earlgrey.statemodel.statemodel.Transition;
+import cz.cvut.earlgrey.xtext.formatting.Styles;
 
 /**
  * customization of the default outline structure
@@ -12,10 +13,23 @@ import cz.cvut.earlgrey.statemodel.statemodel.Statemachine;
  */
 public class StatemodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 
-	public Object _text(Statemachine ele) {
-		// System.out.println("ref " + ele.getRef().getNameRef());
-		// System.out.println("name " + ele.getName());
-		System.out.println(ele);
-		return "statemachine";
+	/**
+	 * Returns styled Transition's label used in Outline View.
+	 * 
+	 * @param ele Instance of an Transition
+	 * @return label as StyledString
+	 */
+	public Object _text(Transition ele) {
+		return Styles.getStyledString(ele.getState().getName());
+	}
+
+	/**
+	 * Defines Transition node in Outline View tree as a leaf.
+	 * 
+	 * @param node Instance
+	 * @return true - to make Transition node as a leaf
+	 */
+	protected boolean _isLeaf(Transition node) {
+		return true;
 	}
 }

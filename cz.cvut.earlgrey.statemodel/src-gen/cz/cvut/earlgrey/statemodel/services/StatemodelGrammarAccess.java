@@ -139,7 +139,6 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTransitionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cStateParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		////SimpleState CompositeState ?!
 		//Element:
 		//	Transition | State;
 		public ParserRule getRule() { return rule; }
@@ -312,12 +311,6 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cImportURIAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cImportURISTRINGTerminalRuleCall_1_0 = (RuleCall)cImportURIAssignment_1.eContents().get(0);
 		
-		////Ref:
-		////  {Ref}(=> nameRef=[cls::Entity|QualifiedName] | name=Strg )
-		////  ;
-		////Strg returns ecore::EString:
-		////    ID | STRING
-		////;
 		//Import:
 		//	"import" importURI=STRING;
 		public ParserRule getRule() { return rule; }
@@ -490,7 +483,6 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getStateAccess().getRule();
 	}
 
-	////SimpleState CompositeState ?!
 	//Element:
 	//	Transition | State;
 	public ElementElements getElementAccess() {
@@ -550,12 +542,6 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getCompositeStringAccess().getRule();
 	}
 
-	////Ref:
-	////  {Ref}(=> nameRef=[cls::Entity|QualifiedName] | name=Strg )
-	////  ;
-	////Strg returns ecore::EString:
-	////    ID | STRING
-	////;
 	//Import:
 	//	"import" importURI=STRING;
 	public ImportElements getImportAccess() {

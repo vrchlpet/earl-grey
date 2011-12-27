@@ -1,11 +1,7 @@
 package cz.cvut.earlgrey.classmodel.ui.outline;
 
 import org.eclipse.jface.viewers.StyledString;
-import org.eclipse.swt.graphics.RGB;
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
-import org.eclipse.xtext.ui.editor.utils.TextStyle;
-import org.eclipse.xtext.ui.label.StylerFactory;
-import com.google.inject.Inject;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.Entity;
@@ -13,6 +9,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relation;
+import cz.cvut.earlgrey.xtext.formatting.Styles;
 
 /**
  * customization of the default outline structure
@@ -22,16 +19,11 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 
 	private static final String ARRAY_LEFT = "[";
 	private static final String ARRAY_RIGHT = "]";
-	private static final int COLOR_B = 71;
-	private static final int COLOR_G = 125;
-	private static final int COLOR_R = 149;
 	private static final String COLON = " : ";
 	private static final String COMMA = ", ";
 	private static final String ROUND_BRACKET_RIGHT = ")";
 	private static final String ROUND_BRACKET_LEFT = "(";
 	private static final String EMPTY_STRING = " ";
-	@Inject
-	private StylerFactory stylerFactory;
 
 	/**
 	 * Defines Operation node in Outline View tree as a leaf.
@@ -102,24 +94,12 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		}
 		StyledString styled = new StyledString(element.getOrigin().getName()
 				+ EMPTY_STRING);
-		styled.append(new StyledString(element.getType().getLiteral(),
-				stylerFactory.createXtextStyleAdapterStyler(getTypeTextStyle())));
+		styled.append(Styles.getStyledString(element.getType().getLiteral()));
 		Entity ret = element.getDestination();
 		if (ret != null) {
 			styled.append(EMPTY_STRING + ret.getName());
 		}
 		return styled;
-	}
-
-	/**
-	 * Creates TextStyle object with specified color.
-	 * 
-	 * @return
-	 */
-	private TextStyle getTypeTextStyle() {
-		TextStyle textStyle = new TextStyle();
-		textStyle.setColor(new RGB(COLOR_R, COLOR_G, COLOR_B));
-		return textStyle;
 	}
 
 	/**
@@ -134,8 +114,7 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		StyledString styled = new StyledString(prefix);
 		if (postfix != null) {
 			String post = traverseReference(postfix);
-			styled.append(new StyledString(COLON + post, stylerFactory
-					.createXtextStyleAdapterStyler(getTypeTextStyle())));
+			styled.append(Styles.getStyledString(COLON + post));
 		}
 		return styled;
 	}

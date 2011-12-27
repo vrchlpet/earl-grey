@@ -50,7 +50,7 @@ public class AbstractStatemodelSyntacticSequencer extends AbstractSyntacticSeque
 
 	/**
 	 * Syntax:
-	 *     'goto' | '=>'
+	 *     '=>' | 'goto'
 	 */
 	protected void emit_Transition_EqualsSignGreaterThanSignKeyword_3_0_or_GotoKeyword_3_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

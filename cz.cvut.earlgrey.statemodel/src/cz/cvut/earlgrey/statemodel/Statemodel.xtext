@@ -24,8 +24,6 @@ State:
     (element+=Element)*
     '}';
     
-    //SimpleState CompositeState ?!
-
 Element:
     Transition | State
 ;
@@ -49,15 +47,6 @@ Action:
 CompositeString returns ecore::EString:
     ID | CONDITION
 ;
-
-//Ref:
-//  {Ref}(=> nameRef=[cls::Entity|QualifiedName] | name=Strg )
-//  ;
-
-//Strg returns ecore::EString:
-//    ID | STRING
-//;
-
 
 Import:
     'import' importURI=STRING;

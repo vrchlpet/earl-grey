@@ -21,6 +21,8 @@ public class StatemodelFormatter extends AbstractDefaultFormatter {
 		c.setLinewrap(1, 2, 3).after(f.getStateRule());
 		c.setLinewrap(1, 1, 2).after(f.getTransitionRule());
 
+		// c.setNoSpace().before(f.getGuardRule());
+
 		initDefault(c, f); // loads default format config
 
 		c.setLinewrap(0, 1, 2).before(f.getSL_COMMENTRule());
