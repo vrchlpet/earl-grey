@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.Guard#getValue <em>Value</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.Guard#getGuard <em>Guard</em>}</li>
  * </ul>
  * </p>
  *
@@ -27,29 +27,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface Guard extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Value</b></em>' attribute.
+   * Returns the value of the '<em><b>Guard</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Value</em>' attribute isn't clear,
+   * If the meaning of the '<em>Guard</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Value</em>' attribute.
-   * @see #setValue(String)
-   * @see cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage#getGuard_Value()
-   * @model
+   * @return the value of the '<em>Guard</em>' containment reference.
+   * @see #setGuard(Value)
+   * @see cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage#getGuard_Guard()
+   * @model containment="true"
    * @generated
    */
-  String getValue();
+  Value getGuard();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.statemodel.statemodel.Guard#getValue <em>Value</em>}' attribute.
+   * Sets the value of the '{@link cz.cvut.earlgrey.statemodel.statemodel.Guard#getGuard <em>Guard</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Value</em>' attribute.
-   * @see #getValue()
+   * @param value the new value of the '<em>Guard</em>' containment reference.
+   * @see #getGuard()
    * @generated
    */
-  void setValue(String value);
+  void setGuard(Value value);
 
 } // Guard

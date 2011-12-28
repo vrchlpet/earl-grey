@@ -11,15 +11,17 @@ generate statemodel "http://www.cvut.cz/earlgrey/statemodel/Statemodel"
 Statemodel:
     (imports+=Import)* (statemachine+=Statemachine)*;
 
-//TODO: STRING | ID |  [cls::Entity|QualifiedName]
+/**
+ * statemachine "Abc" : package.ClassName
+ */
 Statemachine:
-    'statemachine' /* (=> ref=[cls::Entity|QualifiedName])?*/ name=QualifiedName
+    'statemachine' name=Identifier (=> ':' mapped=[cls::Entity|QualifiedName])?
     '{'
     (state+=State)*
     '}';
 
 State:
-    type=StateType name=ID
+    type=StateType name=Identifier
     '{'
     (element+=Element)*
     '}';
@@ -29,19 +31,23 @@ Element:
 ;
 
 Transition:
-    (=> 'on'? event=Event)? (=> 'if' guard=Guard)? (=> 'do' action=Action)? ('=>'|'goto') (=> state=[State|ID])
+    event=Event guard=Guard action=Action ('=>'|'goto') (=> state=[State|Identifier])
     ;
 
+Value:
+    (=> id=[Statemachine|Identifier] '.' ref=[cls::Operation|ID]) | value=CompositeString
+;
+
 Event:
-   /*(=> ref=[cls::Operation|ID])?*/ value=CompositeString
+   {Event} (=> 'on'? event=Value)?
 ;
 
 Guard:
-    value=CompositeString
+    {Guard} (=> 'if' guard=Value)?
 ;
 
 Action:
-   value=CompositeString
+   {Action} (=> 'do' action=Value)?
 ;
 
 CompositeString returns ecore::EString:

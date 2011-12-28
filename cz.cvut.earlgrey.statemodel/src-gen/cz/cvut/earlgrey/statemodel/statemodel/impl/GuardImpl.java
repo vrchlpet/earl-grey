@@ -8,10 +8,13 @@ package cz.cvut.earlgrey.statemodel.statemodel.impl;
 
 import cz.cvut.earlgrey.statemodel.statemodel.Guard;
 import cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage;
+import cz.cvut.earlgrey.statemodel.statemodel.Value;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -23,7 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.GuardImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.GuardImpl#getGuard <em>Guard</em>}</li>
  * </ul>
  * </p>
  *
@@ -32,24 +35,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class GuardImpl extends MinimalEObjectImpl.Container implements Guard
 {
   /**
-   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The cached value of the '{@link #getGuard() <em>Guard</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getGuard()
    * @generated
    * @ordered
    */
-  protected static final String VALUE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getValue()
-   * @generated
-   * @ordered
-   */
-  protected String value = VALUE_EDEFAULT;
+  protected Value guard;
 
   /**
    * <!-- begin-user-doc -->
@@ -77,9 +70,9 @@ public class GuardImpl extends MinimalEObjectImpl.Container implements Guard
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getValue()
+  public Value getGuard()
   {
-    return value;
+    return guard;
   }
 
   /**
@@ -87,12 +80,53 @@ public class GuardImpl extends MinimalEObjectImpl.Container implements Guard
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(String newValue)
+  public NotificationChain basicSetGuard(Value newGuard, NotificationChain msgs)
   {
-    String oldValue = value;
-    value = newValue;
+    Value oldGuard = guard;
+    guard = newGuard;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, StatemodelPackage.GUARD__VALUE, oldValue, value));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StatemodelPackage.GUARD__GUARD, oldGuard, newGuard);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setGuard(Value newGuard)
+  {
+    if (newGuard != guard)
+    {
+      NotificationChain msgs = null;
+      if (guard != null)
+        msgs = ((InternalEObject)guard).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - StatemodelPackage.GUARD__GUARD, null, msgs);
+      if (newGuard != null)
+        msgs = ((InternalEObject)newGuard).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - StatemodelPackage.GUARD__GUARD, null, msgs);
+      msgs = basicSetGuard(newGuard, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, StatemodelPackage.GUARD__GUARD, newGuard, newGuard));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case StatemodelPackage.GUARD__GUARD:
+        return basicSetGuard(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -105,8 +139,8 @@ public class GuardImpl extends MinimalEObjectImpl.Container implements Guard
   {
     switch (featureID)
     {
-      case StatemodelPackage.GUARD__VALUE:
-        return getValue();
+      case StatemodelPackage.GUARD__GUARD:
+        return getGuard();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -121,8 +155,8 @@ public class GuardImpl extends MinimalEObjectImpl.Container implements Guard
   {
     switch (featureID)
     {
-      case StatemodelPackage.GUARD__VALUE:
-        setValue((String)newValue);
+      case StatemodelPackage.GUARD__GUARD:
+        setGuard((Value)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -138,8 +172,8 @@ public class GuardImpl extends MinimalEObjectImpl.Container implements Guard
   {
     switch (featureID)
     {
-      case StatemodelPackage.GUARD__VALUE:
-        setValue(VALUE_EDEFAULT);
+      case StatemodelPackage.GUARD__GUARD:
+        setGuard((Value)null);
         return;
     }
     super.eUnset(featureID);
@@ -155,27 +189,10 @@ public class GuardImpl extends MinimalEObjectImpl.Container implements Guard
   {
     switch (featureID)
     {
-      case StatemodelPackage.GUARD__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+      case StatemodelPackage.GUARD__GUARD:
+        return guard != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (value: ");
-    result.append(value);
-    result.append(')');
-    return result.toString();
   }
 
 } //GuardImpl

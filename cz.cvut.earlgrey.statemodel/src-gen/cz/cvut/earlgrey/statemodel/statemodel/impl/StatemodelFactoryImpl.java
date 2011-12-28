@@ -74,6 +74,7 @@ public class StatemodelFactoryImpl extends EFactoryImpl implements StatemodelFac
       case StatemodelPackage.STATE: return createState();
       case StatemodelPackage.ELEMENT: return createElement();
       case StatemodelPackage.TRANSITION: return createTransition();
+      case StatemodelPackage.VALUE: return createValue();
       case StatemodelPackage.EVENT: return createEvent();
       case StatemodelPackage.GUARD: return createGuard();
       case StatemodelPackage.ACTION: return createAction();
@@ -170,6 +171,17 @@ public class StatemodelFactoryImpl extends EFactoryImpl implements StatemodelFac
   {
     TransitionImpl transition = new TransitionImpl();
     return transition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Value createValue()
+  {
+    ValueImpl value = new ValueImpl();
+    return value;
   }
 
   /**

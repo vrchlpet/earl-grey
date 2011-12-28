@@ -18,14 +18,14 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class AbstractStatemodelSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected StatemodelGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_Event_OnKeyword_1_0_q;
 	protected AbstractElementAlias match_Transition_EqualsSignGreaterThanSignKeyword_3_0_or_GotoKeyword_3_1;
-	protected AbstractElementAlias match_Transition_OnKeyword_0_0_q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (StatemodelGrammarAccess) access;
+		match_Event_OnKeyword_1_0_q = new TokenAlias(false, true, grammarAccess.getEventAccess().getOnKeyword_1_0());
 		match_Transition_EqualsSignGreaterThanSignKeyword_3_0_or_GotoKeyword_3_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getTransitionAccess().getEqualsSignGreaterThanSignKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getTransitionAccess().getGotoKeyword_3_1()));
-		match_Transition_OnKeyword_0_0_q = new TokenAlias(false, true, grammarAccess.getTransitionAccess().getOnKeyword_0_0());
 	}
 	
 	@Override
@@ -40,27 +40,27 @@ public class AbstractStatemodelSyntacticSequencer extends AbstractSyntacticSeque
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_Transition_EqualsSignGreaterThanSignKeyword_3_0_or_GotoKeyword_3_1.equals(syntax))
+			if(match_Event_OnKeyword_1_0_q.equals(syntax))
+				emit_Event_OnKeyword_1_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Transition_EqualsSignGreaterThanSignKeyword_3_0_or_GotoKeyword_3_1.equals(syntax))
 				emit_Transition_EqualsSignGreaterThanSignKeyword_3_0_or_GotoKeyword_3_1(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Transition_OnKeyword_0_0_q.equals(syntax))
-				emit_Transition_OnKeyword_0_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
 	/**
 	 * Syntax:
-	 *     '=>' | 'goto'
+	 *     'on'?
 	 */
-	protected void emit_Transition_EqualsSignGreaterThanSignKeyword_3_0_or_GotoKeyword_3_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Event_OnKeyword_1_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Syntax:
-	 *     'on'?
+	 *     '=>' | 'goto'
 	 */
-	protected void emit_Transition_OnKeyword_0_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Transition_EqualsSignGreaterThanSignKeyword_3_0_or_GotoKeyword_3_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

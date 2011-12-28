@@ -5,12 +5,16 @@ import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.xtext.EcoreUtil2;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
+import cz.cvut.earlgrey.classmodel.classmodel.Entity;
+import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.statemodel.statemodel.State;
 import cz.cvut.earlgrey.statemodel.statemodel.Statemachine;
 import cz.cvut.earlgrey.statemodel.statemodel.Transition;
+import cz.cvut.earlgrey.statemodel.statemodel.Value;
 
 /**
  * This class contains custom scoping description.
@@ -104,6 +108,27 @@ public class StatemodelScopeProvider extends AbstractDeclarativeScopeProvider {
 		return walk;
 	}
 
+	/**
+	 * Tries to get operation from used Entity in Statemachine. i.e.:
+	 * Statemachine Test : package.Class, then this method tries to get all
+	 * operations of the package.Class.
+	 * 
+	 * @param call Event object which contains reference to a Operation
+	 * @param ref EReference to Operation
+	 * @return IScope
+	 */
+	IScope scope_Value_ref(Value call, EReference ref) {
+		Statemachine machine = findMachine(call);
+		if (machine != null) {
+			Entity mapped = machine.getMapped();
+			if (mapped != null) {
+				return Scopes.scopeFor(EcoreUtil2.getAllContentsOfType(mapped,
+						Operation.class));
+			}
+		}
+		return IScope.NULLSCOPE;
+	}
+
 	// @Override
 	// public IScope getScope(EObject context, EReference reference) {
 	// // System.out.println("con >>> " + context + " \nref >>>" + reference);
@@ -114,7 +139,4 @@ public class StatemodelScopeProvider extends AbstractDeclarativeScopeProvider {
 	//
 	// return super.getScope(context, reference);
 	// }
-
-
-
 }

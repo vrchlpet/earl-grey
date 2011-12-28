@@ -6,6 +6,8 @@
  */
 package cz.cvut.earlgrey.statemodel.statemodel.impl;
 
+import cz.cvut.earlgrey.classmodel.classmodel.Entity;
+
 import cz.cvut.earlgrey.statemodel.statemodel.State;
 import cz.cvut.earlgrey.statemodel.statemodel.Statemachine;
 import cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage;
@@ -34,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemachineImpl#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemachineImpl#getMapped <em>Mapped</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemachineImpl#getState <em>State</em>}</li>
  * </ul>
  * </p>
@@ -61,6 +64,16 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getMapped() <em>Mapped</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMapped()
+   * @generated
+   * @ordered
+   */
+  protected Entity mapped;
 
   /**
    * The cached value of the '{@link #getState() <em>State</em>}' containment reference list.
@@ -121,6 +134,49 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
    * <!-- end-user-doc -->
    * @generated
    */
+  public Entity getMapped()
+  {
+    if (mapped != null && mapped.eIsProxy())
+    {
+      InternalEObject oldMapped = (InternalEObject)mapped;
+      mapped = (Entity)eResolveProxy(oldMapped);
+      if (mapped != oldMapped)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatemodelPackage.STATEMACHINE__MAPPED, oldMapped, mapped));
+      }
+    }
+    return mapped;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Entity basicGetMapped()
+  {
+    return mapped;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setMapped(Entity newMapped)
+  {
+    Entity oldMapped = mapped;
+    mapped = newMapped;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, StatemodelPackage.STATEMACHINE__MAPPED, oldMapped, mapped));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<State> getState()
   {
     if (state == null)
@@ -158,6 +214,9 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
     {
       case StatemodelPackage.STATEMACHINE__NAME:
         return getName();
+      case StatemodelPackage.STATEMACHINE__MAPPED:
+        if (resolve) return getMapped();
+        return basicGetMapped();
       case StatemodelPackage.STATEMACHINE__STATE:
         return getState();
     }
@@ -177,6 +236,9 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
     {
       case StatemodelPackage.STATEMACHINE__NAME:
         setName((String)newValue);
+        return;
+      case StatemodelPackage.STATEMACHINE__MAPPED:
+        setMapped((Entity)newValue);
         return;
       case StatemodelPackage.STATEMACHINE__STATE:
         getState().clear();
@@ -199,6 +261,9 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
       case StatemodelPackage.STATEMACHINE__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case StatemodelPackage.STATEMACHINE__MAPPED:
+        setMapped((Entity)null);
+        return;
       case StatemodelPackage.STATEMACHINE__STATE:
         getState().clear();
         return;
@@ -218,6 +283,8 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
     {
       case StatemodelPackage.STATEMACHINE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case StatemodelPackage.STATEMACHINE__MAPPED:
+        return mapped != null;
       case StatemodelPackage.STATEMACHINE__STATE:
         return state != null && !state.isEmpty();
     }

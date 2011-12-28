@@ -3,6 +3,7 @@
  */
 package cz.cvut.earlgrey.statemodel.formatting;
 
+import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.formatting.impl.FormattingConfig;
 import cz.cvut.earlgrey.statemodel.services.StatemodelGrammarAccess;
 import cz.cvut.earlgrey.xtext.formatting.AbstractDefaultFormatter;
@@ -11,6 +12,8 @@ import cz.cvut.earlgrey.xtext.formatting.AbstractDefaultFormatter;
  * This class contains custom formatting description.
  */
 public class StatemodelFormatter extends AbstractDefaultFormatter {
+
+	private static final String DOT = ".";
 
 	@Override
 	protected void configureFormatting(FormattingConfig c) {
@@ -22,6 +25,10 @@ public class StatemodelFormatter extends AbstractDefaultFormatter {
 		c.setLinewrap(1, 1, 2).after(f.getTransitionRule());
 
 		// c.setNoSpace().before(f.getGuardRule());
+
+		for (Keyword comma : f.findKeywords(DOT)) {
+			c.setNoSpace().around(comma);
+		}
 
 		initDefault(c, f); // loads default format config
 
