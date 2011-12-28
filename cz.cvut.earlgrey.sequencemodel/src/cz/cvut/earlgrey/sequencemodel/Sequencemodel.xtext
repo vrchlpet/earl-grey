@@ -1,0 +1,13 @@
+grammar cz.cvut.earlgrey.sequencemodel.Sequencemodel with org.eclipse.xtext.common.Terminals
+
+generate sequencemodel "http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel"
+
+/**
+ * Defines root node of a model.
+ * Resource imports must be defined before other elements.
+ */
+Sequencemodel:
+    (imports+=Import)*;
+
+Import:
+    'import' importURI=STRING;
