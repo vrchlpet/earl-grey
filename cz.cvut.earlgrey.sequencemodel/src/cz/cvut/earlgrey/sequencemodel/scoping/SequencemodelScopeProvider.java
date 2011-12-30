@@ -3,15 +3,86 @@
  */
 package cz.cvut.earlgrey.sequencemodel.scoping;
 
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.xtext.EcoreUtil2;
+import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Call;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Create;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Destroy;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Lifeline;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Reply;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequencemodel;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Transition;
 
 /**
  * This class contains custom scoping description.
- * 
- * see : http://www.eclipse.org/Xtext/documentation/latest/xtext.html#scoping
- * on how and when to use it 
- *
  */
 public class SequencemodelScopeProvider extends AbstractDeclarativeScopeProvider {
 
+	/**
+	 * 
+	 * @param call
+	 * @param ref
+	 * @return
+	 */
+	IScope scope_Transition_caller(Transition call, EReference ref) {
+		return getAllLifelineScope(call);
+	}
+
+	/**
+	 * 
+	 * @param call
+	 * @param ref
+	 * @return
+	 */
+	IScope scope_Call_called(Call call, EReference ref) {
+		return getAllLifelineScope(call);
+	}
+
+	/**
+	 * 
+	 * @param call
+	 * @param ref
+	 * @return
+	 */
+	IScope scope_Create_called(Create call, EReference ref) {
+		return getAllLifelineScope(call);
+	}
+
+	/**
+	 * 
+	 * @param call
+	 * @param ref
+	 * @return
+	 */
+	IScope scope_Destroy_called(Destroy call, EReference ref) {
+		return getAllLifelineScope(call);
+	}
+
+	/**
+	 * 
+	 * @param call
+	 * @param ref
+	 * @return
+	 */
+	IScope scope_Reply_called(Reply call, EReference ref) {
+		return getAllLifelineScope(call);
+	}
+
+	/**
+	 * @param call
+	 * @return
+	 */
+	private IScope getAllLifelineScope(EObject call) {
+		Sequencemodel model = EcoreUtil2.getContainerOfType(call,
+				Sequencemodel.class);
+		if (model != null) {
+			return Scopes.scopeFor(EcoreUtil2.getAllContentsOfType(model,
+					Lifeline.class));
+		}
+		return IScope.NULLSCOPE;
+	}
 }

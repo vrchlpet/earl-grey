@@ -45,6 +45,96 @@ public interface SequencemodelFactory extends EFactory
   Import createImport();
 
   /**
+   * Returns a new object of class '<em>Sequence</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sequence</em>'.
+   * @generated
+   */
+  Sequence createSequence();
+
+  /**
+   * Returns a new object of class '<em>Lifeline</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Lifeline</em>'.
+   * @generated
+   */
+  Lifeline createLifeline();
+
+  /**
+   * Returns a new object of class '<em>Transition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Transition</em>'.
+   * @generated
+   */
+  Transition createTransition();
+
+  /**
+   * Returns a new object of class '<em>Statement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Statement</em>'.
+   * @generated
+   */
+  Statement createStatement();
+
+  /**
+   * Returns a new object of class '<em>Call</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Call</em>'.
+   * @generated
+   */
+  Call createCall();
+
+  /**
+   * Returns a new object of class '<em>Reply</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Reply</em>'.
+   * @generated
+   */
+  Reply createReply();
+
+  /**
+   * Returns a new object of class '<em>Self</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Self</em>'.
+   * @generated
+   */
+  Self createSelf();
+
+  /**
+   * Returns a new object of class '<em>Create</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Create</em>'.
+   * @generated
+   */
+  Create createCreate();
+
+  /**
+   * Returns a new object of class '<em>Destroy</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Destroy</em>'.
+   * @generated
+   */
+  Destroy createDestroy();
+
+  /**
+   * Returns a new object of class '<em>Message</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Message</em>'.
+   * @generated
+   */
+  Message createMessage();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -89,6 +89,56 @@ public class SequencemodelAdapterFactory extends AdapterFactoryImpl
         return createImportAdapter();
       }
       @Override
+      public Adapter caseSequence(Sequence object)
+      {
+        return createSequenceAdapter();
+      }
+      @Override
+      public Adapter caseLifeline(Lifeline object)
+      {
+        return createLifelineAdapter();
+      }
+      @Override
+      public Adapter caseTransition(Transition object)
+      {
+        return createTransitionAdapter();
+      }
+      @Override
+      public Adapter caseStatement(Statement object)
+      {
+        return createStatementAdapter();
+      }
+      @Override
+      public Adapter caseCall(Call object)
+      {
+        return createCallAdapter();
+      }
+      @Override
+      public Adapter caseReply(Reply object)
+      {
+        return createReplyAdapter();
+      }
+      @Override
+      public Adapter caseSelf(Self object)
+      {
+        return createSelfAdapter();
+      }
+      @Override
+      public Adapter caseCreate(Create object)
+      {
+        return createCreateAdapter();
+      }
+      @Override
+      public Adapter caseDestroy(Destroy object)
+      {
+        return createDestroyAdapter();
+      }
+      @Override
+      public Adapter caseMessage(Message object)
+      {
+        return createMessageAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -136,6 +186,156 @@ public class SequencemodelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createImportAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequence <em>Sequence</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequence
+   * @generated
+   */
+  public Adapter createSequenceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Lifeline <em>Lifeline</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Lifeline
+   * @generated
+   */
+  public Adapter createLifelineAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Transition <em>Transition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Transition
+   * @generated
+   */
+  public Adapter createTransitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Statement <em>Statement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Statement
+   * @generated
+   */
+  public Adapter createStatementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Call <em>Call</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Call
+   * @generated
+   */
+  public Adapter createCallAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Reply <em>Reply</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Reply
+   * @generated
+   */
+  public Adapter createReplyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Self <em>Self</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Self
+   * @generated
+   */
+  public Adapter createSelfAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Create <em>Create</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Create
+   * @generated
+   */
+  public Adapter createCreateAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Destroy <em>Destroy</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Destroy
+   * @generated
+   */
+  public Adapter createDestroyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Message <em>Message</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Message
+   * @generated
+   */
+  public Adapter createMessageAdapter()
   {
     return null;
   }

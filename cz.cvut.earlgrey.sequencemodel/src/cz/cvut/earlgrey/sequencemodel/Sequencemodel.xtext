@@ -1,5 +1,7 @@
 grammar cz.cvut.earlgrey.sequencemodel.Sequencemodel with org.eclipse.xtext.common.Terminals
 
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://www.cvut.cz/earlgrey/classmodel/Classmodel" as cls
 generate sequencemodel "http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel"
 
 /**
@@ -7,7 +9,67 @@ generate sequencemodel "http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel"
  * Resource imports must be defined before other elements.
  */
 Sequencemodel:
-    (imports+=Import)*;
+    (imports+=Import)* (sequence+=Sequence)*;
 
 Import:
     'import' importURI=STRING;
+    
+Identifier returns ecore::EString:
+    ID | STRING
+;
+
+Sequence:
+    'sequence' name=Identifier '{'
+        lifeline+=Lifeline+
+        transition+=Transition*
+    '}'
+;
+
+LifelineName returns ecore::EString:
+    ID
+;
+
+//FIXME: Lifeline ::= name [:Type], where name and type are not required
+Lifeline:
+    actor?='actor'? name=LifelineName ':' entity=[cls::Entity|QualifiedName]
+;
+
+//FIXME: [Lifeline|QualifiedName]
+Transition:
+    caller=[Lifeline|LifelineName] (statement+=Statement)+
+;
+
+Statement:
+    Call | Reply | Self | Create | Destroy
+;
+
+//FIXME: reply can be more complex, i.e.: List<String>[]
+//FIXME: what if we want immediate reply without name?
+Call:
+  'call' called=[Lifeline|LifelineName] (=> '.' message=Message) (=> ':' reply=ID)?  //if we use 'reply', the called immediate replies 'ID' to a caller
+;
+
+//FIXME: reply can be more complex, i.e.: List<String>[]
+Reply:
+  'reply' called=[Lifeline|LifelineName] (=> ':' reply=ID)? //'reply' defines a message the called replies to a caller
+;
+
+//FIXME: reply can be more complex, i.e.: List<String>[]
+Self:
+  'self' message=Message (=> ':' reply=ID)? //'reply' defines a message the called replies to a caller
+;
+
+Create:
+    'create' called=[Lifeline|LifelineName]
+;
+
+Destroy:
+    'destroy' called=[Lifeline|LifelineName]
+;
+
+Message: //nejak rozlisit, ze se jedna o metodu tridy ci jen zpravu
+    name=ID (=> '(' (param+=ID (=> ', ' param+=ID)*)? ')')?
+;
+
+QualifiedName:
+    ID ('.' ID)*;

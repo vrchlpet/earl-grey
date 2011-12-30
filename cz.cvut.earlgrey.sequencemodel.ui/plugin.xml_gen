@@ -9,7 +9,7 @@
             class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
-            extensions="sm"
+            extensions="ssd"
             id="cz.cvut.earlgrey.sequencemodel.Sequencemodel"
             name="Sequencemodel Editor">
         </editor>
@@ -140,13 +140,13 @@
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
 			class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
-			type="sm">
+			type="ssd">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
         <resourceServiceProvider
             class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
-            uriExtension="sm">
+            uriExtension="ssd">
         </resourceServiceProvider>
     </extension>
 
@@ -262,19 +262,19 @@
   <extension point="org.eclipse.compare.contentViewers">
     <viewer id="cz.cvut.earlgrey.sequencemodel.Sequencemodel.compare.contentViewers"
             class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-            extensions="sm">
+            extensions="ssd">
     </viewer>
   </extension>
   <extension point="org.eclipse.compare.contentMergeViewers">
     <viewer id="cz.cvut.earlgrey.sequencemodel.Sequencemodel.compare.contentMergeViewers"
             class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-            extensions="sm" label="Sequencemodel Compare">
+            extensions="ssd" label="Sequencemodel Compare">
      </viewer>
   </extension>
   <extension point="org.eclipse.ui.editors.documentProviders">
     <provider id="cz.cvut.earlgrey.sequencemodel.Sequencemodel.editors.documentProviders"
             class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
-            extensions="sm">
+            extensions="ssd">
     </provider>
   </extension>
 

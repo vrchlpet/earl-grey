@@ -14,7 +14,7 @@ public class NewWizard extends DefaultNewWizard {
 
 	@Override
 	public String extension() {
-		return "sm";
+		return "ssd";
 	}
 
 	@Override

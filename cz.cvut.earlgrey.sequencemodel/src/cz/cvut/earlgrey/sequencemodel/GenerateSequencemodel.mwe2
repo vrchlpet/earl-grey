@@ -5,7 +5,7 @@ import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
 
 var grammarURI = "classpath:/cz/cvut/earlgrey/sequencemodel/Sequencemodel.xtext"
-var file.extensions = "sm"
+var file.extensions = "ssd"
 var projectName = "cz.cvut.earlgrey.sequencemodel"
 var runtimeProject = "../${projectName}"
 
@@ -13,9 +13,8 @@ Workflow {
     bean = StandaloneSetup {
         scanClassPath = true
         platformUri = "${runtimeProject}/.."
-        // The following two lines ca be removed, if Xbase is not used.
-        registerGeneratedEPackage = "org.eclipse.xtext.xbase.XbasePackage"
-        registerGenModelFile = "platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel"
+        registerGeneratedEPackage = "cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage"
+        registerGenModelFile = "platform:/resource/cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/Classmodel.genmodel"
     }
 
     component = DirectoryCleaner {

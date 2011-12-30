@@ -1,25 +1,258 @@
 <?xml version="1.0" encoding="ASCII"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xtext="http://www.eclipse.org/2008/Xtext">
   <xtext:Grammar name="cz.cvut.earlgrey.sequencemodel.Sequencemodel" usedGrammars="/1">
+    <metamodelDeclarations xsi:type="xtext:ReferencedMetamodel" alias="ecore">
+      <ePackage href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+    </metamodelDeclarations>
+    <metamodelDeclarations xsi:type="xtext:ReferencedMetamodel" alias="cls">
+      <ePackage href="http://www.cvut.cz/earlgrey/classmodel/Classmodel#/"/>
+    </metamodelDeclarations>
     <metamodelDeclarations xsi:type="xtext:GeneratedMetamodel" name="sequencemodel">
       <ePackage href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#/"/>
     </metamodelDeclarations>
     <rules xsi:type="xtext:ParserRule" name="Sequencemodel">
-      <type metamodel="/0/@metamodelDeclarations.0">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Sequencemodel"/>
       </type>
-      <alternatives xsi:type="xtext:Assignment" cardinality="*" feature="imports" operator="+=">
-        <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="*" feature="imports" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="*" feature="sequence" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Import">
-      <type metamodel="/0/@metamodelDeclarations.0">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Import"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="import"/>
         <elements xsi:type="xtext:Assignment" feature="importURI" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Identifier">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        <elements xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Sequence">
+      <type metamodel="/0/@metamodelDeclarations.2">
+        <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Sequence"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="sequence"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Assignment" cardinality="+" feature="lifeline" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="*" feature="transition" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="LifelineName">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Lifeline">
+      <type metamodel="/0/@metamodelDeclarations.2">
+        <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Lifeline"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="actor" operator="?=">
+          <terminal xsi:type="xtext:Keyword" value="actor"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=":"/>
+        <elements xsi:type="xtext:Assignment" feature="entity" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/classmodel/Classmodel#//Entity"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
+          </terminal>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Transition">
+      <type metamodel="/0/@metamodelDeclarations.2">
+        <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Transition"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" feature="caller" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.2">
+              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Lifeline"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="+" feature="statement" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Statement">
+      <type metamodel="/0/@metamodelDeclarations.2">
+        <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Statement"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Call">
+      <type metamodel="/0/@metamodelDeclarations.2">
+        <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Call"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="call"/>
+        <elements xsi:type="xtext:Assignment" feature="called" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.2">
+              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Lifeline"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Keyword" predicated="true" value="."/>
+          <elements xsi:type="xtext:Assignment" feature="message" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.13"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" predicated="true" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="reply" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </elements>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Reply">
+      <type metamodel="/0/@metamodelDeclarations.2">
+        <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Reply"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="reply"/>
+        <elements xsi:type="xtext:Assignment" feature="called" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.2">
+              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Lifeline"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" predicated="true" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="reply" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </elements>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Self">
+      <type metamodel="/0/@metamodelDeclarations.2">
+        <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Self"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="self"/>
+        <elements xsi:type="xtext:Assignment" feature="message" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.13"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" predicated="true" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="reply" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </elements>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Create">
+      <type metamodel="/0/@metamodelDeclarations.2">
+        <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Create"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="create"/>
+        <elements xsi:type="xtext:Assignment" feature="called" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.2">
+              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Lifeline"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
+          </terminal>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Destroy">
+      <type metamodel="/0/@metamodelDeclarations.2">
+        <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Destroy"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="destroy"/>
+        <elements xsi:type="xtext:Assignment" feature="called" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.2">
+              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Lifeline"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
+          </terminal>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Message">
+      <type metamodel="/0/@metamodelDeclarations.2">
+        <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Message"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" predicated="true" value="("/>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Assignment" feature="param" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+            </elements>
+            <elements xsi:type="xtext:Group" cardinality="*">
+              <elements xsi:type="xtext:Keyword" predicated="true" value=", "/>
+              <elements xsi:type="xtext:Assignment" feature="param" operator="+=">
+                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+              </elements>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=")"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="QualifiedName">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Keyword" value="."/>
+          <elements xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
         </elements>
       </alternatives>
     </rules>

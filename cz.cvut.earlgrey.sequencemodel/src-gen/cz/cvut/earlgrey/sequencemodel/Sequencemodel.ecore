@@ -6,8 +6,54 @@
   <eClassifiers xsi:type="ecore:EClass" name="Sequencemodel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
         eType="#//Import" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sequence" upperBound="-1"
+        eType="#//Sequence" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Import">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sequence">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lifeline" upperBound="-1"
+        eType="#//Lifeline" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transition" upperBound="-1"
+        eType="#//Transition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Lifeline">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" eType="ecore:EClass ../../../../../../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/Classmodel.ecore#//Entity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Transition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="caller" eType="#//Lifeline"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" upperBound="-1"
+        eType="#//Statement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Call" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="called" eType="#//Lifeline"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="message" eType="#//Message"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reply" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Reply" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="called" eType="#//Lifeline"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reply" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Self" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="message" eType="#//Message"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reply" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Create" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="called" eType="#//Lifeline"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Destroy" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="called" eType="#//Lifeline"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Message">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="param" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -19,21 +19,33 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public class SequencemodelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Sequencemodel");
-		private final Assignment cImportsAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cImportsImportParserRuleCall_0 = (RuleCall)cImportsAssignment.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cImportsAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cImportsImportParserRuleCall_0_0 = (RuleCall)cImportsAssignment_0.eContents().get(0);
+		private final Assignment cSequenceAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSequenceSequenceParserRuleCall_1_0 = (RuleCall)cSequenceAssignment_1.eContents().get(0);
 		
 		/// **
 		// * Defines root node of a model.
 		// * Resource imports must be defined before other elements.
 		// * / Sequencemodel:
-		//	imports+=Import*;
+		//	imports+=Import* sequence+=Sequence*;
 		public ParserRule getRule() { return rule; }
 
+		//imports+=Import* sequence+=Sequence*
+		public Group getGroup() { return cGroup; }
+
 		//imports+=Import*
-		public Assignment getImportsAssignment() { return cImportsAssignment; }
+		public Assignment getImportsAssignment_0() { return cImportsAssignment_0; }
 
 		//Import
-		public RuleCall getImportsImportParserRuleCall_0() { return cImportsImportParserRuleCall_0; }
+		public RuleCall getImportsImportParserRuleCall_0_0() { return cImportsImportParserRuleCall_0_0; }
+
+		//sequence+=Sequence*
+		public Assignment getSequenceAssignment_1() { return cSequenceAssignment_1; }
+
+		//Sequence
+		public RuleCall getSequenceSequenceParserRuleCall_1_0() { return cSequenceSequenceParserRuleCall_1_0; }
 	}
 
 	public class ImportElements extends AbstractParserRuleElementFinder {
@@ -59,10 +71,509 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getImportURISTRINGTerminalRuleCall_1_0() { return cImportURISTRINGTerminalRuleCall_1_0; }
 	}
+
+	public class IdentifierElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Identifier");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cSTRINGTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Identifier returns ecore::EString:
+		//	ID | STRING;
+		public ParserRule getRule() { return rule; }
+
+		//ID | STRING
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_1() { return cSTRINGTerminalRuleCall_1; }
+	}
+
+	public class SequenceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Sequence");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSequenceKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIdentifierParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cLifelineAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLifelineLifelineParserRuleCall_3_0 = (RuleCall)cLifelineAssignment_3.eContents().get(0);
+		private final Assignment cTransitionAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cTransitionTransitionParserRuleCall_4_0 = (RuleCall)cTransitionAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//Sequence:
+		//	"sequence" name=Identifier "{" lifeline+=Lifeline+ transition+=Transition* "}";
+		public ParserRule getRule() { return rule; }
+
+		//"sequence" name=Identifier "{" lifeline+=Lifeline+ transition+=Transition* "}"
+		public Group getGroup() { return cGroup; }
+
+		//"sequence"
+		public Keyword getSequenceKeyword_0() { return cSequenceKeyword_0; }
+
+		//name=Identifier
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//Identifier
+		public RuleCall getNameIdentifierParserRuleCall_1_0() { return cNameIdentifierParserRuleCall_1_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//lifeline+=Lifeline+
+		public Assignment getLifelineAssignment_3() { return cLifelineAssignment_3; }
+
+		//Lifeline
+		public RuleCall getLifelineLifelineParserRuleCall_3_0() { return cLifelineLifelineParserRuleCall_3_0; }
+
+		//transition+=Transition*
+		public Assignment getTransitionAssignment_4() { return cTransitionAssignment_4; }
+
+		//Transition
+		public RuleCall getTransitionTransitionParserRuleCall_4_0() { return cTransitionTransitionParserRuleCall_4_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+	}
+
+	public class LifelineNameElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LifelineName");
+		private final RuleCall cIDTerminalRuleCall = (RuleCall)rule.eContents().get(1);
+		
+		//LifelineName returns ecore::EString:
+		//	ID;
+		public ParserRule getRule() { return rule; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall() { return cIDTerminalRuleCall; }
+	}
+
+	public class LifelineElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Lifeline");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cActorAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cActorActorKeyword_0_0 = (Keyword)cActorAssignment_0.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameLifelineNameParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cEntityAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final CrossReference cEntityEntityCrossReference_3_0 = (CrossReference)cEntityAssignment_3.eContents().get(0);
+		private final RuleCall cEntityEntityQualifiedNameParserRuleCall_3_0_1 = (RuleCall)cEntityEntityCrossReference_3_0.eContents().get(1);
+		
+		////FIXME: Lifeline ::= name [:Type], where name and type are not required
+		//Lifeline:
+		//	actor?="actor"? name=LifelineName ":" entity=[cls::Entity|QualifiedName];
+		public ParserRule getRule() { return rule; }
+
+		//actor?="actor"? name=LifelineName ":" entity=[cls::Entity|QualifiedName]
+		public Group getGroup() { return cGroup; }
+
+		//actor?="actor"?
+		public Assignment getActorAssignment_0() { return cActorAssignment_0; }
+
+		//"actor"
+		public Keyword getActorActorKeyword_0_0() { return cActorActorKeyword_0_0; }
+
+		//name=LifelineName
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//LifelineName
+		public RuleCall getNameLifelineNameParserRuleCall_1_0() { return cNameLifelineNameParserRuleCall_1_0; }
+
+		//":"
+		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
+
+		//entity=[cls::Entity|QualifiedName]
+		public Assignment getEntityAssignment_3() { return cEntityAssignment_3; }
+
+		//[cls::Entity|QualifiedName]
+		public CrossReference getEntityEntityCrossReference_3_0() { return cEntityEntityCrossReference_3_0; }
+
+		//QualifiedName
+		public RuleCall getEntityEntityQualifiedNameParserRuleCall_3_0_1() { return cEntityEntityQualifiedNameParserRuleCall_3_0_1; }
+	}
+
+	public class TransitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Transition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cCallerAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final CrossReference cCallerLifelineCrossReference_0_0 = (CrossReference)cCallerAssignment_0.eContents().get(0);
+		private final RuleCall cCallerLifelineLifelineNameParserRuleCall_0_0_1 = (RuleCall)cCallerLifelineCrossReference_0_0.eContents().get(1);
+		private final Assignment cStatementAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cStatementStatementParserRuleCall_1_0 = (RuleCall)cStatementAssignment_1.eContents().get(0);
+		
+		////FIXME: [Lifeline|QualifiedName]
+		//Transition:
+		//	caller=[Lifeline|LifelineName] statement+=Statement+;
+		public ParserRule getRule() { return rule; }
+
+		//caller=[Lifeline|LifelineName] statement+=Statement+
+		public Group getGroup() { return cGroup; }
+
+		//caller=[Lifeline|LifelineName]
+		public Assignment getCallerAssignment_0() { return cCallerAssignment_0; }
+
+		//[Lifeline|LifelineName]
+		public CrossReference getCallerLifelineCrossReference_0_0() { return cCallerLifelineCrossReference_0_0; }
+
+		//LifelineName
+		public RuleCall getCallerLifelineLifelineNameParserRuleCall_0_0_1() { return cCallerLifelineLifelineNameParserRuleCall_0_0_1; }
+
+		//statement+=Statement+
+		public Assignment getStatementAssignment_1() { return cStatementAssignment_1; }
+
+		//Statement
+		public RuleCall getStatementStatementParserRuleCall_1_0() { return cStatementStatementParserRuleCall_1_0; }
+	}
+
+	public class StatementElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Statement");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cCallParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cReplyParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cSelfParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cCreateParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cDestroyParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		
+		//Statement:
+		//	Call | Reply | Self | Create | Destroy;
+		public ParserRule getRule() { return rule; }
+
+		//Call | Reply | Self | Create | Destroy
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//Call
+		public RuleCall getCallParserRuleCall_0() { return cCallParserRuleCall_0; }
+
+		//Reply
+		public RuleCall getReplyParserRuleCall_1() { return cReplyParserRuleCall_1; }
+
+		//Self
+		public RuleCall getSelfParserRuleCall_2() { return cSelfParserRuleCall_2; }
+
+		//Create
+		public RuleCall getCreateParserRuleCall_3() { return cCreateParserRuleCall_3; }
+
+		//Destroy
+		public RuleCall getDestroyParserRuleCall_4() { return cDestroyParserRuleCall_4; }
+	}
+
+	public class CallElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Call");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cCallKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cCalledAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cCalledLifelineCrossReference_1_0 = (CrossReference)cCalledAssignment_1.eContents().get(0);
+		private final RuleCall cCalledLifelineLifelineNameParserRuleCall_1_0_1 = (RuleCall)cCalledLifelineCrossReference_1_0.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cFullStopKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cMessageAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cMessageMessageParserRuleCall_2_1_0 = (RuleCall)cMessageAssignment_2_1.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cColonKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cReplyAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cReplyIDTerminalRuleCall_3_1_0 = (RuleCall)cReplyAssignment_3_1.eContents().get(0);
+		
+		////FIXME: reply can be more complex, i.e.: List<String>[]
+		////FIXME: what if we want immediate reply without name?
+		//Call:
+		//	"call" called=[Lifeline|LifelineName] ("." message=Message) (":" reply=ID)? //if we use 'reply', the called immediate replies 'ID' to a caller
+		//;
+		public ParserRule getRule() { return rule; }
+
+		//"call" called=[Lifeline|LifelineName] ("." message=Message) (":" reply=ID)? //if we use 'reply', the called immediate replies 'ID' to a caller
+		public Group getGroup() { return cGroup; }
+
+		//"call"
+		public Keyword getCallKeyword_0() { return cCallKeyword_0; }
+
+		//called=[Lifeline|LifelineName]
+		public Assignment getCalledAssignment_1() { return cCalledAssignment_1; }
+
+		//[Lifeline|LifelineName]
+		public CrossReference getCalledLifelineCrossReference_1_0() { return cCalledLifelineCrossReference_1_0; }
+
+		//LifelineName
+		public RuleCall getCalledLifelineLifelineNameParserRuleCall_1_0_1() { return cCalledLifelineLifelineNameParserRuleCall_1_0_1; }
+
+		//=> "." message=Message
+		public Group getGroup_2() { return cGroup_2; }
+
+		//=> "."
+		public Keyword getFullStopKeyword_2_0() { return cFullStopKeyword_2_0; }
+
+		//message=Message
+		public Assignment getMessageAssignment_2_1() { return cMessageAssignment_2_1; }
+
+		//Message
+		public RuleCall getMessageMessageParserRuleCall_2_1_0() { return cMessageMessageParserRuleCall_2_1_0; }
+
+		//(=> ":" reply=ID)?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//=> ":"
+		public Keyword getColonKeyword_3_0() { return cColonKeyword_3_0; }
+
+		//reply=ID
+		public Assignment getReplyAssignment_3_1() { return cReplyAssignment_3_1; }
+
+		//ID
+		public RuleCall getReplyIDTerminalRuleCall_3_1_0() { return cReplyIDTerminalRuleCall_3_1_0; }
+	}
+
+	public class ReplyElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Reply");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cReplyKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cCalledAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cCalledLifelineCrossReference_1_0 = (CrossReference)cCalledAssignment_1.eContents().get(0);
+		private final RuleCall cCalledLifelineLifelineNameParserRuleCall_1_0_1 = (RuleCall)cCalledLifelineCrossReference_1_0.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cColonKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cReplyAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cReplyIDTerminalRuleCall_2_1_0 = (RuleCall)cReplyAssignment_2_1.eContents().get(0);
+		
+		////FIXME: reply can be more complex, i.e.: List<String>[]
+		//Reply:
+		//	"reply" called=[Lifeline|LifelineName] (":" reply=ID)? //'reply' defines a message the called replies to a caller
+		//;
+		public ParserRule getRule() { return rule; }
+
+		//"reply" called=[Lifeline|LifelineName] (":" reply=ID)? //'reply' defines a message the called replies to a caller
+		public Group getGroup() { return cGroup; }
+
+		//"reply"
+		public Keyword getReplyKeyword_0() { return cReplyKeyword_0; }
+
+		//called=[Lifeline|LifelineName]
+		public Assignment getCalledAssignment_1() { return cCalledAssignment_1; }
+
+		//[Lifeline|LifelineName]
+		public CrossReference getCalledLifelineCrossReference_1_0() { return cCalledLifelineCrossReference_1_0; }
+
+		//LifelineName
+		public RuleCall getCalledLifelineLifelineNameParserRuleCall_1_0_1() { return cCalledLifelineLifelineNameParserRuleCall_1_0_1; }
+
+		//(=> ":" reply=ID)?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//=> ":"
+		public Keyword getColonKeyword_2_0() { return cColonKeyword_2_0; }
+
+		//reply=ID
+		public Assignment getReplyAssignment_2_1() { return cReplyAssignment_2_1; }
+
+		//ID
+		public RuleCall getReplyIDTerminalRuleCall_2_1_0() { return cReplyIDTerminalRuleCall_2_1_0; }
+	}
+
+	public class SelfElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Self");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSelfKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cMessageAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cMessageMessageParserRuleCall_1_0 = (RuleCall)cMessageAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cColonKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cReplyAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cReplyIDTerminalRuleCall_2_1_0 = (RuleCall)cReplyAssignment_2_1.eContents().get(0);
+		
+		////FIXME: reply can be more complex, i.e.: List<String>[]
+		//Self:
+		//	"self" message=Message (":" reply=ID)? //'reply' defines a message the called replies to a caller
+		//;
+		public ParserRule getRule() { return rule; }
+
+		//"self" message=Message (":" reply=ID)? //'reply' defines a message the called replies to a caller
+		public Group getGroup() { return cGroup; }
+
+		//"self"
+		public Keyword getSelfKeyword_0() { return cSelfKeyword_0; }
+
+		//message=Message
+		public Assignment getMessageAssignment_1() { return cMessageAssignment_1; }
+
+		//Message
+		public RuleCall getMessageMessageParserRuleCall_1_0() { return cMessageMessageParserRuleCall_1_0; }
+
+		//(=> ":" reply=ID)?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//=> ":"
+		public Keyword getColonKeyword_2_0() { return cColonKeyword_2_0; }
+
+		//reply=ID
+		public Assignment getReplyAssignment_2_1() { return cReplyAssignment_2_1; }
+
+		//ID
+		public RuleCall getReplyIDTerminalRuleCall_2_1_0() { return cReplyIDTerminalRuleCall_2_1_0; }
+	}
+
+	public class CreateElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Create");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cCreateKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cCalledAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cCalledLifelineCrossReference_1_0 = (CrossReference)cCalledAssignment_1.eContents().get(0);
+		private final RuleCall cCalledLifelineLifelineNameParserRuleCall_1_0_1 = (RuleCall)cCalledLifelineCrossReference_1_0.eContents().get(1);
+		
+		//Create:
+		//	"create" called=[Lifeline|LifelineName];
+		public ParserRule getRule() { return rule; }
+
+		//"create" called=[Lifeline|LifelineName]
+		public Group getGroup() { return cGroup; }
+
+		//"create"
+		public Keyword getCreateKeyword_0() { return cCreateKeyword_0; }
+
+		//called=[Lifeline|LifelineName]
+		public Assignment getCalledAssignment_1() { return cCalledAssignment_1; }
+
+		//[Lifeline|LifelineName]
+		public CrossReference getCalledLifelineCrossReference_1_0() { return cCalledLifelineCrossReference_1_0; }
+
+		//LifelineName
+		public RuleCall getCalledLifelineLifelineNameParserRuleCall_1_0_1() { return cCalledLifelineLifelineNameParserRuleCall_1_0_1; }
+	}
+
+	public class DestroyElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Destroy");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cDestroyKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cCalledAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cCalledLifelineCrossReference_1_0 = (CrossReference)cCalledAssignment_1.eContents().get(0);
+		private final RuleCall cCalledLifelineLifelineNameParserRuleCall_1_0_1 = (RuleCall)cCalledLifelineCrossReference_1_0.eContents().get(1);
+		
+		//Destroy:
+		//	"destroy" called=[Lifeline|LifelineName];
+		public ParserRule getRule() { return rule; }
+
+		//"destroy" called=[Lifeline|LifelineName]
+		public Group getGroup() { return cGroup; }
+
+		//"destroy"
+		public Keyword getDestroyKeyword_0() { return cDestroyKeyword_0; }
+
+		//called=[Lifeline|LifelineName]
+		public Assignment getCalledAssignment_1() { return cCalledAssignment_1; }
+
+		//[Lifeline|LifelineName]
+		public CrossReference getCalledLifelineCrossReference_1_0() { return cCalledLifelineCrossReference_1_0; }
+
+		//LifelineName
+		public RuleCall getCalledLifelineLifelineNameParserRuleCall_1_0_1() { return cCalledLifelineLifelineNameParserRuleCall_1_0_1; }
+	}
+
+	public class MessageElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Message");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Group cGroup_1_1 = (Group)cGroup_1.eContents().get(1);
+		private final Assignment cParamAssignment_1_1_0 = (Assignment)cGroup_1_1.eContents().get(0);
+		private final RuleCall cParamIDTerminalRuleCall_1_1_0_0 = (RuleCall)cParamAssignment_1_1_0.eContents().get(0);
+		private final Group cGroup_1_1_1 = (Group)cGroup_1_1.eContents().get(1);
+		private final Keyword cCommaSpaceKeyword_1_1_1_0 = (Keyword)cGroup_1_1_1.eContents().get(0);
+		private final Assignment cParamAssignment_1_1_1_1 = (Assignment)cGroup_1_1_1.eContents().get(1);
+		private final RuleCall cParamIDTerminalRuleCall_1_1_1_1_0 = (RuleCall)cParamAssignment_1_1_1_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
+		
+		////nejak rozlisit, ze se jedna o metodu tridy ci jen zpravu
+		//Message:
+		//	name=ID ("(" (param+=ID (", " param+=ID)*)? ")")?;
+		public ParserRule getRule() { return rule; }
+
+		//name=ID ("(" (param+=ID (", " param+=ID)*)? ")")?
+		public Group getGroup() { return cGroup; }
+
+		//name=ID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+
+		//(=> "(" (param+=ID (", " param+=ID)*)? ")")?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//=> "("
+		public Keyword getLeftParenthesisKeyword_1_0() { return cLeftParenthesisKeyword_1_0; }
+
+		//(param+=ID (", " param+=ID)*)?
+		public Group getGroup_1_1() { return cGroup_1_1; }
+
+		//param+=ID
+		public Assignment getParamAssignment_1_1_0() { return cParamAssignment_1_1_0; }
+
+		//ID
+		public RuleCall getParamIDTerminalRuleCall_1_1_0_0() { return cParamIDTerminalRuleCall_1_1_0_0; }
+
+		//(=> ", " param+=ID)*
+		public Group getGroup_1_1_1() { return cGroup_1_1_1; }
+
+		//=> ", "
+		public Keyword getCommaSpaceKeyword_1_1_1_0() { return cCommaSpaceKeyword_1_1_1_0; }
+
+		//param+=ID
+		public Assignment getParamAssignment_1_1_1_1() { return cParamAssignment_1_1_1_1; }
+
+		//ID
+		public RuleCall getParamIDTerminalRuleCall_1_1_1_1_0() { return cParamIDTerminalRuleCall_1_1_1_1_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_1_2() { return cRightParenthesisKeyword_1_2; }
+	}
+
+	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QualifiedName");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//QualifiedName:
+		//	ID ("." ID)*;
+		public ParserRule getRule() { return rule; }
+
+		//ID ("." ID)*
+		public Group getGroup() { return cGroup; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+
+		//("." ID)*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"."
+		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
+	}
 	
 	
 	private SequencemodelElements pSequencemodel;
 	private ImportElements pImport;
+	private IdentifierElements pIdentifier;
+	private SequenceElements pSequence;
+	private LifelineNameElements pLifelineName;
+	private LifelineElements pLifeline;
+	private TransitionElements pTransition;
+	private StatementElements pStatement;
+	private CallElements pCall;
+	private ReplyElements pReply;
+	private SelfElements pSelf;
+	private CreateElements pCreate;
+	private DestroyElements pDestroy;
+	private MessageElements pMessage;
+	private QualifiedNameElements pQualifiedName;
 	
 	private final GrammarProvider grammarProvider;
 
@@ -89,7 +600,7 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 	// * Defines root node of a model.
 	// * Resource imports must be defined before other elements.
 	// * / Sequencemodel:
-	//	imports+=Import*;
+	//	imports+=Import* sequence+=Sequence*;
 	public SequencemodelElements getSequencemodelAccess() {
 		return (pSequencemodel != null) ? pSequencemodel : (pSequencemodel = new SequencemodelElements());
 	}
@@ -106,6 +617,146 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getImportRule() {
 		return getImportAccess().getRule();
+	}
+
+	//Identifier returns ecore::EString:
+	//	ID | STRING;
+	public IdentifierElements getIdentifierAccess() {
+		return (pIdentifier != null) ? pIdentifier : (pIdentifier = new IdentifierElements());
+	}
+	
+	public ParserRule getIdentifierRule() {
+		return getIdentifierAccess().getRule();
+	}
+
+	//Sequence:
+	//	"sequence" name=Identifier "{" lifeline+=Lifeline+ transition+=Transition* "}";
+	public SequenceElements getSequenceAccess() {
+		return (pSequence != null) ? pSequence : (pSequence = new SequenceElements());
+	}
+	
+	public ParserRule getSequenceRule() {
+		return getSequenceAccess().getRule();
+	}
+
+	//LifelineName returns ecore::EString:
+	//	ID;
+	public LifelineNameElements getLifelineNameAccess() {
+		return (pLifelineName != null) ? pLifelineName : (pLifelineName = new LifelineNameElements());
+	}
+	
+	public ParserRule getLifelineNameRule() {
+		return getLifelineNameAccess().getRule();
+	}
+
+	////FIXME: Lifeline ::= name [:Type], where name and type are not required
+	//Lifeline:
+	//	actor?="actor"? name=LifelineName ":" entity=[cls::Entity|QualifiedName];
+	public LifelineElements getLifelineAccess() {
+		return (pLifeline != null) ? pLifeline : (pLifeline = new LifelineElements());
+	}
+	
+	public ParserRule getLifelineRule() {
+		return getLifelineAccess().getRule();
+	}
+
+	////FIXME: [Lifeline|QualifiedName]
+	//Transition:
+	//	caller=[Lifeline|LifelineName] statement+=Statement+;
+	public TransitionElements getTransitionAccess() {
+		return (pTransition != null) ? pTransition : (pTransition = new TransitionElements());
+	}
+	
+	public ParserRule getTransitionRule() {
+		return getTransitionAccess().getRule();
+	}
+
+	//Statement:
+	//	Call | Reply | Self | Create | Destroy;
+	public StatementElements getStatementAccess() {
+		return (pStatement != null) ? pStatement : (pStatement = new StatementElements());
+	}
+	
+	public ParserRule getStatementRule() {
+		return getStatementAccess().getRule();
+	}
+
+	////FIXME: reply can be more complex, i.e.: List<String>[]
+	////FIXME: what if we want immediate reply without name?
+	//Call:
+	//	"call" called=[Lifeline|LifelineName] ("." message=Message) (":" reply=ID)? //if we use 'reply', the called immediate replies 'ID' to a caller
+	//;
+	public CallElements getCallAccess() {
+		return (pCall != null) ? pCall : (pCall = new CallElements());
+	}
+	
+	public ParserRule getCallRule() {
+		return getCallAccess().getRule();
+	}
+
+	////FIXME: reply can be more complex, i.e.: List<String>[]
+	//Reply:
+	//	"reply" called=[Lifeline|LifelineName] (":" reply=ID)? //'reply' defines a message the called replies to a caller
+	//;
+	public ReplyElements getReplyAccess() {
+		return (pReply != null) ? pReply : (pReply = new ReplyElements());
+	}
+	
+	public ParserRule getReplyRule() {
+		return getReplyAccess().getRule();
+	}
+
+	////FIXME: reply can be more complex, i.e.: List<String>[]
+	//Self:
+	//	"self" message=Message (":" reply=ID)? //'reply' defines a message the called replies to a caller
+	//;
+	public SelfElements getSelfAccess() {
+		return (pSelf != null) ? pSelf : (pSelf = new SelfElements());
+	}
+	
+	public ParserRule getSelfRule() {
+		return getSelfAccess().getRule();
+	}
+
+	//Create:
+	//	"create" called=[Lifeline|LifelineName];
+	public CreateElements getCreateAccess() {
+		return (pCreate != null) ? pCreate : (pCreate = new CreateElements());
+	}
+	
+	public ParserRule getCreateRule() {
+		return getCreateAccess().getRule();
+	}
+
+	//Destroy:
+	//	"destroy" called=[Lifeline|LifelineName];
+	public DestroyElements getDestroyAccess() {
+		return (pDestroy != null) ? pDestroy : (pDestroy = new DestroyElements());
+	}
+	
+	public ParserRule getDestroyRule() {
+		return getDestroyAccess().getRule();
+	}
+
+	////nejak rozlisit, ze se jedna o metodu tridy ci jen zpravu
+	//Message:
+	//	name=ID ("(" (param+=ID (", " param+=ID)*)? ")")?;
+	public MessageElements getMessageAccess() {
+		return (pMessage != null) ? pMessage : (pMessage = new MessageElements());
+	}
+	
+	public ParserRule getMessageRule() {
+		return getMessageAccess().getRule();
+	}
+
+	//QualifiedName:
+	//	ID ("." ID)*;
+	public QualifiedNameElements getQualifiedNameAccess() {
+		return (pQualifiedName != null) ? pQualifiedName : (pQualifiedName = new QualifiedNameElements());
+	}
+	
+	public ParserRule getQualifiedNameRule() {
+		return getQualifiedNameAccess().getRule();
 	}
 
 	//terminal ID:
