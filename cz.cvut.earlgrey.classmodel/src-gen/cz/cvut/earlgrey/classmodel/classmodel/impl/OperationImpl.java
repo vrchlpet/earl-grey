@@ -33,7 +33,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.OperationImpl#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.OperationImpl#isStatic <em>Static</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.OperationImpl#getParameter <em>Parameter</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.OperationImpl#getReturn <em>Return</em>}</li>
  * </ul>
  * </p>
@@ -43,14 +44,34 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class OperationImpl extends FeatureImpl implements Operation
 {
   /**
-   * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
+   * The default value of the '{@link #isStatic() <em>Static</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getParameters()
+   * @see #isStatic()
    * @generated
    * @ordered
    */
-  protected EList<Parameter> parameters;
+  protected static final boolean STATIC_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isStatic() <em>Static</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isStatic()
+   * @generated
+   * @ordered
+   */
+  protected boolean static_ = STATIC_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getParameter() <em>Parameter</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getParameter()
+   * @generated
+   * @ordered
+   */
+  protected EList<Parameter> parameter;
 
   /**
    * The cached value of the '{@link #getReturn() <em>Return</em>}' containment reference.
@@ -88,13 +109,36 @@ public class OperationImpl extends FeatureImpl implements Operation
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Parameter> getParameters()
+  public boolean isStatic()
   {
-    if (parameters == null)
+    return static_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setStatic(boolean newStatic)
+  {
+    boolean oldStatic = static_;
+    static_ = newStatic;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.OPERATION__STATIC, oldStatic, static_));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Parameter> getParameter()
+  {
+    if (parameter == null)
     {
-      parameters = new EObjectContainmentEList<Parameter>(Parameter.class, this, ClassmodelPackage.OPERATION__PARAMETERS);
+      parameter = new EObjectContainmentEList<Parameter>(Parameter.class, this, ClassmodelPackage.OPERATION__PARAMETER);
     }
-    return parameters;
+    return parameter;
   }
 
   /**
@@ -155,8 +199,8 @@ public class OperationImpl extends FeatureImpl implements Operation
   {
     switch (featureID)
     {
-      case ClassmodelPackage.OPERATION__PARAMETERS:
-        return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
+      case ClassmodelPackage.OPERATION__PARAMETER:
+        return ((InternalEList<?>)getParameter()).basicRemove(otherEnd, msgs);
       case ClassmodelPackage.OPERATION__RETURN:
         return basicSetReturn(null, msgs);
     }
@@ -173,8 +217,10 @@ public class OperationImpl extends FeatureImpl implements Operation
   {
     switch (featureID)
     {
-      case ClassmodelPackage.OPERATION__PARAMETERS:
-        return getParameters();
+      case ClassmodelPackage.OPERATION__STATIC:
+        return isStatic();
+      case ClassmodelPackage.OPERATION__PARAMETER:
+        return getParameter();
       case ClassmodelPackage.OPERATION__RETURN:
         return getReturn();
     }
@@ -192,9 +238,12 @@ public class OperationImpl extends FeatureImpl implements Operation
   {
     switch (featureID)
     {
-      case ClassmodelPackage.OPERATION__PARAMETERS:
-        getParameters().clear();
-        getParameters().addAll((Collection<? extends Parameter>)newValue);
+      case ClassmodelPackage.OPERATION__STATIC:
+        setStatic((Boolean)newValue);
+        return;
+      case ClassmodelPackage.OPERATION__PARAMETER:
+        getParameter().clear();
+        getParameter().addAll((Collection<? extends Parameter>)newValue);
         return;
       case ClassmodelPackage.OPERATION__RETURN:
         setReturn((Reference)newValue);
@@ -213,8 +262,11 @@ public class OperationImpl extends FeatureImpl implements Operation
   {
     switch (featureID)
     {
-      case ClassmodelPackage.OPERATION__PARAMETERS:
-        getParameters().clear();
+      case ClassmodelPackage.OPERATION__STATIC:
+        setStatic(STATIC_EDEFAULT);
+        return;
+      case ClassmodelPackage.OPERATION__PARAMETER:
+        getParameter().clear();
         return;
       case ClassmodelPackage.OPERATION__RETURN:
         setReturn((Reference)null);
@@ -233,12 +285,31 @@ public class OperationImpl extends FeatureImpl implements Operation
   {
     switch (featureID)
     {
-      case ClassmodelPackage.OPERATION__PARAMETERS:
-        return parameters != null && !parameters.isEmpty();
+      case ClassmodelPackage.OPERATION__STATIC:
+        return static_ != STATIC_EDEFAULT;
+      case ClassmodelPackage.OPERATION__PARAMETER:
+        return parameter != null && !parameter.isEmpty();
       case ClassmodelPackage.OPERATION__RETURN:
         return return_ != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (static: ");
+    result.append(static_);
+    result.append(')');
+    return result.toString();
   }
 
 } //OperationImpl

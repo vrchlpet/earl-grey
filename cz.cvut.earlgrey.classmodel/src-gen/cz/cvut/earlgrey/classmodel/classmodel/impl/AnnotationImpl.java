@@ -6,8 +6,8 @@
  */
 package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
+import cz.cvut.earlgrey.classmodel.classmodel.Annotation;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
-import cz.cvut.earlgrey.classmodel.classmodel.Element;
 
 import java.util.Collection;
 
@@ -20,25 +20,26 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Package</b></em>'.
+ * An implementation of the model object '<em><b>Annotation</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.PackageImpl#getName <em>Name</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.PackageImpl#getElement <em>Element</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AnnotationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AnnotationImpl#getAnnotations <em>Annotations</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class PackageImpl extends ElementImpl implements cz.cvut.earlgrey.classmodel.classmodel.Package
+public class AnnotationImpl extends MinimalEObjectImpl.Container implements Annotation
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -61,21 +62,21 @@ public class PackageImpl extends ElementImpl implements cz.cvut.earlgrey.classmo
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getElement() <em>Element</em>}' containment reference list.
+   * The cached value of the '{@link #getAnnotations() <em>Annotations</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getElement()
+   * @see #getAnnotations()
    * @generated
    * @ordered
    */
-  protected EList<Element> element;
+  protected EList<Annotation> annotations;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected PackageImpl()
+  protected AnnotationImpl()
   {
     super();
   }
@@ -88,7 +89,7 @@ public class PackageImpl extends ElementImpl implements cz.cvut.earlgrey.classmo
   @Override
   protected EClass eStaticClass()
   {
-    return ClassmodelPackage.Literals.PACKAGE;
+    return ClassmodelPackage.Literals.ANNOTATION;
   }
 
   /**
@@ -111,7 +112,7 @@ public class PackageImpl extends ElementImpl implements cz.cvut.earlgrey.classmo
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.PACKAGE__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.ANNOTATION__NAME, oldName, name));
   }
 
   /**
@@ -119,13 +120,13 @@ public class PackageImpl extends ElementImpl implements cz.cvut.earlgrey.classmo
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Element> getElement()
+  public EList<Annotation> getAnnotations()
   {
-    if (element == null)
+    if (annotations == null)
     {
-      element = new EObjectContainmentEList<Element>(Element.class, this, ClassmodelPackage.PACKAGE__ELEMENT);
+      annotations = new EObjectContainmentEList<Annotation>(Annotation.class, this, ClassmodelPackage.ANNOTATION__ANNOTATIONS);
     }
-    return element;
+    return annotations;
   }
 
   /**
@@ -138,8 +139,8 @@ public class PackageImpl extends ElementImpl implements cz.cvut.earlgrey.classmo
   {
     switch (featureID)
     {
-      case ClassmodelPackage.PACKAGE__ELEMENT:
-        return ((InternalEList<?>)getElement()).basicRemove(otherEnd, msgs);
+      case ClassmodelPackage.ANNOTATION__ANNOTATIONS:
+        return ((InternalEList<?>)getAnnotations()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -154,10 +155,10 @@ public class PackageImpl extends ElementImpl implements cz.cvut.earlgrey.classmo
   {
     switch (featureID)
     {
-      case ClassmodelPackage.PACKAGE__NAME:
+      case ClassmodelPackage.ANNOTATION__NAME:
         return getName();
-      case ClassmodelPackage.PACKAGE__ELEMENT:
-        return getElement();
+      case ClassmodelPackage.ANNOTATION__ANNOTATIONS:
+        return getAnnotations();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -173,12 +174,12 @@ public class PackageImpl extends ElementImpl implements cz.cvut.earlgrey.classmo
   {
     switch (featureID)
     {
-      case ClassmodelPackage.PACKAGE__NAME:
+      case ClassmodelPackage.ANNOTATION__NAME:
         setName((String)newValue);
         return;
-      case ClassmodelPackage.PACKAGE__ELEMENT:
-        getElement().clear();
-        getElement().addAll((Collection<? extends Element>)newValue);
+      case ClassmodelPackage.ANNOTATION__ANNOTATIONS:
+        getAnnotations().clear();
+        getAnnotations().addAll((Collection<? extends Annotation>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -194,11 +195,11 @@ public class PackageImpl extends ElementImpl implements cz.cvut.earlgrey.classmo
   {
     switch (featureID)
     {
-      case ClassmodelPackage.PACKAGE__NAME:
+      case ClassmodelPackage.ANNOTATION__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case ClassmodelPackage.PACKAGE__ELEMENT:
-        getElement().clear();
+      case ClassmodelPackage.ANNOTATION__ANNOTATIONS:
+        getAnnotations().clear();
         return;
     }
     super.eUnset(featureID);
@@ -214,10 +215,10 @@ public class PackageImpl extends ElementImpl implements cz.cvut.earlgrey.classmo
   {
     switch (featureID)
     {
-      case ClassmodelPackage.PACKAGE__NAME:
+      case ClassmodelPackage.ANNOTATION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case ClassmodelPackage.PACKAGE__ELEMENT:
-        return element != null && !element.isEmpty();
+      case ClassmodelPackage.ANNOTATION__ANNOTATIONS:
+        return annotations != null && !annotations.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -239,4 +240,4 @@ public class PackageImpl extends ElementImpl implements cz.cvut.earlgrey.classmo
     return result.toString();
   }
 
-} //PackageImpl
+} //AnnotationImpl

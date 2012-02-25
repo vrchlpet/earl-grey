@@ -4,11 +4,10 @@ import org.eclipse.jface.viewers.StyledString;
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
-import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
-import cz.cvut.earlgrey.classmodel.classmodel.Relation;
+import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
 import cz.cvut.earlgrey.xtext.formatting.Styles;
 
 /**
@@ -71,7 +70,7 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		out.append(ROUND_BRACKET_LEFT);
 
 		int counter = 0;
-		for (Parameter params : ele.getParameters()) {
+		for (Parameter params : ele.getParameter()) {
 			if (counter++ > 0) {
 				out.append(COMMA + EMPTY_STRING);
 			}
@@ -88,16 +87,16 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	 * @param ele Instance of a Relation
 	 * @return label as StyledString
 	 */
-	public Object _text(Relation element) {
-		if (element.getOrigin().getName() == null) {
+	public Object _text(Relationship element) {
+		if (element.getHead() == null) {
 			return null;
 		}
-		StyledString styled = new StyledString(element.getOrigin().getName()
+		StyledString styled = new StyledString(element.getHead()
 				+ EMPTY_STRING);
 		styled.append(Styles.getStyledString(element.getType().getLiteral()));
-		Entity ret = element.getDestination();
+		String ret = element.getTail();
 		if (ret != null) {
-			styled.append(EMPTY_STRING + ret.getName());
+			styled.append(EMPTY_STRING + ret);
 		}
 		return styled;
 	}
@@ -129,9 +128,9 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	private String traverseReference(Reference ref) {
 		StringBuffer buffer = new StringBuffer();
 		if (ref != null) {
-			Entity type = ref.getType();
+			String type = ref.getType();
 			if (type != null) {
-				buffer.append(type.getName());
+				buffer.append(type);
 				for (Array array : ref.getArray()) {
 					buffer.append(arrayAsString(array));
 				}

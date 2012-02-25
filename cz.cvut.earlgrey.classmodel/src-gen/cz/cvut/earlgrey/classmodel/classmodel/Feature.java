@@ -16,9 +16,9 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#getConstraint <em>Constraint</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#getModifier <em>Modifier</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#isStatic <em>Static</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -29,30 +29,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface Feature extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Constraint</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Constraint</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getFeature_Name()
+   * @return the value of the '<em>Constraint</em>' attribute.
+   * @see #setConstraint(String)
+   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getFeature_Constraint()
    * @model
    * @generated
    */
-  String getName();
+  String getConstraint();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#getConstraint <em>Constraint</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
+   * @param value the new value of the '<em>Constraint</em>' attribute.
+   * @see #getConstraint()
    * @generated
    */
-  void setName(String value);
+  void setConstraint(String value);
 
   /**
    * Returns the value of the '<em><b>Modifier</b></em>' attribute.
@@ -84,29 +84,29 @@ public interface Feature extends EObject
   void setModifier(Visibility value);
 
   /**
-   * Returns the value of the '<em><b>Static</b></em>' attribute.
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Static</em>' attribute isn't clear,
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Static</em>' attribute.
-   * @see #setStatic(boolean)
-   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getFeature_Static()
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getFeature_Name()
    * @model
    * @generated
    */
-  boolean isStatic();
+  String getName();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#isStatic <em>Static</em>}' attribute.
+   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Static</em>' attribute.
-   * @see #isStatic()
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
    * @generated
    */
-  void setStatic(boolean value);
+  void setName(String value);
 
 } // Feature

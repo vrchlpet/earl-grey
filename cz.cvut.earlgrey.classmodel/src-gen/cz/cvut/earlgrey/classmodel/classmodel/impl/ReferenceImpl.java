@@ -8,7 +8,6 @@ package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
-import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 
 import java.util.Collection;
@@ -44,14 +43,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class ReferenceImpl extends MinimalEObjectImpl.Container implements Reference
 {
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' reference.
+   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getType()
    * @generated
    * @ordered
    */
-  protected Entity type;
+  protected static final String TYPE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected String type = TYPE_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getArray() <em>Array</em>}' containment reference list.
@@ -89,27 +98,7 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
    * <!-- end-user-doc -->
    * @generated
    */
-  public Entity getType()
-  {
-    if (type != null && type.eIsProxy())
-    {
-      InternalEObject oldType = (InternalEObject)type;
-      type = (Entity)eResolveProxy(oldType);
-      if (type != oldType)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassmodelPackage.REFERENCE__TYPE, oldType, type));
-      }
-    }
-    return type;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Entity basicGetType()
+  public String getType()
   {
     return type;
   }
@@ -119,9 +108,9 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(Entity newType)
+  public void setType(String newType)
   {
-    Entity oldType = type;
+    String oldType = type;
     type = newType;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.REFERENCE__TYPE, oldType, type));
@@ -168,8 +157,7 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
     switch (featureID)
     {
       case ClassmodelPackage.REFERENCE__TYPE:
-        if (resolve) return getType();
-        return basicGetType();
+        return getType();
       case ClassmodelPackage.REFERENCE__ARRAY:
         return getArray();
     }
@@ -188,7 +176,7 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
     switch (featureID)
     {
       case ClassmodelPackage.REFERENCE__TYPE:
-        setType((Entity)newValue);
+        setType((String)newValue);
         return;
       case ClassmodelPackage.REFERENCE__ARRAY:
         getArray().clear();
@@ -209,7 +197,7 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
     switch (featureID)
     {
       case ClassmodelPackage.REFERENCE__TYPE:
-        setType((Entity)null);
+        setType(TYPE_EDEFAULT);
         return;
       case ClassmodelPackage.REFERENCE__ARRAY:
         getArray().clear();
@@ -229,11 +217,28 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
     switch (featureID)
     {
       case ClassmodelPackage.REFERENCE__TYPE:
-        return type != null;
+        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
       case ClassmodelPackage.REFERENCE__ARRAY:
         return array != null && !array.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (type: ");
+    result.append(type);
+    result.append(')');
+    return result.toString();
   }
 
 } //ReferenceImpl

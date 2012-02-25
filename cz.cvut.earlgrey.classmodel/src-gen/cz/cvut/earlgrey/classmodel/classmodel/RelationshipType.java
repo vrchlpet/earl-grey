@@ -14,14 +14,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Relation Type</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Relationship Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getRelationType()
+ * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getRelationshipType()
  * @model
  * @generated
  */
-public enum RelationType implements Enumerator
+public enum RelationshipType implements Enumerator
 {
   /**
    * The '<em><b>ASSOCIATION</b></em>' literal object.
@@ -31,7 +31,7 @@ public enum RelationType implements Enumerator
    * @generated
    * @ordered
    */
-  ASSOCIATION(0, "ASSOCIATION", "associates"),
+  ASSOCIATION(0, "ASSOCIATION", "association"),
 
   /**
    * The '<em><b>DEPENCY</b></em>' literal object.
@@ -41,7 +41,7 @@ public enum RelationType implements Enumerator
    * @generated
    * @ordered
    */
-  DEPENCY(1, "DEPENCY", "depends"),
+  DEPENCY(1, "DEPENCY", "depency"),
 
   /**
    * The '<em><b>GENERALIZATION</b></em>' literal object.
@@ -51,7 +51,7 @@ public enum RelationType implements Enumerator
    * @generated
    * @ordered
    */
-  GENERALIZATION(2, "GENERALIZATION", "extends"),
+  GENERALIZATION(2, "GENERALIZATION", "generalization"),
 
   /**
    * The '<em><b>REALIZATION</b></em>' literal object.
@@ -61,7 +61,7 @@ public enum RelationType implements Enumerator
    * @generated
    * @ordered
    */
-  REALIZATION(3, "REALIZATION", "implements"),
+  REALIZATION(3, "REALIZATION", "realization"),
 
   /**
    * The '<em><b>AGGREGATION</b></em>' literal object.
@@ -71,7 +71,7 @@ public enum RelationType implements Enumerator
    * @generated
    * @ordered
    */
-  AGGREGATION(4, "AGGREGATION", "aggregates"),
+  AGGREGATION(4, "AGGREGATION", "aggregation"),
 
   /**
    * The '<em><b>COMPOSITION</b></em>' literal object.
@@ -81,7 +81,7 @@ public enum RelationType implements Enumerator
    * @generated
    * @ordered
    */
-  COMPOSITION(5, "COMPOSITION", "composedOf");
+  COMPOSITION(5, "COMPOSITION", "composition");
 
   /**
    * The '<em><b>ASSOCIATION</b></em>' literal value.
@@ -92,7 +92,7 @@ public enum RelationType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #ASSOCIATION
-   * @model literal="associates"
+   * @model literal="association"
    * @generated
    * @ordered
    */
@@ -107,7 +107,7 @@ public enum RelationType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #DEPENCY
-   * @model literal="depends"
+   * @model literal="depency"
    * @generated
    * @ordered
    */
@@ -122,7 +122,7 @@ public enum RelationType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #GENERALIZATION
-   * @model literal="extends"
+   * @model literal="generalization"
    * @generated
    * @ordered
    */
@@ -137,7 +137,7 @@ public enum RelationType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #REALIZATION
-   * @model literal="implements"
+   * @model literal="realization"
    * @generated
    * @ordered
    */
@@ -152,7 +152,7 @@ public enum RelationType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #AGGREGATION
-   * @model literal="aggregates"
+   * @model literal="aggregation"
    * @generated
    * @ordered
    */
@@ -167,20 +167,20 @@ public enum RelationType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #COMPOSITION
-   * @model literal="composedOf"
+   * @model literal="composition"
    * @generated
    * @ordered
    */
   public static final int COMPOSITION_VALUE = 5;
 
   /**
-   * An array of all the '<em><b>Relation Type</b></em>' enumerators.
+   * An array of all the '<em><b>Relationship Type</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private static final RelationType[] VALUES_ARRAY =
-    new RelationType[]
+  private static final RelationshipType[] VALUES_ARRAY =
+    new RelationshipType[]
     {
       ASSOCIATION,
       DEPENCY,
@@ -191,24 +191,24 @@ public enum RelationType implements Enumerator
     };
 
   /**
-   * A public read-only list of all the '<em><b>Relation Type</b></em>' enumerators.
+   * A public read-only list of all the '<em><b>Relationship Type</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static final List<RelationType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+  public static final List<RelationshipType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>Relation Type</b></em>' literal with the specified literal value.
+   * Returns the '<em><b>Relationship Type</b></em>' literal with the specified literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static RelationType get(String literal)
+  public static RelationshipType get(String literal)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      RelationType result = VALUES_ARRAY[i];
+      RelationshipType result = VALUES_ARRAY[i];
       if (result.toString().equals(literal))
       {
         return result;
@@ -218,16 +218,16 @@ public enum RelationType implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>Relation Type</b></em>' literal with the specified name.
+   * Returns the '<em><b>Relationship Type</b></em>' literal with the specified name.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static RelationType getByName(String name)
+  public static RelationshipType getByName(String name)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      RelationType result = VALUES_ARRAY[i];
+      RelationshipType result = VALUES_ARRAY[i];
       if (result.getName().equals(name))
       {
         return result;
@@ -237,12 +237,12 @@ public enum RelationType implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>Relation Type</b></em>' literal with the specified integer value.
+   * Returns the '<em><b>Relationship Type</b></em>' literal with the specified integer value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static RelationType get(int value)
+  public static RelationshipType get(int value)
   {
     switch (value)
     {
@@ -283,7 +283,7 @@ public enum RelationType implements Enumerator
    * <!-- end-user-doc -->
    * @generated
    */
-  private RelationType(int value, String name, String literal)
+  private RelationshipType(int value, String name, String literal)
   {
     this.value = value;
     this.name = name;
@@ -332,4 +332,4 @@ public enum RelationType implements Enumerator
     return literal;
   }
   
-} //RelationType
+} //RelationshipType

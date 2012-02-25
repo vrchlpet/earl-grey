@@ -6,21 +6,25 @@
  */
 package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
-import cz.cvut.earlgrey.classmodel.classmodel.AbstractElement;
+import cz.cvut.earlgrey.classmodel.classmodel.Annotation;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
-import cz.cvut.earlgrey.classmodel.classmodel.Classmodel;
+import cz.cvut.earlgrey.classmodel.classmodel.Classifier;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelFactory;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
-import cz.cvut.earlgrey.classmodel.classmodel.Entity;
-import cz.cvut.earlgrey.classmodel.classmodel.EntityType;
+import cz.cvut.earlgrey.classmodel.classmodel.Constant;
+import cz.cvut.earlgrey.classmodel.classmodel.Datatype;
+import cz.cvut.earlgrey.classmodel.classmodel.Element;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
+import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
+import cz.cvut.earlgrey.classmodel.classmodel.Model;
+import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
-import cz.cvut.earlgrey.classmodel.classmodel.Relation;
-import cz.cvut.earlgrey.classmodel.classmodel.RelationType;
+import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
+import cz.cvut.earlgrey.classmodel.classmodel.RelationshipType;
 import cz.cvut.earlgrey.classmodel.classmodel.Visibility;
 
 import org.eclipse.emf.ecore.EClass;
@@ -84,18 +88,23 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
   {
     switch (eClass.getClassifierID())
     {
-      case ClassmodelPackage.CLASSMODEL: return createClassmodel();
-      case ClassmodelPackage.ABSTRACT_ELEMENT: return createAbstractElement();
-      case ClassmodelPackage.PACKAGE: return createPackage();
+      case ClassmodelPackage.MODEL: return createModel();
       case ClassmodelPackage.IMPORT: return createImport();
-      case ClassmodelPackage.ENTITY: return createEntity();
+      case ClassmodelPackage.ELEMENT: return createElement();
+      case ClassmodelPackage.DATATYPE: return createDatatype();
+      case ClassmodelPackage.PACKAGE: return createPackage();
+      case ClassmodelPackage.CLASSIFIER: return createClassifier();
+      case ClassmodelPackage.ANNOTATION: return createAnnotation();
+      case ClassmodelPackage.GENERALIZATION: return createGeneralization();
+      case ClassmodelPackage.FEATURE: return createFeature();
+      case ClassmodelPackage.RELATIONSHIP: return createRelationship();
+      case ClassmodelPackage.MULTIPLICITY: return createMultiplicity();
+      case ClassmodelPackage.CONSTANT: return createConstant();
+      case ClassmodelPackage.OPERATION: return createOperation();
+      case ClassmodelPackage.PARAMETER: return createParameter();
       case ClassmodelPackage.ATTRIBUTE: return createAttribute();
       case ClassmodelPackage.REFERENCE: return createReference();
       case ClassmodelPackage.ARRAY: return createArray();
-      case ClassmodelPackage.FEATURE: return createFeature();
-      case ClassmodelPackage.OPERATION: return createOperation();
-      case ClassmodelPackage.PARAMETER: return createParameter();
-      case ClassmodelPackage.RELATION: return createRelation();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -111,12 +120,10 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
   {
     switch (eDataType.getClassifierID())
     {
-      case ClassmodelPackage.RELATION_TYPE:
-        return createRelationTypeFromString(eDataType, initialValue);
+      case ClassmodelPackage.RELATIONSHIP_TYPE:
+        return createRelationshipTypeFromString(eDataType, initialValue);
       case ClassmodelPackage.VISIBILITY:
         return createVisibilityFromString(eDataType, initialValue);
-      case ClassmodelPackage.ENTITY_TYPE:
-        return createEntityTypeFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -132,12 +139,10 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
   {
     switch (eDataType.getClassifierID())
     {
-      case ClassmodelPackage.RELATION_TYPE:
-        return convertRelationTypeToString(eDataType, instanceValue);
+      case ClassmodelPackage.RELATIONSHIP_TYPE:
+        return convertRelationshipTypeToString(eDataType, instanceValue);
       case ClassmodelPackage.VISIBILITY:
         return convertVisibilityToString(eDataType, instanceValue);
-      case ClassmodelPackage.ENTITY_TYPE:
-        return convertEntityTypeToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -148,32 +153,10 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Classmodel createClassmodel()
+  public Model createModel()
   {
-    ClassmodelImpl classmodel = new ClassmodelImpl();
-    return classmodel;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public AbstractElement createAbstractElement()
-  {
-    AbstractElementImpl abstractElement = new AbstractElementImpl();
-    return abstractElement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public cz.cvut.earlgrey.classmodel.classmodel.Package createPackage()
-  {
-    PackageImpl package_ = new PackageImpl();
-    return package_;
+    ModelImpl model = new ModelImpl();
+    return model;
   }
 
   /**
@@ -192,10 +175,131 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Entity createEntity()
+  public Element createElement()
   {
-    EntityImpl entity = new EntityImpl();
-    return entity;
+    ElementImpl element = new ElementImpl();
+    return element;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Datatype createDatatype()
+  {
+    DatatypeImpl datatype = new DatatypeImpl();
+    return datatype;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public cz.cvut.earlgrey.classmodel.classmodel.Package createPackage()
+  {
+    PackageImpl package_ = new PackageImpl();
+    return package_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Classifier createClassifier()
+  {
+    ClassifierImpl classifier = new ClassifierImpl();
+    return classifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Annotation createAnnotation()
+  {
+    AnnotationImpl annotation = new AnnotationImpl();
+    return annotation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Generalization createGeneralization()
+  {
+    GeneralizationImpl generalization = new GeneralizationImpl();
+    return generalization;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Feature createFeature()
+  {
+    FeatureImpl feature = new FeatureImpl();
+    return feature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Relationship createRelationship()
+  {
+    RelationshipImpl relationship = new RelationshipImpl();
+    return relationship;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Multiplicity createMultiplicity()
+  {
+    MultiplicityImpl multiplicity = new MultiplicityImpl();
+    return multiplicity;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Constant createConstant()
+  {
+    ConstantImpl constant = new ConstantImpl();
+    return constant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Operation createOperation()
+  {
+    OperationImpl operation = new OperationImpl();
+    return operation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Parameter createParameter()
+  {
+    ParameterImpl parameter = new ParameterImpl();
+    return parameter;
   }
 
   /**
@@ -236,53 +340,9 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Feature createFeature()
+  public RelationshipType createRelationshipTypeFromString(EDataType eDataType, String initialValue)
   {
-    FeatureImpl feature = new FeatureImpl();
-    return feature;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Operation createOperation()
-  {
-    OperationImpl operation = new OperationImpl();
-    return operation;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Parameter createParameter()
-  {
-    ParameterImpl parameter = new ParameterImpl();
-    return parameter;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Relation createRelation()
-  {
-    RelationImpl relation = new RelationImpl();
-    return relation;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public RelationType createRelationTypeFromString(EDataType eDataType, String initialValue)
-  {
-    RelationType result = RelationType.get(initialValue);
+    RelationshipType result = RelationshipType.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -292,7 +352,7 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertRelationTypeToString(EDataType eDataType, Object instanceValue)
+  public String convertRelationshipTypeToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }
@@ -315,28 +375,6 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
    * @generated
    */
   public String convertVisibilityToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EntityType createEntityTypeFromString(EDataType eDataType, String initialValue)
-  {
-    EntityType result = EntityType.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertEntityTypeToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

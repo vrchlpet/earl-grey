@@ -31,8 +31,9 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl#getImplicit <em>Implicit</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl#isStatic <em>Static</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl#getType <em>Type</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl#getImplicit <em>Implicit</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,14 +42,24 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
 public class AttributeImpl extends FeatureImpl implements Attribute
 {
   /**
-   * The cached value of the '{@link #getImplicit() <em>Implicit</em>}' attribute list.
+   * The default value of the '{@link #isStatic() <em>Static</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getImplicit()
+   * @see #isStatic()
    * @generated
    * @ordered
    */
-  protected EList<String> implicit;
+  protected static final boolean STATIC_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isStatic() <em>Static</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isStatic()
+   * @generated
+   * @ordered
+   */
+  protected boolean static_ = STATIC_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
@@ -59,6 +70,16 @@ public class AttributeImpl extends FeatureImpl implements Attribute
    * @ordered
    */
   protected Reference type;
+
+  /**
+   * The cached value of the '{@link #getImplicit() <em>Implicit</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getImplicit()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> implicit;
 
   /**
    * <!-- begin-user-doc -->
@@ -86,13 +107,22 @@ public class AttributeImpl extends FeatureImpl implements Attribute
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getImplicit()
+  public boolean isStatic()
   {
-    if (implicit == null)
-    {
-      implicit = new EDataTypeEList<String>(String.class, this, ClassmodelPackage.ATTRIBUTE__IMPLICIT);
-    }
-    return implicit;
+    return static_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setStatic(boolean newStatic)
+  {
+    boolean oldStatic = static_;
+    static_ = newStatic;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.ATTRIBUTE__STATIC, oldStatic, static_));
   }
 
   /**
@@ -148,6 +178,20 @@ public class AttributeImpl extends FeatureImpl implements Attribute
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<String> getImplicit()
+  {
+    if (implicit == null)
+    {
+      implicit = new EDataTypeEList<String>(String.class, this, ClassmodelPackage.ATTRIBUTE__IMPLICIT);
+    }
+    return implicit;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -169,10 +213,12 @@ public class AttributeImpl extends FeatureImpl implements Attribute
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ATTRIBUTE__IMPLICIT:
-        return getImplicit();
+      case ClassmodelPackage.ATTRIBUTE__STATIC:
+        return isStatic();
       case ClassmodelPackage.ATTRIBUTE__TYPE:
         return getType();
+      case ClassmodelPackage.ATTRIBUTE__IMPLICIT:
+        return getImplicit();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -188,12 +234,15 @@ public class AttributeImpl extends FeatureImpl implements Attribute
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ATTRIBUTE__IMPLICIT:
-        getImplicit().clear();
-        getImplicit().addAll((Collection<? extends String>)newValue);
+      case ClassmodelPackage.ATTRIBUTE__STATIC:
+        setStatic((Boolean)newValue);
         return;
       case ClassmodelPackage.ATTRIBUTE__TYPE:
         setType((Reference)newValue);
+        return;
+      case ClassmodelPackage.ATTRIBUTE__IMPLICIT:
+        getImplicit().clear();
+        getImplicit().addAll((Collection<? extends String>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -209,11 +258,14 @@ public class AttributeImpl extends FeatureImpl implements Attribute
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ATTRIBUTE__IMPLICIT:
-        getImplicit().clear();
+      case ClassmodelPackage.ATTRIBUTE__STATIC:
+        setStatic(STATIC_EDEFAULT);
         return;
       case ClassmodelPackage.ATTRIBUTE__TYPE:
         setType((Reference)null);
+        return;
+      case ClassmodelPackage.ATTRIBUTE__IMPLICIT:
+        getImplicit().clear();
         return;
     }
     super.eUnset(featureID);
@@ -229,10 +281,12 @@ public class AttributeImpl extends FeatureImpl implements Attribute
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ATTRIBUTE__IMPLICIT:
-        return implicit != null && !implicit.isEmpty();
+      case ClassmodelPackage.ATTRIBUTE__STATIC:
+        return static_ != STATIC_EDEFAULT;
       case ClassmodelPackage.ATTRIBUTE__TYPE:
         return type != null;
+      case ClassmodelPackage.ATTRIBUTE__IMPLICIT:
+        return implicit != null && !implicit.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -248,7 +302,9 @@ public class AttributeImpl extends FeatureImpl implements Attribute
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (implicit: ");
+    result.append(" (static: ");
+    result.append(static_);
+    result.append(", implicit: ");
     result.append(implicit);
     result.append(')');
     return result.toString();

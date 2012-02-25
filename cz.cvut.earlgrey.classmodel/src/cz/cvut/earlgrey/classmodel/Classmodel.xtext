@@ -2,115 +2,156 @@ grammar cz.cvut.earlgrey.classmodel.Classmodel with org.eclipse.xtext.common.Ter
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 generate classmodel "http://www.cvut.cz/earlgrey/classmodel/Classmodel"
 
-/**
- * Defines root node of a model.
- * Resource imports must be defined before other elements.
- */
-Classmodel:
-    (imports+=Import)* (elements+=AbstractElement)*;
-
-AbstractElement:
-    Package | Entity | Relation;
-
-Package:
-    'package' name=ID '{'
-    (elements+=AbstractElement)*
-    '}';
+Model:
+    (imports+=Import)* (elements+=Element)*
+;
 
 Import:
-    'import' importURI=STRING;
-
-Entity:
-    Class | Enum;
-    
-Class returns Entity:
-    => (class?='class'| interface?='interface'| abstract?='abstract') name=ID
-    '{'
-    feature+=Feature*
-    '}'
+    'import' importURI=STRING
 ;
 
-Enum returns Entity:
-    enumeration?='enum' name=ID
-    '{'
-    feature+=EnumConstant*
-    '}';
-
-EnumConstant returns Attribute:
-    name=ID (=> '=' implicit+=IntValue)?
+Element:
+//    {Element} (annotation=Annotation)?
+        Relationship
+        | Classifier
+        | Package
+        | Datatype
 ;
 
-/**
- * Entity reference, supports n-dimension arrays.
- */
-Reference:
-    type=[Entity|QualifiedName] array+=Array*;
+// e.g.: datatype int
+Datatype:
+    'datatype' name=ID
+;
 
-Array:
-    {Array} '[' size=INT? ']';
+// e.g.: package utils /*..*/ end
+Package:
+    'package' name=ID
+        element+=Element*
+    'end'
+;
+
+// e.g.: class node /*..*/ end
+Classifier:
+    'class' name=ID (=> generalization=Generalization)?
+        (constraint=CONSTRAINT)?
+        feature+=Feature*
+    'end'
+;
+
+//TEST
+Annotation:
+    '@' name=ID
+    ('('
+        (annotations+=Annotation)*
+    ')')?
+;
+
+// e.g.: isA Fruit
+Generalization:
+    'isA' classifier+=ExtendedID (',' classifier+=ExtendedID)*
+;
 
 Feature:
-    Attribute | Operation;
-
-//i.e.: +setAll(Parameter[]) : void
-Operation:
-    (modifier=Visibility? & static?='static'?) name=ID '(' (=> parameters+=Parameter (',' parameters+=Parameter)*)? ')'
-    ':'
-    return=Reference;
-
-Parameter:
-    name=ID ':' type=Reference (=> '=' implicit+=Value (',' implicit+=Value)*)?;
-
-Attribute:
-    (modifier=Visibility? & static?='static'?) name=ID ':' type=Reference (=> '=' implicit+=Value (',' implicit+=Value)*)?;
-
-Value returns ecore::EString:
-   'null' | STRING | IntValue
+    (Attribute | Operation | Constant) (constraint=CONSTRAINT)?
 ;
 
-IntValue returns ecore::EString:
+// e.g.: composition 0..1 Tree 0..* Leaft end
+Relationship:
+    type=RelationshipType (label=STRING)?
+        (headNavigable?='navigable')? (headMultiplicity=Multiplicity)? head=ExtendedID (':' headLabel=STRING)? //tip: remove ':'?
+        (tailNavigable?='navigable')? (tailMultiplicity=Multiplicity)? tail=ExtendedID (':' tailLabel=STRING)? //tip: remove ':'?
+    'end'
+;
+
+// e.g.: 0..1
+Multiplicity:
+    upper=MultiplicityValue ('..' lower=MultiplicityValue)?
+;
+
+MultiplicityValue returns ecore::EString:
+    Integer | '*'
+;
+
+// e.g.: BUFFER_LENGTH = 512
+Constant:
+    modifier=Visibility? name=ID '=' value=ImplicitValue
+;
+
+// e.g.: +add(Name : String) : void
+Operation:
+    (modifier=Visibility? & static?='static'?) name=ID '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')'
+    ':' return = Reference
+;
+
+// e.g.: Name : String = "John"
+Parameter:
+    name=ID ':' type=Reference (=> '=' implicit+=ImplicitValue (',' implicit+=ImplicitValue)*)?
+;
+
+// e.g.: +matrix : int[5][5]
+Attribute:
+    (modifier=Visibility? & static?='static'?) name=ID ':' type=Reference (=> '=' implicit+=ImplicitValue (',' implicit+=ImplicitValue)*)?
+;
+
+Reference:
+    type=ExtendedID array+=Array*
+;
+
+Array:
+    {Array} '[' size=INT? ']'
+;
+
+ImplicitValue returns ecore::EString:
+    NULL
+    | FALSE
+    | TRUE
+    | STRING
+    | Integer
+    | Double 
+    | ID
+;
+
+Integer returns ecore::EString:
     INT
 ;
 
-Relation:
-    origin=[Entity|QualifiedName] (cardinalityFrom=Cardinality)? type=RelationType (cardinalityTo=Cardinality)?
-    destination=[Entity|QualifiedName] (':' label=STRING)?;
-    
-Cardinality returns ecore::EString:
-    CardinalityValue ('..' CardinalityValue)?
+Double returns ecore::EString:
+    INT '.' INT
 ;
 
-CardinalityValue returns ecore::EString:
-    INT | '*'
-;
-
-/**
- * Relation type:
- * A is in relationship with B
- * 
- * i.e.: A extends B
- */
-enum RelationType:
-    ASSOCIATION='associates' //A is in assocition with B 
-    | DEPENCY='depends' //A depends on B
-    | GENERALIZATION='extends' //A extends B
-    | REALIZATION='implements' //A implements B
-    | AGGREGATION='aggregates' //A aggregates B (A consists of B(s), but A can exist without B)
-    | COMPOSITION='composedOf' //A x B (A is composed of B(s), but can't exist without B)
+enum RelationshipType:
+    ASSOCIATION = 'association'
+    | DEPENCY = 'depency'
+    | GENERALIZATION = 'generalization'
+    | REALIZATION = 'realization'
+    | AGGREGATION = 'aggregation'
+    | COMPOSITION = 'composition'
 ;
 
 enum Visibility:
-    PUBLIC='+' | PRIVATE='-' | PROTECTED='#' | PACKAGE_PRIVATE='~';
+    PUBLIC='+'
+    | PRIVATE='-'
+    | PROTECTED='#'
+    | PACKAGE_PRIVATE='~'
+;
 
-enum EntityType:
-    CLASS='class' | INTERFACE='interface' | ABSTRACT='abstract' | ENUM='enum'
-    ;
+ExtendedID:
+    ID ('.' ID)*
+;
 
-QualifiedName:
-    ID ('.' ID)*;
+// {name.length > 0}
+terminal CONSTRAINT:
+    '{'->'}'
+;
 
-//TODO: Add constrain rule
+terminal TRUE:
+    'true'
+;
 
-//terminal CONSTRAIN:
-//    '{'->'}';
-    
+terminal NULL:
+    'null'
+;
+
+terminal FALSE:
+    'false'
+;

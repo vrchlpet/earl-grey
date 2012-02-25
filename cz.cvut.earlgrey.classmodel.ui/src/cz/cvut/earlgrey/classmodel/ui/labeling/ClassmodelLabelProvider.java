@@ -6,13 +6,12 @@ import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
 import com.google.inject.Inject;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
-import cz.cvut.earlgrey.classmodel.classmodel.Classmodel;
-import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
+import cz.cvut.earlgrey.classmodel.classmodel.Model;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
-import cz.cvut.earlgrey.classmodel.classmodel.Relation;
-import cz.cvut.earlgrey.classmodel.classmodel.RelationType;
+import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
+import cz.cvut.earlgrey.classmodel.classmodel.RelationshipType;
 import cz.cvut.earlgrey.classmodel.classmodel.Visibility;
 
 /**
@@ -31,15 +30,15 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 	private static final String PACKAGE = "package_obj.gif";
 	private static final String METHOD_PREFIX = "method_";
 	private static final String ATTRIBUTE_PREFIX = "field_";
-	private static Map<RelationType, String> relation = new HashMap<RelationType, String>();
+	private static Map<RelationshipType, String> relation = new HashMap<RelationshipType, String>();
 	private static Map<Visibility, String> visibility = new HashMap<Visibility, String>();
 	static {
-		relation.put(RelationType.AGGREGATION, "Aggregation.gif");
-		relation.put(RelationType.ASSOCIATION, "Association.gif");
-		relation.put(RelationType.COMPOSITION, "Composition.gif");
-		relation.put(RelationType.DEPENCY, "Dependency.gif");
-		relation.put(RelationType.GENERALIZATION, "Generalization.gif");
-		relation.put(RelationType.REALIZATION, "Realization.gif");
+		relation.put(RelationshipType.AGGREGATION, "Aggregation.gif");
+		relation.put(RelationshipType.ASSOCIATION, "Association.gif");
+		relation.put(RelationshipType.COMPOSITION, "Composition.gif");
+		relation.put(RelationshipType.DEPENCY, "Dependency.gif");
+		relation.put(RelationshipType.GENERALIZATION, "Generalization.gif");
+		relation.put(RelationshipType.REALIZATION, "Realization.gif");
 
 		visibility.put(Visibility.PUBLIC, "public_obj.gif");
 		visibility.put(Visibility.PRIVATE, "private_obj.gif");
@@ -57,11 +56,11 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 	 * @param ele Instance of an Relation
 	 * @return image's filename as String
 	 */
-	String image(Relation ele) {
+	String image(Relationship ele) {
 		if (ele != null) {
 			return relation.get(ele.getType());
 		}
-		return relation.get(RelationType.ASSOCIATION);
+		return relation.get(RelationshipType.ASSOCIATION);
 	}
 
 	/**
@@ -124,26 +123,27 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 	 * @param ele Instance of a Classmodel
 	 * @return image's filename as String
 	 */
-	String image(Classmodel ele) {
+	String image(Model ele) {
 		return CLASSMODEL;
 	}
 
 	/**
+	 * FIXME: 
 	 * Returns Entity's image used in Outline View.
 	 * 
 	 * @param ele Instance of an Entity
 	 * @return image's filename as String
 	 */
-	String image(Entity ele) {
-		if (ele == null) {
-			return null;
-		}
-		if (ele.isEnumeration()) {
-			return ENUM;
-		}
-		if (ele.isInterface()) {
-			return INTERFACE;
-		}
-		return CLASS;
-	}
+	// String image(Entity ele) {
+	// if (ele == null) {
+	// return null;
+	// }
+	// if (ele.isEnumeration()) {
+	// return ENUM;
+	// }
+	// if (ele.isInterface()) {
+	// return INTERFACE;
+	// }
+	// return CLASS;
+	// }
 }

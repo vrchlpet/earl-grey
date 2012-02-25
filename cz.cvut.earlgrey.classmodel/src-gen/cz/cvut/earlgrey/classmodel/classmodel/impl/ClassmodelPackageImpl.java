@@ -6,21 +6,25 @@
  */
 package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
-import cz.cvut.earlgrey.classmodel.classmodel.AbstractElement;
+import cz.cvut.earlgrey.classmodel.classmodel.Annotation;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
-import cz.cvut.earlgrey.classmodel.classmodel.Classmodel;
+import cz.cvut.earlgrey.classmodel.classmodel.Classifier;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelFactory;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
-import cz.cvut.earlgrey.classmodel.classmodel.Entity;
-import cz.cvut.earlgrey.classmodel.classmodel.EntityType;
+import cz.cvut.earlgrey.classmodel.classmodel.Constant;
+import cz.cvut.earlgrey.classmodel.classmodel.Datatype;
+import cz.cvut.earlgrey.classmodel.classmodel.Element;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
+import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
+import cz.cvut.earlgrey.classmodel.classmodel.Model;
+import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
-import cz.cvut.earlgrey.classmodel.classmodel.Relation;
-import cz.cvut.earlgrey.classmodel.classmodel.RelationType;
+import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
+import cz.cvut.earlgrey.classmodel.classmodel.RelationshipType;
 import cz.cvut.earlgrey.classmodel.classmodel.Visibility;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -44,21 +48,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass classmodelEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass abstractElementEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass packageEClass = null;
+  private EClass modelEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -72,7 +62,84 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass entityEClass = null;
+  private EClass elementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass datatypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass packageEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass classifierEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass annotationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass generalizationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass featureEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass relationshipEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass multiplicityEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass constantEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass operationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass parameterEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -100,35 +167,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass featureEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass operationEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass parameterEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass relationEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EEnum relationTypeEEnum = null;
+  private EEnum relationshipTypeEEnum = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -136,13 +175,6 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * @generated
    */
   private EEnum visibilityEEnum = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EEnum entityTypeEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -212,9 +244,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getClassmodel()
+  public EClass getModel()
   {
-    return classmodelEClass;
+    return modelEClass;
   }
 
   /**
@@ -222,9 +254,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getClassmodel_Imports()
+  public EReference getModel_Imports()
   {
-    return (EReference)classmodelEClass.getEStructuralFeatures().get(0);
+    return (EReference)modelEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -232,49 +264,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getClassmodel_Elements()
+  public EReference getModel_Elements()
   {
-    return (EReference)classmodelEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getAbstractElement()
-  {
-    return abstractElementEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPackage()
-  {
-    return packageEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPackage_Name()
-  {
-    return (EAttribute)packageEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPackage_Elements()
-  {
-    return (EReference)packageEClass.getEStructuralFeatures().get(1);
+    return (EReference)modelEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -302,9 +294,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getEntity()
+  public EClass getElement()
   {
-    return entityEClass;
+    return elementEClass;
   }
 
   /**
@@ -312,9 +304,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEntity_Class()
+  public EClass getDatatype()
   {
-    return (EAttribute)entityEClass.getEStructuralFeatures().get(0);
+    return datatypeEClass;
   }
 
   /**
@@ -322,9 +314,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEntity_Interface()
+  public EAttribute getDatatype_Name()
   {
-    return (EAttribute)entityEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)datatypeEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -332,9 +324,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEntity_Abstract()
+  public EClass getPackage()
   {
-    return (EAttribute)entityEClass.getEStructuralFeatures().get(2);
+    return packageEClass;
   }
 
   /**
@@ -342,9 +334,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEntity_Name()
+  public EAttribute getPackage_Name()
   {
-    return (EAttribute)entityEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)packageEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -352,9 +344,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getEntity_Feature()
+  public EReference getPackage_Element()
   {
-    return (EReference)entityEClass.getEStructuralFeatures().get(4);
+    return (EReference)packageEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -362,9 +354,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEntity_Enumeration()
+  public EClass getClassifier()
   {
-    return (EAttribute)entityEClass.getEStructuralFeatures().get(5);
+    return classifierEClass;
   }
 
   /**
@@ -372,9 +364,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getAttribute()
+  public EAttribute getClassifier_Name()
   {
-    return attributeEClass;
+    return (EAttribute)classifierEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -382,9 +374,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getAttribute_Implicit()
+  public EReference getClassifier_Generalization()
   {
-    return (EAttribute)attributeEClass.getEStructuralFeatures().get(0);
+    return (EReference)classifierEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -392,9 +384,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAttribute_Type()
+  public EAttribute getClassifier_Constraint()
   {
-    return (EReference)attributeEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)classifierEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -402,9 +394,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getReference()
+  public EReference getClassifier_Feature()
   {
-    return referenceEClass;
+    return (EReference)classifierEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -412,9 +404,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getReference_Type()
+  public EClass getAnnotation()
   {
-    return (EReference)referenceEClass.getEStructuralFeatures().get(0);
+    return annotationEClass;
   }
 
   /**
@@ -422,9 +414,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getReference_Array()
+  public EAttribute getAnnotation_Name()
   {
-    return (EReference)referenceEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)annotationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -432,9 +424,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getArray()
+  public EReference getAnnotation_Annotations()
   {
-    return arrayEClass;
+    return (EReference)annotationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -442,9 +434,19 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getArray_Size()
+  public EClass getGeneralization()
   {
-    return (EAttribute)arrayEClass.getEStructuralFeatures().get(0);
+    return generalizationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGeneralization_Classifier()
+  {
+    return (EAttribute)generalizationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -462,7 +464,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFeature_Name()
+  public EAttribute getFeature_Constraint()
   {
     return (EAttribute)featureEClass.getEStructuralFeatures().get(0);
   }
@@ -482,9 +484,169 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFeature_Static()
+  public EAttribute getFeature_Name()
   {
     return (EAttribute)featureEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRelationship()
+  {
+    return relationshipEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRelationship_Type()
+  {
+    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRelationship_Label()
+  {
+    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRelationship_HeadNavigable()
+  {
+    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRelationship_HeadMultiplicity()
+  {
+    return (EReference)relationshipEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRelationship_Head()
+  {
+    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRelationship_HeadLabel()
+  {
+    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRelationship_TailNavigable()
+  {
+    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRelationship_TailMultiplicity()
+  {
+    return (EReference)relationshipEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRelationship_Tail()
+  {
+    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRelationship_TailLabel()
+  {
+    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(9);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMultiplicity()
+  {
+    return multiplicityEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMultiplicity_Upper()
+  {
+    return (EAttribute)multiplicityEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMultiplicity_Lower()
+  {
+    return (EAttribute)multiplicityEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getConstant()
+  {
+    return constantEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getConstant_Value()
+  {
+    return (EAttribute)constantEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -502,9 +664,19 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getOperation_Parameters()
+  public EAttribute getOperation_Static()
   {
-    return (EReference)operationEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)operationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getOperation_Parameter()
+  {
+    return (EReference)operationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -514,7 +686,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    */
   public EReference getOperation_Return()
   {
-    return (EReference)operationEClass.getEStructuralFeatures().get(1);
+    return (EReference)operationEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -562,9 +734,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getRelation()
+  public EClass getAttribute()
   {
-    return relationEClass;
+    return attributeEClass;
   }
 
   /**
@@ -572,9 +744,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRelation_Origin()
+  public EAttribute getAttribute_Static()
   {
-    return (EReference)relationEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)attributeEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -582,9 +754,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRelation_CardinalityFrom()
+  public EReference getAttribute_Type()
   {
-    return (EAttribute)relationEClass.getEStructuralFeatures().get(1);
+    return (EReference)attributeEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -592,9 +764,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRelation_Type()
+  public EAttribute getAttribute_Implicit()
   {
-    return (EAttribute)relationEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)attributeEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -602,9 +774,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRelation_CardinalityTo()
+  public EClass getReference()
   {
-    return (EAttribute)relationEClass.getEStructuralFeatures().get(3);
+    return referenceEClass;
   }
 
   /**
@@ -612,9 +784,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRelation_Destination()
+  public EAttribute getReference_Type()
   {
-    return (EReference)relationEClass.getEStructuralFeatures().get(4);
+    return (EAttribute)referenceEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -622,9 +794,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRelation_Label()
+  public EReference getReference_Array()
   {
-    return (EAttribute)relationEClass.getEStructuralFeatures().get(5);
+    return (EReference)referenceEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -632,9 +804,29 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EEnum getRelationType()
+  public EClass getArray()
   {
-    return relationTypeEEnum;
+    return arrayEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getArray_Size()
+  {
+    return (EAttribute)arrayEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getRelationshipType()
+  {
+    return relationshipTypeEEnum;
   }
 
   /**
@@ -645,16 +837,6 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
   public EEnum getVisibility()
   {
     return visibilityEEnum;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EEnum getEntityType()
-  {
-    return entityTypeEEnum;
   }
 
   /**
@@ -687,45 +869,62 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     isCreated = true;
 
     // Create classes and their features
-    classmodelEClass = createEClass(CLASSMODEL);
-    createEReference(classmodelEClass, CLASSMODEL__IMPORTS);
-    createEReference(classmodelEClass, CLASSMODEL__ELEMENTS);
-
-    abstractElementEClass = createEClass(ABSTRACT_ELEMENT);
-
-    packageEClass = createEClass(PACKAGE);
-    createEAttribute(packageEClass, PACKAGE__NAME);
-    createEReference(packageEClass, PACKAGE__ELEMENTS);
+    modelEClass = createEClass(MODEL);
+    createEReference(modelEClass, MODEL__IMPORTS);
+    createEReference(modelEClass, MODEL__ELEMENTS);
 
     importEClass = createEClass(IMPORT);
     createEAttribute(importEClass, IMPORT__IMPORT_URI);
 
-    entityEClass = createEClass(ENTITY);
-    createEAttribute(entityEClass, ENTITY__CLASS);
-    createEAttribute(entityEClass, ENTITY__INTERFACE);
-    createEAttribute(entityEClass, ENTITY__ABSTRACT);
-    createEAttribute(entityEClass, ENTITY__NAME);
-    createEReference(entityEClass, ENTITY__FEATURE);
-    createEAttribute(entityEClass, ENTITY__ENUMERATION);
+    elementEClass = createEClass(ELEMENT);
 
-    attributeEClass = createEClass(ATTRIBUTE);
-    createEAttribute(attributeEClass, ATTRIBUTE__IMPLICIT);
-    createEReference(attributeEClass, ATTRIBUTE__TYPE);
+    datatypeEClass = createEClass(DATATYPE);
+    createEAttribute(datatypeEClass, DATATYPE__NAME);
 
-    referenceEClass = createEClass(REFERENCE);
-    createEReference(referenceEClass, REFERENCE__TYPE);
-    createEReference(referenceEClass, REFERENCE__ARRAY);
+    packageEClass = createEClass(PACKAGE);
+    createEAttribute(packageEClass, PACKAGE__NAME);
+    createEReference(packageEClass, PACKAGE__ELEMENT);
 
-    arrayEClass = createEClass(ARRAY);
-    createEAttribute(arrayEClass, ARRAY__SIZE);
+    classifierEClass = createEClass(CLASSIFIER);
+    createEAttribute(classifierEClass, CLASSIFIER__NAME);
+    createEReference(classifierEClass, CLASSIFIER__GENERALIZATION);
+    createEAttribute(classifierEClass, CLASSIFIER__CONSTRAINT);
+    createEReference(classifierEClass, CLASSIFIER__FEATURE);
+
+    annotationEClass = createEClass(ANNOTATION);
+    createEAttribute(annotationEClass, ANNOTATION__NAME);
+    createEReference(annotationEClass, ANNOTATION__ANNOTATIONS);
+
+    generalizationEClass = createEClass(GENERALIZATION);
+    createEAttribute(generalizationEClass, GENERALIZATION__CLASSIFIER);
 
     featureEClass = createEClass(FEATURE);
-    createEAttribute(featureEClass, FEATURE__NAME);
+    createEAttribute(featureEClass, FEATURE__CONSTRAINT);
     createEAttribute(featureEClass, FEATURE__MODIFIER);
-    createEAttribute(featureEClass, FEATURE__STATIC);
+    createEAttribute(featureEClass, FEATURE__NAME);
+
+    relationshipEClass = createEClass(RELATIONSHIP);
+    createEAttribute(relationshipEClass, RELATIONSHIP__TYPE);
+    createEAttribute(relationshipEClass, RELATIONSHIP__LABEL);
+    createEAttribute(relationshipEClass, RELATIONSHIP__HEAD_NAVIGABLE);
+    createEReference(relationshipEClass, RELATIONSHIP__HEAD_MULTIPLICITY);
+    createEAttribute(relationshipEClass, RELATIONSHIP__HEAD);
+    createEAttribute(relationshipEClass, RELATIONSHIP__HEAD_LABEL);
+    createEAttribute(relationshipEClass, RELATIONSHIP__TAIL_NAVIGABLE);
+    createEReference(relationshipEClass, RELATIONSHIP__TAIL_MULTIPLICITY);
+    createEAttribute(relationshipEClass, RELATIONSHIP__TAIL);
+    createEAttribute(relationshipEClass, RELATIONSHIP__TAIL_LABEL);
+
+    multiplicityEClass = createEClass(MULTIPLICITY);
+    createEAttribute(multiplicityEClass, MULTIPLICITY__UPPER);
+    createEAttribute(multiplicityEClass, MULTIPLICITY__LOWER);
+
+    constantEClass = createEClass(CONSTANT);
+    createEAttribute(constantEClass, CONSTANT__VALUE);
 
     operationEClass = createEClass(OPERATION);
-    createEReference(operationEClass, OPERATION__PARAMETERS);
+    createEAttribute(operationEClass, OPERATION__STATIC);
+    createEReference(operationEClass, OPERATION__PARAMETER);
     createEReference(operationEClass, OPERATION__RETURN);
 
     parameterEClass = createEClass(PARAMETER);
@@ -733,18 +932,21 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     createEReference(parameterEClass, PARAMETER__TYPE);
     createEAttribute(parameterEClass, PARAMETER__IMPLICIT);
 
-    relationEClass = createEClass(RELATION);
-    createEReference(relationEClass, RELATION__ORIGIN);
-    createEAttribute(relationEClass, RELATION__CARDINALITY_FROM);
-    createEAttribute(relationEClass, RELATION__TYPE);
-    createEAttribute(relationEClass, RELATION__CARDINALITY_TO);
-    createEReference(relationEClass, RELATION__DESTINATION);
-    createEAttribute(relationEClass, RELATION__LABEL);
+    attributeEClass = createEClass(ATTRIBUTE);
+    createEAttribute(attributeEClass, ATTRIBUTE__STATIC);
+    createEReference(attributeEClass, ATTRIBUTE__TYPE);
+    createEAttribute(attributeEClass, ATTRIBUTE__IMPLICIT);
+
+    referenceEClass = createEClass(REFERENCE);
+    createEAttribute(referenceEClass, REFERENCE__TYPE);
+    createEReference(referenceEClass, REFERENCE__ARRAY);
+
+    arrayEClass = createEClass(ARRAY);
+    createEAttribute(arrayEClass, ARRAY__SIZE);
 
     // Create enums
-    relationTypeEEnum = createEEnum(RELATION_TYPE);
+    relationshipTypeEEnum = createEEnum(RELATIONSHIP_TYPE);
     visibilityEEnum = createEEnum(VISIBILITY);
-    entityTypeEEnum = createEEnum(ENTITY_TYPE);
   }
 
   /**
@@ -776,52 +978,71 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    packageEClass.getESuperTypes().add(this.getAbstractElement());
-    entityEClass.getESuperTypes().add(this.getAbstractElement());
-    attributeEClass.getESuperTypes().add(this.getFeature());
+    datatypeEClass.getESuperTypes().add(this.getElement());
+    packageEClass.getESuperTypes().add(this.getElement());
+    classifierEClass.getESuperTypes().add(this.getElement());
+    relationshipEClass.getESuperTypes().add(this.getElement());
+    constantEClass.getESuperTypes().add(this.getFeature());
     operationEClass.getESuperTypes().add(this.getFeature());
-    relationEClass.getESuperTypes().add(this.getAbstractElement());
+    attributeEClass.getESuperTypes().add(this.getFeature());
 
     // Initialize classes and features; add operations and parameters
-    initEClass(classmodelEClass, Classmodel.class, "Classmodel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getClassmodel_Imports(), this.getImport(), null, "imports", null, 0, -1, Classmodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getClassmodel_Elements(), this.getAbstractElement(), null, "elements", null, 0, -1, Classmodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(abstractElementEClass, AbstractElement.class, "AbstractElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(packageEClass, cz.cvut.earlgrey.classmodel.classmodel.Package.class, "Package", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPackage_Name(), ecorePackage.getEString(), "name", null, 0, 1, cz.cvut.earlgrey.classmodel.classmodel.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPackage_Elements(), this.getAbstractElement(), null, "elements", null, 0, -1, cz.cvut.earlgrey.classmodel.classmodel.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getModel_Imports(), this.getImport(), null, "imports", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Elements(), this.getElement(), null, "elements", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getImport_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getEntity_Class(), ecorePackage.getEBoolean(), "class", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEntity_Interface(), ecorePackage.getEBoolean(), "interface", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEntity_Abstract(), ecorePackage.getEBoolean(), "abstract", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEntity_Name(), ecorePackage.getEString(), "name", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getEntity_Feature(), this.getFeature(), null, "feature", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEntity_Enumeration(), ecorePackage.getEBoolean(), "enumeration", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAttribute_Implicit(), ecorePackage.getEString(), "implicit", null, 0, -1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAttribute_Type(), this.getReference(), null, "type", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(datatypeEClass, Datatype.class, "Datatype", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDatatype_Name(), ecorePackage.getEString(), "name", null, 0, 1, Datatype.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(referenceEClass, Reference.class, "Reference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getReference_Type(), this.getEntity(), null, "type", null, 0, 1, Reference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getReference_Array(), this.getArray(), null, "array", null, 0, -1, Reference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(packageEClass, cz.cvut.earlgrey.classmodel.classmodel.Package.class, "Package", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPackage_Name(), ecorePackage.getEString(), "name", null, 0, 1, cz.cvut.earlgrey.classmodel.classmodel.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPackage_Element(), this.getElement(), null, "element", null, 0, -1, cz.cvut.earlgrey.classmodel.classmodel.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(arrayEClass, Array.class, "Array", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getArray_Size(), ecorePackage.getEInt(), "size", null, 0, 1, Array.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(classifierEClass, Classifier.class, "Classifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getClassifier_Name(), ecorePackage.getEString(), "name", null, 0, 1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getClassifier_Generalization(), this.getGeneralization(), null, "generalization", null, 0, 1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getClassifier_Constraint(), ecorePackage.getEString(), "constraint", null, 0, 1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getClassifier_Feature(), this.getFeature(), null, "feature", null, 0, -1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(annotationEClass, Annotation.class, "Annotation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAnnotation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAnnotation_Annotations(), this.getAnnotation(), null, "annotations", null, 0, -1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(generalizationEClass, Generalization.class, "Generalization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getGeneralization_Classifier(), ecorePackage.getEString(), "classifier", null, 0, -1, Generalization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(featureEClass, Feature.class, "Feature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFeature_Name(), ecorePackage.getEString(), "name", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFeature_Constraint(), ecorePackage.getEString(), "constraint", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFeature_Modifier(), this.getVisibility(), "modifier", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFeature_Static(), ecorePackage.getEBoolean(), "static", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFeature_Name(), ecorePackage.getEString(), "name", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(relationshipEClass, Relationship.class, "Relationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getRelationship_Type(), this.getRelationshipType(), "type", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRelationship_Label(), ecorePackage.getEString(), "label", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRelationship_HeadNavigable(), ecorePackage.getEBoolean(), "headNavigable", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRelationship_HeadMultiplicity(), this.getMultiplicity(), null, "headMultiplicity", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRelationship_Head(), ecorePackage.getEString(), "head", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRelationship_HeadLabel(), ecorePackage.getEString(), "headLabel", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRelationship_TailNavigable(), ecorePackage.getEBoolean(), "tailNavigable", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRelationship_TailMultiplicity(), this.getMultiplicity(), null, "tailMultiplicity", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRelationship_Tail(), ecorePackage.getEString(), "tail", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRelationship_TailLabel(), ecorePackage.getEString(), "tailLabel", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(multiplicityEClass, Multiplicity.class, "Multiplicity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMultiplicity_Upper(), ecorePackage.getEString(), "upper", null, 0, 1, Multiplicity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMultiplicity_Lower(), ecorePackage.getEString(), "lower", null, 0, 1, Multiplicity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(constantEClass, Constant.class, "Constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getConstant_Value(), ecorePackage.getEString(), "value", null, 0, 1, Constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getOperation_Parameters(), this.getParameter(), null, "parameters", null, 0, -1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getOperation_Static(), ecorePackage.getEBoolean(), "static", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getOperation_Parameter(), this.getParameter(), null, "parameter", null, 0, -1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOperation_Return(), this.getReference(), null, "return", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -829,34 +1050,32 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     initEReference(getParameter_Type(), this.getReference(), null, "type", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getParameter_Implicit(), ecorePackage.getEString(), "implicit", null, 0, -1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(relationEClass, Relation.class, "Relation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRelation_Origin(), this.getEntity(), null, "origin", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRelation_CardinalityFrom(), ecorePackage.getEString(), "cardinalityFrom", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRelation_Type(), this.getRelationType(), "type", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRelation_CardinalityTo(), ecorePackage.getEString(), "cardinalityTo", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRelation_Destination(), this.getEntity(), null, "destination", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRelation_Label(), ecorePackage.getEString(), "label", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAttribute_Static(), ecorePackage.getEBoolean(), "static", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAttribute_Type(), this.getReference(), null, "type", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAttribute_Implicit(), ecorePackage.getEString(), "implicit", null, 0, -1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(referenceEClass, Reference.class, "Reference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getReference_Type(), ecorePackage.getEString(), "type", null, 0, 1, Reference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getReference_Array(), this.getArray(), null, "array", null, 0, -1, Reference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(arrayEClass, Array.class, "Array", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getArray_Size(), ecorePackage.getEInt(), "size", null, 0, 1, Array.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
-    initEEnum(relationTypeEEnum, RelationType.class, "RelationType");
-    addEEnumLiteral(relationTypeEEnum, RelationType.ASSOCIATION);
-    addEEnumLiteral(relationTypeEEnum, RelationType.DEPENCY);
-    addEEnumLiteral(relationTypeEEnum, RelationType.GENERALIZATION);
-    addEEnumLiteral(relationTypeEEnum, RelationType.REALIZATION);
-    addEEnumLiteral(relationTypeEEnum, RelationType.AGGREGATION);
-    addEEnumLiteral(relationTypeEEnum, RelationType.COMPOSITION);
+    initEEnum(relationshipTypeEEnum, RelationshipType.class, "RelationshipType");
+    addEEnumLiteral(relationshipTypeEEnum, RelationshipType.ASSOCIATION);
+    addEEnumLiteral(relationshipTypeEEnum, RelationshipType.DEPENCY);
+    addEEnumLiteral(relationshipTypeEEnum, RelationshipType.GENERALIZATION);
+    addEEnumLiteral(relationshipTypeEEnum, RelationshipType.REALIZATION);
+    addEEnumLiteral(relationshipTypeEEnum, RelationshipType.AGGREGATION);
+    addEEnumLiteral(relationshipTypeEEnum, RelationshipType.COMPOSITION);
 
     initEEnum(visibilityEEnum, Visibility.class, "Visibility");
     addEEnumLiteral(visibilityEEnum, Visibility.PUBLIC);
     addEEnumLiteral(visibilityEEnum, Visibility.PRIVATE);
     addEEnumLiteral(visibilityEEnum, Visibility.PROTECTED);
     addEEnumLiteral(visibilityEEnum, Visibility.PACKAGE_PRIVATE);
-
-    initEEnum(entityTypeEEnum, EntityType.class, "EntityType");
-    addEEnumLiteral(entityTypeEEnum, EntityType.CLASS);
-    addEEnumLiteral(entityTypeEEnum, EntityType.INTERFACE);
-    addEEnumLiteral(entityTypeEEnum, EntityType.ABSTRACT);
-    addEEnumLiteral(entityTypeEEnum, EntityType.ENUM);
 
     // Create resource
     createResource(eNS_URI);

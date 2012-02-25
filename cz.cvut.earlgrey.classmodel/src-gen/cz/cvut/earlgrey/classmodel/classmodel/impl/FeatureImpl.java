@@ -24,9 +24,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl#getConstraint <em>Constraint</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl#getModifier <em>Modifier</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl#isStatic <em>Static</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -35,24 +35,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getConstraint() <em>Constraint</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getConstraint()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final String CONSTRAINT_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getConstraint() <em>Constraint</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getConstraint()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected String constraint = CONSTRAINT_EDEFAULT;
 
   /**
    * The default value of the '{@link #getModifier() <em>Modifier</em>}' attribute.
@@ -75,24 +75,24 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
   protected Visibility modifier = MODIFIER_EDEFAULT;
 
   /**
-   * The default value of the '{@link #isStatic() <em>Static</em>}' attribute.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isStatic()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final boolean STATIC_EDEFAULT = false;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #isStatic() <em>Static</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isStatic()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected boolean static_ = STATIC_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -120,9 +120,9 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public String getConstraint()
   {
-    return name;
+    return constraint;
   }
 
   /**
@@ -130,12 +130,12 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setConstraint(String newConstraint)
   {
-    String oldName = name;
-    name = newName;
+    String oldConstraint = constraint;
+    constraint = newConstraint;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.FEATURE__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.FEATURE__CONSTRAINT, oldConstraint, constraint));
   }
 
   /**
@@ -166,9 +166,9 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
    * <!-- end-user-doc -->
    * @generated
    */
-  public boolean isStatic()
+  public String getName()
   {
-    return static_;
+    return name;
   }
 
   /**
@@ -176,12 +176,12 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setStatic(boolean newStatic)
+  public void setName(String newName)
   {
-    boolean oldStatic = static_;
-    static_ = newStatic;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.FEATURE__STATIC, oldStatic, static_));
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.FEATURE__NAME, oldName, name));
   }
 
   /**
@@ -194,12 +194,12 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
   {
     switch (featureID)
     {
-      case ClassmodelPackage.FEATURE__NAME:
-        return getName();
+      case ClassmodelPackage.FEATURE__CONSTRAINT:
+        return getConstraint();
       case ClassmodelPackage.FEATURE__MODIFIER:
         return getModifier();
-      case ClassmodelPackage.FEATURE__STATIC:
-        return isStatic();
+      case ClassmodelPackage.FEATURE__NAME:
+        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -214,14 +214,14 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
   {
     switch (featureID)
     {
-      case ClassmodelPackage.FEATURE__NAME:
-        setName((String)newValue);
+      case ClassmodelPackage.FEATURE__CONSTRAINT:
+        setConstraint((String)newValue);
         return;
       case ClassmodelPackage.FEATURE__MODIFIER:
         setModifier((Visibility)newValue);
         return;
-      case ClassmodelPackage.FEATURE__STATIC:
-        setStatic((Boolean)newValue);
+      case ClassmodelPackage.FEATURE__NAME:
+        setName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -237,14 +237,14 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
   {
     switch (featureID)
     {
-      case ClassmodelPackage.FEATURE__NAME:
-        setName(NAME_EDEFAULT);
+      case ClassmodelPackage.FEATURE__CONSTRAINT:
+        setConstraint(CONSTRAINT_EDEFAULT);
         return;
       case ClassmodelPackage.FEATURE__MODIFIER:
         setModifier(MODIFIER_EDEFAULT);
         return;
-      case ClassmodelPackage.FEATURE__STATIC:
-        setStatic(STATIC_EDEFAULT);
+      case ClassmodelPackage.FEATURE__NAME:
+        setName(NAME_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -260,12 +260,12 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
   {
     switch (featureID)
     {
-      case ClassmodelPackage.FEATURE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case ClassmodelPackage.FEATURE__CONSTRAINT:
+        return CONSTRAINT_EDEFAULT == null ? constraint != null : !CONSTRAINT_EDEFAULT.equals(constraint);
       case ClassmodelPackage.FEATURE__MODIFIER:
         return modifier != MODIFIER_EDEFAULT;
-      case ClassmodelPackage.FEATURE__STATIC:
-        return static_ != STATIC_EDEFAULT;
+      case ClassmodelPackage.FEATURE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
   }
@@ -281,12 +281,12 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
+    result.append(" (constraint: ");
+    result.append(constraint);
     result.append(", modifier: ");
     result.append(modifier);
-    result.append(", static: ");
-    result.append(static_);
+    result.append(", name: ");
+    result.append(name);
     result.append(')');
     return result.toString();
   }

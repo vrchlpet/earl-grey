@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Package#getName <em>Name</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Package#getElements <em>Elements</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Package#getElement <em>Element</em>}</li>
  * </ul>
  * </p>
  *
@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Package extends AbstractElement
+public interface Package extends Element
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -54,19 +54,19 @@ public interface Package extends AbstractElement
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
-   * The list contents are of type {@link cz.cvut.earlgrey.classmodel.classmodel.AbstractElement}.
+   * Returns the value of the '<em><b>Element</b></em>' containment reference list.
+   * The list contents are of type {@link cz.cvut.earlgrey.classmodel.classmodel.Element}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Elements</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Element</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Elements</em>' containment reference list.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getPackage_Elements()
+   * @return the value of the '<em>Element</em>' containment reference list.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getPackage_Element()
    * @model containment="true"
    * @generated
    */
-  EList<AbstractElement> getElements();
+  EList<Element> getElement();
 
 } // Package

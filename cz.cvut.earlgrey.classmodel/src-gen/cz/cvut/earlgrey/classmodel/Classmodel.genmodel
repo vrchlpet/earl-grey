@@ -9,13 +9,13 @@
     editorPluginID="cz.cvut.earlgrey.classmodel.editor">
   <genPackages prefix="Classmodel" basePackage="cz.cvut.earlgrey.classmodel" disposableProviderFactory="true"
       ecorePackage="Classmodel.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Classmodel.ecore#//RelationType">
-      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationType/ASSOCIATION"/>
-      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationType/DEPENCY"/>
-      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationType/GENERALIZATION"/>
-      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationType/REALIZATION"/>
-      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationType/AGGREGATION"/>
-      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationType/COMPOSITION"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Classmodel.ecore#//RelationshipType">
+      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationshipType/ASSOCIATION"/>
+      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationshipType/DEPENCY"/>
+      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationshipType/GENERALIZATION"/>
+      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationshipType/REALIZATION"/>
+      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationshipType/AGGREGATION"/>
+      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationshipType/COMPOSITION"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Classmodel.ecore#//Visibility">
       <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//Visibility/PUBLIC"/>
@@ -23,50 +23,61 @@
       <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//Visibility/PROTECTED"/>
       <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//Visibility/PACKAGE_PRIVATE"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Classmodel.ecore#//EntityType">
-      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//EntityType/CLASS"/>
-      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//EntityType/INTERFACE"/>
-      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//EntityType/ABSTRACT"/>
-      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//EntityType/ENUM"/>
-    </genEnums>
-    <genClasses ecoreClass="Classmodel.ecore#//Classmodel">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Classmodel/imports"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Classmodel/elements"/>
-    </genClasses>
-    <genClasses ecoreClass="Classmodel.ecore#//AbstractElement"/>
-    <genClasses ecoreClass="Classmodel.ecore#//Package">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Package/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Package/elements"/>
+    <genClasses ecoreClass="Classmodel.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Model/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Model/elements"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Import">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Import/importURI"/>
     </genClasses>
-    <genClasses ecoreClass="Classmodel.ecore#//Entity">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Entity/class"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Entity/interface"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Entity/abstract"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Entity/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Entity/feature"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Entity/enumeration"/>
+    <genClasses ecoreClass="Classmodel.ecore#//Element"/>
+    <genClasses ecoreClass="Classmodel.ecore#//Datatype">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Datatype/name"/>
     </genClasses>
-    <genClasses ecoreClass="Classmodel.ecore#//Attribute">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Attribute/implicit"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Attribute/type"/>
+    <genClasses ecoreClass="Classmodel.ecore#//Package">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Package/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Package/element"/>
     </genClasses>
-    <genClasses ecoreClass="Classmodel.ecore#//Reference">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Reference/type"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Reference/array"/>
+    <genClasses ecoreClass="Classmodel.ecore#//Classifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Classifier/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Classifier/generalization"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Classifier/constraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Classifier/feature"/>
     </genClasses>
-    <genClasses ecoreClass="Classmodel.ecore#//Array">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Array/size"/>
+    <genClasses ecoreClass="Classmodel.ecore#//Annotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Annotation/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Annotation/annotations"/>
+    </genClasses>
+    <genClasses ecoreClass="Classmodel.ecore#//Generalization">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Generalization/classifier"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Feature">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Feature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Feature/constraint"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Feature/modifier"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Feature/static"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Feature/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Classmodel.ecore#//Relationship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/headNavigable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Relationship/headMultiplicity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/head"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/headLabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/tailNavigable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Relationship/tailMultiplicity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/tail"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/tailLabel"/>
+    </genClasses>
+    <genClasses ecoreClass="Classmodel.ecore#//Multiplicity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Multiplicity/upper"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Multiplicity/lower"/>
+    </genClasses>
+    <genClasses ecoreClass="Classmodel.ecore#//Constant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Constant/value"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Operation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Operation/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Operation/static"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Operation/parameter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Operation/return"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Parameter">
@@ -74,13 +85,17 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Parameter/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Parameter/implicit"/>
     </genClasses>
-    <genClasses ecoreClass="Classmodel.ecore#//Relation">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Relation/origin"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relation/cardinalityFrom"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relation/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relation/cardinalityTo"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Relation/destination"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relation/label"/>
+    <genClasses ecoreClass="Classmodel.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Attribute/static"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Attribute/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Attribute/implicit"/>
+    </genClasses>
+    <genClasses ecoreClass="Classmodel.ecore#//Reference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Reference/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Reference/array"/>
+    </genClasses>
+    <genClasses ecoreClass="Classmodel.ecore#//Array">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Array/size"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

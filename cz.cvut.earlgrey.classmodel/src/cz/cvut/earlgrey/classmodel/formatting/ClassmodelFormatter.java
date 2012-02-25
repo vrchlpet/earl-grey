@@ -19,15 +19,15 @@ public class ClassmodelFormatter extends AbstractDefaultFormatter {
 	protected void configureFormatting(FormattingConfig c) {
 		ClassmodelGrammarAccess f = (ClassmodelGrammarAccess) getGrammarAccess();
 
-		c.setLinewrap(1, 2, 3).after(f.getPackageRule());
-		c.setLinewrap(1, 2, 3).after(f.getImportRule());
-		c.setLinewrap(1, 2, 3).after(f.getClassRule());
-		c.setLinewrap(1, 2, 3).after(f.getEnumRule());
-		c.setLinewrap(1, 2, 3).after(f.getRelationRule());
-		c.setLinewrap(1, 1, 2).after(f.getAttributeRule());
-		c.setLinewrap(1, 1, 2).after(f.getOperationRule());
-		c.setLinewrap(1, 1, 2).after(f.getEnumConstantRule());
-		c.setNoSpace().after(f.getVisibilityRule());
+		// c.setLinewrap(1, 2, 3).after(f.getPackageRule());
+		// c.setLinewrap(1, 2, 3).after(f.getImportRule());
+		// c.setLinewrap(1, 2, 3).after(f.getClassRule());
+		// c.setLinewrap(1, 2, 3).after(f.getEnumRule());
+		// c.setLinewrap(1, 2, 3).after(f.getRelationRule());
+		// c.setLinewrap(1, 1, 2).after(f.getAttributeRule());
+		// c.setLinewrap(1, 1, 2).after(f.getOperationRule());
+		// c.setLinewrap(1, 1, 2).after(f.getEnumConstantRule());
+		// c.setNoSpace().after(f.getVisibilityRule());
 
 		initDefault(c, f); // loads default format config
 

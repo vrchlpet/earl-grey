@@ -6,10 +6,10 @@
  */
 package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
-import cz.cvut.earlgrey.classmodel.classmodel.AbstractElement;
-import cz.cvut.earlgrey.classmodel.classmodel.Classmodel;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
+import cz.cvut.earlgrey.classmodel.classmodel.Element;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
+import cz.cvut.earlgrey.classmodel.classmodel.Model;
 
 import java.util.Collection;
 
@@ -27,19 +27,19 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Classmodel</b></em>'.
+ * An implementation of the model object '<em><b>Model</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelImpl#getImports <em>Imports</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelImpl#getElements <em>Elements</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ModelImpl#getImports <em>Imports</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ModelImpl#getElements <em>Elements</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ClassmodelImpl extends MinimalEObjectImpl.Container implements Classmodel
+public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
   /**
    * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference list.
@@ -59,14 +59,14 @@ public class ClassmodelImpl extends MinimalEObjectImpl.Container implements Clas
    * @generated
    * @ordered
    */
-  protected EList<AbstractElement> elements;
+  protected EList<Element> elements;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ClassmodelImpl()
+  protected ModelImpl()
   {
     super();
   }
@@ -79,7 +79,7 @@ public class ClassmodelImpl extends MinimalEObjectImpl.Container implements Clas
   @Override
   protected EClass eStaticClass()
   {
-    return ClassmodelPackage.Literals.CLASSMODEL;
+    return ClassmodelPackage.Literals.MODEL;
   }
 
   /**
@@ -91,7 +91,7 @@ public class ClassmodelImpl extends MinimalEObjectImpl.Container implements Clas
   {
     if (imports == null)
     {
-      imports = new EObjectContainmentEList<Import>(Import.class, this, ClassmodelPackage.CLASSMODEL__IMPORTS);
+      imports = new EObjectContainmentEList<Import>(Import.class, this, ClassmodelPackage.MODEL__IMPORTS);
     }
     return imports;
   }
@@ -101,11 +101,11 @@ public class ClassmodelImpl extends MinimalEObjectImpl.Container implements Clas
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<AbstractElement> getElements()
+  public EList<Element> getElements()
   {
     if (elements == null)
     {
-      elements = new EObjectContainmentEList<AbstractElement>(AbstractElement.class, this, ClassmodelPackage.CLASSMODEL__ELEMENTS);
+      elements = new EObjectContainmentEList<Element>(Element.class, this, ClassmodelPackage.MODEL__ELEMENTS);
     }
     return elements;
   }
@@ -120,9 +120,9 @@ public class ClassmodelImpl extends MinimalEObjectImpl.Container implements Clas
   {
     switch (featureID)
     {
-      case ClassmodelPackage.CLASSMODEL__IMPORTS:
+      case ClassmodelPackage.MODEL__IMPORTS:
         return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
-      case ClassmodelPackage.CLASSMODEL__ELEMENTS:
+      case ClassmodelPackage.MODEL__ELEMENTS:
         return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -138,9 +138,9 @@ public class ClassmodelImpl extends MinimalEObjectImpl.Container implements Clas
   {
     switch (featureID)
     {
-      case ClassmodelPackage.CLASSMODEL__IMPORTS:
+      case ClassmodelPackage.MODEL__IMPORTS:
         return getImports();
-      case ClassmodelPackage.CLASSMODEL__ELEMENTS:
+      case ClassmodelPackage.MODEL__ELEMENTS:
         return getElements();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -157,13 +157,13 @@ public class ClassmodelImpl extends MinimalEObjectImpl.Container implements Clas
   {
     switch (featureID)
     {
-      case ClassmodelPackage.CLASSMODEL__IMPORTS:
+      case ClassmodelPackage.MODEL__IMPORTS:
         getImports().clear();
         getImports().addAll((Collection<? extends Import>)newValue);
         return;
-      case ClassmodelPackage.CLASSMODEL__ELEMENTS:
+      case ClassmodelPackage.MODEL__ELEMENTS:
         getElements().clear();
-        getElements().addAll((Collection<? extends AbstractElement>)newValue);
+        getElements().addAll((Collection<? extends Element>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -179,10 +179,10 @@ public class ClassmodelImpl extends MinimalEObjectImpl.Container implements Clas
   {
     switch (featureID)
     {
-      case ClassmodelPackage.CLASSMODEL__IMPORTS:
+      case ClassmodelPackage.MODEL__IMPORTS:
         getImports().clear();
         return;
-      case ClassmodelPackage.CLASSMODEL__ELEMENTS:
+      case ClassmodelPackage.MODEL__ELEMENTS:
         getElements().clear();
         return;
     }
@@ -199,12 +199,12 @@ public class ClassmodelImpl extends MinimalEObjectImpl.Container implements Clas
   {
     switch (featureID)
     {
-      case ClassmodelPackage.CLASSMODEL__IMPORTS:
+      case ClassmodelPackage.MODEL__IMPORTS:
         return imports != null && !imports.isEmpty();
-      case ClassmodelPackage.CLASSMODEL__ELEMENTS:
+      case ClassmodelPackage.MODEL__ELEMENTS:
         return elements != null && !elements.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //ClassmodelImpl
+} //ModelImpl
