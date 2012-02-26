@@ -7,33 +7,40 @@
 package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
+import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
-import cz.cvut.earlgrey.classmodel.classmodel.Visibility;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Feature</b></em>'.
+ * An implementation of the model object '<em><b>Enumeration</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl#getName <em>Name</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl#getValue <em>Value</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl#getConstraint <em>Constraint</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl#getVisibility <em>Visibility</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EnumerationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EnumerationImpl#getConstraint <em>Constraint</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EnumerationImpl#getEnumerator <em>Enumerator</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
+public class EnumerationImpl extends ElementImpl implements Enumeration
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -56,26 +63,6 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getValue()
-   * @generated
-   * @ordered
-   */
-  protected static final String VALUE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getValue()
-   * @generated
-   * @ordered
-   */
-  protected String value = VALUE_EDEFAULT;
-
-  /**
    * The default value of the '{@link #getConstraint() <em>Constraint</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -96,31 +83,21 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
   protected String constraint = CONSTRAINT_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getVisibility() <em>Visibility</em>}' attribute.
+   * The cached value of the '{@link #getEnumerator() <em>Enumerator</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVisibility()
+   * @see #getEnumerator()
    * @generated
    * @ordered
    */
-  protected static final Visibility VISIBILITY_EDEFAULT = Visibility.PUBLIC;
-
-  /**
-   * The cached value of the '{@link #getVisibility() <em>Visibility</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVisibility()
-   * @generated
-   * @ordered
-   */
-  protected Visibility visibility = VISIBILITY_EDEFAULT;
+  protected EList<Feature> enumerator;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected FeatureImpl()
+  protected EnumerationImpl()
   {
     super();
   }
@@ -133,7 +110,7 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
   @Override
   protected EClass eStaticClass()
   {
-    return ClassmodelPackage.Literals.FEATURE;
+    return ClassmodelPackage.Literals.ENUMERATION;
   }
 
   /**
@@ -156,30 +133,7 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.FEATURE__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getValue()
-  {
-    return value;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setValue(String newValue)
-  {
-    String oldValue = value;
-    value = newValue;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.FEATURE__VALUE, oldValue, value));
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.ENUMERATION__NAME, oldName, name));
   }
 
   /**
@@ -202,7 +156,7 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
     String oldConstraint = constraint;
     constraint = newConstraint;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.FEATURE__CONSTRAINT, oldConstraint, constraint));
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.ENUMERATION__CONSTRAINT, oldConstraint, constraint));
   }
 
   /**
@@ -210,9 +164,13 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
    * <!-- end-user-doc -->
    * @generated
    */
-  public Visibility getVisibility()
+  public EList<Feature> getEnumerator()
   {
-    return visibility;
+    if (enumerator == null)
+    {
+      enumerator = new EObjectContainmentEList<Feature>(Feature.class, this, ClassmodelPackage.ENUMERATION__ENUMERATOR);
+    }
+    return enumerator;
   }
 
   /**
@@ -220,12 +178,15 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVisibility(Visibility newVisibility)
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    Visibility oldVisibility = visibility;
-    visibility = newVisibility == null ? VISIBILITY_EDEFAULT : newVisibility;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.FEATURE__VISIBILITY, oldVisibility, visibility));
+    switch (featureID)
+    {
+      case ClassmodelPackage.ENUMERATION__ENUMERATOR:
+        return ((InternalEList<?>)getEnumerator()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -238,14 +199,12 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
   {
     switch (featureID)
     {
-      case ClassmodelPackage.FEATURE__NAME:
+      case ClassmodelPackage.ENUMERATION__NAME:
         return getName();
-      case ClassmodelPackage.FEATURE__VALUE:
-        return getValue();
-      case ClassmodelPackage.FEATURE__CONSTRAINT:
+      case ClassmodelPackage.ENUMERATION__CONSTRAINT:
         return getConstraint();
-      case ClassmodelPackage.FEATURE__VISIBILITY:
-        return getVisibility();
+      case ClassmodelPackage.ENUMERATION__ENUMERATOR:
+        return getEnumerator();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -255,22 +214,21 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case ClassmodelPackage.FEATURE__NAME:
+      case ClassmodelPackage.ENUMERATION__NAME:
         setName((String)newValue);
         return;
-      case ClassmodelPackage.FEATURE__VALUE:
-        setValue((String)newValue);
-        return;
-      case ClassmodelPackage.FEATURE__CONSTRAINT:
+      case ClassmodelPackage.ENUMERATION__CONSTRAINT:
         setConstraint((String)newValue);
         return;
-      case ClassmodelPackage.FEATURE__VISIBILITY:
-        setVisibility((Visibility)newValue);
+      case ClassmodelPackage.ENUMERATION__ENUMERATOR:
+        getEnumerator().clear();
+        getEnumerator().addAll((Collection<? extends Feature>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -286,17 +244,14 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
   {
     switch (featureID)
     {
-      case ClassmodelPackage.FEATURE__NAME:
+      case ClassmodelPackage.ENUMERATION__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case ClassmodelPackage.FEATURE__VALUE:
-        setValue(VALUE_EDEFAULT);
-        return;
-      case ClassmodelPackage.FEATURE__CONSTRAINT:
+      case ClassmodelPackage.ENUMERATION__CONSTRAINT:
         setConstraint(CONSTRAINT_EDEFAULT);
         return;
-      case ClassmodelPackage.FEATURE__VISIBILITY:
-        setVisibility(VISIBILITY_EDEFAULT);
+      case ClassmodelPackage.ENUMERATION__ENUMERATOR:
+        getEnumerator().clear();
         return;
     }
     super.eUnset(featureID);
@@ -312,14 +267,12 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
   {
     switch (featureID)
     {
-      case ClassmodelPackage.FEATURE__NAME:
+      case ClassmodelPackage.ENUMERATION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case ClassmodelPackage.FEATURE__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-      case ClassmodelPackage.FEATURE__CONSTRAINT:
+      case ClassmodelPackage.ENUMERATION__CONSTRAINT:
         return CONSTRAINT_EDEFAULT == null ? constraint != null : !CONSTRAINT_EDEFAULT.equals(constraint);
-      case ClassmodelPackage.FEATURE__VISIBILITY:
-        return visibility != VISIBILITY_EDEFAULT;
+      case ClassmodelPackage.ENUMERATION__ENUMERATOR:
+        return enumerator != null && !enumerator.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -337,14 +290,10 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", value: ");
-    result.append(value);
     result.append(", constraint: ");
     result.append(constraint);
-    result.append(", visibility: ");
-    result.append(visibility);
     result.append(')');
     return result.toString();
   }
 
-} //FeatureImpl
+} //EnumerationImpl

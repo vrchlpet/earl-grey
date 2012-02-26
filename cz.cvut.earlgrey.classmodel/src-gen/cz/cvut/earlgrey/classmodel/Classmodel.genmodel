@@ -52,9 +52,15 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Type/name"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Feature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Feature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Feature/value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Feature/constraint"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Feature/visibility"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Feature/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Classmodel.ecore#//Enumeration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Enumeration/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Enumeration/constraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Enumeration/enumerator"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Relationship">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/type"/>
@@ -72,9 +78,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Multiplicity/upper"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Multiplicity/lower"/>
     </genClasses>
-    <genClasses ecoreClass="Classmodel.ecore#//Constant">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Constant/value"/>
-    </genClasses>
+    <genClasses ecoreClass="Classmodel.ecore#//Constant"/>
     <genClasses ecoreClass="Classmodel.ecore#//Operation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Operation/static"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Operation/parameter"/>

@@ -14,6 +14,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
 import cz.cvut.earlgrey.classmodel.classmodel.Constant;
 import cz.cvut.earlgrey.classmodel.classmodel.Datatype;
 import cz.cvut.earlgrey.classmodel.classmodel.Element;
+import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
 import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
@@ -105,6 +106,13 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * @generated
    */
   private EClass featureEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass enumerationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -464,7 +472,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFeature_Constraint()
+  public EAttribute getFeature_Name()
   {
     return (EAttribute)featureEClass.getEStructuralFeatures().get(0);
   }
@@ -474,7 +482,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFeature_Visibility()
+  public EAttribute getFeature_Value()
   {
     return (EAttribute)featureEClass.getEStructuralFeatures().get(1);
   }
@@ -484,9 +492,59 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFeature_Name()
+  public EAttribute getFeature_Constraint()
   {
     return (EAttribute)featureEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFeature_Visibility()
+  {
+    return (EAttribute)featureEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getEnumeration()
+  {
+    return enumerationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEnumeration_Name()
+  {
+    return (EAttribute)enumerationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEnumeration_Constraint()
+  {
+    return (EAttribute)enumerationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEnumeration_Enumerator()
+  {
+    return (EReference)enumerationEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -637,16 +695,6 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
   public EClass getConstant()
   {
     return constantEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getConstant_Value()
-  {
-    return (EAttribute)constantEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -899,9 +947,15 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     createEAttribute(typeEClass, TYPE__NAME);
 
     featureEClass = createEClass(FEATURE);
+    createEAttribute(featureEClass, FEATURE__NAME);
+    createEAttribute(featureEClass, FEATURE__VALUE);
     createEAttribute(featureEClass, FEATURE__CONSTRAINT);
     createEAttribute(featureEClass, FEATURE__VISIBILITY);
-    createEAttribute(featureEClass, FEATURE__NAME);
+
+    enumerationEClass = createEClass(ENUMERATION);
+    createEAttribute(enumerationEClass, ENUMERATION__NAME);
+    createEAttribute(enumerationEClass, ENUMERATION__CONSTRAINT);
+    createEReference(enumerationEClass, ENUMERATION__ENUMERATOR);
 
     relationshipEClass = createEClass(RELATIONSHIP);
     createEAttribute(relationshipEClass, RELATIONSHIP__TYPE);
@@ -920,7 +974,6 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     createEAttribute(multiplicityEClass, MULTIPLICITY__LOWER);
 
     constantEClass = createEClass(CONSTANT);
-    createEAttribute(constantEClass, CONSTANT__VALUE);
 
     operationEClass = createEClass(OPERATION);
     createEAttribute(operationEClass, OPERATION__STATIC);
@@ -981,6 +1034,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     datatypeEClass.getESuperTypes().add(this.getElement());
     packageEClass.getESuperTypes().add(this.getElement());
     classifierEClass.getESuperTypes().add(this.getElement());
+    enumerationEClass.getESuperTypes().add(this.getElement());
     relationshipEClass.getESuperTypes().add(this.getElement());
     constantEClass.getESuperTypes().add(this.getFeature());
     operationEClass.getESuperTypes().add(this.getFeature());
@@ -1017,9 +1071,15 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     initEAttribute(getType_Name(), ecorePackage.getEString(), "name", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(featureEClass, Feature.class, "Feature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFeature_Name(), ecorePackage.getEString(), "name", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFeature_Value(), ecorePackage.getEString(), "value", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFeature_Constraint(), ecorePackage.getEString(), "constraint", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFeature_Visibility(), this.getVisibility(), "visibility", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFeature_Name(), ecorePackage.getEString(), "name", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(enumerationEClass, Enumeration.class, "Enumeration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEnumeration_Name(), ecorePackage.getEString(), "name", null, 0, 1, Enumeration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEnumeration_Constraint(), ecorePackage.getEString(), "constraint", null, 0, 1, Enumeration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEnumeration_Enumerator(), this.getFeature(), null, "enumerator", null, 0, -1, Enumeration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(relationshipEClass, Relationship.class, "Relationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getRelationship_Type(), this.getRelationshipType(), "type", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1038,7 +1098,6 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     initEAttribute(getMultiplicity_Lower(), ecorePackage.getEString(), "lower", null, 0, 1, Multiplicity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(constantEClass, Constant.class, "Constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getConstant_Value(), ecorePackage.getEString(), "value", null, 0, 1, Constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getOperation_Static(), ecorePackage.getEBoolean(), "static", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

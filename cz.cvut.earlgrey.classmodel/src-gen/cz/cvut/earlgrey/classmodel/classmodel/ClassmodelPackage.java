@@ -341,13 +341,31 @@ public interface ClassmodelPackage extends EPackage
   int FEATURE = 8;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FEATURE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FEATURE__VALUE = 1;
+
+  /**
    * The feature id for the '<em><b>Constraint</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FEATURE__CONSTRAINT = 0;
+  int FEATURE__CONSTRAINT = 2;
 
   /**
    * The feature id for the '<em><b>Visibility</b></em>' attribute.
@@ -356,16 +374,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FEATURE__VISIBILITY = 1;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FEATURE__NAME = 2;
+  int FEATURE__VISIBILITY = 3;
 
   /**
    * The number of structural features of the '<em>Feature</em>' class.
@@ -374,7 +383,53 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FEATURE_FEATURE_COUNT = 3;
+  int FEATURE_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EnumerationImpl <em>Enumeration</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.EnumerationImpl
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getEnumeration()
+   * @generated
+   */
+  int ENUMERATION = 9;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATION__NAME = ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Constraint</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATION__CONSTRAINT = ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Enumerator</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATION__ENUMERATOR = ELEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Enumeration</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATION_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl <em>Relationship</em>}' class.
@@ -384,7 +439,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getRelationship()
    * @generated
    */
-  int RELATIONSHIP = 9;
+  int RELATIONSHIP = 10;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -493,7 +548,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getMultiplicity()
    * @generated
    */
-  int MULTIPLICITY = 10;
+  int MULTIPLICITY = 11;
 
   /**
    * The feature id for the '<em><b>Upper</b></em>' attribute.
@@ -530,7 +585,25 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getConstant()
    * @generated
    */
-  int CONSTANT = 11;
+  int CONSTANT = 12;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTANT__NAME = FEATURE__NAME;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTANT__VALUE = FEATURE__VALUE;
 
   /**
    * The feature id for the '<em><b>Constraint</b></em>' attribute.
@@ -551,31 +624,13 @@ public interface ClassmodelPackage extends EPackage
   int CONSTANT__VISIBILITY = FEATURE__VISIBILITY;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONSTANT__NAME = FEATURE__NAME;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONSTANT__VALUE = FEATURE_FEATURE_COUNT + 0;
-
-  /**
    * The number of structural features of the '<em>Constant</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONSTANT_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+  int CONSTANT_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.OperationImpl <em>Operation</em>}' class.
@@ -585,7 +640,25 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getOperation()
    * @generated
    */
-  int OPERATION = 12;
+  int OPERATION = 13;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION__NAME = FEATURE__NAME;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION__VALUE = FEATURE__VALUE;
 
   /**
    * The feature id for the '<em><b>Constraint</b></em>' attribute.
@@ -604,15 +677,6 @@ public interface ClassmodelPackage extends EPackage
    * @ordered
    */
   int OPERATION__VISIBILITY = FEATURE__VISIBILITY;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATION__NAME = FEATURE__NAME;
 
   /**
    * The feature id for the '<em><b>Static</b></em>' attribute.
@@ -658,7 +722,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getParameter()
    * @generated
    */
-  int PARAMETER = 13;
+  int PARAMETER = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -704,7 +768,25 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getAttribute()
    * @generated
    */
-  int ATTRIBUTE = 14;
+  int ATTRIBUTE = 15;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE__NAME = FEATURE__NAME;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE__VALUE = FEATURE__VALUE;
 
   /**
    * The feature id for the '<em><b>Constraint</b></em>' attribute.
@@ -723,15 +805,6 @@ public interface ClassmodelPackage extends EPackage
    * @ordered
    */
   int ATTRIBUTE__VISIBILITY = FEATURE__VISIBILITY;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATTRIBUTE__NAME = FEATURE__NAME;
 
   /**
    * The feature id for the '<em><b>Static</b></em>' attribute.
@@ -777,7 +850,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getReference()
    * @generated
    */
-  int REFERENCE = 15;
+  int REFERENCE = 16;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -814,7 +887,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getArray()
    * @generated
    */
-  int ARRAY = 16;
+  int ARRAY = 17;
 
   /**
    * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -842,7 +915,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getRelationshipType()
    * @generated
    */
-  int RELATIONSHIP_TYPE = 17;
+  int RELATIONSHIP_TYPE = 18;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.Visibility <em>Visibility</em>}' enum.
@@ -852,7 +925,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getVisibility()
    * @generated
    */
-  int VISIBILITY = 18;
+  int VISIBILITY = 19;
 
 
   /**
@@ -1089,6 +1162,28 @@ public interface ClassmodelPackage extends EPackage
   EClass getFeature();
 
   /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Feature#getName()
+   * @see #getFeature()
+   * @generated
+   */
+  EAttribute getFeature_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Feature#getValue()
+   * @see #getFeature()
+   * @generated
+   */
+  EAttribute getFeature_Value();
+
+  /**
    * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#getConstraint <em>Constraint</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1111,15 +1206,47 @@ public interface ClassmodelPackage extends EPackage
   EAttribute getFeature_Visibility();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#getName <em>Name</em>}'.
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Enumeration <em>Enumeration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Enumeration</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Enumeration
+   * @generated
+   */
+  EClass getEnumeration();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Enumeration#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Feature#getName()
-   * @see #getFeature()
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Enumeration#getName()
+   * @see #getEnumeration()
    * @generated
    */
-  EAttribute getFeature_Name();
+  EAttribute getEnumeration_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Enumeration#getConstraint <em>Constraint</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Constraint</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Enumeration#getConstraint()
+   * @see #getEnumeration()
+   * @generated
+   */
+  EAttribute getEnumeration_Constraint();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.classmodel.classmodel.Enumeration#getEnumerator <em>Enumerator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Enumerator</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Enumeration#getEnumerator()
+   * @see #getEnumeration()
+   * @generated
+   */
+  EReference getEnumeration_Enumerator();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship <em>Relationship</em>}'.
@@ -1282,17 +1409,6 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   EClass getConstant();
-
-  /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Constant#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Constant#getValue()
-   * @see #getConstant()
-   * @generated
-   */
-  EAttribute getConstant_Value();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Operation <em>Operation</em>}'.
@@ -1714,6 +1830,22 @@ public interface ClassmodelPackage extends EPackage
     EClass FEATURE = eINSTANCE.getFeature();
 
     /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FEATURE__NAME = eINSTANCE.getFeature_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FEATURE__VALUE = eINSTANCE.getFeature_Value();
+
+    /**
      * The meta object literal for the '<em><b>Constraint</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1730,12 +1862,38 @@ public interface ClassmodelPackage extends EPackage
     EAttribute FEATURE__VISIBILITY = eINSTANCE.getFeature_Visibility();
 
     /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EnumerationImpl <em>Enumeration</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.EnumerationImpl
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getEnumeration()
+     * @generated
+     */
+    EClass ENUMERATION = eINSTANCE.getEnumeration();
+
+    /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute FEATURE__NAME = eINSTANCE.getFeature_Name();
+    EAttribute ENUMERATION__NAME = eINSTANCE.getEnumeration_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Constraint</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ENUMERATION__CONSTRAINT = eINSTANCE.getEnumeration_Constraint();
+
+    /**
+     * The meta object literal for the '<em><b>Enumerator</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ENUMERATION__ENUMERATOR = eINSTANCE.getEnumeration_Enumerator();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl <em>Relationship</em>}' class.
@@ -1862,14 +2020,6 @@ public interface ClassmodelPackage extends EPackage
      * @generated
      */
     EClass CONSTANT = eINSTANCE.getConstant();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CONSTANT__VALUE = eINSTANCE.getConstant_Value();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.OperationImpl <em>Operation</em>}' class.

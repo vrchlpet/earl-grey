@@ -14,6 +14,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
 import cz.cvut.earlgrey.classmodel.classmodel.Constant;
 import cz.cvut.earlgrey.classmodel.classmodel.Datatype;
 import cz.cvut.earlgrey.classmodel.classmodel.Element;
+import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
 import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
@@ -97,6 +98,7 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
       case ClassmodelPackage.GENERALIZATION: return createGeneralization();
       case ClassmodelPackage.TYPE: return createType();
       case ClassmodelPackage.FEATURE: return createFeature();
+      case ClassmodelPackage.ENUMERATION: return createEnumeration();
       case ClassmodelPackage.RELATIONSHIP: return createRelationship();
       case ClassmodelPackage.MULTIPLICITY: return createMultiplicity();
       case ClassmodelPackage.CONSTANT: return createConstant();
@@ -245,6 +247,17 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
   {
     FeatureImpl feature = new FeatureImpl();
     return feature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Enumeration createEnumeration()
+  {
+    EnumerationImpl enumeration = new EnumerationImpl();
+    return enumeration;
   }
 
   /**

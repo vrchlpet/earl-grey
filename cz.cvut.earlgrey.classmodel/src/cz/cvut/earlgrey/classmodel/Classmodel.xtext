@@ -18,6 +18,7 @@ Element:
     | Classifier
     | Package
     | Datatype
+    | Enumeration
 ;
 
 // e.g.: datatype int
@@ -55,21 +56,34 @@ Feature:
     (Attribute | Operation | Constant) (constraint=CONSTRAINT)?
 ;
 
-// e.g.: composition 0..1 Tree 0..* Leaft end
+// e.g.: enum Weekend Saturday Sunday end
+Enumeration:
+    'enum' name=ID
+        (constraint=CONSTRAINT)?
+        enumerator+=Enumerator*
+    'end'
+;
+
+// An element of an Enumeration
+Enumerator returns Feature:
+    name=ID (=> '=' value=ImplicitValue)? (constraint=CONSTRAINT)?
+;
+
+// e.g.: composition 0..1 Tree 0..* Leaf end
 Relationship:
     type=RelationshipType (label=STRING)?
-        (headNavigable?='navigable')? (headMultiplicity=Multiplicity)? head=ExtendedID (':' headLabel=STRING)? //tip: remove ':'?
-        (tailNavigable?='navigable')? (tailMultiplicity=Multiplicity)? tail=ExtendedID (':' tailLabel=STRING)? //tip: remove ':'?
+        (headNavigable?='navigable')? (headMultiplicity=Multiplicity)? head=ExtendedID (/*':'*/ headLabel=STRING)?
+        (tailNavigable?='navigable')? (tailMultiplicity=Multiplicity)? tail=ExtendedID (/*':'*/ tailLabel=STRING)?
     'end'
 ;
 
 // e.g.: 0..1
 Multiplicity:
-    upper=MultiplicityValue ('..' lower=MultiplicityValue)?
+    upper=MultiplicityValue (=> '..' lower=MultiplicityValue)?
 ;
 
 MultiplicityValue returns ecore::EString:
-    INT | '*'
+    NATURAL | '*'
 ;
 
 // e.g.: BUFFER_LENGTH = 512
@@ -98,15 +112,15 @@ Reference:
 ;
 
 Array:
-    {Array} '[' size=INT? ']'
+    {Array} '[' size=NATURAL? ']'
 ;
 
 ImplicitValue returns ecore::EString:
     NULL
     | BOOLEAN
     | STRING
-    | INT
-    | DOUBLE 
+    | Integer
+    | Real
     | ID
 ;
 
@@ -130,6 +144,14 @@ ExtendedID:
     ID ('.' ID)*
 ;
 
+Real returns ecore::EDouble:
+    '-'? NATURAL '.' NATURAL (("e"|"E")("+"|"-") NATURAL)?
+;
+
+Integer returns ecore::EInt:
+    '-'? NATURAL
+;
+
 // {name.length > 0}
 terminal CONSTRAINT:
     '{'->'}'
@@ -147,13 +169,8 @@ terminal ID:
     ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*
 ;
 
-terminal INT returns ecore::EInt:
-    '-'? ('0'..'9')+
-;
-
-terminal DOUBLE returns ecore::EDouble:
-    '-'? ('0'..'9')+ ('.' ('0'..'9')*) 'd'?
-    | '-'? ('0'..'9')+ 'd'
+terminal NATURAL returns ecore::EInt:
+    ('0'..'9')+
 ;
 
 terminal STRING: 

@@ -18,7 +18,7 @@ Require-Bundle: cz.cvut.earlgrey.annotation;visibility:=reexport,
  org.eclipse.compare
 Import-Package: org.apache.log4j,
  org.apache.commons.logging
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: cz.cvut.earlgrey.annotation.ui.contentassist,
  cz.cvut.earlgrey.annotation.ui.contentassist.antlr,
  cz.cvut.earlgrey.annotation.ui.internal

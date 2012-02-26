@@ -6,6 +6,8 @@ import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
 import com.google.inject.Inject;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
+import cz.cvut.earlgrey.classmodel.classmodel.Classifier;
+import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
@@ -24,7 +26,7 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 
 	private static final String IMPORT = "impc_obj.gif";
 	private static final String CLASS = "class_obj.gif";
-	private static final String INTERFACE = "int_obj.gif";
+	// private static final String INTERFACE = "int_obj.gif";
 	private static final String ENUM = "enum_obj.gif";
 	private static final String CLASSMODEL = "model_obj.gif";
 	private static final String PACKAGE = "package_obj.gif";
@@ -128,22 +130,22 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 	}
 
 	/**
-	 * FIXME:
-	 * Returns Entity's image used in Outline View.
+	 * Returns Enumeration's image used in Outline View.
 	 * 
-	 * @param ele Instance of an Entity
-	 * @return image's filename as String
+	 * @param ele Instance of an Enumeration
+	 * @return image's filename
 	 */
-	// String image(Entity ele) {
-	// if (ele == null) {
-	// return null;
-	// }
-	// if (ele.isEnumeration()) {
-	// return ENUM;
-	// }
-	// if (ele.isInterface()) {
-	// return INTERFACE;
-	// }
-	// return CLASS;
-	// }
+	String image(Enumeration ele) {
+		return ENUM;
+	}
+
+	/**
+	 * Returns Classifier's image used in Outline View.
+	 * 
+	 * @param ele Instance of an Classifier
+	 * @return image's filename
+	 */
+	String image(Classifier ele) {
+		return CLASS;
+	}
 }

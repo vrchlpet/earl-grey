@@ -13,6 +13,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
 import cz.cvut.earlgrey.classmodel.classmodel.Constant;
 import cz.cvut.earlgrey.classmodel.classmodel.Datatype;
 import cz.cvut.earlgrey.classmodel.classmodel.Element;
+import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
 import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
@@ -155,6 +156,14 @@ public class ClassmodelSwitch<T> extends Switch<T>
       {
         Feature feature = (Feature)theEObject;
         T result = caseFeature(feature);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ClassmodelPackage.ENUMERATION:
+      {
+        Enumeration enumeration = (Enumeration)theEObject;
+        T result = caseEnumeration(enumeration);
+        if (result == null) result = caseElement(enumeration);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -362,6 +371,22 @@ public class ClassmodelSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFeature(Feature object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Enumeration</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Enumeration</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEnumeration(Enumeration object)
   {
     return null;
   }

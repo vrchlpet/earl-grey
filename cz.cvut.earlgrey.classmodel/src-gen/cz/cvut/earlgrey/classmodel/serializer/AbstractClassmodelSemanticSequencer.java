@@ -8,6 +8,8 @@ import cz.cvut.earlgrey.classmodel.classmodel.Classifier;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
 import cz.cvut.earlgrey.classmodel.classmodel.Constant;
 import cz.cvut.earlgrey.classmodel.classmodel.Datatype;
+import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
+import cz.cvut.earlgrey.classmodel.classmodel.Feature;
 import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
@@ -98,6 +100,19 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 					return; 
 				}
 				else break;
+			case ClassmodelPackage.ENUMERATION:
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getEnumerationRule()) {
+					sequence_Enumeration(context, (Enumeration) semanticObject); 
+					return; 
+				}
+				else break;
+			case ClassmodelPackage.FEATURE:
+				if(context == grammarAccess.getEnumeratorRule()) {
+					sequence_Enumerator(context, (Feature) semanticObject); 
+					return; 
+				}
+				else break;
 			case ClassmodelPackage.GENERALIZATION:
 				if(context == grammarAccess.getGeneralizationRule()) {
 					sequence_Generalization(context, (Generalization) semanticObject); 
@@ -170,7 +185,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (size=INT?)
+	 *     (size=NATURAL?)
 	 */
 	protected void sequence_Array(EObject context, Array semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -217,6 +232,24 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getDatatypeAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID constraint=CONSTRAINT? enumerator+=Enumerator*)
+	 */
+	protected void sequence_Enumeration(EObject context, Enumeration semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID value=ImplicitValue? constraint=CONSTRAINT?)
+	 */
+	protected void sequence_Enumerator(EObject context, Feature semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

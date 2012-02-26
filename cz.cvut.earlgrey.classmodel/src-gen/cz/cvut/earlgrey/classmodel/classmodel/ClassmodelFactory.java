@@ -108,6 +108,15 @@ public interface ClassmodelFactory extends EFactory
   Feature createFeature();
 
   /**
+   * Returns a new object of class '<em>Enumeration</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Enumeration</em>'.
+   * @generated
+   */
+  Enumeration createEnumeration();
+
+  /**
    * Returns a new object of class '<em>Relationship</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
