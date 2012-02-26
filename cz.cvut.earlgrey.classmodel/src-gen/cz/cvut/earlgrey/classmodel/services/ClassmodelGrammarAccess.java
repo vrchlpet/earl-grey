@@ -11,7 +11,6 @@ import org.eclipse.xtext.*;
 import org.eclipse.xtext.service.GrammarProvider;
 import org.eclipse.xtext.service.AbstractElementFinder.*;
 
-import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 
 @Singleton
 public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
@@ -77,15 +76,13 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPackageParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cDatatypeParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
-		//Element: //    {Element} (annotation=Annotation)?
+		//Element:
 		//	Relationship | Classifier | Package | Datatype;
 		public ParserRule getRule() { return rule; }
 
-		////    {Element} (annotation=Annotation)?
 		//Relationship | Classifier | Package | Datatype
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		////    {Element} (annotation=Annotation)?
 		//Relationship
 		public RuleCall getRelationshipParserRuleCall_0() { return cRelationshipParserRuleCall_0; }
 
@@ -107,13 +104,15 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		
 		//// e.g.: datatype int
-		//Datatype:
+		//Datatype: //annotation+=Annotation*
 		//	"datatype" name=ID;
 		public ParserRule getRule() { return rule; }
 
+		////annotation+=Annotation*
 		//"datatype" name=ID
 		public Group getGroup() { return cGroup; }
 
+		////annotation+=Annotation*
 		//"datatype"
 		public Keyword getDatatypeKeyword_0() { return cDatatypeKeyword_0; }
 
@@ -212,51 +211,6 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"end"
 		public Keyword getEndKeyword_5() { return cEndKeyword_5; }
-	}
-
-	public class AnnotationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Annotation");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cCommercialAtKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cAnnotationsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cAnnotationsAnnotationParserRuleCall_2_1_0 = (RuleCall)cAnnotationsAssignment_2_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
-		
-		////TEST
-		//Annotation:
-		//	"@" name=ID ("(" annotations+=Annotation* ")")?;
-		public ParserRule getRule() { return rule; }
-
-		//"@" name=ID ("(" annotations+=Annotation* ")")?
-		public Group getGroup() { return cGroup; }
-
-		//"@"
-		public Keyword getCommercialAtKeyword_0() { return cCommercialAtKeyword_0; }
-
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-
-		//("(" annotations+=Annotation* ")")?
-		public Group getGroup_2() { return cGroup_2; }
-
-		//"("
-		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
-
-		//annotations+=Annotation*
-		public Assignment getAnnotationsAssignment_2_1() { return cAnnotationsAssignment_2_1; }
-
-		//Annotation
-		public RuleCall getAnnotationsAnnotationParserRuleCall_2_1_0() { return cAnnotationsAnnotationParserRuleCall_2_1_0; }
-
-		//")"
-		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
 	}
 
 	public class GeneralizationElements extends AbstractParserRuleElementFinder {
@@ -495,18 +449,18 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	public class MultiplicityValueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MultiplicityValue");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cIntegerParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cINTTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final Keyword cAsteriskKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
 		
 		//MultiplicityValue returns ecore::EString:
-		//	Integer | "*";
+		//	INT | "*";
 		public ParserRule getRule() { return rule; }
 
-		//Integer | "*"
+		//INT | "*"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//Integer
-		public RuleCall getIntegerParserRuleCall_0() { return cIntegerParserRuleCall_0; }
+		//INT
+		public RuleCall getINTTerminalRuleCall_0() { return cINTTerminalRuleCall_0; }
 
 		//"*"
 		public Keyword getAsteriskKeyword_1() { return cAsteriskKeyword_1; }
@@ -860,76 +814,36 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ImplicitValue");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cNULLTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cFALSETerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cTRUETerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cSTRINGTerminalRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cIntegerParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cDoubleParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cIDTerminalRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cBOOLEANTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cSTRINGTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cINTTerminalRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cDOUBLETerminalRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cIDTerminalRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		
 		//ImplicitValue returns ecore::EString:
-		//	NULL | FALSE | TRUE | STRING | Integer | Double | ID;
+		//	NULL | BOOLEAN | STRING | INT | DOUBLE | ID;
 		public ParserRule getRule() { return rule; }
 
-		//NULL | FALSE | TRUE | STRING | Integer | Double | ID
+		//NULL | BOOLEAN | STRING | INT | DOUBLE | ID
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//NULL
 		public RuleCall getNULLTerminalRuleCall_0() { return cNULLTerminalRuleCall_0; }
 
-		//FALSE
-		public RuleCall getFALSETerminalRuleCall_1() { return cFALSETerminalRuleCall_1; }
-
-		//TRUE
-		public RuleCall getTRUETerminalRuleCall_2() { return cTRUETerminalRuleCall_2; }
+		//BOOLEAN
+		public RuleCall getBOOLEANTerminalRuleCall_1() { return cBOOLEANTerminalRuleCall_1; }
 
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_3() { return cSTRINGTerminalRuleCall_3; }
+		public RuleCall getSTRINGTerminalRuleCall_2() { return cSTRINGTerminalRuleCall_2; }
 
-		//Integer
-		public RuleCall getIntegerParserRuleCall_4() { return cIntegerParserRuleCall_4; }
+		//INT
+		public RuleCall getINTTerminalRuleCall_3() { return cINTTerminalRuleCall_3; }
 
-		//Double
-		public RuleCall getDoubleParserRuleCall_5() { return cDoubleParserRuleCall_5; }
+		//DOUBLE
+		public RuleCall getDOUBLETerminalRuleCall_4() { return cDOUBLETerminalRuleCall_4; }
 
 		//ID
-		public RuleCall getIDTerminalRuleCall_6() { return cIDTerminalRuleCall_6; }
-	}
-
-	public class IntegerElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Integer");
-		private final RuleCall cINTTerminalRuleCall = (RuleCall)rule.eContents().get(1);
-		
-		//Integer returns ecore::EString:
-		//	INT;
-		public ParserRule getRule() { return rule; }
-
-		//INT
-		public RuleCall getINTTerminalRuleCall() { return cINTTerminalRuleCall; }
-	}
-
-	public class DoubleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Double");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cINTTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Keyword cFullStopKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final RuleCall cINTTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
-		
-		//Double returns ecore::EString:
-		//	INT "." INT;
-		public ParserRule getRule() { return rule; }
-
-		//INT "." INT
-		public Group getGroup() { return cGroup; }
-
-		//INT
-		public RuleCall getINTTerminalRuleCall_0() { return cINTTerminalRuleCall_0; }
-
-		//"."
-		public Keyword getFullStopKeyword_1() { return cFullStopKeyword_1; }
-
-		//INT
-		public RuleCall getINTTerminalRuleCall_2() { return cINTTerminalRuleCall_2; }
+		public RuleCall getIDTerminalRuleCall_5() { return cIDTerminalRuleCall_5; }
 	}
 
 	public class ExtendedIDElements extends AbstractParserRuleElementFinder {
@@ -977,6 +891,12 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cCOMPOSITIONEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
 		private final Keyword cCOMPOSITIONCompositionKeyword_5_0 = (Keyword)cCOMPOSITIONEnumLiteralDeclaration_5.eContents().get(0);
 		
+		////Integer returns ecore::EString:
+		////    INT
+		////;
+		////Double returns ecore::EString:
+		////    INT '.' INT
+		////;
 		//enum RelationshipType:
 		//	ASSOCIATION="association" | DEPENCY="depency" | GENERALIZATION="generalization" | REALIZATION="realization" |
 		//	AGGREGATION="aggregation" | COMPOSITION="composition";
@@ -1073,7 +993,6 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	private DatatypeElements pDatatype;
 	private PackageElements pPackage;
 	private ClassifierElements pClassifier;
-	private AnnotationElements pAnnotation;
 	private GeneralizationElements pGeneralization;
 	private FeatureElements pFeature;
 	private RelationshipElements pRelationship;
@@ -1086,35 +1005,32 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	private ReferenceElements pReference;
 	private ArrayElements pArray;
 	private ImplicitValueElements pImplicitValue;
-	private IntegerElements pInteger;
-	private DoubleElements pDouble;
 	private RelationshipTypeElements unknownRuleRelationshipType;
 	private VisibilityElements unknownRuleVisibility;
 	private ExtendedIDElements pExtendedID;
 	private TerminalRule tCONSTRAINT;
-	private TerminalRule tTRUE;
+	private TerminalRule tBOOLEAN;
 	private TerminalRule tNULL;
-	private TerminalRule tFALSE;
+	private TerminalRule tID;
+	private TerminalRule tINT;
+	private TerminalRule tDOUBLE;
+	private TerminalRule tSTRING;
+	private TerminalRule tML_COMMENT;
+	private TerminalRule tSL_COMMENT;
+	private TerminalRule tWS;
+	private TerminalRule tANY_OTHER;
 	
 	private final GrammarProvider grammarProvider;
 
-	private TerminalsGrammarAccess gaTerminals;
-
 	@Inject
-	public ClassmodelGrammarAccess(GrammarProvider grammarProvider,
-		TerminalsGrammarAccess gaTerminals) {
+	public ClassmodelGrammarAccess(GrammarProvider grammarProvider) {
 		this.grammarProvider = grammarProvider;
-		this.gaTerminals = gaTerminals;
 	}
 	
 	public Grammar getGrammar() {	
 		return grammarProvider.getGrammar(this);
 	}
 	
-
-	public TerminalsGrammarAccess getTerminalsGrammarAccess() {
-		return gaTerminals;
-	}
 
 	
 	//Model:
@@ -1137,7 +1053,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getImportAccess().getRule();
 	}
 
-	//Element: //    {Element} (annotation=Annotation)?
+	//Element:
 	//	Relationship | Classifier | Package | Datatype;
 	public ElementElements getElementAccess() {
 		return (pElement != null) ? pElement : (pElement = new ElementElements());
@@ -1148,7 +1064,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// e.g.: datatype int
-	//Datatype:
+	//Datatype: //annotation+=Annotation*
 	//	"datatype" name=ID;
 	public DatatypeElements getDatatypeAccess() {
 		return (pDatatype != null) ? pDatatype : (pDatatype = new DatatypeElements());
@@ -1178,17 +1094,6 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getClassifierRule() {
 		return getClassifierAccess().getRule();
-	}
-
-	////TEST
-	//Annotation:
-	//	"@" name=ID ("(" annotations+=Annotation* ")")?;
-	public AnnotationElements getAnnotationAccess() {
-		return (pAnnotation != null) ? pAnnotation : (pAnnotation = new AnnotationElements());
-	}
-	
-	public ParserRule getAnnotationRule() {
-		return getAnnotationAccess().getRule();
 	}
 
 	//// e.g.: isA Fruit
@@ -1238,7 +1143,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MultiplicityValue returns ecore::EString:
-	//	Integer | "*";
+	//	INT | "*";
 	public MultiplicityValueElements getMultiplicityValueAccess() {
 		return (pMultiplicityValue != null) ? pMultiplicityValue : (pMultiplicityValue = new MultiplicityValueElements());
 	}
@@ -1314,7 +1219,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ImplicitValue returns ecore::EString:
-	//	NULL | FALSE | TRUE | STRING | Integer | Double | ID;
+	//	NULL | BOOLEAN | STRING | INT | DOUBLE | ID;
 	public ImplicitValueElements getImplicitValueAccess() {
 		return (pImplicitValue != null) ? pImplicitValue : (pImplicitValue = new ImplicitValueElements());
 	}
@@ -1323,26 +1228,12 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getImplicitValueAccess().getRule();
 	}
 
-	//Integer returns ecore::EString:
-	//	INT;
-	public IntegerElements getIntegerAccess() {
-		return (pInteger != null) ? pInteger : (pInteger = new IntegerElements());
-	}
-	
-	public ParserRule getIntegerRule() {
-		return getIntegerAccess().getRule();
-	}
-
-	//Double returns ecore::EString:
-	//	INT "." INT;
-	public DoubleElements getDoubleAccess() {
-		return (pDouble != null) ? pDouble : (pDouble = new DoubleElements());
-	}
-	
-	public ParserRule getDoubleRule() {
-		return getDoubleAccess().getRule();
-	}
-
+	////Integer returns ecore::EString:
+	////    INT
+	////;
+	////Double returns ecore::EString:
+	////    INT '.' INT
+	////;
 	//enum RelationshipType:
 	//	ASSOCIATION="association" | DEPENCY="depency" | GENERALIZATION="generalization" | REALIZATION="realization" |
 	//	AGGREGATION="aggregation" | COMPOSITION="composition";
@@ -1381,64 +1272,64 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return (tCONSTRAINT != null) ? tCONSTRAINT : (tCONSTRAINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "CONSTRAINT"));
 	} 
 
-	//terminal TRUE:
-	//	"true";
-	public TerminalRule getTRUERule() {
-		return (tTRUE != null) ? tTRUE : (tTRUE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "TRUE"));
+	//terminal BOOLEAN:
+	//	"true" | "false";
+	public TerminalRule getBOOLEANRule() {
+		return (tBOOLEAN != null) ? tBOOLEAN : (tBOOLEAN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "BOOLEAN"));
 	} 
 
 	//terminal NULL:
-	//	"null";
+	//	"null" | "nil" | "NULL";
 	public TerminalRule getNULLRule() {
 		return (tNULL != null) ? tNULL : (tNULL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "NULL"));
 	} 
 
-	//terminal FALSE:
-	//	"false";
-	public TerminalRule getFALSERule() {
-		return (tFALSE != null) ? tFALSE : (tFALSE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "FALSE"));
-	} 
-
 	//terminal ID:
-	//	"^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
+	//	("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
 	public TerminalRule getIDRule() {
-		return gaTerminals.getIDRule();
+		return (tID != null) ? tID : (tID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ID"));
 	} 
 
 	//terminal INT returns ecore::EInt:
-	//	"0".."9"+;
+	//	"-"? "0".."9"+;
 	public TerminalRule getINTRule() {
-		return gaTerminals.getINTRule();
+		return (tINT != null) ? tINT : (tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "INT"));
+	} 
+
+	//terminal DOUBLE returns ecore::EDouble:
+	//	"-"? "0".."9"+ ("." "0".."9"*) "d"? | "-"? "0".."9"+ "d";
+	public TerminalRule getDOUBLERule() {
+		return (tDOUBLE != null) ? tDOUBLE : (tDOUBLE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "DOUBLE"));
 	} 
 
 	//terminal STRING:
 	//	"\"" ("\\" ("b" | "t" | "n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\""))* "\"" | "\'" ("\\" ("b" | "t" |
 	//	"n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'";
 	public TerminalRule getSTRINGRule() {
-		return gaTerminals.getSTRINGRule();
+		return (tSTRING != null) ? tSTRING : (tSTRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "STRING"));
 	} 
 
 	//terminal ML_COMMENT:
 	//	"/ *"->"* /";
 	public TerminalRule getML_COMMENTRule() {
-		return gaTerminals.getML_COMMENTRule();
+		return (tML_COMMENT != null) ? tML_COMMENT : (tML_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ML_COMMENT"));
 	} 
 
 	//terminal SL_COMMENT:
 	//	"//" !("\n" | "\r")* ("\r"? "\n")?;
 	public TerminalRule getSL_COMMENTRule() {
-		return gaTerminals.getSL_COMMENTRule();
+		return (tSL_COMMENT != null) ? tSL_COMMENT : (tSL_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "SL_COMMENT"));
 	} 
 
 	//terminal WS:
 	//	(" " | "\t" | "\r" | "\n")+;
 	public TerminalRule getWSRule() {
-		return gaTerminals.getWSRule();
+		return (tWS != null) ? tWS : (tWS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "WS"));
 	} 
 
 	//terminal ANY_OTHER:
 	//	.;
 	public TerminalRule getANY_OTHERRule() {
-		return gaTerminals.getANY_OTHERRule();
+		return (tANY_OTHER != null) ? tANY_OTHER : (tANY_OTHER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ANY_OTHER"));
 	} 
 }

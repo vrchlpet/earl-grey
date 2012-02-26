@@ -1,0 +1,55 @@
+grammar cz.cvut.earlgrey.annotation.Annotation with org.eclipse.xtext.common.Terminals
+
+generate annotation "http://www.cvut.cz/earlgrey/annotation/Annotation"
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+// e.g.: @Generate(Java)
+Annotation:
+    '@' name=ExtendedID
+    (=> '('
+        parameter+=Parameter (',' parameter+=Parameter)*
+    ')')?
+;
+
+Parameter:
+    AssignParameter
+    | ValueParameter
+;
+
+// e.g.: @Generate(language = Java)
+AssignParameter returns Parameter:
+    name=ExtendedID '=' value=Value
+;
+
+// e.g.: @Generate(Java)
+ValueParameter returns Parameter:
+    value=Value
+;
+
+// e.g.: null
+Value returns ecore::EString:
+    INT
+    | STRING
+    | ExtendedID
+    | BOOLEAN
+    | NULL
+    | Double
+;
+
+Double returns ecore::EString:
+    INT '.' INT
+;
+
+// e.g.: ElementType.METHOD
+ExtendedID returns ecore::EString:
+    ID ('.' ID)*
+;
+
+terminal BOOLEAN:
+    'true' | 'false'
+;
+
+terminal NULL:
+    'null' | 'nil'
+;
+ 

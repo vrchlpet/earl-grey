@@ -6,7 +6,6 @@
  */
 package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
-import cz.cvut.earlgrey.classmodel.classmodel.Annotation;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.Classifier;
@@ -94,7 +93,6 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
       case ClassmodelPackage.DATATYPE: return createDatatype();
       case ClassmodelPackage.PACKAGE: return createPackage();
       case ClassmodelPackage.CLASSIFIER: return createClassifier();
-      case ClassmodelPackage.ANNOTATION: return createAnnotation();
       case ClassmodelPackage.GENERALIZATION: return createGeneralization();
       case ClassmodelPackage.FEATURE: return createFeature();
       case ClassmodelPackage.RELATIONSHIP: return createRelationship();
@@ -212,17 +210,6 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
   {
     ClassifierImpl classifier = new ClassifierImpl();
     return classifier;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Annotation createAnnotation()
-  {
-    AnnotationImpl annotation = new AnnotationImpl();
-    return annotation;
   }
 
   /**

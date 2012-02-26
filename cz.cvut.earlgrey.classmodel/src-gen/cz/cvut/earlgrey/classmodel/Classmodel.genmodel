@@ -44,10 +44,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Classifier/constraint"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Classifier/feature"/>
     </genClasses>
-    <genClasses ecoreClass="Classmodel.ecore#//Annotation">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Annotation/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Annotation/annotations"/>
-    </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Generalization">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Generalization/classifier"/>
     </genClasses>

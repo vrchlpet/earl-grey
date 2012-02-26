@@ -6,7 +6,6 @@
  */
 package cz.cvut.earlgrey.classmodel.classmodel.util;
 
-import cz.cvut.earlgrey.classmodel.classmodel.Annotation;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.Classifier;
@@ -123,11 +122,6 @@ public class ClassmodelAdapterFactory extends AdapterFactoryImpl
       public Adapter caseClassifier(Classifier object)
       {
         return createClassifierAdapter();
-      }
-      @Override
-      public Adapter caseAnnotation(Annotation object)
-      {
-        return createAnnotationAdapter();
       }
       @Override
       public Adapter caseGeneralization(Generalization object)
@@ -287,21 +281,6 @@ public class ClassmodelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createClassifierAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.classmodel.classmodel.Annotation <em>Annotation</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Annotation
-   * @generated
-   */
-  public Adapter createAnnotationAdapter()
   {
     return null;
   }

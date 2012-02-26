@@ -48,8 +48,6 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDatatypeAccess().getGroup(), "rule__Datatype__Group__0");
 					put(grammarAccess.getPackageAccess().getGroup(), "rule__Package__Group__0");
 					put(grammarAccess.getClassifierAccess().getGroup(), "rule__Classifier__Group__0");
-					put(grammarAccess.getAnnotationAccess().getGroup(), "rule__Annotation__Group__0");
-					put(grammarAccess.getAnnotationAccess().getGroup_2(), "rule__Annotation__Group_2__0");
 					put(grammarAccess.getGeneralizationAccess().getGroup(), "rule__Generalization__Group__0");
 					put(grammarAccess.getGeneralizationAccess().getGroup_2(), "rule__Generalization__Group_2__0");
 					put(grammarAccess.getFeatureAccess().getGroup(), "rule__Feature__Group__0");
@@ -70,7 +68,6 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAttributeAccess().getGroup_4_2(), "rule__Attribute__Group_4_2__0");
 					put(grammarAccess.getReferenceAccess().getGroup(), "rule__Reference__Group__0");
 					put(grammarAccess.getArrayAccess().getGroup(), "rule__Array__Group__0");
-					put(grammarAccess.getDoubleAccess().getGroup(), "rule__Double__Group__0");
 					put(grammarAccess.getExtendedIDAccess().getGroup(), "rule__ExtendedID__Group__0");
 					put(grammarAccess.getExtendedIDAccess().getGroup_1(), "rule__ExtendedID__Group_1__0");
 					put(grammarAccess.getModelAccess().getImportsAssignment_0(), "rule__Model__ImportsAssignment_0");
@@ -83,8 +80,6 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getClassifierAccess().getGeneralizationAssignment_2(), "rule__Classifier__GeneralizationAssignment_2");
 					put(grammarAccess.getClassifierAccess().getConstraintAssignment_3(), "rule__Classifier__ConstraintAssignment_3");
 					put(grammarAccess.getClassifierAccess().getFeatureAssignment_4(), "rule__Classifier__FeatureAssignment_4");
-					put(grammarAccess.getAnnotationAccess().getNameAssignment_1(), "rule__Annotation__NameAssignment_1");
-					put(grammarAccess.getAnnotationAccess().getAnnotationsAssignment_2_1(), "rule__Annotation__AnnotationsAssignment_2_1");
 					put(grammarAccess.getGeneralizationAccess().getClassifierAssignment_1(), "rule__Generalization__ClassifierAssignment_1");
 					put(grammarAccess.getGeneralizationAccess().getClassifierAssignment_2_1(), "rule__Generalization__ClassifierAssignment_2_1");
 					put(grammarAccess.getFeatureAccess().getConstraintAssignment_1(), "rule__Feature__ConstraintAssignment_1");

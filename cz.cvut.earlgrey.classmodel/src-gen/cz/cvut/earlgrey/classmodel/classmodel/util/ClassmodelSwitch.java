@@ -6,7 +6,6 @@
  */
 package cz.cvut.earlgrey.classmodel.classmodel.util;
 
-import cz.cvut.earlgrey.classmodel.classmodel.Annotation;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.Classifier;
@@ -134,13 +133,6 @@ public class ClassmodelSwitch<T> extends Switch<T>
         Classifier classifier = (Classifier)theEObject;
         T result = caseClassifier(classifier);
         if (result == null) result = caseElement(classifier);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case ClassmodelPackage.ANNOTATION:
-      {
-        Annotation annotation = (Annotation)theEObject;
-        T result = caseAnnotation(annotation);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -314,22 +306,6 @@ public class ClassmodelSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseClassifier(Classifier object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Annotation</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Annotation</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAnnotation(Annotation object)
   {
     return null;
   }

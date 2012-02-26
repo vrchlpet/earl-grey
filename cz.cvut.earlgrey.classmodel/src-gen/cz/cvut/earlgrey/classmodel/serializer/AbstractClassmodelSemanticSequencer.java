@@ -2,7 +2,6 @@ package cz.cvut.earlgrey.classmodel.serializer;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
-import cz.cvut.earlgrey.classmodel.classmodel.Annotation;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.Classifier;
@@ -58,12 +57,6 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == ClassmodelPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
-			case ClassmodelPackage.ANNOTATION:
-				if(context == grammarAccess.getAnnotationRule()) {
-					sequence_Annotation(context, (Annotation) semanticObject); 
-					return; 
-				}
-				else break;
 			case ClassmodelPackage.ARRAY:
 				if(context == grammarAccess.getArrayRule()) {
 					sequence_Array(context, (Array) semanticObject); 
@@ -167,15 +160,6 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
-	
-	/**
-	 * Constraint:
-	 *     (name=ID annotations+=Annotation*)
-	 */
-	protected void sequence_Annotation(EObject context, Annotation semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
 	
 	/**
 	 * Constraint:

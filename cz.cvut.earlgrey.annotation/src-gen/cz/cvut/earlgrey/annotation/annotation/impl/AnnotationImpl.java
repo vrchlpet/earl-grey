@@ -4,10 +4,11 @@
  *
 
  */
-package cz.cvut.earlgrey.classmodel.classmodel.impl;
+package cz.cvut.earlgrey.annotation.annotation.impl;
 
-import cz.cvut.earlgrey.classmodel.classmodel.Annotation;
-import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
+import cz.cvut.earlgrey.annotation.annotation.Annotation;
+import cz.cvut.earlgrey.annotation.annotation.AnnotationPackage;
+import cz.cvut.earlgrey.annotation.annotation.Parameter;
 
 import java.util.Collection;
 
@@ -32,8 +33,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AnnotationImpl#getName <em>Name</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AnnotationImpl#getAnnotations <em>Annotations</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.annotation.annotation.impl.AnnotationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.annotation.annotation.impl.AnnotationImpl#getParameter <em>Parameter</em>}</li>
  * </ul>
  * </p>
  *
@@ -62,14 +63,14 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getAnnotations() <em>Annotations</em>}' containment reference list.
+   * The cached value of the '{@link #getParameter() <em>Parameter</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAnnotations()
+   * @see #getParameter()
    * @generated
    * @ordered
    */
-  protected EList<Annotation> annotations;
+  protected EList<Parameter> parameter;
 
   /**
    * <!-- begin-user-doc -->
@@ -89,7 +90,7 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
   @Override
   protected EClass eStaticClass()
   {
-    return ClassmodelPackage.Literals.ANNOTATION;
+    return AnnotationPackage.Literals.ANNOTATION;
   }
 
   /**
@@ -112,7 +113,7 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.ANNOTATION__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, AnnotationPackage.ANNOTATION__NAME, oldName, name));
   }
 
   /**
@@ -120,13 +121,13 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Annotation> getAnnotations()
+  public EList<Parameter> getParameter()
   {
-    if (annotations == null)
+    if (parameter == null)
     {
-      annotations = new EObjectContainmentEList<Annotation>(Annotation.class, this, ClassmodelPackage.ANNOTATION__ANNOTATIONS);
+      parameter = new EObjectContainmentEList<Parameter>(Parameter.class, this, AnnotationPackage.ANNOTATION__PARAMETER);
     }
-    return annotations;
+    return parameter;
   }
 
   /**
@@ -139,8 +140,8 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ANNOTATION__ANNOTATIONS:
-        return ((InternalEList<?>)getAnnotations()).basicRemove(otherEnd, msgs);
+      case AnnotationPackage.ANNOTATION__PARAMETER:
+        return ((InternalEList<?>)getParameter()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -155,10 +156,10 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ANNOTATION__NAME:
+      case AnnotationPackage.ANNOTATION__NAME:
         return getName();
-      case ClassmodelPackage.ANNOTATION__ANNOTATIONS:
-        return getAnnotations();
+      case AnnotationPackage.ANNOTATION__PARAMETER:
+        return getParameter();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -174,12 +175,12 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ANNOTATION__NAME:
+      case AnnotationPackage.ANNOTATION__NAME:
         setName((String)newValue);
         return;
-      case ClassmodelPackage.ANNOTATION__ANNOTATIONS:
-        getAnnotations().clear();
-        getAnnotations().addAll((Collection<? extends Annotation>)newValue);
+      case AnnotationPackage.ANNOTATION__PARAMETER:
+        getParameter().clear();
+        getParameter().addAll((Collection<? extends Parameter>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -195,11 +196,11 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ANNOTATION__NAME:
+      case AnnotationPackage.ANNOTATION__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case ClassmodelPackage.ANNOTATION__ANNOTATIONS:
-        getAnnotations().clear();
+      case AnnotationPackage.ANNOTATION__PARAMETER:
+        getParameter().clear();
         return;
     }
     super.eUnset(featureID);
@@ -215,10 +216,10 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ANNOTATION__NAME:
+      case AnnotationPackage.ANNOTATION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case ClassmodelPackage.ANNOTATION__ANNOTATIONS:
-        return annotations != null && !annotations.isEmpty();
+      case AnnotationPackage.ANNOTATION__PARAMETER:
+        return parameter != null && !parameter.isEmpty();
     }
     return super.eIsSet(featureID);
   }

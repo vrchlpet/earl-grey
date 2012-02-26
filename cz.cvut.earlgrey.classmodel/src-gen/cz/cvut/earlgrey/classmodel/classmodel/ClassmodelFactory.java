@@ -81,15 +81,6 @@ public interface ClassmodelFactory extends EFactory
   Classifier createClassifier();
 
   /**
-   * Returns a new object of class '<em>Annotation</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Annotation</em>'.
-   * @generated
-   */
-  Annotation createAnnotation();
-
-  /**
    * Returns a new object of class '<em>Generalization</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
