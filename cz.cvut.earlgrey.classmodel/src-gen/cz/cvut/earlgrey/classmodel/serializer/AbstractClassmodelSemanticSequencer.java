@@ -16,6 +16,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
+import cz.cvut.earlgrey.classmodel.classmodel.Type;
 import cz.cvut.earlgrey.classmodel.services.ClassmodelGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
@@ -157,6 +158,12 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 					return; 
 				}
 				else break;
+			case ClassmodelPackage.TYPE:
+				if(context == grammarAccess.getTypeRule()) {
+					sequence_Type(context, (Type) semanticObject); 
+					return; 
+				}
+				else break;
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
@@ -172,7 +179,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (modifier=Visibility? static?='static'? name=ID type=Reference (implicit+=ImplicitValue implicit+=ImplicitValue*)?)
+	 *     (visibility=Visibility? static?='static'? name=ID type=Reference (implicit+=ImplicitValue implicit+=ImplicitValue*)?)
 	 */
 	protected void sequence_Attribute(EObject context, Attribute semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -190,7 +197,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (modifier=Visibility? name=ID value=ImplicitValue)
+	 *     (visibility=Visibility? name=ID value=ImplicitValue)
 	 */
 	protected void sequence_Constant(EObject context, Constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -216,7 +223,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	/**
 	 * Constraint:
 	 *     (
-	 *         modifier=Visibility? 
+	 *         visibility=Visibility? 
 	 *         static?='static'? 
 	 *         name=ID 
 	 *         type=Reference 
@@ -231,7 +238,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (modifier=Visibility? name=ID value=ImplicitValue constraint=CONSTRAINT?)
+	 *     (visibility=Visibility? name=ID value=ImplicitValue constraint=CONSTRAINT?)
 	 */
 	protected void sequence_Feature(EObject context, Constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -241,11 +248,11 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	/**
 	 * Constraint:
 	 *     (
-	 *         modifier=Visibility? 
+	 *         visibility=Visibility? 
 	 *         static?='static'? 
 	 *         name=ID 
 	 *         (parameter+=Parameter parameter+=Parameter*)? 
-	 *         return=Reference 
+	 *         return=Reference? 
 	 *         constraint=CONSTRAINT?
 	 *     )
 	 */
@@ -256,7 +263,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (classifier+=ExtendedID classifier+=ExtendedID*)
+	 *     (classifier+=Type classifier+=Type*)
 	 */
 	protected void sequence_Generalization(EObject context, Generalization semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -299,7 +306,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (modifier=Visibility? static?='static'? name=ID (parameter+=Parameter parameter+=Parameter*)? return=Reference)
+	 *     (visibility=Visibility? static?='static'? name=ID (parameter+=Parameter parameter+=Parameter*)? return=Reference?)
 	 */
 	protected void sequence_Operation(EObject context, Operation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -349,6 +356,15 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	 *     )
 	 */
 	protected void sequence_Relationship(EObject context, Relationship semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (visibility=Visibility? name=ExtendedID)
+	 */
+	protected void sequence_Type(EObject context, Type semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 }

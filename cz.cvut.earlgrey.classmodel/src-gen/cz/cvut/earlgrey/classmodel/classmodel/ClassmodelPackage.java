@@ -276,7 +276,7 @@ public interface ClassmodelPackage extends EPackage
   int GENERALIZATION = 6;
 
   /**
-   * The feature id for the '<em><b>Classifier</b></em>' attribute list.
+   * The feature id for the '<em><b>Classifier</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -294,6 +294,43 @@ public interface ClassmodelPackage extends EPackage
   int GENERALIZATION_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.TypeImpl <em>Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.TypeImpl
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getType()
+   * @generated
+   */
+  int TYPE = 7;
+
+  /**
+   * The feature id for the '<em><b>Visibility</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE__VISIBILITY = 0;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE__NAME = 1;
+
+  /**
+   * The number of structural features of the '<em>Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl <em>Feature</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -301,7 +338,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getFeature()
    * @generated
    */
-  int FEATURE = 7;
+  int FEATURE = 8;
 
   /**
    * The feature id for the '<em><b>Constraint</b></em>' attribute.
@@ -313,13 +350,13 @@ public interface ClassmodelPackage extends EPackage
   int FEATURE__CONSTRAINT = 0;
 
   /**
-   * The feature id for the '<em><b>Modifier</b></em>' attribute.
+   * The feature id for the '<em><b>Visibility</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FEATURE__MODIFIER = 1;
+  int FEATURE__VISIBILITY = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -347,7 +384,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getRelationship()
    * @generated
    */
-  int RELATIONSHIP = 8;
+  int RELATIONSHIP = 9;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -456,7 +493,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getMultiplicity()
    * @generated
    */
-  int MULTIPLICITY = 9;
+  int MULTIPLICITY = 10;
 
   /**
    * The feature id for the '<em><b>Upper</b></em>' attribute.
@@ -493,7 +530,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getConstant()
    * @generated
    */
-  int CONSTANT = 10;
+  int CONSTANT = 11;
 
   /**
    * The feature id for the '<em><b>Constraint</b></em>' attribute.
@@ -505,13 +542,13 @@ public interface ClassmodelPackage extends EPackage
   int CONSTANT__CONSTRAINT = FEATURE__CONSTRAINT;
 
   /**
-   * The feature id for the '<em><b>Modifier</b></em>' attribute.
+   * The feature id for the '<em><b>Visibility</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONSTANT__MODIFIER = FEATURE__MODIFIER;
+  int CONSTANT__VISIBILITY = FEATURE__VISIBILITY;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -548,7 +585,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getOperation()
    * @generated
    */
-  int OPERATION = 11;
+  int OPERATION = 12;
 
   /**
    * The feature id for the '<em><b>Constraint</b></em>' attribute.
@@ -560,13 +597,13 @@ public interface ClassmodelPackage extends EPackage
   int OPERATION__CONSTRAINT = FEATURE__CONSTRAINT;
 
   /**
-   * The feature id for the '<em><b>Modifier</b></em>' attribute.
+   * The feature id for the '<em><b>Visibility</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OPERATION__MODIFIER = FEATURE__MODIFIER;
+  int OPERATION__VISIBILITY = FEATURE__VISIBILITY;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -621,7 +658,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getParameter()
    * @generated
    */
-  int PARAMETER = 12;
+  int PARAMETER = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -667,7 +704,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getAttribute()
    * @generated
    */
-  int ATTRIBUTE = 13;
+  int ATTRIBUTE = 14;
 
   /**
    * The feature id for the '<em><b>Constraint</b></em>' attribute.
@@ -679,13 +716,13 @@ public interface ClassmodelPackage extends EPackage
   int ATTRIBUTE__CONSTRAINT = FEATURE__CONSTRAINT;
 
   /**
-   * The feature id for the '<em><b>Modifier</b></em>' attribute.
+   * The feature id for the '<em><b>Visibility</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATTRIBUTE__MODIFIER = FEATURE__MODIFIER;
+  int ATTRIBUTE__VISIBILITY = FEATURE__VISIBILITY;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -740,7 +777,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getReference()
    * @generated
    */
-  int REFERENCE = 14;
+  int REFERENCE = 15;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -777,7 +814,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getArray()
    * @generated
    */
-  int ARRAY = 15;
+  int ARRAY = 16;
 
   /**
    * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -805,7 +842,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getRelationshipType()
    * @generated
    */
-  int RELATIONSHIP_TYPE = 16;
+  int RELATIONSHIP_TYPE = 17;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.Visibility <em>Visibility</em>}' enum.
@@ -815,7 +852,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getVisibility()
    * @generated
    */
-  int VISIBILITY = 17;
+  int VISIBILITY = 18;
 
 
   /**
@@ -999,15 +1036,47 @@ public interface ClassmodelPackage extends EPackage
   EClass getGeneralization();
 
   /**
-   * Returns the meta object for the attribute list '{@link cz.cvut.earlgrey.classmodel.classmodel.Generalization#getClassifier <em>Classifier</em>}'.
+   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.classmodel.classmodel.Generalization#getClassifier <em>Classifier</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Classifier</em>'.
+   * @return the meta object for the containment reference list '<em>Classifier</em>'.
    * @see cz.cvut.earlgrey.classmodel.classmodel.Generalization#getClassifier()
    * @see #getGeneralization()
    * @generated
    */
-  EAttribute getGeneralization_Classifier();
+  EReference getGeneralization_Classifier();
+
+  /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Type <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Type</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Type
+   * @generated
+   */
+  EClass getType();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Type#getVisibility <em>Visibility</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Visibility</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Type#getVisibility()
+   * @see #getType()
+   * @generated
+   */
+  EAttribute getType_Visibility();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Type#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Type#getName()
+   * @see #getType()
+   * @generated
+   */
+  EAttribute getType_Name();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Feature <em>Feature</em>}'.
@@ -1031,15 +1100,15 @@ public interface ClassmodelPackage extends EPackage
   EAttribute getFeature_Constraint();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#getModifier <em>Modifier</em>}'.
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#getVisibility <em>Visibility</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Modifier</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Feature#getModifier()
+   * @return the meta object for the attribute '<em>Visibility</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Feature#getVisibility()
    * @see #getFeature()
    * @generated
    */
-  EAttribute getFeature_Modifier();
+  EAttribute getFeature_Visibility();
 
   /**
    * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Feature#getName <em>Name</em>}'.
@@ -1601,12 +1670,38 @@ public interface ClassmodelPackage extends EPackage
     EClass GENERALIZATION = eINSTANCE.getGeneralization();
 
     /**
-     * The meta object literal for the '<em><b>Classifier</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Classifier</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GENERALIZATION__CLASSIFIER = eINSTANCE.getGeneralization_Classifier();
+    EReference GENERALIZATION__CLASSIFIER = eINSTANCE.getGeneralization_Classifier();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.TypeImpl <em>Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.TypeImpl
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getType()
+     * @generated
+     */
+    EClass TYPE = eINSTANCE.getType();
+
+    /**
+     * The meta object literal for the '<em><b>Visibility</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TYPE__VISIBILITY = eINSTANCE.getType_Visibility();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TYPE__NAME = eINSTANCE.getType_Name();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl <em>Feature</em>}' class.
@@ -1627,12 +1722,12 @@ public interface ClassmodelPackage extends EPackage
     EAttribute FEATURE__CONSTRAINT = eINSTANCE.getFeature_Constraint();
 
     /**
-     * The meta object literal for the '<em><b>Modifier</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Visibility</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute FEATURE__MODIFIER = eINSTANCE.getFeature_Modifier();
+    EAttribute FEATURE__VISIBILITY = eINSTANCE.getFeature_Visibility();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.

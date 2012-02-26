@@ -45,11 +45,15 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Classifier/feature"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Generalization">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Generalization/classifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Generalization/classifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Classmodel.ecore#//Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Type/visibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Type/name"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Feature">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Feature/constraint"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Feature/modifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Feature/visibility"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Feature/name"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Relationship">

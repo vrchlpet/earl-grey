@@ -41,9 +41,14 @@ Classifier:
     'end'
 ;
 
-// e.g.: isA Fruit
+// e.g.: class Apple isA +Fruit
 Generalization:
-    'isA' classifier+=ExtendedID (',' classifier+=ExtendedID)*
+    'isA' classifier+=Type (',' classifier+=Type)*
+;
+
+// e.g.: isA +Fruit
+Type:
+    visibility=Visibility? name=ExtendedID
 ;
 
 Feature:
@@ -69,13 +74,13 @@ MultiplicityValue returns ecore::EString:
 
 // e.g.: BUFFER_LENGTH = 512
 Constant:
-    modifier=Visibility? name=ID '=' value=ImplicitValue
+    visibility=Visibility? name=ID '=' value=ImplicitValue
 ;
 
 // e.g.: +add(Name : String) : void
 Operation:
-    (modifier=Visibility? & static?='static'?) name=ID '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')'
-    ':' return = Reference
+    (visibility=Visibility? & static?='static'?) name=ID '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')'
+    (':' return = Reference)?
 ;
 
 // e.g.: Name : String = "John"
@@ -85,7 +90,7 @@ Parameter:
 
 // e.g.: +matrix : int[5][5]
 Attribute:
-    (modifier=Visibility? & static?='static'?) name=ID ':' type=Reference (=> '=' implicit+=ImplicitValue (',' implicit+=ImplicitValue)*)?
+    (visibility=Visibility? & static?='static'?) name=ID ':' type=Reference (=> '=' implicit+=ImplicitValue (',' implicit+=ImplicitValue)*)?
 ;
 
 Reference:

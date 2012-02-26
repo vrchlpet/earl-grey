@@ -8,16 +8,21 @@ package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
 import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
+import cz.cvut.earlgrey.classmodel.classmodel.Type;
 
 import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,14 +40,14 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
 public class GeneralizationImpl extends MinimalEObjectImpl.Container implements Generalization
 {
   /**
-   * The cached value of the '{@link #getClassifier() <em>Classifier</em>}' attribute list.
+   * The cached value of the '{@link #getClassifier() <em>Classifier</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getClassifier()
    * @generated
    * @ordered
    */
-  protected EList<String> classifier;
+  protected EList<Type> classifier;
 
   /**
    * <!-- begin-user-doc -->
@@ -70,13 +75,29 @@ public class GeneralizationImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getClassifier()
+  public EList<Type> getClassifier()
   {
     if (classifier == null)
     {
-      classifier = new EDataTypeEList<String>(String.class, this, ClassmodelPackage.GENERALIZATION__CLASSIFIER);
+      classifier = new EObjectContainmentEList<Type>(Type.class, this, ClassmodelPackage.GENERALIZATION__CLASSIFIER);
     }
     return classifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case ClassmodelPackage.GENERALIZATION__CLASSIFIER:
+        return ((InternalEList<?>)getClassifier()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -108,7 +129,7 @@ public class GeneralizationImpl extends MinimalEObjectImpl.Container implements 
     {
       case ClassmodelPackage.GENERALIZATION__CLASSIFIER:
         getClassifier().clear();
-        getClassifier().addAll((Collection<? extends String>)newValue);
+        getClassifier().addAll((Collection<? extends Type>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -145,23 +166,6 @@ public class GeneralizationImpl extends MinimalEObjectImpl.Container implements 
         return classifier != null && !classifier.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (classifier: ");
-    result.append(classifier);
-    result.append(')');
-    return result.toString();
   }
 
 } //GeneralizationImpl

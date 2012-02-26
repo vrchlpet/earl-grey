@@ -218,40 +218,69 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cIsAKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cClassifierAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cClassifierExtendedIDParserRuleCall_1_0 = (RuleCall)cClassifierAssignment_1.eContents().get(0);
+		private final RuleCall cClassifierTypeParserRuleCall_1_0 = (RuleCall)cClassifierAssignment_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cClassifierAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cClassifierExtendedIDParserRuleCall_2_1_0 = (RuleCall)cClassifierAssignment_2_1.eContents().get(0);
+		private final RuleCall cClassifierTypeParserRuleCall_2_1_0 = (RuleCall)cClassifierAssignment_2_1.eContents().get(0);
 		
-		//// e.g.: isA Fruit
+		//// e.g.: class Apple isA +Fruit
 		//Generalization:
-		//	"isA" classifier+=ExtendedID ("," classifier+=ExtendedID)*;
+		//	"isA" classifier+=Type ("," classifier+=Type)*;
 		public ParserRule getRule() { return rule; }
 
-		//"isA" classifier+=ExtendedID ("," classifier+=ExtendedID)*
+		//"isA" classifier+=Type ("," classifier+=Type)*
 		public Group getGroup() { return cGroup; }
 
 		//"isA"
 		public Keyword getIsAKeyword_0() { return cIsAKeyword_0; }
 
-		//classifier+=ExtendedID
+		//classifier+=Type
 		public Assignment getClassifierAssignment_1() { return cClassifierAssignment_1; }
 
-		//ExtendedID
-		public RuleCall getClassifierExtendedIDParserRuleCall_1_0() { return cClassifierExtendedIDParserRuleCall_1_0; }
+		//Type
+		public RuleCall getClassifierTypeParserRuleCall_1_0() { return cClassifierTypeParserRuleCall_1_0; }
 
-		//("," classifier+=ExtendedID)*
+		//("," classifier+=Type)*
 		public Group getGroup_2() { return cGroup_2; }
 
 		//","
 		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
 
-		//classifier+=ExtendedID
+		//classifier+=Type
 		public Assignment getClassifierAssignment_2_1() { return cClassifierAssignment_2_1; }
 
+		//Type
+		public RuleCall getClassifierTypeParserRuleCall_2_1_0() { return cClassifierTypeParserRuleCall_2_1_0; }
+	}
+
+	public class TypeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Type");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cVisibilityAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cVisibilityVisibilityEnumRuleCall_0_0 = (RuleCall)cVisibilityAssignment_0.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameExtendedIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		
+		//// e.g.: isA +Fruit
+		//Type:
+		//	visibility=Visibility? name=ExtendedID;
+		public ParserRule getRule() { return rule; }
+
+		//visibility=Visibility? name=ExtendedID
+		public Group getGroup() { return cGroup; }
+
+		//visibility=Visibility?
+		public Assignment getVisibilityAssignment_0() { return cVisibilityAssignment_0; }
+
+		//Visibility
+		public RuleCall getVisibilityVisibilityEnumRuleCall_0_0() { return cVisibilityVisibilityEnumRuleCall_0_0; }
+
+		//name=ExtendedID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
 		//ExtendedID
-		public RuleCall getClassifierExtendedIDParserRuleCall_2_1_0() { return cClassifierExtendedIDParserRuleCall_2_1_0; }
+		public RuleCall getNameExtendedIDParserRuleCall_1_0() { return cNameExtendedIDParserRuleCall_1_0; }
 	}
 
 	public class FeatureElements extends AbstractParserRuleElementFinder {
@@ -469,8 +498,8 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	public class ConstantElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Constant");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cModifierAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cModifierVisibilityEnumRuleCall_0_0 = (RuleCall)cModifierAssignment_0.eContents().get(0);
+		private final Assignment cVisibilityAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cVisibilityVisibilityEnumRuleCall_0_0 = (RuleCall)cVisibilityAssignment_0.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
@@ -479,17 +508,17 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// e.g.: BUFFER_LENGTH = 512
 		//Constant:
-		//	modifier=Visibility? name=ID "=" value=ImplicitValue;
+		//	visibility=Visibility? name=ID "=" value=ImplicitValue;
 		public ParserRule getRule() { return rule; }
 
-		//modifier=Visibility? name=ID "=" value=ImplicitValue
+		//visibility=Visibility? name=ID "=" value=ImplicitValue
 		public Group getGroup() { return cGroup; }
 
-		//modifier=Visibility?
-		public Assignment getModifierAssignment_0() { return cModifierAssignment_0; }
+		//visibility=Visibility?
+		public Assignment getVisibilityAssignment_0() { return cVisibilityAssignment_0; }
 
 		//Visibility
-		public RuleCall getModifierVisibilityEnumRuleCall_0_0() { return cModifierVisibilityEnumRuleCall_0_0; }
+		public RuleCall getVisibilityVisibilityEnumRuleCall_0_0() { return cVisibilityVisibilityEnumRuleCall_0_0; }
 
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -511,8 +540,8 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Operation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final UnorderedGroup cUnorderedGroup_0 = (UnorderedGroup)cGroup.eContents().get(0);
-		private final Assignment cModifierAssignment_0_0 = (Assignment)cUnorderedGroup_0.eContents().get(0);
-		private final RuleCall cModifierVisibilityEnumRuleCall_0_0_0 = (RuleCall)cModifierAssignment_0_0.eContents().get(0);
+		private final Assignment cVisibilityAssignment_0_0 = (Assignment)cUnorderedGroup_0.eContents().get(0);
+		private final RuleCall cVisibilityVisibilityEnumRuleCall_0_0_0 = (RuleCall)cVisibilityAssignment_0_0.eContents().get(0);
 		private final Assignment cStaticAssignment_0_1 = (Assignment)cUnorderedGroup_0.eContents().get(1);
 		private final Keyword cStaticStaticKeyword_0_1_0 = (Keyword)cStaticAssignment_0_1.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -526,28 +555,29 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cParameterAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
 		private final RuleCall cParameterParameterParserRuleCall_3_1_1_0 = (RuleCall)cParameterAssignment_3_1_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Keyword cColonKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cReturnAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cReturnReferenceParserRuleCall_6_0 = (RuleCall)cReturnAssignment_6.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cColonKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cReturnAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cReturnReferenceParserRuleCall_5_1_0 = (RuleCall)cReturnAssignment_5_1.eContents().get(0);
 		
 		//// e.g.: +add(Name : String) : void
 		//Operation:
-		//	(modifier=Visibility? & static?="static"?) name=ID "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")" ":"
-		//	return=Reference;
+		//	(visibility=Visibility? & static?="static"?) name=ID "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")"
+		//	(":" return=Reference)?;
 		public ParserRule getRule() { return rule; }
 
-		//(modifier=Visibility? & static?="static"?) name=ID "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")" ":"
-		//return=Reference
+		//(visibility=Visibility? & static?="static"?) name=ID "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")" (":"
+		//return=Reference)?
 		public Group getGroup() { return cGroup; }
 
-		//modifier=Visibility? & static?="static"?
+		//visibility=Visibility? & static?="static"?
 		public UnorderedGroup getUnorderedGroup_0() { return cUnorderedGroup_0; }
 
-		//modifier=Visibility?
-		public Assignment getModifierAssignment_0_0() { return cModifierAssignment_0_0; }
+		//visibility=Visibility?
+		public Assignment getVisibilityAssignment_0_0() { return cVisibilityAssignment_0_0; }
 
 		//Visibility
-		public RuleCall getModifierVisibilityEnumRuleCall_0_0_0() { return cModifierVisibilityEnumRuleCall_0_0_0; }
+		public RuleCall getVisibilityVisibilityEnumRuleCall_0_0_0() { return cVisibilityVisibilityEnumRuleCall_0_0_0; }
 
 		//static?="static"?
 		public Assignment getStaticAssignment_0_1() { return cStaticAssignment_0_1; }
@@ -588,14 +618,17 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 
+		//(":" return=Reference)?
+		public Group getGroup_5() { return cGroup_5; }
+
 		//":"
-		public Keyword getColonKeyword_5() { return cColonKeyword_5; }
+		public Keyword getColonKeyword_5_0() { return cColonKeyword_5_0; }
 
 		//return=Reference
-		public Assignment getReturnAssignment_6() { return cReturnAssignment_6; }
+		public Assignment getReturnAssignment_5_1() { return cReturnAssignment_5_1; }
 
 		//Reference
-		public RuleCall getReturnReferenceParserRuleCall_6_0() { return cReturnReferenceParserRuleCall_6_0; }
+		public RuleCall getReturnReferenceParserRuleCall_5_1_0() { return cReturnReferenceParserRuleCall_5_1_0; }
 	}
 
 	public class ParameterElements extends AbstractParserRuleElementFinder {
@@ -667,8 +700,8 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Attribute");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final UnorderedGroup cUnorderedGroup_0 = (UnorderedGroup)cGroup.eContents().get(0);
-		private final Assignment cModifierAssignment_0_0 = (Assignment)cUnorderedGroup_0.eContents().get(0);
-		private final RuleCall cModifierVisibilityEnumRuleCall_0_0_0 = (RuleCall)cModifierAssignment_0_0.eContents().get(0);
+		private final Assignment cVisibilityAssignment_0_0 = (Assignment)cUnorderedGroup_0.eContents().get(0);
+		private final RuleCall cVisibilityVisibilityEnumRuleCall_0_0_0 = (RuleCall)cVisibilityAssignment_0_0.eContents().get(0);
 		private final Assignment cStaticAssignment_0_1 = (Assignment)cUnorderedGroup_0.eContents().get(1);
 		private final Keyword cStaticStaticKeyword_0_1_0 = (Keyword)cStaticAssignment_0_1.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -687,22 +720,22 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// e.g.: +matrix : int[5][5]
 		//Attribute:
-		//	(modifier=Visibility? & static?="static"?) name=ID ":" type=Reference ("=" implicit+=ImplicitValue (","
+		//	(visibility=Visibility? & static?="static"?) name=ID ":" type=Reference ("=" implicit+=ImplicitValue (","
 		//	implicit+=ImplicitValue)*)?;
 		public ParserRule getRule() { return rule; }
 
-		//(modifier=Visibility? & static?="static"?) name=ID ":" type=Reference ("=" implicit+=ImplicitValue (","
+		//(visibility=Visibility? & static?="static"?) name=ID ":" type=Reference ("=" implicit+=ImplicitValue (","
 		//implicit+=ImplicitValue)*)?
 		public Group getGroup() { return cGroup; }
 
-		//modifier=Visibility? & static?="static"?
+		//visibility=Visibility? & static?="static"?
 		public UnorderedGroup getUnorderedGroup_0() { return cUnorderedGroup_0; }
 
-		//modifier=Visibility?
-		public Assignment getModifierAssignment_0_0() { return cModifierAssignment_0_0; }
+		//visibility=Visibility?
+		public Assignment getVisibilityAssignment_0_0() { return cVisibilityAssignment_0_0; }
 
 		//Visibility
-		public RuleCall getModifierVisibilityEnumRuleCall_0_0_0() { return cModifierVisibilityEnumRuleCall_0_0_0; }
+		public RuleCall getVisibilityVisibilityEnumRuleCall_0_0_0() { return cVisibilityVisibilityEnumRuleCall_0_0_0; }
 
 		//static?="static"?
 		public Assignment getStaticAssignment_0_1() { return cStaticAssignment_0_1; }
@@ -891,12 +924,6 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cCOMPOSITIONEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
 		private final Keyword cCOMPOSITIONCompositionKeyword_5_0 = (Keyword)cCOMPOSITIONEnumLiteralDeclaration_5.eContents().get(0);
 		
-		////Integer returns ecore::EString:
-		////    INT
-		////;
-		////Double returns ecore::EString:
-		////    INT '.' INT
-		////;
 		//enum RelationshipType:
 		//	ASSOCIATION="association" | DEPENCY="depency" | GENERALIZATION="generalization" | REALIZATION="realization" |
 		//	AGGREGATION="aggregation" | COMPOSITION="composition";
@@ -994,6 +1021,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	private PackageElements pPackage;
 	private ClassifierElements pClassifier;
 	private GeneralizationElements pGeneralization;
+	private TypeElements pType;
 	private FeatureElements pFeature;
 	private RelationshipElements pRelationship;
 	private MultiplicityElements pMultiplicity;
@@ -1096,15 +1124,26 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getClassifierAccess().getRule();
 	}
 
-	//// e.g.: isA Fruit
+	//// e.g.: class Apple isA +Fruit
 	//Generalization:
-	//	"isA" classifier+=ExtendedID ("," classifier+=ExtendedID)*;
+	//	"isA" classifier+=Type ("," classifier+=Type)*;
 	public GeneralizationElements getGeneralizationAccess() {
 		return (pGeneralization != null) ? pGeneralization : (pGeneralization = new GeneralizationElements());
 	}
 	
 	public ParserRule getGeneralizationRule() {
 		return getGeneralizationAccess().getRule();
+	}
+
+	//// e.g.: isA +Fruit
+	//Type:
+	//	visibility=Visibility? name=ExtendedID;
+	public TypeElements getTypeAccess() {
+		return (pType != null) ? pType : (pType = new TypeElements());
+	}
+	
+	public ParserRule getTypeRule() {
+		return getTypeAccess().getRule();
 	}
 
 	//Feature:
@@ -1154,7 +1193,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// e.g.: BUFFER_LENGTH = 512
 	//Constant:
-	//	modifier=Visibility? name=ID "=" value=ImplicitValue;
+	//	visibility=Visibility? name=ID "=" value=ImplicitValue;
 	public ConstantElements getConstantAccess() {
 		return (pConstant != null) ? pConstant : (pConstant = new ConstantElements());
 	}
@@ -1165,8 +1204,8 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// e.g.: +add(Name : String) : void
 	//Operation:
-	//	(modifier=Visibility? & static?="static"?) name=ID "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")" ":"
-	//	return=Reference;
+	//	(visibility=Visibility? & static?="static"?) name=ID "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")"
+	//	(":" return=Reference)?;
 	public OperationElements getOperationAccess() {
 		return (pOperation != null) ? pOperation : (pOperation = new OperationElements());
 	}
@@ -1188,7 +1227,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// e.g.: +matrix : int[5][5]
 	//Attribute:
-	//	(modifier=Visibility? & static?="static"?) name=ID ":" type=Reference ("=" implicit+=ImplicitValue (","
+	//	(visibility=Visibility? & static?="static"?) name=ID ":" type=Reference ("=" implicit+=ImplicitValue (","
 	//	implicit+=ImplicitValue)*)?;
 	public AttributeElements getAttributeAccess() {
 		return (pAttribute != null) ? pAttribute : (pAttribute = new AttributeElements());
@@ -1228,12 +1267,6 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getImplicitValueAccess().getRule();
 	}
 
-	////Integer returns ecore::EString:
-	////    INT
-	////;
-	////Double returns ecore::EString:
-	////    INT '.' INT
-	////;
 	//enum RelationshipType:
 	//	ASSOCIATION="association" | DEPENCY="depency" | GENERALIZATION="generalization" | REALIZATION="realization" |
 	//	AGGREGATION="aggregation" | COMPOSITION="composition";

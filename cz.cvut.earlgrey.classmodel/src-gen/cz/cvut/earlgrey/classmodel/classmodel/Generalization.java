@@ -29,19 +29,19 @@ import org.eclipse.emf.ecore.EObject;
 public interface Generalization extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Classifier</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Classifier</b></em>' containment reference list.
+   * The list contents are of type {@link cz.cvut.earlgrey.classmodel.classmodel.Type}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Classifier</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Classifier</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Classifier</em>' attribute list.
+   * @return the value of the '<em>Classifier</em>' containment reference list.
    * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getGeneralization_Classifier()
-   * @model unique="false"
+   * @model containment="true"
    * @generated
    */
-  EList<String> getClassifier();
+  EList<Type> getClassifier();
 
 } // Generalization

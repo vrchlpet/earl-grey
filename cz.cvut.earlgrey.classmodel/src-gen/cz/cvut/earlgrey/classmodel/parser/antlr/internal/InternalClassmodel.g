@@ -458,9 +458,9 @@ ruleGeneralization returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getGeneralizationAccess().getClassifierExtendedIDParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getGeneralizationAccess().getClassifierTypeParserRuleCall_1_0()); 
 	    }
-		lv_classifier_1_0=ruleExtendedID		{
+		lv_classifier_1_0=ruleType		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getGeneralizationRule());
 	        }
@@ -468,7 +468,7 @@ ruleGeneralization returns [EObject current=null]
        			$current, 
        			"classifier",
         		lv_classifier_1_0, 
-        		"ExtendedID");
+        		"Type");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -480,9 +480,9 @@ ruleGeneralization returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getGeneralizationAccess().getClassifierExtendedIDParserRuleCall_2_1_0()); 
+	        newCompositeNode(grammarAccess.getGeneralizationAccess().getClassifierTypeParserRuleCall_2_1_0()); 
 	    }
-		lv_classifier_3_0=ruleExtendedID		{
+		lv_classifier_3_0=ruleType		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getGeneralizationRule());
 	        }
@@ -490,12 +490,69 @@ ruleGeneralization returns [EObject current=null]
        			$current, 
        			"classifier",
         		lv_classifier_3_0, 
-        		"ExtendedID");
+        		"Type");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
 ))*)
+;
+
+
+
+
+
+// Entry rule entryRuleType
+entryRuleType returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getTypeRule()); }
+	 iv_ruleType=ruleType 
+	 { $current=$iv_ruleType.current; } 
+	 EOF 
+;
+
+// Rule Type
+ruleType returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getTypeAccess().getVisibilityVisibilityEnumRuleCall_0_0()); 
+	    }
+		lv_visibility_0_0=ruleVisibility		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTypeRule());
+	        }
+       		set(
+       			$current, 
+       			"visibility",
+        		lv_visibility_0_0, 
+        		"Visibility");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)?(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getTypeAccess().getNameExtendedIDParserRuleCall_1_0()); 
+	    }
+		lv_name_1_0=ruleExtendedID		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTypeRule());
+	        }
+       		set(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ExtendedID");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
 ;
 
 
@@ -890,16 +947,16 @@ ruleConstant returns [EObject current=null]
 ((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getConstantAccess().getModifierVisibilityEnumRuleCall_0_0()); 
+	        newCompositeNode(grammarAccess.getConstantAccess().getVisibilityVisibilityEnumRuleCall_0_0()); 
 	    }
-		lv_modifier_0_0=ruleVisibility		{
+		lv_visibility_0_0=ruleVisibility		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getConstantRule());
 	        }
        		set(
        			$current, 
-       			"modifier",
-        		lv_modifier_0_0, 
+       			"visibility",
+        		lv_visibility_0_0, 
         		"Visibility");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -983,16 +1040,16 @@ ruleOperation returns [EObject current=null]
 					({true}?=>(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getOperationAccess().getModifierVisibilityEnumRuleCall_0_0_0()); 
+	        newCompositeNode(grammarAccess.getOperationAccess().getVisibilityVisibilityEnumRuleCall_0_0_0()); 
 	    }
-		lv_modifier_1_0=ruleVisibility		{
+		lv_visibility_1_0=ruleVisibility		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getOperationRule());
 	        }
        		set(
        			$current, 
-       			"modifier",
-        		lv_modifier_1_0, 
+       			"visibility",
+        		lv_visibility_1_0, 
         		"Visibility");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -1109,14 +1166,14 @@ ruleParameter
     {
     	newLeafNode(otherlv_8, grammarAccess.getOperationAccess().getRightParenthesisKeyword_4());
     }
-	otherlv_9=':' 
+(	otherlv_9=':' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getOperationAccess().getColonKeyword_5());
+    	newLeafNode(otherlv_9, grammarAccess.getOperationAccess().getColonKeyword_5_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getOperationAccess().getReturnReferenceParserRuleCall_6_0()); 
+	        newCompositeNode(grammarAccess.getOperationAccess().getReturnReferenceParserRuleCall_5_1_0()); 
 	    }
 		lv_return_10_0=ruleReference		{
 	        if ($current==null) {
@@ -1131,7 +1188,7 @@ ruleParameter
 	    }
 
 )
-))
+))?)
 ;
 
 
@@ -1275,16 +1332,16 @@ ruleAttribute returns [EObject current=null]
 					({true}?=>(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getAttributeAccess().getModifierVisibilityEnumRuleCall_0_0_0()); 
+	        newCompositeNode(grammarAccess.getAttributeAccess().getVisibilityVisibilityEnumRuleCall_0_0_0()); 
 	    }
-		lv_modifier_1_0=ruleVisibility		{
+		lv_visibility_1_0=ruleVisibility		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getAttributeRule());
 	        }
        		set(
        			$current, 
-       			"modifier",
-        		lv_modifier_1_0, 
+       			"visibility",
+        		lv_visibility_1_0, 
         		"Visibility");
 	        afterParserOrEnumRuleCall();
 	    }

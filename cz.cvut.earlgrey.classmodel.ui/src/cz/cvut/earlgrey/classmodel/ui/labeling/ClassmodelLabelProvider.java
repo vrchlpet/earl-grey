@@ -92,7 +92,7 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 	 */
 	private String getVisibility(Feature ele, String prefix) {
 		if (ele != null) {
-			return prefix + visibility.get(ele.getModifier());
+			return prefix + visibility.get(ele.getVisibility());
 		}
 		return prefix + visibility.get(Visibility.PUBLIC);
 	}
@@ -128,7 +128,7 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 	}
 
 	/**
-	 * FIXME: 
+	 * FIXME:
 	 * Returns Entity's image used in Outline View.
 	 * 
 	 * @param ele Instance of an Entity

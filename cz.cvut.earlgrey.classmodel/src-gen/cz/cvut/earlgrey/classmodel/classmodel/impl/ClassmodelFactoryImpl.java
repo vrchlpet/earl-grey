@@ -24,6 +24,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
 import cz.cvut.earlgrey.classmodel.classmodel.RelationshipType;
+import cz.cvut.earlgrey.classmodel.classmodel.Type;
 import cz.cvut.earlgrey.classmodel.classmodel.Visibility;
 
 import org.eclipse.emf.ecore.EClass;
@@ -94,6 +95,7 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
       case ClassmodelPackage.PACKAGE: return createPackage();
       case ClassmodelPackage.CLASSIFIER: return createClassifier();
       case ClassmodelPackage.GENERALIZATION: return createGeneralization();
+      case ClassmodelPackage.TYPE: return createType();
       case ClassmodelPackage.FEATURE: return createFeature();
       case ClassmodelPackage.RELATIONSHIP: return createRelationship();
       case ClassmodelPackage.MULTIPLICITY: return createMultiplicity();
@@ -221,6 +223,17 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
   {
     GeneralizationImpl generalization = new GeneralizationImpl();
     return generalization;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Type createType()
+  {
+    TypeImpl type = new TypeImpl();
+    return type;
   }
 
   /**

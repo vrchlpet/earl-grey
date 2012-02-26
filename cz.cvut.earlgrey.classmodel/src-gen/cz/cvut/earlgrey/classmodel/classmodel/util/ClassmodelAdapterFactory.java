@@ -22,6 +22,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
+import cz.cvut.earlgrey.classmodel.classmodel.Type;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -127,6 +128,11 @@ public class ClassmodelAdapterFactory extends AdapterFactoryImpl
       public Adapter caseGeneralization(Generalization object)
       {
         return createGeneralizationAdapter();
+      }
+      @Override
+      public Adapter caseType(Type object)
+      {
+        return createTypeAdapter();
       }
       @Override
       public Adapter caseFeature(Feature object)
@@ -296,6 +302,21 @@ public class ClassmodelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createGeneralizationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.classmodel.classmodel.Type <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Type
+   * @generated
+   */
+  public Adapter createTypeAdapter()
   {
     return null;
   }

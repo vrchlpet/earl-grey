@@ -24,6 +24,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
 import cz.cvut.earlgrey.classmodel.classmodel.RelationshipType;
+import cz.cvut.earlgrey.classmodel.classmodel.Type;
 import cz.cvut.earlgrey.classmodel.classmodel.Visibility;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -90,6 +91,13 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * @generated
    */
   private EClass generalizationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass typeEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -406,9 +414,39 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGeneralization_Classifier()
+  public EReference getGeneralization_Classifier()
   {
-    return (EAttribute)generalizationEClass.getEStructuralFeatures().get(0);
+    return (EReference)generalizationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getType()
+  {
+    return typeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getType_Visibility()
+  {
+    return (EAttribute)typeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getType_Name()
+  {
+    return (EAttribute)typeEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -436,7 +474,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFeature_Modifier()
+  public EAttribute getFeature_Visibility()
   {
     return (EAttribute)featureEClass.getEStructuralFeatures().get(1);
   }
@@ -854,11 +892,15 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     createEReference(classifierEClass, CLASSIFIER__FEATURE);
 
     generalizationEClass = createEClass(GENERALIZATION);
-    createEAttribute(generalizationEClass, GENERALIZATION__CLASSIFIER);
+    createEReference(generalizationEClass, GENERALIZATION__CLASSIFIER);
+
+    typeEClass = createEClass(TYPE);
+    createEAttribute(typeEClass, TYPE__VISIBILITY);
+    createEAttribute(typeEClass, TYPE__NAME);
 
     featureEClass = createEClass(FEATURE);
     createEAttribute(featureEClass, FEATURE__CONSTRAINT);
-    createEAttribute(featureEClass, FEATURE__MODIFIER);
+    createEAttribute(featureEClass, FEATURE__VISIBILITY);
     createEAttribute(featureEClass, FEATURE__NAME);
 
     relationshipEClass = createEClass(RELATIONSHIP);
@@ -968,11 +1010,15 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     initEReference(getClassifier_Feature(), this.getFeature(), null, "feature", null, 0, -1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(generalizationEClass, Generalization.class, "Generalization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGeneralization_Classifier(), ecorePackage.getEString(), "classifier", null, 0, -1, Generalization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGeneralization_Classifier(), this.getType(), null, "classifier", null, 0, -1, Generalization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getType_Visibility(), this.getVisibility(), "visibility", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getType_Name(), ecorePackage.getEString(), "name", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(featureEClass, Feature.class, "Feature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFeature_Constraint(), ecorePackage.getEString(), "constraint", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFeature_Modifier(), this.getVisibility(), "modifier", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFeature_Visibility(), this.getVisibility(), "visibility", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFeature_Name(), ecorePackage.getEString(), "name", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(relationshipEClass, Relationship.class, "Relationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
