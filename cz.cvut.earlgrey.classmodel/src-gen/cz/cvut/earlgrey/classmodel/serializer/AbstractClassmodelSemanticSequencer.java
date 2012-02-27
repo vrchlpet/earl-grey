@@ -16,6 +16,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
 import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
+import cz.cvut.earlgrey.classmodel.classmodel.Interface;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
 import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
@@ -119,6 +120,10 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 					sequence_Feature(context, (Constant) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getInterfaceFeatureRule()) {
+					sequence_InterfaceFeature(context, (Constant) semanticObject); 
+					return; 
+				}
 				else break;
 			case ClassmodelPackage.DATATYPE:
 				if(context == grammarAccess.getDatatypeRule() ||
@@ -152,6 +157,13 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 					return; 
 				}
 				else break;
+			case ClassmodelPackage.INTERFACE:
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getInterfaceRule()) {
+					sequence_Interface(context, (Interface) semanticObject); 
+					return; 
+				}
+				else break;
 			case ClassmodelPackage.MODEL:
 				if(context == grammarAccess.getModelRule()) {
 					sequence_Model(context, (Model) semanticObject); 
@@ -167,6 +179,10 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 			case ClassmodelPackage.OPERATION:
 				if(context == grammarAccess.getFeatureRule()) {
 					sequence_Feature(context, (Operation) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInterfaceFeatureRule()) {
+					sequence_InterfaceFeature(context, (Operation) semanticObject); 
 					return; 
 				}
 				else if(context == grammarAccess.getOperationRule()) {
@@ -354,6 +370,40 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getImportAccess().getImportURISTRINGTerminalRuleCall_1_0(), semanticObject.getImportURI());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (visibility=Visibility? name=ID value=ImplicitValue constraint=CONSTRAINT?)
+	 */
+	protected void sequence_InterfaceFeature(EObject context, Constant semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         visibility=Visibility? 
+	 *         static?='static'? 
+	 *         name=ID 
+	 *         (parameter+=Parameter parameter+=Parameter*)? 
+	 *         return=Reference? 
+	 *         constraint=CONSTRAINT?
+	 *     )
+	 */
+	protected void sequence_InterfaceFeature(EObject context, Operation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (annotation+=Annotation* name=ID generalization=Generalization? constraint=CONSTRAINT? feature+=InterfaceFeature*)
+	 */
+	protected void sequence_Interface(EObject context, Interface semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

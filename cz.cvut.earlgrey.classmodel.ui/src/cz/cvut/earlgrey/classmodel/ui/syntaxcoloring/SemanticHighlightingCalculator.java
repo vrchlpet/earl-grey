@@ -10,7 +10,7 @@ import org.eclipse.xtext.ui.editor.syntaxcoloring.ISemanticHighlightingCalculato
  * Use this class to register components to be used within the IDE.
  */
 public class SemanticHighlightingCalculator implements
-		ISemanticHighlightingCalculator {
+ISemanticHighlightingCalculator {
 
 	@Override
 	public void provideHighlightingFor(XtextResource resource,
@@ -18,6 +18,16 @@ public class SemanticHighlightingCalculator implements
 		if (resource == null || resource.getParseResult() == null) {
 			return;
 		}
+
+		// Iterator<EObject> iter = EcoreUtil2.getAllContents(resource, true);
+		// while (iter.hasNext()) {
+		// EObject current = iter.next();
+		// if (current instanceof Annotation) {
+		// highlightFirstFeature(current,
+		// AnnotationPackage.Literals.ANNOTATION,
+		// HighlightingConfiguration.ANNOTATION_ID, acceptor);
+		// }
+		// }
 
 		INode root = resource.getParseResult().getRootNode();
 		for (INode node : root.getAsTreeIterable()) {
@@ -27,4 +37,50 @@ public class SemanticHighlightingCalculator implements
 			}
 		}
 	}
+
+	// // helper method that takes care of highlighting the first feature
+	// element
+	// // of a semantic object using a given text style ID
+	// private void highlightFirstFeature(EObject semobject, String featurename,
+	// String highlightID, IHighlightedPositionAcceptor acceptor) {
+	// // fetch the parse node for the entity
+	// ILeafNode nodetohighlight = getFirstFeatureNode(semobject, featurename);
+	// if (nodetohighlight != null) {
+	// acceptor.addPosition(nodetohighlight.getOffset(),
+	// nodetohighlight.getLength(), highlightID);
+	// }
+	// }
+	//
+	// /**
+	// * Taken from {@link http://blogs.itemis.de/stundzig/archives/467}.
+	// *
+	// * Adapted from Sebastian Zarnekow's semantic highlighting implementation
+	// * navigate to the parse node corresponding to the semantic object and
+	// fetch
+	// * the leaf node that corresponds to the first feature with the given
+	// name.
+	// *
+	// * @param semantic
+	// * @param feature
+	// * @return
+	// */
+	// public ILeafNode getFirstFeatureNode(EObject semantic, String feature) {
+	// ICompositeNode node = NodeModelUtils.getNode(semantic);
+	// if (node != null) {
+	// if (feature == null) {
+	// return null;
+	// }
+	// for (INode child : node.getChildren()) {
+	// if (child instanceof ILeafNode) {
+	// System.out.println(((ILeafNode) child).getText()
+	// + "         " + feature);
+	// if (feature.equals(((ILeafNode) child).getText())) {
+	// return (ILeafNode) child;
+	// }
+	// }
+	// }
+	// }
+	// return null;
+	// }
+
 }

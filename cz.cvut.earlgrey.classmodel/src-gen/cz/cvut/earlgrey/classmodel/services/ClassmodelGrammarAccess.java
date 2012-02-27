@@ -79,12 +79,13 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPackageParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cDatatypeParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cEnumerationParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cInterfaceParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		
 		//Element:
-		//	Relationship | Classifier | Package | Datatype | Enumeration;
+		//	Relationship | Classifier | Package | Datatype | Enumeration | Interface;
 		public ParserRule getRule() { return rule; }
 
-		//Relationship | Classifier | Package | Datatype | Enumeration
+		//Relationship | Classifier | Package | Datatype | Enumeration | Interface
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Relationship
@@ -101,6 +102,9 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Enumeration
 		public RuleCall getEnumerationParserRuleCall_4() { return cEnumerationParserRuleCall_4; }
+
+		//Interface
+		public RuleCall getInterfaceParserRuleCall_5() { return cInterfaceParserRuleCall_5; }
 	}
 
 	public class DatatypeElements extends AbstractParserRuleElementFinder {
@@ -446,6 +450,102 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 
 		//CONSTRAINT
 		public RuleCall getConstraintCONSTRAINTTerminalRuleCall_2_0() { return cConstraintCONSTRAINTTerminalRuleCall_2_0; }
+	}
+
+	public class InterfaceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Interface");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cAnnotationAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cAnnotationAnnotationParserRuleCall_0_0 = (RuleCall)cAnnotationAssignment_0.eContents().get(0);
+		private final Keyword cInterfaceKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Assignment cGeneralizationAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cGeneralizationGeneralizationParserRuleCall_3_0 = (RuleCall)cGeneralizationAssignment_3.eContents().get(0);
+		private final Assignment cConstraintAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cConstraintCONSTRAINTTerminalRuleCall_4_0 = (RuleCall)cConstraintAssignment_4.eContents().get(0);
+		private final Assignment cFeatureAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cFeatureInterfaceFeatureParserRuleCall_5_0 = (RuleCall)cFeatureAssignment_5.eContents().get(0);
+		private final Keyword cEndKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		
+		//// e.g.: interface Fruit end
+		//Interface:
+		//	annotation+=Annotation* => "interface" name=ID => generalization=Generalization? constraint=CONSTRAINT?
+		//	feature+=InterfaceFeature* "end";
+		public ParserRule getRule() { return rule; }
+
+		//annotation+=Annotation* => "interface" name=ID => generalization=Generalization? constraint=CONSTRAINT?
+		//feature+=InterfaceFeature* "end"
+		public Group getGroup() { return cGroup; }
+
+		//annotation+=Annotation*
+		public Assignment getAnnotationAssignment_0() { return cAnnotationAssignment_0; }
+
+		//Annotation
+		public RuleCall getAnnotationAnnotationParserRuleCall_0_0() { return cAnnotationAnnotationParserRuleCall_0_0; }
+
+		//=> "interface"
+		public Keyword getInterfaceKeyword_1() { return cInterfaceKeyword_1; }
+
+		//name=ID
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+
+		//=> generalization=Generalization?
+		public Assignment getGeneralizationAssignment_3() { return cGeneralizationAssignment_3; }
+
+		//Generalization
+		public RuleCall getGeneralizationGeneralizationParserRuleCall_3_0() { return cGeneralizationGeneralizationParserRuleCall_3_0; }
+
+		//constraint=CONSTRAINT?
+		public Assignment getConstraintAssignment_4() { return cConstraintAssignment_4; }
+
+		//CONSTRAINT
+		public RuleCall getConstraintCONSTRAINTTerminalRuleCall_4_0() { return cConstraintCONSTRAINTTerminalRuleCall_4_0; }
+
+		//feature+=InterfaceFeature*
+		public Assignment getFeatureAssignment_5() { return cFeatureAssignment_5; }
+
+		//InterfaceFeature
+		public RuleCall getFeatureInterfaceFeatureParserRuleCall_5_0() { return cFeatureInterfaceFeatureParserRuleCall_5_0; }
+
+		//"end"
+		public Keyword getEndKeyword_6() { return cEndKeyword_6; }
+	}
+
+	public class InterfaceFeatureElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InterfaceFeature");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
+		private final RuleCall cOperationParserRuleCall_0_0 = (RuleCall)cAlternatives_0.eContents().get(0);
+		private final RuleCall cConstantParserRuleCall_0_1 = (RuleCall)cAlternatives_0.eContents().get(1);
+		private final Assignment cConstraintAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cConstraintCONSTRAINTTerminalRuleCall_1_0 = (RuleCall)cConstraintAssignment_1.eContents().get(0);
+		
+		//// An element of an Interface
+		//InterfaceFeature returns Feature:
+		//	(Operation | Constant) constraint=CONSTRAINT?;
+		public ParserRule getRule() { return rule; }
+
+		//(Operation | Constant) constraint=CONSTRAINT?
+		public Group getGroup() { return cGroup; }
+
+		//Operation | Constant
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
+
+		//Operation
+		public RuleCall getOperationParserRuleCall_0_0() { return cOperationParserRuleCall_0_0; }
+
+		//Constant
+		public RuleCall getConstantParserRuleCall_0_1() { return cConstantParserRuleCall_0_1; }
+
+		//constraint=CONSTRAINT?
+		public Assignment getConstraintAssignment_1() { return cConstraintAssignment_1; }
+
+		//CONSTRAINT
+		public RuleCall getConstraintCONSTRAINTTerminalRuleCall_1_0() { return cConstraintCONSTRAINTTerminalRuleCall_1_0; }
 	}
 
 	public class RelationshipElements extends AbstractParserRuleElementFinder {
@@ -1116,6 +1216,8 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	private FeatureElements pFeature;
 	private EnumerationElements pEnumeration;
 	private EnumeratorElements pEnumerator;
+	private InterfaceElements pInterface;
+	private InterfaceFeatureElements pInterfaceFeature;
 	private RelationshipElements pRelationship;
 	private MultiplicityElements pMultiplicity;
 	private MultiplicityValueElements pMultiplicityValue;
@@ -1173,7 +1275,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Element:
-	//	Relationship | Classifier | Package | Datatype | Enumeration;
+	//	Relationship | Classifier | Package | Datatype | Enumeration | Interface;
 	public ElementElements getElementAccess() {
 		return (pElement != null) ? pElement : (pElement = new ElementElements());
 	}
@@ -1268,6 +1370,29 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getEnumeratorRule() {
 		return getEnumeratorAccess().getRule();
+	}
+
+	//// e.g.: interface Fruit end
+	//Interface:
+	//	annotation+=Annotation* => "interface" name=ID => generalization=Generalization? constraint=CONSTRAINT?
+	//	feature+=InterfaceFeature* "end";
+	public InterfaceElements getInterfaceAccess() {
+		return (pInterface != null) ? pInterface : (pInterface = new InterfaceElements());
+	}
+	
+	public ParserRule getInterfaceRule() {
+		return getInterfaceAccess().getRule();
+	}
+
+	//// An element of an Interface
+	//InterfaceFeature returns Feature:
+	//	(Operation | Constant) constraint=CONSTRAINT?;
+	public InterfaceFeatureElements getInterfaceFeatureAccess() {
+		return (pInterfaceFeature != null) ? pInterfaceFeature : (pInterfaceFeature = new InterfaceFeatureElements());
+	}
+	
+	public ParserRule getInterfaceFeatureRule() {
+		return getInterfaceFeatureAccess().getRule();
 	}
 
 	//// e.g.: composition 0..1 Tree 0..* Leaf end

@@ -479,6 +479,70 @@ public interface ClassmodelPackage extends EPackage
   int ENUMERATION_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 3;
 
   /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.InterfaceImpl <em>Interface</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.InterfaceImpl
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getInterface()
+   * @generated
+   */
+  int INTERFACE = 10;
+
+  /**
+   * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERFACE__ANNOTATION = ELEMENT__ANNOTATION;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERFACE__NAME = ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Generalization</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERFACE__GENERALIZATION = ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Constraint</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERFACE__CONSTRAINT = ELEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERFACE__FEATURE = ELEMENT_FEATURE_COUNT + 3;
+
+  /**
+   * The number of structural features of the '<em>Interface</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERFACE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 4;
+
+  /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl <em>Relationship</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -486,7 +550,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getRelationship()
    * @generated
    */
-  int RELATIONSHIP = 10;
+  int RELATIONSHIP = 11;
 
   /**
    * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
@@ -604,7 +668,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getMultiplicity()
    * @generated
    */
-  int MULTIPLICITY = 11;
+  int MULTIPLICITY = 12;
 
   /**
    * The feature id for the '<em><b>Upper</b></em>' attribute.
@@ -641,7 +705,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getConstant()
    * @generated
    */
-  int CONSTANT = 12;
+  int CONSTANT = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -696,7 +760,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getOperation()
    * @generated
    */
-  int OPERATION = 13;
+  int OPERATION = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -778,7 +842,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getParameter()
    * @generated
    */
-  int PARAMETER = 14;
+  int PARAMETER = 15;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -833,7 +897,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getAttribute()
    * @generated
    */
-  int ATTRIBUTE = 15;
+  int ATTRIBUTE = 16;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -915,7 +979,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getReference()
    * @generated
    */
-  int REFERENCE = 16;
+  int REFERENCE = 17;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -952,7 +1016,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getArray()
    * @generated
    */
-  int ARRAY = 17;
+  int ARRAY = 18;
 
   /**
    * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -980,7 +1044,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getRelationshipType()
    * @generated
    */
-  int RELATIONSHIP_TYPE = 18;
+  int RELATIONSHIP_TYPE = 19;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.Visibility <em>Visibility</em>}' enum.
@@ -990,7 +1054,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getVisibility()
    * @generated
    */
-  int VISIBILITY = 19;
+  int VISIBILITY = 20;
 
 
   /**
@@ -1323,6 +1387,60 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   EReference getEnumeration_Enumerator();
+
+  /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Interface <em>Interface</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Interface</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Interface
+   * @generated
+   */
+  EClass getInterface();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Interface#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Interface#getName()
+   * @see #getInterface()
+   * @generated
+   */
+  EAttribute getInterface_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Interface#getGeneralization <em>Generalization</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Generalization</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Interface#getGeneralization()
+   * @see #getInterface()
+   * @generated
+   */
+  EReference getInterface_Generalization();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Interface#getConstraint <em>Constraint</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Constraint</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Interface#getConstraint()
+   * @see #getInterface()
+   * @generated
+   */
+  EAttribute getInterface_Constraint();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.classmodel.classmodel.Interface#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Feature</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Interface#getFeature()
+   * @see #getInterface()
+   * @generated
+   */
+  EReference getInterface_Feature();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship <em>Relationship</em>}'.
@@ -1967,6 +2085,48 @@ public interface ClassmodelPackage extends EPackage
      * @generated
      */
     EReference ENUMERATION__ENUMERATOR = eINSTANCE.getEnumeration_Enumerator();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.InterfaceImpl <em>Interface</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.InterfaceImpl
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getInterface()
+     * @generated
+     */
+    EClass INTERFACE = eINSTANCE.getInterface();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INTERFACE__NAME = eINSTANCE.getInterface_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Generalization</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INTERFACE__GENERALIZATION = eINSTANCE.getInterface_Generalization();
+
+    /**
+     * The meta object literal for the '<em><b>Constraint</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INTERFACE__CONSTRAINT = eINSTANCE.getInterface_Constraint();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INTERFACE__FEATURE = eINSTANCE.getInterface_Feature();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl <em>Relationship</em>}' class.

@@ -20,6 +20,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
 import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
+import cz.cvut.earlgrey.classmodel.classmodel.Interface;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
 import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
@@ -115,6 +116,13 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * @generated
    */
   private EClass enumerationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass interfaceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -567,6 +575,56 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getInterface()
+  {
+    return interfaceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getInterface_Name()
+  {
+    return (EAttribute)interfaceEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInterface_Generalization()
+  {
+    return (EReference)interfaceEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getInterface_Constraint()
+  {
+    return (EAttribute)interfaceEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInterface_Feature()
+  {
+    return (EReference)interfaceEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getRelationship()
   {
     return relationshipEClass;
@@ -963,6 +1021,12 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     createEAttribute(enumerationEClass, ENUMERATION__CONSTRAINT);
     createEReference(enumerationEClass, ENUMERATION__ENUMERATOR);
 
+    interfaceEClass = createEClass(INTERFACE);
+    createEAttribute(interfaceEClass, INTERFACE__NAME);
+    createEReference(interfaceEClass, INTERFACE__GENERALIZATION);
+    createEAttribute(interfaceEClass, INTERFACE__CONSTRAINT);
+    createEReference(interfaceEClass, INTERFACE__FEATURE);
+
     relationshipEClass = createEClass(RELATIONSHIP);
     createEAttribute(relationshipEClass, RELATIONSHIP__TYPE);
     createEAttribute(relationshipEClass, RELATIONSHIP__LABEL);
@@ -1043,6 +1107,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     packageEClass.getESuperTypes().add(this.getElement());
     classifierEClass.getESuperTypes().add(this.getElement());
     enumerationEClass.getESuperTypes().add(this.getElement());
+    interfaceEClass.getESuperTypes().add(this.getElement());
     relationshipEClass.getESuperTypes().add(this.getElement());
     constantEClass.getESuperTypes().add(this.getFeature());
     operationEClass.getESuperTypes().add(this.getFeature());
@@ -1090,6 +1155,12 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     initEAttribute(getEnumeration_Name(), ecorePackage.getEString(), "name", null, 0, 1, Enumeration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEnumeration_Constraint(), ecorePackage.getEString(), "constraint", null, 0, 1, Enumeration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEnumeration_Enumerator(), this.getFeature(), null, "enumerator", null, 0, -1, Enumeration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(interfaceEClass, Interface.class, "Interface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getInterface_Name(), ecorePackage.getEString(), "name", null, 0, 1, Interface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInterface_Generalization(), this.getGeneralization(), null, "generalization", null, 0, 1, Interface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getInterface_Constraint(), ecorePackage.getEString(), "constraint", null, 0, 1, Interface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInterface_Feature(), this.getFeature(), null, "feature", null, 0, -1, Interface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(relationshipEClass, Relationship.class, "Relationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getRelationship_Type(), this.getRelationshipType(), "type", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

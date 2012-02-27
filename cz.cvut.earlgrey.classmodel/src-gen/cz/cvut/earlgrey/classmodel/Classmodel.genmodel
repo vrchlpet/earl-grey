@@ -64,6 +64,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Enumeration/constraint"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Enumeration/enumerator"/>
     </genClasses>
+    <genClasses ecoreClass="Classmodel.ecore#//Interface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Interface/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Interface/generalization"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Interface/constraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Interface/feature"/>
+    </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Relationship">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/label"/>

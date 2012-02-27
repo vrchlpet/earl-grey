@@ -17,6 +17,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
 import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
+import cz.cvut.earlgrey.classmodel.classmodel.Interface;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
 import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
@@ -164,6 +165,14 @@ public class ClassmodelSwitch<T> extends Switch<T>
         Enumeration enumeration = (Enumeration)theEObject;
         T result = caseEnumeration(enumeration);
         if (result == null) result = caseElement(enumeration);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ClassmodelPackage.INTERFACE:
+      {
+        Interface interface_ = (Interface)theEObject;
+        T result = caseInterface(interface_);
+        if (result == null) result = caseElement(interface_);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -388,6 +397,22 @@ public class ClassmodelSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseEnumeration(Enumeration object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Interface</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Interface</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInterface(Interface object)
   {
     return null;
   }

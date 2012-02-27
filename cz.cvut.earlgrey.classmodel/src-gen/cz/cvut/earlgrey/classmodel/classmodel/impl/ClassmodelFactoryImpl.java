@@ -18,6 +18,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
 import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
+import cz.cvut.earlgrey.classmodel.classmodel.Interface;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
 import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
@@ -99,6 +100,7 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
       case ClassmodelPackage.TYPE: return createType();
       case ClassmodelPackage.FEATURE: return createFeature();
       case ClassmodelPackage.ENUMERATION: return createEnumeration();
+      case ClassmodelPackage.INTERFACE: return createInterface();
       case ClassmodelPackage.RELATIONSHIP: return createRelationship();
       case ClassmodelPackage.MULTIPLICITY: return createMultiplicity();
       case ClassmodelPackage.CONSTANT: return createConstant();
@@ -258,6 +260,17 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
   {
     EnumerationImpl enumeration = new EnumerationImpl();
     return enumeration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Interface createInterface()
+  {
+    InterfaceImpl interface_ = new InterfaceImpl();
+    return interface_;
   }
 
   /**

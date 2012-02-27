@@ -17,6 +17,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
 import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
+import cz.cvut.earlgrey.classmodel.classmodel.Interface;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
 import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
@@ -144,6 +145,11 @@ public class ClassmodelAdapterFactory extends AdapterFactoryImpl
       public Adapter caseEnumeration(Enumeration object)
       {
         return createEnumerationAdapter();
+      }
+      @Override
+      public Adapter caseInterface(Interface object)
+      {
+        return createInterfaceAdapter();
       }
       @Override
       public Adapter caseRelationship(Relationship object)
@@ -358,6 +364,21 @@ public class ClassmodelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createEnumerationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.classmodel.classmodel.Interface <em>Interface</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Interface
+   * @generated
+   */
+  public Adapter createInterfaceAdapter()
   {
     return null;
   }

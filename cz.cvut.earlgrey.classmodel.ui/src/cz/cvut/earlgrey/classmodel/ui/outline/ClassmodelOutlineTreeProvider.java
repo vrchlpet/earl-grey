@@ -1,13 +1,18 @@
 package cz.cvut.earlgrey.classmodel.ui.outline;
 
+import java.util.HashMap;
+import java.util.Map;
 import org.eclipse.jface.viewers.StyledString;
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
+import cz.cvut.earlgrey.annotation.annotation.Annotation;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
+import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
+import cz.cvut.earlgrey.classmodel.classmodel.RelationshipType;
 import cz.cvut.earlgrey.xtext.formatting.Styles;
 
 /**
@@ -23,6 +28,16 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	private static final String ROUND_BRACKET_RIGHT = ")";
 	private static final String ROUND_BRACKET_LEFT = "(";
 	private static final String EMPTY_STRING = " ";
+	private static Map<RelationshipType, String> relation = new HashMap<RelationshipType, String>();
+
+	static {
+		relation.put(RelationshipType.AGGREGATION, "isAggregatedOf");
+		relation.put(RelationshipType.ASSOCIATION, "associates");
+		relation.put(RelationshipType.COMPOSITION, "isComposedOf");
+		relation.put(RelationshipType.DEPENCY, "dependsOn");
+		relation.put(RelationshipType.GENERALIZATION, "isA");
+		relation.put(RelationshipType.REALIZATION, "realizes");
+	}
 
 	/**
 	 * Defines Operation node in Outline View tree as a leaf.
@@ -41,6 +56,36 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	 * @return true - to make Attribute node as a leaf
 	 */
 	protected boolean _isLeaf(Attribute node) {
+		return true;
+	}
+
+	/**
+	 * Defines Relationship node in Outline View tree as a leaf.
+	 * 
+	 * @param node Instance
+	 * @return true - to make Relationship node as a leaf
+	 */
+	protected boolean _isLeaf(Relationship node) {
+		return true;
+	}
+
+	/**
+	 * Defines Generalization node in Outline View tree as a leaf.
+	 * 
+	 * @param node Instance
+	 * @return true - to make Generalization node as a leaf
+	 */
+	protected boolean _isLeaf(Generalization node) {
+		return true;
+	}
+
+	/**
+	 * Defines Annotation node in Outline View tree as a leaf.
+	 * 
+	 * @param node Instance
+	 * @return true - to make Annotation node as a leaf
+	 */
+	protected boolean _isLeaf(Annotation node) {
 		return true;
 	}
 
@@ -93,12 +138,25 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		}
 		StyledString styled = new StyledString(element.getHead()
 				+ EMPTY_STRING);
-		styled.append(Styles.getStyledString(element.getType().getLiteral()));
+		styled.append(Styles.getStyledString(getRelationshipType(element)));
 		String ret = element.getTail();
 		if (ret != null) {
 			styled.append(EMPTY_STRING + ret);
 		}
 		return styled;
+	}
+
+	/**
+	 * Factory method used to get Relationship type.
+	 * 
+	 * @param ele Relationship instance
+	 * @return Relationship type as String
+	 */
+	private String getRelationshipType(Relationship ele) {
+		if (ele != null) {
+			return relation.get(ele.getType());
+		}
+		return relation.get(RelationshipType.ASSOCIATION);
 	}
 
 	/**
