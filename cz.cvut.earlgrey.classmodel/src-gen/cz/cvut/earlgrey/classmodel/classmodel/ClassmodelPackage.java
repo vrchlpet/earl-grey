@@ -6,6 +6,8 @@
  */
 package cz.cvut.earlgrey.classmodel.classmodel;
 
+import cz.cvut.earlgrey.annotation.annotation.AnnotationPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -137,13 +139,22 @@ public interface ClassmodelPackage extends EPackage
   int ELEMENT = 2;
 
   /**
+   * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELEMENT__ANNOTATION = 0;
+
+  /**
    * The number of structural features of the '<em>Element</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ELEMENT_FEATURE_COUNT = 0;
+  int ELEMENT_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.DatatypeImpl <em>Datatype</em>}' class.
@@ -154,6 +165,15 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   int DATATYPE = 3;
+
+  /**
+   * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATATYPE__ANNOTATION = ELEMENT__ANNOTATION;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -182,6 +202,15 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   int PACKAGE = 4;
+
+  /**
+   * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PACKAGE__ANNOTATION = ELEMENT__ANNOTATION;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -219,6 +248,15 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   int CLASSIFIER = 5;
+
+  /**
+   * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLASSIFIER__ANNOTATION = ELEMENT__ANNOTATION;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -396,6 +434,15 @@ public interface ClassmodelPackage extends EPackage
   int ENUMERATION = 9;
 
   /**
+   * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATION__ANNOTATION = ELEMENT__ANNOTATION;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -440,6 +487,15 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   int RELATIONSHIP = 10;
+
+  /**
+   * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONSHIP__ANNOTATION = ELEMENT__ANNOTATION;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -731,7 +787,16 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PARAMETER__NAME = 0;
+  int PARAMETER__NAME = AnnotationPackage.PARAMETER__NAME;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER__VALUE = AnnotationPackage.PARAMETER__VALUE;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -740,7 +805,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PARAMETER__TYPE = 1;
+  int PARAMETER__TYPE = AnnotationPackage.PARAMETER_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Implicit</b></em>' attribute list.
@@ -749,7 +814,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PARAMETER__IMPLICIT = 2;
+  int PARAMETER__IMPLICIT = AnnotationPackage.PARAMETER_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Parameter</em>' class.
@@ -758,7 +823,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PARAMETER_FEATURE_COUNT = 3;
+  int PARAMETER_FEATURE_COUNT = AnnotationPackage.PARAMETER_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AttributeImpl <em>Attribute</em>}' class.
@@ -990,6 +1055,17 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   EClass getElement();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.classmodel.classmodel.Element#getAnnotation <em>Annotation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Annotation</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Element#getAnnotation()
+   * @see #getElement()
+   * @generated
+   */
+  EReference getElement_Annotation();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Datatype <em>Datatype</em>}'.
@@ -1464,17 +1540,6 @@ public interface ClassmodelPackage extends EPackage
   EClass getParameter();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Parameter#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Parameter#getName()
-   * @see #getParameter()
-   * @generated
-   */
-  EAttribute getParameter_Name();
-
-  /**
    * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Parameter#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1688,6 +1753,14 @@ public interface ClassmodelPackage extends EPackage
      * @generated
      */
     EClass ELEMENT = eINSTANCE.getElement();
+
+    /**
+     * The meta object literal for the '<em><b>Annotation</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ELEMENT__ANNOTATION = eINSTANCE.getElement_Annotation();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.DatatypeImpl <em>Datatype</em>}' class.
@@ -2064,14 +2137,6 @@ public interface ClassmodelPackage extends EPackage
      * @generated
      */
     EClass PARAMETER = eINSTANCE.getParameter();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER__NAME = eINSTANCE.getParameter_Name();
 
     /**
      * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.

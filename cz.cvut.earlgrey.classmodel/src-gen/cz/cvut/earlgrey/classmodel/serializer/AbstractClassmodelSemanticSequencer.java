@@ -2,6 +2,10 @@ package cz.cvut.earlgrey.classmodel.serializer;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import cz.cvut.earlgrey.annotation.annotation.Annotation;
+import cz.cvut.earlgrey.annotation.annotation.AnnotationPackage;
+import cz.cvut.earlgrey.annotation.annotation.Parameter;
+import cz.cvut.earlgrey.annotation.serializer.AnnotationSemanticSequencer;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.Classifier;
@@ -15,7 +19,6 @@ import cz.cvut.earlgrey.classmodel.classmodel.Import;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
 import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
-import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
 import cz.cvut.earlgrey.classmodel.classmodel.Type;
@@ -50,16 +53,40 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	protected ISemanticSequencer genericSequencer;
 	
+	@Inject
+	protected Provider<AnnotationSemanticSequencer> superSequencerProvider;
+	 
+	protected AnnotationSemanticSequencer superSequencer; 
 	
 	@Override
 	public void init(ISemanticSequencer sequencer, ISemanticSequenceAcceptor sequenceAcceptor, Acceptor errorAcceptor) {
 		super.init(sequencer, sequenceAcceptor, errorAcceptor);
 		this.genericSequencer = genericSequencerProvider.get();
 		this.genericSequencer.init(sequencer, sequenceAcceptor, errorAcceptor);
+		this.superSequencer = superSequencerProvider.get();
+		this.superSequencer.init(sequencer, sequenceAcceptor, errorAcceptor); 
 	}
 	
 	public void createSequence(EObject context, EObject semanticObject) {
-		if(semanticObject.eClass().getEPackage() == ClassmodelPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+		if(semanticObject.eClass().getEPackage() == AnnotationPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case AnnotationPackage.ANNOTATION:
+				if(context == grammarAccess.getAnnotationRule()) {
+					sequence_Annotation(context, (Annotation) semanticObject); 
+					return; 
+				}
+				else break;
+			case AnnotationPackage.PARAMETER:
+				if(context == grammarAccess.getAssignParameterRule()) {
+					sequence_AssignParameter(context, (Parameter) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getValueParameterRule()) {
+					sequence_ValueParameter(context, (Parameter) semanticObject); 
+					return; 
+				}
+				else break;
+			}
+		else if(semanticObject.eClass().getEPackage() == ClassmodelPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case ClassmodelPackage.ARRAY:
 				if(context == grammarAccess.getArrayRule()) {
 					sequence_Array(context, (Array) semanticObject); 
@@ -156,7 +183,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 				else break;
 			case ClassmodelPackage.PARAMETER:
 				if(context == grammarAccess.getParameterRule()) {
-					sequence_Parameter(context, (Parameter) semanticObject); 
+					sequence_Parameter(context, (cz.cvut.earlgrey.classmodel.classmodel.Parameter) semanticObject); 
 					return; 
 				}
 				else break;
@@ -185,10 +212,28 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
+	 *     (name=ExtendedID (parameter+=Parameter parameter+=Parameter*)?)
+	 */
+	protected void sequence_Annotation(EObject context, Annotation semanticObject) {
+		superSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (size=NATURAL?)
 	 */
 	protected void sequence_Array(EObject context, Array semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ExtendedID value=Value)
+	 */
+	protected void sequence_AssignParameter(EObject context, Parameter semanticObject) {
+		superSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -203,7 +248,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (name=ID generalization=Generalization? constraint=CONSTRAINT? feature+=Feature*)
+	 *     (annotation+=Annotation* name=ID generalization=Generalization? constraint=CONSTRAINT? feature+=Feature*)
 	 */
 	protected void sequence_Classifier(EObject context, Classifier semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -221,23 +266,16 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     (annotation+=Annotation* name=ID)
 	 */
 	protected void sequence_Datatype(EObject context, Datatype semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, ClassmodelPackage.Literals.DATATYPE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ClassmodelPackage.Literals.DATATYPE__NAME));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getDatatypeAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=ID constraint=CONSTRAINT? enumerator+=Enumerator*)
+	 *     (annotation+=Annotation* name=ID constraint=CONSTRAINT? enumerator+=Enumerator*)
 	 */
 	protected void sequence_Enumeration(EObject context, Enumeration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -348,7 +386,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (name=ID element+=Element*)
+	 *     (annotation+=Annotation* name=ID element+=Element*)
 	 */
 	protected void sequence_Package(EObject context, cz.cvut.earlgrey.classmodel.classmodel.Package semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -359,7 +397,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	 * Constraint:
 	 *     (name=ID type=Reference (implicit+=ImplicitValue implicit+=ImplicitValue*)?)
 	 */
-	protected void sequence_Parameter(EObject context, Parameter semanticObject) {
+	protected void sequence_Parameter(EObject context, cz.cvut.earlgrey.classmodel.classmodel.Parameter semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -376,6 +414,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	/**
 	 * Constraint:
 	 *     (
+	 *         annotation+=Annotation* 
 	 *         type=RelationshipType 
 	 *         label=STRING? 
 	 *         headNavigable?='navigable'? 
@@ -399,5 +438,14 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	 */
 	protected void sequence_Type(EObject context, Type semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     value=Value
+	 */
+	protected void sequence_ValueParameter(EObject context, Parameter semanticObject) {
+		superSequencer.createSequence(context, semanticObject);
 	}
 }

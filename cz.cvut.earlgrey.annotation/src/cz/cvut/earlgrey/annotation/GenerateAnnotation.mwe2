@@ -14,8 +14,8 @@ Workflow {
         scanClassPath = true
         platformUri = "${runtimeProject}/.."
         // The following two lines ca be removed, if Xbase is not used.
-        registerGeneratedEPackage = "org.eclipse.xtext.xbase.XbasePackage"
-        registerGenModelFile = "platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel"
+//        registerGeneratedEPackage = "cz.cvut.earlgrey.annotation.AnnotationPackage"
+//        registerGenModelFile = "platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel"
     }
 
     component = DirectoryCleaner {
@@ -53,7 +53,7 @@ Workflow {
             }
             
             // the serialization component (1.0)
-            // fragment = parseTreeConstructor.ParseTreeConstructorFragment {}
+            //fragment = parseTreeConstructor.ParseTreeConstructorFragment {}
 
             // a custom ResourceFactory for use with EMF
             fragment = resourceFactory.ResourceFactoryFragment {

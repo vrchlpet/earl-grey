@@ -6,6 +6,8 @@
  */
 package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
+import cz.cvut.earlgrey.annotation.annotation.AnnotationPackage;
+
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.Classifier;
@@ -232,6 +234,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
 
     isInited = true;
 
+    // Initialize simple dependencies
+    AnnotationPackage.eINSTANCE.eClass();
+
     // Create package meta-data objects
     theClassmodelPackage.createPackageContents();
 
@@ -305,6 +310,16 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
   public EClass getElement()
   {
     return elementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getElement_Annotation()
+  {
+    return (EReference)elementEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -752,19 +767,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getParameter_Name()
-  {
-    return (EAttribute)parameterEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getParameter_Type()
   {
-    return (EReference)parameterEClass.getEStructuralFeatures().get(1);
+    return (EReference)parameterEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -774,7 +779,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    */
   public EAttribute getParameter_Implicit()
   {
-    return (EAttribute)parameterEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)parameterEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -925,6 +930,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     createEAttribute(importEClass, IMPORT__IMPORT_URI);
 
     elementEClass = createEClass(ELEMENT);
+    createEReference(elementEClass, ELEMENT__ANNOTATION);
 
     datatypeEClass = createEClass(DATATYPE);
     createEAttribute(datatypeEClass, DATATYPE__NAME);
@@ -981,7 +987,6 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     createEReference(operationEClass, OPERATION__RETURN);
 
     parameterEClass = createEClass(PARAMETER);
-    createEAttribute(parameterEClass, PARAMETER__NAME);
     createEReference(parameterEClass, PARAMETER__TYPE);
     createEAttribute(parameterEClass, PARAMETER__IMPLICIT);
 
@@ -1026,6 +1031,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     setNsPrefix(eNS_PREFIX);
     setNsURI(eNS_URI);
 
+    // Obtain other dependent packages
+    AnnotationPackage theAnnotationPackage = (AnnotationPackage)EPackage.Registry.INSTANCE.getEPackage(AnnotationPackage.eNS_URI);
+
     // Create type parameters
 
     // Set bounds for type parameters
@@ -1038,6 +1046,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     relationshipEClass.getESuperTypes().add(this.getElement());
     constantEClass.getESuperTypes().add(this.getFeature());
     operationEClass.getESuperTypes().add(this.getFeature());
+    parameterEClass.getESuperTypes().add(theAnnotationPackage.getParameter());
     attributeEClass.getESuperTypes().add(this.getFeature());
 
     // Initialize classes and features; add operations and parameters
@@ -1049,6 +1058,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     initEAttribute(getImport_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getElement_Annotation(), theAnnotationPackage.getAnnotation(), null, "annotation", null, 0, -1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(datatypeEClass, Datatype.class, "Datatype", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDatatype_Name(), ecorePackage.getEString(), "name", null, 0, 1, Datatype.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1105,7 +1115,6 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     initEReference(getOperation_Return(), this.getReference(), null, "return", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getParameter_Name(), ecorePackage.getEString(), "name", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getParameter_Type(), this.getReference(), null, "type", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getParameter_Implicit(), ecorePackage.getEString(), "implicit", null, 0, -1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

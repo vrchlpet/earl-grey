@@ -1,4 +1,4 @@
-grammar cz.cvut.earlgrey.annotation.Annotation with org.eclipse.xtext.common.Terminals
+grammar cz.cvut.earlgrey.annotation.Annotation hidden(WS, ML_COMMENT, SL_COMMENT)
 
 generate annotation "http://www.cvut.cz/earlgrey/annotation/Annotation"
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
@@ -28,21 +28,24 @@ ValueParameter returns Parameter:
 
 // e.g.: null
 Value returns ecore::EString:
-    INT
+    Integer
     | STRING
     | ExtendedID
     | BOOLEAN
     | NULL
-    | Double
+    | Real
 ;
 
-Double returns ecore::EString:
-    INT '.' INT
-;
-
-// e.g.: ElementType.METHOD
-ExtendedID returns ecore::EString:
+ExtendedID:
     ID ('.' ID)*
+;
+
+Real returns ecore::EDouble:
+    '-'? NATURAL '.' NATURAL (("e"|"E")("+"|"-") NATURAL)?
+;
+
+Integer returns ecore::EInt:
+    '-'? NATURAL
 ;
 
 terminal BOOLEAN:
@@ -50,6 +53,34 @@ terminal BOOLEAN:
 ;
 
 terminal NULL:
-    'null' | 'nil'
+    'null' | 'nil' | 'NULL'
 ;
- 
+
+terminal ID:
+    ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*
+;
+
+terminal NATURAL returns ecore::EInt:
+    ('0'..'9')+
+;
+
+terminal STRING: 
+    '"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"'
+    | "'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'"
+; 
+
+terminal ML_COMMENT:
+    '/*' -> '*/'
+;
+
+terminal SL_COMMENT:
+    '//' !('\n'|'\r')* ('\r'? '\n')?
+;
+
+terminal WS:
+    (' '|'\t'|'\r'|'\n')+
+;
+
+terminal ANY_OTHER:
+    .
+;

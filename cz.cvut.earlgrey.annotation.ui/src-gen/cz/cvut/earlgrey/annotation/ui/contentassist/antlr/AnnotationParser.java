@@ -39,13 +39,17 @@ public class AnnotationParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getParameterAccess().getAlternatives(), "rule__Parameter__Alternatives");
 					put(grammarAccess.getValueAccess().getAlternatives(), "rule__Value__Alternatives");
+					put(grammarAccess.getRealAccess().getAlternatives_4_0(), "rule__Real__Alternatives_4_0");
+					put(grammarAccess.getRealAccess().getAlternatives_4_1(), "rule__Real__Alternatives_4_1");
 					put(grammarAccess.getAnnotationAccess().getGroup(), "rule__Annotation__Group__0");
 					put(grammarAccess.getAnnotationAccess().getGroup_2(), "rule__Annotation__Group_2__0");
 					put(grammarAccess.getAnnotationAccess().getGroup_2_2(), "rule__Annotation__Group_2_2__0");
 					put(grammarAccess.getAssignParameterAccess().getGroup(), "rule__AssignParameter__Group__0");
-					put(grammarAccess.getDoubleAccess().getGroup(), "rule__Double__Group__0");
 					put(grammarAccess.getExtendedIDAccess().getGroup(), "rule__ExtendedID__Group__0");
 					put(grammarAccess.getExtendedIDAccess().getGroup_1(), "rule__ExtendedID__Group_1__0");
+					put(grammarAccess.getRealAccess().getGroup(), "rule__Real__Group__0");
+					put(grammarAccess.getRealAccess().getGroup_4(), "rule__Real__Group_4__0");
+					put(grammarAccess.getIntegerAccess().getGroup(), "rule__Integer__Group__0");
 					put(grammarAccess.getAnnotationAccess().getNameAssignment_1(), "rule__Annotation__NameAssignment_1");
 					put(grammarAccess.getAnnotationAccess().getParameterAssignment_2_1(), "rule__Annotation__ParameterAssignment_2_1");
 					put(grammarAccess.getAnnotationAccess().getParameterAssignment_2_2_1(), "rule__Annotation__ParameterAssignment_2_2_1");

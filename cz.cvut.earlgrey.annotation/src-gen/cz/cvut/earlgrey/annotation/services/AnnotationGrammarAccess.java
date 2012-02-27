@@ -11,7 +11,6 @@ import org.eclipse.xtext.*;
 import org.eclipse.xtext.service.GrammarProvider;
 import org.eclipse.xtext.service.AbstractElementFinder.*;
 
-import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 
 @Singleton
 public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
@@ -151,23 +150,23 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 	public class ValueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Value");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cINTTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cIntegerParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cSTRINGTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cExtendedIDParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cBOOLEANTerminalRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cNULLTerminalRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cDoubleParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cRealParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		
 		//// e.g.: null
 		//Value returns ecore::EString:
-		//	INT | STRING | ExtendedID | BOOLEAN | NULL | Double;
+		//	Integer | STRING | ExtendedID | BOOLEAN | NULL | Real;
 		public ParserRule getRule() { return rule; }
 
-		//INT | STRING | ExtendedID | BOOLEAN | NULL | Double
+		//Integer | STRING | ExtendedID | BOOLEAN | NULL | Real
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//INT
-		public RuleCall getINTTerminalRuleCall_0() { return cINTTerminalRuleCall_0; }
+		//Integer
+		public RuleCall getIntegerParserRuleCall_0() { return cIntegerParserRuleCall_0; }
 
 		//STRING
 		public RuleCall getSTRINGTerminalRuleCall_1() { return cSTRINGTerminalRuleCall_1; }
@@ -181,32 +180,8 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 		//NULL
 		public RuleCall getNULLTerminalRuleCall_4() { return cNULLTerminalRuleCall_4; }
 
-		//Double
-		public RuleCall getDoubleParserRuleCall_5() { return cDoubleParserRuleCall_5; }
-	}
-
-	public class DoubleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Double");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cINTTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Keyword cFullStopKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final RuleCall cINTTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
-		
-		//Double returns ecore::EString:
-		//	INT "." INT;
-		public ParserRule getRule() { return rule; }
-
-		//INT "." INT
-		public Group getGroup() { return cGroup; }
-
-		//INT
-		public RuleCall getINTTerminalRuleCall_0() { return cINTTerminalRuleCall_0; }
-
-		//"."
-		public Keyword getFullStopKeyword_1() { return cFullStopKeyword_1; }
-
-		//INT
-		public RuleCall getINTTerminalRuleCall_2() { return cINTTerminalRuleCall_2; }
+		//Real
+		public RuleCall getRealParserRuleCall_5() { return cRealParserRuleCall_5; }
 	}
 
 	public class ExtendedIDElements extends AbstractParserRuleElementFinder {
@@ -217,8 +192,7 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
 		
-		//// e.g.: ElementType.METHOD
-		//ExtendedID returns ecore::EString:
+		//ExtendedID:
 		//	ID ("." ID)*;
 		public ParserRule getRule() { return rule; }
 
@@ -237,6 +211,86 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
 	}
+
+	public class RealElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Real");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cNATURALTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Keyword cFullStopKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final RuleCall cNATURALTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Alternatives cAlternatives_4_0 = (Alternatives)cGroup_4.eContents().get(0);
+		private final Keyword cEKeyword_4_0_0 = (Keyword)cAlternatives_4_0.eContents().get(0);
+		private final Keyword cEKeyword_4_0_1 = (Keyword)cAlternatives_4_0.eContents().get(1);
+		private final Alternatives cAlternatives_4_1 = (Alternatives)cGroup_4.eContents().get(1);
+		private final Keyword cPlusSignKeyword_4_1_0 = (Keyword)cAlternatives_4_1.eContents().get(0);
+		private final Keyword cHyphenMinusKeyword_4_1_1 = (Keyword)cAlternatives_4_1.eContents().get(1);
+		private final RuleCall cNATURALTerminalRuleCall_4_2 = (RuleCall)cGroup_4.eContents().get(2);
+		
+		//Real returns ecore::EDouble:
+		//	"-"? NATURAL "." NATURAL (("e" | "E") ("+" | "-") NATURAL)?;
+		public ParserRule getRule() { return rule; }
+
+		//"-"? NATURAL "." NATURAL (("e" | "E") ("+" | "-") NATURAL)?
+		public Group getGroup() { return cGroup; }
+
+		//"-"?
+		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
+
+		//NATURAL
+		public RuleCall getNATURALTerminalRuleCall_1() { return cNATURALTerminalRuleCall_1; }
+
+		//"."
+		public Keyword getFullStopKeyword_2() { return cFullStopKeyword_2; }
+
+		//NATURAL
+		public RuleCall getNATURALTerminalRuleCall_3() { return cNATURALTerminalRuleCall_3; }
+
+		//(("e" | "E") ("+" | "-") NATURAL)?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//"e" | "E"
+		public Alternatives getAlternatives_4_0() { return cAlternatives_4_0; }
+
+		//"e"
+		public Keyword getEKeyword_4_0_0() { return cEKeyword_4_0_0; }
+
+		//"E"
+		public Keyword getEKeyword_4_0_1() { return cEKeyword_4_0_1; }
+
+		//"+" | "-"
+		public Alternatives getAlternatives_4_1() { return cAlternatives_4_1; }
+
+		//"+"
+		public Keyword getPlusSignKeyword_4_1_0() { return cPlusSignKeyword_4_1_0; }
+
+		//"-"
+		public Keyword getHyphenMinusKeyword_4_1_1() { return cHyphenMinusKeyword_4_1_1; }
+
+		//NATURAL
+		public RuleCall getNATURALTerminalRuleCall_4_2() { return cNATURALTerminalRuleCall_4_2; }
+	}
+
+	public class IntegerElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Integer");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cNATURALTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		
+		//Integer returns ecore::EInt:
+		//	"-"? NATURAL;
+		public ParserRule getRule() { return rule; }
+
+		//"-"? NATURAL
+		public Group getGroup() { return cGroup; }
+
+		//"-"?
+		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
+
+		//NATURAL
+		public RuleCall getNATURALTerminalRuleCall_1() { return cNATURALTerminalRuleCall_1; }
+	}
 	
 	
 	private AnnotationElements pAnnotation;
@@ -244,30 +298,30 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 	private AssignParameterElements pAssignParameter;
 	private ValueParameterElements pValueParameter;
 	private ValueElements pValue;
-	private DoubleElements pDouble;
 	private ExtendedIDElements pExtendedID;
+	private RealElements pReal;
+	private IntegerElements pInteger;
 	private TerminalRule tBOOLEAN;
 	private TerminalRule tNULL;
+	private TerminalRule tID;
+	private TerminalRule tNATURAL;
+	private TerminalRule tSTRING;
+	private TerminalRule tML_COMMENT;
+	private TerminalRule tSL_COMMENT;
+	private TerminalRule tWS;
+	private TerminalRule tANY_OTHER;
 	
 	private final GrammarProvider grammarProvider;
 
-	private TerminalsGrammarAccess gaTerminals;
-
 	@Inject
-	public AnnotationGrammarAccess(GrammarProvider grammarProvider,
-		TerminalsGrammarAccess gaTerminals) {
+	public AnnotationGrammarAccess(GrammarProvider grammarProvider) {
 		this.grammarProvider = grammarProvider;
-		this.gaTerminals = gaTerminals;
 	}
 	
 	public Grammar getGrammar() {	
 		return grammarProvider.getGrammar(this);
 	}
 	
-
-	public TerminalsGrammarAccess getTerminalsGrammarAccess() {
-		return gaTerminals;
-	}
 
 	
 	//// e.g.: @Generate(Java)
@@ -315,7 +369,7 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// e.g.: null
 	//Value returns ecore::EString:
-	//	INT | STRING | ExtendedID | BOOLEAN | NULL | Double;
+	//	Integer | STRING | ExtendedID | BOOLEAN | NULL | Real;
 	public ValueElements getValueAccess() {
 		return (pValue != null) ? pValue : (pValue = new ValueElements());
 	}
@@ -324,18 +378,7 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 		return getValueAccess().getRule();
 	}
 
-	//Double returns ecore::EString:
-	//	INT "." INT;
-	public DoubleElements getDoubleAccess() {
-		return (pDouble != null) ? pDouble : (pDouble = new DoubleElements());
-	}
-	
-	public ParserRule getDoubleRule() {
-		return getDoubleAccess().getRule();
-	}
-
-	//// e.g.: ElementType.METHOD
-	//ExtendedID returns ecore::EString:
+	//ExtendedID:
 	//	ID ("." ID)*;
 	public ExtendedIDElements getExtendedIDAccess() {
 		return (pExtendedID != null) ? pExtendedID : (pExtendedID = new ExtendedIDElements());
@@ -345,6 +388,26 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 		return getExtendedIDAccess().getRule();
 	}
 
+	//Real returns ecore::EDouble:
+	//	"-"? NATURAL "." NATURAL (("e" | "E") ("+" | "-") NATURAL)?;
+	public RealElements getRealAccess() {
+		return (pReal != null) ? pReal : (pReal = new RealElements());
+	}
+	
+	public ParserRule getRealRule() {
+		return getRealAccess().getRule();
+	}
+
+	//Integer returns ecore::EInt:
+	//	"-"? NATURAL;
+	public IntegerElements getIntegerAccess() {
+		return (pInteger != null) ? pInteger : (pInteger = new IntegerElements());
+	}
+	
+	public ParserRule getIntegerRule() {
+		return getIntegerAccess().getRule();
+	}
+
 	//terminal BOOLEAN:
 	//	"true" | "false";
 	public TerminalRule getBOOLEANRule() {
@@ -352,51 +415,51 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 	} 
 
 	//terminal NULL:
-	//	"null" | "nil";
+	//	"null" | "nil" | "NULL";
 	public TerminalRule getNULLRule() {
 		return (tNULL != null) ? tNULL : (tNULL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "NULL"));
 	} 
 
 	//terminal ID:
-	//	"^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
+	//	("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
 	public TerminalRule getIDRule() {
-		return gaTerminals.getIDRule();
+		return (tID != null) ? tID : (tID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ID"));
 	} 
 
-	//terminal INT returns ecore::EInt:
+	//terminal NATURAL returns ecore::EInt:
 	//	"0".."9"+;
-	public TerminalRule getINTRule() {
-		return gaTerminals.getINTRule();
+	public TerminalRule getNATURALRule() {
+		return (tNATURAL != null) ? tNATURAL : (tNATURAL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "NATURAL"));
 	} 
 
 	//terminal STRING:
 	//	"\"" ("\\" ("b" | "t" | "n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\""))* "\"" | "\'" ("\\" ("b" | "t" |
 	//	"n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'";
 	public TerminalRule getSTRINGRule() {
-		return gaTerminals.getSTRINGRule();
+		return (tSTRING != null) ? tSTRING : (tSTRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "STRING"));
 	} 
 
 	//terminal ML_COMMENT:
 	//	"/ *"->"* /";
 	public TerminalRule getML_COMMENTRule() {
-		return gaTerminals.getML_COMMENTRule();
+		return (tML_COMMENT != null) ? tML_COMMENT : (tML_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ML_COMMENT"));
 	} 
 
 	//terminal SL_COMMENT:
 	//	"//" !("\n" | "\r")* ("\r"? "\n")?;
 	public TerminalRule getSL_COMMENTRule() {
-		return gaTerminals.getSL_COMMENTRule();
+		return (tSL_COMMENT != null) ? tSL_COMMENT : (tSL_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "SL_COMMENT"));
 	} 
 
 	//terminal WS:
 	//	(" " | "\t" | "\r" | "\n")+;
 	public TerminalRule getWSRule() {
-		return gaTerminals.getWSRule();
+		return (tWS != null) ? tWS : (tWS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "WS"));
 	} 
 
 	//terminal ANY_OTHER:
 	//	.;
 	public TerminalRule getANY_OTHERRule() {
-		return gaTerminals.getANY_OTHERRule();
+		return (tANY_OTHER != null) ? tANY_OTHER : (tANY_OTHER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ANY_OTHER"));
 	} 
 }

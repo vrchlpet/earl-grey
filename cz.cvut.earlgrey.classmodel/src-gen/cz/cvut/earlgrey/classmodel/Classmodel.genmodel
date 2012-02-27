@@ -6,7 +6,7 @@
     modelPluginID="cz.cvut.earlgrey.classmodel" forceOverwrite="true" modelName="Classmodel"
     updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="cz.cvut.earlgrey.classmodel.edit"
-    editorPluginID="cz.cvut.earlgrey.classmodel.editor">
+    editorPluginID="cz.cvut.earlgrey.classmodel.editor" usedGenPackages="../../../../../../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/Annotation.genmodel#//annotation">
   <genPackages prefix="Classmodel" basePackage="cz.cvut.earlgrey.classmodel" disposableProviderFactory="true"
       ecorePackage="Classmodel.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Classmodel.ecore#//RelationshipType">
@@ -30,7 +30,9 @@
     <genClasses ecoreClass="Classmodel.ecore#//Import">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Import/importURI"/>
     </genClasses>
-    <genClasses ecoreClass="Classmodel.ecore#//Element"/>
+    <genClasses ecoreClass="Classmodel.ecore#//Element">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Element/annotation"/>
+    </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Datatype">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Datatype/name"/>
     </genClasses>
@@ -85,7 +87,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Operation/return"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Parameter">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Parameter/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Parameter/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Parameter/implicit"/>
     </genClasses>
