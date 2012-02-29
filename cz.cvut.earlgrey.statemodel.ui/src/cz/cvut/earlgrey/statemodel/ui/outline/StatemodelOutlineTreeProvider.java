@@ -20,7 +20,7 @@ public class StatemodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	 * @return label as StyledString
 	 */
 	public Object _text(Transition ele) {
-		return Styles.getStyledString(ele.getState().getName());
+		return Styles.getStyledString(ele.getState());
 	}
 
 	/**

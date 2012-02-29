@@ -15,9 +15,11 @@ Workflow {
         scanClassPath = true
         platformUri = "${runtimeProject}/.."
         //registerGeneratedEPackage = "org.eclipse.xtext.xbase.XbasePackage"
-        registerGeneratedEPackage = "cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage"
-        //FIXME: fix genmodel path to not contain /src-gen/
-        registerGenModelFile = "platform:/resource/cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/Classmodel.genmodel"
+//        registerGeneratedEPackage = "cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage"
+//        //FIXME: fix genmodel path to not contain /src-gen/
+//        registerGenModelFile = "platform:/resource/cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/Classmodel.genmodel"
+        registerGeneratedEPackage = "cz.cvut.earlgrey.annotation.annotation.AnnotationPackage"
+        registerGenModelFile = "platform:/resource/cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/Annotation.genmodel"
     }
 
     //bean = org.eclipse.xtext.ecore.EcoreSupportStandaloneSetup {}
@@ -66,9 +68,9 @@ Workflow {
 
             // The antlr parser generator fragment.
             fragment = parser.antlr.XtextAntlrGeneratorFragment {
-            //  options = {
-            //      backtrack = true
-            //  }
+              options = {
+                  backtrack = true
+              }
             }
 
             // java-based API for validation
@@ -112,7 +114,7 @@ Workflow {
             fragment = parser.antlr.XtextAntlrUiGeneratorFragment {}
 
             // generates junit test support classes into Generator#pathTestProject
-            fragment = junit.Junit4Fragment {}
+//            fragment = junit.Junit4Fragment {}
 
             // project wizard (optional)
             // fragment = projectWizard.SimpleProjectWizardFragment {

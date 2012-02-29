@@ -39,6 +39,8 @@ public class AnnotationParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getParameterAccess().getAlternatives(), "rule__Parameter__Alternatives");
 					put(grammarAccess.getValueAccess().getAlternatives(), "rule__Value__Alternatives");
+					put(grammarAccess.getValueWithSpacesAccess().getAlternatives(), "rule__ValueWithSpaces__Alternatives");
+					put(grammarAccess.getCompositeIDAccess().getAlternatives(), "rule__CompositeID__Alternatives");
 					put(grammarAccess.getRealAccess().getAlternatives_4_0(), "rule__Real__Alternatives_4_0");
 					put(grammarAccess.getRealAccess().getAlternatives_4_1(), "rule__Real__Alternatives_4_1");
 					put(grammarAccess.getAnnotationAccess().getGroup(), "rule__Annotation__Group__0");

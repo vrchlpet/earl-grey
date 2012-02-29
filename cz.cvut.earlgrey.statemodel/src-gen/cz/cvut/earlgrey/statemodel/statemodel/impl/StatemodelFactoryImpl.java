@@ -69,16 +69,14 @@ public class StatemodelFactoryImpl extends EFactoryImpl implements StatemodelFac
   {
     switch (eClass.getClassifierID())
     {
-      case StatemodelPackage.STATEMODEL: return createStatemodel();
+      case StatemodelPackage.MODEL: return createModel();
+      case StatemodelPackage.IMPORT: return createImport();
+      case StatemodelPackage.ELEMENT: return createElement();
       case StatemodelPackage.STATEMACHINE: return createStatemachine();
       case StatemodelPackage.STATE: return createState();
-      case StatemodelPackage.ELEMENT: return createElement();
+      case StatemodelPackage.ACTIVITY: return createActivity();
+      case StatemodelPackage.TRANSITION_BLOCK: return createTransitionBlock();
       case StatemodelPackage.TRANSITION: return createTransition();
-      case StatemodelPackage.VALUE: return createValue();
-      case StatemodelPackage.EVENT: return createEvent();
-      case StatemodelPackage.GUARD: return createGuard();
-      case StatemodelPackage.ACTION: return createAction();
-      case StatemodelPackage.IMPORT: return createImport();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -123,10 +121,32 @@ public class StatemodelFactoryImpl extends EFactoryImpl implements StatemodelFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Statemodel createStatemodel()
+  public Model createModel()
   {
-    StatemodelImpl statemodel = new StatemodelImpl();
-    return statemodel;
+    ModelImpl model = new ModelImpl();
+    return model;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Import createImport()
+  {
+    ImportImpl import_ = new ImportImpl();
+    return import_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Element createElement()
+  {
+    ElementImpl element = new ElementImpl();
+    return element;
   }
 
   /**
@@ -156,10 +176,21 @@ public class StatemodelFactoryImpl extends EFactoryImpl implements StatemodelFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Element createElement()
+  public Activity createActivity()
   {
-    ElementImpl element = new ElementImpl();
-    return element;
+    ActivityImpl activity = new ActivityImpl();
+    return activity;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TransitionBlock createTransitionBlock()
+  {
+    TransitionBlockImpl transitionBlock = new TransitionBlockImpl();
+    return transitionBlock;
   }
 
   /**
@@ -171,61 +202,6 @@ public class StatemodelFactoryImpl extends EFactoryImpl implements StatemodelFac
   {
     TransitionImpl transition = new TransitionImpl();
     return transition;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Value createValue()
-  {
-    ValueImpl value = new ValueImpl();
-    return value;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Event createEvent()
-  {
-    EventImpl event = new EventImpl();
-    return event;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Guard createGuard()
-  {
-    GuardImpl guard = new GuardImpl();
-    return guard;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Action createAction()
-  {
-    ActionImpl action = new ActionImpl();
-    return action;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Import createImport()
-  {
-    ImportImpl import_ = new ImportImpl();
-    return import_;
   }
 
   /**

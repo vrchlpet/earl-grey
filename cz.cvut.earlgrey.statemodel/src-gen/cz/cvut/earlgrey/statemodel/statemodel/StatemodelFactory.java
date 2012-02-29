@@ -27,13 +27,31 @@ public interface StatemodelFactory extends EFactory
   StatemodelFactory eINSTANCE = cz.cvut.earlgrey.statemodel.statemodel.impl.StatemodelFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Statemodel</em>'.
+   * Returns a new object of class '<em>Model</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Statemodel</em>'.
+   * @return a new object of class '<em>Model</em>'.
    * @generated
    */
-  Statemodel createStatemodel();
+  Model createModel();
+
+  /**
+   * Returns a new object of class '<em>Import</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Import</em>'.
+   * @generated
+   */
+  Import createImport();
+
+  /**
+   * Returns a new object of class '<em>Element</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Element</em>'.
+   * @generated
+   */
+  Element createElement();
 
   /**
    * Returns a new object of class '<em>Statemachine</em>'.
@@ -54,13 +72,22 @@ public interface StatemodelFactory extends EFactory
   State createState();
 
   /**
-   * Returns a new object of class '<em>Element</em>'.
+   * Returns a new object of class '<em>Activity</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Element</em>'.
+   * @return a new object of class '<em>Activity</em>'.
    * @generated
    */
-  Element createElement();
+  Activity createActivity();
+
+  /**
+   * Returns a new object of class '<em>Transition Block</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Transition Block</em>'.
+   * @generated
+   */
+  TransitionBlock createTransitionBlock();
 
   /**
    * Returns a new object of class '<em>Transition</em>'.
@@ -70,51 +97,6 @@ public interface StatemodelFactory extends EFactory
    * @generated
    */
   Transition createTransition();
-
-  /**
-   * Returns a new object of class '<em>Value</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Value</em>'.
-   * @generated
-   */
-  Value createValue();
-
-  /**
-   * Returns a new object of class '<em>Event</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Event</em>'.
-   * @generated
-   */
-  Event createEvent();
-
-  /**
-   * Returns a new object of class '<em>Guard</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Guard</em>'.
-   * @generated
-   */
-  Guard createGuard();
-
-  /**
-   * Returns a new object of class '<em>Action</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Action</em>'.
-   * @generated
-   */
-  Action createAction();
-
-  /**
-   * Returns a new object of class '<em>Import</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Import</em>'.
-   * @generated
-   */
-  Import createImport();
 
   /**
    * Returns the package supported by this factory.

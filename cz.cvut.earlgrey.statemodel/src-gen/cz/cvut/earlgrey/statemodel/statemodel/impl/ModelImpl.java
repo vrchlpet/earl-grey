@@ -6,9 +6,9 @@
  */
 package cz.cvut.earlgrey.statemodel.statemodel.impl;
 
+import cz.cvut.earlgrey.statemodel.statemodel.Element;
 import cz.cvut.earlgrey.statemodel.statemodel.Import;
-import cz.cvut.earlgrey.statemodel.statemodel.Statemachine;
-import cz.cvut.earlgrey.statemodel.statemodel.Statemodel;
+import cz.cvut.earlgrey.statemodel.statemodel.Model;
 import cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage;
 
 import java.util.Collection;
@@ -27,19 +27,19 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Statemodel</b></em>'.
+ * An implementation of the model object '<em><b>Model</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemodelImpl#getImports <em>Imports</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemodelImpl#getStatemachine <em>Statemachine</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.ModelImpl#getImports <em>Imports</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.ModelImpl#getElements <em>Elements</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class StatemodelImpl extends MinimalEObjectImpl.Container implements Statemodel
+public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
   /**
    * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference list.
@@ -52,21 +52,21 @@ public class StatemodelImpl extends MinimalEObjectImpl.Container implements Stat
   protected EList<Import> imports;
 
   /**
-   * The cached value of the '{@link #getStatemachine() <em>Statemachine</em>}' containment reference list.
+   * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getStatemachine()
+   * @see #getElements()
    * @generated
    * @ordered
    */
-  protected EList<Statemachine> statemachine;
+  protected EList<Element> elements;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected StatemodelImpl()
+  protected ModelImpl()
   {
     super();
   }
@@ -79,7 +79,7 @@ public class StatemodelImpl extends MinimalEObjectImpl.Container implements Stat
   @Override
   protected EClass eStaticClass()
   {
-    return StatemodelPackage.Literals.STATEMODEL;
+    return StatemodelPackage.Literals.MODEL;
   }
 
   /**
@@ -91,7 +91,7 @@ public class StatemodelImpl extends MinimalEObjectImpl.Container implements Stat
   {
     if (imports == null)
     {
-      imports = new EObjectContainmentEList<Import>(Import.class, this, StatemodelPackage.STATEMODEL__IMPORTS);
+      imports = new EObjectContainmentEList<Import>(Import.class, this, StatemodelPackage.MODEL__IMPORTS);
     }
     return imports;
   }
@@ -101,13 +101,13 @@ public class StatemodelImpl extends MinimalEObjectImpl.Container implements Stat
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Statemachine> getStatemachine()
+  public EList<Element> getElements()
   {
-    if (statemachine == null)
+    if (elements == null)
     {
-      statemachine = new EObjectContainmentEList<Statemachine>(Statemachine.class, this, StatemodelPackage.STATEMODEL__STATEMACHINE);
+      elements = new EObjectContainmentEList<Element>(Element.class, this, StatemodelPackage.MODEL__ELEMENTS);
     }
-    return statemachine;
+    return elements;
   }
 
   /**
@@ -120,10 +120,10 @@ public class StatemodelImpl extends MinimalEObjectImpl.Container implements Stat
   {
     switch (featureID)
     {
-      case StatemodelPackage.STATEMODEL__IMPORTS:
+      case StatemodelPackage.MODEL__IMPORTS:
         return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
-      case StatemodelPackage.STATEMODEL__STATEMACHINE:
-        return ((InternalEList<?>)getStatemachine()).basicRemove(otherEnd, msgs);
+      case StatemodelPackage.MODEL__ELEMENTS:
+        return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -138,10 +138,10 @@ public class StatemodelImpl extends MinimalEObjectImpl.Container implements Stat
   {
     switch (featureID)
     {
-      case StatemodelPackage.STATEMODEL__IMPORTS:
+      case StatemodelPackage.MODEL__IMPORTS:
         return getImports();
-      case StatemodelPackage.STATEMODEL__STATEMACHINE:
-        return getStatemachine();
+      case StatemodelPackage.MODEL__ELEMENTS:
+        return getElements();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -157,13 +157,13 @@ public class StatemodelImpl extends MinimalEObjectImpl.Container implements Stat
   {
     switch (featureID)
     {
-      case StatemodelPackage.STATEMODEL__IMPORTS:
+      case StatemodelPackage.MODEL__IMPORTS:
         getImports().clear();
         getImports().addAll((Collection<? extends Import>)newValue);
         return;
-      case StatemodelPackage.STATEMODEL__STATEMACHINE:
-        getStatemachine().clear();
-        getStatemachine().addAll((Collection<? extends Statemachine>)newValue);
+      case StatemodelPackage.MODEL__ELEMENTS:
+        getElements().clear();
+        getElements().addAll((Collection<? extends Element>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -179,11 +179,11 @@ public class StatemodelImpl extends MinimalEObjectImpl.Container implements Stat
   {
     switch (featureID)
     {
-      case StatemodelPackage.STATEMODEL__IMPORTS:
+      case StatemodelPackage.MODEL__IMPORTS:
         getImports().clear();
         return;
-      case StatemodelPackage.STATEMODEL__STATEMACHINE:
-        getStatemachine().clear();
+      case StatemodelPackage.MODEL__ELEMENTS:
+        getElements().clear();
         return;
     }
     super.eUnset(featureID);
@@ -199,12 +199,12 @@ public class StatemodelImpl extends MinimalEObjectImpl.Container implements Stat
   {
     switch (featureID)
     {
-      case StatemodelPackage.STATEMODEL__IMPORTS:
+      case StatemodelPackage.MODEL__IMPORTS:
         return imports != null && !imports.isEmpty();
-      case StatemodelPackage.STATEMODEL__STATEMACHINE:
-        return statemachine != null && !statemachine.isEmpty();
+      case StatemodelPackage.MODEL__ELEMENTS:
+        return elements != null && !elements.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //StatemodelImpl
+} //ModelImpl

@@ -76,68 +76,10 @@ public class StatemodelSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case StatemodelPackage.STATEMODEL:
+      case StatemodelPackage.MODEL:
       {
-        Statemodel statemodel = (Statemodel)theEObject;
-        T result = caseStatemodel(statemodel);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case StatemodelPackage.STATEMACHINE:
-      {
-        Statemachine statemachine = (Statemachine)theEObject;
-        T result = caseStatemachine(statemachine);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case StatemodelPackage.STATE:
-      {
-        State state = (State)theEObject;
-        T result = caseState(state);
-        if (result == null) result = caseElement(state);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case StatemodelPackage.ELEMENT:
-      {
-        Element element = (Element)theEObject;
-        T result = caseElement(element);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case StatemodelPackage.TRANSITION:
-      {
-        Transition transition = (Transition)theEObject;
-        T result = caseTransition(transition);
-        if (result == null) result = caseElement(transition);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case StatemodelPackage.VALUE:
-      {
-        Value value = (Value)theEObject;
-        T result = caseValue(value);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case StatemodelPackage.EVENT:
-      {
-        Event event = (Event)theEObject;
-        T result = caseEvent(event);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case StatemodelPackage.GUARD:
-      {
-        Guard guard = (Guard)theEObject;
-        T result = caseGuard(guard);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case StatemodelPackage.ACTION:
-      {
-        Action action = (Action)theEObject;
-        T result = caseAction(action);
+        Model model = (Model)theEObject;
+        T result = caseModel(model);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -148,22 +90,100 @@ public class StatemodelSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case StatemodelPackage.ELEMENT:
+      {
+        Element element = (Element)theEObject;
+        T result = caseElement(element);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case StatemodelPackage.STATEMACHINE:
+      {
+        Statemachine statemachine = (Statemachine)theEObject;
+        T result = caseStatemachine(statemachine);
+        if (result == null) result = caseElement(statemachine);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case StatemodelPackage.STATE:
+      {
+        State state = (State)theEObject;
+        T result = caseState(state);
+        if (result == null) result = caseElement(state);
+        if (result == null) result = caseActivity(state);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case StatemodelPackage.ACTIVITY:
+      {
+        Activity activity = (Activity)theEObject;
+        T result = caseActivity(activity);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case StatemodelPackage.TRANSITION_BLOCK:
+      {
+        TransitionBlock transitionBlock = (TransitionBlock)theEObject;
+        T result = caseTransitionBlock(transitionBlock);
+        if (result == null) result = caseActivity(transitionBlock);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case StatemodelPackage.TRANSITION:
+      {
+        Transition transition = (Transition)theEObject;
+        T result = caseTransition(transition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Statemodel</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Model</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Statemodel</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Model</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseStatemodel(Statemodel object)
+  public T caseModel(Model object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Import</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Import</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImport(Import object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Element</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Element</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseElement(Element object)
   {
     return null;
   }
@@ -201,17 +221,33 @@ public class StatemodelSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Element</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Activity</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Element</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Activity</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseElement(Element object)
+  public T caseActivity(Activity object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Transition Block</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Transition Block</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTransitionBlock(TransitionBlock object)
   {
     return null;
   }
@@ -228,86 +264,6 @@ public class StatemodelSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTransition(Transition object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Value</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Value</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseValue(Value object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Event</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Event</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseEvent(Event object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Guard</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Guard</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseGuard(Guard object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Action</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Action</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAction(Action object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Import</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Import</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseImport(Import object)
   {
     return null;
   }

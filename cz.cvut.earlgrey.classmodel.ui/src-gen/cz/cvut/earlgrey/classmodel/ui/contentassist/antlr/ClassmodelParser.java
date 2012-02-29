@@ -43,6 +43,8 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMultiplicityValueAccess().getAlternatives(), "rule__MultiplicityValue__Alternatives");
 					put(grammarAccess.getImplicitValueAccess().getAlternatives(), "rule__ImplicitValue__Alternatives");
 					put(grammarAccess.getValueAccess().getAlternatives(), "rule__Value__Alternatives");
+					put(grammarAccess.getValueWithSpacesAccess().getAlternatives(), "rule__ValueWithSpaces__Alternatives");
+					put(grammarAccess.getCompositeIDAccess().getAlternatives(), "rule__CompositeID__Alternatives");
 					put(grammarAccess.getRealAccess().getAlternatives_4_0(), "rule__Real__Alternatives_4_0");
 					put(grammarAccess.getRealAccess().getAlternatives_4_1(), "rule__Real__Alternatives_4_1");
 					put(grammarAccess.getRelationshipTypeAccess().getAlternatives(), "rule__RelationshipType__Alternatives");

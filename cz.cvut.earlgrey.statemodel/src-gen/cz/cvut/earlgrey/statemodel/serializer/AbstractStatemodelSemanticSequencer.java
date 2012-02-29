@@ -2,17 +2,18 @@ package cz.cvut.earlgrey.statemodel.serializer;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import cz.cvut.earlgrey.annotation.annotation.Annotation;
+import cz.cvut.earlgrey.annotation.annotation.AnnotationPackage;
+import cz.cvut.earlgrey.annotation.annotation.Parameter;
+import cz.cvut.earlgrey.annotation.serializer.AnnotationSemanticSequencer;
 import cz.cvut.earlgrey.statemodel.services.StatemodelGrammarAccess;
-import cz.cvut.earlgrey.statemodel.statemodel.Action;
-import cz.cvut.earlgrey.statemodel.statemodel.Event;
-import cz.cvut.earlgrey.statemodel.statemodel.Guard;
 import cz.cvut.earlgrey.statemodel.statemodel.Import;
+import cz.cvut.earlgrey.statemodel.statemodel.Model;
 import cz.cvut.earlgrey.statemodel.statemodel.State;
 import cz.cvut.earlgrey.statemodel.statemodel.Statemachine;
-import cz.cvut.earlgrey.statemodel.statemodel.Statemodel;
 import cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage;
 import cz.cvut.earlgrey.statemodel.statemodel.Transition;
-import cz.cvut.earlgrey.statemodel.statemodel.Value;
+import cz.cvut.earlgrey.statemodel.statemodel.TransitionBlock;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
@@ -43,69 +44,81 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	protected ISemanticSequencer genericSequencer;
 	
+	@Inject
+	protected Provider<AnnotationSemanticSequencer> superSequencerProvider;
+	 
+	protected AnnotationSemanticSequencer superSequencer; 
 	
 	@Override
 	public void init(ISemanticSequencer sequencer, ISemanticSequenceAcceptor sequenceAcceptor, Acceptor errorAcceptor) {
 		super.init(sequencer, sequenceAcceptor, errorAcceptor);
 		this.genericSequencer = genericSequencerProvider.get();
 		this.genericSequencer.init(sequencer, sequenceAcceptor, errorAcceptor);
+		this.superSequencer = superSequencerProvider.get();
+		this.superSequencer.init(sequencer, sequenceAcceptor, errorAcceptor); 
 	}
 	
 	public void createSequence(EObject context, EObject semanticObject) {
-		if(semanticObject.eClass().getEPackage() == StatemodelPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
-			case StatemodelPackage.ACTION:
-				if(context == grammarAccess.getActionRule()) {
-					sequence_Action(context, (Action) semanticObject); 
+		if(semanticObject.eClass().getEPackage() == AnnotationPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case AnnotationPackage.ANNOTATION:
+				if(context == grammarAccess.getAnnotationRule()) {
+					sequence_Annotation(context, (Annotation) semanticObject); 
 					return; 
 				}
 				else break;
-			case StatemodelPackage.EVENT:
-				if(context == grammarAccess.getEventRule()) {
-					sequence_Event(context, (Event) semanticObject); 
+			case AnnotationPackage.PARAMETER:
+				if(context == grammarAccess.getAssignParameterRule()) {
+					sequence_AssignParameter(context, (Parameter) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getParameterRule()) {
+					sequence_Parameter(context, (Parameter) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getValueParameterRule()) {
+					sequence_ValueParameter(context, (Parameter) semanticObject); 
 					return; 
 				}
 				else break;
-			case StatemodelPackage.GUARD:
-				if(context == grammarAccess.getGuardRule()) {
-					sequence_Guard(context, (Guard) semanticObject); 
-					return; 
-				}
-				else break;
+			}
+		else if(semanticObject.eClass().getEPackage() == StatemodelPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case StatemodelPackage.IMPORT:
 				if(context == grammarAccess.getImportRule()) {
 					sequence_Import(context, (Import) semanticObject); 
 					return; 
 				}
 				else break;
+			case StatemodelPackage.MODEL:
+				if(context == grammarAccess.getModelRule()) {
+					sequence_Model(context, (Model) semanticObject); 
+					return; 
+				}
+				else break;
 			case StatemodelPackage.STATE:
-				if(context == grammarAccess.getElementRule() ||
+				if(context == grammarAccess.getActivityRule() ||
+				   context == grammarAccess.getElementRule() ||
 				   context == grammarAccess.getStateRule()) {
 					sequence_State(context, (State) semanticObject); 
 					return; 
 				}
 				else break;
 			case StatemodelPackage.STATEMACHINE:
-				if(context == grammarAccess.getStatemachineRule()) {
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getStatemachineRule()) {
 					sequence_Statemachine(context, (Statemachine) semanticObject); 
 					return; 
 				}
 				else break;
-			case StatemodelPackage.STATEMODEL:
-				if(context == grammarAccess.getStatemodelRule()) {
-					sequence_Statemodel(context, (Statemodel) semanticObject); 
-					return; 
-				}
-				else break;
 			case StatemodelPackage.TRANSITION:
-				if(context == grammarAccess.getElementRule() ||
-				   context == grammarAccess.getTransitionRule()) {
+				if(context == grammarAccess.getTransitionRule()) {
 					sequence_Transition(context, (Transition) semanticObject); 
 					return; 
 				}
 				else break;
-			case StatemodelPackage.VALUE:
-				if(context == grammarAccess.getValueRule()) {
-					sequence_Value(context, (Value) semanticObject); 
+			case StatemodelPackage.TRANSITION_BLOCK:
+				if(context == grammarAccess.getActivityRule() ||
+				   context == grammarAccess.getTransitionBlockRule()) {
+					sequence_TransitionBlock(context, (TransitionBlock) semanticObject); 
 					return; 
 				}
 				else break;
@@ -115,28 +128,19 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (action=Value?)
+	 *     (name=ExtendedID (parameter+=Parameter parameter+=Parameter*)?)
 	 */
-	protected void sequence_Action(EObject context, Action semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_Annotation(EObject context, Annotation semanticObject) {
+		superSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (event=Value?)
+	 *     (name=ExtendedID value=Value)
 	 */
-	protected void sequence_Event(EObject context, Event semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (guard=Value?)
-	 */
-	protected void sequence_Guard(EObject context, Guard semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_AssignParameter(EObject context, Parameter semanticObject) {
+		superSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -158,7 +162,25 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (type=StateType name=Identifier element+=Element*)
+	 *     (imports+=Import* elements+=Element*)
+	 */
+	protected void sequence_Model(EObject context, Model semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     ((name=ExtendedID value=Value) | value=Value)
+	 */
+	protected void sequence_Parameter(EObject context, Parameter semanticObject) {
+		superSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (annotation+=Annotation* type=StateType name=CompositeID element+=Activity*)
 	 */
 	protected void sequence_State(EObject context, State semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -167,7 +189,7 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (name=Identifier mapped=[Entity|QualifiedName]? state+=State*)
+	 *     (annotation+=Annotation* name=CompositeID state+=State*)
 	 */
 	protected void sequence_Statemachine(EObject context, Statemachine semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -176,43 +198,27 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (imports+=Import* statemachine+=Statemachine*)
+	 *     (event=ValueWithSpaces transition+=Transition+)
 	 */
-	protected void sequence_Statemodel(EObject context, Statemodel semanticObject) {
+	protected void sequence_TransitionBlock(EObject context, TransitionBlock semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (event=Event guard=Guard action=Action state=[State|Identifier])
+	 *     (guard=ValueWithSpaces? action=ValueWithSpaces? state=CompositeID)
 	 */
 	protected void sequence_Transition(EObject context, Transition semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, StatemodelPackage.Literals.TRANSITION__EVENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, StatemodelPackage.Literals.TRANSITION__EVENT));
-			if(transientValues.isValueTransient(semanticObject, StatemodelPackage.Literals.TRANSITION__GUARD) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, StatemodelPackage.Literals.TRANSITION__GUARD));
-			if(transientValues.isValueTransient(semanticObject, StatemodelPackage.Literals.TRANSITION__ACTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, StatemodelPackage.Literals.TRANSITION__ACTION));
-			if(transientValues.isValueTransient(semanticObject, StatemodelPackage.Literals.TRANSITION__STATE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, StatemodelPackage.Literals.TRANSITION__STATE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getTransitionAccess().getEventEventParserRuleCall_0_0(), semanticObject.getEvent());
-		feeder.accept(grammarAccess.getTransitionAccess().getGuardGuardParserRuleCall_1_0(), semanticObject.getGuard());
-		feeder.accept(grammarAccess.getTransitionAccess().getActionActionParserRuleCall_2_0(), semanticObject.getAction());
-		feeder.accept(grammarAccess.getTransitionAccess().getStateStateIdentifierParserRuleCall_4_0_1(), semanticObject.getState());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     ((id=[Statemachine|Identifier] ref=[Operation|ID]) | value=CompositeString)
+	 *     value=Value
 	 */
-	protected void sequence_Value(EObject context, Value semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_ValueParameter(EObject context, Parameter semanticObject) {
+		superSequencer.createSequence(context, semanticObject);
 	}
 }

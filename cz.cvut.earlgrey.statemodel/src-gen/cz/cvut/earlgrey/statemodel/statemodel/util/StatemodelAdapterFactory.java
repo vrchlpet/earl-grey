@@ -79,9 +79,19 @@ public class StatemodelAdapterFactory extends AdapterFactoryImpl
     new StatemodelSwitch<Adapter>()
     {
       @Override
-      public Adapter caseStatemodel(Statemodel object)
+      public Adapter caseModel(Model object)
       {
-        return createStatemodelAdapter();
+        return createModelAdapter();
+      }
+      @Override
+      public Adapter caseImport(Import object)
+      {
+        return createImportAdapter();
+      }
+      @Override
+      public Adapter caseElement(Element object)
+      {
+        return createElementAdapter();
       }
       @Override
       public Adapter caseStatemachine(Statemachine object)
@@ -94,39 +104,19 @@ public class StatemodelAdapterFactory extends AdapterFactoryImpl
         return createStateAdapter();
       }
       @Override
-      public Adapter caseElement(Element object)
+      public Adapter caseActivity(Activity object)
       {
-        return createElementAdapter();
+        return createActivityAdapter();
+      }
+      @Override
+      public Adapter caseTransitionBlock(TransitionBlock object)
+      {
+        return createTransitionBlockAdapter();
       }
       @Override
       public Adapter caseTransition(Transition object)
       {
         return createTransitionAdapter();
-      }
-      @Override
-      public Adapter caseValue(Value object)
-      {
-        return createValueAdapter();
-      }
-      @Override
-      public Adapter caseEvent(Event object)
-      {
-        return createEventAdapter();
-      }
-      @Override
-      public Adapter caseGuard(Guard object)
-      {
-        return createGuardAdapter();
-      }
-      @Override
-      public Adapter caseAction(Action object)
-      {
-        return createActionAdapter();
-      }
-      @Override
-      public Adapter caseImport(Import object)
-      {
-        return createImportAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -151,16 +141,46 @@ public class StatemodelAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.statemodel.statemodel.Statemodel <em>Statemodel</em>}'.
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.statemodel.statemodel.Model <em>Model</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see cz.cvut.earlgrey.statemodel.statemodel.Statemodel
+   * @see cz.cvut.earlgrey.statemodel.statemodel.Model
    * @generated
    */
-  public Adapter createStatemodelAdapter()
+  public Adapter createModelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.statemodel.statemodel.Import <em>Import</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.statemodel.statemodel.Import
+   * @generated
+   */
+  public Adapter createImportAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.statemodel.statemodel.Element <em>Element</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.statemodel.statemodel.Element
+   * @generated
+   */
+  public Adapter createElementAdapter()
   {
     return null;
   }
@@ -196,16 +216,31 @@ public class StatemodelAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.statemodel.statemodel.Element <em>Element</em>}'.
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.statemodel.statemodel.Activity <em>Activity</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see cz.cvut.earlgrey.statemodel.statemodel.Element
+   * @see cz.cvut.earlgrey.statemodel.statemodel.Activity
    * @generated
    */
-  public Adapter createElementAdapter()
+  public Adapter createActivityAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.statemodel.statemodel.TransitionBlock <em>Transition Block</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.statemodel.statemodel.TransitionBlock
+   * @generated
+   */
+  public Adapter createTransitionBlockAdapter()
   {
     return null;
   }
@@ -221,81 +256,6 @@ public class StatemodelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTransitionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.statemodel.statemodel.Value <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see cz.cvut.earlgrey.statemodel.statemodel.Value
-   * @generated
-   */
-  public Adapter createValueAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.statemodel.statemodel.Event <em>Event</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see cz.cvut.earlgrey.statemodel.statemodel.Event
-   * @generated
-   */
-  public Adapter createEventAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.statemodel.statemodel.Guard <em>Guard</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see cz.cvut.earlgrey.statemodel.statemodel.Guard
-   * @generated
-   */
-  public Adapter createGuardAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.statemodel.statemodel.Action <em>Action</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see cz.cvut.earlgrey.statemodel.statemodel.Action
-   * @generated
-   */
-  public Adapter createActionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.statemodel.statemodel.Import <em>Import</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see cz.cvut.earlgrey.statemodel.statemodel.Import
-   * @generated
-   */
-  public Adapter createImportAdapter()
   {
     return null;
   }

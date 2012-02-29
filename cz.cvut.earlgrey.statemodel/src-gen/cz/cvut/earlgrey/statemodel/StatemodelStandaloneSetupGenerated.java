@@ -15,7 +15,7 @@ import com.google.inject.Injector;
 public class StatemodelStandaloneSetupGenerated implements ISetup {
 
 	public Injector createInjectorAndDoEMFRegistration() {
-		org.eclipse.xtext.common.TerminalsStandaloneSetup.doSetup();
+		cz.cvut.earlgrey.annotation.AnnotationStandaloneSetup.doSetup();
 
 		Injector injector = createInjector();
 		register(injector);

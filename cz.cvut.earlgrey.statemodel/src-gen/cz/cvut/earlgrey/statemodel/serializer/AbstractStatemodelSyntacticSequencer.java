@@ -8,9 +8,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
-import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 
@@ -18,21 +15,24 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class AbstractStatemodelSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected StatemodelGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Event_OnKeyword_1_0_q;
-	protected AbstractElementAlias match_Transition_EqualsSignGreaterThanSignKeyword_3_0_or_GotoKeyword_3_1;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (StatemodelGrammarAccess) access;
-		match_Event_OnKeyword_1_0_q = new TokenAlias(false, true, grammarAccess.getEventAccess().getOnKeyword_1_0());
-		match_Transition_EqualsSignGreaterThanSignKeyword_3_0_or_GotoKeyword_3_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getTransitionAccess().getEqualsSignGreaterThanSignKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getTransitionAccess().getGotoKeyword_3_1()));
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if(ruleCall.getRule() == grammarAccess.getARROWRule())
+			return getARROWToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
+	protected String getARROWToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "->";
+	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
@@ -40,28 +40,8 @@ public class AbstractStatemodelSyntacticSequencer extends AbstractSyntacticSeque
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_Event_OnKeyword_1_0_q.equals(syntax))
-				emit_Event_OnKeyword_1_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Transition_EqualsSignGreaterThanSignKeyword_3_0_or_GotoKeyword_3_1.equals(syntax))
-				emit_Transition_EqualsSignGreaterThanSignKeyword_3_0_or_GotoKeyword_3_1(semanticObject, getLastNavigableState(), syntaxNodes);
-			else acceptNodes(getLastNavigableState(), syntaxNodes);
+			acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
-	/**
-	 * Syntax:
-	 *     'on'?
-	 */
-	protected void emit_Event_OnKeyword_1_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     '=>' | 'goto'
-	 */
-	protected void emit_Transition_EqualsSignGreaterThanSignKeyword_3_0_or_GotoKeyword_3_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 }

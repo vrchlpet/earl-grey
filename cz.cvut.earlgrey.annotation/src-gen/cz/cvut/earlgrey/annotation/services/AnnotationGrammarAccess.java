@@ -212,6 +212,53 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
 	}
 
+	public class ValueWithSpacesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ValueWithSpaces");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cValueParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cANY_OTHERTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cWSTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		
+		//// e.g.: Extended Value with whitespace support. In order to make
+		//// this rule works, use hidden() as in following example:
+		//// Guard hidden(): 'if ' expr=Expression ' then';   
+		//ValueWithSpaces hidden():
+		//	(Value | ANY_OTHER | WS)*;
+		public ParserRule getRule() { return rule; }
+
+		//(Value | ANY_OTHER | WS)*
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//Value
+		public RuleCall getValueParserRuleCall_0() { return cValueParserRuleCall_0; }
+
+		//ANY_OTHER
+		public RuleCall getANY_OTHERTerminalRuleCall_1() { return cANY_OTHERTerminalRuleCall_1; }
+
+		//WS
+		public RuleCall getWSTerminalRuleCall_2() { return cWSTerminalRuleCall_2; }
+	}
+
+	public class CompositeIDElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CompositeID");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cExtendedIDParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cSTRINGTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//CompositeID returns ecore::EString:
+		//	ExtendedID | STRING;
+		public ParserRule getRule() { return rule; }
+
+		//ExtendedID | STRING
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//ExtendedID
+		public RuleCall getExtendedIDParserRuleCall_0() { return cExtendedIDParserRuleCall_0; }
+
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_1() { return cSTRINGTerminalRuleCall_1; }
+	}
+
 	public class RealElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Real");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -299,6 +346,8 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 	private ValueParameterElements pValueParameter;
 	private ValueElements pValue;
 	private ExtendedIDElements pExtendedID;
+	private ValueWithSpacesElements pValueWithSpaces;
+	private CompositeIDElements pCompositeID;
 	private RealElements pReal;
 	private IntegerElements pInteger;
 	private TerminalRule tBOOLEAN;
@@ -386,6 +435,29 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getExtendedIDRule() {
 		return getExtendedIDAccess().getRule();
+	}
+
+	//// e.g.: Extended Value with whitespace support. In order to make
+	//// this rule works, use hidden() as in following example:
+	//// Guard hidden(): 'if ' expr=Expression ' then';   
+	//ValueWithSpaces hidden():
+	//	(Value | ANY_OTHER | WS)*;
+	public ValueWithSpacesElements getValueWithSpacesAccess() {
+		return (pValueWithSpaces != null) ? pValueWithSpaces : (pValueWithSpaces = new ValueWithSpacesElements());
+	}
+	
+	public ParserRule getValueWithSpacesRule() {
+		return getValueWithSpacesAccess().getRule();
+	}
+
+	//CompositeID returns ecore::EString:
+	//	ExtendedID | STRING;
+	public CompositeIDElements getCompositeIDAccess() {
+		return (pCompositeID != null) ? pCompositeID : (pCompositeID = new CompositeIDElements());
+	}
+	
+	public ParserRule getCompositeIDRule() {
+		return getCompositeIDAccess().getRule();
 	}
 
 	//Real returns ecore::EDouble:

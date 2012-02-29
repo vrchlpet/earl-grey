@@ -40,6 +40,17 @@ ExtendedID:
     ID ('.' ID)*
 ;
 
+// e.g.: Extended Value with whitespace support. In order to make
+// this rule works, use hidden() as in following example:
+// Guard hidden(): 'if ' expr=Expression ' then';   
+ValueWithSpaces hidden():
+    (Value | ANY_OTHER | WS)*
+;
+
+CompositeID returns ecore::EString:
+    ExtendedID | STRING
+;
+
 Real returns ecore::EDouble:
     '-'? NATURAL '.' NATURAL (("e"|"E")("+"|"-") NATURAL)?
 ;

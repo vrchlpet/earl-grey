@@ -25,7 +25,7 @@ public class StatemodelParser extends org.eclipse.xtext.parser.antlr.AbstractAnt
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Statemodel";
+		return "Model";
 	}
 	
 	public StatemodelGrammarAccess getGrammarAccess() {

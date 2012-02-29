@@ -1,71 +1,86 @@
-grammar cz.cvut.earlgrey.statemodel.Statemodel with org.eclipse.xtext.common.Terminals
+grammar cz.cvut.earlgrey.statemodel.Statemodel with cz.cvut.earlgrey.annotation.Annotation
 
-import "http://www.cvut.cz/earlgrey/classmodel/Classmodel" as cls
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
 generate statemodel "http://www.cvut.cz/earlgrey/statemodel/Statemodel"
 
-/**
- * Defines root node of a model.
- * Resource imports must be defined before other elements.
- */
-Statemodel:
-    (imports+=Import)* (statemachine+=Statemachine)*;
-
-/**
- * statemachine "Abc" : package.ClassName
- */
-Statemachine:
-    'statemachine' name=Identifier (=> ':' mapped=[cls::Entity|QualifiedName])?
-    '{'
-    (state+=State)*
-    '}';
-
-State:
-    type=StateType name=Identifier
-    '{'
-    (element+=Element)*
-    '}';
-    
-Element:
-    Transition | State
-;
-
-Transition:
-    event=Event guard=Guard action=Action ('=>'|'goto') (=> state=[State|Identifier])
-    ;
-
-Value:
-    (=> id=[Statemachine|Identifier] '.' ref=[cls::Operation|ID]) | value=CompositeString
-;
-
-Event:
-   {Event} (=> 'on'? event=Value)?
-;
-
-Guard:
-    {Guard} (=> 'if' guard=Value)?
-;
-
-Action:
-   {Action} (=> 'do' action=Value)?
-;
-
-CompositeString returns ecore::EString:
-    ID | CONDITION
+Model:
+    //(annotation+=Annotation*) => 
+    (imports+=Import)* (elements+=Element)*
 ;
 
 Import:
-    'import' importURI=STRING;
+    'import' importURI=STRING
+;
 
-Identifier returns ecore::EString:
-    => ID | STRING
+Element:
+    Statemachine
+    | State
+;
+
+// e.g.: statemachine Node end
+Statemachine:
+    (annotation+=Annotation*) => 
+    'statemachine' name=CompositeID
+        state+=State*
+    'end'
+;
+
+// e.g.: state BublOn end
+State:
+    (annotation+=Annotation*) => 
+    type=StateType name=CompositeID
+        (element+=Activity)*
+    'end'
+;
+
+Activity:
+    TransitionBlock
+    | State
+;
+
+// e.g.: light down do -> BulbDown end
+TransitionBlock:
+    event=ValueWithSpaces 'do'
+        transition+=Transition+
+    'end' 
+;
+
+Transition:
+    ('if' guard = ValueWithSpaces 'then')? => (action=ValueWithSpaces)? => ARROW (=> state=CompositeID)
+;
+
+//// e.g.: light is up
+//Event:
+//    name = ValueWithSpaces
+//;
+//
+//// e.g.: if light is down then
+//Guard:
+//    'if' expression = ValueWithSpaces 'then'
+//;
+//
+//// e.g.: light up
+//Action:
+//    value = ValueWithSpaces
+//;
+
+terminal LITERAL:
+    '++' | '--' | '==' | '>=' | '<=' | '!='
+;
+
+ValueWithSpaces hidden():
+    (LITERAL | Value | ANY_OTHER | WS)*
 ;
 
 enum StateType:
-    NONE='state' | INITIAL='initial' | FINAL='final';
+    NONE = 'state'
+    | INITIAL = 'initial'
+    | FINAL = 'final'
+;
 
-QualifiedName:
-    ID ('.' ID)*;
-    
-terminal CONDITION    : '(' (!('('|')'|'\n'|'\r'|'\t'))* ')' //FIXME: "(a && (abc))" -> cant use ')'
+terminal ARROW:
+    '->'
+    | 'goto'
+    | '=>'
 ;

@@ -1587,6 +1587,29 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getExtendedIDAccess().getRule();
 	}
 
+	//// e.g.: Extended Value with whitespace support. In order to make
+	//// this rule works, use hidden() as in following example:
+	//// Guard hidden(): 'if ' expr=Expression ' then';   
+	//ValueWithSpaces hidden():
+	//	(Value | ANY_OTHER | WS)*;
+	public AnnotationGrammarAccess.ValueWithSpacesElements getValueWithSpacesAccess() {
+		return gaAnnotation.getValueWithSpacesAccess();
+	}
+	
+	public ParserRule getValueWithSpacesRule() {
+		return getValueWithSpacesAccess().getRule();
+	}
+
+	//CompositeID returns ecore::EString:
+	//	ExtendedID | STRING;
+	public AnnotationGrammarAccess.CompositeIDElements getCompositeIDAccess() {
+		return gaAnnotation.getCompositeIDAccess();
+	}
+	
+	public ParserRule getCompositeIDRule() {
+		return getCompositeIDAccess().getRule();
+	}
+
 	//Real returns ecore::EDouble:
 	//	"-"? NATURAL "." NATURAL (("e" | "E") ("+" | "-") NATURAL)?;
 	public AnnotationGrammarAccess.RealElements getRealAccess() {

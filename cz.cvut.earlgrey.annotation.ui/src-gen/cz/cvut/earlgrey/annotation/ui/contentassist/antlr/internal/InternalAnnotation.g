@@ -225,6 +225,10 @@ finally {
 
 
 
+
+
+
+
 // Entry rule entryRuleReal
 entryRuleReal 
 :
@@ -349,6 +353,8 @@ rule__Value__Alternatives
 finally {
 	restoreStackSize(stackSize);
 }
+
+
 
 rule__Real__Alternatives_4_0
     @init {

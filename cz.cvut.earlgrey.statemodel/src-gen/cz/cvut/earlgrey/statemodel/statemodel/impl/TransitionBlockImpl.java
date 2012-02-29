@@ -6,10 +6,9 @@
  */
 package cz.cvut.earlgrey.statemodel.statemodel.impl;
 
-import cz.cvut.earlgrey.statemodel.statemodel.Activity;
-import cz.cvut.earlgrey.statemodel.statemodel.State;
-import cz.cvut.earlgrey.statemodel.statemodel.StateType;
 import cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage;
+import cz.cvut.earlgrey.statemodel.statemodel.Transition;
+import cz.cvut.earlgrey.statemodel.statemodel.TransitionBlock;
 
 import java.util.Collection;
 
@@ -28,56 +27,56 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>State</b></em>'.
+ * An implementation of the model object '<em><b>Transition Block</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StateImpl#getType <em>Type</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StateImpl#getElement <em>Element</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.TransitionBlockImpl#getEvent <em>Event</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.TransitionBlockImpl#getTransition <em>Transition</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class StateImpl extends ElementImpl implements State
+public class TransitionBlockImpl extends ActivityImpl implements TransitionBlock
 {
   /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The default value of the '{@link #getEvent() <em>Event</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getEvent()
    * @generated
    * @ordered
    */
-  protected static final StateType TYPE_EDEFAULT = StateType.NONE;
+  protected static final String EVENT_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The cached value of the '{@link #getEvent() <em>Event</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getEvent()
    * @generated
    * @ordered
    */
-  protected StateType type = TYPE_EDEFAULT;
+  protected String event = EVENT_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getElement() <em>Element</em>}' containment reference list.
+   * The cached value of the '{@link #getTransition() <em>Transition</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getElement()
+   * @see #getTransition()
    * @generated
    * @ordered
    */
-  protected EList<Activity> element;
+  protected EList<Transition> transition;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected StateImpl()
+  protected TransitionBlockImpl()
   {
     super();
   }
@@ -90,7 +89,7 @@ public class StateImpl extends ElementImpl implements State
   @Override
   protected EClass eStaticClass()
   {
-    return StatemodelPackage.Literals.STATE;
+    return StatemodelPackage.Literals.TRANSITION_BLOCK;
   }
 
   /**
@@ -98,9 +97,9 @@ public class StateImpl extends ElementImpl implements State
    * <!-- end-user-doc -->
    * @generated
    */
-  public StateType getType()
+  public String getEvent()
   {
-    return type;
+    return event;
   }
 
   /**
@@ -108,12 +107,12 @@ public class StateImpl extends ElementImpl implements State
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(StateType newType)
+  public void setEvent(String newEvent)
   {
-    StateType oldType = type;
-    type = newType == null ? TYPE_EDEFAULT : newType;
+    String oldEvent = event;
+    event = newEvent;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, StatemodelPackage.STATE__TYPE, oldType, type));
+      eNotify(new ENotificationImpl(this, Notification.SET, StatemodelPackage.TRANSITION_BLOCK__EVENT, oldEvent, event));
   }
 
   /**
@@ -121,13 +120,13 @@ public class StateImpl extends ElementImpl implements State
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Activity> getElement()
+  public EList<Transition> getTransition()
   {
-    if (element == null)
+    if (transition == null)
     {
-      element = new EObjectContainmentEList<Activity>(Activity.class, this, StatemodelPackage.STATE__ELEMENT);
+      transition = new EObjectContainmentEList<Transition>(Transition.class, this, StatemodelPackage.TRANSITION_BLOCK__TRANSITION);
     }
-    return element;
+    return transition;
   }
 
   /**
@@ -140,8 +139,8 @@ public class StateImpl extends ElementImpl implements State
   {
     switch (featureID)
     {
-      case StatemodelPackage.STATE__ELEMENT:
-        return ((InternalEList<?>)getElement()).basicRemove(otherEnd, msgs);
+      case StatemodelPackage.TRANSITION_BLOCK__TRANSITION:
+        return ((InternalEList<?>)getTransition()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -156,10 +155,10 @@ public class StateImpl extends ElementImpl implements State
   {
     switch (featureID)
     {
-      case StatemodelPackage.STATE__TYPE:
-        return getType();
-      case StatemodelPackage.STATE__ELEMENT:
-        return getElement();
+      case StatemodelPackage.TRANSITION_BLOCK__EVENT:
+        return getEvent();
+      case StatemodelPackage.TRANSITION_BLOCK__TRANSITION:
+        return getTransition();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -175,12 +174,12 @@ public class StateImpl extends ElementImpl implements State
   {
     switch (featureID)
     {
-      case StatemodelPackage.STATE__TYPE:
-        setType((StateType)newValue);
+      case StatemodelPackage.TRANSITION_BLOCK__EVENT:
+        setEvent((String)newValue);
         return;
-      case StatemodelPackage.STATE__ELEMENT:
-        getElement().clear();
-        getElement().addAll((Collection<? extends Activity>)newValue);
+      case StatemodelPackage.TRANSITION_BLOCK__TRANSITION:
+        getTransition().clear();
+        getTransition().addAll((Collection<? extends Transition>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -196,11 +195,11 @@ public class StateImpl extends ElementImpl implements State
   {
     switch (featureID)
     {
-      case StatemodelPackage.STATE__TYPE:
-        setType(TYPE_EDEFAULT);
+      case StatemodelPackage.TRANSITION_BLOCK__EVENT:
+        setEvent(EVENT_EDEFAULT);
         return;
-      case StatemodelPackage.STATE__ELEMENT:
-        getElement().clear();
+      case StatemodelPackage.TRANSITION_BLOCK__TRANSITION:
+        getTransition().clear();
         return;
     }
     super.eUnset(featureID);
@@ -216,10 +215,10 @@ public class StateImpl extends ElementImpl implements State
   {
     switch (featureID)
     {
-      case StatemodelPackage.STATE__TYPE:
-        return type != TYPE_EDEFAULT;
-      case StatemodelPackage.STATE__ELEMENT:
-        return element != null && !element.isEmpty();
+      case StatemodelPackage.TRANSITION_BLOCK__EVENT:
+        return EVENT_EDEFAULT == null ? event != null : !EVENT_EDEFAULT.equals(event);
+      case StatemodelPackage.TRANSITION_BLOCK__TRANSITION:
+        return transition != null && !transition.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -235,10 +234,10 @@ public class StateImpl extends ElementImpl implements State
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (type: ");
-    result.append(type);
+    result.append(" (event: ");
+    result.append(event);
     result.append(')');
     return result.toString();
   }
 
-} //StateImpl
+} //TransitionBlockImpl

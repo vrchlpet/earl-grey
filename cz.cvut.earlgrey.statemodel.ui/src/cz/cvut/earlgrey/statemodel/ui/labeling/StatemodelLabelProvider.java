@@ -9,10 +9,10 @@ import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
 import com.google.inject.Inject;
 import cz.cvut.earlgrey.statemodel.statemodel.Import;
+import cz.cvut.earlgrey.statemodel.statemodel.Model;
 import cz.cvut.earlgrey.statemodel.statemodel.State;
 import cz.cvut.earlgrey.statemodel.statemodel.StateType;
 import cz.cvut.earlgrey.statemodel.statemodel.Statemachine;
-import cz.cvut.earlgrey.statemodel.statemodel.Statemodel;
 import cz.cvut.earlgrey.statemodel.statemodel.Transition;
 
 /**
@@ -88,7 +88,7 @@ public class StatemodelLabelProvider extends DefaultEObjectLabelProvider {
 	 * @param ele Instance of an Statemodel
 	 * @return image's filename as String
 	 */
-	String image(Statemodel ele) {
+	String image(Model ele) {
 		return STATEMODEL;
 	}
 }

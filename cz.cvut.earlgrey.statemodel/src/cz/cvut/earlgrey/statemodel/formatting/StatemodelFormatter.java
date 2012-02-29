@@ -19,10 +19,10 @@ public class StatemodelFormatter extends AbstractDefaultFormatter {
 	protected void configureFormatting(FormattingConfig c) {
 		StatemodelGrammarAccess f = (StatemodelGrammarAccess) getGrammarAccess();
 
-		c.setLinewrap(1, 2, 3).after(f.getImportRule());
-		c.setLinewrap(1, 2, 3).after(f.getStatemachineRule());
-		c.setLinewrap(1, 2, 3).after(f.getStateRule());
-		c.setLinewrap(1, 1, 2).after(f.getTransitionRule());
+		// c.setLinewrap(1, 2, 3).after(f.getImportRule());
+		// c.setLinewrap(1, 2, 3).after(f.getStatemachineRule());
+		// c.setLinewrap(1, 2, 3).after(f.getStateRule());
+		// c.setLinewrap(1, 1, 2).after(f.getTransitionRule());
 
 		// c.setNoSpace().before(f.getGuardRule());
 
@@ -32,8 +32,8 @@ public class StatemodelFormatter extends AbstractDefaultFormatter {
 
 		initDefault(c, f); // loads default format config
 
-		c.setLinewrap(0, 1, 2).before(f.getSL_COMMENTRule());
-		c.setLinewrap(0, 1, 2).before(f.getML_COMMENTRule());
-		c.setLinewrap(0, 1, 1).after(f.getML_COMMENTRule());
+		// c.setLinewrap(0, 1, 2).before(f.getSL_COMMENTRule());
+		// c.setLinewrap(0, 1, 2).before(f.getML_COMMENTRule());
+		// c.setLinewrap(0, 1, 1).after(f.getML_COMMENTRule());
 	}
 }
