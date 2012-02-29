@@ -41,8 +41,8 @@ public class InternalStatemodelLexer extends Lexer {
     public static final int T__18=18;
     public static final int T__17=17;
     public static final int RULE_ARROW=5;
+    public static final int RULE_OPERATOR=6;
     public static final int RULE_WS=8;
-    public static final int RULE_LITERAL=6;
 
     // delegates
     // delegators
@@ -446,57 +446,20 @@ public class InternalStatemodelLexer extends Lexer {
     }
     // $ANTLR end "T__33"
 
-    // $ANTLR start "RULE_LITERAL"
-    public final void mRULE_LITERAL() throws RecognitionException {
+    // $ANTLR start "RULE_OPERATOR"
+    public final void mRULE_OPERATOR() throws RecognitionException {
         try {
-            int _type = RULE_LITERAL;
+            int _type = RULE_OPERATOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:14: ( ( '++' | '--' | '==' | '>=' | '<=' | '!=' ) )
-            // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:16: ( '++' | '--' | '==' | '>=' | '<=' | '!=' )
+            // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:15: ( ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' ) )
+            // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:17: ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' )
             {
-            // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:16: ( '++' | '--' | '==' | '>=' | '<=' | '!=' )
-            int alt1=6;
-            switch ( input.LA(1) ) {
-            case '+':
-                {
-                alt1=1;
-                }
-                break;
-            case '-':
-                {
-                alt1=2;
-                }
-                break;
-            case '=':
-                {
-                alt1=3;
-                }
-                break;
-            case '>':
-                {
-                alt1=4;
-                }
-                break;
-            case '<':
-                {
-                alt1=5;
-                }
-                break;
-            case '!':
-                {
-                alt1=6;
-                }
-                break;
-            default:
-                NoViableAltException nvae =
-                    new NoViableAltException("", 1, 0, input);
-
-                throw nvae;
-            }
-
+            // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:17: ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' )
+            int alt1=15;
+            alt1 = dfa1.predict(input);
             switch (alt1) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:17: '++'
+                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:18: '++'
                     {
                     match("++"); 
 
@@ -504,7 +467,7 @@ public class InternalStatemodelLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:22: '--'
+                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:23: '--'
                     {
                     match("--"); 
 
@@ -512,7 +475,7 @@ public class InternalStatemodelLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:27: '=='
+                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:28: '=='
                     {
                     match("=="); 
 
@@ -520,7 +483,7 @@ public class InternalStatemodelLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:32: '>='
+                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:33: '>='
                     {
                     match(">="); 
 
@@ -528,7 +491,7 @@ public class InternalStatemodelLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:37: '<='
+                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:38: '<='
                     {
                     match("<="); 
 
@@ -536,9 +499,80 @@ public class InternalStatemodelLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:42: '!='
+                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:43: '!='
                     {
                     match("!="); 
+
+
+                    }
+                    break;
+                case 7 :
+                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:48: '<>'
+                    {
+                    match("<>"); 
+
+
+                    }
+                    break;
+                case 8 :
+                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:53: '||'
+                    {
+                    match("||"); 
+
+
+                    }
+                    break;
+                case 9 :
+                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:58: '&&'
+                    {
+                    match("&&"); 
+
+
+                    }
+                    break;
+                case 10 :
+                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:63: '-='
+                    {
+                    match("-="); 
+
+
+                    }
+                    break;
+                case 11 :
+                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:68: '+='
+                    {
+                    match("+="); 
+
+
+                    }
+                    break;
+                case 12 :
+                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:73: '='
+                    {
+                    match('='); 
+
+                    }
+                    break;
+                case 13 :
+                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:77: '>>'
+                    {
+                    match(">>"); 
+
+
+                    }
+                    break;
+                case 14 :
+                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:82: '<<'
+                    {
+                    match("<<"); 
+
+
+                    }
+                    break;
+                case 15 :
+                    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1214:87: '|='
+                    {
+                    match("|="); 
 
 
                     }
@@ -555,7 +589,7 @@ public class InternalStatemodelLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "RULE_LITERAL"
+    // $ANTLR end "RULE_OPERATOR"
 
     // $ANTLR start "RULE_ARROW"
     public final void mRULE_ARROW() throws RecognitionException {
@@ -1257,7 +1291,7 @@ public class InternalStatemodelLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:8: ( T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | RULE_LITERAL | RULE_ARROW | RULE_BOOLEAN | RULE_NULL | RULE_ID | RULE_NATURAL | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:8: ( T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | RULE_OPERATOR | RULE_ARROW | RULE_BOOLEAN | RULE_NULL | RULE_ID | RULE_NATURAL | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
         int alt15=30;
         alt15 = dfa15.predict(input);
         switch (alt15) {
@@ -1395,77 +1429,77 @@ public class InternalStatemodelLexer extends Lexer {
                 }
                 break;
             case 20 :
-                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:124: RULE_LITERAL
+                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:124: RULE_OPERATOR
                 {
-                mRULE_LITERAL(); 
+                mRULE_OPERATOR(); 
 
                 }
                 break;
             case 21 :
-                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:137: RULE_ARROW
+                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:138: RULE_ARROW
                 {
                 mRULE_ARROW(); 
 
                 }
                 break;
             case 22 :
-                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:148: RULE_BOOLEAN
+                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:149: RULE_BOOLEAN
                 {
                 mRULE_BOOLEAN(); 
 
                 }
                 break;
             case 23 :
-                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:161: RULE_NULL
+                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:162: RULE_NULL
                 {
                 mRULE_NULL(); 
 
                 }
                 break;
             case 24 :
-                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:171: RULE_ID
+                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:172: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
             case 25 :
-                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:179: RULE_NATURAL
+                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:180: RULE_NATURAL
                 {
                 mRULE_NATURAL(); 
 
                 }
                 break;
             case 26 :
-                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:192: RULE_STRING
+                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:193: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
             case 27 :
-                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:204: RULE_ML_COMMENT
+                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:205: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
             case 28 :
-                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:220: RULE_SL_COMMENT
+                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:221: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
             case 29 :
-                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:236: RULE_WS
+                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:237: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
             case 30 :
-                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:244: RULE_ANY_OTHER
+                // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:1:245: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1477,154 +1511,230 @@ public class InternalStatemodelLexer extends Lexer {
     }
 
 
+    protected DFA1 dfa1 = new DFA1(this);
     protected DFA15 dfa15 = new DFA15(this);
+    static final String DFA1_eotS =
+        "\3\uffff\1\16\22\uffff";
+    static final String DFA1_eofS =
+        "\26\uffff";
+    static final String DFA1_minS =
+        "\1\41\1\53\1\55\2\75\1\74\1\uffff\1\75\16\uffff";
+    static final String DFA1_maxS =
+        "\1\174\3\75\2\76\1\uffff\1\174\16\uffff";
+    static final String DFA1_acceptS =
+        "\6\uffff\1\6\1\uffff\1\11\1\1\1\13\1\2\1\12\1\3\1\14\1\4\1\15\1"+
+        "\5\1\7\1\16\1\10\1\17";
+    static final String DFA1_specialS =
+        "\26\uffff}>";
+    static final String[] DFA1_transitionS = {
+            "\1\6\4\uffff\1\10\4\uffff\1\1\1\uffff\1\2\16\uffff\1\5\1\3"+
+            "\1\4\75\uffff\1\7",
+            "\1\11\21\uffff\1\12",
+            "\1\13\17\uffff\1\14",
+            "\1\15",
+            "\1\17\1\20",
+            "\1\23\1\21\1\22",
+            "",
+            "\1\25\76\uffff\1\24",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA1_eot = DFA.unpackEncodedString(DFA1_eotS);
+    static final short[] DFA1_eof = DFA.unpackEncodedString(DFA1_eofS);
+    static final char[] DFA1_min = DFA.unpackEncodedStringToUnsignedChars(DFA1_minS);
+    static final char[] DFA1_max = DFA.unpackEncodedStringToUnsignedChars(DFA1_maxS);
+    static final short[] DFA1_accept = DFA.unpackEncodedString(DFA1_acceptS);
+    static final short[] DFA1_special = DFA.unpackEncodedString(DFA1_specialS);
+    static final short[][] DFA1_transition;
+
+    static {
+        int numStates = DFA1_transitionS.length;
+        DFA1_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA1_transition[i] = DFA.unpackEncodedString(DFA1_transitionS[i]);
+        }
+    }
+
+    class DFA1 extends DFA {
+
+        public DFA1(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 1;
+            this.eot = DFA1_eot;
+            this.eof = DFA1_eof;
+            this.min = DFA1_min;
+            this.max = DFA1_max;
+            this.accept = DFA1_accept;
+            this.special = DFA1_special;
+            this.transition = DFA1_transition;
+        }
+        public String getDescription() {
+            return "1214:17: ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' )";
+        }
+    }
     static final String DFA15_eotS =
-        "\1\uffff\2\40\1\43\2\40\4\uffff\1\55\1\uffff\1\57\1\60\1\61\1\40"+
-        "\3\34\3\40\2\uffff\3\34\2\uffff\1\40\1\76\1\40\1\uffff\2\40\1\uffff"+
-        "\1\102\2\40\13\uffff\6\40\5\uffff\1\40\1\uffff\2\40\1\116\1\uffff"+
-        "\6\40\1\125\4\40\1\uffff\1\132\1\133\2\40\1\54\1\125\1\uffff\1\125"+
-        "\2\40\1\141\2\uffff\1\142\1\133\1\143\2\40\3\uffff\1\146\1\40\1"+
-        "\uffff\4\40\1\154\1\uffff";
+        "\1\uffff\2\42\1\45\2\42\4\uffff\1\57\1\uffff\1\61\1\62\1\63\1\42"+
+        "\5\36\3\42\2\uffff\3\36\2\uffff\1\42\1\100\1\42\1\uffff\2\42\1\uffff"+
+        "\1\104\2\42\13\uffff\6\42\5\uffff\1\42\1\uffff\2\42\1\120\1\uffff"+
+        "\6\42\1\127\4\42\1\uffff\1\134\1\135\2\42\1\56\1\127\1\uffff\1\127"+
+        "\2\42\1\143\2\uffff\1\144\1\135\1\145\2\42\3\uffff\1\150\1\42\1"+
+        "\uffff\4\42\1\156\1\uffff";
     static final String DFA15_eofS =
-        "\155\uffff";
+        "\157\uffff";
     static final String DFA15_minS =
         "\1\0\1\146\1\164\1\60\1\157\1\150\4\uffff\1\75\1\uffff\1\55\1\60"+
-        "\1\53\1\141\3\75\1\157\1\151\1\125\2\uffff\2\0\1\52\2\uffff\1\160"+
-        "\1\60\1\151\1\uffff\1\141\1\144\1\uffff\1\60\1\145\1\165\13\uffff"+
-        "\1\156\1\154\1\164\2\154\1\114\5\uffff\1\157\1\uffff\2\164\1\60"+
-        "\1\uffff\1\156\1\145\1\141\1\163\1\157\1\154\1\60\1\114\1\162\1"+
-        "\151\1\145\1\uffff\2\60\1\154\1\145\2\60\1\uffff\1\60\1\164\1\141"+
-        "\1\60\2\uffff\3\60\1\154\1\141\3\uffff\1\60\1\143\1\uffff\1\150"+
-        "\1\151\1\156\1\145\1\60\1\uffff";
+        "\1\53\1\141\1\75\1\74\2\75\1\46\1\157\1\151\1\125\2\uffff\2\0\1"+
+        "\52\2\uffff\1\160\1\60\1\151\1\uffff\1\141\1\144\1\uffff\1\60\1"+
+        "\145\1\165\13\uffff\1\156\1\154\1\164\2\154\1\114\5\uffff\1\157"+
+        "\1\uffff\2\164\1\60\1\uffff\1\156\1\145\1\141\1\163\1\157\1\154"+
+        "\1\60\1\114\1\162\1\151\1\145\1\uffff\2\60\1\154\1\145\2\60\1\uffff"+
+        "\1\60\1\164\1\141\1\60\2\uffff\3\60\1\154\1\141\3\uffff\1\60\1\143"+
+        "\1\uffff\1\150\1\151\1\156\1\145\1\60\1\uffff";
     static final String DFA15_maxS =
         "\1\uffff\1\156\1\164\1\172\1\157\1\162\4\uffff\1\76\1\uffff\1\76"+
-        "\1\172\1\53\1\151\3\75\1\157\1\165\1\125\2\uffff\2\uffff\1\57\2"+
-        "\uffff\1\160\1\172\1\151\1\uffff\1\141\1\144\1\uffff\1\172\1\145"+
-        "\1\165\13\uffff\1\156\1\154\1\164\2\154\1\114\5\uffff\1\157\1\uffff"+
-        "\2\164\1\172\1\uffff\1\156\1\145\1\141\1\163\1\157\1\154\1\172\1"+
-        "\114\1\162\1\151\1\145\1\uffff\2\172\1\154\1\145\2\172\1\uffff\1"+
-        "\172\1\164\1\141\1\172\2\uffff\3\172\1\154\1\141\3\uffff\1\172\1"+
-        "\143\1\uffff\1\150\1\151\1\156\1\145\1\172\1\uffff";
+        "\1\172\1\75\1\151\2\76\1\75\1\174\1\46\1\157\1\165\1\125\2\uffff"+
+        "\2\uffff\1\57\2\uffff\1\160\1\172\1\151\1\uffff\1\141\1\144\1\uffff"+
+        "\1\172\1\145\1\165\13\uffff\1\156\1\154\1\164\2\154\1\114\5\uffff"+
+        "\1\157\1\uffff\2\164\1\172\1\uffff\1\156\1\145\1\141\1\163\1\157"+
+        "\1\154\1\172\1\114\1\162\1\151\1\145\1\uffff\2\172\1\154\1\145\2"+
+        "\172\1\uffff\1\172\1\164\1\141\1\172\2\uffff\3\172\1\154\1\141\3"+
+        "\uffff\1\172\1\143\1\uffff\1\150\1\151\1\156\1\145\1\172\1\uffff";
     static final String DFA15_acceptS =
-        "\6\uffff\1\7\1\10\1\11\1\12\1\uffff\1\14\12\uffff\1\30\1\31\3\uffff"+
+        "\6\uffff\1\7\1\10\1\11\1\12\1\uffff\1\14\14\uffff\1\30\1\31\3\uffff"+
         "\1\35\1\36\3\uffff\1\30\2\uffff\1\16\3\uffff\1\7\1\10\1\11\1\12"+
         "\1\24\1\25\1\13\1\14\1\15\1\17\1\20\6\uffff\1\31\1\32\1\33\1\34"+
         "\1\35\1\uffff\1\5\3\uffff\1\4\13\uffff\1\3\6\uffff\1\27\4\uffff"+
         "\1\6\1\26\5\uffff\1\21\1\23\1\1\2\uffff\1\22\5\uffff\1\2";
     static final String DFA15_specialS =
-        "\1\2\27\uffff\1\1\1\0\123\uffff}>";
+        "\1\1\31\uffff\1\0\1\2\123\uffff}>";
     static final String[] DFA15_transitionS = {
-            "\11\34\2\33\2\34\1\33\22\34\1\33\1\22\1\30\4\34\1\31\1\7\1"+
-            "\11\1\34\1\16\1\10\1\14\1\13\1\32\12\27\2\34\1\21\1\12\1\20"+
-            "\1\34\1\6\4\26\1\15\10\26\1\25\14\26\4\34\1\26\1\34\3\26\1\4"+
-            "\1\3\1\17\1\23\1\26\1\1\4\26\1\24\4\26\1\2\1\5\6\26\uff85\34",
-            "\1\36\6\uffff\1\35\1\37",
-            "\1\41",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\15\40\1\42\14\40",
-            "\1\44",
-            "\1\45\11\uffff\1\46",
+            "\11\36\2\35\2\36\1\35\22\36\1\35\1\22\1\32\3\36\1\24\1\33\1"+
+            "\7\1\11\1\36\1\16\1\10\1\14\1\13\1\34\12\31\2\36\1\21\1\12\1"+
+            "\20\1\36\1\6\4\30\1\15\10\30\1\27\14\30\4\36\1\30\1\36\3\30"+
+            "\1\4\1\3\1\17\1\25\1\30\1\1\4\30\1\26\4\30\1\2\1\5\6\30\1\36"+
+            "\1\23\uff83\36",
+            "\1\40\6\uffff\1\37\1\41",
+            "\1\43",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\15\42\1\44\14\42",
+            "\1\46",
+            "\1\47\11\uffff\1\50",
             "",
             "",
             "",
             "",
-            "\1\53\1\54",
+            "\1\55\1\56",
             "",
-            "\1\53\20\uffff\1\54",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\53",
-            "\1\63\7\uffff\1\62",
-            "\1\53",
-            "\1\53",
-            "\1\53",
-            "\1\64",
-            "\1\66\13\uffff\1\65",
-            "\1\67",
-            "",
-            "",
-            "\0\71",
-            "\0\71",
-            "\1\72\4\uffff\1\73",
+            "\1\55\17\uffff\1\55\1\56",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\55\21\uffff\1\55",
+            "\1\65\7\uffff\1\64",
+            "\2\55",
+            "\3\55",
+            "\1\55",
+            "\1\55\76\uffff\1\55",
+            "\1\55",
+            "\1\66",
+            "\1\70\13\uffff\1\67",
+            "\1\71",
             "",
             "",
-            "\1\75",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\0\73",
+            "\0\73",
+            "\1\74\4\uffff\1\75",
+            "",
+            "",
             "\1\77",
-            "",
-            "\1\100",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\101",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\102",
             "\1\103",
-            "\1\104",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\105",
             "\1\106",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\107",
             "\1\110",
             "\1\111",
             "\1\112",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\113",
-            "",
             "\1\114",
-            "\1\115",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "",
+            "",
+            "",
+            "",
+            "",
+            "\1\115",
+            "",
+            "\1\116",
             "\1\117",
-            "\1\120",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "",
             "\1\121",
             "\1\122",
             "\1\123",
             "\1\124",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\125",
             "\1\126",
-            "\1\127",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\130",
             "\1\131",
+            "\1\132",
+            "\1\133",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\134",
-            "\1\135",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\136",
             "\1\137",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\14\40\1\140\15\40",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\140",
+            "\1\141",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\14\42\1\142\15\42",
             "",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\144",
-            "\1\145",
-            "",
-            "",
-            "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\146",
             "\1\147",
             "",
-            "\1\150",
+            "",
+            "",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\151",
+            "",
             "\1\152",
             "\1\153",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\154",
+            "\1\155",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             ""
     };
 
@@ -1658,33 +1768,23 @@ public class InternalStatemodelLexer extends Lexer {
             this.transition = DFA15_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | RULE_LITERAL | RULE_ARROW | RULE_BOOLEAN | RULE_NULL | RULE_ID | RULE_NATURAL | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | RULE_OPERATOR | RULE_ARROW | RULE_BOOLEAN | RULE_NULL | RULE_ID | RULE_NATURAL | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA15_25 = input.LA(1);
+                        int LA15_26 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA15_25>='\u0000' && LA15_25<='\uFFFF')) ) {s = 57;}
+                        if ( ((LA15_26>='\u0000' && LA15_26<='\uFFFF')) ) {s = 59;}
 
-                        else s = 28;
+                        else s = 30;
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA15_24 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA15_24>='\u0000' && LA15_24<='\uFFFF')) ) {s = 57;}
-
-                        else s = 28;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA15_0 = input.LA(1);
 
                         s = -1;
@@ -1724,25 +1824,39 @@ public class InternalStatemodelLexer extends Lexer {
 
                         else if ( (LA15_0=='!') ) {s = 18;}
 
-                        else if ( (LA15_0=='g') ) {s = 19;}
+                        else if ( (LA15_0=='|') ) {s = 19;}
 
-                        else if ( (LA15_0=='n') ) {s = 20;}
+                        else if ( (LA15_0=='&') ) {s = 20;}
 
-                        else if ( (LA15_0=='N') ) {s = 21;}
+                        else if ( (LA15_0=='g') ) {s = 21;}
 
-                        else if ( ((LA15_0>='A' && LA15_0<='D')||(LA15_0>='F' && LA15_0<='M')||(LA15_0>='O' && LA15_0<='Z')||LA15_0=='_'||(LA15_0>='a' && LA15_0<='c')||LA15_0=='h'||(LA15_0>='j' && LA15_0<='m')||(LA15_0>='o' && LA15_0<='r')||(LA15_0>='u' && LA15_0<='z')) ) {s = 22;}
+                        else if ( (LA15_0=='n') ) {s = 22;}
 
-                        else if ( ((LA15_0>='0' && LA15_0<='9')) ) {s = 23;}
+                        else if ( (LA15_0=='N') ) {s = 23;}
 
-                        else if ( (LA15_0=='\"') ) {s = 24;}
+                        else if ( ((LA15_0>='A' && LA15_0<='D')||(LA15_0>='F' && LA15_0<='M')||(LA15_0>='O' && LA15_0<='Z')||LA15_0=='_'||(LA15_0>='a' && LA15_0<='c')||LA15_0=='h'||(LA15_0>='j' && LA15_0<='m')||(LA15_0>='o' && LA15_0<='r')||(LA15_0>='u' && LA15_0<='z')) ) {s = 24;}
 
-                        else if ( (LA15_0=='\'') ) {s = 25;}
+                        else if ( ((LA15_0>='0' && LA15_0<='9')) ) {s = 25;}
 
-                        else if ( (LA15_0=='/') ) {s = 26;}
+                        else if ( (LA15_0=='\"') ) {s = 26;}
 
-                        else if ( ((LA15_0>='\t' && LA15_0<='\n')||LA15_0=='\r'||LA15_0==' ') ) {s = 27;}
+                        else if ( (LA15_0=='\'') ) {s = 27;}
 
-                        else if ( ((LA15_0>='\u0000' && LA15_0<='\b')||(LA15_0>='\u000B' && LA15_0<='\f')||(LA15_0>='\u000E' && LA15_0<='\u001F')||(LA15_0>='#' && LA15_0<='&')||LA15_0=='*'||(LA15_0>=':' && LA15_0<=';')||LA15_0=='?'||(LA15_0>='[' && LA15_0<='^')||LA15_0=='`'||(LA15_0>='{' && LA15_0<='\uFFFF')) ) {s = 28;}
+                        else if ( (LA15_0=='/') ) {s = 28;}
+
+                        else if ( ((LA15_0>='\t' && LA15_0<='\n')||LA15_0=='\r'||LA15_0==' ') ) {s = 29;}
+
+                        else if ( ((LA15_0>='\u0000' && LA15_0<='\b')||(LA15_0>='\u000B' && LA15_0<='\f')||(LA15_0>='\u000E' && LA15_0<='\u001F')||(LA15_0>='#' && LA15_0<='%')||LA15_0=='*'||(LA15_0>=':' && LA15_0<=';')||LA15_0=='?'||(LA15_0>='[' && LA15_0<='^')||LA15_0=='`'||LA15_0=='{'||(LA15_0>='}' && LA15_0<='\uFFFF')) ) {s = 30;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA15_27 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA15_27>='\u0000' && LA15_27<='\uFFFF')) ) {s = 59;}
+
+                        else s = 30;
 
                         if ( s>=0 ) return s;
                         break;

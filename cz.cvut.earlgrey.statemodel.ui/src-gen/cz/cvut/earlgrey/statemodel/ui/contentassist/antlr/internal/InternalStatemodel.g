@@ -639,9 +639,9 @@ rule__ValueWithSpaces__Alternatives
     }
 :
 (
-{ before(grammarAccess.getValueWithSpacesAccess().getLITERALTerminalRuleCall_0()); }
-	RULE_LITERAL
-{ after(grammarAccess.getValueWithSpacesAccess().getLITERALTerminalRuleCall_0()); }
+{ before(grammarAccess.getValueWithSpacesAccess().getOPERATORTerminalRuleCall_0()); }
+	RULE_OPERATOR
+{ after(grammarAccess.getValueWithSpacesAccess().getOPERATORTerminalRuleCall_0()); }
 )
 
     |(
@@ -2795,7 +2795,7 @@ finally {
 }
 
 
-RULE_LITERAL : ('++'|'--'|'=='|'>='|'<='|'!=');
+RULE_OPERATOR : ('++'|'--'|'=='|'>='|'<='|'!='|'<>'|'||'|'&&'|'-='|'+='|'='|'>>'|'<<'|'|=');
 
 RULE_ARROW : ('->'|'goto'|'=>');
 

@@ -306,20 +306,20 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	public class ValueWithSpacesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ValueWithSpaces");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cLITERALTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cOPERATORTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cValueParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cANY_OTHERTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cWSTerminalRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//ValueWithSpaces hidden():
-		//	(LITERAL | Value | ANY_OTHER | WS)*;
+		//	(OPERATOR | Value | ANY_OTHER | WS)*;
 		public ParserRule getRule() { return rule; }
 
-		//(LITERAL | Value | ANY_OTHER | WS)*
+		//(OPERATOR | Value | ANY_OTHER | WS)*
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//LITERAL
-		public RuleCall getLITERALTerminalRuleCall_0() { return cLITERALTerminalRuleCall_0; }
+		//OPERATOR
+		public RuleCall getOPERATORTerminalRuleCall_0() { return cOPERATORTerminalRuleCall_0; }
 
 		//Value
 		public RuleCall getValueParserRuleCall_1() { return cValueParserRuleCall_1; }
@@ -376,7 +376,7 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	private ActivityElements pActivity;
 	private TransitionBlockElements pTransitionBlock;
 	private TransitionElements pTransition;
-	private TerminalRule tLITERAL;
+	private TerminalRule tOPERATOR;
 	private ValueWithSpacesElements pValueWithSpaces;
 	private StateTypeElements unknownRuleStateType;
 	private TerminalRule tARROW;
@@ -518,14 +518,16 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	//
 	////;
 	//
-	//terminal LITERAL:
-	//	"++" | "--" | "==" | ">=" | "<=" | "!=";
-	public TerminalRule getLITERALRule() {
-		return (tLITERAL != null) ? tLITERAL : (tLITERAL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "LITERAL"));
+	//// FIXME: http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B
+	//
+	//terminal OPERATOR:
+	//	"++" | "--" | "==" | ">=" | "<=" | "!=" | "<>" | "||" | "&&" | "-=" | "+=" | "=" | ">>" | "<<" | "|=";
+	public TerminalRule getOPERATORRule() {
+		return (tOPERATOR != null) ? tOPERATOR : (tOPERATOR = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "OPERATOR"));
 	} 
 
 	//ValueWithSpaces hidden():
-	//	(LITERAL | Value | ANY_OTHER | WS)*;
+	//	(OPERATOR | Value | ANY_OTHER | WS)*;
 	public ValueWithSpacesElements getValueWithSpacesAccess() {
 		return (pValueWithSpaces != null) ? pValueWithSpaces : (pValueWithSpaces = new ValueWithSpacesElements());
 	}

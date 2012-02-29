@@ -125,7 +125,7 @@
         </elements>
       </alternatives>
     </rules>
-    <rules xsi:type="xtext:TerminalRule" name="LITERAL">
+    <rules xsi:type="xtext:TerminalRule" name="OPERATOR">
       <type metamodel="/0/@metamodelDeclarations.0">
         <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </type>
@@ -136,6 +136,15 @@
         <elements xsi:type="xtext:Keyword" value=">="/>
         <elements xsi:type="xtext:Keyword" value="&lt;="/>
         <elements xsi:type="xtext:Keyword" value="!="/>
+        <elements xsi:type="xtext:Keyword" value="&lt;>"/>
+        <elements xsi:type="xtext:Keyword" value="||"/>
+        <elements xsi:type="xtext:Keyword" value="&amp;&amp;"/>
+        <elements xsi:type="xtext:Keyword" value="-="/>
+        <elements xsi:type="xtext:Keyword" value="+="/>
+        <elements xsi:type="xtext:Keyword" value="="/>
+        <elements xsi:type="xtext:Keyword" value=">>"/>
+        <elements xsi:type="xtext:Keyword" value="&lt;&lt;"/>
+        <elements xsi:type="xtext:Keyword" value="|="/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="ValueWithSpaces" definesHiddenTokens="true">

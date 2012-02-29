@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalStatemodelParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ARROW", "RULE_LITERAL", "RULE_ANY_OTHER", "RULE_WS", "RULE_BOOLEAN", "RULE_NULL", "RULE_ID", "RULE_NATURAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "'import'", "'statemachine'", "'end'", "'do'", "'if'", "'then'", "'@'", "'('", "','", "')'", "'='", "'.'", "'-'", "'e'", "'E'", "'+'", "'state'", "'initial'", "'final'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ARROW", "RULE_OPERATOR", "RULE_ANY_OTHER", "RULE_WS", "RULE_BOOLEAN", "RULE_NULL", "RULE_ID", "RULE_NATURAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "'import'", "'statemachine'", "'end'", "'do'", "'if'", "'then'", "'@'", "'('", "','", "')'", "'='", "'.'", "'-'", "'e'", "'E'", "'+'", "'state'", "'initial'", "'final'"
     };
     public static final int RULE_BOOLEAN=9;
     public static final int RULE_ID=11;
@@ -54,8 +54,8 @@ public class InternalStatemodelParser extends AbstractInternalAntlrParser {
     public static final int T__18=18;
     public static final int T__17=17;
     public static final int RULE_ARROW=5;
+    public static final int RULE_OPERATOR=6;
     public static final int RULE_WS=8;
-    public static final int RULE_LITERAL=6;
 
     // delegates
     // delegators
@@ -975,7 +975,7 @@ public class InternalStatemodelParser extends AbstractInternalAntlrParser {
                 int alt7=2;
                 int LA7_0 = input.LA(1);
 
-                if ( (LA7_0==RULE_STRING||(LA7_0>=RULE_LITERAL && LA7_0<=RULE_NATURAL)||LA7_0==18||LA7_0==21||LA7_0==27||(LA7_0>=31 && LA7_0<=33)) ) {
+                if ( (LA7_0==RULE_STRING||(LA7_0>=RULE_OPERATOR && LA7_0<=RULE_NATURAL)||LA7_0==18||LA7_0==21||LA7_0==27||(LA7_0>=31 && LA7_0<=33)) ) {
                     alt7=1;
                 }
 
@@ -1110,7 +1110,7 @@ public class InternalStatemodelParser extends AbstractInternalAntlrParser {
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==RULE_STRING||(LA8_0>=RULE_LITERAL && LA8_0<=RULE_NATURAL)||LA8_0==18||LA8_0==27) ) {
+            if ( (LA8_0==RULE_STRING||(LA8_0>=RULE_OPERATOR && LA8_0<=RULE_NATURAL)||LA8_0==18||LA8_0==27) ) {
                 alt8=1;
             }
             else if ( (LA8_0==21||(LA8_0>=31 && LA8_0<=33)) ) {
@@ -1681,11 +1681,11 @@ public class InternalStatemodelParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleValueWithSpaces"
-    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:626:1: ruleValueWithSpaces returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_LITERAL_0= RULE_LITERAL | this_Value_1= ruleValue | this_ANY_OTHER_2= RULE_ANY_OTHER | this_WS_3= RULE_WS )* ;
+    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:626:1: ruleValueWithSpaces returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_OPERATOR_0= RULE_OPERATOR | this_Value_1= ruleValue | this_ANY_OTHER_2= RULE_ANY_OTHER | this_WS_3= RULE_WS )* ;
     public final AntlrDatatypeRuleToken ruleValueWithSpaces() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
-        Token this_LITERAL_0=null;
+        Token this_OPERATOR_0=null;
         Token this_ANY_OTHER_2=null;
         Token this_WS_3=null;
         AntlrDatatypeRuleToken this_Value_1 = null;
@@ -1695,15 +1695,15 @@ public class InternalStatemodelParser extends AbstractInternalAntlrParser {
         		HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:630:28: ( (this_LITERAL_0= RULE_LITERAL | this_Value_1= ruleValue | this_ANY_OTHER_2= RULE_ANY_OTHER | this_WS_3= RULE_WS )* )
-            // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:631:1: (this_LITERAL_0= RULE_LITERAL | this_Value_1= ruleValue | this_ANY_OTHER_2= RULE_ANY_OTHER | this_WS_3= RULE_WS )*
+            // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:630:28: ( (this_OPERATOR_0= RULE_OPERATOR | this_Value_1= ruleValue | this_ANY_OTHER_2= RULE_ANY_OTHER | this_WS_3= RULE_WS )* )
+            // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:631:1: (this_OPERATOR_0= RULE_OPERATOR | this_Value_1= ruleValue | this_ANY_OTHER_2= RULE_ANY_OTHER | this_WS_3= RULE_WS )*
             {
-            // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:631:1: (this_LITERAL_0= RULE_LITERAL | this_Value_1= ruleValue | this_ANY_OTHER_2= RULE_ANY_OTHER | this_WS_3= RULE_WS )*
+            // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:631:1: (this_OPERATOR_0= RULE_OPERATOR | this_Value_1= ruleValue | this_ANY_OTHER_2= RULE_ANY_OTHER | this_WS_3= RULE_WS )*
             loop12:
             do {
                 int alt12=5;
                 switch ( input.LA(1) ) {
-                case RULE_LITERAL:
+                case RULE_OPERATOR:
                     {
                     alt12=1;
                     }
@@ -1733,17 +1733,17 @@ public class InternalStatemodelParser extends AbstractInternalAntlrParser {
 
                 switch (alt12) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:631:6: this_LITERAL_0= RULE_LITERAL
+            	    // ../cz.cvut.earlgrey.statemodel/src-gen/cz/cvut/earlgrey/statemodel/parser/antlr/internal/InternalStatemodel.g:631:6: this_OPERATOR_0= RULE_OPERATOR
             	    {
-            	    this_LITERAL_0=(Token)match(input,RULE_LITERAL,FOLLOW_RULE_LITERAL_in_ruleValueWithSpaces1302); if (state.failed) return current;
+            	    this_OPERATOR_0=(Token)match(input,RULE_OPERATOR,FOLLOW_RULE_OPERATOR_in_ruleValueWithSpaces1302); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      		current.merge(this_LITERAL_0);
+            	      		current.merge(this_OPERATOR_0);
             	          
             	    }
             	    if ( state.backtracking==0 ) {
             	       
-            	          newLeafNode(this_LITERAL_0, grammarAccess.getValueWithSpacesAccess().getLITERALTerminalRuleCall_0()); 
+            	          newLeafNode(this_OPERATOR_0, grammarAccess.getValueWithSpacesAccess().getOPERATORTerminalRuleCall_0()); 
             	          
             	    }
 
@@ -3885,7 +3885,7 @@ public class InternalStatemodelParser extends AbstractInternalAntlrParser {
                         int index11_0 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA11_0==RULE_LITERAL) && (synpred13_InternalStatemodel())) {s = 1;}
+                        if ( (LA11_0==RULE_OPERATOR) && (synpred13_InternalStatemodel())) {s = 1;}
 
                         else if ( (LA11_0==27) && (synpred13_InternalStatemodel())) {s = 2;}
 
@@ -4034,7 +4034,7 @@ public class InternalStatemodelParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleCompositeID_in_ruleTransition1204 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleValueWithSpaces_in_entryRuleValueWithSpaces1247 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleValueWithSpaces1258 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LITERAL_in_ruleValueWithSpaces1302 = new BitSet(new long[]{0x0000000008001FD2L});
+    public static final BitSet FOLLOW_RULE_OPERATOR_in_ruleValueWithSpaces1302 = new BitSet(new long[]{0x0000000008001FD2L});
     public static final BitSet FOLLOW_ruleValue_in_ruleValueWithSpaces1335 = new BitSet(new long[]{0x0000000008001FD2L});
     public static final BitSet FOLLOW_RULE_ANY_OTHER_in_ruleValueWithSpaces1361 = new BitSet(new long[]{0x0000000008001FD2L});
     public static final BitSet FOLLOW_RULE_WS_in_ruleValueWithSpaces1387 = new BitSet(new long[]{0x0000000008001FD2L});

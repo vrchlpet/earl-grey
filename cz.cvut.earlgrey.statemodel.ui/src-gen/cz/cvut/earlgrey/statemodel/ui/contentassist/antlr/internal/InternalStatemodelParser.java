@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalStatemodelParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_LITERAL", "RULE_ANY_OTHER", "RULE_WS", "RULE_STRING", "RULE_BOOLEAN", "RULE_NULL", "RULE_ARROW", "RULE_ID", "RULE_NATURAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "'e'", "'E'", "'+'", "'-'", "'state'", "'initial'", "'final'", "'import'", "'statemachine'", "'end'", "'do'", "'if'", "'then'", "'@'", "'('", "')'", "','", "'='", "'.'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_OPERATOR", "RULE_ANY_OTHER", "RULE_WS", "RULE_STRING", "RULE_BOOLEAN", "RULE_NULL", "RULE_ARROW", "RULE_ID", "RULE_NATURAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "'e'", "'E'", "'+'", "'-'", "'state'", "'initial'", "'final'", "'import'", "'statemachine'", "'end'", "'do'", "'if'", "'then'", "'@'", "'('", "')'", "','", "'='", "'.'"
     };
     public static final int RULE_BOOLEAN=8;
     public static final int RULE_ID=11;
@@ -54,8 +54,8 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
     public static final int T__18=18;
     public static final int T__17=17;
     public static final int RULE_ARROW=10;
+    public static final int RULE_OPERATOR=4;
     public static final int RULE_WS=6;
-    public static final int RULE_LITERAL=4;
 
     // delegates
     // delegators
@@ -837,7 +837,7 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( ((LA1_0>=RULE_LITERAL && LA1_0<=RULE_NULL)||(LA1_0>=RULE_ID && LA1_0<=RULE_NATURAL)||LA1_0==18) ) {
+                if ( ((LA1_0>=RULE_OPERATOR && LA1_0<=RULE_NULL)||(LA1_0>=RULE_ID && LA1_0<=RULE_NATURAL)||LA1_0==18) ) {
                     alt1=1;
                 }
 
@@ -1786,7 +1786,7 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==EOF||(LA3_0>=RULE_LITERAL && LA3_0<=RULE_NATURAL)||LA3_0==18||LA3_0==25||LA3_0==27) ) {
+            if ( (LA3_0==EOF||(LA3_0>=RULE_OPERATOR && LA3_0<=RULE_NATURAL)||LA3_0==18||LA3_0==25||LA3_0==27) ) {
                 alt3=1;
             }
             else if ( ((LA3_0>=19 && LA3_0<=21)||LA3_0==28) ) {
@@ -1864,16 +1864,16 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ValueWithSpaces__Alternatives"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:636:1: rule__ValueWithSpaces__Alternatives : ( ( RULE_LITERAL ) | ( ruleValue ) | ( RULE_ANY_OTHER ) | ( RULE_WS ) );
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:636:1: rule__ValueWithSpaces__Alternatives : ( ( RULE_OPERATOR ) | ( ruleValue ) | ( RULE_ANY_OTHER ) | ( RULE_WS ) );
     public final void rule__ValueWithSpaces__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:640:1: ( ( RULE_LITERAL ) | ( ruleValue ) | ( RULE_ANY_OTHER ) | ( RULE_WS ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:640:1: ( ( RULE_OPERATOR ) | ( ruleValue ) | ( RULE_ANY_OTHER ) | ( RULE_WS ) )
             int alt4=4;
             switch ( input.LA(1) ) {
-            case RULE_LITERAL:
+            case RULE_OPERATOR:
                 {
                 alt4=1;
                 }
@@ -1908,17 +1908,17 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
             switch (alt4) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:641:1: ( RULE_LITERAL )
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:641:1: ( RULE_OPERATOR )
                     {
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:641:1: ( RULE_LITERAL )
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:642:1: RULE_LITERAL
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:641:1: ( RULE_OPERATOR )
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:642:1: RULE_OPERATOR
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getValueWithSpacesAccess().getLITERALTerminalRuleCall_0()); 
+                       before(grammarAccess.getValueWithSpacesAccess().getOPERATORTerminalRuleCall_0()); 
                     }
-                    match(input,RULE_LITERAL,FOLLOW_RULE_LITERAL_in_rule__ValueWithSpaces__Alternatives1300); if (state.failed) return ;
+                    match(input,RULE_OPERATOR,FOLLOW_RULE_OPERATOR_in_rule__ValueWithSpaces__Alternatives1300); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getValueWithSpacesAccess().getLITERALTerminalRuleCall_0()); 
+                       after(grammarAccess.getValueWithSpacesAccess().getOPERATORTerminalRuleCall_0()); 
                     }
 
                     }
@@ -2095,7 +2095,7 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
                 if ( (LA6_1==RULE_NATURAL) ) {
                     int LA6_2 = input.LA(3);
 
-                    if ( (LA6_2==EOF||(LA6_2>=RULE_LITERAL && LA6_2<=RULE_NATURAL)||LA6_2==18||LA6_2==25||LA6_2==27||(LA6_2>=30 && LA6_2<=31)) ) {
+                    if ( (LA6_2==EOF||(LA6_2>=RULE_OPERATOR && LA6_2<=RULE_NATURAL)||LA6_2==18||LA6_2==25||LA6_2==27||(LA6_2>=30 && LA6_2<=31)) ) {
                         alt6=1;
                     }
                     else if ( (LA6_2==33) ) {
@@ -2122,7 +2122,7 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
                 {
                 int LA6_2 = input.LA(2);
 
-                if ( (LA6_2==EOF||(LA6_2>=RULE_LITERAL && LA6_2<=RULE_NATURAL)||LA6_2==18||LA6_2==25||LA6_2==27||(LA6_2>=30 && LA6_2<=31)) ) {
+                if ( (LA6_2==EOF||(LA6_2>=RULE_OPERATOR && LA6_2<=RULE_NATURAL)||LA6_2==18||LA6_2==25||LA6_2==27||(LA6_2>=30 && LA6_2<=31)) ) {
                     alt6=1;
                 }
                 else if ( (LA6_2==33) ) {
@@ -3858,7 +3858,7 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
                 int alt16=2;
                 int LA16_0 = input.LA(1);
 
-                if ( (LA16_0==EOF||(LA16_0>=RULE_LITERAL && LA16_0<=RULE_NATURAL)||(LA16_0>=18 && LA16_0<=21)||LA16_0==25||(LA16_0>=27 && LA16_0<=28)) ) {
+                if ( (LA16_0==EOF||(LA16_0>=RULE_OPERATOR && LA16_0<=RULE_NATURAL)||(LA16_0>=18 && LA16_0<=21)||LA16_0==25||(LA16_0>=27 && LA16_0<=28)) ) {
                     alt16=1;
                 }
 
@@ -4233,7 +4233,7 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
                 int alt17=2;
                 int LA17_0 = input.LA(1);
 
-                if ( (LA17_0==EOF||(LA17_0>=RULE_LITERAL && LA17_0<=RULE_NATURAL)||LA17_0==18||(LA17_0>=25 && LA17_0<=27)) ) {
+                if ( (LA17_0==EOF||(LA17_0>=RULE_OPERATOR && LA17_0<=RULE_NATURAL)||LA17_0==18||(LA17_0>=25 && LA17_0<=27)) ) {
                     alt17=1;
                 }
 
@@ -4515,7 +4515,7 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
             int alt19=2;
             int LA19_0 = input.LA(1);
 
-            if ( ((LA19_0>=RULE_LITERAL && LA19_0<=RULE_NULL)||(LA19_0>=RULE_ID && LA19_0<=RULE_NATURAL)||LA19_0==18) ) {
+            if ( ((LA19_0>=RULE_OPERATOR && LA19_0<=RULE_NULL)||(LA19_0>=RULE_ID && LA19_0<=RULE_NATURAL)||LA19_0==18) ) {
                 alt19=1;
             }
             else if ( (LA19_0==RULE_ARROW) ) {
@@ -8492,7 +8492,7 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_ruleState_in_rule__Element__Alternatives1219 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTransitionBlock_in_rule__Activity__Alternatives1251 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleState_in_rule__Activity__Alternatives1268 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LITERAL_in_rule__ValueWithSpaces__Alternatives1300 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_OPERATOR_in_rule__ValueWithSpaces__Alternatives1300 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleValue_in_rule__ValueWithSpaces__Alternatives1317 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ANY_OTHER_in_rule__ValueWithSpaces__Alternatives1334 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_WS_in_rule__ValueWithSpaces__Alternatives1351 = new BitSet(new long[]{0x0000000000000002L});

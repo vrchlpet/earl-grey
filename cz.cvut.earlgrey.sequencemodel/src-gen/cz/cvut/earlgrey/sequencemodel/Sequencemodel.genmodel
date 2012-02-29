@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/cz.cvut.earlgrey.sequencemodel/src-gen"
+    editDirectory="/cz.cvut.earlgrey.sequencemodel.edit/src" editorDirectory="/cz.cvut.earlgrey.sequencemodel.editor/src"
+    modelPluginID="cz.cvut.earlgrey.sequencemodel" forceOverwrite="true" modelName="Sequencemodel"
+    updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="cz.cvut.earlgrey.sequencemodel.edit"
+    editorPluginID="cz.cvut.earlgrey.sequencemodel.editor" usedGenPackages="../../../../../../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/Annotation.genmodel#//annotation">
+  <genPackages prefix="Sequencemodel" basePackage="cz.cvut.earlgrey.sequencemodel"
+      disposableProviderFactory="true" ecorePackage="Sequencemodel.ecore#/">
+    <genClasses ecoreClass="Sequencemodel.ecore#//Sequencemodel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Sequencemodel/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Sequencemodel/sequence"/>
+    </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Import/importURI"/>
+    </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//Sequence">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Sequence/annotation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Sequence/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Sequence/participant"/>
+    </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//Participant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Participant/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Participant/transition"/>
+    </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//Transition"/>
+    <genClasses ecoreClass="Sequencemodel.ecore#//TransitionBlock">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//TransitionBlock/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//TransitionBlock/transition"/>
+    </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//Message"/>
+    <genClasses ecoreClass="Sequencemodel.ecore#//CallMessage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//CallMessage/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//CallMessage/param"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//CallMessage/participant"/>
+    </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//NewMessage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//NewMessage/participant"/>
+    </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//ReturnMessage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//ReturnMessage/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//ReturnMessage/param"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

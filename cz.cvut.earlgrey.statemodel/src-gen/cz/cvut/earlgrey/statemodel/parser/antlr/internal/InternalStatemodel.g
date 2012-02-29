@@ -628,12 +628,12 @@ ruleValueWithSpaces returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRul
 		HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens();
     }
     @after { leaveRule(); }:
-(    this_LITERAL_0=RULE_LITERAL    {
-		$current.merge(this_LITERAL_0);
+(    this_OPERATOR_0=RULE_OPERATOR    {
+		$current.merge(this_OPERATOR_0);
     }
 
     { 
-    newLeafNode(this_LITERAL_0, grammarAccess.getValueWithSpacesAccess().getLITERALTerminalRuleCall_0()); 
+    newLeafNode(this_OPERATOR_0, grammarAccess.getValueWithSpacesAccess().getOPERATORTerminalRuleCall_0()); 
     }
 
     |
@@ -1211,7 +1211,7 @@ ruleStateType returns [Enumerator current=null]
 
 
 
-RULE_LITERAL : ('++'|'--'|'=='|'>='|'<='|'!=');
+RULE_OPERATOR : ('++'|'--'|'=='|'>='|'<='|'!='|'<>'|'||'|'&&'|'-='|'+='|'='|'>>'|'<<'|'|=');
 
 RULE_ARROW : ('->'|'goto'|'=>');
 

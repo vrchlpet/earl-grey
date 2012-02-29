@@ -65,12 +65,14 @@ Transition:
 //    value = ValueWithSpaces
 //;
 
-terminal LITERAL:
-    '++' | '--' | '==' | '>=' | '<=' | '!='
+// FIXME: http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B
+terminal OPERATOR:
+    '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+='
+    | '=' | '>>' | '<<' | '|='
 ;
 
 ValueWithSpaces hidden():
-    (LITERAL | Value | ANY_OTHER | WS)*
+    (OPERATOR | Value | ANY_OTHER | WS)*
 ;
 
 enum StateType:

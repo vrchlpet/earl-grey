@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+    <extension
+            point="org.eclipse.ui.editors">
+        <editor
+            class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+            contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
+            default="true"
+            extensions="ssd"
+            id="cz.cvut.earlgrey.sequencemodel.Sequencemodel"
+            name="Sequencemodel Editor">
+        </editor>
+    </extension>
+    <extension
+        point="org.eclipse.ui.handlers">
+        <handler
+            class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
+            commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
+            <activeWhen>
+                <reference
+                    definitionId="cz.cvut.earlgrey.sequencemodel.Sequencemodel.Editor.opened">
+                </reference>
+            </activeWhen>
+        </handler>
+        <handler
+            class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
+            commandId="cz.cvut.earlgrey.sequencemodel.Sequencemodel.validate">
+         <activeWhen>
+            <reference
+                    definitionId="cz.cvut.earlgrey.sequencemodel.Sequencemodel.Editor.opened">
+            </reference>
+         </activeWhen>
+      </handler>
+    </extension>
+    <extension point="org.eclipse.core.expressions.definitions">
+        <definition id="cz.cvut.earlgrey.sequencemodel.Sequencemodel.Editor.opened">
+            <and>
+                <reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
+                <with variable="activeEditor">
+                    <test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
+                        value="cz.cvut.earlgrey.sequencemodel.Sequencemodel" 
+                        forcePluginActivation="true"/>
+                </with>        
+            </and>
+        </definition>
+    </extension>
+    <extension
+            point="org.eclipse.ui.preferencePages">
+        <page
+            class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+            id="cz.cvut.earlgrey.sequencemodel.Sequencemodel"
+            name="Sequencemodel">
+            <keywordReference id="cz.cvut.earlgrey.sequencemodel.ui.keyword_Sequencemodel"/>
+        </page>
+        <page
+            category="cz.cvut.earlgrey.sequencemodel.Sequencemodel"
+            class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+            id="cz.cvut.earlgrey.sequencemodel.Sequencemodel.coloring"
+            name="Syntax Coloring">
+            <keywordReference id="cz.cvut.earlgrey.sequencemodel.ui.keyword_Sequencemodel"/>
+        </page>
+        <page
+            category="cz.cvut.earlgrey.sequencemodel.Sequencemodel"
+            class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
+            id="cz.cvut.earlgrey.sequencemodel.Sequencemodel.templates"
+            name="Templates">
+            <keywordReference id="cz.cvut.earlgrey.sequencemodel.ui.keyword_Sequencemodel"/>
+        </page>
+    </extension>
+    <extension
+            point="org.eclipse.ui.propertyPages">
+        <page
+            class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+            id="cz.cvut.earlgrey.sequencemodel.Sequencemodel"
+            name="Sequencemodel">
+            <keywordReference id="cz.cvut.earlgrey.sequencemodel.ui.keyword_Sequencemodel"/>
+            <enabledWhen>
+	            <adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+	        <filter name="projectNature" value="org.eclipse.xtext.ui.shared.xtextNature"/>
+        </page>
+    </extension>
+    <extension
+        point="org.eclipse.ui.keywords">
+        <keyword
+            id="cz.cvut.earlgrey.sequencemodel.ui.keyword_Sequencemodel"
+            label="Sequencemodel"/>
+    </extension>
+    <extension
+         point="org.eclipse.ui.commands">
+      <command
+            description="Trigger expensive validation"
+            id="cz.cvut.earlgrey.sequencemodel.Sequencemodel.validate"
+            name="Validate">
+      </command>
+    </extension>
+    <extension point="org.eclipse.ui.menus">
+        <menuContribution
+            locationURI="popup:#TextEditorContext?after=group.edit">
+             <command
+                 commandId="cz.cvut.earlgrey.sequencemodel.Sequencemodel.validate"
+                 style="push"
+                 tooltip="Trigger expensive validation">
+            <visibleWhen checkEnabled="false">
+                <reference
+                    definitionId="cz.cvut.earlgrey.sequencemodel.Sequencemodel.Editor.opened">
+                </reference>
+            </visibleWhen>
+         </command>  
+         </menuContribution>
+    </extension>
+    <extension point="org.eclipse.ui.menus">
+		<menuContribution locationURI="popup:#TextEditorContext?endof=group.find">
+			<command commandId="org.eclipse.xtext.ui.editor.FindReferences">
+				<visibleWhen checkEnabled="false">
+                	<reference definitionId="cz.cvut.earlgrey.sequencemodel.Sequencemodel.Editor.opened">
+                	</reference>
+            	</visibleWhen>
+			</command>
+		</menuContribution>
+	</extension>
+	<extension point="org.eclipse.ui.handlers">
+	    <handler
+            class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
+            commandId="org.eclipse.xtext.ui.editor.FindReferences">
+            <activeWhen>
+                <reference
+                    definitionId="cz.cvut.earlgrey.sequencemodel.Sequencemodel.Editor.opened">
+                </reference>
+            </activeWhen>
+        </handler>
+    </extension>   
+
+<!-- adding resource factories -->
+
+	<extension
+		point="org.eclipse.emf.ecore.extension_parser">
+		<parser
+			class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
+			type="ssd">
+		</parser>
+	</extension>
+	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
+        <resourceServiceProvider
+            class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+            uriExtension="ssd">
+        </resourceServiceProvider>
+    </extension>
+
+
+
+   <extension
+         point="org.eclipse.xtext.builder.participant">
+      <participant
+            class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant">
+      </participant>
+   </extension>
+   <extension
+            point="org.eclipse.ui.preferencePages">
+        <page
+            category="cz.cvut.earlgrey.sequencemodel.Sequencemodel"
+            class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+            id="cz.cvut.earlgrey.sequencemodel.Sequencemodel.compiler.preferencePage"
+            name="Compiler">
+            <keywordReference id="cz.cvut.earlgrey.sequencemodel.ui.keyword_Sequencemodel"/>
+        </page>
+    </extension>
+    <extension
+            point="org.eclipse.ui.propertyPages">
+        <page
+            category="cz.cvut.earlgrey.sequencemodel.Sequencemodel"
+            class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+            id="cz.cvut.earlgrey.sequencemodel.Sequencemodel.compiler.propertyPage"
+            name="Compiler">
+            <keywordReference id="cz.cvut.earlgrey.sequencemodel.ui.keyword_Sequencemodel"/>
+            <enabledWhen>
+	            <adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+	        <filter name="projectNature" value="org.eclipse.xtext.ui.shared.xtextNature"/>
+        </page>
+    </extension>
+
+	<!-- Quick Outline -->
+	<extension
+		point="org.eclipse.ui.handlers">
+		<handler 
+			class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
+			commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline">
+			<activeWhen>
+				<reference
+					definitionId="cz.cvut.earlgrey.sequencemodel.Sequencemodel.Editor.opened">
+				</reference>
+			</activeWhen>
+		</handler>
+	</extension>
+	<extension
+		point="org.eclipse.ui.commands">
+		<command
+			description="Open the quick outline."
+			id="org.eclipse.xtext.ui.editor.outline.QuickOutline"
+			name="Quick Outline">
+		</command>
+	</extension>
+	<extension point="org.eclipse.ui.menus">
+		<menuContribution
+			locationURI="popup:#TextEditorContext?after=group.open">
+			<command commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline"
+				style="push"
+				tooltip="Open Quick Outline">
+				<visibleWhen checkEnabled="false">
+					<reference definitionId="cz.cvut.earlgrey.sequencemodel.Sequencemodel.Editor.opened"/>
+				</visibleWhen>
+			</command>
+		</menuContribution>
+	</extension>
+   <!-- quickfix marker resolution generator -->
+   <extension
+         point="org.eclipse.ui.ide.markerResolution">
+      <markerResolutionGenerator
+            class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator">
+      </markerResolutionGenerator>
+   </extension>
+   	<!-- Rename Refactoring -->
+	<extension point="org.eclipse.ui.handlers">
+		<handler 
+			class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.IRenameElementHandler"
+			commandId="org.eclipse.xtext.ui.refactoring.RenameElement">
+			<activeWhen>
+				<reference
+					definitionId="cz.cvut.earlgrey.sequencemodel.Sequencemodel.Editor.opened">
+				</reference>
+			</activeWhen>
+		</handler>
+	</extension>
+    <extension point="org.eclipse.ui.menus">
+         <menuContribution
+            locationURI="popup:#TextEditorContext?after=group.edit">
+         <command commandId="org.eclipse.xtext.ui.refactoring.RenameElement"
+               style="push">
+            <visibleWhen checkEnabled="false">
+               <reference
+                     definitionId="cz.cvut.earlgrey.sequencemodel.Sequencemodel.Editor.opened">
+               </reference>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension point="org.eclipse.ui.preferencePages">
+	    <page
+	        category="cz.cvut.earlgrey.sequencemodel.Sequencemodel"
+	        class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
+	        id="cz.cvut.earlgrey.sequencemodel.Sequencemodel.refactoring"
+	        name="Refactoring">
+	        <keywordReference id="cz.cvut.earlgrey.sequencemodel.ui.keyword_Sequencemodel"/>
+	    </page>
+	</extension>
+
+
+  <extension point="org.eclipse.compare.contentViewers">
+    <viewer id="cz.cvut.earlgrey.sequencemodel.Sequencemodel.compare.contentViewers"
+            class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+            extensions="ssd">
+    </viewer>
+  </extension>
+  <extension point="org.eclipse.compare.contentMergeViewers">
+    <viewer id="cz.cvut.earlgrey.sequencemodel.Sequencemodel.compare.contentMergeViewers"
+            class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+            extensions="ssd" label="Sequencemodel Compare">
+     </viewer>
+  </extension>
+  <extension point="org.eclipse.ui.editors.documentProviders">
+    <provider id="cz.cvut.earlgrey.sequencemodel.Sequencemodel.editors.documentProviders"
+            class="cz.cvut.earlgrey.sequencemodel.ui.SequencemodelExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
+            extensions="ssd">
+    </provider>
+  </extension>
+
+</plugin>
