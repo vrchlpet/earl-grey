@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sequencemodel"
     nsURI="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel" nsPrefix="sequencemodel">
-  <eClassifiers xsi:type="ecore:EClass" name="Sequencemodel">
+  <eClassifiers xsi:type="ecore:EClass" name="Model">
     <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
         eType="#//Import" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sequence" upperBound="-1"
@@ -31,6 +31,17 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="transition" upperBound="-1"
         eType="#//Message" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fragment">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transition" upperBound="-1"
+        eType="#//Message" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IfElseFragment" eSuperTypes="#//Fragment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elseTransition" upperBound="-1"
+        eType="#//Message" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ForeachFragment" eSuperTypes="#//Fragment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AsserFragment" eSuperTypes="#//Fragment"/>
   <eClassifiers xsi:type="ecore:EClass" name="Message" eSuperTypes="#//Transition"/>
   <eClassifiers xsi:type="ecore:EClass" name="CallMessage" eSuperTypes="#//Message">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

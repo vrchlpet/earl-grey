@@ -27,13 +27,13 @@ public interface SequencemodelFactory extends EFactory
   SequencemodelFactory eINSTANCE = cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Sequencemodel</em>'.
+   * Returns a new object of class '<em>Model</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Sequencemodel</em>'.
+   * @return a new object of class '<em>Model</em>'.
    * @generated
    */
-  Sequencemodel createSequencemodel();
+  Model createModel();
 
   /**
    * Returns a new object of class '<em>Import</em>'.
@@ -79,6 +79,42 @@ public interface SequencemodelFactory extends EFactory
    * @generated
    */
   TransitionBlock createTransitionBlock();
+
+  /**
+   * Returns a new object of class '<em>Fragment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Fragment</em>'.
+   * @generated
+   */
+  Fragment createFragment();
+
+  /**
+   * Returns a new object of class '<em>If Else Fragment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>If Else Fragment</em>'.
+   * @generated
+   */
+  IfElseFragment createIfElseFragment();
+
+  /**
+   * Returns a new object of class '<em>Foreach Fragment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Foreach Fragment</em>'.
+   * @generated
+   */
+  ForeachFragment createForeachFragment();
+
+  /**
+   * Returns a new object of class '<em>Asser Fragment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Asser Fragment</em>'.
+   * @generated
+   */
+  AsserFragment createAsserFragment();
 
   /**
    * Returns a new object of class '<em>Message</em>'.

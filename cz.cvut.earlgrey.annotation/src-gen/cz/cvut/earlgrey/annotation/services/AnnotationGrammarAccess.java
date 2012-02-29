@@ -350,6 +350,7 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 	private CompositeIDElements pCompositeID;
 	private RealElements pReal;
 	private IntegerElements pInteger;
+	private TerminalRule tOPERATOR;
 	private TerminalRule tBOOLEAN;
 	private TerminalRule tNULL;
 	private TerminalRule tID;
@@ -479,6 +480,13 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 	public ParserRule getIntegerRule() {
 		return getIntegerAccess().getRule();
 	}
+
+	//// FIXME: http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B
+	//terminal OPERATOR:
+	//	"++" | "--" | "==" | ">=" | "<=" | "!=" | "<>" | "||" | "&&" | "-=" | "+=" | "=" | ">>" | "<<" | "|=";
+	public TerminalRule getOPERATORRule() {
+		return (tOPERATOR != null) ? tOPERATOR : (tOPERATOR = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "OPERATOR"));
+	} 
 
 	//terminal BOOLEAN:
 	//	"true" | "false";

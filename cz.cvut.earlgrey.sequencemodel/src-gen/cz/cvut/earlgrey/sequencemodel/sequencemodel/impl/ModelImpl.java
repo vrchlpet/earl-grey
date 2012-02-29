@@ -7,8 +7,8 @@
 package cz.cvut.earlgrey.sequencemodel.sequencemodel.impl;
 
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Import;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Model;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequence;
-import cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequencemodel;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
 
 import java.util.Collection;
@@ -27,19 +27,19 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Sequencemodel</b></em>'.
+ * An implementation of the model object '<em><b>Model</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelImpl#getImports <em>Imports</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelImpl#getSequence <em>Sequence</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ModelImpl#getImports <em>Imports</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ModelImpl#getSequence <em>Sequence</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class SequencemodelImpl extends MinimalEObjectImpl.Container implements Sequencemodel
+public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
   /**
    * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference list.
@@ -66,7 +66,7 @@ public class SequencemodelImpl extends MinimalEObjectImpl.Container implements S
    * <!-- end-user-doc -->
    * @generated
    */
-  protected SequencemodelImpl()
+  protected ModelImpl()
   {
     super();
   }
@@ -79,7 +79,7 @@ public class SequencemodelImpl extends MinimalEObjectImpl.Container implements S
   @Override
   protected EClass eStaticClass()
   {
-    return SequencemodelPackage.Literals.SEQUENCEMODEL;
+    return SequencemodelPackage.Literals.MODEL;
   }
 
   /**
@@ -91,7 +91,7 @@ public class SequencemodelImpl extends MinimalEObjectImpl.Container implements S
   {
     if (imports == null)
     {
-      imports = new EObjectContainmentEList<Import>(Import.class, this, SequencemodelPackage.SEQUENCEMODEL__IMPORTS);
+      imports = new EObjectContainmentEList<Import>(Import.class, this, SequencemodelPackage.MODEL__IMPORTS);
     }
     return imports;
   }
@@ -105,7 +105,7 @@ public class SequencemodelImpl extends MinimalEObjectImpl.Container implements S
   {
     if (sequence == null)
     {
-      sequence = new EObjectContainmentEList<Sequence>(Sequence.class, this, SequencemodelPackage.SEQUENCEMODEL__SEQUENCE);
+      sequence = new EObjectContainmentEList<Sequence>(Sequence.class, this, SequencemodelPackage.MODEL__SEQUENCE);
     }
     return sequence;
   }
@@ -120,9 +120,9 @@ public class SequencemodelImpl extends MinimalEObjectImpl.Container implements S
   {
     switch (featureID)
     {
-      case SequencemodelPackage.SEQUENCEMODEL__IMPORTS:
+      case SequencemodelPackage.MODEL__IMPORTS:
         return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
-      case SequencemodelPackage.SEQUENCEMODEL__SEQUENCE:
+      case SequencemodelPackage.MODEL__SEQUENCE:
         return ((InternalEList<?>)getSequence()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -138,9 +138,9 @@ public class SequencemodelImpl extends MinimalEObjectImpl.Container implements S
   {
     switch (featureID)
     {
-      case SequencemodelPackage.SEQUENCEMODEL__IMPORTS:
+      case SequencemodelPackage.MODEL__IMPORTS:
         return getImports();
-      case SequencemodelPackage.SEQUENCEMODEL__SEQUENCE:
+      case SequencemodelPackage.MODEL__SEQUENCE:
         return getSequence();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -157,11 +157,11 @@ public class SequencemodelImpl extends MinimalEObjectImpl.Container implements S
   {
     switch (featureID)
     {
-      case SequencemodelPackage.SEQUENCEMODEL__IMPORTS:
+      case SequencemodelPackage.MODEL__IMPORTS:
         getImports().clear();
         getImports().addAll((Collection<? extends Import>)newValue);
         return;
-      case SequencemodelPackage.SEQUENCEMODEL__SEQUENCE:
+      case SequencemodelPackage.MODEL__SEQUENCE:
         getSequence().clear();
         getSequence().addAll((Collection<? extends Sequence>)newValue);
         return;
@@ -179,10 +179,10 @@ public class SequencemodelImpl extends MinimalEObjectImpl.Container implements S
   {
     switch (featureID)
     {
-      case SequencemodelPackage.SEQUENCEMODEL__IMPORTS:
+      case SequencemodelPackage.MODEL__IMPORTS:
         getImports().clear();
         return;
-      case SequencemodelPackage.SEQUENCEMODEL__SEQUENCE:
+      case SequencemodelPackage.MODEL__SEQUENCE:
         getSequence().clear();
         return;
     }
@@ -199,12 +199,12 @@ public class SequencemodelImpl extends MinimalEObjectImpl.Container implements S
   {
     switch (featureID)
     {
-      case SequencemodelPackage.SEQUENCEMODEL__IMPORTS:
+      case SequencemodelPackage.MODEL__IMPORTS:
         return imports != null && !imports.isEmpty();
-      case SequencemodelPackage.SEQUENCEMODEL__SEQUENCE:
+      case SequencemodelPackage.MODEL__SEQUENCE:
         return sequence != null && !sequence.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //SequencemodelImpl
+} //ModelImpl

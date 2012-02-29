@@ -1630,6 +1630,13 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getIntegerAccess().getRule();
 	}
 
+	//// FIXME: http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B
+	//terminal OPERATOR:
+	//	"++" | "--" | "==" | ">=" | "<=" | "!=" | "<>" | "||" | "&&" | "-=" | "+=" | "=" | ">>" | "<<" | "|=";
+	public TerminalRule getOPERATORRule() {
+		return gaAnnotation.getOPERATORRule();
+	} 
+
 	//terminal BOOLEAN:
 	//	"true" | "false";
 	public TerminalRule getBOOLEANRule() {

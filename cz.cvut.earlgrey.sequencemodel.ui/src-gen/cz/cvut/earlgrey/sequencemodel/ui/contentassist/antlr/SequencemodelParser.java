@@ -38,18 +38,23 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getTransitionAccess().getAlternatives(), "rule__Transition__Alternatives");
+					put(grammarAccess.getFragmentAccess().getAlternatives(), "rule__Fragment__Alternatives");
 					put(grammarAccess.getMessageAccess().getAlternatives(), "rule__Message__Alternatives");
+					put(grammarAccess.getValueWithSpacesAccess().getAlternatives(), "rule__ValueWithSpaces__Alternatives");
 					put(grammarAccess.getParameterAccess().getAlternatives(), "rule__Parameter__Alternatives");
 					put(grammarAccess.getValueAccess().getAlternatives(), "rule__Value__Alternatives");
-					put(grammarAccess.getValueWithSpacesAccess().getAlternatives(), "rule__ValueWithSpaces__Alternatives");
 					put(grammarAccess.getCompositeIDAccess().getAlternatives(), "rule__CompositeID__Alternatives");
 					put(grammarAccess.getRealAccess().getAlternatives_4_0(), "rule__Real__Alternatives_4_0");
 					put(grammarAccess.getRealAccess().getAlternatives_4_1(), "rule__Real__Alternatives_4_1");
-					put(grammarAccess.getSequencemodelAccess().getGroup(), "rule__Sequencemodel__Group__0");
+					put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
 					put(grammarAccess.getImportAccess().getGroup(), "rule__Import__Group__0");
 					put(grammarAccess.getSequenceAccess().getGroup(), "rule__Sequence__Group__0");
 					put(grammarAccess.getParticipantAccess().getGroup(), "rule__Participant__Group__0");
 					put(grammarAccess.getTransitionBlockAccess().getGroup(), "rule__TransitionBlock__Group__0");
+					put(grammarAccess.getIfElseFragmentAccess().getGroup(), "rule__IfElseFragment__Group__0");
+					put(grammarAccess.getIfElseFragmentAccess().getGroup_4(), "rule__IfElseFragment__Group_4__0");
+					put(grammarAccess.getForeachFragmentAccess().getGroup(), "rule__ForeachFragment__Group__0");
+					put(grammarAccess.getAsserFragmentAccess().getGroup(), "rule__AsserFragment__Group__0");
 					put(grammarAccess.getCallMessageAccess().getGroup(), "rule__CallMessage__Group__0");
 					put(grammarAccess.getCallMessageAccess().getGroup_1(), "rule__CallMessage__Group_1__0");
 					put(grammarAccess.getCallMessageAccess().getGroup_1_1(), "rule__CallMessage__Group_1_1__0");
@@ -68,8 +73,8 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRealAccess().getGroup(), "rule__Real__Group__0");
 					put(grammarAccess.getRealAccess().getGroup_4(), "rule__Real__Group_4__0");
 					put(grammarAccess.getIntegerAccess().getGroup(), "rule__Integer__Group__0");
-					put(grammarAccess.getSequencemodelAccess().getImportsAssignment_0(), "rule__Sequencemodel__ImportsAssignment_0");
-					put(grammarAccess.getSequencemodelAccess().getSequenceAssignment_1(), "rule__Sequencemodel__SequenceAssignment_1");
+					put(grammarAccess.getModelAccess().getImportsAssignment_0(), "rule__Model__ImportsAssignment_0");
+					put(grammarAccess.getModelAccess().getSequenceAssignment_1(), "rule__Model__SequenceAssignment_1");
 					put(grammarAccess.getImportAccess().getImportURIAssignment_1(), "rule__Import__ImportURIAssignment_1");
 					put(grammarAccess.getSequenceAccess().getAnnotationAssignment_0(), "rule__Sequence__AnnotationAssignment_0");
 					put(grammarAccess.getSequenceAccess().getNameAssignment_2(), "rule__Sequence__NameAssignment_2");
@@ -78,6 +83,13 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getParticipantAccess().getTransitionAssignment_1(), "rule__Participant__TransitionAssignment_1");
 					put(grammarAccess.getTransitionBlockAccess().getNameAssignment_0(), "rule__TransitionBlock__NameAssignment_0");
 					put(grammarAccess.getTransitionBlockAccess().getTransitionAssignment_2(), "rule__TransitionBlock__TransitionAssignment_2");
+					put(grammarAccess.getIfElseFragmentAccess().getExprAssignment_1(), "rule__IfElseFragment__ExprAssignment_1");
+					put(grammarAccess.getIfElseFragmentAccess().getTransitionAssignment_3(), "rule__IfElseFragment__TransitionAssignment_3");
+					put(grammarAccess.getIfElseFragmentAccess().getElseTransitionAssignment_4_1(), "rule__IfElseFragment__ElseTransitionAssignment_4_1");
+					put(grammarAccess.getForeachFragmentAccess().getExprAssignment_1(), "rule__ForeachFragment__ExprAssignment_1");
+					put(grammarAccess.getForeachFragmentAccess().getTransitionAssignment_3(), "rule__ForeachFragment__TransitionAssignment_3");
+					put(grammarAccess.getAsserFragmentAccess().getExprAssignment_1(), "rule__AsserFragment__ExprAssignment_1");
+					put(grammarAccess.getAsserFragmentAccess().getTransitionAssignment_3(), "rule__AsserFragment__TransitionAssignment_3");
 					put(grammarAccess.getCallMessageAccess().getNameAssignment_0(), "rule__CallMessage__NameAssignment_0");
 					put(grammarAccess.getCallMessageAccess().getParamAssignment_1_1_0(), "rule__CallMessage__ParamAssignment_1_1_0");
 					put(grammarAccess.getCallMessageAccess().getParamAssignment_1_1_1_1(), "rule__CallMessage__ParamAssignment_1_1_1_1");
@@ -102,7 +114,7 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			cz.cvut.earlgrey.sequencemodel.ui.contentassist.antlr.internal.InternalSequencemodelParser typedParser = (cz.cvut.earlgrey.sequencemodel.ui.contentassist.antlr.internal.InternalSequencemodelParser) parser;
-			typedParser.entryRuleSequencemodel();
+			typedParser.entryRuleModel();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);

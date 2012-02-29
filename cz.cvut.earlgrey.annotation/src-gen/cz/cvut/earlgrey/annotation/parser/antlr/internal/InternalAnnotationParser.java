@@ -22,19 +22,20 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalAnnotationParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_BOOLEAN", "RULE_NULL", "RULE_ID", "RULE_NATURAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'@'", "'('", "','", "')'", "'='", "'.'", "'-'", "'e'", "'E'", "'+'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_BOOLEAN", "RULE_NULL", "RULE_ID", "RULE_NATURAL", "RULE_OPERATOR", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'@'", "'('", "','", "')'", "'='", "'.'", "'-'", "'e'", "'E'", "'+'"
     };
     public static final int RULE_BOOLEAN=5;
     public static final int RULE_ID=7;
+    public static final int T__23=23;
     public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=12;
+    public static final int RULE_ANY_OTHER=13;
     public static final int T__21=21;
     public static final int T__20=20;
     public static final int RULE_NATURAL=8;
-    public static final int RULE_SL_COMMENT=10;
+    public static final int RULE_SL_COMMENT=11;
     public static final int EOF=-1;
     public static final int RULE_NULL=6;
-    public static final int RULE_ML_COMMENT=9;
+    public static final int RULE_ML_COMMENT=10;
     public static final int T__19=19;
     public static final int RULE_STRING=4;
     public static final int T__16=16;
@@ -42,8 +43,8 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
     public static final int T__18=18;
     public static final int T__17=17;
     public static final int T__14=14;
-    public static final int T__13=13;
-    public static final int RULE_WS=11;
+    public static final int RULE_OPERATOR=9;
+    public static final int RULE_WS=12;
 
     // delegates
     // delegators
@@ -148,7 +149,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
             // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:80:1: (otherlv_0= '@' ( (lv_name_1_0= ruleExtendedID ) ) ( ( ( '(' )=>otherlv_2= '(' ) ( (lv_parameter_3_0= ruleParameter ) ) (otherlv_4= ',' ( (lv_parameter_5_0= ruleParameter ) ) )* otherlv_6= ')' )? )
             // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:80:3: otherlv_0= '@' ( (lv_name_1_0= ruleExtendedID ) ) ( ( ( '(' )=>otherlv_2= '(' ) ( (lv_parameter_3_0= ruleParameter ) ) (otherlv_4= ',' ( (lv_parameter_5_0= ruleParameter ) ) )* otherlv_6= ')' )?
             {
-            otherlv_0=(Token)match(input,13,FOLLOW_13_in_ruleAnnotation122); if (state.failed) return current;
+            otherlv_0=(Token)match(input,14,FOLLOW_14_in_ruleAnnotation122); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getAnnotationAccess().getCommercialAtKeyword_0());
@@ -193,7 +194,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
             int alt2=2;
             int LA2_0 = input.LA(1);
 
-            if ( (LA2_0==14) && (synpred1_InternalAnnotation())) {
+            if ( (LA2_0==15) && (synpred1_InternalAnnotation())) {
                 alt2=1;
             }
             switch (alt2) {
@@ -203,7 +204,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                     // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:102:3: ( ( '(' )=>otherlv_2= '(' )
                     // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:102:4: ( '(' )=>otherlv_2= '('
                     {
-                    otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleAnnotation164); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleAnnotation164); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getAnnotationAccess().getLeftParenthesisKeyword_2_0());
@@ -253,7 +254,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                         int alt1=2;
                         int LA1_0 = input.LA(1);
 
-                        if ( (LA1_0==15) ) {
+                        if ( (LA1_0==16) ) {
                             alt1=1;
                         }
 
@@ -262,7 +263,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:125:4: otherlv_4= ',' ( (lv_parameter_5_0= ruleParameter ) )
                     	    {
-                    	    otherlv_4=(Token)match(input,15,FOLLOW_15_in_ruleAnnotation199); if (state.failed) return current;
+                    	    otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleAnnotation199); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_4, grammarAccess.getAnnotationAccess().getCommaKeyword_2_2_0());
@@ -312,7 +313,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_6=(Token)match(input,16,FOLLOW_16_in_ruleAnnotation234); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,17,FOLLOW_17_in_ruleAnnotation234); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_6, grammarAccess.getAnnotationAccess().getRightParenthesisKeyword_2_3());
@@ -567,7 +568,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,17,FOLLOW_17_in_ruleAssignParameter459); if (state.failed) return current;
+            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleAssignParameter459); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getAssignParameterAccess().getEqualsSignKeyword_1());
@@ -802,17 +803,17 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
             // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:312:1: (this_Integer_0= ruleInteger | this_STRING_1= RULE_STRING | this_ExtendedID_2= ruleExtendedID | this_BOOLEAN_3= RULE_BOOLEAN | this_NULL_4= RULE_NULL | this_Real_5= ruleReal )
             int alt4=6;
             switch ( input.LA(1) ) {
-            case 19:
+            case 20:
                 {
                 int LA4_1 = input.LA(2);
 
                 if ( (LA4_1==RULE_NATURAL) ) {
                     int LA4_2 = input.LA(3);
 
-                    if ( (LA4_2==18) ) {
+                    if ( (LA4_2==19) ) {
                         alt4=6;
                     }
-                    else if ( (LA4_2==EOF||(LA4_2>=15 && LA4_2<=16)) ) {
+                    else if ( (LA4_2==EOF||(LA4_2>=16 && LA4_2<=17)) ) {
                         alt4=1;
                     }
                     else {
@@ -836,10 +837,10 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                 {
                 int LA4_2 = input.LA(2);
 
-                if ( (LA4_2==18) ) {
+                if ( (LA4_2==19) ) {
                     alt4=6;
                 }
-                else if ( (LA4_2==EOF||(LA4_2>=15 && LA4_2<=16)) ) {
+                else if ( (LA4_2==EOF||(LA4_2>=16 && LA4_2<=17)) ) {
                     alt4=1;
                 }
                 else {
@@ -1106,7 +1107,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                 int alt5=2;
                 int LA5_0 = input.LA(1);
 
-                if ( (LA5_0==18) ) {
+                if ( (LA5_0==19) ) {
                     alt5=1;
                 }
 
@@ -1115,7 +1116,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:400:2: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,18,FOLLOW_18_in_ruleExtendedID925); if (state.failed) return current;
+            	    kw=(Token)match(input,19,FOLLOW_19_in_ruleExtendedID925); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              current.merge(kw);
@@ -1227,14 +1228,14 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( (LA6_0==19) ) {
+            if ( (LA6_0==20) ) {
                 alt6=1;
             }
             switch (alt6) {
                 case 1 :
                     // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:438:2: kw= '-'
                     {
-                    kw=(Token)match(input,19,FOLLOW_19_in_ruleReal1042); if (state.failed) return current;
+                    kw=(Token)match(input,20,FOLLOW_20_in_ruleReal1042); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -1258,7 +1259,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                   newLeafNode(this_NATURAL_1, grammarAccess.getRealAccess().getNATURALTerminalRuleCall_1()); 
                   
             }
-            kw=(Token)match(input,18,FOLLOW_18_in_ruleReal1077); if (state.failed) return current;
+            kw=(Token)match(input,19,FOLLOW_19_in_ruleReal1077); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -1280,7 +1281,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
             int alt9=2;
             int LA9_0 = input.LA(1);
 
-            if ( ((LA9_0>=20 && LA9_0<=21)) ) {
+            if ( ((LA9_0>=21 && LA9_0<=22)) ) {
                 alt9=1;
             }
             switch (alt9) {
@@ -1291,10 +1292,10 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                     int alt7=2;
                     int LA7_0 = input.LA(1);
 
-                    if ( (LA7_0==20) ) {
+                    if ( (LA7_0==21) ) {
                         alt7=1;
                     }
-                    else if ( (LA7_0==21) ) {
+                    else if ( (LA7_0==22) ) {
                         alt7=2;
                     }
                     else {
@@ -1308,7 +1309,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                         case 1 :
                             // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:464:2: kw= 'e'
                             {
-                            kw=(Token)match(input,20,FOLLOW_20_in_ruleReal1112); if (state.failed) return current;
+                            kw=(Token)match(input,21,FOLLOW_21_in_ruleReal1112); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       current.merge(kw);
@@ -1321,7 +1322,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                         case 2 :
                             // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:471:2: kw= 'E'
                             {
-                            kw=(Token)match(input,21,FOLLOW_21_in_ruleReal1131); if (state.failed) return current;
+                            kw=(Token)match(input,22,FOLLOW_22_in_ruleReal1131); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       current.merge(kw);
@@ -1338,10 +1339,10 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
-                    if ( (LA8_0==22) ) {
+                    if ( (LA8_0==23) ) {
                         alt8=1;
                     }
-                    else if ( (LA8_0==19) ) {
+                    else if ( (LA8_0==20) ) {
                         alt8=2;
                     }
                     else {
@@ -1355,7 +1356,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                         case 1 :
                             // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:477:2: kw= '+'
                             {
-                            kw=(Token)match(input,22,FOLLOW_22_in_ruleReal1146); if (state.failed) return current;
+                            kw=(Token)match(input,23,FOLLOW_23_in_ruleReal1146); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       current.merge(kw);
@@ -1368,7 +1369,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                         case 2 :
                             // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:484:2: kw= '-'
                             {
-                            kw=(Token)match(input,19,FOLLOW_19_in_ruleReal1165); if (state.failed) return current;
+                            kw=(Token)match(input,20,FOLLOW_20_in_ruleReal1165); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       current.merge(kw);
@@ -1481,14 +1482,14 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==19) ) {
+            if ( (LA10_0==20) ) {
                 alt10=1;
             }
             switch (alt10) {
                 case 1 :
                     // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:518:2: kw= '-'
                     {
-                    kw=(Token)match(input,19,FOLLOW_19_in_ruleInteger1279); if (state.failed) return current;
+                    kw=(Token)match(input,20,FOLLOW_20_in_ruleInteger1279); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -1538,7 +1539,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
         // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:102:4: ( '(' )
         // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:102:6: '('
         {
-        match(input,14,FOLLOW_14_in_synpred1_InternalAnnotation156); if (state.failed) return ;
+        match(input,15,FOLLOW_15_in_synpred1_InternalAnnotation156); if (state.failed) return ;
 
         }
     }
@@ -1568,15 +1569,15 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
     static final String DFA3_eofS =
         "\1\uffff\1\2\3\uffff\1\2";
     static final String DFA3_minS =
-        "\1\4\1\17\1\uffff\1\7\1\uffff\1\17";
+        "\1\4\1\20\1\uffff\1\7\1\uffff\1\20";
     static final String DFA3_maxS =
-        "\1\23\1\22\1\uffff\1\7\1\uffff\1\22";
+        "\1\24\1\23\1\uffff\1\7\1\uffff\1\23";
     static final String DFA3_acceptS =
         "\2\uffff\1\2\1\uffff\1\1\1\uffff";
     static final String DFA3_specialS =
         "\6\uffff}>";
     static final String[] DFA3_transitionS = {
-            "\3\2\1\1\1\2\12\uffff\1\2",
+            "\3\2\1\1\1\2\13\uffff\1\2",
             "\2\2\1\4\1\3",
             "",
             "\1\5",
@@ -1621,21 +1622,21 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_ruleAnnotation_in_entryRuleAnnotation75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAnnotation85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_ruleAnnotation122 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_ruleExtendedID_in_ruleAnnotation143 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_14_in_ruleAnnotation164 = new BitSet(new long[]{0x00000000000801F0L});
-    public static final BitSet FOLLOW_ruleParameter_in_ruleAnnotation186 = new BitSet(new long[]{0x0000000000018000L});
-    public static final BitSet FOLLOW_15_in_ruleAnnotation199 = new BitSet(new long[]{0x00000000000801F0L});
-    public static final BitSet FOLLOW_ruleParameter_in_ruleAnnotation220 = new BitSet(new long[]{0x0000000000018000L});
-    public static final BitSet FOLLOW_16_in_ruleAnnotation234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_ruleAnnotation122 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_ruleExtendedID_in_ruleAnnotation143 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_15_in_ruleAnnotation164 = new BitSet(new long[]{0x00000000001001F0L});
+    public static final BitSet FOLLOW_ruleParameter_in_ruleAnnotation186 = new BitSet(new long[]{0x0000000000030000L});
+    public static final BitSet FOLLOW_16_in_ruleAnnotation199 = new BitSet(new long[]{0x00000000001001F0L});
+    public static final BitSet FOLLOW_ruleParameter_in_ruleAnnotation220 = new BitSet(new long[]{0x0000000000030000L});
+    public static final BitSet FOLLOW_17_in_ruleAnnotation234 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleParameter_in_entryRuleParameter272 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleParameter282 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAssignParameter_in_ruleParameter329 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleValueParameter_in_ruleParameter356 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAssignParameter_in_entryRuleAssignParameter391 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAssignParameter401 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExtendedID_in_ruleAssignParameter447 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleAssignParameter459 = new BitSet(new long[]{0x00000000000801F0L});
+    public static final BitSet FOLLOW_ruleExtendedID_in_ruleAssignParameter447 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleAssignParameter459 = new BitSet(new long[]{0x00000000001001F0L});
     public static final BitSet FOLLOW_ruleValue_in_ruleAssignParameter480 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleValueParameter_in_entryRuleValueParameter516 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleValueParameter526 = new BitSet(new long[]{0x0000000000000002L});
@@ -1650,24 +1651,24 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleReal_in_ruleValue809 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExtendedID_in_entryRuleExtendedID855 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExtendedID866 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExtendedID906 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_18_in_ruleExtendedID925 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExtendedID940 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleExtendedID906 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_19_in_ruleExtendedID925 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleExtendedID940 = new BitSet(new long[]{0x0000000000080002L});
     public static final BitSet FOLLOW_ruleReal_in_entryRuleReal992 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleReal1003 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_ruleReal1042 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_RULE_NATURAL_in_ruleReal1059 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleReal1077 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_RULE_NATURAL_in_ruleReal1092 = new BitSet(new long[]{0x0000000000300002L});
-    public static final BitSet FOLLOW_20_in_ruleReal1112 = new BitSet(new long[]{0x0000000000480000L});
-    public static final BitSet FOLLOW_21_in_ruleReal1131 = new BitSet(new long[]{0x0000000000480000L});
-    public static final BitSet FOLLOW_22_in_ruleReal1146 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_19_in_ruleReal1165 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_20_in_ruleReal1042 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_NATURAL_in_ruleReal1059 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleReal1077 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_NATURAL_in_ruleReal1092 = new BitSet(new long[]{0x0000000000600002L});
+    public static final BitSet FOLLOW_21_in_ruleReal1112 = new BitSet(new long[]{0x0000000000900000L});
+    public static final BitSet FOLLOW_22_in_ruleReal1131 = new BitSet(new long[]{0x0000000000900000L});
+    public static final BitSet FOLLOW_23_in_ruleReal1146 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_20_in_ruleReal1165 = new BitSet(new long[]{0x0000000000000100L});
     public static final BitSet FOLLOW_RULE_NATURAL_in_ruleReal1181 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleInteger_in_entryRuleInteger1229 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleInteger1240 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_ruleInteger1279 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_20_in_ruleInteger1279 = new BitSet(new long[]{0x0000000000000100L});
     public static final BitSet FOLLOW_RULE_NATURAL_in_ruleInteger1296 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_synpred1_InternalAnnotation156 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_synpred1_InternalAnnotation156 = new BitSet(new long[]{0x0000000000000002L});
 
 }

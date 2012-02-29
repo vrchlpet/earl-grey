@@ -12,22 +12,22 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Sequencemodel</b></em>'.
+ * A representation of the model object '<em><b>Model</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequencemodel#getImports <em>Imports</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequencemodel#getSequence <em>Sequence</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Model#getImports <em>Imports</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Model#getSequence <em>Sequence</em>}</li>
  * </ul>
  * </p>
  *
- * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getSequencemodel()
+ * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getModel()
  * @model
  * @generated
  */
-public interface Sequencemodel extends EObject
+public interface Model extends EObject
 {
   /**
    * Returns the value of the '<em><b>Imports</b></em>' containment reference list.
@@ -39,7 +39,7 @@ public interface Sequencemodel extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Imports</em>' containment reference list.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getSequencemodel_Imports()
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getModel_Imports()
    * @model containment="true"
    * @generated
    */
@@ -55,10 +55,10 @@ public interface Sequencemodel extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Sequence</em>' containment reference list.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getSequencemodel_Sequence()
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getModel_Sequence()
    * @model containment="true"
    * @generated
    */
   EList<Sequence> getSequence();
 
-} // Sequencemodel
+} // Model

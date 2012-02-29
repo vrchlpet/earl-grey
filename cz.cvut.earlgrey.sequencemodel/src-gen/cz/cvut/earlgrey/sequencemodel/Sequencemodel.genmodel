@@ -9,9 +9,9 @@
     editorPluginID="cz.cvut.earlgrey.sequencemodel.editor" usedGenPackages="../../../../../../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/Annotation.genmodel#//annotation">
   <genPackages prefix="Sequencemodel" basePackage="cz.cvut.earlgrey.sequencemodel"
       disposableProviderFactory="true" ecorePackage="Sequencemodel.ecore#/">
-    <genClasses ecoreClass="Sequencemodel.ecore#//Sequencemodel">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Sequencemodel/imports"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Sequencemodel/sequence"/>
+    <genClasses ecoreClass="Sequencemodel.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Model/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Model/sequence"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//Import">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Import/importURI"/>
@@ -30,6 +30,15 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//TransitionBlock/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//TransitionBlock/transition"/>
     </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//Fragment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Fragment/expr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Fragment/transition"/>
+    </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//IfElseFragment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//IfElseFragment/elseTransition"/>
+    </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//ForeachFragment"/>
+    <genClasses ecoreClass="Sequencemodel.ecore#//AsserFragment"/>
     <genClasses ecoreClass="Sequencemodel.ecore#//Message"/>
     <genClasses ecoreClass="Sequencemodel.ecore#//CallMessage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//CallMessage/name"/>

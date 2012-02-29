@@ -68,12 +68,16 @@ public class SequencemodelFactoryImpl extends EFactoryImpl implements Sequencemo
   {
     switch (eClass.getClassifierID())
     {
-      case SequencemodelPackage.SEQUENCEMODEL: return createSequencemodel();
+      case SequencemodelPackage.MODEL: return createModel();
       case SequencemodelPackage.IMPORT: return createImport();
       case SequencemodelPackage.SEQUENCE: return createSequence();
       case SequencemodelPackage.PARTICIPANT: return createParticipant();
       case SequencemodelPackage.TRANSITION: return createTransition();
       case SequencemodelPackage.TRANSITION_BLOCK: return createTransitionBlock();
+      case SequencemodelPackage.FRAGMENT: return createFragment();
+      case SequencemodelPackage.IF_ELSE_FRAGMENT: return createIfElseFragment();
+      case SequencemodelPackage.FOREACH_FRAGMENT: return createForeachFragment();
+      case SequencemodelPackage.ASSER_FRAGMENT: return createAsserFragment();
       case SequencemodelPackage.MESSAGE: return createMessage();
       case SequencemodelPackage.CALL_MESSAGE: return createCallMessage();
       case SequencemodelPackage.NEW_MESSAGE: return createNewMessage();
@@ -88,10 +92,10 @@ public class SequencemodelFactoryImpl extends EFactoryImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
-  public Sequencemodel createSequencemodel()
+  public Model createModel()
   {
-    SequencemodelImpl sequencemodel = new SequencemodelImpl();
-    return sequencemodel;
+    ModelImpl model = new ModelImpl();
+    return model;
   }
 
   /**
@@ -147,6 +151,50 @@ public class SequencemodelFactoryImpl extends EFactoryImpl implements Sequencemo
   {
     TransitionBlockImpl transitionBlock = new TransitionBlockImpl();
     return transitionBlock;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Fragment createFragment()
+  {
+    FragmentImpl fragment = new FragmentImpl();
+    return fragment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IfElseFragment createIfElseFragment()
+  {
+    IfElseFragmentImpl ifElseFragment = new IfElseFragmentImpl();
+    return ifElseFragment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ForeachFragment createForeachFragment()
+  {
+    ForeachFragmentImpl foreachFragment = new ForeachFragmentImpl();
+    return foreachFragment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AsserFragment createAsserFragment()
+  {
+    AsserFragmentImpl asserFragment = new AsserFragmentImpl();
+    return asserFragment;
   }
 
   /**

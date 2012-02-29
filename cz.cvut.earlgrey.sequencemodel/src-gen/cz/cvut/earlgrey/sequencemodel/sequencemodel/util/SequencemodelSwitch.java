@@ -76,10 +76,10 @@ public class SequencemodelSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case SequencemodelPackage.SEQUENCEMODEL:
+      case SequencemodelPackage.MODEL:
       {
-        Sequencemodel sequencemodel = (Sequencemodel)theEObject;
-        T result = caseSequencemodel(sequencemodel);
+        Model model = (Model)theEObject;
+        T result = caseModel(model);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -116,6 +116,37 @@ public class SequencemodelSwitch<T> extends Switch<T>
         TransitionBlock transitionBlock = (TransitionBlock)theEObject;
         T result = caseTransitionBlock(transitionBlock);
         if (result == null) result = caseTransition(transitionBlock);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SequencemodelPackage.FRAGMENT:
+      {
+        Fragment fragment = (Fragment)theEObject;
+        T result = caseFragment(fragment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SequencemodelPackage.IF_ELSE_FRAGMENT:
+      {
+        IfElseFragment ifElseFragment = (IfElseFragment)theEObject;
+        T result = caseIfElseFragment(ifElseFragment);
+        if (result == null) result = caseFragment(ifElseFragment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SequencemodelPackage.FOREACH_FRAGMENT:
+      {
+        ForeachFragment foreachFragment = (ForeachFragment)theEObject;
+        T result = caseForeachFragment(foreachFragment);
+        if (result == null) result = caseFragment(foreachFragment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SequencemodelPackage.ASSER_FRAGMENT:
+      {
+        AsserFragment asserFragment = (AsserFragment)theEObject;
+        T result = caseAsserFragment(asserFragment);
+        if (result == null) result = caseFragment(asserFragment);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -159,17 +190,17 @@ public class SequencemodelSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Sequencemodel</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Model</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Sequencemodel</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Model</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSequencemodel(Sequencemodel object)
+  public T caseModel(Model object)
   {
     return null;
   }
@@ -250,6 +281,70 @@ public class SequencemodelSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTransitionBlock(TransitionBlock object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Fragment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Fragment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFragment(Fragment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>If Else Fragment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>If Else Fragment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIfElseFragment(IfElseFragment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Foreach Fragment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Foreach Fragment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseForeachFragment(ForeachFragment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Asser Fragment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Asser Fragment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAsserFragment(AsserFragment object)
   {
     return null;
   }

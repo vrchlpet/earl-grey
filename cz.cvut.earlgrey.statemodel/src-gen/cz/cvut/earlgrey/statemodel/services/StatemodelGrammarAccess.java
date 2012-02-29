@@ -311,6 +311,34 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cANY_OTHERTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cWSTerminalRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
+		////// e.g.: light is up
+		//
+		////Event:
+		//
+		////    name = ValueWithSpaces
+		//
+		////;
+		//
+		////
+		//
+		////// e.g.: if light is down then
+		//
+		////Guard:
+		//
+		////    'if' expression = ValueWithSpaces 'then'
+		//
+		////;
+		//
+		////
+		//
+		////// e.g.: light up
+		//
+		////Action:
+		//
+		////    value = ValueWithSpaces
+		//
+		////;
+		//
 		//ValueWithSpaces hidden():
 		//	(OPERATOR | Value | ANY_OTHER | WS)*;
 		public ParserRule getRule() { return rule; }
@@ -376,7 +404,6 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	private ActivityElements pActivity;
 	private TransitionBlockElements pTransitionBlock;
 	private TransitionElements pTransition;
-	private TerminalRule tOPERATOR;
 	private ValueWithSpacesElements pValueWithSpaces;
 	private StateTypeElements unknownRuleStateType;
 	private TerminalRule tARROW;
@@ -518,14 +545,6 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	//
 	////;
 	//
-	//// FIXME: http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B
-	//
-	//terminal OPERATOR:
-	//	"++" | "--" | "==" | ">=" | "<=" | "!=" | "<>" | "||" | "&&" | "-=" | "+=" | "=" | ">>" | "<<" | "|=";
-	public TerminalRule getOPERATORRule() {
-		return (tOPERATOR != null) ? tOPERATOR : (tOPERATOR = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "OPERATOR"));
-	} 
-
 	//ValueWithSpaces hidden():
 	//	(OPERATOR | Value | ANY_OTHER | WS)*;
 	public ValueWithSpacesElements getValueWithSpacesAccess() {
@@ -645,6 +664,13 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	public ParserRule getIntegerRule() {
 		return getIntegerAccess().getRule();
 	}
+
+	//// FIXME: http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B
+	//terminal OPERATOR:
+	//	"++" | "--" | "==" | ">=" | "<=" | "!=" | "<>" | "||" | "&&" | "-=" | "+=" | "=" | ">>" | "<<" | "|=";
+	public TerminalRule getOPERATORRule() {
+		return gaAnnotation.getOPERATORRule();
+	} 
 
 	//terminal BOOLEAN:
 	//	"true" | "false";

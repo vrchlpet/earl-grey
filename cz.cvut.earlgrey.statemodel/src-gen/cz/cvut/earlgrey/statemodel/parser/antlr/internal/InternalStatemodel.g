@@ -1211,9 +1211,9 @@ ruleStateType returns [Enumerator current=null]
 
 
 
-RULE_OPERATOR : ('++'|'--'|'=='|'>='|'<='|'!='|'<>'|'||'|'&&'|'-='|'+='|'='|'>>'|'<<'|'|=');
-
 RULE_ARROW : ('->'|'goto'|'=>');
+
+RULE_OPERATOR : ('++'|'--'|'=='|'>='|'<='|'!='|'<>'|'||'|'&&'|'-='|'+='|'='|'>>'|'<<'|'|=');
 
 RULE_BOOLEAN : ('true'|'false');
 

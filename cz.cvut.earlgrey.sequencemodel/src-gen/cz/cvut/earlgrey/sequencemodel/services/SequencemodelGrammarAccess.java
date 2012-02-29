@@ -17,18 +17,15 @@ import cz.cvut.earlgrey.annotation.services.AnnotationGrammarAccess;
 public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
-	public class SequencemodelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Sequencemodel");
+	public class ModelElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cImportsAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cImportsImportParserRuleCall_0_0 = (RuleCall)cImportsAssignment_0.eContents().get(0);
 		private final Assignment cSequenceAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cSequenceSequenceParserRuleCall_1_0 = (RuleCall)cSequenceAssignment_1.eContents().get(0);
 		
-		/// **
-		// * Defines root node of a model.
-		// * Resource imports must be defined before other elements.
-		// * / Sequencemodel:
+		//Model:
 		//	imports+=Import* sequence+=Sequence*;
 		public ParserRule getRule() { return rule; }
 
@@ -202,6 +199,166 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"end"
 		public Keyword getEndKeyword_3() { return cEndKeyword_3; }
+	}
+
+	public class FragmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Fragment");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cIfElseFragmentParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cForeachFragmentParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cAsserFragmentParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		
+		//Fragment:
+		//	IfElseFragment | ForeachFragment | AsserFragment;
+		public ParserRule getRule() { return rule; }
+
+		//IfElseFragment | ForeachFragment | AsserFragment
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//IfElseFragment
+		public RuleCall getIfElseFragmentParserRuleCall_0() { return cIfElseFragmentParserRuleCall_0; }
+
+		//ForeachFragment
+		public RuleCall getForeachFragmentParserRuleCall_1() { return cForeachFragmentParserRuleCall_1; }
+
+		//AsserFragment
+		public RuleCall getAsserFragmentParserRuleCall_2() { return cAsserFragmentParserRuleCall_2; }
+	}
+
+	public class IfElseFragmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "IfElseFragment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cIfKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cExprAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cExprValueWithSpacesParserRuleCall_1_0 = (RuleCall)cExprAssignment_1.eContents().get(0);
+		private final Keyword cThenKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTransitionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTransitionMessageParserRuleCall_3_0 = (RuleCall)cTransitionAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cElseKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cElseTransitionAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cElseTransitionMessageParserRuleCall_4_1_0 = (RuleCall)cElseTransitionAssignment_4_1.eContents().get(0);
+		private final Keyword cEndKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//IfElseFragment:
+		//	"if" expr=ValueWithSpaces "then" transition+=Message* ("else" elseTransition+=Message*)? "end";
+		public ParserRule getRule() { return rule; }
+
+		//"if" expr=ValueWithSpaces "then" transition+=Message* ("else" elseTransition+=Message*)? "end"
+		public Group getGroup() { return cGroup; }
+
+		//"if"
+		public Keyword getIfKeyword_0() { return cIfKeyword_0; }
+
+		//expr=ValueWithSpaces
+		public Assignment getExprAssignment_1() { return cExprAssignment_1; }
+
+		//ValueWithSpaces
+		public RuleCall getExprValueWithSpacesParserRuleCall_1_0() { return cExprValueWithSpacesParserRuleCall_1_0; }
+
+		//"then"
+		public Keyword getThenKeyword_2() { return cThenKeyword_2; }
+
+		//transition+=Message*
+		public Assignment getTransitionAssignment_3() { return cTransitionAssignment_3; }
+
+		//Message
+		public RuleCall getTransitionMessageParserRuleCall_3_0() { return cTransitionMessageParserRuleCall_3_0; }
+
+		//(=> "else" elseTransition+=Message*)?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//=> "else"
+		public Keyword getElseKeyword_4_0() { return cElseKeyword_4_0; }
+
+		//elseTransition+=Message*
+		public Assignment getElseTransitionAssignment_4_1() { return cElseTransitionAssignment_4_1; }
+
+		//Message
+		public RuleCall getElseTransitionMessageParserRuleCall_4_1_0() { return cElseTransitionMessageParserRuleCall_4_1_0; }
+
+		//"end"
+		public Keyword getEndKeyword_5() { return cEndKeyword_5; }
+	}
+
+	public class ForeachFragmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ForeachFragment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cForeachKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cExprAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cExprValueWithSpacesParserRuleCall_1_0 = (RuleCall)cExprAssignment_1.eContents().get(0);
+		private final Keyword cDoKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTransitionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTransitionMessageParserRuleCall_3_0 = (RuleCall)cTransitionAssignment_3.eContents().get(0);
+		private final Keyword cEndKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//ForeachFragment:
+		//	"foreach" expr=ValueWithSpaces "do" transition+=Message* "end";
+		public ParserRule getRule() { return rule; }
+
+		//"foreach" expr=ValueWithSpaces "do" transition+=Message* "end"
+		public Group getGroup() { return cGroup; }
+
+		//"foreach"
+		public Keyword getForeachKeyword_0() { return cForeachKeyword_0; }
+
+		//expr=ValueWithSpaces
+		public Assignment getExprAssignment_1() { return cExprAssignment_1; }
+
+		//ValueWithSpaces
+		public RuleCall getExprValueWithSpacesParserRuleCall_1_0() { return cExprValueWithSpacesParserRuleCall_1_0; }
+
+		//"do"
+		public Keyword getDoKeyword_2() { return cDoKeyword_2; }
+
+		//transition+=Message*
+		public Assignment getTransitionAssignment_3() { return cTransitionAssignment_3; }
+
+		//Message
+		public RuleCall getTransitionMessageParserRuleCall_3_0() { return cTransitionMessageParserRuleCall_3_0; }
+
+		//"end"
+		public Keyword getEndKeyword_4() { return cEndKeyword_4; }
+	}
+
+	public class AsserFragmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AsserFragment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cAssertKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cExprAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cExprValueWithSpacesParserRuleCall_1_0 = (RuleCall)cExprAssignment_1.eContents().get(0);
+		private final Keyword cThenKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTransitionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTransitionMessageParserRuleCall_3_0 = (RuleCall)cTransitionAssignment_3.eContents().get(0);
+		private final Keyword cEndKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//AsserFragment:
+		//	"assert" expr=ValueWithSpaces "then" transition+=Message* "end";
+		public ParserRule getRule() { return rule; }
+
+		//"assert" expr=ValueWithSpaces "then" transition+=Message* "end"
+		public Group getGroup() { return cGroup; }
+
+		//"assert"
+		public Keyword getAssertKeyword_0() { return cAssertKeyword_0; }
+
+		//expr=ValueWithSpaces
+		public Assignment getExprAssignment_1() { return cExprAssignment_1; }
+
+		//ValueWithSpaces
+		public RuleCall getExprValueWithSpacesParserRuleCall_1_0() { return cExprValueWithSpacesParserRuleCall_1_0; }
+
+		//"then"
+		public Keyword getThenKeyword_2() { return cThenKeyword_2; }
+
+		//transition+=Message*
+		public Assignment getTransitionAssignment_3() { return cTransitionAssignment_3; }
+
+		//Message
+		public RuleCall getTransitionMessageParserRuleCall_3_0() { return cTransitionMessageParserRuleCall_3_0; }
+
+		//"end"
+		public Keyword getEndKeyword_4() { return cEndKeyword_4; }
 	}
 
 	public class MessageElements extends AbstractParserRuleElementFinder {
@@ -383,18 +540,51 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
 	}
+
+	public class ValueWithSpacesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ValueWithSpaces");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cOPERATORTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cValueParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cANY_OTHERTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cWSTerminalRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		
+		//ValueWithSpaces hidden():
+		//	(OPERATOR | Value | ANY_OTHER | WS)*;
+		public ParserRule getRule() { return rule; }
+
+		//(OPERATOR | Value | ANY_OTHER | WS)*
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//OPERATOR
+		public RuleCall getOPERATORTerminalRuleCall_0() { return cOPERATORTerminalRuleCall_0; }
+
+		//Value
+		public RuleCall getValueParserRuleCall_1() { return cValueParserRuleCall_1; }
+
+		//ANY_OTHER
+		public RuleCall getANY_OTHERTerminalRuleCall_2() { return cANY_OTHERTerminalRuleCall_2; }
+
+		//WS
+		public RuleCall getWSTerminalRuleCall_3() { return cWSTerminalRuleCall_3; }
+	}
 	
 	
-	private SequencemodelElements pSequencemodel;
+	private ModelElements pModel;
 	private ImportElements pImport;
 	private SequenceElements pSequence;
 	private ParticipantElements pParticipant;
 	private TransitionElements pTransition;
 	private TransitionBlockElements pTransitionBlock;
+	private FragmentElements pFragment;
+	private IfElseFragmentElements pIfElseFragment;
+	private ForeachFragmentElements pForeachFragment;
+	private AsserFragmentElements pAsserFragment;
 	private MessageElements pMessage;
 	private CallMessageElements pCallMessage;
 	private NewMessageElements pNewMessage;
 	private ReturnMessageElements pReturnMessage;
+	private ValueWithSpacesElements pValueWithSpaces;
 	
 	private final GrammarProvider grammarProvider;
 
@@ -417,17 +607,14 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	/// **
-	// * Defines root node of a model.
-	// * Resource imports must be defined before other elements.
-	// * / Sequencemodel:
+	//Model:
 	//	imports+=Import* sequence+=Sequence*;
-	public SequencemodelElements getSequencemodelAccess() {
-		return (pSequencemodel != null) ? pSequencemodel : (pSequencemodel = new SequencemodelElements());
+	public ModelElements getModelAccess() {
+		return (pModel != null) ? pModel : (pModel = new ModelElements());
 	}
 	
-	public ParserRule getSequencemodelRule() {
-		return getSequencemodelAccess().getRule();
+	public ParserRule getModelRule() {
+		return getModelAccess().getRule();
 	}
 
 	//Import:
@@ -480,6 +667,46 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getTransitionBlockAccess().getRule();
 	}
 
+	//Fragment:
+	//	IfElseFragment | ForeachFragment | AsserFragment;
+	public FragmentElements getFragmentAccess() {
+		return (pFragment != null) ? pFragment : (pFragment = new FragmentElements());
+	}
+	
+	public ParserRule getFragmentRule() {
+		return getFragmentAccess().getRule();
+	}
+
+	//IfElseFragment:
+	//	"if" expr=ValueWithSpaces "then" transition+=Message* ("else" elseTransition+=Message*)? "end";
+	public IfElseFragmentElements getIfElseFragmentAccess() {
+		return (pIfElseFragment != null) ? pIfElseFragment : (pIfElseFragment = new IfElseFragmentElements());
+	}
+	
+	public ParserRule getIfElseFragmentRule() {
+		return getIfElseFragmentAccess().getRule();
+	}
+
+	//ForeachFragment:
+	//	"foreach" expr=ValueWithSpaces "do" transition+=Message* "end";
+	public ForeachFragmentElements getForeachFragmentAccess() {
+		return (pForeachFragment != null) ? pForeachFragment : (pForeachFragment = new ForeachFragmentElements());
+	}
+	
+	public ParserRule getForeachFragmentRule() {
+		return getForeachFragmentAccess().getRule();
+	}
+
+	//AsserFragment:
+	//	"assert" expr=ValueWithSpaces "then" transition+=Message* "end";
+	public AsserFragmentElements getAsserFragmentAccess() {
+		return (pAsserFragment != null) ? pAsserFragment : (pAsserFragment = new AsserFragmentElements());
+	}
+	
+	public ParserRule getAsserFragmentRule() {
+		return getAsserFragmentAccess().getRule();
+	}
+
 	//Message:
 	//	CallMessage | NewMessage | ReturnMessage;
 	public MessageElements getMessageAccess() {
@@ -518,6 +745,16 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getReturnMessageRule() {
 		return getReturnMessageAccess().getRule();
+	}
+
+	//ValueWithSpaces hidden():
+	//	(OPERATOR | Value | ANY_OTHER | WS)*;
+	public ValueWithSpacesElements getValueWithSpacesAccess() {
+		return (pValueWithSpaces != null) ? pValueWithSpaces : (pValueWithSpaces = new ValueWithSpacesElements());
+	}
+	
+	public ParserRule getValueWithSpacesRule() {
+		return getValueWithSpacesAccess().getRule();
 	}
 
 	//// e.g.: @Generate(Java)
@@ -584,19 +821,6 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getExtendedIDAccess().getRule();
 	}
 
-	//// e.g.: Extended Value with whitespace support. In order to make
-	//// this rule works, use hidden() as in following example:
-	//// Guard hidden(): 'if ' expr=Expression ' then';   
-	//ValueWithSpaces hidden():
-	//	(Value | ANY_OTHER | WS)*;
-	public AnnotationGrammarAccess.ValueWithSpacesElements getValueWithSpacesAccess() {
-		return gaAnnotation.getValueWithSpacesAccess();
-	}
-	
-	public ParserRule getValueWithSpacesRule() {
-		return getValueWithSpacesAccess().getRule();
-	}
-
 	//CompositeID returns ecore::EString:
 	//	ExtendedID | STRING;
 	public AnnotationGrammarAccess.CompositeIDElements getCompositeIDAccess() {
@@ -626,6 +850,13 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 	public ParserRule getIntegerRule() {
 		return getIntegerAccess().getRule();
 	}
+
+	//// FIXME: http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B
+	//terminal OPERATOR:
+	//	"++" | "--" | "==" | ">=" | "<=" | "!=" | "<>" | "||" | "&&" | "-=" | "+=" | "=" | ">>" | "<<" | "|=";
+	public TerminalRule getOPERATORRule() {
+		return gaAnnotation.getOPERATORRule();
+	} 
 
 	//terminal BOOLEAN:
 	//	"true" | "false";

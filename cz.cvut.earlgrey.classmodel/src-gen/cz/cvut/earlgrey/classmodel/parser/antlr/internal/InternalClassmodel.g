@@ -2533,6 +2533,8 @@ ruleVisibility returns [Enumerator current=null]
 
 RULE_CONSTRAINT : '{' ( options {greedy=false;} : . )*'}';
 
+RULE_OPERATOR : ('++'|'--'|'=='|'>='|'<='|'!='|'<>'|'||'|'&&'|'-='|'+='|'='|'>>'|'<<'|'|=');
+
 RULE_BOOLEAN : ('true'|'false');
 
 RULE_NULL : ('null'|'nil'|'NULL');

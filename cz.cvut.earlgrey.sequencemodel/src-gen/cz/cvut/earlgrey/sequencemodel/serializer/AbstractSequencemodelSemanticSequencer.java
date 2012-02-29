@@ -6,13 +6,16 @@ import cz.cvut.earlgrey.annotation.annotation.Annotation;
 import cz.cvut.earlgrey.annotation.annotation.AnnotationPackage;
 import cz.cvut.earlgrey.annotation.annotation.Parameter;
 import cz.cvut.earlgrey.annotation.serializer.AnnotationSemanticSequencer;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.AsserFragment;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.ForeachFragment;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.IfElseFragment;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Import;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Model;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.NewMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequence;
-import cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequencemodel;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.TransitionBlock;
 import cz.cvut.earlgrey.sequencemodel.services.SequencemodelGrammarAccess;
@@ -84,6 +87,13 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 				else break;
 			}
 		else if(semanticObject.eClass().getEPackage() == SequencemodelPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case SequencemodelPackage.ASSER_FRAGMENT:
+				if(context == grammarAccess.getAsserFragmentRule() ||
+				   context == grammarAccess.getFragmentRule()) {
+					sequence_AsserFragment(context, (AsserFragment) semanticObject); 
+					return; 
+				}
+				else break;
 			case SequencemodelPackage.CALL_MESSAGE:
 				if(context == grammarAccess.getCallMessageRule() ||
 				   context == grammarAccess.getMessageRule() ||
@@ -92,9 +102,29 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 					return; 
 				}
 				else break;
+			case SequencemodelPackage.FOREACH_FRAGMENT:
+				if(context == grammarAccess.getForeachFragmentRule() ||
+				   context == grammarAccess.getFragmentRule()) {
+					sequence_ForeachFragment(context, (ForeachFragment) semanticObject); 
+					return; 
+				}
+				else break;
+			case SequencemodelPackage.IF_ELSE_FRAGMENT:
+				if(context == grammarAccess.getFragmentRule() ||
+				   context == grammarAccess.getIfElseFragmentRule()) {
+					sequence_IfElseFragment(context, (IfElseFragment) semanticObject); 
+					return; 
+				}
+				else break;
 			case SequencemodelPackage.IMPORT:
 				if(context == grammarAccess.getImportRule()) {
 					sequence_Import(context, (Import) semanticObject); 
+					return; 
+				}
+				else break;
+			case SequencemodelPackage.MODEL:
+				if(context == grammarAccess.getModelRule()) {
+					sequence_Model(context, (Model) semanticObject); 
 					return; 
 				}
 				else break;
@@ -126,12 +156,6 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 					return; 
 				}
 				else break;
-			case SequencemodelPackage.SEQUENCEMODEL:
-				if(context == grammarAccess.getSequencemodelRule()) {
-					sequence_Sequencemodel(context, (Sequencemodel) semanticObject); 
-					return; 
-				}
-				else break;
 			case SequencemodelPackage.TRANSITION_BLOCK:
 				if(context == grammarAccess.getTransitionRule() ||
 				   context == grammarAccess.getTransitionBlockRule()) {
@@ -149,6 +173,15 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	 */
 	protected void sequence_Annotation(EObject context, Annotation semanticObject) {
 		superSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (expr=ValueWithSpaces transition+=Message*)
+	 */
+	protected void sequence_AsserFragment(EObject context, AsserFragment semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -172,6 +205,24 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
+	 *     (expr=ValueWithSpaces transition+=Message*)
+	 */
+	protected void sequence_ForeachFragment(EObject context, ForeachFragment semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (expr=ValueWithSpaces transition+=Message* elseTransition+=Message*)
+	 */
+	protected void sequence_IfElseFragment(EObject context, IfElseFragment semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     importURI=STRING
 	 */
 	protected void sequence_Import(EObject context, Import semanticObject) {
@@ -183,6 +234,15 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getImportAccess().getImportURISTRINGTerminalRuleCall_1_0(), semanticObject.getImportURI());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (imports+=Import* sequence+=Sequence*)
+	 */
+	protected void sequence_Model(EObject context, Model semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -234,15 +294,6 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	 *     (annotation+=Annotation* name=ID participant+=Participant*)
 	 */
 	protected void sequence_Sequence(EObject context, Sequence semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (imports+=Import* sequence+=Sequence*)
-	 */
-	protected void sequence_Sequencemodel(EObject context, Sequencemodel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

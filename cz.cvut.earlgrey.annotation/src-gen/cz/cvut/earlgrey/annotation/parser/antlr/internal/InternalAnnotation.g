@@ -534,6 +534,8 @@ ruleInteger returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()
 
 
 
+RULE_OPERATOR : ('++'|'--'|'=='|'>='|'<='|'!='|'<>'|'||'|'&&'|'-='|'+='|'='|'>>'|'<<'|'|=');
+
 RULE_BOOLEAN : ('true'|'false');
 
 RULE_NULL : ('null'|'nil'|'NULL');

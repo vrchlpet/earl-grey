@@ -446,187 +446,42 @@ public class InternalStatemodelLexer extends Lexer {
     }
     // $ANTLR end "T__33"
 
-    // $ANTLR start "RULE_OPERATOR"
-    public final void mRULE_OPERATOR() throws RecognitionException {
-        try {
-            int _type = RULE_OPERATOR;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:15: ( ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:17: ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' )
-            {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:17: ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' )
-            int alt1=15;
-            alt1 = dfa1.predict(input);
-            switch (alt1) {
-                case 1 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:18: '++'
-                    {
-                    match("++"); 
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:23: '--'
-                    {
-                    match("--"); 
-
-
-                    }
-                    break;
-                case 3 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:28: '=='
-                    {
-                    match("=="); 
-
-
-                    }
-                    break;
-                case 4 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:33: '>='
-                    {
-                    match(">="); 
-
-
-                    }
-                    break;
-                case 5 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:38: '<='
-                    {
-                    match("<="); 
-
-
-                    }
-                    break;
-                case 6 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:43: '!='
-                    {
-                    match("!="); 
-
-
-                    }
-                    break;
-                case 7 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:48: '<>'
-                    {
-                    match("<>"); 
-
-
-                    }
-                    break;
-                case 8 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:53: '||'
-                    {
-                    match("||"); 
-
-
-                    }
-                    break;
-                case 9 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:58: '&&'
-                    {
-                    match("&&"); 
-
-
-                    }
-                    break;
-                case 10 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:63: '-='
-                    {
-                    match("-="); 
-
-
-                    }
-                    break;
-                case 11 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:68: '+='
-                    {
-                    match("+="); 
-
-
-                    }
-                    break;
-                case 12 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:73: '='
-                    {
-                    match('='); 
-
-                    }
-                    break;
-                case 13 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:77: '>>'
-                    {
-                    match(">>"); 
-
-
-                    }
-                    break;
-                case 14 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:82: '<<'
-                    {
-                    match("<<"); 
-
-
-                    }
-                    break;
-                case 15 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:87: '|='
-                    {
-                    match("|="); 
-
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_OPERATOR"
-
     // $ANTLR start "RULE_ARROW"
     public final void mRULE_ARROW() throws RecognitionException {
         try {
             int _type = RULE_ARROW;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:12: ( ( '->' | 'goto' | '=>' ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:14: ( '->' | 'goto' | '=>' )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:12: ( ( '->' | 'goto' | '=>' ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:14: ( '->' | 'goto' | '=>' )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:14: ( '->' | 'goto' | '=>' )
-            int alt2=3;
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:14: ( '->' | 'goto' | '=>' )
+            int alt1=3;
             switch ( input.LA(1) ) {
             case '-':
                 {
-                alt2=1;
+                alt1=1;
                 }
                 break;
             case 'g':
                 {
-                alt2=2;
+                alt1=2;
                 }
                 break;
             case '=':
                 {
-                alt2=3;
+                alt1=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 2, 0, input);
+                    new NoViableAltException("", 1, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt2) {
+            switch (alt1) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:15: '->'
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:15: '->'
                     {
                     match("->"); 
 
@@ -634,7 +489,7 @@ public class InternalStatemodelLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:20: 'goto'
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:20: 'goto'
                     {
                     match("goto"); 
 
@@ -642,7 +497,7 @@ public class InternalStatemodelLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:27: '=>'
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2798:27: '=>'
                     {
                     match("=>"); 
 
@@ -662,6 +517,151 @@ public class InternalStatemodelLexer extends Lexer {
         }
     }
     // $ANTLR end "RULE_ARROW"
+
+    // $ANTLR start "RULE_OPERATOR"
+    public final void mRULE_OPERATOR() throws RecognitionException {
+        try {
+            int _type = RULE_OPERATOR;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:15: ( ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:17: ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' )
+            {
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:17: ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' )
+            int alt2=15;
+            alt2 = dfa2.predict(input);
+            switch (alt2) {
+                case 1 :
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:18: '++'
+                    {
+                    match("++"); 
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:23: '--'
+                    {
+                    match("--"); 
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:28: '=='
+                    {
+                    match("=="); 
+
+
+                    }
+                    break;
+                case 4 :
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:33: '>='
+                    {
+                    match(">="); 
+
+
+                    }
+                    break;
+                case 5 :
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:38: '<='
+                    {
+                    match("<="); 
+
+
+                    }
+                    break;
+                case 6 :
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:43: '!='
+                    {
+                    match("!="); 
+
+
+                    }
+                    break;
+                case 7 :
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:48: '<>'
+                    {
+                    match("<>"); 
+
+
+                    }
+                    break;
+                case 8 :
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:53: '||'
+                    {
+                    match("||"); 
+
+
+                    }
+                    break;
+                case 9 :
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:58: '&&'
+                    {
+                    match("&&"); 
+
+
+                    }
+                    break;
+                case 10 :
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:63: '-='
+                    {
+                    match("-="); 
+
+
+                    }
+                    break;
+                case 11 :
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:68: '+='
+                    {
+                    match("+="); 
+
+
+                    }
+                    break;
+                case 12 :
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:73: '='
+                    {
+                    match('='); 
+
+                    }
+                    break;
+                case 13 :
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:77: '>>'
+                    {
+                    match(">>"); 
+
+
+                    }
+                    break;
+                case 14 :
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:82: '<<'
+                    {
+                    match("<<"); 
+
+
+                    }
+                    break;
+                case 15 :
+                    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2800:87: '|='
+                    {
+                    match("|="); 
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_OPERATOR"
 
     // $ANTLR start "RULE_BOOLEAN"
     public final void mRULE_BOOLEAN() throws RecognitionException {
@@ -1291,7 +1291,7 @@ public class InternalStatemodelLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:1:8: ( T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | RULE_OPERATOR | RULE_ARROW | RULE_BOOLEAN | RULE_NULL | RULE_ID | RULE_NATURAL | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:1:8: ( T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | RULE_ARROW | RULE_OPERATOR | RULE_BOOLEAN | RULE_NULL | RULE_ID | RULE_NATURAL | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
         int alt15=30;
         alt15 = dfa15.predict(input);
         switch (alt15) {
@@ -1429,16 +1429,16 @@ public class InternalStatemodelLexer extends Lexer {
                 }
                 break;
             case 20 :
-                // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:1:124: RULE_OPERATOR
+                // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:1:124: RULE_ARROW
                 {
-                mRULE_OPERATOR(); 
+                mRULE_ARROW(); 
 
                 }
                 break;
             case 21 :
-                // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:1:138: RULE_ARROW
+                // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:1:135: RULE_OPERATOR
                 {
-                mRULE_ARROW(); 
+                mRULE_OPERATOR(); 
 
                 }
                 break;
@@ -1511,22 +1511,22 @@ public class InternalStatemodelLexer extends Lexer {
     }
 
 
-    protected DFA1 dfa1 = new DFA1(this);
+    protected DFA2 dfa2 = new DFA2(this);
     protected DFA15 dfa15 = new DFA15(this);
-    static final String DFA1_eotS =
+    static final String DFA2_eotS =
         "\3\uffff\1\16\22\uffff";
-    static final String DFA1_eofS =
+    static final String DFA2_eofS =
         "\26\uffff";
-    static final String DFA1_minS =
+    static final String DFA2_minS =
         "\1\41\1\53\1\55\2\75\1\74\1\uffff\1\75\16\uffff";
-    static final String DFA1_maxS =
+    static final String DFA2_maxS =
         "\1\174\3\75\2\76\1\uffff\1\174\16\uffff";
-    static final String DFA1_acceptS =
+    static final String DFA2_acceptS =
         "\6\uffff\1\6\1\uffff\1\11\1\1\1\13\1\2\1\12\1\3\1\14\1\4\1\15\1"+
         "\5\1\7\1\16\1\10\1\17";
-    static final String DFA1_specialS =
+    static final String DFA2_specialS =
         "\26\uffff}>";
-    static final String[] DFA1_transitionS = {
+    static final String[] DFA2_transitionS = {
             "\1\6\4\uffff\1\10\4\uffff\1\1\1\uffff\1\2\16\uffff\1\5\1\3"+
             "\1\4\75\uffff\1\7",
             "\1\11\21\uffff\1\12",
@@ -1552,51 +1552,51 @@ public class InternalStatemodelLexer extends Lexer {
             ""
     };
 
-    static final short[] DFA1_eot = DFA.unpackEncodedString(DFA1_eotS);
-    static final short[] DFA1_eof = DFA.unpackEncodedString(DFA1_eofS);
-    static final char[] DFA1_min = DFA.unpackEncodedStringToUnsignedChars(DFA1_minS);
-    static final char[] DFA1_max = DFA.unpackEncodedStringToUnsignedChars(DFA1_maxS);
-    static final short[] DFA1_accept = DFA.unpackEncodedString(DFA1_acceptS);
-    static final short[] DFA1_special = DFA.unpackEncodedString(DFA1_specialS);
-    static final short[][] DFA1_transition;
+    static final short[] DFA2_eot = DFA.unpackEncodedString(DFA2_eotS);
+    static final short[] DFA2_eof = DFA.unpackEncodedString(DFA2_eofS);
+    static final char[] DFA2_min = DFA.unpackEncodedStringToUnsignedChars(DFA2_minS);
+    static final char[] DFA2_max = DFA.unpackEncodedStringToUnsignedChars(DFA2_maxS);
+    static final short[] DFA2_accept = DFA.unpackEncodedString(DFA2_acceptS);
+    static final short[] DFA2_special = DFA.unpackEncodedString(DFA2_specialS);
+    static final short[][] DFA2_transition;
 
     static {
-        int numStates = DFA1_transitionS.length;
-        DFA1_transition = new short[numStates][];
+        int numStates = DFA2_transitionS.length;
+        DFA2_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA1_transition[i] = DFA.unpackEncodedString(DFA1_transitionS[i]);
+            DFA2_transition[i] = DFA.unpackEncodedString(DFA2_transitionS[i]);
         }
     }
 
-    class DFA1 extends DFA {
+    class DFA2 extends DFA {
 
-        public DFA1(BaseRecognizer recognizer) {
+        public DFA2(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 1;
-            this.eot = DFA1_eot;
-            this.eof = DFA1_eof;
-            this.min = DFA1_min;
-            this.max = DFA1_max;
-            this.accept = DFA1_accept;
-            this.special = DFA1_special;
-            this.transition = DFA1_transition;
+            this.decisionNumber = 2;
+            this.eot = DFA2_eot;
+            this.eof = DFA2_eof;
+            this.min = DFA2_min;
+            this.max = DFA2_max;
+            this.accept = DFA2_accept;
+            this.special = DFA2_special;
+            this.transition = DFA2_transition;
         }
         public String getDescription() {
-            return "2798:17: ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' )";
+            return "2800:17: ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' )";
         }
     }
     static final String DFA15_eotS =
-        "\1\uffff\1\40\1\42\1\44\1\46\5\41\4\uffff\1\64\1\uffff\5\36\3\41"+
-        "\2\uffff\3\36\2\uffff\1\41\7\uffff\3\41\1\103\2\41\1\106\2\41\6"+
-        "\uffff\4\41\5\uffff\1\115\3\41\1\uffff\2\41\1\uffff\4\41\1\127\1"+
-        "\41\1\uffff\5\41\1\136\1\137\1\45\1\127\1\uffff\1\127\1\141\2\41"+
-        "\1\144\1\137\2\uffff\1\41\1\uffff\1\41\1\147\1\uffff\1\41\1\151"+
-        "\1\uffff\1\41\1\uffff\3\41\1\156\1\uffff";
+        "\1\uffff\1\40\1\42\1\44\1\46\5\41\4\uffff\1\64\1\uffff\1\41\5\36"+
+        "\2\41\2\uffff\3\36\2\uffff\1\41\7\uffff\3\41\1\103\2\41\1\106\2"+
+        "\41\6\uffff\4\41\5\uffff\1\115\3\41\1\uffff\2\41\1\uffff\4\41\1"+
+        "\127\1\41\1\uffff\5\41\1\136\1\137\1\45\1\127\1\uffff\1\127\1\141"+
+        "\2\41\1\144\1\137\2\uffff\1\41\1\uffff\1\41\1\147\1\uffff\1\41\1"+
+        "\151\1\uffff\1\41\1\uffff\3\41\1\156\1\uffff";
     static final String DFA15_eofS =
         "\157\uffff";
     static final String DFA15_minS =
         "\1\0\2\60\1\53\1\55\1\164\1\146\1\141\1\157\1\150\4\uffff\1\75"+
-        "\1\uffff\1\75\1\74\2\75\1\46\1\157\1\151\1\125\2\uffff\2\0\1\52"+
+        "\1\uffff\1\157\1\75\1\74\2\75\1\46\1\151\1\125\2\uffff\2\0\1\52"+
         "\2\uffff\1\144\7\uffff\1\141\1\151\1\160\1\60\1\156\1\154\1\60\1"+
         "\145\1\165\6\uffff\1\164\2\154\1\114\5\uffff\1\60\2\164\1\157\1"+
         "\uffff\1\141\1\163\1\uffff\1\156\1\145\1\157\1\154\1\60\1\114\1"+
@@ -1605,7 +1605,7 @@ public class InternalStatemodelLexer extends Lexer {
         "\1\150\1\uffff\1\151\1\156\1\145\1\60\1\uffff";
     static final String DFA15_maxS =
         "\1\uffff\2\172\1\75\1\76\1\164\1\156\1\151\1\157\1\162\4\uffff"+
-        "\1\76\1\uffff\2\76\1\75\1\174\1\46\1\157\1\165\1\125\2\uffff\2\uffff"+
+        "\1\76\1\uffff\1\157\2\76\1\75\1\174\1\46\1\165\1\125\2\uffff\2\uffff"+
         "\1\57\2\uffff\1\144\7\uffff\1\141\1\151\1\160\1\172\1\156\1\154"+
         "\1\172\1\145\1\165\6\uffff\1\164\2\154\1\114\5\uffff\1\172\2\164"+
         "\1\157\1\uffff\1\141\1\163\1\uffff\1\156\1\145\1\157\1\154\1\172"+
@@ -1614,19 +1614,19 @@ public class InternalStatemodelLexer extends Lexer {
         "\1\172\1\uffff\1\150\1\uffff\1\151\1\156\1\145\1\172\1\uffff";
     static final String DFA15_acceptS =
         "\12\uffff\1\16\1\17\1\20\1\21\1\uffff\1\23\10\uffff\1\30\1\31\3"+
-        "\uffff\1\35\1\36\1\uffff\1\1\1\30\1\2\1\24\1\3\1\25\1\4\11\uffff"+
+        "\uffff\1\35\1\36\1\uffff\1\1\1\30\1\2\1\25\1\3\1\24\1\4\11\uffff"+
         "\1\16\1\17\1\20\1\21\1\22\1\23\4\uffff\1\31\1\32\1\33\1\34\1\35"+
         "\4\uffff\1\14\2\uffff\1\13\6\uffff\1\12\11\uffff\1\27\6\uffff\1"+
         "\15\1\26\1\uffff\1\5\2\uffff\1\7\2\uffff\1\10\1\uffff\1\6\4\uffff"+
         "\1\11";
     static final String DFA15_specialS =
-        "\1\1\31\uffff\1\0\1\2\123\uffff}>";
+        "\1\2\31\uffff\1\0\1\1\123\uffff}>";
     static final String[] DFA15_transitionS = {
-            "\11\36\2\35\2\36\1\35\22\36\1\35\1\22\1\32\3\36\1\24\1\33\1"+
-            "\13\1\14\1\36\1\3\1\15\1\4\1\17\1\34\12\31\2\36\1\21\1\16\1"+
-            "\20\1\36\1\12\4\30\1\2\10\30\1\27\14\30\4\36\1\30\1\36\3\30"+
-            "\1\10\1\1\1\7\1\25\1\30\1\6\4\30\1\26\4\30\1\5\1\11\6\30\1\36"+
-            "\1\23\uff83\36",
+            "\11\36\2\35\2\36\1\35\22\36\1\35\1\23\1\32\3\36\1\25\1\33\1"+
+            "\13\1\14\1\36\1\3\1\15\1\4\1\17\1\34\12\31\2\36\1\22\1\16\1"+
+            "\21\1\36\1\12\4\30\1\2\10\30\1\27\14\30\4\36\1\30\1\36\3\30"+
+            "\1\10\1\1\1\7\1\20\1\30\1\6\4\30\1\26\4\30\1\5\1\11\6\30\1\36"+
+            "\1\24\uff83\36",
             "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\15\41\1\37\14\41",
             "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\43\21\uffff\1\43",
@@ -1642,12 +1642,12 @@ public class InternalStatemodelLexer extends Lexer {
             "",
             "\1\43\1\45",
             "",
+            "\1\66",
             "\2\43",
             "\3\43",
             "\1\43",
             "\1\43\76\uffff\1\43",
             "\1\43",
-            "\1\66",
             "\1\70\13\uffff\1\67",
             "\1\71",
             "",
@@ -1769,7 +1769,7 @@ public class InternalStatemodelLexer extends Lexer {
             this.transition = DFA15_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | RULE_OPERATOR | RULE_ARROW | RULE_BOOLEAN | RULE_NULL | RULE_ID | RULE_NATURAL | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | RULE_ARROW | RULE_OPERATOR | RULE_BOOLEAN | RULE_NULL | RULE_ID | RULE_NATURAL | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
@@ -1786,6 +1786,16 @@ public class InternalStatemodelLexer extends Lexer {
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
+                        int LA15_27 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA15_27>='\u0000' && LA15_27<='\uFFFF')) ) {s = 59;}
+
+                        else s = 30;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
                         int LA15_0 = input.LA(1);
 
                         s = -1;
@@ -1819,17 +1829,17 @@ public class InternalStatemodelLexer extends Lexer {
 
                         else if ( (LA15_0=='.') ) {s = 15;}
 
-                        else if ( (LA15_0=='>') ) {s = 16;}
+                        else if ( (LA15_0=='g') ) {s = 16;}
 
-                        else if ( (LA15_0=='<') ) {s = 17;}
+                        else if ( (LA15_0=='>') ) {s = 17;}
 
-                        else if ( (LA15_0=='!') ) {s = 18;}
+                        else if ( (LA15_0=='<') ) {s = 18;}
 
-                        else if ( (LA15_0=='|') ) {s = 19;}
+                        else if ( (LA15_0=='!') ) {s = 19;}
 
-                        else if ( (LA15_0=='&') ) {s = 20;}
+                        else if ( (LA15_0=='|') ) {s = 20;}
 
-                        else if ( (LA15_0=='g') ) {s = 21;}
+                        else if ( (LA15_0=='&') ) {s = 21;}
 
                         else if ( (LA15_0=='n') ) {s = 22;}
 
@@ -1848,16 +1858,6 @@ public class InternalStatemodelLexer extends Lexer {
                         else if ( ((LA15_0>='\t' && LA15_0<='\n')||LA15_0=='\r'||LA15_0==' ') ) {s = 29;}
 
                         else if ( ((LA15_0>='\u0000' && LA15_0<='\b')||(LA15_0>='\u000B' && LA15_0<='\f')||(LA15_0>='\u000E' && LA15_0<='\u001F')||(LA15_0>='#' && LA15_0<='%')||LA15_0=='*'||(LA15_0>=':' && LA15_0<=';')||LA15_0=='?'||(LA15_0>='[' && LA15_0<='^')||LA15_0=='`'||LA15_0=='{'||(LA15_0>='}' && LA15_0<='\uFFFF')) ) {s = 30;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA15_27 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA15_27>='\u0000' && LA15_27<='\uFFFF')) ) {s = 59;}
-
-                        else s = 30;
 
                         if ( s>=0 ) return s;
                         break;

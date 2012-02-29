@@ -61,14 +61,14 @@ public interface SequencemodelPackage extends EPackage
   SequencemodelPackage eINSTANCE = cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelImpl <em>Sequencemodel</em>}' class.
+   * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ModelImpl <em>Model</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelImpl
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getSequencemodel()
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ModelImpl
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getModel()
    * @generated
    */
-  int SEQUENCEMODEL = 0;
+  int MODEL = 0;
 
   /**
    * The feature id for the '<em><b>Imports</b></em>' containment reference list.
@@ -77,7 +77,7 @@ public interface SequencemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SEQUENCEMODEL__IMPORTS = 0;
+  int MODEL__IMPORTS = 0;
 
   /**
    * The feature id for the '<em><b>Sequence</b></em>' containment reference list.
@@ -86,16 +86,16 @@ public interface SequencemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SEQUENCEMODEL__SEQUENCE = 1;
+  int MODEL__SEQUENCE = 1;
 
   /**
-   * The number of structural features of the '<em>Sequencemodel</em>' class.
+   * The number of structural features of the '<em>Model</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SEQUENCEMODEL_FEATURE_COUNT = 2;
+  int MODEL_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ImportImpl <em>Import</em>}' class.
@@ -265,6 +265,163 @@ public interface SequencemodelPackage extends EPackage
   int TRANSITION_BLOCK_FEATURE_COUNT = TRANSITION_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.FragmentImpl <em>Fragment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.FragmentImpl
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getFragment()
+   * @generated
+   */
+  int FRAGMENT = 6;
+
+  /**
+   * The feature id for the '<em><b>Expr</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FRAGMENT__EXPR = 0;
+
+  /**
+   * The feature id for the '<em><b>Transition</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FRAGMENT__TRANSITION = 1;
+
+  /**
+   * The number of structural features of the '<em>Fragment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FRAGMENT_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.IfElseFragmentImpl <em>If Else Fragment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.IfElseFragmentImpl
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getIfElseFragment()
+   * @generated
+   */
+  int IF_ELSE_FRAGMENT = 7;
+
+  /**
+   * The feature id for the '<em><b>Expr</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF_ELSE_FRAGMENT__EXPR = FRAGMENT__EXPR;
+
+  /**
+   * The feature id for the '<em><b>Transition</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF_ELSE_FRAGMENT__TRANSITION = FRAGMENT__TRANSITION;
+
+  /**
+   * The feature id for the '<em><b>Else Transition</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF_ELSE_FRAGMENT__ELSE_TRANSITION = FRAGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>If Else Fragment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF_ELSE_FRAGMENT_FEATURE_COUNT = FRAGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ForeachFragmentImpl <em>Foreach Fragment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ForeachFragmentImpl
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getForeachFragment()
+   * @generated
+   */
+  int FOREACH_FRAGMENT = 8;
+
+  /**
+   * The feature id for the '<em><b>Expr</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOREACH_FRAGMENT__EXPR = FRAGMENT__EXPR;
+
+  /**
+   * The feature id for the '<em><b>Transition</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOREACH_FRAGMENT__TRANSITION = FRAGMENT__TRANSITION;
+
+  /**
+   * The number of structural features of the '<em>Foreach Fragment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOREACH_FRAGMENT_FEATURE_COUNT = FRAGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.AsserFragmentImpl <em>Asser Fragment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.AsserFragmentImpl
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getAsserFragment()
+   * @generated
+   */
+  int ASSER_FRAGMENT = 9;
+
+  /**
+   * The feature id for the '<em><b>Expr</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSER_FRAGMENT__EXPR = FRAGMENT__EXPR;
+
+  /**
+   * The feature id for the '<em><b>Transition</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSER_FRAGMENT__TRANSITION = FRAGMENT__TRANSITION;
+
+  /**
+   * The number of structural features of the '<em>Asser Fragment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSER_FRAGMENT_FEATURE_COUNT = FRAGMENT_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.MessageImpl <em>Message</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -272,7 +429,7 @@ public interface SequencemodelPackage extends EPackage
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getMessage()
    * @generated
    */
-  int MESSAGE = 6;
+  int MESSAGE = 10;
 
   /**
    * The number of structural features of the '<em>Message</em>' class.
@@ -291,7 +448,7 @@ public interface SequencemodelPackage extends EPackage
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getCallMessage()
    * @generated
    */
-  int CALL_MESSAGE = 7;
+  int CALL_MESSAGE = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -337,7 +494,7 @@ public interface SequencemodelPackage extends EPackage
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getNewMessage()
    * @generated
    */
-  int NEW_MESSAGE = 8;
+  int NEW_MESSAGE = 12;
 
   /**
    * The feature id for the '<em><b>Participant</b></em>' attribute.
@@ -365,7 +522,7 @@ public interface SequencemodelPackage extends EPackage
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getReturnMessage()
    * @generated
    */
-  int RETURN_MESSAGE = 9;
+  int RETURN_MESSAGE = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -396,36 +553,36 @@ public interface SequencemodelPackage extends EPackage
 
 
   /**
-   * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequencemodel <em>Sequencemodel</em>}'.
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Model <em>Model</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Sequencemodel</em>'.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequencemodel
+   * @return the meta object for class '<em>Model</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Model
    * @generated
    */
-  EClass getSequencemodel();
+  EClass getModel();
 
   /**
-   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequencemodel#getImports <em>Imports</em>}'.
+   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Model#getImports <em>Imports</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Imports</em>'.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequencemodel#getImports()
-   * @see #getSequencemodel()
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Model#getImports()
+   * @see #getModel()
    * @generated
    */
-  EReference getSequencemodel_Imports();
+  EReference getModel_Imports();
 
   /**
-   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequencemodel#getSequence <em>Sequence</em>}'.
+   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Model#getSequence <em>Sequence</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Sequence</em>'.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequencemodel#getSequence()
-   * @see #getSequencemodel()
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Model#getSequence()
+   * @see #getModel()
    * @generated
    */
-  EReference getSequencemodel_Sequence();
+  EReference getModel_Sequence();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Import <em>Import</em>}'.
@@ -566,6 +723,79 @@ public interface SequencemodelPackage extends EPackage
   EReference getTransitionBlock_Transition();
 
   /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Fragment <em>Fragment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Fragment</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Fragment
+   * @generated
+   */
+  EClass getFragment();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Fragment#getExpr <em>Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Expr</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Fragment#getExpr()
+   * @see #getFragment()
+   * @generated
+   */
+  EAttribute getFragment_Expr();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Fragment#getTransition <em>Transition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Transition</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Fragment#getTransition()
+   * @see #getFragment()
+   * @generated
+   */
+  EReference getFragment_Transition();
+
+  /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.IfElseFragment <em>If Else Fragment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>If Else Fragment</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.IfElseFragment
+   * @generated
+   */
+  EClass getIfElseFragment();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.IfElseFragment#getElseTransition <em>Else Transition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Else Transition</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.IfElseFragment#getElseTransition()
+   * @see #getIfElseFragment()
+   * @generated
+   */
+  EReference getIfElseFragment_ElseTransition();
+
+  /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.ForeachFragment <em>Foreach Fragment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Foreach Fragment</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.ForeachFragment
+   * @generated
+   */
+  EClass getForeachFragment();
+
+  /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.AsserFragment <em>Asser Fragment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Asser Fragment</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.AsserFragment
+   * @generated
+   */
+  EClass getAsserFragment();
+
+  /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Message <em>Message</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -695,14 +925,14 @@ public interface SequencemodelPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelImpl <em>Sequencemodel</em>}' class.
+     * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ModelImpl <em>Model</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelImpl
-     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getSequencemodel()
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ModelImpl
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getModel()
      * @generated
      */
-    EClass SEQUENCEMODEL = eINSTANCE.getSequencemodel();
+    EClass MODEL = eINSTANCE.getModel();
 
     /**
      * The meta object literal for the '<em><b>Imports</b></em>' containment reference list feature.
@@ -710,7 +940,7 @@ public interface SequencemodelPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SEQUENCEMODEL__IMPORTS = eINSTANCE.getSequencemodel_Imports();
+    EReference MODEL__IMPORTS = eINSTANCE.getModel_Imports();
 
     /**
      * The meta object literal for the '<em><b>Sequence</b></em>' containment reference list feature.
@@ -718,7 +948,7 @@ public interface SequencemodelPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SEQUENCEMODEL__SEQUENCE = eINSTANCE.getSequencemodel_Sequence();
+    EReference MODEL__SEQUENCE = eINSTANCE.getModel_Sequence();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ImportImpl <em>Import</em>}' class.
@@ -833,6 +1063,70 @@ public interface SequencemodelPackage extends EPackage
      * @generated
      */
     EReference TRANSITION_BLOCK__TRANSITION = eINSTANCE.getTransitionBlock_Transition();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.FragmentImpl <em>Fragment</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.FragmentImpl
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getFragment()
+     * @generated
+     */
+    EClass FRAGMENT = eINSTANCE.getFragment();
+
+    /**
+     * The meta object literal for the '<em><b>Expr</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FRAGMENT__EXPR = eINSTANCE.getFragment_Expr();
+
+    /**
+     * The meta object literal for the '<em><b>Transition</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FRAGMENT__TRANSITION = eINSTANCE.getFragment_Transition();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.IfElseFragmentImpl <em>If Else Fragment</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.IfElseFragmentImpl
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getIfElseFragment()
+     * @generated
+     */
+    EClass IF_ELSE_FRAGMENT = eINSTANCE.getIfElseFragment();
+
+    /**
+     * The meta object literal for the '<em><b>Else Transition</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference IF_ELSE_FRAGMENT__ELSE_TRANSITION = eINSTANCE.getIfElseFragment_ElseTransition();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ForeachFragmentImpl <em>Foreach Fragment</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ForeachFragmentImpl
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getForeachFragment()
+     * @generated
+     */
+    EClass FOREACH_FRAGMENT = eINSTANCE.getForeachFragment();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.AsserFragmentImpl <em>Asser Fragment</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.AsserFragmentImpl
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getAsserFragment()
+     * @generated
+     */
+    EClass ASSER_FRAGMENT = eINSTANCE.getAsserFragment();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.MessageImpl <em>Message</em>}' class.

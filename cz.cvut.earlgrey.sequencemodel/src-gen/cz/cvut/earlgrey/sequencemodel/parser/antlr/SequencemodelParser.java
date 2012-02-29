@@ -25,7 +25,7 @@ public class SequencemodelParser extends org.eclipse.xtext.parser.antlr.Abstract
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Sequencemodel";
+		return "Model";
 	}
 	
 	public SequencemodelGrammarAccess getGrammarAccess() {
