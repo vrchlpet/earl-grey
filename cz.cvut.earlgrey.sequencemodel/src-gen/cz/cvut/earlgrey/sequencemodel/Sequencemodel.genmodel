@@ -22,12 +22,14 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Sequence/participant"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//Participant">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Participant/annotation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Participant/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Participant/transition"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//Transition"/>
     <genClasses ecoreClass="Sequencemodel.ecore#//TransitionBlock">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//TransitionBlock/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//TransitionBlock/parameter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//TransitionBlock/transition"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//Fragment">
@@ -35,22 +37,35 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Fragment/transition"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//IfElseFragment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//IfElseFragment/elseIfExpr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//IfElseFragment/elseIftransition"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//IfElseFragment/elseTransition"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//ForeachFragment"/>
-    <genClasses ecoreClass="Sequencemodel.ecore#//AsserFragment"/>
-    <genClasses ecoreClass="Sequencemodel.ecore#//Message"/>
+    <genClasses ecoreClass="Sequencemodel.ecore#//LoopFragment"/>
+    <genClasses ecoreClass="Sequencemodel.ecore#//AssertFragment"/>
+    <genClasses ecoreClass="Sequencemodel.ecore#//Message">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Message/parameter"/>
+    </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//CallMessage">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//CallMessage/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//CallMessage/param"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//CallMessage/participant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//CallMessage/name"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//NewMessage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//NewMessage/participant"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//ReturnMessage">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//ReturnMessage/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//ReturnMessage/param"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//ReturnMessage/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//Parameter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Parameter/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//Reference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Reference/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Reference/array"/>
+    </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//Array">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Array/size"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

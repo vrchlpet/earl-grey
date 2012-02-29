@@ -124,9 +124,14 @@ public class SequencemodelAdapterFactory extends AdapterFactoryImpl
         return createForeachFragmentAdapter();
       }
       @Override
-      public Adapter caseAsserFragment(AsserFragment object)
+      public Adapter caseLoopFragment(LoopFragment object)
       {
-        return createAsserFragmentAdapter();
+        return createLoopFragmentAdapter();
+      }
+      @Override
+      public Adapter caseAssertFragment(AssertFragment object)
+      {
+        return createAssertFragmentAdapter();
       }
       @Override
       public Adapter caseMessage(Message object)
@@ -147,6 +152,26 @@ public class SequencemodelAdapterFactory extends AdapterFactoryImpl
       public Adapter caseReturnMessage(ReturnMessage object)
       {
         return createReturnMessageAdapter();
+      }
+      @Override
+      public Adapter caseParameter(Parameter object)
+      {
+        return createParameterAdapter();
+      }
+      @Override
+      public Adapter caseReference(Reference object)
+      {
+        return createReferenceAdapter();
+      }
+      @Override
+      public Adapter caseArray(Array object)
+      {
+        return createArrayAdapter();
+      }
+      @Override
+      public Adapter caseAnnotation_Parameter(cz.cvut.earlgrey.annotation.annotation.Parameter object)
+      {
+        return createAnnotation_ParameterAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -306,16 +331,31 @@ public class SequencemodelAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.AsserFragment <em>Asser Fragment</em>}'.
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.LoopFragment <em>Loop Fragment</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.AsserFragment
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.LoopFragment
    * @generated
    */
-  public Adapter createAsserFragmentAdapter()
+  public Adapter createLoopFragmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.AssertFragment <em>Assert Fragment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.AssertFragment
+   * @generated
+   */
+  public Adapter createAssertFragmentAdapter()
   {
     return null;
   }
@@ -376,6 +416,66 @@ public class SequencemodelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createReturnMessageAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Parameter <em>Parameter</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Parameter
+   * @generated
+   */
+  public Adapter createParameterAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Reference <em>Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Reference
+   * @generated
+   */
+  public Adapter createReferenceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Array <em>Array</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Array
+   * @generated
+   */
+  public Adapter createArrayAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.annotation.annotation.Parameter <em>Parameter</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.annotation.annotation.Parameter
+   * @generated
+   */
+  public Adapter createAnnotation_ParameterAdapter()
   {
     return null;
   }

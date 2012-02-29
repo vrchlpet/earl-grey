@@ -13,7 +13,8 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalSequencemodelLexer extends Lexer {
     public static final int RULE_BOOLEAN=8;
-    public static final int RULE_ID=10;
+    public static final int T__40=40;
+    public static final int RULE_ID=11;
     public static final int T__29=29;
     public static final int T__28=28;
     public static final int T__27=27;
@@ -25,7 +26,7 @@ public class InternalSequencemodelLexer extends Lexer {
     public static final int RULE_ANY_OTHER=5;
     public static final int T__21=21;
     public static final int T__20=20;
-    public static final int RULE_NATURAL=11;
+    public static final int RULE_NATURAL=10;
     public static final int EOF=-1;
     public static final int RULE_SL_COMMENT=13;
     public static final int RULE_NULL=9;
@@ -43,7 +44,10 @@ public class InternalSequencemodelLexer extends Lexer {
     public static final int T__35=35;
     public static final int T__17=17;
     public static final int T__36=36;
+    public static final int T__37=37;
+    public static final int T__38=38;
     public static final int T__14=14;
+    public static final int T__39=39;
     public static final int RULE_OPERATOR=4;
     public static final int RULE_WS=6;
 
@@ -208,10 +212,11 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:18:7: ( ':' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:18:9: ':'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:18:7: ( 'def' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:18:9: 'def'
             {
-            match(':'); 
+            match("def"); 
+
 
             }
 
@@ -228,11 +233,10 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:19:7: ( 'if' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:19:9: 'if'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:19:7: ( '(' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:19:9: '('
             {
-            match("if"); 
-
+            match('('); 
 
             }
 
@@ -249,11 +253,10 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:20:7: ( 'then' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:20:9: 'then'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:20:7: ( ')' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:20:9: ')'
             {
-            match("then"); 
-
+            match(')'); 
 
             }
 
@@ -270,11 +273,10 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:21:7: ( 'else' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:21:9: 'else'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:21:7: ( ',' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:21:9: ','
             {
-            match("else"); 
-
+            match(','); 
 
             }
 
@@ -291,10 +293,10 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:22:7: ( 'foreach' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:22:9: 'foreach'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:22:7: ( 'if' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:22:9: 'if'
             {
-            match("foreach"); 
+            match("if"); 
 
 
             }
@@ -312,10 +314,10 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:23:7: ( 'do' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:23:9: 'do'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:23:7: ( 'then' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:23:9: 'then'
             {
-            match("do"); 
+            match("then"); 
 
 
             }
@@ -333,10 +335,10 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:24:7: ( 'assert' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:24:9: 'assert'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:24:7: ( 'elsif' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:24:9: 'elsif'
             {
-            match("assert"); 
+            match("elsif"); 
 
 
             }
@@ -354,10 +356,11 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:25:7: ( '(' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:25:9: '('
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:25:7: ( 'else' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:25:9: 'else'
             {
-            match('('); 
+            match("else"); 
+
 
             }
 
@@ -374,10 +377,11 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:26:7: ( ')' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:26:9: ')'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:26:7: ( 'foreach' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:26:9: 'foreach'
             {
-            match(')'); 
+            match("foreach"); 
+
 
             }
 
@@ -394,10 +398,10 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:27:7: ( ', ' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:27:9: ', '
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:27:7: ( 'do' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:27:9: 'do'
             {
-            match(", "); 
+            match("do"); 
 
 
             }
@@ -415,10 +419,10 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:28:7: ( 'new' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:28:9: 'new'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:28:7: ( 'while' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:28:9: 'while'
             {
-            match("new"); 
+            match("while"); 
 
 
             }
@@ -436,10 +440,10 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:29:7: ( 'return ' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:29:9: 'return '
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:29:7: ( 'assert' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:29:9: 'assert'
             {
-            match("return "); 
+            match("assert"); 
 
 
             }
@@ -457,10 +461,10 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:30:7: ( '@' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:30:9: '@'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:30:7: ( '.' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:30:9: '.'
             {
-            match('@'); 
+            match('.'); 
 
             }
 
@@ -477,10 +481,11 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:31:7: ( ',' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:31:9: ','
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:31:7: ( 'new' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:31:9: 'new'
             {
-            match(','); 
+            match("new"); 
+
 
             }
 
@@ -497,10 +502,11 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:32:7: ( '=' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:32:9: '='
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:32:7: ( 'return ' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:32:9: 'return '
             {
-            match('='); 
+            match("return "); 
+
 
             }
 
@@ -517,10 +523,10 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:33:7: ( '.' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:33:9: '.'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:33:7: ( ':' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:33:9: ':'
             {
-            match('.'); 
+            match(':'); 
 
             }
 
@@ -532,20 +538,101 @@ public class InternalSequencemodelLexer extends Lexer {
     }
     // $ANTLR end "T__36"
 
+    // $ANTLR start "T__37"
+    public final void mT__37() throws RecognitionException {
+        try {
+            int _type = T__37;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:34:7: ( '[' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:34:9: '['
+            {
+            match('['); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__37"
+
+    // $ANTLR start "T__38"
+    public final void mT__38() throws RecognitionException {
+        try {
+            int _type = T__38;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:35:7: ( ']' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:35:9: ']'
+            {
+            match(']'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__38"
+
+    // $ANTLR start "T__39"
+    public final void mT__39() throws RecognitionException {
+        try {
+            int _type = T__39;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:36:7: ( '..' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:36:9: '..'
+            {
+            match(".."); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__39"
+
+    // $ANTLR start "T__40"
+    public final void mT__40() throws RecognitionException {
+        try {
+            int _type = T__40;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:37:7: ( '@' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:37:9: '@'
+            {
+            match('@'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__40"
+
     // $ANTLR start "RULE_OPERATOR"
     public final void mRULE_OPERATOR() throws RecognitionException {
         try {
             int _type = RULE_OPERATOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:15: ( ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:17: ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:15: ( ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:17: ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:17: ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:17: ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' )
             int alt1=15;
             alt1 = dfa1.predict(input);
             switch (alt1) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:18: '++'
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:18: '++'
                     {
                     match("++"); 
 
@@ -553,7 +640,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:23: '--'
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:23: '--'
                     {
                     match("--"); 
 
@@ -561,7 +648,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:28: '=='
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:28: '=='
                     {
                     match("=="); 
 
@@ -569,7 +656,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:33: '>='
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:33: '>='
                     {
                     match(">="); 
 
@@ -577,7 +664,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:38: '<='
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:38: '<='
                     {
                     match("<="); 
 
@@ -585,7 +672,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:43: '!='
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:43: '!='
                     {
                     match("!="); 
 
@@ -593,7 +680,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:48: '<>'
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:48: '<>'
                     {
                     match("<>"); 
 
@@ -601,7 +688,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     break;
                 case 8 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:53: '||'
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:53: '||'
                     {
                     match("||"); 
 
@@ -609,7 +696,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     break;
                 case 9 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:58: '&&'
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:58: '&&'
                     {
                     match("&&"); 
 
@@ -617,7 +704,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     break;
                 case 10 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:63: '-='
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:63: '-='
                     {
                     match("-="); 
 
@@ -625,7 +712,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     break;
                 case 11 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:68: '+='
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:68: '+='
                     {
                     match("+="); 
 
@@ -633,14 +720,14 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     break;
                 case 12 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:73: '='
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:73: '='
                     {
                     match('='); 
 
                     }
                     break;
                 case 13 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:77: '>>'
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:77: '>>'
                     {
                     match(">>"); 
 
@@ -648,7 +735,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     break;
                 case 14 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:82: '<<'
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:82: '<<'
                     {
                     match("<<"); 
 
@@ -656,7 +743,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     break;
                 case 15 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3945:87: '|='
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5543:87: '|='
                     {
                     match("|="); 
 
@@ -682,10 +769,10 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = RULE_BOOLEAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3947:14: ( ( 'true' | 'false' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3947:16: ( 'true' | 'false' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5545:14: ( ( 'true' | 'false' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5545:16: ( 'true' | 'false' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3947:16: ( 'true' | 'false' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5545:16: ( 'true' | 'false' )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -703,7 +790,7 @@ public class InternalSequencemodelLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3947:17: 'true'
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5545:17: 'true'
                     {
                     match("true"); 
 
@@ -711,7 +798,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3947:24: 'false'
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5545:24: 'false'
                     {
                     match("false"); 
 
@@ -737,10 +824,10 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = RULE_NULL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3949:11: ( ( 'null' | 'nil' | 'NULL' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3949:13: ( 'null' | 'nil' | 'NULL' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5547:11: ( ( 'null' | 'nil' | 'NULL' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5547:13: ( 'null' | 'nil' | 'NULL' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3949:13: ( 'null' | 'nil' | 'NULL' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5547:13: ( 'null' | 'nil' | 'NULL' )
             int alt3=3;
             int LA3_0 = input.LA(1);
 
@@ -771,7 +858,7 @@ public class InternalSequencemodelLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3949:14: 'null'
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5547:14: 'null'
                     {
                     match("null"); 
 
@@ -779,7 +866,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3949:21: 'nil'
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5547:21: 'nil'
                     {
                     match("nil"); 
 
@@ -787,7 +874,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3949:27: 'NULL'
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5547:27: 'NULL'
                     {
                     match("NULL"); 
 
@@ -813,8 +900,8 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3951:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3951:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5549:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5549:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -825,7 +912,7 @@ public class InternalSequencemodelLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3951:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5549:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop4:
             do {
                 int alt4=2;
@@ -874,10 +961,10 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = RULE_NATURAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3953:14: ( ( '0' .. '9' )+ )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3953:16: ( '0' .. '9' )+
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5551:14: ( ( '0' .. '9' )+ )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5551:16: ( '0' .. '9' )+
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3953:16: ( '0' .. '9' )+
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5551:16: ( '0' .. '9' )+
             int cnt5=0;
             loop5:
             do {
@@ -891,7 +978,7 @@ public class InternalSequencemodelLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3953:17: '0' .. '9'
+            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5551:17: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -923,10 +1010,10 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3955:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3955:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5553:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5553:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3955:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5553:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -944,10 +1031,10 @@ public class InternalSequencemodelLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3955:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5553:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3955:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5553:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -963,7 +1050,7 @@ public class InternalSequencemodelLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3955:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5553:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -979,7 +1066,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3955:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5553:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1004,10 +1091,10 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3955:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5553:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3955:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5553:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -1023,7 +1110,7 @@ public class InternalSequencemodelLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3955:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5553:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1039,7 +1126,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3955:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5553:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1082,12 +1169,12 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3957:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3957:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5555:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5555:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3957:24: ( options {greedy=false; } : . )*
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5555:24: ( options {greedy=false; } : . )*
             loop9:
             do {
                 int alt9=2;
@@ -1112,7 +1199,7 @@ public class InternalSequencemodelLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3957:52: .
+            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5555:52: .
             	    {
             	    matchAny(); 
 
@@ -1142,12 +1229,12 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3959:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3959:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5557:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5557:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3959:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5557:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop10:
             do {
                 int alt10=2;
@@ -1160,7 +1247,7 @@ public class InternalSequencemodelLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3959:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5557:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1180,7 +1267,7 @@ public class InternalSequencemodelLexer extends Lexer {
                 }
             } while (true);
 
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3959:40: ( ( '\\r' )? '\\n' )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5557:40: ( ( '\\r' )? '\\n' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1189,9 +1276,9 @@ public class InternalSequencemodelLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3959:41: ( '\\r' )? '\\n'
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5557:41: ( '\\r' )? '\\n'
                     {
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3959:41: ( '\\r' )?
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5557:41: ( '\\r' )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
@@ -1200,7 +1287,7 @@ public class InternalSequencemodelLexer extends Lexer {
                     }
                     switch (alt11) {
                         case 1 :
-                            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3959:41: '\\r'
+                            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5557:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1232,10 +1319,10 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3961:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3961:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5559:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5559:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3961:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5559:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt13=0;
             loop13:
             do {
@@ -1289,8 +1376,8 @@ public class InternalSequencemodelLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3963:16: ( . )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3963:18: .
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5561:16: ( . )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5561:18: .
             {
             matchAny(); 
 
@@ -1305,8 +1392,8 @@ public class InternalSequencemodelLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:8: ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | RULE_OPERATOR | RULE_BOOLEAN | RULE_NULL | RULE_ID | RULE_NATURAL | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt14=33;
+        // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:8: ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | RULE_OPERATOR | RULE_BOOLEAN | RULE_NULL | RULE_ID | RULE_NATURAL | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt14=37;
         alt14 = dfa14.predict(input);
         switch (alt14) {
             case 1 :
@@ -1471,70 +1558,98 @@ public class InternalSequencemodelLexer extends Lexer {
                 }
                 break;
             case 24 :
-                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:148: RULE_OPERATOR
+                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:148: T__37
+                {
+                mT__37(); 
+
+                }
+                break;
+            case 25 :
+                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:154: T__38
+                {
+                mT__38(); 
+
+                }
+                break;
+            case 26 :
+                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:160: T__39
+                {
+                mT__39(); 
+
+                }
+                break;
+            case 27 :
+                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:166: T__40
+                {
+                mT__40(); 
+
+                }
+                break;
+            case 28 :
+                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:172: RULE_OPERATOR
                 {
                 mRULE_OPERATOR(); 
 
                 }
                 break;
-            case 25 :
-                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:162: RULE_BOOLEAN
+            case 29 :
+                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:186: RULE_BOOLEAN
                 {
                 mRULE_BOOLEAN(); 
 
                 }
                 break;
-            case 26 :
-                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:175: RULE_NULL
+            case 30 :
+                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:199: RULE_NULL
                 {
                 mRULE_NULL(); 
 
                 }
                 break;
-            case 27 :
-                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:185: RULE_ID
+            case 31 :
+                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:209: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 28 :
-                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:193: RULE_NATURAL
+            case 32 :
+                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:217: RULE_NATURAL
                 {
                 mRULE_NATURAL(); 
 
                 }
                 break;
-            case 29 :
-                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:206: RULE_STRING
+            case 33 :
+                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:230: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 30 :
-                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:218: RULE_ML_COMMENT
+            case 34 :
+                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:242: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 31 :
-                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:234: RULE_SL_COMMENT
+            case 35 :
+                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:258: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 32 :
-                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:250: RULE_WS
+            case 36 :
+                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:274: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 33 :
-                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:258: RULE_ANY_OTHER
+            case 37 :
+                // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:1:282: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1617,173 +1732,191 @@ public class InternalSequencemodelLexer extends Lexer {
             this.transition = DFA1_transition;
         }
         public String getDescription() {
-            return "3945:17: ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' )";
+            return "5543:17: ( '++' | '--' | '==' | '>=' | '<=' | '!=' | '<>' | '||' | '&&' | '-=' | '+=' | '=' | '>>' | '<<' | '|=' )";
         }
     }
     static final String DFA14_eotS =
-        "\1\uffff\1\44\1\45\1\47\1\50\2\43\1\uffff\4\43\2\uffff\1\66\2\43"+
-        "\1\uffff\1\74\1\uffff\5\40\1\43\2\uffff\3\40\2\uffff\2\43\6\uffff"+
-        "\1\43\1\107\1\43\1\uffff\4\43\1\115\1\43\4\uffff\4\43\3\uffff\1"+
-        "\43\5\uffff\1\124\2\43\1\uffff\5\43\1\uffff\1\43\1\135\1\43\1\137"+
-        "\2\43\1\uffff\1\142\2\43\1\145\1\146\3\43\1\uffff\1\137\1\uffff"+
-        "\1\43\1\137\1\uffff\2\43\2\uffff\1\43\1\146\2\43\1\160\2\43\1\163"+
-        "\1\43\1\uffff\1\43\1\166\2\uffff\1\167\2\uffff";
+        "\1\uffff\1\47\1\50\1\52\1\53\3\46\3\uffff\4\46\1\73\2\46\5\uffff"+
+        "\5\43\1\46\2\uffff\3\43\2\uffff\2\46\6\uffff\1\46\1\115\2\46\1\120"+
+        "\3\uffff\6\46\2\uffff\4\46\4\uffff\1\46\5\uffff\1\134\2\46\1\uffff"+
+        "\1\46\1\141\1\uffff\6\46\1\150\1\46\1\152\2\46\1\uffff\1\46\1\156"+
+        "\2\46\1\uffff\1\161\1\162\4\46\1\uffff\1\152\1\uffff\1\46\1\152"+
+        "\1\170\1\uffff\2\46\2\uffff\1\46\1\162\1\174\2\46\1\uffff\1\177"+
+        "\2\46\1\uffff\1\u0082\1\46\1\uffff\1\46\1\u0085\2\uffff\1\u0086"+
+        "\2\uffff";
     static final String DFA14_eofS =
-        "\170\uffff";
+        "\u0087\uffff";
     static final String DFA14_minS =
-        "\1\0\2\60\1\53\1\55\1\146\1\145\1\uffff\1\150\1\141\1\157\1\163"+
-        "\2\uffff\1\40\2\145\1\uffff\1\75\1\uffff\1\75\1\74\2\75\1\46\1\125"+
-        "\2\uffff\2\0\1\52\2\uffff\1\144\1\163\6\uffff\1\160\1\60\1\161\1"+
-        "\uffff\1\145\1\165\1\162\1\154\1\60\1\163\4\uffff\1\167\2\154\1"+
-        "\164\3\uffff\1\114\5\uffff\1\60\1\145\1\157\1\uffff\1\165\1\156"+
-        "\2\145\1\163\1\uffff\1\145\1\60\1\154\1\60\1\165\1\114\1\uffff\1"+
-        "\60\1\162\1\145\2\60\1\141\1\145\1\162\1\uffff\1\60\1\uffff\1\162"+
-        "\1\60\1\uffff\1\164\1\156\2\uffff\1\143\1\60\1\164\1\156\1\60\1"+
-        "\143\1\150\1\60\1\40\1\uffff\1\145\1\60\2\uffff\1\60\2\uffff";
+        "\1\0\2\60\1\53\1\55\1\146\2\145\3\uffff\1\150\1\141\1\150\1\163"+
+        "\1\56\2\145\5\uffff\1\75\1\74\2\75\1\46\1\125\2\uffff\2\0\1\52\2"+
+        "\uffff\1\144\1\163\6\uffff\1\160\1\60\1\161\1\146\1\60\3\uffff\1"+
+        "\145\1\165\1\162\1\154\1\151\1\163\2\uffff\1\167\2\154\1\164\4\uffff"+
+        "\1\114\5\uffff\1\60\1\145\1\157\1\uffff\1\165\1\60\1\uffff\1\156"+
+        "\2\145\1\163\1\154\1\145\1\60\1\154\1\60\1\165\1\114\1\uffff\1\146"+
+        "\1\60\1\162\1\145\1\uffff\2\60\1\141\2\145\1\162\1\uffff\1\60\1"+
+        "\uffff\1\162\2\60\1\uffff\1\164\1\156\2\uffff\1\143\2\60\1\164\1"+
+        "\156\1\uffff\1\60\1\143\1\150\1\uffff\1\60\1\40\1\uffff\1\145\1"+
+        "\60\2\uffff\1\60\2\uffff";
     static final String DFA14_maxS =
-        "\1\uffff\2\172\2\75\1\155\1\145\1\uffff\1\162\2\157\1\163\2\uffff"+
-        "\1\40\1\165\1\145\1\uffff\1\75\1\uffff\2\76\1\75\1\174\1\46\1\125"+
-        "\2\uffff\2\uffff\1\57\2\uffff\1\144\1\163\6\uffff\1\160\1\172\1"+
-        "\161\1\uffff\1\145\1\165\1\162\1\154\1\172\1\163\4\uffff\1\167\2"+
-        "\154\1\164\3\uffff\1\114\5\uffff\1\172\1\145\1\157\1\uffff\1\165"+
-        "\1\156\2\145\1\163\1\uffff\1\145\1\172\1\154\1\172\1\165\1\114\1"+
-        "\uffff\1\172\1\162\1\145\2\172\1\141\1\145\1\162\1\uffff\1\172\1"+
-        "\uffff\1\162\1\172\1\uffff\1\164\1\156\2\uffff\1\143\1\172\1\164"+
-        "\1\156\1\172\1\143\1\150\1\172\1\40\1\uffff\1\145\1\172\2\uffff"+
-        "\1\172\2\uffff";
+        "\1\uffff\2\172\2\75\1\155\1\145\1\157\3\uffff\1\162\1\157\1\150"+
+        "\1\163\1\56\1\165\1\145\5\uffff\2\76\1\75\1\174\1\46\1\125\2\uffff"+
+        "\2\uffff\1\57\2\uffff\1\144\1\163\6\uffff\1\160\1\172\1\161\1\146"+
+        "\1\172\3\uffff\1\145\1\165\1\162\1\154\1\151\1\163\2\uffff\1\167"+
+        "\2\154\1\164\4\uffff\1\114\5\uffff\1\172\1\151\1\157\1\uffff\1\165"+
+        "\1\172\1\uffff\1\156\2\145\1\163\1\154\1\145\1\172\1\154\1\172\1"+
+        "\165\1\114\1\uffff\1\146\1\172\1\162\1\145\1\uffff\2\172\1\141\2"+
+        "\145\1\162\1\uffff\1\172\1\uffff\1\162\2\172\1\uffff\1\164\1\156"+
+        "\2\uffff\1\143\2\172\1\164\1\156\1\uffff\1\172\1\143\1\150\1\uffff"+
+        "\1\172\1\40\1\uffff\1\145\1\172\2\uffff\1\172\2\uffff";
     static final String DFA14_acceptS =
-        "\7\uffff\1\10\4\uffff\1\17\1\20\3\uffff\1\24\1\uffff\1\27\6\uffff"+
-        "\1\33\1\34\3\uffff\1\40\1\41\2\uffff\1\33\1\1\1\2\1\30\1\3\1\4\3"+
-        "\uffff\1\10\6\uffff\1\17\1\20\1\21\1\25\4\uffff\1\24\1\26\1\27\1"+
-        "\uffff\1\34\1\35\1\36\1\37\1\40\3\uffff\1\11\5\uffff\1\15\6\uffff"+
-        "\1\7\10\uffff\1\22\1\uffff\1\32\2\uffff\1\13\2\uffff\1\12\1\31\11"+
-        "\uffff\1\5\2\uffff\1\16\1\23\1\uffff\1\14\1\6";
+        "\10\uffff\1\11\1\12\1\13\7\uffff\1\27\1\30\1\31\1\33\1\34\6\uffff"+
+        "\1\37\1\40\3\uffff\1\44\1\45\2\uffff\1\37\1\1\1\2\1\34\1\3\1\4\5"+
+        "\uffff\1\11\1\12\1\13\6\uffff\1\32\1\24\4\uffff\1\27\1\30\1\31\1"+
+        "\33\1\uffff\1\40\1\41\1\42\1\43\1\44\3\uffff\1\14\2\uffff\1\21\13"+
+        "\uffff\1\7\4\uffff\1\10\6\uffff\1\25\1\uffff\1\36\3\uffff\1\17\2"+
+        "\uffff\1\15\1\35\5\uffff\1\16\3\uffff\1\22\2\uffff\1\5\2\uffff\1"+
+        "\23\1\26\1\uffff\1\20\1\6";
     static final String DFA14_specialS =
-        "\1\0\33\uffff\1\2\1\1\132\uffff}>";
+        "\1\2\36\uffff\1\0\1\1\146\uffff}>";
     static final String[] DFA14_transitionS = {
-            "\11\40\2\37\2\40\1\37\22\40\1\37\1\26\1\34\3\40\1\30\1\35\1"+
-            "\14\1\15\1\40\1\3\1\16\1\4\1\23\1\36\12\33\1\7\1\40\1\25\1\22"+
-            "\1\24\1\40\1\21\4\32\1\2\10\32\1\31\14\32\4\40\1\32\1\40\1\13"+
-            "\2\32\1\12\1\1\1\11\2\32\1\5\4\32\1\17\3\32\1\20\1\6\1\10\6"+
-            "\32\1\40\1\27\uff83\40",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\13\43\1\42\1\43"+
-            "\1\41\14\43",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\1\46\21\uffff\1\46",
-            "\1\46\17\uffff\1\46",
-            "\1\52\6\uffff\1\51",
-            "\1\53",
-            "",
-            "\1\55\11\uffff\1\56",
-            "\1\60\15\uffff\1\57",
-            "\1\61",
-            "\1\62",
+            "\11\43\2\42\2\43\1\42\22\43\1\42\1\31\1\37\3\43\1\33\1\40\1"+
+            "\10\1\11\1\43\1\3\1\12\1\4\1\17\1\41\12\36\1\22\1\43\1\30\1"+
+            "\26\1\27\1\43\1\25\4\35\1\2\10\35\1\34\14\35\1\23\1\43\1\24"+
+            "\1\43\1\35\1\43\1\16\2\35\1\7\1\1\1\14\2\35\1\5\4\35\1\20\3"+
+            "\35\1\21\1\6\1\13\2\35\1\15\3\35\1\43\1\32\uff83\43",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\13\46\1\45\1\46"+
+            "\1\44\14\46",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
+            "\1\51\21\uffff\1\51",
+            "\1\51\17\uffff\1\51",
+            "\1\55\6\uffff\1\54",
+            "\1\56",
+            "\1\57\11\uffff\1\60",
             "",
             "",
-            "\1\65",
-            "\1\67\3\uffff\1\71\13\uffff\1\70",
+            "",
+            "\1\64\11\uffff\1\65",
+            "\1\67\15\uffff\1\66",
+            "\1\70",
+            "\1\71",
             "\1\72",
-            "",
-            "\1\46",
-            "",
-            "\2\46",
-            "\3\46",
-            "\1\46",
-            "\1\46\76\uffff\1\46",
-            "\1\46",
-            "\1\76",
+            "\1\74\3\uffff\1\76\13\uffff\1\75",
+            "\1\77",
             "",
             "",
-            "\0\100",
-            "\0\100",
-            "\1\101\4\uffff\1\102",
             "",
             "",
+            "",
+            "\2\51",
+            "\3\51",
+            "\1\51",
+            "\1\51\76\uffff\1\51",
+            "\1\51",
             "\1\104",
-            "\1\105",
             "",
             "",
+            "\0\106",
+            "\0\106",
+            "\1\107\4\uffff\1\110",
             "",
             "",
-            "",
-            "",
-            "\1\106",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\1\110",
-            "",
-            "\1\111",
             "\1\112",
             "\1\113",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\114",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
             "\1\116",
-            "",
-            "",
-            "",
-            "",
             "\1\117",
-            "\1\120",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
+            "",
+            "",
+            "",
             "\1\121",
             "\1\122",
-            "",
-            "",
-            "",
             "\1\123",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
+            "\1\124",
             "\1\125",
             "\1\126",
+            "",
             "",
             "\1\127",
             "\1\130",
             "\1\131",
             "\1\132",
+            "",
+            "",
+            "",
+            "",
             "\1\133",
             "",
-            "\1\134",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\1\136",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\1\140",
-            "\1\141",
             "",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
+            "",
+            "",
+            "",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
+            "\1\136\3\uffff\1\135",
+            "\1\137",
+            "",
+            "\1\140",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
+            "",
+            "\1\142",
             "\1\143",
             "\1\144",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
+            "\1\145",
+            "\1\146",
             "\1\147",
-            "\1\150",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
             "\1\151",
-            "",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "",
-            "\1\152",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
             "\1\153",
             "\1\154",
             "",
-            "",
             "\1\155",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\1\156",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
             "\1\157",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\1\161",
-            "\1\162",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
+            "\1\160",
+            "",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
+            "\1\163",
             "\1\164",
-            "",
             "\1\165",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
+            "\1\166",
+            "",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
+            "",
+            "\1\167",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
+            "",
+            "\1\171",
+            "\1\172",
             "",
             "",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
+            "\1\173",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
+            "\1\175",
+            "\1\176",
+            "",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
+            "\1\u0080",
+            "\1\u0081",
+            "",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
+            "\1\u0083",
+            "",
+            "\1\u0084",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
+            "",
+            "",
+            "\12\46\7\uffff\32\46\4\uffff\1\46\1\uffff\32\46",
             "",
             ""
     };
@@ -1818,13 +1951,33 @@ public class InternalSequencemodelLexer extends Lexer {
             this.transition = DFA14_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | RULE_OPERATOR | RULE_BOOLEAN | RULE_NULL | RULE_ID | RULE_NATURAL | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | RULE_OPERATOR | RULE_BOOLEAN | RULE_NULL | RULE_ID | RULE_NATURAL | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA14_31 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA14_31>='\u0000' && LA14_31<='\uFFFF')) ) {s = 70;}
+
+                        else s = 35;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA14_32 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA14_32>='\u0000' && LA14_32<='\uFFFF')) ) {s = 70;}
+
+                        else s = 35;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
                         int LA14_0 = input.LA(1);
 
                         s = -1;
@@ -1840,77 +1993,63 @@ public class InternalSequencemodelLexer extends Lexer {
 
                         else if ( (LA14_0=='s') ) {s = 6;}
 
-                        else if ( (LA14_0==':') ) {s = 7;}
+                        else if ( (LA14_0=='d') ) {s = 7;}
 
-                        else if ( (LA14_0=='t') ) {s = 8;}
+                        else if ( (LA14_0=='(') ) {s = 8;}
 
-                        else if ( (LA14_0=='f') ) {s = 9;}
+                        else if ( (LA14_0==')') ) {s = 9;}
 
-                        else if ( (LA14_0=='d') ) {s = 10;}
+                        else if ( (LA14_0==',') ) {s = 10;}
 
-                        else if ( (LA14_0=='a') ) {s = 11;}
+                        else if ( (LA14_0=='t') ) {s = 11;}
 
-                        else if ( (LA14_0=='(') ) {s = 12;}
+                        else if ( (LA14_0=='f') ) {s = 12;}
 
-                        else if ( (LA14_0==')') ) {s = 13;}
+                        else if ( (LA14_0=='w') ) {s = 13;}
 
-                        else if ( (LA14_0==',') ) {s = 14;}
+                        else if ( (LA14_0=='a') ) {s = 14;}
 
-                        else if ( (LA14_0=='n') ) {s = 15;}
+                        else if ( (LA14_0=='.') ) {s = 15;}
 
-                        else if ( (LA14_0=='r') ) {s = 16;}
+                        else if ( (LA14_0=='n') ) {s = 16;}
 
-                        else if ( (LA14_0=='@') ) {s = 17;}
+                        else if ( (LA14_0=='r') ) {s = 17;}
 
-                        else if ( (LA14_0=='=') ) {s = 18;}
+                        else if ( (LA14_0==':') ) {s = 18;}
 
-                        else if ( (LA14_0=='.') ) {s = 19;}
+                        else if ( (LA14_0=='[') ) {s = 19;}
 
-                        else if ( (LA14_0=='>') ) {s = 20;}
+                        else if ( (LA14_0==']') ) {s = 20;}
 
-                        else if ( (LA14_0=='<') ) {s = 21;}
+                        else if ( (LA14_0=='@') ) {s = 21;}
 
-                        else if ( (LA14_0=='!') ) {s = 22;}
+                        else if ( (LA14_0=='=') ) {s = 22;}
 
-                        else if ( (LA14_0=='|') ) {s = 23;}
+                        else if ( (LA14_0=='>') ) {s = 23;}
 
-                        else if ( (LA14_0=='&') ) {s = 24;}
+                        else if ( (LA14_0=='<') ) {s = 24;}
 
-                        else if ( (LA14_0=='N') ) {s = 25;}
+                        else if ( (LA14_0=='!') ) {s = 25;}
 
-                        else if ( ((LA14_0>='A' && LA14_0<='D')||(LA14_0>='F' && LA14_0<='M')||(LA14_0>='O' && LA14_0<='Z')||LA14_0=='_'||(LA14_0>='b' && LA14_0<='c')||(LA14_0>='g' && LA14_0<='h')||(LA14_0>='j' && LA14_0<='m')||(LA14_0>='o' && LA14_0<='q')||(LA14_0>='u' && LA14_0<='z')) ) {s = 26;}
+                        else if ( (LA14_0=='|') ) {s = 26;}
 
-                        else if ( ((LA14_0>='0' && LA14_0<='9')) ) {s = 27;}
+                        else if ( (LA14_0=='&') ) {s = 27;}
 
-                        else if ( (LA14_0=='\"') ) {s = 28;}
+                        else if ( (LA14_0=='N') ) {s = 28;}
 
-                        else if ( (LA14_0=='\'') ) {s = 29;}
+                        else if ( ((LA14_0>='A' && LA14_0<='D')||(LA14_0>='F' && LA14_0<='M')||(LA14_0>='O' && LA14_0<='Z')||LA14_0=='_'||(LA14_0>='b' && LA14_0<='c')||(LA14_0>='g' && LA14_0<='h')||(LA14_0>='j' && LA14_0<='m')||(LA14_0>='o' && LA14_0<='q')||(LA14_0>='u' && LA14_0<='v')||(LA14_0>='x' && LA14_0<='z')) ) {s = 29;}
 
-                        else if ( (LA14_0=='/') ) {s = 30;}
+                        else if ( ((LA14_0>='0' && LA14_0<='9')) ) {s = 30;}
 
-                        else if ( ((LA14_0>='\t' && LA14_0<='\n')||LA14_0=='\r'||LA14_0==' ') ) {s = 31;}
+                        else if ( (LA14_0=='\"') ) {s = 31;}
 
-                        else if ( ((LA14_0>='\u0000' && LA14_0<='\b')||(LA14_0>='\u000B' && LA14_0<='\f')||(LA14_0>='\u000E' && LA14_0<='\u001F')||(LA14_0>='#' && LA14_0<='%')||LA14_0=='*'||LA14_0==';'||LA14_0=='?'||(LA14_0>='[' && LA14_0<='^')||LA14_0=='`'||LA14_0=='{'||(LA14_0>='}' && LA14_0<='\uFFFF')) ) {s = 32;}
+                        else if ( (LA14_0=='\'') ) {s = 32;}
 
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA14_29 = input.LA(1);
+                        else if ( (LA14_0=='/') ) {s = 33;}
 
-                        s = -1;
-                        if ( ((LA14_29>='\u0000' && LA14_29<='\uFFFF')) ) {s = 64;}
+                        else if ( ((LA14_0>='\t' && LA14_0<='\n')||LA14_0=='\r'||LA14_0==' ') ) {s = 34;}
 
-                        else s = 32;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA14_28 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA14_28>='\u0000' && LA14_28<='\uFFFF')) ) {s = 64;}
-
-                        else s = 32;
+                        else if ( ((LA14_0>='\u0000' && LA14_0<='\b')||(LA14_0>='\u000B' && LA14_0<='\f')||(LA14_0>='\u000E' && LA14_0<='\u001F')||(LA14_0>='#' && LA14_0<='%')||LA14_0=='*'||LA14_0==';'||LA14_0=='?'||LA14_0=='\\'||LA14_0=='^'||LA14_0=='`'||LA14_0=='{'||(LA14_0>='}' && LA14_0<='\uFFFF')) ) {s = 35;}
 
                         if ( s>=0 ) return s;
                         break;

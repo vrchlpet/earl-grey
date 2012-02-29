@@ -77,11 +77,15 @@ public class SequencemodelFactoryImpl extends EFactoryImpl implements Sequencemo
       case SequencemodelPackage.FRAGMENT: return createFragment();
       case SequencemodelPackage.IF_ELSE_FRAGMENT: return createIfElseFragment();
       case SequencemodelPackage.FOREACH_FRAGMENT: return createForeachFragment();
-      case SequencemodelPackage.ASSER_FRAGMENT: return createAsserFragment();
+      case SequencemodelPackage.LOOP_FRAGMENT: return createLoopFragment();
+      case SequencemodelPackage.ASSERT_FRAGMENT: return createAssertFragment();
       case SequencemodelPackage.MESSAGE: return createMessage();
       case SequencemodelPackage.CALL_MESSAGE: return createCallMessage();
       case SequencemodelPackage.NEW_MESSAGE: return createNewMessage();
       case SequencemodelPackage.RETURN_MESSAGE: return createReturnMessage();
+      case SequencemodelPackage.PARAMETER: return createParameter();
+      case SequencemodelPackage.REFERENCE: return createReference();
+      case SequencemodelPackage.ARRAY: return createArray();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -191,10 +195,21 @@ public class SequencemodelFactoryImpl extends EFactoryImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
-  public AsserFragment createAsserFragment()
+  public LoopFragment createLoopFragment()
   {
-    AsserFragmentImpl asserFragment = new AsserFragmentImpl();
-    return asserFragment;
+    LoopFragmentImpl loopFragment = new LoopFragmentImpl();
+    return loopFragment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AssertFragment createAssertFragment()
+  {
+    AssertFragmentImpl assertFragment = new AssertFragmentImpl();
+    return assertFragment;
   }
 
   /**
@@ -239,6 +254,39 @@ public class SequencemodelFactoryImpl extends EFactoryImpl implements Sequencemo
   {
     ReturnMessageImpl returnMessage = new ReturnMessageImpl();
     return returnMessage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Parameter createParameter()
+  {
+    ParameterImpl parameter = new ParameterImpl();
+    return parameter;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Reference createReference()
+  {
+    ReferenceImpl reference = new ReferenceImpl();
+    return reference;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Array createArray()
+  {
+    ArrayImpl array = new ArrayImpl();
+    return array;
   }
 
   /**

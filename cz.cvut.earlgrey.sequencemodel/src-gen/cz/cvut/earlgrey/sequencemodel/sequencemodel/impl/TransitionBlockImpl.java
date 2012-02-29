@@ -6,8 +6,9 @@
  */
 package cz.cvut.earlgrey.sequencemodel.sequencemodel.impl;
 
-import cz.cvut.earlgrey.sequencemodel.sequencemodel.Message;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Parameter;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Transition;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.TransitionBlock;
 
 import java.util.Collection;
@@ -33,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.TransitionBlockImpl#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.TransitionBlockImpl#getParameter <em>Parameter</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.TransitionBlockImpl#getTransition <em>Transition</em>}</li>
  * </ul>
  * </p>
@@ -62,6 +64,16 @@ public class TransitionBlockImpl extends TransitionImpl implements TransitionBlo
   protected String name = NAME_EDEFAULT;
 
   /**
+   * The cached value of the '{@link #getParameter() <em>Parameter</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getParameter()
+   * @generated
+   * @ordered
+   */
+  protected EList<Parameter> parameter;
+
+  /**
    * The cached value of the '{@link #getTransition() <em>Transition</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -69,7 +81,7 @@ public class TransitionBlockImpl extends TransitionImpl implements TransitionBlo
    * @generated
    * @ordered
    */
-  protected EList<Message> transition;
+  protected EList<Transition> transition;
 
   /**
    * <!-- begin-user-doc -->
@@ -120,11 +132,25 @@ public class TransitionBlockImpl extends TransitionImpl implements TransitionBlo
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Message> getTransition()
+  public EList<Parameter> getParameter()
+  {
+    if (parameter == null)
+    {
+      parameter = new EObjectContainmentEList<Parameter>(Parameter.class, this, SequencemodelPackage.TRANSITION_BLOCK__PARAMETER);
+    }
+    return parameter;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Transition> getTransition()
   {
     if (transition == null)
     {
-      transition = new EObjectContainmentEList<Message>(Message.class, this, SequencemodelPackage.TRANSITION_BLOCK__TRANSITION);
+      transition = new EObjectContainmentEList<Transition>(Transition.class, this, SequencemodelPackage.TRANSITION_BLOCK__TRANSITION);
     }
     return transition;
   }
@@ -139,6 +165,8 @@ public class TransitionBlockImpl extends TransitionImpl implements TransitionBlo
   {
     switch (featureID)
     {
+      case SequencemodelPackage.TRANSITION_BLOCK__PARAMETER:
+        return ((InternalEList<?>)getParameter()).basicRemove(otherEnd, msgs);
       case SequencemodelPackage.TRANSITION_BLOCK__TRANSITION:
         return ((InternalEList<?>)getTransition()).basicRemove(otherEnd, msgs);
     }
@@ -157,6 +185,8 @@ public class TransitionBlockImpl extends TransitionImpl implements TransitionBlo
     {
       case SequencemodelPackage.TRANSITION_BLOCK__NAME:
         return getName();
+      case SequencemodelPackage.TRANSITION_BLOCK__PARAMETER:
+        return getParameter();
       case SequencemodelPackage.TRANSITION_BLOCK__TRANSITION:
         return getTransition();
     }
@@ -177,9 +207,13 @@ public class TransitionBlockImpl extends TransitionImpl implements TransitionBlo
       case SequencemodelPackage.TRANSITION_BLOCK__NAME:
         setName((String)newValue);
         return;
+      case SequencemodelPackage.TRANSITION_BLOCK__PARAMETER:
+        getParameter().clear();
+        getParameter().addAll((Collection<? extends Parameter>)newValue);
+        return;
       case SequencemodelPackage.TRANSITION_BLOCK__TRANSITION:
         getTransition().clear();
-        getTransition().addAll((Collection<? extends Message>)newValue);
+        getTransition().addAll((Collection<? extends Transition>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -197,6 +231,9 @@ public class TransitionBlockImpl extends TransitionImpl implements TransitionBlo
     {
       case SequencemodelPackage.TRANSITION_BLOCK__NAME:
         setName(NAME_EDEFAULT);
+        return;
+      case SequencemodelPackage.TRANSITION_BLOCK__PARAMETER:
+        getParameter().clear();
         return;
       case SequencemodelPackage.TRANSITION_BLOCK__TRANSITION:
         getTransition().clear();
@@ -217,6 +254,8 @@ public class TransitionBlockImpl extends TransitionImpl implements TransitionBlo
     {
       case SequencemodelPackage.TRANSITION_BLOCK__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case SequencemodelPackage.TRANSITION_BLOCK__PARAMETER:
+        return parameter != null && !parameter.isEmpty();
       case SequencemodelPackage.TRANSITION_BLOCK__TRANSITION:
         return transition != null && !transition.isEmpty();
     }

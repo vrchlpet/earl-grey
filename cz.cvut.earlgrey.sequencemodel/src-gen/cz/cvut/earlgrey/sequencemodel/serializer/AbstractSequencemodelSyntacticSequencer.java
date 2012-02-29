@@ -18,16 +18,20 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class AbstractSequencemodelSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected SequencemodelGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_CallMessage___LeftParenthesisKeyword_1_0_RightParenthesisKeyword_1_2__q;
-	protected AbstractElementAlias match_IfElseFragment_ElseKeyword_4_0_q;
+	protected AbstractElementAlias match_CallMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q;
+	protected AbstractElementAlias match_IfElseFragment_ElseKeyword_5_0_q;
+	protected AbstractElementAlias match_NewMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q;
 	protected AbstractElementAlias match_ReturnMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q;
+	protected AbstractElementAlias match_TransitionBlock___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (SequencemodelGrammarAccess) access;
-		match_CallMessage___LeftParenthesisKeyword_1_0_RightParenthesisKeyword_1_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getCallMessageAccess().getLeftParenthesisKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getCallMessageAccess().getRightParenthesisKeyword_1_2()));
-		match_IfElseFragment_ElseKeyword_4_0_q = new TokenAlias(false, true, grammarAccess.getIfElseFragmentAccess().getElseKeyword_4_0());
+		match_CallMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getCallMessageAccess().getLeftParenthesisKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getCallMessageAccess().getRightParenthesisKeyword_2_2()));
+		match_IfElseFragment_ElseKeyword_5_0_q = new TokenAlias(false, true, grammarAccess.getIfElseFragmentAccess().getElseKeyword_5_0());
+		match_NewMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getNewMessageAccess().getLeftParenthesisKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getNewMessageAccess().getRightParenthesisKeyword_2_2()));
 		match_ReturnMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getReturnMessageAccess().getLeftParenthesisKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getReturnMessageAccess().getRightParenthesisKeyword_2_2()));
+		match_TransitionBlock___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTransitionBlockAccess().getLeftParenthesisKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getTransitionBlockAccess().getRightParenthesisKeyword_2_2()));
 	}
 	
 	@Override
@@ -42,12 +46,16 @@ public class AbstractSequencemodelSyntacticSequencer extends AbstractSyntacticSe
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_CallMessage___LeftParenthesisKeyword_1_0_RightParenthesisKeyword_1_2__q.equals(syntax))
-				emit_CallMessage___LeftParenthesisKeyword_1_0_RightParenthesisKeyword_1_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_IfElseFragment_ElseKeyword_4_0_q.equals(syntax))
-				emit_IfElseFragment_ElseKeyword_4_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			if(match_CallMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q.equals(syntax))
+				emit_CallMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_IfElseFragment_ElseKeyword_5_0_q.equals(syntax))
+				emit_IfElseFragment_ElseKeyword_5_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_NewMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q.equals(syntax))
+				emit_NewMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_ReturnMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q.equals(syntax))
 				emit_ReturnMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_TransitionBlock___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q.equals(syntax))
+				emit_TransitionBlock___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -56,7 +64,7 @@ public class AbstractSequencemodelSyntacticSequencer extends AbstractSyntacticSe
 	 * Syntax:
 	 *     ('(' ')')?
 	 */
-	protected void emit_CallMessage___LeftParenthesisKeyword_1_0_RightParenthesisKeyword_1_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_CallMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -64,7 +72,15 @@ public class AbstractSequencemodelSyntacticSequencer extends AbstractSyntacticSe
 	 * Syntax:
 	 *     'else'?
 	 */
-	protected void emit_IfElseFragment_ElseKeyword_4_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_IfElseFragment_ElseKeyword_5_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     ('(' ')')?
+	 */
+	protected void emit_NewMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -73,6 +89,14 @@ public class AbstractSequencemodelSyntacticSequencer extends AbstractSyntacticSe
 	 *     ('(' ')')?
 	 */
 	protected void emit_ReturnMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     ('(' ')')?
+	 */
+	protected void emit_TransitionBlock___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

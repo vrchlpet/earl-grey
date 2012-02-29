@@ -6,6 +6,8 @@
  */
 package cz.cvut.earlgrey.sequencemodel.sequencemodel.impl;
 
+import cz.cvut.earlgrey.annotation.annotation.Annotation;
+
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Transition;
@@ -33,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ParticipantImpl#getAnnotation <em>Annotation</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ParticipantImpl#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ParticipantImpl#getTransition <em>Transition</em>}</li>
  * </ul>
@@ -42,6 +45,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ParticipantImpl extends MinimalEObjectImpl.Container implements Participant
 {
+  /**
+   * The cached value of the '{@link #getAnnotation() <em>Annotation</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAnnotation()
+   * @generated
+   * @ordered
+   */
+  protected EList<Annotation> annotation;
+
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -98,6 +111,20 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Annotation> getAnnotation()
+  {
+    if (annotation == null)
+    {
+      annotation = new EObjectContainmentEList<Annotation>(Annotation.class, this, SequencemodelPackage.PARTICIPANT__ANNOTATION);
+    }
+    return annotation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getName()
   {
     return name;
@@ -140,6 +167,8 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
   {
     switch (featureID)
     {
+      case SequencemodelPackage.PARTICIPANT__ANNOTATION:
+        return ((InternalEList<?>)getAnnotation()).basicRemove(otherEnd, msgs);
       case SequencemodelPackage.PARTICIPANT__TRANSITION:
         return ((InternalEList<?>)getTransition()).basicRemove(otherEnd, msgs);
     }
@@ -156,6 +185,8 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
   {
     switch (featureID)
     {
+      case SequencemodelPackage.PARTICIPANT__ANNOTATION:
+        return getAnnotation();
       case SequencemodelPackage.PARTICIPANT__NAME:
         return getName();
       case SequencemodelPackage.PARTICIPANT__TRANSITION:
@@ -175,6 +206,10 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
   {
     switch (featureID)
     {
+      case SequencemodelPackage.PARTICIPANT__ANNOTATION:
+        getAnnotation().clear();
+        getAnnotation().addAll((Collection<? extends Annotation>)newValue);
+        return;
       case SequencemodelPackage.PARTICIPANT__NAME:
         setName((String)newValue);
         return;
@@ -196,6 +231,9 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
   {
     switch (featureID)
     {
+      case SequencemodelPackage.PARTICIPANT__ANNOTATION:
+        getAnnotation().clear();
+        return;
       case SequencemodelPackage.PARTICIPANT__NAME:
         setName(NAME_EDEFAULT);
         return;
@@ -216,6 +254,8 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
   {
     switch (featureID)
     {
+      case SequencemodelPackage.PARTICIPANT__ANNOTATION:
+        return annotation != null && !annotation.isEmpty();
       case SequencemodelPackage.PARTICIPANT__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case SequencemodelPackage.PARTICIPANT__TRANSITION:

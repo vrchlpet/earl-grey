@@ -6,28 +6,28 @@
  */
 package cz.cvut.earlgrey.sequencemodel.sequencemodel.impl;
 
-import cz.cvut.earlgrey.sequencemodel.sequencemodel.AsserFragment;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.AssertFragment;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Asser Fragment</b></em>'.
+ * An implementation of the model object '<em><b>Assert Fragment</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class AsserFragmentImpl extends FragmentImpl implements AsserFragment
+public class AssertFragmentImpl extends FragmentImpl implements AssertFragment
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected AsserFragmentImpl()
+  protected AssertFragmentImpl()
   {
     super();
   }
@@ -40,7 +40,7 @@ public class AsserFragmentImpl extends FragmentImpl implements AsserFragment
   @Override
   protected EClass eStaticClass()
   {
-    return SequencemodelPackage.Literals.ASSER_FRAGMENT;
+    return SequencemodelPackage.Literals.ASSERT_FRAGMENT;
   }
 
-} //AsserFragmentImpl
+} //AssertFragmentImpl

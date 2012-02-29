@@ -19,60 +19,103 @@ Sequence:
 ;
 
 Participant:
+    annotation+=Annotation* =>
     name=ID
         transition+=Transition*
     'end'
 ;
 
 Transition:
-    TransitionBlock | Message
+    TransitionBlock | Message | Fragment
 ;
 
+// e.g.: def append(child : Node) end
 TransitionBlock:
-    name=ID ':'
-        transition+=Message*
+    'def' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? //':'
+        transition+=FragmentBody*
     'end'
 ;
 
 Fragment:
     IfElseFragment
     | ForeachFragment
-    | AsserFragment
+    | AssertFragment
+    | LoopFragment
 ;
 
-IfElseFragment:
+FragmentBody returns Transition:
+    Fragment | Message
+;
+
+IfElseFragment: //alt/opt
     'if' expr=ValueWithSpaces 'then'
-        transition+=Message*
-     (=> 'else' elseTransition+=Message*)? 
+        transition+=FragmentBody*
+     (=> 'elsif' elseIfExpr+=ValueWithSpaces 'then'
+         elseIftransition+=FragmentBody*
+     )*
+     (=> 'else'
+        elseTransition+=FragmentBody*
+     )? 
     'end'
 ;
 
+// e.g.: foreach node do /*..*/ end
 ForeachFragment:
-    'foreach' expr=ValueWithSpaces 'do'
-        transition+=Message*
+    'foreach' expr=ValueWithSpacesExpr 'do'
+        transition+=FragmentBody*
     'end'
 ;
 
-AsserFragment:
+// e.g.: while i < 0 do /*..*/ end
+LoopFragment: //loop
+    'while' expr=ValueWithSpaces 'do'
+        transition+=FragmentBody*
+    'end'
+;
+
+AssertFragment: //assert
     'assert' expr=ValueWithSpaces 'then'
-        transition+=Message*
+        transition+=FragmentBody*
     'end'
 ;
 
+
+//
 Message:
     CallMessage | NewMessage | ReturnMessage
 ;
 
+// e.g.: Node.getChild()
 CallMessage:
-    name=ID (=> '(' (param+=ID (=> ', ' param+=ID)*)? ')')? participant=ID?
+    (participant=ID '.')? => name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
 ;
 
+// e.g.: new Node
+// TODO: implicitValues? "new Node(null, 5, 8)" -- child, x, y
 NewMessage:
-    'new' participant=ID
+    'new' participant=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
 ;
 
+// e.g.: return childs
 ReturnMessage:
-    'return ' name=ID (=> '(' (param+=ID (=> ', ' param+=ID)*)? ')')?
+    'return ' name=Reference (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
+;
+
+// e.g.: Name : String = "John"
+Parameter:
+    name=ID (':' type=Reference)?
+;
+
+Reference:
+    type=ID array+=Array*
+;
+
+Array:
+    {Array} '[' size=NATURAL? ']'
+;
+
+ValueWithSpacesExpr hidden():
+    (OPERATOR | (NATURAL '..' NATURAL) | Value | ANY_OTHER | WS)*
 ;
 
 ValueWithSpaces hidden():

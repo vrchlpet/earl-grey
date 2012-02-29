@@ -6,9 +6,9 @@
  */
 package cz.cvut.earlgrey.sequencemodel.sequencemodel.impl;
 
-import cz.cvut.earlgrey.sequencemodel.sequencemodel.Fragment;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Array;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Reference;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
-import cz.cvut.earlgrey.sequencemodel.sequencemodel.Transition;
 
 import java.util.Collection;
 
@@ -21,62 +21,63 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Fragment</b></em>'.
+ * An implementation of the model object '<em><b>Reference</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.FragmentImpl#getExpr <em>Expr</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.FragmentImpl#getTransition <em>Transition</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ReferenceImpl#getType <em>Type</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ReferenceImpl#getArray <em>Array</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class FragmentImpl extends TransitionImpl implements Fragment
+public class ReferenceImpl extends MinimalEObjectImpl.Container implements Reference
 {
   /**
-   * The default value of the '{@link #getExpr() <em>Expr</em>}' attribute.
+   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getExpr()
+   * @see #getType()
    * @generated
    * @ordered
    */
-  protected static final String EXPR_EDEFAULT = null;
+  protected static final String TYPE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getExpr() <em>Expr</em>}' attribute.
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getExpr()
+   * @see #getType()
    * @generated
    * @ordered
    */
-  protected String expr = EXPR_EDEFAULT;
+  protected String type = TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getTransition() <em>Transition</em>}' containment reference list.
+   * The cached value of the '{@link #getArray() <em>Array</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTransition()
+   * @see #getArray()
    * @generated
    * @ordered
    */
-  protected EList<Transition> transition;
+  protected EList<Array> array;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected FragmentImpl()
+  protected ReferenceImpl()
   {
     super();
   }
@@ -89,7 +90,7 @@ public class FragmentImpl extends TransitionImpl implements Fragment
   @Override
   protected EClass eStaticClass()
   {
-    return SequencemodelPackage.Literals.FRAGMENT;
+    return SequencemodelPackage.Literals.REFERENCE;
   }
 
   /**
@@ -97,9 +98,9 @@ public class FragmentImpl extends TransitionImpl implements Fragment
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getExpr()
+  public String getType()
   {
-    return expr;
+    return type;
   }
 
   /**
@@ -107,12 +108,12 @@ public class FragmentImpl extends TransitionImpl implements Fragment
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setExpr(String newExpr)
+  public void setType(String newType)
   {
-    String oldExpr = expr;
-    expr = newExpr;
+    String oldType = type;
+    type = newType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.FRAGMENT__EXPR, oldExpr, expr));
+      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.REFERENCE__TYPE, oldType, type));
   }
 
   /**
@@ -120,13 +121,13 @@ public class FragmentImpl extends TransitionImpl implements Fragment
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Transition> getTransition()
+  public EList<Array> getArray()
   {
-    if (transition == null)
+    if (array == null)
     {
-      transition = new EObjectContainmentEList<Transition>(Transition.class, this, SequencemodelPackage.FRAGMENT__TRANSITION);
+      array = new EObjectContainmentEList<Array>(Array.class, this, SequencemodelPackage.REFERENCE__ARRAY);
     }
-    return transition;
+    return array;
   }
 
   /**
@@ -139,8 +140,8 @@ public class FragmentImpl extends TransitionImpl implements Fragment
   {
     switch (featureID)
     {
-      case SequencemodelPackage.FRAGMENT__TRANSITION:
-        return ((InternalEList<?>)getTransition()).basicRemove(otherEnd, msgs);
+      case SequencemodelPackage.REFERENCE__ARRAY:
+        return ((InternalEList<?>)getArray()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -155,10 +156,10 @@ public class FragmentImpl extends TransitionImpl implements Fragment
   {
     switch (featureID)
     {
-      case SequencemodelPackage.FRAGMENT__EXPR:
-        return getExpr();
-      case SequencemodelPackage.FRAGMENT__TRANSITION:
-        return getTransition();
+      case SequencemodelPackage.REFERENCE__TYPE:
+        return getType();
+      case SequencemodelPackage.REFERENCE__ARRAY:
+        return getArray();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -174,12 +175,12 @@ public class FragmentImpl extends TransitionImpl implements Fragment
   {
     switch (featureID)
     {
-      case SequencemodelPackage.FRAGMENT__EXPR:
-        setExpr((String)newValue);
+      case SequencemodelPackage.REFERENCE__TYPE:
+        setType((String)newValue);
         return;
-      case SequencemodelPackage.FRAGMENT__TRANSITION:
-        getTransition().clear();
-        getTransition().addAll((Collection<? extends Transition>)newValue);
+      case SequencemodelPackage.REFERENCE__ARRAY:
+        getArray().clear();
+        getArray().addAll((Collection<? extends Array>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -195,11 +196,11 @@ public class FragmentImpl extends TransitionImpl implements Fragment
   {
     switch (featureID)
     {
-      case SequencemodelPackage.FRAGMENT__EXPR:
-        setExpr(EXPR_EDEFAULT);
+      case SequencemodelPackage.REFERENCE__TYPE:
+        setType(TYPE_EDEFAULT);
         return;
-      case SequencemodelPackage.FRAGMENT__TRANSITION:
-        getTransition().clear();
+      case SequencemodelPackage.REFERENCE__ARRAY:
+        getArray().clear();
         return;
     }
     super.eUnset(featureID);
@@ -215,10 +216,10 @@ public class FragmentImpl extends TransitionImpl implements Fragment
   {
     switch (featureID)
     {
-      case SequencemodelPackage.FRAGMENT__EXPR:
-        return EXPR_EDEFAULT == null ? expr != null : !EXPR_EDEFAULT.equals(expr);
-      case SequencemodelPackage.FRAGMENT__TRANSITION:
-        return transition != null && !transition.isEmpty();
+      case SequencemodelPackage.REFERENCE__TYPE:
+        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+      case SequencemodelPackage.REFERENCE__ARRAY:
+        return array != null && !array.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -234,10 +235,10 @@ public class FragmentImpl extends TransitionImpl implements Fragment
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (expr: ");
-    result.append(expr);
+    result.append(" (type: ");
+    result.append(type);
     result.append(')');
     return result.toString();
   }
 
-} //FragmentImpl
+} //ReferenceImpl

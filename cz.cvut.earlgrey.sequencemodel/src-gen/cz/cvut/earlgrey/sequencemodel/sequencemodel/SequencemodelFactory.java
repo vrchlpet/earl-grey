@@ -108,13 +108,22 @@ public interface SequencemodelFactory extends EFactory
   ForeachFragment createForeachFragment();
 
   /**
-   * Returns a new object of class '<em>Asser Fragment</em>'.
+   * Returns a new object of class '<em>Loop Fragment</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Asser Fragment</em>'.
+   * @return a new object of class '<em>Loop Fragment</em>'.
    * @generated
    */
-  AsserFragment createAsserFragment();
+  LoopFragment createLoopFragment();
+
+  /**
+   * Returns a new object of class '<em>Assert Fragment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Assert Fragment</em>'.
+   * @generated
+   */
+  AssertFragment createAssertFragment();
 
   /**
    * Returns a new object of class '<em>Message</em>'.
@@ -151,6 +160,33 @@ public interface SequencemodelFactory extends EFactory
    * @generated
    */
   ReturnMessage createReturnMessage();
+
+  /**
+   * Returns a new object of class '<em>Parameter</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Parameter</em>'.
+   * @generated
+   */
+  Parameter createParameter();
+
+  /**
+   * Returns a new object of class '<em>Reference</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Reference</em>'.
+   * @generated
+   */
+  Reference createReference();
+
+  /**
+   * Returns a new object of class '<em>Array</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Array</em>'.
+   * @generated
+   */
+  Array createArray();
 
   /**
    * Returns the package supported by this factory.

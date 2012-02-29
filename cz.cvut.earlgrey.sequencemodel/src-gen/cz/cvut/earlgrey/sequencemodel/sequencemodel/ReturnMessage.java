@@ -6,7 +6,6 @@
  */
 package cz.cvut.earlgrey.sequencemodel.sequencemodel;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +16,6 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getName <em>Name</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getParam <em>Param</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,45 +26,29 @@ import org.eclipse.emf.common.util.EList;
 public interface ReturnMessage extends Message
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Name</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Name</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
+   * @return the value of the '<em>Name</em>' containment reference.
+   * @see #setName(Reference)
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getReturnMessage_Name()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getName();
+  Reference getName();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getName <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
+   * @param value the new value of the '<em>Name</em>' containment reference.
    * @see #getName()
    * @generated
    */
-  void setName(String value);
-
-  /**
-   * Returns the value of the '<em><b>Param</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Param</em>' attribute list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Param</em>' attribute list.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getReturnMessage_Param()
-   * @model unique="false"
-   * @generated
-   */
-  EList<String> getParam();
+  void setName(Reference value);
 
 } // ReturnMessage

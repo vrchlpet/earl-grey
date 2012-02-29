@@ -8,8 +8,6 @@ package cz.cvut.earlgrey.sequencemodel.sequencemodel;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Fragment</b></em>'.
@@ -27,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Fragment extends EObject
+public interface Fragment extends Transition
 {
   /**
    * Returns the value of the '<em><b>Expr</b></em>' attribute.
@@ -57,7 +55,7 @@ public interface Fragment extends EObject
 
   /**
    * Returns the value of the '<em><b>Transition</b></em>' containment reference list.
-   * The list contents are of type {@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Message}.
+   * The list contents are of type {@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Transition}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Transition</em>' containment reference list isn't clear,
@@ -69,6 +67,6 @@ public interface Fragment extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Message> getTransition();
+  EList<Transition> getTransition();
 
 } // Fragment

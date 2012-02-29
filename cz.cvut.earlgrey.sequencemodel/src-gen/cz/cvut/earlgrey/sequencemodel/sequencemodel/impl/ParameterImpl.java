@@ -6,8 +6,8 @@
  */
 package cz.cvut.earlgrey.sequencemodel.sequencemodel.impl;
 
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Parameter;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Reference;
-import cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -20,35 +20,35 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Return Message</b></em>'.
+ * An implementation of the model object '<em><b>Parameter</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ReturnMessageImpl#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ParameterImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
+public class ParameterImpl extends cz.cvut.earlgrey.annotation.annotation.impl.ParameterImpl implements Parameter
 {
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
+   * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getType()
    * @generated
    * @ordered
    */
-  protected Reference name;
+  protected Reference type;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ReturnMessageImpl()
+  protected ParameterImpl()
   {
     super();
   }
@@ -61,7 +61,7 @@ public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
   @Override
   protected EClass eStaticClass()
   {
-    return SequencemodelPackage.Literals.RETURN_MESSAGE;
+    return SequencemodelPackage.Literals.PARAMETER;
   }
 
   /**
@@ -69,9 +69,9 @@ public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public Reference getName()
+  public Reference getType()
   {
-    return name;
+    return type;
   }
 
   /**
@@ -79,13 +79,13 @@ public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetName(Reference newName, NotificationChain msgs)
+  public NotificationChain basicSetType(Reference newType, NotificationChain msgs)
   {
-    Reference oldName = name;
-    name = newName;
+    Reference oldType = type;
+    type = newType;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SequencemodelPackage.RETURN_MESSAGE__NAME, oldName, newName);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SequencemodelPackage.PARAMETER__TYPE, oldType, newType);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -96,20 +96,20 @@ public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(Reference newName)
+  public void setType(Reference newType)
   {
-    if (newName != name)
+    if (newType != type)
     {
       NotificationChain msgs = null;
-      if (name != null)
-        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SequencemodelPackage.RETURN_MESSAGE__NAME, null, msgs);
-      if (newName != null)
-        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SequencemodelPackage.RETURN_MESSAGE__NAME, null, msgs);
-      msgs = basicSetName(newName, msgs);
+      if (type != null)
+        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SequencemodelPackage.PARAMETER__TYPE, null, msgs);
+      if (newType != null)
+        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SequencemodelPackage.PARAMETER__TYPE, null, msgs);
+      msgs = basicSetType(newType, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.RETURN_MESSAGE__NAME, newName, newName));
+      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.PARAMETER__TYPE, newType, newType));
   }
 
   /**
@@ -122,8 +122,8 @@ public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
   {
     switch (featureID)
     {
-      case SequencemodelPackage.RETURN_MESSAGE__NAME:
-        return basicSetName(null, msgs);
+      case SequencemodelPackage.PARAMETER__TYPE:
+        return basicSetType(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -138,8 +138,8 @@ public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
   {
     switch (featureID)
     {
-      case SequencemodelPackage.RETURN_MESSAGE__NAME:
-        return getName();
+      case SequencemodelPackage.PARAMETER__TYPE:
+        return getType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -154,8 +154,8 @@ public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
   {
     switch (featureID)
     {
-      case SequencemodelPackage.RETURN_MESSAGE__NAME:
-        setName((Reference)newValue);
+      case SequencemodelPackage.PARAMETER__TYPE:
+        setType((Reference)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -171,8 +171,8 @@ public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
   {
     switch (featureID)
     {
-      case SequencemodelPackage.RETURN_MESSAGE__NAME:
-        setName((Reference)null);
+      case SequencemodelPackage.PARAMETER__TYPE:
+        setType((Reference)null);
         return;
     }
     super.eUnset(featureID);
@@ -188,10 +188,10 @@ public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
   {
     switch (featureID)
     {
-      case SequencemodelPackage.RETURN_MESSAGE__NAME:
-        return name != null;
+      case SequencemodelPackage.PARAMETER__TYPE:
+        return type != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //ReturnMessageImpl
+} //ParameterImpl

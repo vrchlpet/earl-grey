@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.TransitionBlock#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.TransitionBlock#getParameter <em>Parameter</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.TransitionBlock#getTransition <em>Transition</em>}</li>
  * </ul>
  * </p>
@@ -54,8 +55,24 @@ public interface TransitionBlock extends Transition
   void setName(String value);
 
   /**
+   * Returns the value of the '<em><b>Parameter</b></em>' containment reference list.
+   * The list contents are of type {@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Parameter}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Parameter</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Parameter</em>' containment reference list.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getTransitionBlock_Parameter()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Parameter> getParameter();
+
+  /**
    * Returns the value of the '<em><b>Transition</b></em>' containment reference list.
-   * The list contents are of type {@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Message}.
+   * The list contents are of type {@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Transition}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Transition</em>' containment reference list isn't clear,
@@ -67,6 +84,6 @@ public interface TransitionBlock extends Transition
    * @model containment="true"
    * @generated
    */
-  EList<Message> getTransition();
+  EList<Transition> getTransition();
 
 } // TransitionBlock

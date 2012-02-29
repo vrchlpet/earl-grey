@@ -123,6 +123,7 @@ public class SequencemodelSwitch<T> extends Switch<T>
       {
         Fragment fragment = (Fragment)theEObject;
         T result = caseFragment(fragment);
+        if (result == null) result = caseTransition(fragment);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -131,6 +132,7 @@ public class SequencemodelSwitch<T> extends Switch<T>
         IfElseFragment ifElseFragment = (IfElseFragment)theEObject;
         T result = caseIfElseFragment(ifElseFragment);
         if (result == null) result = caseFragment(ifElseFragment);
+        if (result == null) result = caseTransition(ifElseFragment);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -139,14 +141,25 @@ public class SequencemodelSwitch<T> extends Switch<T>
         ForeachFragment foreachFragment = (ForeachFragment)theEObject;
         T result = caseForeachFragment(foreachFragment);
         if (result == null) result = caseFragment(foreachFragment);
+        if (result == null) result = caseTransition(foreachFragment);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case SequencemodelPackage.ASSER_FRAGMENT:
+      case SequencemodelPackage.LOOP_FRAGMENT:
       {
-        AsserFragment asserFragment = (AsserFragment)theEObject;
-        T result = caseAsserFragment(asserFragment);
-        if (result == null) result = caseFragment(asserFragment);
+        LoopFragment loopFragment = (LoopFragment)theEObject;
+        T result = caseLoopFragment(loopFragment);
+        if (result == null) result = caseFragment(loopFragment);
+        if (result == null) result = caseTransition(loopFragment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SequencemodelPackage.ASSERT_FRAGMENT:
+      {
+        AssertFragment assertFragment = (AssertFragment)theEObject;
+        T result = caseAssertFragment(assertFragment);
+        if (result == null) result = caseFragment(assertFragment);
+        if (result == null) result = caseTransition(assertFragment);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -182,6 +195,28 @@ public class SequencemodelSwitch<T> extends Switch<T>
         T result = caseReturnMessage(returnMessage);
         if (result == null) result = caseMessage(returnMessage);
         if (result == null) result = caseTransition(returnMessage);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SequencemodelPackage.PARAMETER:
+      {
+        Parameter parameter = (Parameter)theEObject;
+        T result = caseParameter(parameter);
+        if (result == null) result = caseAnnotation_Parameter(parameter);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SequencemodelPackage.REFERENCE:
+      {
+        Reference reference = (Reference)theEObject;
+        T result = caseReference(reference);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SequencemodelPackage.ARRAY:
+      {
+        Array array = (Array)theEObject;
+        T result = caseArray(array);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -334,17 +369,33 @@ public class SequencemodelSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Asser Fragment</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Loop Fragment</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Asser Fragment</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Loop Fragment</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseAsserFragment(AsserFragment object)
+  public T caseLoopFragment(LoopFragment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Assert Fragment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Assert Fragment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAssertFragment(AssertFragment object)
   {
     return null;
   }
@@ -409,6 +460,70 @@ public class SequencemodelSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseReturnMessage(ReturnMessage object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Parameter</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Parameter</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseParameter(Parameter object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Reference</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Reference</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseReference(Reference object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Array</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Array</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseArray(Array object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Parameter</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Parameter</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAnnotation_Parameter(cz.cvut.earlgrey.annotation.annotation.Parameter object)
   {
     return null;
   }

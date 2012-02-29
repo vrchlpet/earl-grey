@@ -6,6 +6,8 @@
  */
 package cz.cvut.earlgrey.sequencemodel.sequencemodel;
 
+import cz.cvut.earlgrey.annotation.annotation.Annotation;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -18,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant#getAnnotation <em>Annotation</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant#getTransition <em>Transition</em>}</li>
  * </ul>
@@ -29,6 +32,22 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Participant extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Annotation</b></em>' containment reference list.
+   * The list contents are of type {@link cz.cvut.earlgrey.annotation.annotation.Annotation}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Annotation</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Annotation</em>' containment reference list.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getParticipant_Annotation()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Annotation> getAnnotation();
+
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
