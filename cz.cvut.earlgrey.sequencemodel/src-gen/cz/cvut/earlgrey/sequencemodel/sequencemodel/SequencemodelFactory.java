@@ -126,6 +126,24 @@ public interface SequencemodelFactory extends EFactory
   AssertFragment createAssertFragment();
 
   /**
+   * Returns a new object of class '<em>Break Fragment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Break Fragment</em>'.
+   * @generated
+   */
+  BreakFragment createBreakFragment();
+
+  /**
+   * Returns a new object of class '<em>Next Fragment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Next Fragment</em>'.
+   * @generated
+   */
+  NextFragment createNextFragment();
+
+  /**
    * Returns a new object of class '<em>Message</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -160,6 +178,15 @@ public interface SequencemodelFactory extends EFactory
    * @generated
    */
   ReturnMessage createReturnMessage();
+
+  /**
+   * Returns a new object of class '<em>Delete Message</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Delete Message</em>'.
+   * @generated
+   */
+  DeleteMessage createDeleteMessage();
 
   /**
    * Returns a new object of class '<em>Parameter</em>'.

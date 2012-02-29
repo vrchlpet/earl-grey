@@ -8,13 +8,16 @@ import cz.cvut.earlgrey.annotation.annotation.Parameter;
 import cz.cvut.earlgrey.annotation.serializer.AnnotationSemanticSequencer;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Array;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.AssertFragment;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.BreakFragment;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.DeleteMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.ForeachFragment;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.IfElseFragment;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Import;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.LoopFragment;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Model;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.NewMessage;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.NextFragment;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Reference;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage;
@@ -95,25 +98,38 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 			case SequencemodelPackage.ASSERT_FRAGMENT:
 				if(context == grammarAccess.getAssertFragmentRule() ||
 				   context == grammarAccess.getFragmentRule() ||
-				   context == grammarAccess.getFragmentBodyRule() ||
 				   context == grammarAccess.getTransitionRule()) {
 					sequence_AssertFragment(context, (AssertFragment) semanticObject); 
 					return; 
 				}
 				else break;
+			case SequencemodelPackage.BREAK_FRAGMENT:
+				if(context == grammarAccess.getBreakFragmentRule() ||
+				   context == grammarAccess.getFragmentRule() ||
+				   context == grammarAccess.getTransitionRule()) {
+					sequence_BreakFragment(context, (BreakFragment) semanticObject); 
+					return; 
+				}
+				else break;
 			case SequencemodelPackage.CALL_MESSAGE:
 				if(context == grammarAccess.getCallMessageRule() ||
-				   context == grammarAccess.getFragmentBodyRule() ||
 				   context == grammarAccess.getMessageRule() ||
 				   context == grammarAccess.getTransitionRule()) {
 					sequence_CallMessage(context, (CallMessage) semanticObject); 
 					return; 
 				}
 				else break;
+			case SequencemodelPackage.DELETE_MESSAGE:
+				if(context == grammarAccess.getDeleteMessageRule() ||
+				   context == grammarAccess.getMessageRule() ||
+				   context == grammarAccess.getTransitionRule()) {
+					sequence_DeleteMessage(context, (DeleteMessage) semanticObject); 
+					return; 
+				}
+				else break;
 			case SequencemodelPackage.FOREACH_FRAGMENT:
 				if(context == grammarAccess.getForeachFragmentRule() ||
 				   context == grammarAccess.getFragmentRule() ||
-				   context == grammarAccess.getFragmentBodyRule() ||
 				   context == grammarAccess.getTransitionRule()) {
 					sequence_ForeachFragment(context, (ForeachFragment) semanticObject); 
 					return; 
@@ -121,7 +137,6 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 				else break;
 			case SequencemodelPackage.IF_ELSE_FRAGMENT:
 				if(context == grammarAccess.getFragmentRule() ||
-				   context == grammarAccess.getFragmentBodyRule() ||
 				   context == grammarAccess.getIfElseFragmentRule() ||
 				   context == grammarAccess.getTransitionRule()) {
 					sequence_IfElseFragment(context, (IfElseFragment) semanticObject); 
@@ -136,7 +151,6 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 				else break;
 			case SequencemodelPackage.LOOP_FRAGMENT:
 				if(context == grammarAccess.getFragmentRule() ||
-				   context == grammarAccess.getFragmentBodyRule() ||
 				   context == grammarAccess.getLoopFragmentRule() ||
 				   context == grammarAccess.getTransitionRule()) {
 					sequence_LoopFragment(context, (LoopFragment) semanticObject); 
@@ -150,11 +164,18 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 				}
 				else break;
 			case SequencemodelPackage.NEW_MESSAGE:
-				if(context == grammarAccess.getFragmentBodyRule() ||
-				   context == grammarAccess.getMessageRule() ||
+				if(context == grammarAccess.getMessageRule() ||
 				   context == grammarAccess.getNewMessageRule() ||
 				   context == grammarAccess.getTransitionRule()) {
 					sequence_NewMessage(context, (NewMessage) semanticObject); 
+					return; 
+				}
+				else break;
+			case SequencemodelPackage.NEXT_FRAGMENT:
+				if(context == grammarAccess.getFragmentRule() ||
+				   context == grammarAccess.getNextFragmentRule() ||
+				   context == grammarAccess.getTransitionRule()) {
+					sequence_NextFragment(context, (NextFragment) semanticObject); 
 					return; 
 				}
 				else break;
@@ -177,8 +198,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 				}
 				else break;
 			case SequencemodelPackage.RETURN_MESSAGE:
-				if(context == grammarAccess.getFragmentBodyRule() ||
-				   context == grammarAccess.getMessageRule() ||
+				if(context == grammarAccess.getMessageRule() ||
 				   context == grammarAccess.getReturnMessageRule() ||
 				   context == grammarAccess.getTransitionRule()) {
 					sequence_ReturnMessage(context, (ReturnMessage) semanticObject); 
@@ -192,8 +212,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 				}
 				else break;
 			case SequencemodelPackage.TRANSITION_BLOCK:
-				if(context == grammarAccess.getTransitionRule() ||
-				   context == grammarAccess.getTransitionBlockRule()) {
+				if(context == grammarAccess.getTransitionBlockRule()) {
 					sequence_TransitionBlock(context, (TransitionBlock) semanticObject); 
 					return; 
 				}
@@ -222,7 +241,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (expr=ValueWithSpaces transition+=FragmentBody*)
+	 *     (expr=ValueWithSpaces transition+=Transition*)
 	 */
 	protected void sequence_AssertFragment(EObject context, AssertFragment semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -240,6 +259,15 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
+	 *     ((expr=ValueWithSpaces transition+=Transition*)?)
+	 */
+	protected void sequence_BreakFragment(EObject context, BreakFragment semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (participant=ID? name=ID (parameter+=Parameter parameter+=Parameter*)?)
 	 */
 	protected void sequence_CallMessage(EObject context, CallMessage semanticObject) {
@@ -249,7 +277,16 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (expr=ValueWithSpacesExpr transition+=FragmentBody*)
+	 *     (name=ID (parameter+=Parameter parameter+=Parameter*)?)
+	 */
+	protected void sequence_DeleteMessage(EObject context, DeleteMessage semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (expr=ForeachExpression transition+=Transition*)
 	 */
 	protected void sequence_ForeachFragment(EObject context, ForeachFragment semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -258,7 +295,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (expr=ValueWithSpaces transition+=FragmentBody* (elseIfExpr+=ValueWithSpaces elseIftransition+=FragmentBody*)* elseTransition+=FragmentBody*)
+	 *     (expr=ValueWithSpaces transition+=Transition* (elseIfExpr+=ValueWithSpaces elseIftransition+=Transition*)* elseTransition+=Transition*)
 	 */
 	protected void sequence_IfElseFragment(EObject context, IfElseFragment semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -283,7 +320,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (expr=ValueWithSpaces transition+=FragmentBody*)
+	 *     (expr=ValueWithSpaces transition+=Transition*)
 	 */
 	protected void sequence_LoopFragment(EObject context, LoopFragment semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -310,6 +347,15 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
+	 *     ((expr=ValueWithSpaces transition+=Transition*)?)
+	 */
+	protected void sequence_NextFragment(EObject context, NextFragment semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (name=ID type=Reference?)
 	 */
 	protected void sequence_Parameter(EObject context, cz.cvut.earlgrey.sequencemodel.sequencemodel.Parameter semanticObject) {
@@ -319,7 +365,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (annotation+=Annotation* name=ID transition+=Transition*)
+	 *     (annotation+=Annotation* name=ID transition+=Transition* block+=TransitionBlock*)
 	 */
 	protected void sequence_Participant(EObject context, Participant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -355,7 +401,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (name=ID (parameter+=Parameter parameter+=Parameter*)? transition+=FragmentBody*)
+	 *     (name=ID (parameter+=Parameter parameter+=Parameter*)? transition+=Transition*)
 	 */
 	protected void sequence_TransitionBlock(EObject context, TransitionBlock semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

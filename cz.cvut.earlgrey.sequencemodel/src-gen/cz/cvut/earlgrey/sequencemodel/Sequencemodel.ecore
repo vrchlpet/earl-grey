@@ -27,9 +27,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="transition" upperBound="-1"
         eType="#//Transition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="block" upperBound="-1"
+        eType="#//TransitionBlock" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transition"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TransitionBlock" eSuperTypes="#//Transition">
+  <eClassifiers xsi:type="ecore:EClass" name="TransitionBlock">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
         eType="#//Parameter" containment="true"/>
@@ -52,6 +54,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="ForeachFragment" eSuperTypes="#//Fragment"/>
   <eClassifiers xsi:type="ecore:EClass" name="LoopFragment" eSuperTypes="#//Fragment"/>
   <eClassifiers xsi:type="ecore:EClass" name="AssertFragment" eSuperTypes="#//Fragment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BreakFragment" eSuperTypes="#//Fragment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NextFragment" eSuperTypes="#//Fragment"/>
   <eClassifiers xsi:type="ecore:EClass" name="Message" eSuperTypes="#//Transition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
         eType="#//Parameter" containment="true"/>
@@ -66,6 +70,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="ReturnMessage" eSuperTypes="#//Message">
     <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//Reference"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeleteMessage" eSuperTypes="#//Message">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="../../../../../../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/Annotation.ecore#//Parameter">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Reference"

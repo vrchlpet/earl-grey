@@ -8,6 +8,8 @@ package cz.cvut.earlgrey.sequencemodel.sequencemodel;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Transition Block</b></em>'.
@@ -26,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface TransitionBlock extends Transition
+public interface TransitionBlock extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.

@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant#getAnnotation <em>Annotation</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant#getTransition <em>Transition</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant#getBlock <em>Block</em>}</li>
  * </ul>
  * </p>
  *
@@ -89,5 +90,21 @@ public interface Participant extends EObject
    * @generated
    */
   EList<Transition> getTransition();
+
+  /**
+   * Returns the value of the '<em><b>Block</b></em>' containment reference list.
+   * The list contents are of type {@link cz.cvut.earlgrey.sequencemodel.sequencemodel.TransitionBlock}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Block</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Block</em>' containment reference list.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getParticipant_Block()
+   * @model containment="true"
+   * @generated
+   */
+  EList<TransitionBlock> getBlock();
 
 } // Participant

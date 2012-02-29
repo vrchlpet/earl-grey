@@ -39,9 +39,8 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getTransitionAccess().getAlternatives(), "rule__Transition__Alternatives");
 					put(grammarAccess.getFragmentAccess().getAlternatives(), "rule__Fragment__Alternatives");
-					put(grammarAccess.getFragmentBodyAccess().getAlternatives(), "rule__FragmentBody__Alternatives");
 					put(grammarAccess.getMessageAccess().getAlternatives(), "rule__Message__Alternatives");
-					put(grammarAccess.getValueWithSpacesExprAccess().getAlternatives(), "rule__ValueWithSpacesExpr__Alternatives");
+					put(grammarAccess.getForeachExpressionAccess().getAlternatives_2(), "rule__ForeachExpression__Alternatives_2");
 					put(grammarAccess.getValueWithSpacesAccess().getAlternatives(), "rule__ValueWithSpaces__Alternatives");
 					put(grammarAccess.getValueAccess().getAlternatives(), "rule__Value__Alternatives");
 					put(grammarAccess.getCompositeIDAccess().getAlternatives(), "rule__CompositeID__Alternatives");
@@ -61,6 +60,10 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getForeachFragmentAccess().getGroup(), "rule__ForeachFragment__Group__0");
 					put(grammarAccess.getLoopFragmentAccess().getGroup(), "rule__LoopFragment__Group__0");
 					put(grammarAccess.getAssertFragmentAccess().getGroup(), "rule__AssertFragment__Group__0");
+					put(grammarAccess.getBreakFragmentAccess().getGroup(), "rule__BreakFragment__Group__0");
+					put(grammarAccess.getBreakFragmentAccess().getGroup_2(), "rule__BreakFragment__Group_2__0");
+					put(grammarAccess.getNextFragmentAccess().getGroup(), "rule__NextFragment__Group__0");
+					put(grammarAccess.getNextFragmentAccess().getGroup_2(), "rule__NextFragment__Group_2__0");
 					put(grammarAccess.getCallMessageAccess().getGroup(), "rule__CallMessage__Group__0");
 					put(grammarAccess.getCallMessageAccess().getGroup_0(), "rule__CallMessage__Group_0__0");
 					put(grammarAccess.getCallMessageAccess().getGroup_2(), "rule__CallMessage__Group_2__0");
@@ -74,11 +77,16 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getReturnMessageAccess().getGroup_2(), "rule__ReturnMessage__Group_2__0");
 					put(grammarAccess.getReturnMessageAccess().getGroup_2_1(), "rule__ReturnMessage__Group_2_1__0");
 					put(grammarAccess.getReturnMessageAccess().getGroup_2_1_1(), "rule__ReturnMessage__Group_2_1_1__0");
+					put(grammarAccess.getDeleteMessageAccess().getGroup(), "rule__DeleteMessage__Group__0");
+					put(grammarAccess.getDeleteMessageAccess().getGroup_2(), "rule__DeleteMessage__Group_2__0");
+					put(grammarAccess.getDeleteMessageAccess().getGroup_2_1(), "rule__DeleteMessage__Group_2_1__0");
+					put(grammarAccess.getDeleteMessageAccess().getGroup_2_1_1(), "rule__DeleteMessage__Group_2_1_1__0");
 					put(grammarAccess.getParameterAccess().getGroup(), "rule__Parameter__Group__0");
 					put(grammarAccess.getParameterAccess().getGroup_1(), "rule__Parameter__Group_1__0");
 					put(grammarAccess.getReferenceAccess().getGroup(), "rule__Reference__Group__0");
 					put(grammarAccess.getArrayAccess().getGroup(), "rule__Array__Group__0");
-					put(grammarAccess.getValueWithSpacesExprAccess().getGroup_1(), "rule__ValueWithSpacesExpr__Group_1__0");
+					put(grammarAccess.getForeachExpressionAccess().getGroup(), "rule__ForeachExpression__Group__0");
+					put(grammarAccess.getForeachExpressionAccess().getGroup_2_0(), "rule__ForeachExpression__Group_2_0__0");
 					put(grammarAccess.getAnnotationAccess().getGroup(), "rule__Annotation__Group__0");
 					put(grammarAccess.getAnnotationAccess().getGroup_2(), "rule__Annotation__Group_2__0");
 					put(grammarAccess.getAnnotationAccess().getGroup_2_2(), "rule__Annotation__Group_2_2__0");
@@ -97,6 +105,7 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getParticipantAccess().getAnnotationAssignment_0(), "rule__Participant__AnnotationAssignment_0");
 					put(grammarAccess.getParticipantAccess().getNameAssignment_1(), "rule__Participant__NameAssignment_1");
 					put(grammarAccess.getParticipantAccess().getTransitionAssignment_2(), "rule__Participant__TransitionAssignment_2");
+					put(grammarAccess.getParticipantAccess().getBlockAssignment_3(), "rule__Participant__BlockAssignment_3");
 					put(grammarAccess.getTransitionBlockAccess().getNameAssignment_1(), "rule__TransitionBlock__NameAssignment_1");
 					put(grammarAccess.getTransitionBlockAccess().getParameterAssignment_2_1_0(), "rule__TransitionBlock__ParameterAssignment_2_1_0");
 					put(grammarAccess.getTransitionBlockAccess().getParameterAssignment_2_1_1_1(), "rule__TransitionBlock__ParameterAssignment_2_1_1_1");
@@ -112,6 +121,10 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLoopFragmentAccess().getTransitionAssignment_3(), "rule__LoopFragment__TransitionAssignment_3");
 					put(grammarAccess.getAssertFragmentAccess().getExprAssignment_1(), "rule__AssertFragment__ExprAssignment_1");
 					put(grammarAccess.getAssertFragmentAccess().getTransitionAssignment_3(), "rule__AssertFragment__TransitionAssignment_3");
+					put(grammarAccess.getBreakFragmentAccess().getExprAssignment_2_0(), "rule__BreakFragment__ExprAssignment_2_0");
+					put(grammarAccess.getBreakFragmentAccess().getTransitionAssignment_2_2(), "rule__BreakFragment__TransitionAssignment_2_2");
+					put(grammarAccess.getNextFragmentAccess().getExprAssignment_2_0(), "rule__NextFragment__ExprAssignment_2_0");
+					put(grammarAccess.getNextFragmentAccess().getTransitionAssignment_2_2(), "rule__NextFragment__TransitionAssignment_2_2");
 					put(grammarAccess.getCallMessageAccess().getParticipantAssignment_0_0(), "rule__CallMessage__ParticipantAssignment_0_0");
 					put(grammarAccess.getCallMessageAccess().getNameAssignment_1(), "rule__CallMessage__NameAssignment_1");
 					put(grammarAccess.getCallMessageAccess().getParameterAssignment_2_1_0(), "rule__CallMessage__ParameterAssignment_2_1_0");
@@ -122,6 +135,9 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getReturnMessageAccess().getNameAssignment_1(), "rule__ReturnMessage__NameAssignment_1");
 					put(grammarAccess.getReturnMessageAccess().getParameterAssignment_2_1_0(), "rule__ReturnMessage__ParameterAssignment_2_1_0");
 					put(grammarAccess.getReturnMessageAccess().getParameterAssignment_2_1_1_1(), "rule__ReturnMessage__ParameterAssignment_2_1_1_1");
+					put(grammarAccess.getDeleteMessageAccess().getNameAssignment_1(), "rule__DeleteMessage__NameAssignment_1");
+					put(grammarAccess.getDeleteMessageAccess().getParameterAssignment_2_1_0(), "rule__DeleteMessage__ParameterAssignment_2_1_0");
+					put(grammarAccess.getDeleteMessageAccess().getParameterAssignment_2_1_1_1(), "rule__DeleteMessage__ParameterAssignment_2_1_1_1");
 					put(grammarAccess.getParameterAccess().getNameAssignment_0(), "rule__Parameter__NameAssignment_0");
 					put(grammarAccess.getParameterAccess().getTypeAssignment_1_1(), "rule__Parameter__TypeAssignment_1_1");
 					put(grammarAccess.getReferenceAccess().getTypeAssignment_0(), "rule__Reference__TypeAssignment_0");

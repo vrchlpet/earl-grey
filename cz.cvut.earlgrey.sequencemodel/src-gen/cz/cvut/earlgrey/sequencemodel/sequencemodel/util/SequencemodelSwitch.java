@@ -115,7 +115,6 @@ public class SequencemodelSwitch<T> extends Switch<T>
       {
         TransitionBlock transitionBlock = (TransitionBlock)theEObject;
         T result = caseTransitionBlock(transitionBlock);
-        if (result == null) result = caseTransition(transitionBlock);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -163,6 +162,24 @@ public class SequencemodelSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case SequencemodelPackage.BREAK_FRAGMENT:
+      {
+        BreakFragment breakFragment = (BreakFragment)theEObject;
+        T result = caseBreakFragment(breakFragment);
+        if (result == null) result = caseFragment(breakFragment);
+        if (result == null) result = caseTransition(breakFragment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SequencemodelPackage.NEXT_FRAGMENT:
+      {
+        NextFragment nextFragment = (NextFragment)theEObject;
+        T result = caseNextFragment(nextFragment);
+        if (result == null) result = caseFragment(nextFragment);
+        if (result == null) result = caseTransition(nextFragment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case SequencemodelPackage.MESSAGE:
       {
         Message message = (Message)theEObject;
@@ -195,6 +212,15 @@ public class SequencemodelSwitch<T> extends Switch<T>
         T result = caseReturnMessage(returnMessage);
         if (result == null) result = caseMessage(returnMessage);
         if (result == null) result = caseTransition(returnMessage);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SequencemodelPackage.DELETE_MESSAGE:
+      {
+        DeleteMessage deleteMessage = (DeleteMessage)theEObject;
+        T result = caseDeleteMessage(deleteMessage);
+        if (result == null) result = caseMessage(deleteMessage);
+        if (result == null) result = caseTransition(deleteMessage);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -401,6 +427,38 @@ public class SequencemodelSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Break Fragment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Break Fragment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBreakFragment(BreakFragment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Next Fragment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Next Fragment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNextFragment(NextFragment object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Message</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -460,6 +518,22 @@ public class SequencemodelSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseReturnMessage(ReturnMessage object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Delete Message</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Delete Message</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDeleteMessage(DeleteMessage object)
   {
     return null;
   }

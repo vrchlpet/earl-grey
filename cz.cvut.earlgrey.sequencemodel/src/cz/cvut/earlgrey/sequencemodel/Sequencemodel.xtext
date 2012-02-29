@@ -18,21 +18,23 @@ Sequence:
     'end'
 ;
 
+// e.g.: Node /*..*/ end
 Participant:
     annotation+=Annotation* =>
     name=ID
-        transition+=Transition*
+        transition+=Transition* //initial transitions
+        block+=TransitionBlock* //transition blocks
     'end'
 ;
 
 Transition:
-    TransitionBlock | Message | Fragment
+    Message | Fragment
 ;
 
 // e.g.: def append(child : Node) end
 TransitionBlock:
     'def' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? //':'
-        transition+=FragmentBody*
+        transition+=Transition*
     'end'
 ;
 
@@ -41,48 +43,67 @@ Fragment:
     | ForeachFragment
     | AssertFragment
     | LoopFragment
-;
-
-FragmentBody returns Transition:
-    Fragment | Message
+    | BreakFragment
+    | NextFragment
 ;
 
 IfElseFragment: //alt/opt
     'if' expr=ValueWithSpaces 'then'
-        transition+=FragmentBody*
+        transition+=Transition*
      (=> 'elsif' elseIfExpr+=ValueWithSpaces 'then'
-         elseIftransition+=FragmentBody*
+         elseIftransition+=Transition*
      )*
      (=> 'else'
-        elseTransition+=FragmentBody*
+        elseTransition+=Transition*
      )? 
     'end'
 ;
 
-// e.g.: foreach node do /*..*/ end
+// e.g.: foreach node in Nodes do /*..*/ end
+// e.g.: foreach i in 0..5 do /*..*/ end
 ForeachFragment:
-    'foreach' expr=ValueWithSpacesExpr 'do'
-        transition+=FragmentBody*
+    'foreach' expr=ForeachExpression 'do'
+        transition+=Transition*
     'end'
 ;
 
 // e.g.: while i < 0 do /*..*/ end
 LoopFragment: //loop
     'while' expr=ValueWithSpaces 'do'
-        transition+=FragmentBody*
+        transition+=Transition*
     'end'
 ;
 
 AssertFragment: //assert
     'assert' expr=ValueWithSpaces 'then'
-        transition+=FragmentBody*
+        transition+=Transition*
     'end'
 ;
 
+// use this instead of:
+//   if i > 0 then break end
+// e.g.: break i > 0 then /*..*/ end
+BreakFragment:
+    {BreakFragment} 'break' (expr=ValueWithSpaces 'then'
+        transition+=Transition*
+    'end')?
+;
+
+// use this instead of:
+//   if i > 0 then continue end
+// e.g.: next i % 5 then /*..*/ end
+NextFragment:
+    {NextFragment} 'next' (expr=ValueWithSpaces 'then'
+        transition+=Transition*
+    'end')?
+;
 
 //
 Message:
-    CallMessage | NewMessage | ReturnMessage
+    CallMessage
+    | NewMessage
+    | ReturnMessage
+    | DeleteMessage
 ;
 
 // e.g.: Node.getChild()
@@ -101,6 +122,10 @@ ReturnMessage:
     'return ' name=Reference (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
 ;
 
+DeleteMessage:
+    'delete ' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
+;
+
 // e.g.: Name : String = "John"
 Parameter:
     name=ID (':' type=Reference)?
@@ -114,9 +139,13 @@ Array:
     {Array} '[' size=NATURAL? ']'
 ;
 
-ValueWithSpacesExpr hidden():
-    (OPERATOR | (NATURAL '..' NATURAL) | Value | ANY_OTHER | WS)*
+ForeachExpression hidden(WS):
+    ID 'in' ((NATURAL '..' NATURAL) | ID)
 ;
+
+//ValueWithSpacesExpr hidden():
+//    (OPERATOR | (NATURAL '..' NATURAL) | Value | ANY_OTHER | WS)*
+//;
 
 ValueWithSpaces hidden():
     (OPERATOR | Value | ANY_OTHER | WS)*

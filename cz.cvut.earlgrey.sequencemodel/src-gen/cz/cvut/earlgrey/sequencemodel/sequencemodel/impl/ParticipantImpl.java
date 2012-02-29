@@ -11,6 +11,7 @@ import cz.cvut.earlgrey.annotation.annotation.Annotation;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Transition;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.TransitionBlock;
 
 import java.util.Collection;
 
@@ -38,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ParticipantImpl#getAnnotation <em>Annotation</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ParticipantImpl#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ParticipantImpl#getTransition <em>Transition</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ParticipantImpl#getBlock <em>Block</em>}</li>
  * </ul>
  * </p>
  *
@@ -84,6 +86,16 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
    * @ordered
    */
   protected EList<Transition> transition;
+
+  /**
+   * The cached value of the '{@link #getBlock() <em>Block</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBlock()
+   * @generated
+   * @ordered
+   */
+  protected EList<TransitionBlock> block;
 
   /**
    * <!-- begin-user-doc -->
@@ -162,6 +174,20 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<TransitionBlock> getBlock()
+  {
+    if (block == null)
+    {
+      block = new EObjectContainmentEList<TransitionBlock>(TransitionBlock.class, this, SequencemodelPackage.PARTICIPANT__BLOCK);
+    }
+    return block;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -171,6 +197,8 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
         return ((InternalEList<?>)getAnnotation()).basicRemove(otherEnd, msgs);
       case SequencemodelPackage.PARTICIPANT__TRANSITION:
         return ((InternalEList<?>)getTransition()).basicRemove(otherEnd, msgs);
+      case SequencemodelPackage.PARTICIPANT__BLOCK:
+        return ((InternalEList<?>)getBlock()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -191,6 +219,8 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
         return getName();
       case SequencemodelPackage.PARTICIPANT__TRANSITION:
         return getTransition();
+      case SequencemodelPackage.PARTICIPANT__BLOCK:
+        return getBlock();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -217,6 +247,10 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
         getTransition().clear();
         getTransition().addAll((Collection<? extends Transition>)newValue);
         return;
+      case SequencemodelPackage.PARTICIPANT__BLOCK:
+        getBlock().clear();
+        getBlock().addAll((Collection<? extends TransitionBlock>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -240,6 +274,9 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
       case SequencemodelPackage.PARTICIPANT__TRANSITION:
         getTransition().clear();
         return;
+      case SequencemodelPackage.PARTICIPANT__BLOCK:
+        getBlock().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -260,6 +297,8 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case SequencemodelPackage.PARTICIPANT__TRANSITION:
         return transition != null && !transition.isEmpty();
+      case SequencemodelPackage.PARTICIPANT__BLOCK:
+        return block != null && !block.isEmpty();
     }
     return super.eIsSet(featureID);
   }

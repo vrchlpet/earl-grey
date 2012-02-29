@@ -25,6 +25,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Participant/annotation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Participant/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Participant/transition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Participant/block"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//Transition"/>
     <genClasses ecoreClass="Sequencemodel.ecore#//TransitionBlock">
@@ -44,6 +45,8 @@
     <genClasses ecoreClass="Sequencemodel.ecore#//ForeachFragment"/>
     <genClasses ecoreClass="Sequencemodel.ecore#//LoopFragment"/>
     <genClasses ecoreClass="Sequencemodel.ecore#//AssertFragment"/>
+    <genClasses ecoreClass="Sequencemodel.ecore#//BreakFragment"/>
+    <genClasses ecoreClass="Sequencemodel.ecore#//NextFragment"/>
     <genClasses ecoreClass="Sequencemodel.ecore#//Message">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Message/parameter"/>
     </genClasses>
@@ -56,6 +59,9 @@
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//ReturnMessage">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//ReturnMessage/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//DeleteMessage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//DeleteMessage/name"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//Parameter">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Parameter/type"/>

@@ -10,7 +10,9 @@ import cz.cvut.earlgrey.annotation.annotation.AnnotationPackage;
 
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Array;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.AssertFragment;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.BreakFragment;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.DeleteMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.ForeachFragment;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Fragment;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.IfElseFragment;
@@ -19,6 +21,7 @@ import cz.cvut.earlgrey.sequencemodel.sequencemodel.LoopFragment;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Message;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Model;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.NewMessage;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.NextFragment;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Parameter;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Reference;
@@ -126,6 +129,20 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass breakFragmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass nextFragmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass messageEClass = null;
 
   /**
@@ -148,6 +165,13 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
    * @generated
    */
   private EClass returnMessageEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass deleteMessageEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -371,6 +395,16 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getParticipant_Block()
+  {
+    return (EReference)participantEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getTransition()
   {
     return transitionEClass;
@@ -521,6 +555,26 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getBreakFragment()
+  {
+    return breakFragmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getNextFragment()
+  {
+    return nextFragmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getMessage()
   {
     return messageEClass;
@@ -604,6 +658,26 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
   public EReference getReturnMessage_Name()
   {
     return (EReference)returnMessageEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDeleteMessage()
+  {
+    return deleteMessageEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDeleteMessage_Name()
+  {
+    return (EAttribute)deleteMessageEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -722,6 +796,7 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
     createEReference(participantEClass, PARTICIPANT__ANNOTATION);
     createEAttribute(participantEClass, PARTICIPANT__NAME);
     createEReference(participantEClass, PARTICIPANT__TRANSITION);
+    createEReference(participantEClass, PARTICIPANT__BLOCK);
 
     transitionEClass = createEClass(TRANSITION);
 
@@ -745,6 +820,10 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
 
     assertFragmentEClass = createEClass(ASSERT_FRAGMENT);
 
+    breakFragmentEClass = createEClass(BREAK_FRAGMENT);
+
+    nextFragmentEClass = createEClass(NEXT_FRAGMENT);
+
     messageEClass = createEClass(MESSAGE);
     createEReference(messageEClass, MESSAGE__PARAMETER);
 
@@ -757,6 +836,9 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
 
     returnMessageEClass = createEClass(RETURN_MESSAGE);
     createEReference(returnMessageEClass, RETURN_MESSAGE__NAME);
+
+    deleteMessageEClass = createEClass(DELETE_MESSAGE);
+    createEAttribute(deleteMessageEClass, DELETE_MESSAGE__NAME);
 
     parameterEClass = createEClass(PARAMETER);
     createEReference(parameterEClass, PARAMETER__TYPE);
@@ -801,16 +883,18 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    transitionBlockEClass.getESuperTypes().add(this.getTransition());
     fragmentEClass.getESuperTypes().add(this.getTransition());
     ifElseFragmentEClass.getESuperTypes().add(this.getFragment());
     foreachFragmentEClass.getESuperTypes().add(this.getFragment());
     loopFragmentEClass.getESuperTypes().add(this.getFragment());
     assertFragmentEClass.getESuperTypes().add(this.getFragment());
+    breakFragmentEClass.getESuperTypes().add(this.getFragment());
+    nextFragmentEClass.getESuperTypes().add(this.getFragment());
     messageEClass.getESuperTypes().add(this.getTransition());
     callMessageEClass.getESuperTypes().add(this.getMessage());
     newMessageEClass.getESuperTypes().add(this.getMessage());
     returnMessageEClass.getESuperTypes().add(this.getMessage());
+    deleteMessageEClass.getESuperTypes().add(this.getMessage());
     parameterEClass.getESuperTypes().add(theAnnotationPackage.getParameter());
 
     // Initialize classes and features; add operations and parameters
@@ -830,6 +914,7 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
     initEReference(getParticipant_Annotation(), theAnnotationPackage.getAnnotation(), null, "annotation", null, 0, -1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getParticipant_Name(), ecorePackage.getEString(), "name", null, 0, 1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getParticipant_Transition(), this.getTransition(), null, "transition", null, 0, -1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getParticipant_Block(), this.getTransitionBlock(), null, "block", null, 0, -1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -853,6 +938,10 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
 
     initEClass(assertFragmentEClass, AssertFragment.class, "AssertFragment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+    initEClass(breakFragmentEClass, BreakFragment.class, "BreakFragment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(nextFragmentEClass, NextFragment.class, "NextFragment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
     initEClass(messageEClass, Message.class, "Message", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getMessage_Parameter(), this.getParameter(), null, "parameter", null, 0, -1, Message.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -865,6 +954,9 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
 
     initEClass(returnMessageEClass, ReturnMessage.class, "ReturnMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getReturnMessage_Name(), this.getReference(), null, "name", null, 0, 1, ReturnMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(deleteMessageEClass, DeleteMessage.class, "DeleteMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDeleteMessage_Name(), ecorePackage.getEString(), "name", null, 0, 1, DeleteMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getParameter_Type(), this.getReference(), null, "type", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -211,13 +211,22 @@ public interface SequencemodelPackage extends EPackage
   int PARTICIPANT__TRANSITION = 2;
 
   /**
+   * The feature id for the '<em><b>Block</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARTICIPANT__BLOCK = 3;
+
+  /**
    * The number of structural features of the '<em>Participant</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARTICIPANT_FEATURE_COUNT = 3;
+  int PARTICIPANT_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.TransitionImpl <em>Transition</em>}' class.
@@ -255,7 +264,7 @@ public interface SequencemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRANSITION_BLOCK__NAME = TRANSITION_FEATURE_COUNT + 0;
+  int TRANSITION_BLOCK__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
@@ -264,7 +273,7 @@ public interface SequencemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRANSITION_BLOCK__PARAMETER = TRANSITION_FEATURE_COUNT + 1;
+  int TRANSITION_BLOCK__PARAMETER = 1;
 
   /**
    * The feature id for the '<em><b>Transition</b></em>' containment reference list.
@@ -273,7 +282,7 @@ public interface SequencemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRANSITION_BLOCK__TRANSITION = TRANSITION_FEATURE_COUNT + 2;
+  int TRANSITION_BLOCK__TRANSITION = 2;
 
   /**
    * The number of structural features of the '<em>Transition Block</em>' class.
@@ -282,7 +291,7 @@ public interface SequencemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRANSITION_BLOCK_FEATURE_COUNT = TRANSITION_FEATURE_COUNT + 3;
+  int TRANSITION_BLOCK_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.FragmentImpl <em>Fragment</em>}' class.
@@ -497,6 +506,80 @@ public interface SequencemodelPackage extends EPackage
   int ASSERT_FRAGMENT_FEATURE_COUNT = FRAGMENT_FEATURE_COUNT + 0;
 
   /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.BreakFragmentImpl <em>Break Fragment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.BreakFragmentImpl
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getBreakFragment()
+   * @generated
+   */
+  int BREAK_FRAGMENT = 11;
+
+  /**
+   * The feature id for the '<em><b>Expr</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BREAK_FRAGMENT__EXPR = FRAGMENT__EXPR;
+
+  /**
+   * The feature id for the '<em><b>Transition</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BREAK_FRAGMENT__TRANSITION = FRAGMENT__TRANSITION;
+
+  /**
+   * The number of structural features of the '<em>Break Fragment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BREAK_FRAGMENT_FEATURE_COUNT = FRAGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.NextFragmentImpl <em>Next Fragment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.NextFragmentImpl
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getNextFragment()
+   * @generated
+   */
+  int NEXT_FRAGMENT = 12;
+
+  /**
+   * The feature id for the '<em><b>Expr</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NEXT_FRAGMENT__EXPR = FRAGMENT__EXPR;
+
+  /**
+   * The feature id for the '<em><b>Transition</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NEXT_FRAGMENT__TRANSITION = FRAGMENT__TRANSITION;
+
+  /**
+   * The number of structural features of the '<em>Next Fragment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NEXT_FRAGMENT_FEATURE_COUNT = FRAGMENT_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.MessageImpl <em>Message</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -504,7 +587,7 @@ public interface SequencemodelPackage extends EPackage
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getMessage()
    * @generated
    */
-  int MESSAGE = 11;
+  int MESSAGE = 13;
 
   /**
    * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
@@ -532,7 +615,7 @@ public interface SequencemodelPackage extends EPackage
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getCallMessage()
    * @generated
    */
-  int CALL_MESSAGE = 12;
+  int CALL_MESSAGE = 14;
 
   /**
    * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
@@ -578,7 +661,7 @@ public interface SequencemodelPackage extends EPackage
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getNewMessage()
    * @generated
    */
-  int NEW_MESSAGE = 13;
+  int NEW_MESSAGE = 15;
 
   /**
    * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
@@ -615,7 +698,7 @@ public interface SequencemodelPackage extends EPackage
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getReturnMessage()
    * @generated
    */
-  int RETURN_MESSAGE = 14;
+  int RETURN_MESSAGE = 16;
 
   /**
    * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
@@ -645,6 +728,43 @@ public interface SequencemodelPackage extends EPackage
   int RETURN_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.DeleteMessageImpl <em>Delete Message</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.DeleteMessageImpl
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getDeleteMessage()
+   * @generated
+   */
+  int DELETE_MESSAGE = 17;
+
+  /**
+   * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DELETE_MESSAGE__PARAMETER = MESSAGE__PARAMETER;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DELETE_MESSAGE__NAME = MESSAGE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Delete Message</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DELETE_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ParameterImpl <em>Parameter</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -652,7 +772,7 @@ public interface SequencemodelPackage extends EPackage
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getParameter()
    * @generated
    */
-  int PARAMETER = 15;
+  int PARAMETER = 18;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -698,7 +818,7 @@ public interface SequencemodelPackage extends EPackage
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getReference()
    * @generated
    */
-  int REFERENCE = 16;
+  int REFERENCE = 19;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -735,7 +855,7 @@ public interface SequencemodelPackage extends EPackage
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getArray()
    * @generated
    */
-  int ARRAY = 17;
+  int ARRAY = 20;
 
   /**
    * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -896,6 +1016,17 @@ public interface SequencemodelPackage extends EPackage
   EReference getParticipant_Transition();
 
   /**
+   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant#getBlock <em>Block</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Block</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant#getBlock()
+   * @see #getParticipant()
+   * @generated
+   */
+  EReference getParticipant_Block();
+
+  /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Transition <em>Transition</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1054,6 +1185,26 @@ public interface SequencemodelPackage extends EPackage
   EClass getAssertFragment();
 
   /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.BreakFragment <em>Break Fragment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Break Fragment</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.BreakFragment
+   * @generated
+   */
+  EClass getBreakFragment();
+
+  /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.NextFragment <em>Next Fragment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Next Fragment</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.NextFragment
+   * @generated
+   */
+  EClass getNextFragment();
+
+  /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Message <em>Message</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1147,6 +1298,27 @@ public interface SequencemodelPackage extends EPackage
    * @generated
    */
   EReference getReturnMessage_Name();
+
+  /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.DeleteMessage <em>Delete Message</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Delete Message</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.DeleteMessage
+   * @generated
+   */
+  EClass getDeleteMessage();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.DeleteMessage#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.DeleteMessage#getName()
+   * @see #getDeleteMessage()
+   * @generated
+   */
+  EAttribute getDeleteMessage_Name();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Parameter <em>Parameter</em>}'.
@@ -1358,6 +1530,14 @@ public interface SequencemodelPackage extends EPackage
     EReference PARTICIPANT__TRANSITION = eINSTANCE.getParticipant_Transition();
 
     /**
+     * The meta object literal for the '<em><b>Block</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARTICIPANT__BLOCK = eINSTANCE.getParticipant_Block();
+
+    /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.TransitionImpl <em>Transition</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1492,6 +1672,26 @@ public interface SequencemodelPackage extends EPackage
     EClass ASSERT_FRAGMENT = eINSTANCE.getAssertFragment();
 
     /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.BreakFragmentImpl <em>Break Fragment</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.BreakFragmentImpl
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getBreakFragment()
+     * @generated
+     */
+    EClass BREAK_FRAGMENT = eINSTANCE.getBreakFragment();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.NextFragmentImpl <em>Next Fragment</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.NextFragmentImpl
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getNextFragment()
+     * @generated
+     */
+    EClass NEXT_FRAGMENT = eINSTANCE.getNextFragment();
+
+    /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.MessageImpl <em>Message</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1570,6 +1770,24 @@ public interface SequencemodelPackage extends EPackage
      * @generated
      */
     EReference RETURN_MESSAGE__NAME = eINSTANCE.getReturnMessage_Name();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.DeleteMessageImpl <em>Delete Message</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.DeleteMessageImpl
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getDeleteMessage()
+     * @generated
+     */
+    EClass DELETE_MESSAGE = eINSTANCE.getDeleteMessage();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DELETE_MESSAGE__NAME = eINSTANCE.getDeleteMessage_Name();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ParameterImpl <em>Parameter</em>}' class.

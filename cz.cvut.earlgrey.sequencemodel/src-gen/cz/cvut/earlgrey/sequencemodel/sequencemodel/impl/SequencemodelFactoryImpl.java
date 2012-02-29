@@ -79,10 +79,13 @@ public class SequencemodelFactoryImpl extends EFactoryImpl implements Sequencemo
       case SequencemodelPackage.FOREACH_FRAGMENT: return createForeachFragment();
       case SequencemodelPackage.LOOP_FRAGMENT: return createLoopFragment();
       case SequencemodelPackage.ASSERT_FRAGMENT: return createAssertFragment();
+      case SequencemodelPackage.BREAK_FRAGMENT: return createBreakFragment();
+      case SequencemodelPackage.NEXT_FRAGMENT: return createNextFragment();
       case SequencemodelPackage.MESSAGE: return createMessage();
       case SequencemodelPackage.CALL_MESSAGE: return createCallMessage();
       case SequencemodelPackage.NEW_MESSAGE: return createNewMessage();
       case SequencemodelPackage.RETURN_MESSAGE: return createReturnMessage();
+      case SequencemodelPackage.DELETE_MESSAGE: return createDeleteMessage();
       case SequencemodelPackage.PARAMETER: return createParameter();
       case SequencemodelPackage.REFERENCE: return createReference();
       case SequencemodelPackage.ARRAY: return createArray();
@@ -217,6 +220,28 @@ public class SequencemodelFactoryImpl extends EFactoryImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
+  public BreakFragment createBreakFragment()
+  {
+    BreakFragmentImpl breakFragment = new BreakFragmentImpl();
+    return breakFragment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NextFragment createNextFragment()
+  {
+    NextFragmentImpl nextFragment = new NextFragmentImpl();
+    return nextFragment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Message createMessage()
   {
     MessageImpl message = new MessageImpl();
@@ -254,6 +279,17 @@ public class SequencemodelFactoryImpl extends EFactoryImpl implements Sequencemo
   {
     ReturnMessageImpl returnMessage = new ReturnMessageImpl();
     return returnMessage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DeleteMessage createDeleteMessage()
+  {
+    DeleteMessageImpl deleteMessage = new DeleteMessageImpl();
+    return deleteMessage;
   }
 
   /**
