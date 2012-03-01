@@ -39,7 +39,6 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getElementAccess().getAlternatives(), "rule__Element__Alternatives");
 					put(grammarAccess.getFeatureAccess().getAlternatives_0(), "rule__Feature__Alternatives_0");
-					put(grammarAccess.getInterfaceFeatureAccess().getAlternatives_0(), "rule__InterfaceFeature__Alternatives_0");
 					put(grammarAccess.getMultiplicityValueAccess().getAlternatives(), "rule__MultiplicityValue__Alternatives");
 					put(grammarAccess.getImplicitValueAccess().getAlternatives(), "rule__ImplicitValue__Alternatives");
 					put(grammarAccess.getValueAccess().getAlternatives(), "rule__Value__Alternatives");
@@ -61,8 +60,6 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getEnumerationAccess().getGroup(), "rule__Enumeration__Group__0");
 					put(grammarAccess.getEnumeratorAccess().getGroup(), "rule__Enumerator__Group__0");
 					put(grammarAccess.getEnumeratorAccess().getGroup_1(), "rule__Enumerator__Group_1__0");
-					put(grammarAccess.getInterfaceAccess().getGroup(), "rule__Interface__Group__0");
-					put(grammarAccess.getInterfaceFeatureAccess().getGroup(), "rule__InterfaceFeature__Group__0");
 					put(grammarAccess.getRelationshipAccess().getGroup(), "rule__Relationship__Group__0");
 					put(grammarAccess.getMultiplicityAccess().getGroup(), "rule__Multiplicity__Group__0");
 					put(grammarAccess.getMultiplicityAccess().getGroup_1(), "rule__Multiplicity__Group_1__0");
@@ -113,12 +110,6 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getEnumeratorAccess().getNameAssignment_0(), "rule__Enumerator__NameAssignment_0");
 					put(grammarAccess.getEnumeratorAccess().getValueAssignment_1_1(), "rule__Enumerator__ValueAssignment_1_1");
 					put(grammarAccess.getEnumeratorAccess().getConstraintAssignment_2(), "rule__Enumerator__ConstraintAssignment_2");
-					put(grammarAccess.getInterfaceAccess().getAnnotationAssignment_0(), "rule__Interface__AnnotationAssignment_0");
-					put(grammarAccess.getInterfaceAccess().getNameAssignment_2(), "rule__Interface__NameAssignment_2");
-					put(grammarAccess.getInterfaceAccess().getGeneralizationAssignment_3(), "rule__Interface__GeneralizationAssignment_3");
-					put(grammarAccess.getInterfaceAccess().getConstraintAssignment_4(), "rule__Interface__ConstraintAssignment_4");
-					put(grammarAccess.getInterfaceAccess().getFeatureAssignment_5(), "rule__Interface__FeatureAssignment_5");
-					put(grammarAccess.getInterfaceFeatureAccess().getConstraintAssignment_1(), "rule__InterfaceFeature__ConstraintAssignment_1");
 					put(grammarAccess.getRelationshipAccess().getAnnotationAssignment_0(), "rule__Relationship__AnnotationAssignment_0");
 					put(grammarAccess.getRelationshipAccess().getTypeAssignment_1(), "rule__Relationship__TypeAssignment_1");
 					put(grammarAccess.getRelationshipAccess().getLabelAssignment_2(), "rule__Relationship__LabelAssignment_2");

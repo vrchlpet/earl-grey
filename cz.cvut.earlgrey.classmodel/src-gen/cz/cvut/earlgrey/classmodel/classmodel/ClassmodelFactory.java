@@ -117,15 +117,6 @@ public interface ClassmodelFactory extends EFactory
   Enumeration createEnumeration();
 
   /**
-   * Returns a new object of class '<em>Interface</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Interface</em>'.
-   * @generated
-   */
-  Interface createInterface();
-
-  /**
    * Returns a new object of class '<em>Relationship</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

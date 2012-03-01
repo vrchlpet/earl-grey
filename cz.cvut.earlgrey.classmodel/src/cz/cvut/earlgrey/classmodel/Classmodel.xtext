@@ -19,7 +19,6 @@ Element:
     | Package
     | Datatype
     | Enumeration
-    | Interface
 ;
 
 // e.g.: datatype int
@@ -72,21 +71,6 @@ Enumeration:
 Enumerator returns Feature:
     name=ID (=> '=' value=ImplicitValue)? (constraint=CONSTRAINT)?
 ;
-
-// e.g.: interface Fruit end
-Interface:
-    annotation+=Annotation* =>
-    'interface' name=ID (=> generalization=Generalization)?
-        (constraint=CONSTRAINT)?
-        feature+=InterfaceFeature*
-    'end'
-;
-
-// An element of an Interface
-InterfaceFeature returns Feature:
-    (Operation | Constant) (constraint=CONSTRAINT)?
-;
-
 
 // e.g.: composition 0..1 Tree 0..* Leaf end
 Relationship:

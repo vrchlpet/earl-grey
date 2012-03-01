@@ -10,7 +10,6 @@ import cz.cvut.earlgrey.classmodel.classmodel.Classifier;
 import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
-import cz.cvut.earlgrey.classmodel.classmodel.Interface;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
@@ -27,7 +26,6 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 
 	private static final String IMPORT = "impc_obj.gif";
 	private static final String CLASS = "class_obj.gif";
-	private static final String INTERFACE = "int_obj.gif";
 	private static final String ENUM = "enum_obj.gif";
 	private static final String CLASSMODEL = "model_obj.gif";
 	private static final String PACKAGE = "package_obj.gif";
@@ -148,15 +146,5 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 	 */
 	String image(Classifier ele) {
 		return CLASS;
-	}
-
-	/**
-	 * Returns Interface's image used in Outline View.
-	 * 
-	 * @param ele Instance of an Interface
-	 * @return image's filename
-	 */
-	String image(Interface ele) {
-		return INTERFACE;
 	}
 }
