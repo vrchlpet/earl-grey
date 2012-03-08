@@ -60,6 +60,11 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBreakFragmentAccess().getGroup_2(), "rule__BreakFragment__Group_2__0");
 					put(grammarAccess.getNextFragmentAccess().getGroup(), "rule__NextFragment__Group__0");
 					put(grammarAccess.getNextFragmentAccess().getGroup_2(), "rule__NextFragment__Group_2__0");
+					put(grammarAccess.getFoundMessageAccess().getGroup(), "rule__FoundMessage__Group__0");
+					put(grammarAccess.getFoundMessageAccess().getGroup_1(), "rule__FoundMessage__Group_1__0");
+					put(grammarAccess.getFoundMessageAccess().getGroup_3(), "rule__FoundMessage__Group_3__0");
+					put(grammarAccess.getFoundMessageAccess().getGroup_3_1(), "rule__FoundMessage__Group_3_1__0");
+					put(grammarAccess.getFoundMessageAccess().getGroup_3_1_1(), "rule__FoundMessage__Group_3_1_1__0");
 					put(grammarAccess.getCallMessageAccess().getGroup(), "rule__CallMessage__Group__0");
 					put(grammarAccess.getCallMessageAccess().getGroup_2(), "rule__CallMessage__Group_2__0");
 					put(grammarAccess.getCallMessageAccess().getGroup_4(), "rule__CallMessage__Group_4__0");
@@ -77,6 +82,10 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDeleteMessageAccess().getGroup_3(), "rule__DeleteMessage__Group_3__0");
 					put(grammarAccess.getDeleteMessageAccess().getGroup_3_1(), "rule__DeleteMessage__Group_3_1__0");
 					put(grammarAccess.getDeleteMessageAccess().getGroup_3_1_1(), "rule__DeleteMessage__Group_3_1_1__0");
+					put(grammarAccess.getSelfMessageAccess().getGroup(), "rule__SelfMessage__Group__0");
+					put(grammarAccess.getSelfMessageAccess().getGroup_4(), "rule__SelfMessage__Group_4__0");
+					put(grammarAccess.getSelfMessageAccess().getGroup_4_1(), "rule__SelfMessage__Group_4_1__0");
+					put(grammarAccess.getSelfMessageAccess().getGroup_4_1_1(), "rule__SelfMessage__Group_4_1_1__0");
 					put(grammarAccess.getParameterAccess().getGroup(), "rule__Parameter__Group__0");
 					put(grammarAccess.getParameterAccess().getGroup_1(), "rule__Parameter__Group_1__0");
 					put(grammarAccess.getReferenceAccess().getGroup(), "rule__Reference__Group__0");
@@ -116,6 +125,11 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBreakFragmentAccess().getTransitionAssignment_2_2(), "rule__BreakFragment__TransitionAssignment_2_2");
 					put(grammarAccess.getNextFragmentAccess().getExprAssignment_2_0(), "rule__NextFragment__ExprAssignment_2_0");
 					put(grammarAccess.getNextFragmentAccess().getTransitionAssignment_2_2(), "rule__NextFragment__TransitionAssignment_2_2");
+					put(grammarAccess.getFoundMessageAccess().getTargetParticipantAssignment_1_0(), "rule__FoundMessage__TargetParticipantAssignment_1_0");
+					put(grammarAccess.getFoundMessageAccess().getNameAssignment_2(), "rule__FoundMessage__NameAssignment_2");
+					put(grammarAccess.getFoundMessageAccess().getParameterAssignment_3_1_0(), "rule__FoundMessage__ParameterAssignment_3_1_0");
+					put(grammarAccess.getFoundMessageAccess().getParameterAssignment_3_1_1_1(), "rule__FoundMessage__ParameterAssignment_3_1_1_1");
+					put(grammarAccess.getFoundMessageAccess().getReturnAssignment_4(), "rule__FoundMessage__ReturnAssignment_4");
 					put(grammarAccess.getCallMessageAccess().getSourceParticipantAssignment_0(), "rule__CallMessage__SourceParticipantAssignment_0");
 					put(grammarAccess.getCallMessageAccess().getTargetParticipantAssignment_2_0(), "rule__CallMessage__TargetParticipantAssignment_2_0");
 					put(grammarAccess.getCallMessageAccess().getNameAssignment_3(), "rule__CallMessage__NameAssignment_3");
@@ -133,6 +147,11 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDeleteMessageAccess().getTargetParticipantAssignment_2(), "rule__DeleteMessage__TargetParticipantAssignment_2");
 					put(grammarAccess.getDeleteMessageAccess().getParameterAssignment_3_1_0(), "rule__DeleteMessage__ParameterAssignment_3_1_0");
 					put(grammarAccess.getDeleteMessageAccess().getParameterAssignment_3_1_1_1(), "rule__DeleteMessage__ParameterAssignment_3_1_1_1");
+					put(grammarAccess.getSelfMessageAccess().getSourceParticipantAssignment_0(), "rule__SelfMessage__SourceParticipantAssignment_0");
+					put(grammarAccess.getSelfMessageAccess().getNameAssignment_3(), "rule__SelfMessage__NameAssignment_3");
+					put(grammarAccess.getSelfMessageAccess().getParameterAssignment_4_1_0(), "rule__SelfMessage__ParameterAssignment_4_1_0");
+					put(grammarAccess.getSelfMessageAccess().getParameterAssignment_4_1_1_1(), "rule__SelfMessage__ParameterAssignment_4_1_1_1");
+					put(grammarAccess.getSelfMessageAccess().getReturnAssignment_5(), "rule__SelfMessage__ReturnAssignment_5");
 					put(grammarAccess.getParameterAccess().getNameAssignment_0(), "rule__Parameter__NameAssignment_0");
 					put(grammarAccess.getParameterAccess().getTypeAssignment_1_1(), "rule__Parameter__TypeAssignment_1_1");
 					put(grammarAccess.getReferenceAccess().getTypeAssignment_0(), "rule__Reference__TypeAssignment_0");

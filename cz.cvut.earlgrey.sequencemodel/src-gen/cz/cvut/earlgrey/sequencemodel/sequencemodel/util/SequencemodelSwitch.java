@@ -181,6 +181,15 @@ public class SequencemodelSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case SequencemodelPackage.FOUND_MESSAGE:
+      {
+        FoundMessage foundMessage = (FoundMessage)theEObject;
+        T result = caseFoundMessage(foundMessage);
+        if (result == null) result = caseMessage(foundMessage);
+        if (result == null) result = caseTransition(foundMessage);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case SequencemodelPackage.CALL_MESSAGE:
       {
         CallMessage callMessage = (CallMessage)theEObject;
@@ -212,6 +221,15 @@ public class SequencemodelSwitch<T> extends Switch<T>
         T result = caseDeleteMessage(deleteMessage);
         if (result == null) result = caseMessage(deleteMessage);
         if (result == null) result = caseTransition(deleteMessage);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SequencemodelPackage.SELF_MESSAGE:
+      {
+        SelfMessage selfMessage = (SelfMessage)theEObject;
+        T result = caseSelfMessage(selfMessage);
+        if (result == null) result = caseMessage(selfMessage);
+        if (result == null) result = caseTransition(selfMessage);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -450,6 +468,22 @@ public class SequencemodelSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Found Message</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Found Message</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFoundMessage(FoundMessage object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Call Message</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -509,6 +543,22 @@ public class SequencemodelSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDeleteMessage(DeleteMessage object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Self Message</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Self Message</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSelfMessage(SelfMessage object)
   {
     return null;
   }

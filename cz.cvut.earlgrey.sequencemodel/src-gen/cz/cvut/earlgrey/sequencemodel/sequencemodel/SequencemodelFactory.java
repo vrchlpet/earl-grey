@@ -144,6 +144,15 @@ public interface SequencemodelFactory extends EFactory
   Message createMessage();
 
   /**
+   * Returns a new object of class '<em>Found Message</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Found Message</em>'.
+   * @generated
+   */
+  FoundMessage createFoundMessage();
+
+  /**
    * Returns a new object of class '<em>Call Message</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -178,6 +187,15 @@ public interface SequencemodelFactory extends EFactory
    * @generated
    */
   DeleteMessage createDeleteMessage();
+
+  /**
+   * Returns a new object of class '<em>Self Message</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Self Message</em>'.
+   * @generated
+   */
+  SelfMessage createSelfMessage();
 
   /**
    * Returns a new object of class '<em>Parameter</em>'.

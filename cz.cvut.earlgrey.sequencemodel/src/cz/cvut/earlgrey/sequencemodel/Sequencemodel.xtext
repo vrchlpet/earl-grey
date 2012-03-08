@@ -15,7 +15,6 @@ Sequence:
     annotation+=Annotation* =>
     'sequence' name=ID
         participant+=Participant (',' participant+=Participant)*
-        
         transition+=Transition*
     'end'
 ;
@@ -102,18 +101,25 @@ Message:
     | NewMessage
 //    | ReturnMessage
     | DeleteMessage
+    | SelfMessage
+    | FoundMessage
+;
+
+FoundMessage:
+    'calls' (targetParticipant=ID '.')? => name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? 
+    return=ReturnMessage?
 ;
 
 // e.g.: Handler calls Node.getChild()
 CallMessage:
-    (sourceParticipant=ID)? 'calls' (targetParticipant=ID '.')? => name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? 
+    sourceParticipant=ID 'calls' (targetParticipant=ID '.')? => name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? 
     return=ReturnMessage?
 ;
 
 // e.g.: new Node
 // TODO: implicitValues? "new Node(null, 5, 8)" -- child, x, y
 NewMessage:
-    (sourceParticipant=ID)? 'creates' targetParticipant=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
+    sourceParticipant=ID 'creates' targetParticipant=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
 ;
 
 // e.g.: return childs
@@ -122,7 +128,11 @@ ReturnMessage:
 ;
 
 DeleteMessage:
-    (sourceParticipant=ID)? 'destroys' targetParticipant=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
+    sourceParticipant=ID 'destroys' targetParticipant=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
+;
+
+SelfMessage:
+    sourceParticipant=ID 'self' '.' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? return=ReturnMessage?
 ;
 
 // e.g.: Name : String = "John"

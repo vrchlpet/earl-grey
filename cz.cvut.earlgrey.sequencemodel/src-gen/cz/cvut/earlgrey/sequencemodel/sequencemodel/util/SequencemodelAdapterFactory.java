@@ -144,6 +144,11 @@ public class SequencemodelAdapterFactory extends AdapterFactoryImpl
         return createMessageAdapter();
       }
       @Override
+      public Adapter caseFoundMessage(FoundMessage object)
+      {
+        return createFoundMessageAdapter();
+      }
+      @Override
       public Adapter caseCallMessage(CallMessage object)
       {
         return createCallMessageAdapter();
@@ -162,6 +167,11 @@ public class SequencemodelAdapterFactory extends AdapterFactoryImpl
       public Adapter caseDeleteMessage(DeleteMessage object)
       {
         return createDeleteMessageAdapter();
+      }
+      @Override
+      public Adapter caseSelfMessage(SelfMessage object)
+      {
+        return createSelfMessageAdapter();
       }
       @Override
       public Adapter caseParameter(Parameter object)
@@ -401,6 +411,21 @@ public class SequencemodelAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.FoundMessage <em>Found Message</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.FoundMessage
+   * @generated
+   */
+  public Adapter createFoundMessageAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage <em>Call Message</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -456,6 +481,21 @@ public class SequencemodelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDeleteMessageAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage <em>Self Message</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage
+   * @generated
+   */
+  public Adapter createSelfMessageAdapter()
   {
     return null;
   }

@@ -41,20 +41,36 @@
     <genClasses ecoreClass="Sequencemodel.ecore#//BreakFragment"/>
     <genClasses ecoreClass="Sequencemodel.ecore#//NextFragment"/>
     <genClasses ecoreClass="Sequencemodel.ecore#//Message">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Message/sourceParticipant"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Message/targetParticipant"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Message/parameter"/>
     </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//FoundMessage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//FoundMessage/targetParticipant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//FoundMessage/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//FoundMessage/return"/>
+    </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//CallMessage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//CallMessage/sourceParticipant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//CallMessage/targetParticipant"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//CallMessage/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//CallMessage/return"/>
     </genClasses>
-    <genClasses ecoreClass="Sequencemodel.ecore#//NewMessage"/>
+    <genClasses ecoreClass="Sequencemodel.ecore#//NewMessage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//NewMessage/sourceParticipant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//NewMessage/targetParticipant"/>
+    </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//ReturnMessage">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//ReturnMessage/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//ReturnMessage/parameter"/>
     </genClasses>
-    <genClasses ecoreClass="Sequencemodel.ecore#//DeleteMessage"/>
+    <genClasses ecoreClass="Sequencemodel.ecore#//DeleteMessage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//DeleteMessage/sourceParticipant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//DeleteMessage/targetParticipant"/>
+    </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//SelfMessage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//SelfMessage/sourceParticipant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//SelfMessage/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//SelfMessage/return"/>
+    </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//Parameter">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Parameter/type"/>
     </genClasses>

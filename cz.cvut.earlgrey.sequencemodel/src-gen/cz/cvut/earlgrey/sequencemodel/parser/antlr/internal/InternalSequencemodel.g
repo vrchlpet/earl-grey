@@ -983,7 +983,168 @@ ruleMessage returns [EObject current=null]
         $current = $this_DeleteMessage_2.current; 
         afterParserOrEnumRuleCall();
     }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getMessageAccess().getSelfMessageParserRuleCall_3()); 
+    }
+    this_SelfMessage_3=ruleSelfMessage
+    { 
+        $current = $this_SelfMessage_3.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getMessageAccess().getFoundMessageParserRuleCall_4()); 
+    }
+    this_FoundMessage_4=ruleFoundMessage
+    { 
+        $current = $this_FoundMessage_4.current; 
+        afterParserOrEnumRuleCall();
+    }
 )
+;
+
+
+
+
+
+// Entry rule entryRuleFoundMessage
+entryRuleFoundMessage returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getFoundMessageRule()); }
+	 iv_ruleFoundMessage=ruleFoundMessage 
+	 { $current=$iv_ruleFoundMessage.current; } 
+	 EOF 
+;
+
+// Rule FoundMessage
+ruleFoundMessage returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='calls' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getFoundMessageAccess().getCallsKeyword_0());
+    }
+((
+(
+		lv_targetParticipant_1_0=RULE_ID
+		{
+			newLeafNode(lv_targetParticipant_1_0, grammarAccess.getFoundMessageAccess().getTargetParticipantIDTerminalRuleCall_1_0_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getFoundMessageRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"targetParticipant",
+        		lv_targetParticipant_1_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_2='.' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getFoundMessageAccess().getFullStopKeyword_1_1());
+    }
+)?((
+(
+RULE_ID
+
+)
+)=>
+(
+		lv_name_3_0=RULE_ID
+		{
+			newLeafNode(lv_name_3_0, grammarAccess.getFoundMessageAccess().getNameIDTerminalRuleCall_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getFoundMessageRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_3_0, 
+        		"ID");
+	    }
+
+)
+)(((	'(' 
+)=>	otherlv_4='(' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getFoundMessageAccess().getLeftParenthesisKeyword_3_0());
+    }
+)(((
+(
+ruleParameter
+)
+)=>
+(
+		{ 
+	        newCompositeNode(grammarAccess.getFoundMessageAccess().getParameterParameterParserRuleCall_3_1_0_0()); 
+	    }
+		lv_parameter_5_0=ruleParameter		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getFoundMessageRule());
+	        }
+       		add(
+       			$current, 
+       			"parameter",
+        		lv_parameter_5_0, 
+        		"Parameter");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_6=',' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getFoundMessageAccess().getCommaKeyword_3_1_1_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getFoundMessageAccess().getParameterParameterParserRuleCall_3_1_1_1_0()); 
+	    }
+		lv_parameter_7_0=ruleParameter		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getFoundMessageRule());
+	        }
+       		add(
+       			$current, 
+       			"parameter",
+        		lv_parameter_7_0, 
+        		"Parameter");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*)?	otherlv_8=')' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getFoundMessageAccess().getRightParenthesisKeyword_3_2());
+    }
+)?(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getFoundMessageAccess().getReturnReturnMessageParserRuleCall_4_0()); 
+	    }
+		lv_return_9_0=ruleReturnMessage		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getFoundMessageRule());
+	        }
+       		set(
+       			$current, 
+       			"return",
+        		lv_return_9_0, 
+        		"ReturnMessage");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)?)
 ;
 
 
@@ -1022,7 +1183,7 @@ ruleCallMessage returns [EObject current=null]
 	    }
 
 )
-)?	otherlv_1='calls' 
+)	otherlv_1='calls' 
     {
     	newLeafNode(otherlv_1, grammarAccess.getCallMessageAccess().getCallsKeyword_1());
     }
@@ -1181,7 +1342,7 @@ ruleNewMessage returns [EObject current=null]
 	    }
 
 )
-)?	otherlv_1='creates' 
+)	otherlv_1='creates' 
     {
     	newLeafNode(otherlv_1, grammarAccess.getNewMessageAccess().getCreatesKeyword_1());
     }
@@ -1391,7 +1552,7 @@ ruleDeleteMessage returns [EObject current=null]
 	    }
 
 )
-)?	otherlv_1='destroys' 
+)	otherlv_1='destroys' 
     {
     	newLeafNode(otherlv_1, grammarAccess.getDeleteMessageAccess().getDestroysKeyword_1());
     }
@@ -1466,6 +1627,142 @@ ruleParameter
     {
     	newLeafNode(otherlv_7, grammarAccess.getDeleteMessageAccess().getRightParenthesisKeyword_3_2());
     }
+)?)
+;
+
+
+
+
+
+// Entry rule entryRuleSelfMessage
+entryRuleSelfMessage returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getSelfMessageRule()); }
+	 iv_ruleSelfMessage=ruleSelfMessage 
+	 { $current=$iv_ruleSelfMessage.current; } 
+	 EOF 
+;
+
+// Rule SelfMessage
+ruleSelfMessage returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		lv_sourceParticipant_0_0=RULE_ID
+		{
+			newLeafNode(lv_sourceParticipant_0_0, grammarAccess.getSelfMessageAccess().getSourceParticipantIDTerminalRuleCall_0_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getSelfMessageRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"sourceParticipant",
+        		lv_sourceParticipant_0_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_1='self' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getSelfMessageAccess().getSelfKeyword_1());
+    }
+	otherlv_2='.' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getSelfMessageAccess().getFullStopKeyword_2());
+    }
+(
+(
+		lv_name_3_0=RULE_ID
+		{
+			newLeafNode(lv_name_3_0, grammarAccess.getSelfMessageAccess().getNameIDTerminalRuleCall_3_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getSelfMessageRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_3_0, 
+        		"ID");
+	    }
+
+)
+)(((	'(' 
+)=>	otherlv_4='(' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getSelfMessageAccess().getLeftParenthesisKeyword_4_0());
+    }
+)(((
+(
+ruleParameter
+)
+)=>
+(
+		{ 
+	        newCompositeNode(grammarAccess.getSelfMessageAccess().getParameterParameterParserRuleCall_4_1_0_0()); 
+	    }
+		lv_parameter_5_0=ruleParameter		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getSelfMessageRule());
+	        }
+       		add(
+       			$current, 
+       			"parameter",
+        		lv_parameter_5_0, 
+        		"Parameter");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_6=',' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getSelfMessageAccess().getCommaKeyword_4_1_1_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getSelfMessageAccess().getParameterParameterParserRuleCall_4_1_1_1_0()); 
+	    }
+		lv_parameter_7_0=ruleParameter		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getSelfMessageRule());
+	        }
+       		add(
+       			$current, 
+       			"parameter",
+        		lv_parameter_7_0, 
+        		"Parameter");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*)?	otherlv_8=')' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getSelfMessageAccess().getRightParenthesisKeyword_4_2());
+    }
+)?(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getSelfMessageAccess().getReturnReturnMessageParserRuleCall_5_0()); 
+	    }
+		lv_return_9_0=ruleReturnMessage		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getSelfMessageRule());
+	        }
+       		set(
+       			$current, 
+       			"return",
+        		lv_return_9_0, 
+        		"ReturnMessage");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
 )?)
 ;
 

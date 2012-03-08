@@ -81,10 +81,12 @@ public class SequencemodelFactoryImpl extends EFactoryImpl implements Sequencemo
       case SequencemodelPackage.BREAK_FRAGMENT: return createBreakFragment();
       case SequencemodelPackage.NEXT_FRAGMENT: return createNextFragment();
       case SequencemodelPackage.MESSAGE: return createMessage();
+      case SequencemodelPackage.FOUND_MESSAGE: return createFoundMessage();
       case SequencemodelPackage.CALL_MESSAGE: return createCallMessage();
       case SequencemodelPackage.NEW_MESSAGE: return createNewMessage();
       case SequencemodelPackage.RETURN_MESSAGE: return createReturnMessage();
       case SequencemodelPackage.DELETE_MESSAGE: return createDeleteMessage();
+      case SequencemodelPackage.SELF_MESSAGE: return createSelfMessage();
       case SequencemodelPackage.PARAMETER: return createParameter();
       case SequencemodelPackage.REFERENCE: return createReference();
       case SequencemodelPackage.ARRAY: return createArray();
@@ -241,6 +243,17 @@ public class SequencemodelFactoryImpl extends EFactoryImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
+  public FoundMessage createFoundMessage()
+  {
+    FoundMessageImpl foundMessage = new FoundMessageImpl();
+    return foundMessage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public CallMessage createCallMessage()
   {
     CallMessageImpl callMessage = new CallMessageImpl();
@@ -278,6 +291,17 @@ public class SequencemodelFactoryImpl extends EFactoryImpl implements Sequencemo
   {
     DeleteMessageImpl deleteMessage = new DeleteMessageImpl();
     return deleteMessage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SelfMessage createSelfMessage()
+  {
+    SelfMessageImpl selfMessage = new SelfMessageImpl();
+    return selfMessage;
   }
 
   /**
