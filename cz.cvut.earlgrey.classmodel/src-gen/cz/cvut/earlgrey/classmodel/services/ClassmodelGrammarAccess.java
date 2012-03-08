@@ -678,15 +678,17 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cColonKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
 		private final Assignment cReturnAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
 		private final RuleCall cReturnReferenceParserRuleCall_5_1_0 = (RuleCall)cReturnAssignment_5_1.eContents().get(0);
+		private final Assignment cBodyAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cBodyBODYTerminalRuleCall_6_0 = (RuleCall)cBodyAssignment_6.eContents().get(0);
 		
 		//// e.g.: +add(Name : String) : void
 		//Operation:
 		//	(visibility=Visibility? & static?="static"?) name=ID "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")"
-		//	(":" return=Reference)?;
+		//	(":" return=Reference)? body=BODY?;
 		public ParserRule getRule() { return rule; }
 
 		//(visibility=Visibility? & static?="static"?) name=ID "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")" (":"
-		//return=Reference)?
+		//return=Reference)? body=BODY?
 		public Group getGroup() { return cGroup; }
 
 		//visibility=Visibility? & static?="static"?
@@ -748,6 +750,12 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Reference
 		public RuleCall getReturnReferenceParserRuleCall_5_1_0() { return cReturnReferenceParserRuleCall_5_1_0; }
+
+		//body=BODY?
+		public Assignment getBodyAssignment_6() { return cBodyAssignment_6; }
+
+		//BODY
+		public RuleCall getBodyBODYTerminalRuleCall_6_0() { return cBodyBODYTerminalRuleCall_6_0; }
 	}
 
 	public class ParameterElements extends AbstractParserRuleElementFinder {
@@ -1129,6 +1137,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	private RelationshipTypeElements unknownRuleRelationshipType;
 	private VisibilityElements unknownRuleVisibility;
 	private TerminalRule tCONSTRAINT;
+	private TerminalRule tBODY;
 	
 	private final GrammarProvider grammarProvider;
 
@@ -1318,7 +1327,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	//// e.g.: +add(Name : String) : void
 	//Operation:
 	//	(visibility=Visibility? & static?="static"?) name=ID "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")"
-	//	(":" return=Reference)?;
+	//	(":" return=Reference)? body=BODY?;
 	public OperationElements getOperationAccess() {
 		return (pOperation != null) ? pOperation : (pOperation = new OperationElements());
 	}
@@ -1406,6 +1415,12 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	//	"{"->"}";
 	public TerminalRule getCONSTRAINTRule() {
 		return (tCONSTRAINT != null) ? tCONSTRAINT : (tCONSTRAINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "CONSTRAINT"));
+	} 
+
+	//terminal BODY:
+	//	"[["->"]]";
+	public TerminalRule getBODYRule() {
+		return (tBODY != null) ? tBODY : (tBODY = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "BODY"));
 	} 
 
 	//// e.g.: @Generate(Java)

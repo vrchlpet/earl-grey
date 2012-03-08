@@ -3158,6 +3158,7 @@ rule__Operation__Group__5
     }
 :
 	rule__Operation__Group__5__Impl
+	rule__Operation__Group__6
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -3178,6 +3179,36 @@ rule__Operation__Group__5__Impl
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__Operation__Group__6
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__Operation__Group__6__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Operation__Group__6__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getOperationAccess().getBodyAssignment_6()); }
+(rule__Operation__BodyAssignment_6)?
+{ after(grammarAccess.getOperationAccess().getBodyAssignment_6()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 
 
 
@@ -5808,6 +5839,21 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__Operation__BodyAssignment_6
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getOperationAccess().getBodyBODYTerminalRuleCall_6_0()); }
+	RULE_BODY{ after(grammarAccess.getOperationAccess().getBodyBODYTerminalRuleCall_6_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 rule__Parameter__NameAssignment_0
     @init {
 		int stackSize = keepStackSize();
@@ -6061,6 +6107,8 @@ finally {
 
 
 RULE_CONSTRAINT : '{' ( options {greedy=false;} : . )*'}';
+
+RULE_BODY : '[[' ( options {greedy=false;} : . )*']]';
 
 RULE_OPERATOR : ('++'|'--'|'=='|'>='|'<='|'!='|'<>'|'||'|'&&'|'-='|'+='|'='|'>>'|'<<'|'|=');
 

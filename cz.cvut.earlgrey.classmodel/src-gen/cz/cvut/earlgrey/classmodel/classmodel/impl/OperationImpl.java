@@ -36,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.OperationImpl#isStatic <em>Static</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.OperationImpl#getParameter <em>Parameter</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.OperationImpl#getReturn <em>Return</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.OperationImpl#getBody <em>Body</em>}</li>
  * </ul>
  * </p>
  *
@@ -82,6 +83,26 @@ public class OperationImpl extends FeatureImpl implements Operation
    * @ordered
    */
   protected Reference return_;
+
+  /**
+   * The default value of the '{@link #getBody() <em>Body</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBody()
+   * @generated
+   * @ordered
+   */
+  protected static final String BODY_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getBody() <em>Body</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBody()
+   * @generated
+   * @ordered
+   */
+  protected String body = BODY_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -194,6 +215,29 @@ public class OperationImpl extends FeatureImpl implements Operation
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getBody()
+  {
+    return body;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setBody(String newBody)
+  {
+    String oldBody = body;
+    body = newBody;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.OPERATION__BODY, oldBody, body));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -223,6 +267,8 @@ public class OperationImpl extends FeatureImpl implements Operation
         return getParameter();
       case ClassmodelPackage.OPERATION__RETURN:
         return getReturn();
+      case ClassmodelPackage.OPERATION__BODY:
+        return getBody();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -248,6 +294,9 @@ public class OperationImpl extends FeatureImpl implements Operation
       case ClassmodelPackage.OPERATION__RETURN:
         setReturn((Reference)newValue);
         return;
+      case ClassmodelPackage.OPERATION__BODY:
+        setBody((String)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -271,6 +320,9 @@ public class OperationImpl extends FeatureImpl implements Operation
       case ClassmodelPackage.OPERATION__RETURN:
         setReturn((Reference)null);
         return;
+      case ClassmodelPackage.OPERATION__BODY:
+        setBody(BODY_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -291,6 +343,8 @@ public class OperationImpl extends FeatureImpl implements Operation
         return parameter != null && !parameter.isEmpty();
       case ClassmodelPackage.OPERATION__RETURN:
         return return_ != null;
+      case ClassmodelPackage.OPERATION__BODY:
+        return BODY_EDEFAULT == null ? body != null : !BODY_EDEFAULT.equals(body);
     }
     return super.eIsSet(featureID);
   }
@@ -308,6 +362,8 @@ public class OperationImpl extends FeatureImpl implements Operation
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (static: ");
     result.append(static_);
+    result.append(", body: ");
+    result.append(body);
     result.append(')');
     return result.toString();
   }

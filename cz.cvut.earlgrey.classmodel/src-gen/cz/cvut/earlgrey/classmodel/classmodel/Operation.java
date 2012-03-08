@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Operation#isStatic <em>Static</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Operation#getParameter <em>Parameter</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Operation#getReturn <em>Return</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Operation#getBody <em>Body</em>}</li>
  * </ul>
  * </p>
  *
@@ -95,5 +96,31 @@ public interface Operation extends Feature
    * @generated
    */
   void setReturn(Reference value);
+
+  /**
+   * Returns the value of the '<em><b>Body</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Body</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Body</em>' attribute.
+   * @see #setBody(String)
+   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getOperation_Body()
+   * @model
+   * @generated
+   */
+  String getBody();
+
+  /**
+   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Operation#getBody <em>Body</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Body</em>' attribute.
+   * @see #getBody()
+   * @generated
+   */
+  void setBody(String value);
 
 } // Operation

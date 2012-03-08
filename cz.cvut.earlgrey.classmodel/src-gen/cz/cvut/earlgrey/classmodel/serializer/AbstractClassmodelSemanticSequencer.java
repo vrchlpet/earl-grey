@@ -324,6 +324,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	 *         name=ID 
 	 *         (parameter+=Parameter parameter+=Parameter*)? 
 	 *         return=Reference? 
+	 *         body=BODY? 
 	 *         constraint=CONSTRAINT?
 	 *     )
 	 */
@@ -377,7 +378,14 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (visibility=Visibility? static?='static'? name=ID (parameter+=Parameter parameter+=Parameter*)? return=Reference?)
+	 *     (
+	 *         visibility=Visibility? 
+	 *         static?='static'? 
+	 *         name=ID 
+	 *         (parameter+=Parameter parameter+=Parameter*)? 
+	 *         return=Reference? 
+	 *         body=BODY?
+	 *     )
 	 */
 	protected void sequence_Operation(EObject context, Operation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

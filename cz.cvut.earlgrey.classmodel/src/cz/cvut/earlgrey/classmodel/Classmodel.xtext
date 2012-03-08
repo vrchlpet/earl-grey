@@ -98,7 +98,7 @@ Constant:
 // e.g.: +add(Name : String) : void
 Operation:
     (visibility=Visibility? & static?='static'?) name=ID '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')'
-    (':' return = Reference)?
+    (':' return = Reference)? (body = BODY)?
 ;
 
 // e.g.: Name : String = "John"
@@ -147,4 +147,8 @@ enum Visibility:
 // {name.length > 0}
 terminal CONSTRAINT:
     '{'->'}'
+;
+
+terminal BODY:
+    '[[' -> ']]'
 ;

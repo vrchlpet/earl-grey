@@ -1452,7 +1452,25 @@ ruleParameter
 	    }
 
 )
-))?)
+))?(
+(
+		lv_body_11_0=RULE_BODY
+		{
+			newLeafNode(lv_body_11_0, grammarAccess.getOperationAccess().getBodyBODYTerminalRuleCall_6_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getOperationRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"body",
+        		lv_body_11_0, 
+        		"BODY");
+	    }
+
+)
+)?)
 ;
 
 
@@ -2340,6 +2358,8 @@ ruleVisibility returns [Enumerator current=null]
 
 
 RULE_CONSTRAINT : '{' ( options {greedy=false;} : . )*'}';
+
+RULE_BODY : '[[' ( options {greedy=false;} : . )*']]';
 
 RULE_OPERATOR : ('++'|'--'|'=='|'>='|'<='|'!='|'<>'|'||'|'&&'|'-='|'+='|'='|'>>'|'<<'|'|=');
 

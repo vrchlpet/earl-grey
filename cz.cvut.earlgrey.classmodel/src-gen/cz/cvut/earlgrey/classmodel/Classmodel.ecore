@@ -78,6 +78,7 @@
         eType="#//Parameter" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="return" eType="#//Reference"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="body" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="../../../../../../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/Annotation.ecore#//Parameter">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Reference"

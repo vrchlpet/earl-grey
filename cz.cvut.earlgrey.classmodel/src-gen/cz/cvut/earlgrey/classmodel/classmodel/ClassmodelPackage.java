@@ -762,13 +762,22 @@ public interface ClassmodelPackage extends EPackage
   int OPERATION__RETURN = FEATURE_FEATURE_COUNT + 2;
 
   /**
+   * The feature id for the '<em><b>Body</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION__BODY = FEATURE_FEATURE_COUNT + 3;
+
+  /**
    * The number of structural features of the '<em>Operation</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OPERATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 3;
+  int OPERATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ParameterImpl <em>Parameter</em>}' class.
@@ -1530,6 +1539,17 @@ public interface ClassmodelPackage extends EPackage
   EReference getOperation_Return();
 
   /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Operation#getBody <em>Body</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Body</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Operation#getBody()
+   * @see #getOperation()
+   * @generated
+   */
+  EAttribute getOperation_Body();
+
+  /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Parameter <em>Parameter</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2127,6 +2147,14 @@ public interface ClassmodelPackage extends EPackage
      * @generated
      */
     EReference OPERATION__RETURN = eINSTANCE.getOperation_Return();
+
+    /**
+     * The meta object literal for the '<em><b>Body</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OPERATION__BODY = eINSTANCE.getOperation_Body();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ParameterImpl <em>Parameter</em>}' class.

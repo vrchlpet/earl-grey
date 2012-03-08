@@ -132,6 +132,7 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOperationAccess().getParameterAssignment_3_0(), "rule__Operation__ParameterAssignment_3_0");
 					put(grammarAccess.getOperationAccess().getParameterAssignment_3_1_1(), "rule__Operation__ParameterAssignment_3_1_1");
 					put(grammarAccess.getOperationAccess().getReturnAssignment_5_1(), "rule__Operation__ReturnAssignment_5_1");
+					put(grammarAccess.getOperationAccess().getBodyAssignment_6(), "rule__Operation__BodyAssignment_6");
 					put(grammarAccess.getParameterAccess().getNameAssignment_0(), "rule__Parameter__NameAssignment_0");
 					put(grammarAccess.getParameterAccess().getTypeAssignment_2(), "rule__Parameter__TypeAssignment_2");
 					put(grammarAccess.getParameterAccess().getImplicitAssignment_3_1(), "rule__Parameter__ImplicitAssignment_3_1");
