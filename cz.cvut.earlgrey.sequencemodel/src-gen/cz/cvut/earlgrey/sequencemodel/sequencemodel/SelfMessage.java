@@ -6,6 +6,7 @@
  */
 package cz.cvut.earlgrey.sequencemodel.sequencemodel;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,6 +19,7 @@ package cz.cvut.earlgrey.sequencemodel.sequencemodel;
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getSourceParticipant <em>Source Participant</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getReturn <em>Return</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getTransition <em>Transition</em>}</li>
  * </ul>
  * </p>
  *
@@ -104,5 +106,21 @@ public interface SelfMessage extends Message
    * @generated
    */
   void setReturn(ReturnMessage value);
+
+  /**
+   * Returns the value of the '<em><b>Transition</b></em>' containment reference list.
+   * The list contents are of type {@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Transition}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Transition</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Transition</em>' containment reference list.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getSelfMessage_Transition()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Transition> getTransition();
 
 } // SelfMessage

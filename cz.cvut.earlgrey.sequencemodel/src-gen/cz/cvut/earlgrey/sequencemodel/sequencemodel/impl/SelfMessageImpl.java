@@ -9,14 +9,22 @@ package cz.cvut.earlgrey.sequencemodel.sequencemodel.impl;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Transition;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,6 +36,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SelfMessageImpl#getSourceParticipant <em>Source Participant</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SelfMessageImpl#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SelfMessageImpl#getReturn <em>Return</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SelfMessageImpl#getTransition <em>Transition</em>}</li>
  * </ul>
  * </p>
  *
@@ -84,6 +93,16 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
    * @ordered
    */
   protected ReturnMessage return_;
+
+  /**
+   * The cached value of the '{@link #getTransition() <em>Transition</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTransition()
+   * @generated
+   * @ordered
+   */
+  protected EList<Transition> transition;
 
   /**
    * <!-- begin-user-doc -->
@@ -205,6 +224,20 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Transition> getTransition()
+  {
+    if (transition == null)
+    {
+      transition = new EObjectContainmentEList<Transition>(Transition.class, this, SequencemodelPackage.SELF_MESSAGE__TRANSITION);
+    }
+    return transition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -212,6 +245,8 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
     {
       case SequencemodelPackage.SELF_MESSAGE__RETURN:
         return basicSetReturn(null, msgs);
+      case SequencemodelPackage.SELF_MESSAGE__TRANSITION:
+        return ((InternalEList<?>)getTransition()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -232,6 +267,8 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
         return getName();
       case SequencemodelPackage.SELF_MESSAGE__RETURN:
         return getReturn();
+      case SequencemodelPackage.SELF_MESSAGE__TRANSITION:
+        return getTransition();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -241,6 +278,7 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -254,6 +292,10 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
         return;
       case SequencemodelPackage.SELF_MESSAGE__RETURN:
         setReturn((ReturnMessage)newValue);
+        return;
+      case SequencemodelPackage.SELF_MESSAGE__TRANSITION:
+        getTransition().clear();
+        getTransition().addAll((Collection<? extends Transition>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -278,6 +320,9 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
       case SequencemodelPackage.SELF_MESSAGE__RETURN:
         setReturn((ReturnMessage)null);
         return;
+      case SequencemodelPackage.SELF_MESSAGE__TRANSITION:
+        getTransition().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -298,6 +343,8 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case SequencemodelPackage.SELF_MESSAGE__RETURN:
         return return_ != null;
+      case SequencemodelPackage.SELF_MESSAGE__TRANSITION:
+        return transition != null && !transition.isEmpty();
     }
     return super.eIsSet(featureID);
   }

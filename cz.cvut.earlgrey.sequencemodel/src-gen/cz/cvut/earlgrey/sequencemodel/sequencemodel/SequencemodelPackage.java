@@ -838,13 +838,22 @@ public interface SequencemodelPackage extends EPackage
   int SELF_MESSAGE__RETURN = MESSAGE_FEATURE_COUNT + 2;
 
   /**
+   * The feature id for the '<em><b>Transition</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELF_MESSAGE__TRANSITION = MESSAGE_FEATURE_COUNT + 3;
+
+  /**
    * The number of structural features of the '<em>Self Message</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SELF_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 3;
+  int SELF_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ParameterImpl <em>Parameter</em>}' class.
@@ -1479,6 +1488,17 @@ public interface SequencemodelPackage extends EPackage
   EReference getSelfMessage_Return();
 
   /**
+   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getTransition <em>Transition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Transition</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getTransition()
+   * @see #getSelfMessage()
+   * @generated
+   */
+  EReference getSelfMessage_Transition();
+
+  /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Parameter <em>Parameter</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2004,6 +2024,14 @@ public interface SequencemodelPackage extends EPackage
      * @generated
      */
     EReference SELF_MESSAGE__RETURN = eINSTANCE.getSelfMessage_Return();
+
+    /**
+     * The meta object literal for the '<em><b>Transition</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SELF_MESSAGE__TRANSITION = eINSTANCE.getSelfMessage_Transition();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ParameterImpl <em>Parameter</em>}' class.

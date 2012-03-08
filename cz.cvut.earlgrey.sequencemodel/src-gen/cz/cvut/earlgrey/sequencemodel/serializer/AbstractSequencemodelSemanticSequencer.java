@@ -417,7 +417,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (sourceParticipant=ID name=ID (parameter+=Parameter parameter+=Parameter*)? return=ReturnMessage?)
+	 *     (sourceParticipant=ID name=ID (parameter+=Parameter parameter+=Parameter*)? return=ReturnMessage? transition+=Transition*)
 	 */
 	protected void sequence_SelfMessage(EObject context, SelfMessage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -426,7 +426,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (annotation+=Annotation* name=ID participant+=Participant participant+=Participant* transition+=Transition*)
+	 *     (annotation+=Annotation* name=ID (participant+=Participant participant+=Participant*)? transition+=Transition*)
 	 */
 	protected void sequence_Sequence(EObject context, Sequence semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

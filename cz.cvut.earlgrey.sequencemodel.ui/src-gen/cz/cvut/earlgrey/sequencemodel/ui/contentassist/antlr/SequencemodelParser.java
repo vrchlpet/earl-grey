@@ -49,7 +49,8 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
 					put(grammarAccess.getImportAccess().getGroup(), "rule__Import__Group__0");
 					put(grammarAccess.getSequenceAccess().getGroup(), "rule__Sequence__Group__0");
-					put(grammarAccess.getSequenceAccess().getGroup_4(), "rule__Sequence__Group_4__0");
+					put(grammarAccess.getSequenceAccess().getGroup_3(), "rule__Sequence__Group_3__0");
+					put(grammarAccess.getSequenceAccess().getGroup_3_1(), "rule__Sequence__Group_3_1__0");
 					put(grammarAccess.getIfElseFragmentAccess().getGroup(), "rule__IfElseFragment__Group__0");
 					put(grammarAccess.getIfElseFragmentAccess().getGroup_4(), "rule__IfElseFragment__Group_4__0");
 					put(grammarAccess.getIfElseFragmentAccess().getGroup_5(), "rule__IfElseFragment__Group_5__0");
@@ -86,6 +87,7 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSelfMessageAccess().getGroup_4(), "rule__SelfMessage__Group_4__0");
 					put(grammarAccess.getSelfMessageAccess().getGroup_4_1(), "rule__SelfMessage__Group_4_1__0");
 					put(grammarAccess.getSelfMessageAccess().getGroup_4_1_1(), "rule__SelfMessage__Group_4_1_1__0");
+					put(grammarAccess.getSelfMessageAccess().getGroup_6(), "rule__SelfMessage__Group_6__0");
 					put(grammarAccess.getParameterAccess().getGroup(), "rule__Parameter__Group__0");
 					put(grammarAccess.getParameterAccess().getGroup_1(), "rule__Parameter__Group_1__0");
 					put(grammarAccess.getReferenceAccess().getGroup(), "rule__Reference__Group__0");
@@ -106,9 +108,9 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getImportAccess().getImportURIAssignment_1(), "rule__Import__ImportURIAssignment_1");
 					put(grammarAccess.getSequenceAccess().getAnnotationAssignment_0(), "rule__Sequence__AnnotationAssignment_0");
 					put(grammarAccess.getSequenceAccess().getNameAssignment_2(), "rule__Sequence__NameAssignment_2");
-					put(grammarAccess.getSequenceAccess().getParticipantAssignment_3(), "rule__Sequence__ParticipantAssignment_3");
-					put(grammarAccess.getSequenceAccess().getParticipantAssignment_4_1(), "rule__Sequence__ParticipantAssignment_4_1");
-					put(grammarAccess.getSequenceAccess().getTransitionAssignment_5(), "rule__Sequence__TransitionAssignment_5");
+					put(grammarAccess.getSequenceAccess().getParticipantAssignment_3_0(), "rule__Sequence__ParticipantAssignment_3_0");
+					put(grammarAccess.getSequenceAccess().getParticipantAssignment_3_1_1(), "rule__Sequence__ParticipantAssignment_3_1_1");
+					put(grammarAccess.getSequenceAccess().getTransitionAssignment_4(), "rule__Sequence__TransitionAssignment_4");
 					put(grammarAccess.getParticipantAccess().getNameAssignment(), "rule__Participant__NameAssignment");
 					put(grammarAccess.getIfElseFragmentAccess().getExprAssignment_1(), "rule__IfElseFragment__ExprAssignment_1");
 					put(grammarAccess.getIfElseFragmentAccess().getTransitionAssignment_3(), "rule__IfElseFragment__TransitionAssignment_3");
@@ -152,6 +154,7 @@ public class SequencemodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSelfMessageAccess().getParameterAssignment_4_1_0(), "rule__SelfMessage__ParameterAssignment_4_1_0");
 					put(grammarAccess.getSelfMessageAccess().getParameterAssignment_4_1_1_1(), "rule__SelfMessage__ParameterAssignment_4_1_1_1");
 					put(grammarAccess.getSelfMessageAccess().getReturnAssignment_5(), "rule__SelfMessage__ReturnAssignment_5");
+					put(grammarAccess.getSelfMessageAccess().getTransitionAssignment_6_1(), "rule__SelfMessage__TransitionAssignment_6_1");
 					put(grammarAccess.getParameterAccess().getNameAssignment_0(), "rule__Parameter__NameAssignment_0");
 					put(grammarAccess.getParameterAccess().getTypeAssignment_1_1(), "rule__Parameter__TypeAssignment_1_1");
 					put(grammarAccess.getReferenceAccess().getTypeAssignment_0(), "rule__Reference__TypeAssignment_0");

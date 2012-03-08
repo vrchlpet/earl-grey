@@ -14,7 +14,7 @@ Import:
 Sequence:
     annotation+=Annotation* =>
     'sequence' name=ID
-        participant+=Participant (',' participant+=Participant)*
+        (=> participant+=Participant (=> ',' participant+=Participant)*)?
         transition+=Transition*
     'end'
 ;
@@ -133,6 +133,9 @@ DeleteMessage:
 
 SelfMessage:
     sourceParticipant=ID 'self' '.' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? return=ReturnMessage?
+    (=>  'begin'
+        transition+=Transition*
+    'end')?
 ;
 
 // e.g.: Name : String = "John"

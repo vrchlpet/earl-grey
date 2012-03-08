@@ -218,10 +218,14 @@ ruleSequence returns [EObject current=null]
 	    }
 
 )
-)(
+)(((
+(
+ruleParticipant
+)
+)=>
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSequenceAccess().getParticipantParticipantParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getSequenceAccess().getParticipantParticipantParserRuleCall_3_0_0()); 
 	    }
 		lv_participant_3_0=ruleParticipant		{
 	        if ($current==null) {
@@ -236,14 +240,15 @@ ruleSequence returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_4=',' 
+)(((	',' 
+)=>	otherlv_4=',' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getSequenceAccess().getCommaKeyword_4_0());
+    	newLeafNode(otherlv_4, grammarAccess.getSequenceAccess().getCommaKeyword_3_1_0());
     }
-(
+)(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSequenceAccess().getParticipantParticipantParserRuleCall_4_1_0()); 
+	        newCompositeNode(grammarAccess.getSequenceAccess().getParticipantParticipantParserRuleCall_3_1_1_0()); 
 	    }
 		lv_participant_5_0=ruleParticipant		{
 	        if ($current==null) {
@@ -258,10 +263,10 @@ ruleSequence returns [EObject current=null]
 	    }
 
 )
-))*(
+))*)?(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSequenceAccess().getTransitionTransitionParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getSequenceAccess().getTransitionTransitionParserRuleCall_4_0()); 
 	    }
 		lv_transition_6_0=ruleTransition		{
 	        if ($current==null) {
@@ -278,7 +283,7 @@ ruleSequence returns [EObject current=null]
 )
 )*	otherlv_7='end' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getSequenceAccess().getEndKeyword_6());
+    	newLeafNode(otherlv_7, grammarAccess.getSequenceAccess().getEndKeyword_5());
     }
 )
 ;
@@ -1763,6 +1768,33 @@ ruleParameter
 	    }
 
 )
+)?(((	'begin' 
+)=>	otherlv_10='begin' 
+    {
+    	newLeafNode(otherlv_10, grammarAccess.getSelfMessageAccess().getBeginKeyword_6_0());
+    }
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getSelfMessageAccess().getTransitionTransitionParserRuleCall_6_1_0()); 
+	    }
+		lv_transition_11_0=ruleTransition		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getSelfMessageRule());
+	        }
+       		add(
+       			$current, 
+       			"transition",
+        		lv_transition_11_0, 
+        		"Transition");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*	otherlv_12='end' 
+    {
+    	newLeafNode(otherlv_12, grammarAccess.getSelfMessageAccess().getEndKeyword_6_2());
+    }
 )?)
 ;
 

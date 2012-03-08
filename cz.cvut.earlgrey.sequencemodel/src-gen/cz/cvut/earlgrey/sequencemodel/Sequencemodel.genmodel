@@ -70,6 +70,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//SelfMessage/sourceParticipant"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//SelfMessage/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//SelfMessage/return"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//SelfMessage/transition"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//Parameter">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Parameter/type"/>

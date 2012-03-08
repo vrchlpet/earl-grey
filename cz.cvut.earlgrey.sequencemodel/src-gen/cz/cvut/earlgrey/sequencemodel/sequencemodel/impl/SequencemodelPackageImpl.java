@@ -763,6 +763,16 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getSelfMessage_Transition()
+  {
+    return (EReference)selfMessageEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getParameter()
   {
     return parameterEClass;
@@ -925,6 +935,7 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
     createEAttribute(selfMessageEClass, SELF_MESSAGE__SOURCE_PARTICIPANT);
     createEAttribute(selfMessageEClass, SELF_MESSAGE__NAME);
     createEReference(selfMessageEClass, SELF_MESSAGE__RETURN);
+    createEReference(selfMessageEClass, SELF_MESSAGE__TRANSITION);
 
     parameterEClass = createEClass(PARAMETER);
     createEReference(parameterEClass, PARAMETER__TYPE);
@@ -1052,6 +1063,7 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
     initEAttribute(getSelfMessage_SourceParticipant(), ecorePackage.getEString(), "sourceParticipant", null, 0, 1, SelfMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSelfMessage_Name(), ecorePackage.getEString(), "name", null, 0, 1, SelfMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSelfMessage_Return(), this.getReturnMessage(), null, "return", null, 0, 1, SelfMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSelfMessage_Transition(), this.getTransition(), null, "transition", null, 0, -1, SelfMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getParameter_Type(), this.getReference(), null, "type", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
