@@ -73,7 +73,6 @@ public class SequencemodelFactoryImpl extends EFactoryImpl implements Sequencemo
       case SequencemodelPackage.SEQUENCE: return createSequence();
       case SequencemodelPackage.PARTICIPANT: return createParticipant();
       case SequencemodelPackage.TRANSITION: return createTransition();
-      case SequencemodelPackage.TRANSITION_BLOCK: return createTransitionBlock();
       case SequencemodelPackage.FRAGMENT: return createFragment();
       case SequencemodelPackage.IF_ELSE_FRAGMENT: return createIfElseFragment();
       case SequencemodelPackage.FOREACH_FRAGMENT: return createForeachFragment();
@@ -147,17 +146,6 @@ public class SequencemodelFactoryImpl extends EFactoryImpl implements Sequencemo
   {
     TransitionImpl transition = new TransitionImpl();
     return transition;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public TransitionBlock createTransitionBlock()
-  {
-    TransitionBlockImpl transitionBlock = new TransitionBlockImpl();
-    return transitionBlock;
   }
 
   /**

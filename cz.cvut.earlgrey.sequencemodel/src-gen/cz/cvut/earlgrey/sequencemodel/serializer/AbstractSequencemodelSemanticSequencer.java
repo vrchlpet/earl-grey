@@ -23,7 +23,6 @@ import cz.cvut.earlgrey.sequencemodel.sequencemodel.Reference;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequence;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
-import cz.cvut.earlgrey.sequencemodel.sequencemodel.TransitionBlock;
 import cz.cvut.earlgrey.sequencemodel.services.SequencemodelGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
@@ -198,9 +197,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 				}
 				else break;
 			case SequencemodelPackage.RETURN_MESSAGE:
-				if(context == grammarAccess.getMessageRule() ||
-				   context == grammarAccess.getReturnMessageRule() ||
-				   context == grammarAccess.getTransitionRule()) {
+				if(context == grammarAccess.getReturnMessageRule()) {
 					sequence_ReturnMessage(context, (ReturnMessage) semanticObject); 
 					return; 
 				}
@@ -208,12 +205,6 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 			case SequencemodelPackage.SEQUENCE:
 				if(context == grammarAccess.getSequenceRule()) {
 					sequence_Sequence(context, (Sequence) semanticObject); 
-					return; 
-				}
-				else break;
-			case SequencemodelPackage.TRANSITION_BLOCK:
-				if(context == grammarAccess.getTransitionBlockRule()) {
-					sequence_TransitionBlock(context, (TransitionBlock) semanticObject); 
 					return; 
 				}
 				else break;
@@ -268,7 +259,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (participant=ID? name=ID (parameter+=Parameter parameter+=Parameter*)?)
+	 *     (sourceParticipant=ID? targetParticipant=ID? name=ID (parameter+=Parameter parameter+=Parameter*)? return=ReturnMessage?)
 	 */
 	protected void sequence_CallMessage(EObject context, CallMessage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -277,7 +268,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (name=ID (parameter+=Parameter parameter+=Parameter*)?)
+	 *     (sourceParticipant=ID? targetParticipant=ID (parameter+=Parameter parameter+=Parameter*)?)
 	 */
 	protected void sequence_DeleteMessage(EObject context, DeleteMessage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -338,7 +329,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (participant=ID (parameter+=Parameter parameter+=Parameter*)?)
+	 *     (sourceParticipant=ID? targetParticipant=ID (parameter+=Parameter parameter+=Parameter*)?)
 	 */
 	protected void sequence_NewMessage(EObject context, NewMessage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -365,10 +356,17 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (annotation+=Annotation* name=ID transition+=Transition* block+=TransitionBlock*)
+	 *     name=ID
 	 */
 	protected void sequence_Participant(EObject context, Participant semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, SequencemodelPackage.Literals.PARTICIPANT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SequencemodelPackage.Literals.PARTICIPANT__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getParticipantAccess().getNameIDTerminalRuleCall_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	
@@ -392,18 +390,9 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (annotation+=Annotation* name=ID participant+=Participant*)
+	 *     (annotation+=Annotation* name=ID participant+=Participant participant+=Participant* transition+=Transition*)
 	 */
 	protected void sequence_Sequence(EObject context, Sequence semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name=ID (parameter+=Parameter parameter+=Parameter*)? transition+=Transition*)
-	 */
-	protected void sequence_TransitionBlock(EObject context, TransitionBlock semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

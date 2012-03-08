@@ -20,19 +20,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Sequence/annotation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Sequence/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Sequence/participant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Sequence/transition"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//Participant">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Participant/annotation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Participant/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Participant/transition"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Participant/block"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//Transition"/>
-    <genClasses ecoreClass="Sequencemodel.ecore#//TransitionBlock">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//TransitionBlock/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//TransitionBlock/parameter"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//TransitionBlock/transition"/>
-    </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//Fragment">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Fragment/expr"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Fragment/transition"/>
@@ -48,21 +41,20 @@
     <genClasses ecoreClass="Sequencemodel.ecore#//BreakFragment"/>
     <genClasses ecoreClass="Sequencemodel.ecore#//NextFragment"/>
     <genClasses ecoreClass="Sequencemodel.ecore#//Message">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Message/sourceParticipant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Message/targetParticipant"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Message/parameter"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//CallMessage">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//CallMessage/participant"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//CallMessage/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//CallMessage/return"/>
     </genClasses>
-    <genClasses ecoreClass="Sequencemodel.ecore#//NewMessage">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//NewMessage/participant"/>
-    </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//NewMessage"/>
     <genClasses ecoreClass="Sequencemodel.ecore#//ReturnMessage">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//ReturnMessage/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//ReturnMessage/parameter"/>
     </genClasses>
-    <genClasses ecoreClass="Sequencemodel.ecore#//DeleteMessage">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//DeleteMessage/name"/>
-    </genClasses>
+    <genClasses ecoreClass="Sequencemodel.ecore#//DeleteMessage"/>
     <genClasses ecoreClass="Sequencemodel.ecore#//Parameter">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Parameter/type"/>
     </genClasses>

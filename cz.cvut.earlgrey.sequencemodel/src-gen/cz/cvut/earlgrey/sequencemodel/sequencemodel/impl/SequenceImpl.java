@@ -11,6 +11,7 @@ import cz.cvut.earlgrey.annotation.annotation.Annotation;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequence;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Transition;
 
 import java.util.Collection;
 
@@ -38,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequenceImpl#getAnnotation <em>Annotation</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequenceImpl#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequenceImpl#getParticipant <em>Participant</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequenceImpl#getTransition <em>Transition</em>}</li>
  * </ul>
  * </p>
  *
@@ -84,6 +86,16 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
    * @ordered
    */
   protected EList<Participant> participant;
+
+  /**
+   * The cached value of the '{@link #getTransition() <em>Transition</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTransition()
+   * @generated
+   * @ordered
+   */
+  protected EList<Transition> transition;
 
   /**
    * <!-- begin-user-doc -->
@@ -162,6 +174,20 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Transition> getTransition()
+  {
+    if (transition == null)
+    {
+      transition = new EObjectContainmentEList<Transition>(Transition.class, this, SequencemodelPackage.SEQUENCE__TRANSITION);
+    }
+    return transition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -171,6 +197,8 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
         return ((InternalEList<?>)getAnnotation()).basicRemove(otherEnd, msgs);
       case SequencemodelPackage.SEQUENCE__PARTICIPANT:
         return ((InternalEList<?>)getParticipant()).basicRemove(otherEnd, msgs);
+      case SequencemodelPackage.SEQUENCE__TRANSITION:
+        return ((InternalEList<?>)getTransition()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -191,6 +219,8 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
         return getName();
       case SequencemodelPackage.SEQUENCE__PARTICIPANT:
         return getParticipant();
+      case SequencemodelPackage.SEQUENCE__TRANSITION:
+        return getTransition();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -217,6 +247,10 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
         getParticipant().clear();
         getParticipant().addAll((Collection<? extends Participant>)newValue);
         return;
+      case SequencemodelPackage.SEQUENCE__TRANSITION:
+        getTransition().clear();
+        getTransition().addAll((Collection<? extends Transition>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -240,6 +274,9 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
       case SequencemodelPackage.SEQUENCE__PARTICIPANT:
         getParticipant().clear();
         return;
+      case SequencemodelPackage.SEQUENCE__TRANSITION:
+        getTransition().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -260,6 +297,8 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case SequencemodelPackage.SEQUENCE__PARTICIPANT:
         return participant != null && !participant.isEmpty();
+      case SequencemodelPackage.SEQUENCE__TRANSITION:
+        return transition != null && !transition.isEmpty();
     }
     return super.eIsSet(featureID);
   }

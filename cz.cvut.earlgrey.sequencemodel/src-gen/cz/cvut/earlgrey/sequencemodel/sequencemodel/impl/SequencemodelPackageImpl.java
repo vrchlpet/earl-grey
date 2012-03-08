@@ -30,7 +30,6 @@ import cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequence;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelFactory;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Transition;
-import cz.cvut.earlgrey.sequencemodel.sequencemodel.TransitionBlock;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -81,13 +80,6 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
    * @generated
    */
   private EClass transitionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass transitionBlockEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -355,6 +347,16 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getSequence_Transition()
+  {
+    return (EReference)sequenceEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getParticipant()
   {
     return participantEClass;
@@ -365,39 +367,9 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getParticipant_Annotation()
-  {
-    return (EReference)participantEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getParticipant_Name()
   {
-    return (EAttribute)participantEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getParticipant_Transition()
-  {
-    return (EReference)participantEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getParticipant_Block()
-  {
-    return (EReference)participantEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)participantEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -408,46 +380,6 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
   public EClass getTransition()
   {
     return transitionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getTransitionBlock()
-  {
-    return transitionBlockEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getTransitionBlock_Name()
-  {
-    return (EAttribute)transitionBlockEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getTransitionBlock_Parameter()
-  {
-    return (EReference)transitionBlockEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getTransitionBlock_Transition()
-  {
-    return (EReference)transitionBlockEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -585,9 +517,29 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getMessage_SourceParticipant()
+  {
+    return (EAttribute)messageEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMessage_TargetParticipant()
+  {
+    return (EAttribute)messageEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getMessage_Parameter()
   {
-    return (EReference)messageEClass.getEStructuralFeatures().get(0);
+    return (EReference)messageEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -605,7 +557,7 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getCallMessage_Participant()
+  public EAttribute getCallMessage_Name()
   {
     return (EAttribute)callMessageEClass.getEStructuralFeatures().get(0);
   }
@@ -615,9 +567,9 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getCallMessage_Name()
+  public EReference getCallMessage_Return()
   {
-    return (EAttribute)callMessageEClass.getEStructuralFeatures().get(1);
+    return (EReference)callMessageEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -628,16 +580,6 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
   public EClass getNewMessage()
   {
     return newMessageEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getNewMessage_Participant()
-  {
-    return (EAttribute)newMessageEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -665,9 +607,9 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getDeleteMessage()
+  public EReference getReturnMessage_Parameter()
   {
-    return deleteMessageEClass;
+    return (EReference)returnMessageEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -675,9 +617,9 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDeleteMessage_Name()
+  public EClass getDeleteMessage()
   {
-    return (EAttribute)deleteMessageEClass.getEStructuralFeatures().get(0);
+    return deleteMessageEClass;
   }
 
   /**
@@ -791,19 +733,12 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
     createEReference(sequenceEClass, SEQUENCE__ANNOTATION);
     createEAttribute(sequenceEClass, SEQUENCE__NAME);
     createEReference(sequenceEClass, SEQUENCE__PARTICIPANT);
+    createEReference(sequenceEClass, SEQUENCE__TRANSITION);
 
     participantEClass = createEClass(PARTICIPANT);
-    createEReference(participantEClass, PARTICIPANT__ANNOTATION);
     createEAttribute(participantEClass, PARTICIPANT__NAME);
-    createEReference(participantEClass, PARTICIPANT__TRANSITION);
-    createEReference(participantEClass, PARTICIPANT__BLOCK);
 
     transitionEClass = createEClass(TRANSITION);
-
-    transitionBlockEClass = createEClass(TRANSITION_BLOCK);
-    createEAttribute(transitionBlockEClass, TRANSITION_BLOCK__NAME);
-    createEReference(transitionBlockEClass, TRANSITION_BLOCK__PARAMETER);
-    createEReference(transitionBlockEClass, TRANSITION_BLOCK__TRANSITION);
 
     fragmentEClass = createEClass(FRAGMENT);
     createEAttribute(fragmentEClass, FRAGMENT__EXPR);
@@ -825,20 +760,21 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
     nextFragmentEClass = createEClass(NEXT_FRAGMENT);
 
     messageEClass = createEClass(MESSAGE);
+    createEAttribute(messageEClass, MESSAGE__SOURCE_PARTICIPANT);
+    createEAttribute(messageEClass, MESSAGE__TARGET_PARTICIPANT);
     createEReference(messageEClass, MESSAGE__PARAMETER);
 
     callMessageEClass = createEClass(CALL_MESSAGE);
-    createEAttribute(callMessageEClass, CALL_MESSAGE__PARTICIPANT);
     createEAttribute(callMessageEClass, CALL_MESSAGE__NAME);
+    createEReference(callMessageEClass, CALL_MESSAGE__RETURN);
 
     newMessageEClass = createEClass(NEW_MESSAGE);
-    createEAttribute(newMessageEClass, NEW_MESSAGE__PARTICIPANT);
 
     returnMessageEClass = createEClass(RETURN_MESSAGE);
     createEReference(returnMessageEClass, RETURN_MESSAGE__NAME);
+    createEReference(returnMessageEClass, RETURN_MESSAGE__PARAMETER);
 
     deleteMessageEClass = createEClass(DELETE_MESSAGE);
-    createEAttribute(deleteMessageEClass, DELETE_MESSAGE__NAME);
 
     parameterEClass = createEClass(PARAMETER);
     createEReference(parameterEClass, PARAMETER__TYPE);
@@ -893,7 +829,6 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
     messageEClass.getESuperTypes().add(this.getTransition());
     callMessageEClass.getESuperTypes().add(this.getMessage());
     newMessageEClass.getESuperTypes().add(this.getMessage());
-    returnMessageEClass.getESuperTypes().add(this.getMessage());
     deleteMessageEClass.getESuperTypes().add(this.getMessage());
     parameterEClass.getESuperTypes().add(theAnnotationPackage.getParameter());
 
@@ -909,19 +844,12 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
     initEReference(getSequence_Annotation(), theAnnotationPackage.getAnnotation(), null, "annotation", null, 0, -1, Sequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSequence_Name(), ecorePackage.getEString(), "name", null, 0, 1, Sequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSequence_Participant(), this.getParticipant(), null, "participant", null, 0, -1, Sequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSequence_Transition(), this.getTransition(), null, "transition", null, 0, -1, Sequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(participantEClass, Participant.class, "Participant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getParticipant_Annotation(), theAnnotationPackage.getAnnotation(), null, "annotation", null, 0, -1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getParticipant_Name(), ecorePackage.getEString(), "name", null, 0, 1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getParticipant_Transition(), this.getTransition(), null, "transition", null, 0, -1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getParticipant_Block(), this.getTransitionBlock(), null, "block", null, 0, -1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(transitionBlockEClass, TransitionBlock.class, "TransitionBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTransitionBlock_Name(), ecorePackage.getEString(), "name", null, 0, 1, TransitionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTransitionBlock_Parameter(), this.getParameter(), null, "parameter", null, 0, -1, TransitionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTransitionBlock_Transition(), this.getTransition(), null, "transition", null, 0, -1, TransitionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fragmentEClass, Fragment.class, "Fragment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFragment_Expr(), ecorePackage.getEString(), "expr", null, 0, 1, Fragment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -943,20 +871,21 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
     initEClass(nextFragmentEClass, NextFragment.class, "NextFragment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(messageEClass, Message.class, "Message", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMessage_SourceParticipant(), ecorePackage.getEString(), "sourceParticipant", null, 0, 1, Message.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMessage_TargetParticipant(), ecorePackage.getEString(), "targetParticipant", null, 0, 1, Message.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMessage_Parameter(), this.getParameter(), null, "parameter", null, 0, -1, Message.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(callMessageEClass, CallMessage.class, "CallMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCallMessage_Participant(), ecorePackage.getEString(), "participant", null, 0, 1, CallMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getCallMessage_Name(), ecorePackage.getEString(), "name", null, 0, 1, CallMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCallMessage_Return(), this.getReturnMessage(), null, "return", null, 0, 1, CallMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(newMessageEClass, NewMessage.class, "NewMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getNewMessage_Participant(), ecorePackage.getEString(), "participant", null, 0, 1, NewMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(returnMessageEClass, ReturnMessage.class, "ReturnMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getReturnMessage_Name(), this.getReference(), null, "name", null, 0, 1, ReturnMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getReturnMessage_Parameter(), this.getParameter(), null, "parameter", null, 0, -1, ReturnMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(deleteMessageEClass, DeleteMessage.class, "DeleteMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDeleteMessage_Name(), ecorePackage.getEString(), "name", null, 0, 1, DeleteMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getParameter_Type(), this.getReference(), null, "type", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

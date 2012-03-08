@@ -6,10 +6,6 @@
  */
 package cz.cvut.earlgrey.sequencemodel.sequencemodel;
 
-import cz.cvut.earlgrey.annotation.annotation.Annotation;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -20,10 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant#getAnnotation <em>Annotation</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant#getName <em>Name</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant#getTransition <em>Transition</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant#getBlock <em>Block</em>}</li>
  * </ul>
  * </p>
  *
@@ -33,22 +26,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Participant extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Annotation</b></em>' containment reference list.
-   * The list contents are of type {@link cz.cvut.earlgrey.annotation.annotation.Annotation}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Annotation</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Annotation</em>' containment reference list.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getParticipant_Annotation()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Annotation> getAnnotation();
-
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
@@ -74,37 +51,5 @@ public interface Participant extends EObject
    * @generated
    */
   void setName(String value);
-
-  /**
-   * Returns the value of the '<em><b>Transition</b></em>' containment reference list.
-   * The list contents are of type {@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Transition}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Transition</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Transition</em>' containment reference list.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getParticipant_Transition()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Transition> getTransition();
-
-  /**
-   * Returns the value of the '<em><b>Block</b></em>' containment reference list.
-   * The list contents are of type {@link cz.cvut.earlgrey.sequencemodel.sequencemodel.TransitionBlock}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Block</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Block</em>' containment reference list.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getParticipant_Block()
-   * @model containment="true"
-   * @generated
-   */
-  EList<TransitionBlock> getBlock();
 
 } // Participant

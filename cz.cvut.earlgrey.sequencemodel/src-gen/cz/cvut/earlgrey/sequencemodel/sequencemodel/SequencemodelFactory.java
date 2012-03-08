@@ -72,15 +72,6 @@ public interface SequencemodelFactory extends EFactory
   Transition createTransition();
 
   /**
-   * Returns a new object of class '<em>Transition Block</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Transition Block</em>'.
-   * @generated
-   */
-  TransitionBlock createTransitionBlock();
-
-  /**
    * Returns a new object of class '<em>Fragment</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -79,13 +79,21 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Assignment cParticipantAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cParticipantParticipantParserRuleCall_3_0 = (RuleCall)cParticipantAssignment_3.eContents().get(0);
-		private final Keyword cEndKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cCommaKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cParticipantAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cParticipantParticipantParserRuleCall_4_1_0 = (RuleCall)cParticipantAssignment_4_1.eContents().get(0);
+		private final Assignment cTransitionAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cTransitionTransitionParserRuleCall_5_0 = (RuleCall)cTransitionAssignment_5.eContents().get(0);
+		private final Keyword cEndKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Sequence:
-		//	annotation+=Annotation* => "sequence" name=ID participant+=Participant* "end";
+		//	annotation+=Annotation* => "sequence" name=ID participant+=Participant ("," participant+=Participant)*
+		//	transition+=Transition* "end";
 		public ParserRule getRule() { return rule; }
 
-		//annotation+=Annotation* => "sequence" name=ID participant+=Participant* "end"
+		//annotation+=Annotation* => "sequence" name=ID participant+=Participant ("," participant+=Participant)*
+		//transition+=Transition* "end"
 		public Group getGroup() { return cGroup; }
 
 		//annotation+=Annotation*
@@ -103,69 +111,49 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//participant+=Participant*
+		//participant+=Participant
 		public Assignment getParticipantAssignment_3() { return cParticipantAssignment_3; }
 
 		//Participant
 		public RuleCall getParticipantParticipantParserRuleCall_3_0() { return cParticipantParticipantParserRuleCall_3_0; }
 
+		//("," participant+=Participant)*
+		public Group getGroup_4() { return cGroup_4; }
+
+		//","
+		public Keyword getCommaKeyword_4_0() { return cCommaKeyword_4_0; }
+
+		//participant+=Participant
+		public Assignment getParticipantAssignment_4_1() { return cParticipantAssignment_4_1; }
+
+		//Participant
+		public RuleCall getParticipantParticipantParserRuleCall_4_1_0() { return cParticipantParticipantParserRuleCall_4_1_0; }
+
+		//transition+=Transition*
+		public Assignment getTransitionAssignment_5() { return cTransitionAssignment_5; }
+
+		//Transition
+		public RuleCall getTransitionTransitionParserRuleCall_5_0() { return cTransitionTransitionParserRuleCall_5_0; }
+
 		//"end"
-		public Keyword getEndKeyword_4() { return cEndKeyword_4; }
+		public Keyword getEndKeyword_6() { return cEndKeyword_6; }
 	}
 
 	public class ParticipantElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Participant");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cAnnotationAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cAnnotationAnnotationParserRuleCall_0_0 = (RuleCall)cAnnotationAssignment_0.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cTransitionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTransitionTransitionParserRuleCall_2_0 = (RuleCall)cTransitionAssignment_2.eContents().get(0);
-		private final Assignment cBlockAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cBlockTransitionBlockParserRuleCall_3_0 = (RuleCall)cBlockAssignment_3.eContents().get(0);
-		private final Keyword cEndKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
 		
-		//// e.g.: Node / *..* / end
+		//// e.g.: Node
 		//Participant:
-		//	annotation+=Annotation* => name=ID //initial transitions
-		//	transition+=Transition* //transition blocks
-		//	block+=TransitionBlock* "end";
+		//	name=ID;
 		public ParserRule getRule() { return rule; }
 
-		//annotation+=Annotation* => name=ID //initial transitions
-		//transition+=Transition* //transition blocks
-		//block+=TransitionBlock* "end"
-		public Group getGroup() { return cGroup; }
-
-		//annotation+=Annotation*
-		public Assignment getAnnotationAssignment_0() { return cAnnotationAssignment_0; }
-
-		//Annotation
-		public RuleCall getAnnotationAnnotationParserRuleCall_0_0() { return cAnnotationAnnotationParserRuleCall_0_0; }
-
-		//=> name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		//name=ID
+		public Assignment getNameAssignment() { return cNameAssignment; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-
-		////initial transitions
-		//transition+=Transition*
-		public Assignment getTransitionAssignment_2() { return cTransitionAssignment_2; }
-
-		//Transition
-		public RuleCall getTransitionTransitionParserRuleCall_2_0() { return cTransitionTransitionParserRuleCall_2_0; }
-
-		////transition blocks
-		//block+=TransitionBlock*
-		public Assignment getBlockAssignment_3() { return cBlockAssignment_3; }
-
-		//TransitionBlock
-		public RuleCall getBlockTransitionBlockParserRuleCall_3_0() { return cBlockTransitionBlockParserRuleCall_3_0; }
-
-		//"end"
-		public Keyword getEndKeyword_4() { return cEndKeyword_4; }
+		public RuleCall getNameIDTerminalRuleCall_0() { return cNameIDTerminalRuleCall_0; }
 	}
 
 	public class TransitionElements extends AbstractParserRuleElementFinder {
@@ -188,85 +176,6 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getFragmentParserRuleCall_1() { return cFragmentParserRuleCall_1; }
 	}
 
-	public class TransitionBlockElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TransitionBlock");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cDefKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
-		private final Assignment cParameterAssignment_2_1_0 = (Assignment)cGroup_2_1.eContents().get(0);
-		private final RuleCall cParameterParameterParserRuleCall_2_1_0_0 = (RuleCall)cParameterAssignment_2_1_0.eContents().get(0);
-		private final Group cGroup_2_1_1 = (Group)cGroup_2_1.eContents().get(1);
-		private final Keyword cCommaKeyword_2_1_1_0 = (Keyword)cGroup_2_1_1.eContents().get(0);
-		private final Assignment cParameterAssignment_2_1_1_1 = (Assignment)cGroup_2_1_1.eContents().get(1);
-		private final RuleCall cParameterParameterParserRuleCall_2_1_1_1_0 = (RuleCall)cParameterAssignment_2_1_1_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
-		private final Assignment cTransitionAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cTransitionTransitionParserRuleCall_3_0 = (RuleCall)cTransitionAssignment_3.eContents().get(0);
-		private final Keyword cEndKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		
-		//// e.g.: def append(child : Node) end
-		//TransitionBlock:
-		//	"def" name=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")? //':'
-		//	transition+=Transition* "end";
-		public ParserRule getRule() { return rule; }
-
-		//"def" name=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")? //':'
-		//transition+=Transition* "end"
-		public Group getGroup() { return cGroup; }
-
-		//"def"
-		public Keyword getDefKeyword_0() { return cDefKeyword_0; }
-
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-
-		//(=> "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
-		public Group getGroup_2() { return cGroup_2; }
-
-		//=> "("
-		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
-
-		//(=> parameter+=Parameter ("," parameter+=Parameter)*)?
-		public Group getGroup_2_1() { return cGroup_2_1; }
-
-		//=> parameter+=Parameter
-		public Assignment getParameterAssignment_2_1_0() { return cParameterAssignment_2_1_0; }
-
-		//Parameter
-		public RuleCall getParameterParameterParserRuleCall_2_1_0_0() { return cParameterParameterParserRuleCall_2_1_0_0; }
-
-		//("," parameter+=Parameter)*
-		public Group getGroup_2_1_1() { return cGroup_2_1_1; }
-
-		//","
-		public Keyword getCommaKeyword_2_1_1_0() { return cCommaKeyword_2_1_1_0; }
-
-		//parameter+=Parameter
-		public Assignment getParameterAssignment_2_1_1_1() { return cParameterAssignment_2_1_1_1; }
-
-		//Parameter
-		public RuleCall getParameterParameterParserRuleCall_2_1_1_1_0() { return cParameterParameterParserRuleCall_2_1_1_1_0; }
-
-		//")"
-		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
-
-		//transition+=Transition*
-		public Assignment getTransitionAssignment_3() { return cTransitionAssignment_3; }
-
-		//Transition
-		public RuleCall getTransitionTransitionParserRuleCall_3_0() { return cTransitionTransitionParserRuleCall_3_0; }
-
-		//"end"
-		public Keyword getEndKeyword_4() { return cEndKeyword_4; }
-	}
-
 	public class FragmentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Fragment");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -277,6 +186,12 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cBreakFragmentParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cNextFragmentParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		
+		////// e.g.: def append(child : Node) end
+		////TransitionBlock:
+		////    'def' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? //':'
+		////        transition+=Transition*
+		////    'end'
+		////;
 		//Fragment:
 		//	IfElseFragment | ForeachFragment | AssertFragment | LoopFragment | BreakFragment | NextFragment;
 		public ParserRule getRule() { return rule; }
@@ -622,15 +537,16 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cCallMessageParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cNewMessageParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cReturnMessageParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cDeleteMessageParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cDeleteMessageParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		////
 		//Message:
-		//	CallMessage | NewMessage | ReturnMessage | DeleteMessage;
+		//	CallMessage //    | ReturnMessage
+		//	| NewMessage | DeleteMessage;
 		public ParserRule getRule() { return rule; }
 
-		//CallMessage | NewMessage | ReturnMessage | DeleteMessage
+		//CallMessage //    | ReturnMessage
+		//| NewMessage | DeleteMessage
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//CallMessage
@@ -639,160 +555,188 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		//NewMessage
 		public RuleCall getNewMessageParserRuleCall_1() { return cNewMessageParserRuleCall_1; }
 
-		//ReturnMessage
-		public RuleCall getReturnMessageParserRuleCall_2() { return cReturnMessageParserRuleCall_2; }
-
 		//DeleteMessage
-		public RuleCall getDeleteMessageParserRuleCall_3() { return cDeleteMessageParserRuleCall_3; }
+		public RuleCall getDeleteMessageParserRuleCall_2() { return cDeleteMessageParserRuleCall_2; }
 	}
 
 	public class CallMessageElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CallMessage");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
-		private final Assignment cParticipantAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final RuleCall cParticipantIDTerminalRuleCall_0_0_0 = (RuleCall)cParticipantAssignment_0_0.eContents().get(0);
-		private final Keyword cFullStopKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Assignment cSourceParticipantAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cSourceParticipantIDTerminalRuleCall_0_0 = (RuleCall)cSourceParticipantAssignment_0.eContents().get(0);
+		private final Keyword cCallsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
-		private final Assignment cParameterAssignment_2_1_0 = (Assignment)cGroup_2_1.eContents().get(0);
-		private final RuleCall cParameterParameterParserRuleCall_2_1_0_0 = (RuleCall)cParameterAssignment_2_1_0.eContents().get(0);
-		private final Group cGroup_2_1_1 = (Group)cGroup_2_1.eContents().get(1);
-		private final Keyword cCommaKeyword_2_1_1_0 = (Keyword)cGroup_2_1_1.eContents().get(0);
-		private final Assignment cParameterAssignment_2_1_1_1 = (Assignment)cGroup_2_1_1.eContents().get(1);
-		private final RuleCall cParameterParameterParserRuleCall_2_1_1_1_0 = (RuleCall)cParameterAssignment_2_1_1_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		private final Assignment cTargetParticipantAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final RuleCall cTargetParticipantIDTerminalRuleCall_2_0_0 = (RuleCall)cTargetParticipantAssignment_2_0.eContents().get(0);
+		private final Keyword cFullStopKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cLeftParenthesisKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Group cGroup_4_1 = (Group)cGroup_4.eContents().get(1);
+		private final Assignment cParameterAssignment_4_1_0 = (Assignment)cGroup_4_1.eContents().get(0);
+		private final RuleCall cParameterParameterParserRuleCall_4_1_0_0 = (RuleCall)cParameterAssignment_4_1_0.eContents().get(0);
+		private final Group cGroup_4_1_1 = (Group)cGroup_4_1.eContents().get(1);
+		private final Keyword cCommaKeyword_4_1_1_0 = (Keyword)cGroup_4_1_1.eContents().get(0);
+		private final Assignment cParameterAssignment_4_1_1_1 = (Assignment)cGroup_4_1_1.eContents().get(1);
+		private final RuleCall cParameterParameterParserRuleCall_4_1_1_1_0 = (RuleCall)cParameterAssignment_4_1_1_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
+		private final Assignment cReturnAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cReturnReturnMessageParserRuleCall_5_0 = (RuleCall)cReturnAssignment_5.eContents().get(0);
 		
-		//// e.g.: Node.getChild()
+		//// e.g.: Handler calls Node.getChild()
 		//CallMessage:
-		//	(participant=ID ".")? => name=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?;
+		//	sourceParticipant=ID? "calls" (targetParticipant=ID ".")? => name=ID ("(" (=> parameter+=Parameter (","
+		//	parameter+=Parameter)*)? ")")? return=ReturnMessage?;
 		public ParserRule getRule() { return rule; }
 
-		//(participant=ID ".")? => name=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
+		//sourceParticipant=ID? "calls" (targetParticipant=ID ".")? => name=ID ("(" (=> parameter+=Parameter (","
+		//parameter+=Parameter)*)? ")")? return=ReturnMessage?
 		public Group getGroup() { return cGroup; }
 
-		//(participant=ID ".")?
-		public Group getGroup_0() { return cGroup_0; }
-
-		//participant=ID
-		public Assignment getParticipantAssignment_0_0() { return cParticipantAssignment_0_0; }
+		//sourceParticipant=ID?
+		public Assignment getSourceParticipantAssignment_0() { return cSourceParticipantAssignment_0; }
 
 		//ID
-		public RuleCall getParticipantIDTerminalRuleCall_0_0_0() { return cParticipantIDTerminalRuleCall_0_0_0; }
+		public RuleCall getSourceParticipantIDTerminalRuleCall_0_0() { return cSourceParticipantIDTerminalRuleCall_0_0; }
 
-		//"."
-		public Keyword getFullStopKeyword_0_1() { return cFullStopKeyword_0_1; }
+		//"calls"
+		public Keyword getCallsKeyword_1() { return cCallsKeyword_1; }
 
-		//=> name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-
-		//(=> "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
+		//(targetParticipant=ID ".")?
 		public Group getGroup_2() { return cGroup_2; }
 
+		//targetParticipant=ID
+		public Assignment getTargetParticipantAssignment_2_0() { return cTargetParticipantAssignment_2_0; }
+
+		//ID
+		public RuleCall getTargetParticipantIDTerminalRuleCall_2_0_0() { return cTargetParticipantIDTerminalRuleCall_2_0_0; }
+
+		//"."
+		public Keyword getFullStopKeyword_2_1() { return cFullStopKeyword_2_1; }
+
+		//=> name=ID
+		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
+
+		//(=> "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
+		public Group getGroup_4() { return cGroup_4; }
+
 		//=> "("
-		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
+		public Keyword getLeftParenthesisKeyword_4_0() { return cLeftParenthesisKeyword_4_0; }
 
 		//(=> parameter+=Parameter ("," parameter+=Parameter)*)?
-		public Group getGroup_2_1() { return cGroup_2_1; }
+		public Group getGroup_4_1() { return cGroup_4_1; }
 
 		//=> parameter+=Parameter
-		public Assignment getParameterAssignment_2_1_0() { return cParameterAssignment_2_1_0; }
+		public Assignment getParameterAssignment_4_1_0() { return cParameterAssignment_4_1_0; }
 
 		//Parameter
-		public RuleCall getParameterParameterParserRuleCall_2_1_0_0() { return cParameterParameterParserRuleCall_2_1_0_0; }
+		public RuleCall getParameterParameterParserRuleCall_4_1_0_0() { return cParameterParameterParserRuleCall_4_1_0_0; }
 
 		//("," parameter+=Parameter)*
-		public Group getGroup_2_1_1() { return cGroup_2_1_1; }
+		public Group getGroup_4_1_1() { return cGroup_4_1_1; }
 
 		//","
-		public Keyword getCommaKeyword_2_1_1_0() { return cCommaKeyword_2_1_1_0; }
+		public Keyword getCommaKeyword_4_1_1_0() { return cCommaKeyword_4_1_1_0; }
 
 		//parameter+=Parameter
-		public Assignment getParameterAssignment_2_1_1_1() { return cParameterAssignment_2_1_1_1; }
+		public Assignment getParameterAssignment_4_1_1_1() { return cParameterAssignment_4_1_1_1; }
 
 		//Parameter
-		public RuleCall getParameterParameterParserRuleCall_2_1_1_1_0() { return cParameterParameterParserRuleCall_2_1_1_1_0; }
+		public RuleCall getParameterParameterParserRuleCall_4_1_1_1_0() { return cParameterParameterParserRuleCall_4_1_1_1_0; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
+		public Keyword getRightParenthesisKeyword_4_2() { return cRightParenthesisKeyword_4_2; }
+
+		//return=ReturnMessage?
+		public Assignment getReturnAssignment_5() { return cReturnAssignment_5; }
+
+		//ReturnMessage
+		public RuleCall getReturnReturnMessageParserRuleCall_5_0() { return cReturnReturnMessageParserRuleCall_5_0; }
 	}
 
 	public class NewMessageElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NewMessage");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cNewKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cParticipantAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cParticipantIDTerminalRuleCall_1_0 = (RuleCall)cParticipantAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
-		private final Assignment cParameterAssignment_2_1_0 = (Assignment)cGroup_2_1.eContents().get(0);
-		private final RuleCall cParameterParameterParserRuleCall_2_1_0_0 = (RuleCall)cParameterAssignment_2_1_0.eContents().get(0);
-		private final Group cGroup_2_1_1 = (Group)cGroup_2_1.eContents().get(1);
-		private final Keyword cCommaKeyword_2_1_1_0 = (Keyword)cGroup_2_1_1.eContents().get(0);
-		private final Assignment cParameterAssignment_2_1_1_1 = (Assignment)cGroup_2_1_1.eContents().get(1);
-		private final RuleCall cParameterParameterParserRuleCall_2_1_1_1_0 = (RuleCall)cParameterAssignment_2_1_1_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		private final Assignment cSourceParticipantAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cSourceParticipantIDTerminalRuleCall_0_0 = (RuleCall)cSourceParticipantAssignment_0.eContents().get(0);
+		private final Keyword cCreatesKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTargetParticipantAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTargetParticipantIDTerminalRuleCall_2_0 = (RuleCall)cTargetParticipantAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftParenthesisKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
+		private final Assignment cParameterAssignment_3_1_0 = (Assignment)cGroup_3_1.eContents().get(0);
+		private final RuleCall cParameterParameterParserRuleCall_3_1_0_0 = (RuleCall)cParameterAssignment_3_1_0.eContents().get(0);
+		private final Group cGroup_3_1_1 = (Group)cGroup_3_1.eContents().get(1);
+		private final Keyword cCommaKeyword_3_1_1_0 = (Keyword)cGroup_3_1_1.eContents().get(0);
+		private final Assignment cParameterAssignment_3_1_1_1 = (Assignment)cGroup_3_1_1.eContents().get(1);
+		private final RuleCall cParameterParameterParserRuleCall_3_1_1_1_0 = (RuleCall)cParameterAssignment_3_1_1_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		
 		//// e.g.: new Node
 		//// TODO: implicitValues? "new Node(null, 5, 8)" -- child, x, y
 		//NewMessage:
-		//	"new" participant=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?;
+		//	sourceParticipant=ID? "creates" targetParticipant=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)?
+		//	")")?;
 		public ParserRule getRule() { return rule; }
 
-		//"new" participant=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
+		//sourceParticipant=ID? "creates" targetParticipant=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
 		public Group getGroup() { return cGroup; }
 
-		//"new"
-		public Keyword getNewKeyword_0() { return cNewKeyword_0; }
-
-		//participant=ID
-		public Assignment getParticipantAssignment_1() { return cParticipantAssignment_1; }
+		//sourceParticipant=ID?
+		public Assignment getSourceParticipantAssignment_0() { return cSourceParticipantAssignment_0; }
 
 		//ID
-		public RuleCall getParticipantIDTerminalRuleCall_1_0() { return cParticipantIDTerminalRuleCall_1_0; }
+		public RuleCall getSourceParticipantIDTerminalRuleCall_0_0() { return cSourceParticipantIDTerminalRuleCall_0_0; }
+
+		//"creates"
+		public Keyword getCreatesKeyword_1() { return cCreatesKeyword_1; }
+
+		//targetParticipant=ID
+		public Assignment getTargetParticipantAssignment_2() { return cTargetParticipantAssignment_2; }
+
+		//ID
+		public RuleCall getTargetParticipantIDTerminalRuleCall_2_0() { return cTargetParticipantIDTerminalRuleCall_2_0; }
 
 		//(=> "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_3() { return cGroup_3; }
 
 		//=> "("
-		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
+		public Keyword getLeftParenthesisKeyword_3_0() { return cLeftParenthesisKeyword_3_0; }
 
 		//(=> parameter+=Parameter ("," parameter+=Parameter)*)?
-		public Group getGroup_2_1() { return cGroup_2_1; }
+		public Group getGroup_3_1() { return cGroup_3_1; }
 
 		//=> parameter+=Parameter
-		public Assignment getParameterAssignment_2_1_0() { return cParameterAssignment_2_1_0; }
+		public Assignment getParameterAssignment_3_1_0() { return cParameterAssignment_3_1_0; }
 
 		//Parameter
-		public RuleCall getParameterParameterParserRuleCall_2_1_0_0() { return cParameterParameterParserRuleCall_2_1_0_0; }
+		public RuleCall getParameterParameterParserRuleCall_3_1_0_0() { return cParameterParameterParserRuleCall_3_1_0_0; }
 
 		//("," parameter+=Parameter)*
-		public Group getGroup_2_1_1() { return cGroup_2_1_1; }
+		public Group getGroup_3_1_1() { return cGroup_3_1_1; }
 
 		//","
-		public Keyword getCommaKeyword_2_1_1_0() { return cCommaKeyword_2_1_1_0; }
+		public Keyword getCommaKeyword_3_1_1_0() { return cCommaKeyword_3_1_1_0; }
 
 		//parameter+=Parameter
-		public Assignment getParameterAssignment_2_1_1_1() { return cParameterAssignment_2_1_1_1; }
+		public Assignment getParameterAssignment_3_1_1_1() { return cParameterAssignment_3_1_1_1; }
 
 		//Parameter
-		public RuleCall getParameterParameterParserRuleCall_2_1_1_1_0() { return cParameterParameterParserRuleCall_2_1_1_1_0; }
+		public RuleCall getParameterParameterParserRuleCall_3_1_1_1_0() { return cParameterParameterParserRuleCall_3_1_1_1_0; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
+		public Keyword getRightParenthesisKeyword_3_2() { return cRightParenthesisKeyword_3_2; }
 	}
 
 	public class ReturnMessageElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ReturnMessage");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cReturnKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cReturnsKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameReferenceParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
@@ -808,14 +752,14 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// e.g.: return childs
 		//ReturnMessage:
-		//	"return " name=Reference ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?;
+		//	"returns" name=Reference ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?;
 		public ParserRule getRule() { return rule; }
 
-		//"return " name=Reference ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
+		//"returns" name=Reference ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
 		public Group getGroup() { return cGroup; }
 
-		//"return "
-		public Keyword getReturnKeyword_0() { return cReturnKeyword_0; }
+		//"returns"
+		public Keyword getReturnsKeyword_0() { return cReturnsKeyword_0; }
 
 		//name=Reference
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -857,65 +801,74 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 	public class DeleteMessageElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DeleteMessage");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cDeleteKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
-		private final Assignment cParameterAssignment_2_1_0 = (Assignment)cGroup_2_1.eContents().get(0);
-		private final RuleCall cParameterParameterParserRuleCall_2_1_0_0 = (RuleCall)cParameterAssignment_2_1_0.eContents().get(0);
-		private final Group cGroup_2_1_1 = (Group)cGroup_2_1.eContents().get(1);
-		private final Keyword cCommaKeyword_2_1_1_0 = (Keyword)cGroup_2_1_1.eContents().get(0);
-		private final Assignment cParameterAssignment_2_1_1_1 = (Assignment)cGroup_2_1_1.eContents().get(1);
-		private final RuleCall cParameterParameterParserRuleCall_2_1_1_1_0 = (RuleCall)cParameterAssignment_2_1_1_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		private final Assignment cSourceParticipantAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cSourceParticipantIDTerminalRuleCall_0_0 = (RuleCall)cSourceParticipantAssignment_0.eContents().get(0);
+		private final Keyword cDestroysKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTargetParticipantAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTargetParticipantIDTerminalRuleCall_2_0 = (RuleCall)cTargetParticipantAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftParenthesisKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
+		private final Assignment cParameterAssignment_3_1_0 = (Assignment)cGroup_3_1.eContents().get(0);
+		private final RuleCall cParameterParameterParserRuleCall_3_1_0_0 = (RuleCall)cParameterAssignment_3_1_0.eContents().get(0);
+		private final Group cGroup_3_1_1 = (Group)cGroup_3_1.eContents().get(1);
+		private final Keyword cCommaKeyword_3_1_1_0 = (Keyword)cGroup_3_1_1.eContents().get(0);
+		private final Assignment cParameterAssignment_3_1_1_1 = (Assignment)cGroup_3_1_1.eContents().get(1);
+		private final RuleCall cParameterParameterParserRuleCall_3_1_1_1_0 = (RuleCall)cParameterAssignment_3_1_1_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		
 		//DeleteMessage:
-		//	"delete " name=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?;
+		//	sourceParticipant=ID? "destroys" targetParticipant=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)?
+		//	")")?;
 		public ParserRule getRule() { return rule; }
 
-		//"delete " name=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
+		//sourceParticipant=ID? "destroys" targetParticipant=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
 		public Group getGroup() { return cGroup; }
 
-		//"delete "
-		public Keyword getDeleteKeyword_0() { return cDeleteKeyword_0; }
-
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		//sourceParticipant=ID?
+		public Assignment getSourceParticipantAssignment_0() { return cSourceParticipantAssignment_0; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		public RuleCall getSourceParticipantIDTerminalRuleCall_0_0() { return cSourceParticipantIDTerminalRuleCall_0_0; }
+
+		//"destroys"
+		public Keyword getDestroysKeyword_1() { return cDestroysKeyword_1; }
+
+		//targetParticipant=ID
+		public Assignment getTargetParticipantAssignment_2() { return cTargetParticipantAssignment_2; }
+
+		//ID
+		public RuleCall getTargetParticipantIDTerminalRuleCall_2_0() { return cTargetParticipantIDTerminalRuleCall_2_0; }
 
 		//(=> "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_3() { return cGroup_3; }
 
 		//=> "("
-		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
+		public Keyword getLeftParenthesisKeyword_3_0() { return cLeftParenthesisKeyword_3_0; }
 
 		//(=> parameter+=Parameter ("," parameter+=Parameter)*)?
-		public Group getGroup_2_1() { return cGroup_2_1; }
+		public Group getGroup_3_1() { return cGroup_3_1; }
 
 		//=> parameter+=Parameter
-		public Assignment getParameterAssignment_2_1_0() { return cParameterAssignment_2_1_0; }
+		public Assignment getParameterAssignment_3_1_0() { return cParameterAssignment_3_1_0; }
 
 		//Parameter
-		public RuleCall getParameterParameterParserRuleCall_2_1_0_0() { return cParameterParameterParserRuleCall_2_1_0_0; }
+		public RuleCall getParameterParameterParserRuleCall_3_1_0_0() { return cParameterParameterParserRuleCall_3_1_0_0; }
 
 		//("," parameter+=Parameter)*
-		public Group getGroup_2_1_1() { return cGroup_2_1_1; }
+		public Group getGroup_3_1_1() { return cGroup_3_1_1; }
 
 		//","
-		public Keyword getCommaKeyword_2_1_1_0() { return cCommaKeyword_2_1_1_0; }
+		public Keyword getCommaKeyword_3_1_1_0() { return cCommaKeyword_3_1_1_0; }
 
 		//parameter+=Parameter
-		public Assignment getParameterAssignment_2_1_1_1() { return cParameterAssignment_2_1_1_1; }
+		public Assignment getParameterAssignment_3_1_1_1() { return cParameterAssignment_3_1_1_1; }
 
 		//Parameter
-		public RuleCall getParameterParameterParserRuleCall_2_1_1_1_0() { return cParameterParameterParserRuleCall_2_1_1_1_0; }
+		public RuleCall getParameterParameterParserRuleCall_3_1_1_1_0() { return cParameterParameterParserRuleCall_3_1_1_1_0; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
+		public Keyword getRightParenthesisKeyword_3_2() { return cRightParenthesisKeyword_3_2; }
 	}
 
 	public class ParameterElements extends AbstractParserRuleElementFinder {
@@ -1096,7 +1049,6 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 	private SequenceElements pSequence;
 	private ParticipantElements pParticipant;
 	private TransitionElements pTransition;
-	private TransitionBlockElements pTransitionBlock;
 	private FragmentElements pFragment;
 	private IfElseFragmentElements pIfElseFragment;
 	private ForeachFragmentElements pForeachFragment;
@@ -1157,7 +1109,8 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Sequence:
-	//	annotation+=Annotation* => "sequence" name=ID participant+=Participant* "end";
+	//	annotation+=Annotation* => "sequence" name=ID participant+=Participant ("," participant+=Participant)*
+	//	transition+=Transition* "end";
 	public SequenceElements getSequenceAccess() {
 		return (pSequence != null) ? pSequence : (pSequence = new SequenceElements());
 	}
@@ -1166,11 +1119,9 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getSequenceAccess().getRule();
 	}
 
-	//// e.g.: Node / *..* / end
+	//// e.g.: Node
 	//Participant:
-	//	annotation+=Annotation* => name=ID //initial transitions
-	//	transition+=Transition* //transition blocks
-	//	block+=TransitionBlock* "end";
+	//	name=ID;
 	public ParticipantElements getParticipantAccess() {
 		return (pParticipant != null) ? pParticipant : (pParticipant = new ParticipantElements());
 	}
@@ -1189,18 +1140,12 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getTransitionAccess().getRule();
 	}
 
-	//// e.g.: def append(child : Node) end
-	//TransitionBlock:
-	//	"def" name=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")? //':'
-	//	transition+=Transition* "end";
-	public TransitionBlockElements getTransitionBlockAccess() {
-		return (pTransitionBlock != null) ? pTransitionBlock : (pTransitionBlock = new TransitionBlockElements());
-	}
-	
-	public ParserRule getTransitionBlockRule() {
-		return getTransitionBlockAccess().getRule();
-	}
-
+	////// e.g.: def append(child : Node) end
+	////TransitionBlock:
+	////    'def' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? //':'
+	////        transition+=Transition*
+	////    'end'
+	////;
 	//Fragment:
 	//	IfElseFragment | ForeachFragment | AssertFragment | LoopFragment | BreakFragment | NextFragment;
 	public FragmentElements getFragmentAccess() {
@@ -1286,7 +1231,8 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 
 	////
 	//Message:
-	//	CallMessage | NewMessage | ReturnMessage | DeleteMessage;
+	//	CallMessage //    | ReturnMessage
+	//	| NewMessage | DeleteMessage;
 	public MessageElements getMessageAccess() {
 		return (pMessage != null) ? pMessage : (pMessage = new MessageElements());
 	}
@@ -1295,9 +1241,10 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getMessageAccess().getRule();
 	}
 
-	//// e.g.: Node.getChild()
+	//// e.g.: Handler calls Node.getChild()
 	//CallMessage:
-	//	(participant=ID ".")? => name=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?;
+	//	sourceParticipant=ID? "calls" (targetParticipant=ID ".")? => name=ID ("(" (=> parameter+=Parameter (","
+	//	parameter+=Parameter)*)? ")")? return=ReturnMessage?;
 	public CallMessageElements getCallMessageAccess() {
 		return (pCallMessage != null) ? pCallMessage : (pCallMessage = new CallMessageElements());
 	}
@@ -1309,7 +1256,8 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 	//// e.g.: new Node
 	//// TODO: implicitValues? "new Node(null, 5, 8)" -- child, x, y
 	//NewMessage:
-	//	"new" participant=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?;
+	//	sourceParticipant=ID? "creates" targetParticipant=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)?
+	//	")")?;
 	public NewMessageElements getNewMessageAccess() {
 		return (pNewMessage != null) ? pNewMessage : (pNewMessage = new NewMessageElements());
 	}
@@ -1320,7 +1268,7 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// e.g.: return childs
 	//ReturnMessage:
-	//	"return " name=Reference ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?;
+	//	"returns" name=Reference ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?;
 	public ReturnMessageElements getReturnMessageAccess() {
 		return (pReturnMessage != null) ? pReturnMessage : (pReturnMessage = new ReturnMessageElements());
 	}
@@ -1330,7 +1278,8 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DeleteMessage:
-	//	"delete " name=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?;
+	//	sourceParticipant=ID? "destroys" targetParticipant=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)?
+	//	")")?;
 	public DeleteMessageElements getDeleteMessageAccess() {
 		return (pDeleteMessage != null) ? pDeleteMessage : (pDeleteMessage = new DeleteMessageElements());
 	}

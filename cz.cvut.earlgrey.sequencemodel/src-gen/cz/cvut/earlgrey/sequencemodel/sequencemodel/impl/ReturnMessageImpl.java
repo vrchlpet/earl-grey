@@ -6,17 +6,26 @@
  */
 package cz.cvut.earlgrey.sequencemodel.sequencemodel.impl;
 
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Parameter;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Reference;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,12 +35,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ReturnMessageImpl#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ReturnMessageImpl#getParameter <em>Parameter</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
+public class ReturnMessageImpl extends MinimalEObjectImpl.Container implements ReturnMessage
 {
   /**
    * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
@@ -42,6 +52,16 @@ public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
    * @ordered
    */
   protected Reference name;
+
+  /**
+   * The cached value of the '{@link #getParameter() <em>Parameter</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getParameter()
+   * @generated
+   * @ordered
+   */
+  protected EList<Parameter> parameter;
 
   /**
    * <!-- begin-user-doc -->
@@ -117,6 +137,20 @@ public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Parameter> getParameter()
+  {
+    if (parameter == null)
+    {
+      parameter = new EObjectContainmentEList<Parameter>(Parameter.class, this, SequencemodelPackage.RETURN_MESSAGE__PARAMETER);
+    }
+    return parameter;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -124,6 +158,8 @@ public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
     {
       case SequencemodelPackage.RETURN_MESSAGE__NAME:
         return basicSetName(null, msgs);
+      case SequencemodelPackage.RETURN_MESSAGE__PARAMETER:
+        return ((InternalEList<?>)getParameter()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -140,6 +176,8 @@ public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
     {
       case SequencemodelPackage.RETURN_MESSAGE__NAME:
         return getName();
+      case SequencemodelPackage.RETURN_MESSAGE__PARAMETER:
+        return getParameter();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -149,6 +187,7 @@ public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -156,6 +195,10 @@ public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
     {
       case SequencemodelPackage.RETURN_MESSAGE__NAME:
         setName((Reference)newValue);
+        return;
+      case SequencemodelPackage.RETURN_MESSAGE__PARAMETER:
+        getParameter().clear();
+        getParameter().addAll((Collection<? extends Parameter>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -174,6 +217,9 @@ public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
       case SequencemodelPackage.RETURN_MESSAGE__NAME:
         setName((Reference)null);
         return;
+      case SequencemodelPackage.RETURN_MESSAGE__PARAMETER:
+        getParameter().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -190,6 +236,8 @@ public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
     {
       case SequencemodelPackage.RETURN_MESSAGE__NAME:
         return name != null;
+      case SequencemodelPackage.RETURN_MESSAGE__PARAMETER:
+        return parameter != null && !parameter.isEmpty();
     }
     return super.eIsSet(featureID);
   }

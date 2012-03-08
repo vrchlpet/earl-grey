@@ -104,11 +104,6 @@ public class SequencemodelAdapterFactory extends AdapterFactoryImpl
         return createTransitionAdapter();
       }
       @Override
-      public Adapter caseTransitionBlock(TransitionBlock object)
-      {
-        return createTransitionBlockAdapter();
-      }
-      @Override
       public Adapter caseFragment(Fragment object)
       {
         return createFragmentAdapter();
@@ -281,21 +276,6 @@ public class SequencemodelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTransitionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.TransitionBlock <em>Transition Block</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.TransitionBlock
-   * @generated
-   */
-  public Adapter createTransitionBlockAdapter()
   {
     return null;
   }

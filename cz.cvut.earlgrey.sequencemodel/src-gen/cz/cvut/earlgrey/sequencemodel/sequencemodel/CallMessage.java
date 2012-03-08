@@ -15,8 +15,8 @@ package cz.cvut.earlgrey.sequencemodel.sequencemodel;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getParticipant <em>Participant</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getReturn <em>Return</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,32 +26,6 @@ package cz.cvut.earlgrey.sequencemodel.sequencemodel;
  */
 public interface CallMessage extends Message
 {
-  /**
-   * Returns the value of the '<em><b>Participant</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Participant</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Participant</em>' attribute.
-   * @see #setParticipant(String)
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getCallMessage_Participant()
-   * @model
-   * @generated
-   */
-  String getParticipant();
-
-  /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getParticipant <em>Participant</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Participant</em>' attribute.
-   * @see #getParticipant()
-   * @generated
-   */
-  void setParticipant(String value);
-
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
@@ -77,5 +51,31 @@ public interface CallMessage extends Message
    * @generated
    */
   void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Return</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Return</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Return</em>' containment reference.
+   * @see #setReturn(ReturnMessage)
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getCallMessage_Return()
+   * @model containment="true"
+   * @generated
+   */
+  ReturnMessage getReturn();
+
+  /**
+   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getReturn <em>Return</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Return</em>' containment reference.
+   * @see #getReturn()
+   * @generated
+   */
+  void setReturn(ReturnMessage value);
 
 } // CallMessage

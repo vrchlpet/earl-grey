@@ -111,13 +111,6 @@ public class SequencemodelSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case SequencemodelPackage.TRANSITION_BLOCK:
-      {
-        TransitionBlock transitionBlock = (TransitionBlock)theEObject;
-        T result = caseTransitionBlock(transitionBlock);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case SequencemodelPackage.FRAGMENT:
       {
         Fragment fragment = (Fragment)theEObject;
@@ -210,8 +203,6 @@ public class SequencemodelSwitch<T> extends Switch<T>
       {
         ReturnMessage returnMessage = (ReturnMessage)theEObject;
         T result = caseReturnMessage(returnMessage);
-        if (result == null) result = caseMessage(returnMessage);
-        if (result == null) result = caseTransition(returnMessage);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -326,22 +317,6 @@ public class SequencemodelSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTransition(Transition object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Transition Block</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Transition Block</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTransitionBlock(TransitionBlock object)
   {
     return null;
   }

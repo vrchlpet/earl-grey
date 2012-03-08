@@ -14,29 +14,27 @@ Import:
 Sequence:
     annotation+=Annotation* =>
     'sequence' name=ID
-        participant+=Participant*
+        participant+=Participant (',' participant+=Participant)*
+        
+        transition+=Transition*
     'end'
 ;
 
-// e.g.: Node /*..*/ end
+// e.g.: Node
 Participant:
-    annotation+=Annotation* =>
     name=ID
-        transition+=Transition* //initial transitions
-        block+=TransitionBlock* //transition blocks
-    'end'
 ;
 
 Transition:
     Message | Fragment
 ;
 
-// e.g.: def append(child : Node) end
-TransitionBlock:
-    'def' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? //':'
-        transition+=Transition*
-    'end'
-;
+//// e.g.: def append(child : Node) end
+//TransitionBlock:
+//    'def' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? //':'
+//        transition+=Transition*
+//    'end'
+//;
 
 Fragment:
     IfElseFragment
@@ -102,28 +100,29 @@ NextFragment:
 Message:
     CallMessage
     | NewMessage
-    | ReturnMessage
+//    | ReturnMessage
     | DeleteMessage
 ;
 
-// e.g.: Node.getChild()
+// e.g.: Handler calls Node.getChild()
 CallMessage:
-    (participant=ID '.')? => name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
+    (sourceParticipant=ID)? 'calls' (targetParticipant=ID '.')? => name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? 
+    return=ReturnMessage?
 ;
 
 // e.g.: new Node
 // TODO: implicitValues? "new Node(null, 5, 8)" -- child, x, y
 NewMessage:
-    'new' participant=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
+    (sourceParticipant=ID)? 'creates' targetParticipant=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
 ;
 
 // e.g.: return childs
 ReturnMessage:
-    'return ' name=Reference (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
+    'returns' name=Reference (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
 ;
 
 DeleteMessage:
-    'delete ' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
+    (sourceParticipant=ID)? 'destroys' targetParticipant=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
 ;
 
 // e.g.: Name : String = "John"

@@ -7,11 +7,14 @@
 package cz.cvut.earlgrey.sequencemodel.sequencemodel.impl;
 
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -22,8 +25,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.CallMessageImpl#getParticipant <em>Participant</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.CallMessageImpl#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.CallMessageImpl#getReturn <em>Return</em>}</li>
  * </ul>
  * </p>
  *
@@ -31,26 +34,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class CallMessageImpl extends MessageImpl implements CallMessage
 {
-  /**
-   * The default value of the '{@link #getParticipant() <em>Participant</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getParticipant()
-   * @generated
-   * @ordered
-   */
-  protected static final String PARTICIPANT_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getParticipant() <em>Participant</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getParticipant()
-   * @generated
-   * @ordered
-   */
-  protected String participant = PARTICIPANT_EDEFAULT;
-
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -72,6 +55,16 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
   protected String name = NAME_EDEFAULT;
 
   /**
+   * The cached value of the '{@link #getReturn() <em>Return</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getReturn()
+   * @generated
+   * @ordered
+   */
+  protected ReturnMessage return_;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -90,29 +83,6 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
   protected EClass eStaticClass()
   {
     return SequencemodelPackage.Literals.CALL_MESSAGE;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getParticipant()
-  {
-    return participant;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setParticipant(String newParticipant)
-  {
-    String oldParticipant = participant;
-    participant = newParticipant;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.CALL_MESSAGE__PARTICIPANT, oldParticipant, participant));
   }
 
   /**
@@ -143,15 +113,79 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
    * <!-- end-user-doc -->
    * @generated
    */
+  public ReturnMessage getReturn()
+  {
+    return return_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetReturn(ReturnMessage newReturn, NotificationChain msgs)
+  {
+    ReturnMessage oldReturn = return_;
+    return_ = newReturn;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SequencemodelPackage.CALL_MESSAGE__RETURN, oldReturn, newReturn);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setReturn(ReturnMessage newReturn)
+  {
+    if (newReturn != return_)
+    {
+      NotificationChain msgs = null;
+      if (return_ != null)
+        msgs = ((InternalEObject)return_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SequencemodelPackage.CALL_MESSAGE__RETURN, null, msgs);
+      if (newReturn != null)
+        msgs = ((InternalEObject)newReturn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SequencemodelPackage.CALL_MESSAGE__RETURN, null, msgs);
+      msgs = basicSetReturn(newReturn, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.CALL_MESSAGE__RETURN, newReturn, newReturn));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case SequencemodelPackage.CALL_MESSAGE__RETURN:
+        return basicSetReturn(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
-      case SequencemodelPackage.CALL_MESSAGE__PARTICIPANT:
-        return getParticipant();
       case SequencemodelPackage.CALL_MESSAGE__NAME:
         return getName();
+      case SequencemodelPackage.CALL_MESSAGE__RETURN:
+        return getReturn();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -166,11 +200,11 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
   {
     switch (featureID)
     {
-      case SequencemodelPackage.CALL_MESSAGE__PARTICIPANT:
-        setParticipant((String)newValue);
-        return;
       case SequencemodelPackage.CALL_MESSAGE__NAME:
         setName((String)newValue);
+        return;
+      case SequencemodelPackage.CALL_MESSAGE__RETURN:
+        setReturn((ReturnMessage)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -186,11 +220,11 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
   {
     switch (featureID)
     {
-      case SequencemodelPackage.CALL_MESSAGE__PARTICIPANT:
-        setParticipant(PARTICIPANT_EDEFAULT);
-        return;
       case SequencemodelPackage.CALL_MESSAGE__NAME:
         setName(NAME_EDEFAULT);
+        return;
+      case SequencemodelPackage.CALL_MESSAGE__RETURN:
+        setReturn((ReturnMessage)null);
         return;
     }
     super.eUnset(featureID);
@@ -206,10 +240,10 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
   {
     switch (featureID)
     {
-      case SequencemodelPackage.CALL_MESSAGE__PARTICIPANT:
-        return PARTICIPANT_EDEFAULT == null ? participant != null : !PARTICIPANT_EDEFAULT.equals(participant);
       case SequencemodelPackage.CALL_MESSAGE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case SequencemodelPackage.CALL_MESSAGE__RETURN:
+        return return_ != null;
     }
     return super.eIsSet(featureID);
   }
@@ -225,9 +259,7 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (participant: ");
-    result.append(participant);
-    result.append(", name: ");
+    result.append(" (name: ");
     result.append(name);
     result.append(')');
     return result.toString();
