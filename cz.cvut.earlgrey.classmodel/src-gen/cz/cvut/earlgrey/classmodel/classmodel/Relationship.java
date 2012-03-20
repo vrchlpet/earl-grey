@@ -18,13 +18,13 @@ package cz.cvut.earlgrey.classmodel.classmodel;
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getType <em>Type</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getLabel <em>Label</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#isHeadNavigable <em>Head Navigable</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadLabel <em>Head Label</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadMultiplicity <em>Head Multiplicity</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHead <em>Head</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadLabel <em>Head Label</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#isTailNavigable <em>Tail Navigable</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailLabel <em>Tail Label</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailMultiplicity <em>Tail Multiplicity</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTail <em>Tail</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailLabel <em>Tail Label</em>}</li>
  * </ul>
  * </p>
  *
@@ -116,6 +116,32 @@ public interface Relationship extends Element
   void setHeadNavigable(boolean value);
 
   /**
+   * Returns the value of the '<em><b>Head Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Head Label</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Head Label</em>' attribute.
+   * @see #setHeadLabel(String)
+   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getRelationship_HeadLabel()
+   * @model
+   * @generated
+   */
+  String getHeadLabel();
+
+  /**
+   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadLabel <em>Head Label</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Head Label</em>' attribute.
+   * @see #getHeadLabel()
+   * @generated
+   */
+  void setHeadLabel(String value);
+
+  /**
    * Returns the value of the '<em><b>Head Multiplicity</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
@@ -168,32 +194,6 @@ public interface Relationship extends Element
   void setHead(String value);
 
   /**
-   * Returns the value of the '<em><b>Head Label</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Head Label</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Head Label</em>' attribute.
-   * @see #setHeadLabel(String)
-   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getRelationship_HeadLabel()
-   * @model
-   * @generated
-   */
-  String getHeadLabel();
-
-  /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadLabel <em>Head Label</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Head Label</em>' attribute.
-   * @see #getHeadLabel()
-   * @generated
-   */
-  void setHeadLabel(String value);
-
-  /**
    * Returns the value of the '<em><b>Tail Navigable</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
@@ -218,6 +218,32 @@ public interface Relationship extends Element
    * @generated
    */
   void setTailNavigable(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Tail Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Tail Label</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Tail Label</em>' attribute.
+   * @see #setTailLabel(String)
+   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getRelationship_TailLabel()
+   * @model
+   * @generated
+   */
+  String getTailLabel();
+
+  /**
+   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailLabel <em>Tail Label</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Tail Label</em>' attribute.
+   * @see #getTailLabel()
+   * @generated
+   */
+  void setTailLabel(String value);
 
   /**
    * Returns the value of the '<em><b>Tail Multiplicity</b></em>' containment reference.
@@ -270,31 +296,5 @@ public interface Relationship extends Element
    * @generated
    */
   void setTail(String value);
-
-  /**
-   * Returns the value of the '<em><b>Tail Label</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Tail Label</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Tail Label</em>' attribute.
-   * @see #setTailLabel(String)
-   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getRelationship_TailLabel()
-   * @model
-   * @generated
-   */
-  String getTailLabel();
-
-  /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailLabel <em>Tail Label</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Tail Label</em>' attribute.
-   * @see #getTailLabel()
-   * @generated
-   */
-  void setTailLabel(String value);
 
 } // Relationship

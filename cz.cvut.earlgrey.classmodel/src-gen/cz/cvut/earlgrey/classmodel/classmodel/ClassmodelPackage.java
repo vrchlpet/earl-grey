@@ -525,13 +525,22 @@ public interface ClassmodelPackage extends EPackage
   int RELATIONSHIP__HEAD_NAVIGABLE = ELEMENT_FEATURE_COUNT + 2;
 
   /**
+   * The feature id for the '<em><b>Head Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONSHIP__HEAD_LABEL = ELEMENT_FEATURE_COUNT + 3;
+
+  /**
    * The feature id for the '<em><b>Head Multiplicity</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RELATIONSHIP__HEAD_MULTIPLICITY = ELEMENT_FEATURE_COUNT + 3;
+  int RELATIONSHIP__HEAD_MULTIPLICITY = ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Head</b></em>' attribute.
@@ -540,16 +549,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RELATIONSHIP__HEAD = ELEMENT_FEATURE_COUNT + 4;
-
-  /**
-   * The feature id for the '<em><b>Head Label</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RELATIONSHIP__HEAD_LABEL = ELEMENT_FEATURE_COUNT + 5;
+  int RELATIONSHIP__HEAD = ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Tail Navigable</b></em>' attribute.
@@ -561,13 +561,22 @@ public interface ClassmodelPackage extends EPackage
   int RELATIONSHIP__TAIL_NAVIGABLE = ELEMENT_FEATURE_COUNT + 6;
 
   /**
+   * The feature id for the '<em><b>Tail Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONSHIP__TAIL_LABEL = ELEMENT_FEATURE_COUNT + 7;
+
+  /**
    * The feature id for the '<em><b>Tail Multiplicity</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RELATIONSHIP__TAIL_MULTIPLICITY = ELEMENT_FEATURE_COUNT + 7;
+  int RELATIONSHIP__TAIL_MULTIPLICITY = ELEMENT_FEATURE_COUNT + 8;
 
   /**
    * The feature id for the '<em><b>Tail</b></em>' attribute.
@@ -576,16 +585,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RELATIONSHIP__TAIL = ELEMENT_FEATURE_COUNT + 8;
-
-  /**
-   * The feature id for the '<em><b>Tail Label</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RELATIONSHIP__TAIL_LABEL = ELEMENT_FEATURE_COUNT + 9;
+  int RELATIONSHIP__TAIL = ELEMENT_FEATURE_COUNT + 9;
 
   /**
    * The number of structural features of the '<em>Relationship</em>' class.
@@ -1377,6 +1377,17 @@ public interface ClassmodelPackage extends EPackage
   EAttribute getRelationship_HeadNavigable();
 
   /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadLabel <em>Head Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Head Label</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadLabel()
+   * @see #getRelationship()
+   * @generated
+   */
+  EAttribute getRelationship_HeadLabel();
+
+  /**
    * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadMultiplicity <em>Head Multiplicity</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1399,17 +1410,6 @@ public interface ClassmodelPackage extends EPackage
   EAttribute getRelationship_Head();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadLabel <em>Head Label</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Head Label</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadLabel()
-   * @see #getRelationship()
-   * @generated
-   */
-  EAttribute getRelationship_HeadLabel();
-
-  /**
    * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#isTailNavigable <em>Tail Navigable</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1419,6 +1419,17 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   EAttribute getRelationship_TailNavigable();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailLabel <em>Tail Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Tail Label</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailLabel()
+   * @see #getRelationship()
+   * @generated
+   */
+  EAttribute getRelationship_TailLabel();
 
   /**
    * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailMultiplicity <em>Tail Multiplicity</em>}'.
@@ -1441,17 +1452,6 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   EAttribute getRelationship_Tail();
-
-  /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailLabel <em>Tail Label</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Tail Label</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailLabel()
-   * @see #getRelationship()
-   * @generated
-   */
-  EAttribute getRelationship_TailLabel();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Multiplicity <em>Multiplicity</em>}'.
@@ -2023,6 +2023,14 @@ public interface ClassmodelPackage extends EPackage
     EAttribute RELATIONSHIP__HEAD_NAVIGABLE = eINSTANCE.getRelationship_HeadNavigable();
 
     /**
+     * The meta object literal for the '<em><b>Head Label</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RELATIONSHIP__HEAD_LABEL = eINSTANCE.getRelationship_HeadLabel();
+
+    /**
      * The meta object literal for the '<em><b>Head Multiplicity</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2039,20 +2047,20 @@ public interface ClassmodelPackage extends EPackage
     EAttribute RELATIONSHIP__HEAD = eINSTANCE.getRelationship_Head();
 
     /**
-     * The meta object literal for the '<em><b>Head Label</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute RELATIONSHIP__HEAD_LABEL = eINSTANCE.getRelationship_HeadLabel();
-
-    /**
      * The meta object literal for the '<em><b>Tail Navigable</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute RELATIONSHIP__TAIL_NAVIGABLE = eINSTANCE.getRelationship_TailNavigable();
+
+    /**
+     * The meta object literal for the '<em><b>Tail Label</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RELATIONSHIP__TAIL_LABEL = eINSTANCE.getRelationship_TailLabel();
 
     /**
      * The meta object literal for the '<em><b>Tail Multiplicity</b></em>' containment reference feature.
@@ -2069,14 +2077,6 @@ public interface ClassmodelPackage extends EPackage
      * @generated
      */
     EAttribute RELATIONSHIP__TAIL = eINSTANCE.getRelationship_Tail();
-
-    /**
-     * The meta object literal for the '<em><b>Tail Label</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute RELATIONSHIP__TAIL_LABEL = eINSTANCE.getRelationship_TailLabel();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.MultiplicityImpl <em>Multiplicity</em>}' class.

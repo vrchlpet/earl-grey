@@ -29,13 +29,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl#getType <em>Type</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl#isHeadNavigable <em>Head Navigable</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl#getHeadLabel <em>Head Label</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl#getHeadMultiplicity <em>Head Multiplicity</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl#getHead <em>Head</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl#getHeadLabel <em>Head Label</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl#isTailNavigable <em>Tail Navigable</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl#getTailLabel <em>Tail Label</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl#getTailMultiplicity <em>Tail Multiplicity</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl#getTail <em>Tail</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl#getTailLabel <em>Tail Label</em>}</li>
  * </ul>
  * </p>
  *
@@ -104,6 +104,26 @@ public class RelationshipImpl extends ElementImpl implements Relationship
   protected boolean headNavigable = HEAD_NAVIGABLE_EDEFAULT;
 
   /**
+   * The default value of the '{@link #getHeadLabel() <em>Head Label</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHeadLabel()
+   * @generated
+   * @ordered
+   */
+  protected static final String HEAD_LABEL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getHeadLabel() <em>Head Label</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHeadLabel()
+   * @generated
+   * @ordered
+   */
+  protected String headLabel = HEAD_LABEL_EDEFAULT;
+
+  /**
    * The cached value of the '{@link #getHeadMultiplicity() <em>Head Multiplicity</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -134,26 +154,6 @@ public class RelationshipImpl extends ElementImpl implements Relationship
   protected String head = HEAD_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getHeadLabel() <em>Head Label</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getHeadLabel()
-   * @generated
-   * @ordered
-   */
-  protected static final String HEAD_LABEL_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getHeadLabel() <em>Head Label</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getHeadLabel()
-   * @generated
-   * @ordered
-   */
-  protected String headLabel = HEAD_LABEL_EDEFAULT;
-
-  /**
    * The default value of the '{@link #isTailNavigable() <em>Tail Navigable</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -172,6 +172,26 @@ public class RelationshipImpl extends ElementImpl implements Relationship
    * @ordered
    */
   protected boolean tailNavigable = TAIL_NAVIGABLE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getTailLabel() <em>Tail Label</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTailLabel()
+   * @generated
+   * @ordered
+   */
+  protected static final String TAIL_LABEL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getTailLabel() <em>Tail Label</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTailLabel()
+   * @generated
+   * @ordered
+   */
+  protected String tailLabel = TAIL_LABEL_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getTailMultiplicity() <em>Tail Multiplicity</em>}' containment reference.
@@ -202,26 +222,6 @@ public class RelationshipImpl extends ElementImpl implements Relationship
    * @ordered
    */
   protected String tail = TAIL_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getTailLabel() <em>Tail Label</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTailLabel()
-   * @generated
-   * @ordered
-   */
-  protected static final String TAIL_LABEL_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getTailLabel() <em>Tail Label</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTailLabel()
-   * @generated
-   * @ordered
-   */
-  protected String tailLabel = TAIL_LABEL_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -318,6 +318,29 @@ public class RelationshipImpl extends ElementImpl implements Relationship
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getHeadLabel()
+  {
+    return headLabel;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setHeadLabel(String newHeadLabel)
+  {
+    String oldHeadLabel = headLabel;
+    headLabel = newHeadLabel;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.RELATIONSHIP__HEAD_LABEL, oldHeadLabel, headLabel));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Multiplicity getHeadMultiplicity()
   {
     return headMultiplicity;
@@ -389,29 +412,6 @@ public class RelationshipImpl extends ElementImpl implements Relationship
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getHeadLabel()
-  {
-    return headLabel;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setHeadLabel(String newHeadLabel)
-  {
-    String oldHeadLabel = headLabel;
-    headLabel = newHeadLabel;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.RELATIONSHIP__HEAD_LABEL, oldHeadLabel, headLabel));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public boolean isTailNavigable()
   {
     return tailNavigable;
@@ -428,6 +428,29 @@ public class RelationshipImpl extends ElementImpl implements Relationship
     tailNavigable = newTailNavigable;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.RELATIONSHIP__TAIL_NAVIGABLE, oldTailNavigable, tailNavigable));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getTailLabel()
+  {
+    return tailLabel;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTailLabel(String newTailLabel)
+  {
+    String oldTailLabel = tailLabel;
+    tailLabel = newTailLabel;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.RELATIONSHIP__TAIL_LABEL, oldTailLabel, tailLabel));
   }
 
   /**
@@ -506,29 +529,6 @@ public class RelationshipImpl extends ElementImpl implements Relationship
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getTailLabel()
-  {
-    return tailLabel;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTailLabel(String newTailLabel)
-  {
-    String oldTailLabel = tailLabel;
-    tailLabel = newTailLabel;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.RELATIONSHIP__TAIL_LABEL, oldTailLabel, tailLabel));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -558,20 +558,20 @@ public class RelationshipImpl extends ElementImpl implements Relationship
         return getLabel();
       case ClassmodelPackage.RELATIONSHIP__HEAD_NAVIGABLE:
         return isHeadNavigable();
+      case ClassmodelPackage.RELATIONSHIP__HEAD_LABEL:
+        return getHeadLabel();
       case ClassmodelPackage.RELATIONSHIP__HEAD_MULTIPLICITY:
         return getHeadMultiplicity();
       case ClassmodelPackage.RELATIONSHIP__HEAD:
         return getHead();
-      case ClassmodelPackage.RELATIONSHIP__HEAD_LABEL:
-        return getHeadLabel();
       case ClassmodelPackage.RELATIONSHIP__TAIL_NAVIGABLE:
         return isTailNavigable();
+      case ClassmodelPackage.RELATIONSHIP__TAIL_LABEL:
+        return getTailLabel();
       case ClassmodelPackage.RELATIONSHIP__TAIL_MULTIPLICITY:
         return getTailMultiplicity();
       case ClassmodelPackage.RELATIONSHIP__TAIL:
         return getTail();
-      case ClassmodelPackage.RELATIONSHIP__TAIL_LABEL:
-        return getTailLabel();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -595,26 +595,26 @@ public class RelationshipImpl extends ElementImpl implements Relationship
       case ClassmodelPackage.RELATIONSHIP__HEAD_NAVIGABLE:
         setHeadNavigable((Boolean)newValue);
         return;
+      case ClassmodelPackage.RELATIONSHIP__HEAD_LABEL:
+        setHeadLabel((String)newValue);
+        return;
       case ClassmodelPackage.RELATIONSHIP__HEAD_MULTIPLICITY:
         setHeadMultiplicity((Multiplicity)newValue);
         return;
       case ClassmodelPackage.RELATIONSHIP__HEAD:
         setHead((String)newValue);
         return;
-      case ClassmodelPackage.RELATIONSHIP__HEAD_LABEL:
-        setHeadLabel((String)newValue);
-        return;
       case ClassmodelPackage.RELATIONSHIP__TAIL_NAVIGABLE:
         setTailNavigable((Boolean)newValue);
+        return;
+      case ClassmodelPackage.RELATIONSHIP__TAIL_LABEL:
+        setTailLabel((String)newValue);
         return;
       case ClassmodelPackage.RELATIONSHIP__TAIL_MULTIPLICITY:
         setTailMultiplicity((Multiplicity)newValue);
         return;
       case ClassmodelPackage.RELATIONSHIP__TAIL:
         setTail((String)newValue);
-        return;
-      case ClassmodelPackage.RELATIONSHIP__TAIL_LABEL:
-        setTailLabel((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -639,26 +639,26 @@ public class RelationshipImpl extends ElementImpl implements Relationship
       case ClassmodelPackage.RELATIONSHIP__HEAD_NAVIGABLE:
         setHeadNavigable(HEAD_NAVIGABLE_EDEFAULT);
         return;
+      case ClassmodelPackage.RELATIONSHIP__HEAD_LABEL:
+        setHeadLabel(HEAD_LABEL_EDEFAULT);
+        return;
       case ClassmodelPackage.RELATIONSHIP__HEAD_MULTIPLICITY:
         setHeadMultiplicity((Multiplicity)null);
         return;
       case ClassmodelPackage.RELATIONSHIP__HEAD:
         setHead(HEAD_EDEFAULT);
         return;
-      case ClassmodelPackage.RELATIONSHIP__HEAD_LABEL:
-        setHeadLabel(HEAD_LABEL_EDEFAULT);
-        return;
       case ClassmodelPackage.RELATIONSHIP__TAIL_NAVIGABLE:
         setTailNavigable(TAIL_NAVIGABLE_EDEFAULT);
+        return;
+      case ClassmodelPackage.RELATIONSHIP__TAIL_LABEL:
+        setTailLabel(TAIL_LABEL_EDEFAULT);
         return;
       case ClassmodelPackage.RELATIONSHIP__TAIL_MULTIPLICITY:
         setTailMultiplicity((Multiplicity)null);
         return;
       case ClassmodelPackage.RELATIONSHIP__TAIL:
         setTail(TAIL_EDEFAULT);
-        return;
-      case ClassmodelPackage.RELATIONSHIP__TAIL_LABEL:
-        setTailLabel(TAIL_LABEL_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -680,20 +680,20 @@ public class RelationshipImpl extends ElementImpl implements Relationship
         return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
       case ClassmodelPackage.RELATIONSHIP__HEAD_NAVIGABLE:
         return headNavigable != HEAD_NAVIGABLE_EDEFAULT;
+      case ClassmodelPackage.RELATIONSHIP__HEAD_LABEL:
+        return HEAD_LABEL_EDEFAULT == null ? headLabel != null : !HEAD_LABEL_EDEFAULT.equals(headLabel);
       case ClassmodelPackage.RELATIONSHIP__HEAD_MULTIPLICITY:
         return headMultiplicity != null;
       case ClassmodelPackage.RELATIONSHIP__HEAD:
         return HEAD_EDEFAULT == null ? head != null : !HEAD_EDEFAULT.equals(head);
-      case ClassmodelPackage.RELATIONSHIP__HEAD_LABEL:
-        return HEAD_LABEL_EDEFAULT == null ? headLabel != null : !HEAD_LABEL_EDEFAULT.equals(headLabel);
       case ClassmodelPackage.RELATIONSHIP__TAIL_NAVIGABLE:
         return tailNavigable != TAIL_NAVIGABLE_EDEFAULT;
+      case ClassmodelPackage.RELATIONSHIP__TAIL_LABEL:
+        return TAIL_LABEL_EDEFAULT == null ? tailLabel != null : !TAIL_LABEL_EDEFAULT.equals(tailLabel);
       case ClassmodelPackage.RELATIONSHIP__TAIL_MULTIPLICITY:
         return tailMultiplicity != null;
       case ClassmodelPackage.RELATIONSHIP__TAIL:
         return TAIL_EDEFAULT == null ? tail != null : !TAIL_EDEFAULT.equals(tail);
-      case ClassmodelPackage.RELATIONSHIP__TAIL_LABEL:
-        return TAIL_LABEL_EDEFAULT == null ? tailLabel != null : !TAIL_LABEL_EDEFAULT.equals(tailLabel);
     }
     return super.eIsSet(featureID);
   }
@@ -715,16 +715,16 @@ public class RelationshipImpl extends ElementImpl implements Relationship
     result.append(label);
     result.append(", headNavigable: ");
     result.append(headNavigable);
-    result.append(", head: ");
-    result.append(head);
     result.append(", headLabel: ");
     result.append(headLabel);
+    result.append(", head: ");
+    result.append(head);
     result.append(", tailNavigable: ");
     result.append(tailNavigable);
-    result.append(", tail: ");
-    result.append(tail);
     result.append(", tailLabel: ");
     result.append(tailLabel);
+    result.append(", tail: ");
+    result.append(tail);
     result.append(')');
     return result.toString();
   }

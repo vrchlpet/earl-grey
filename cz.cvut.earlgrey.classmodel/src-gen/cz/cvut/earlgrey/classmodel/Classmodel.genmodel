@@ -68,13 +68,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/label"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/headNavigable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/headLabel"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Relationship/headMultiplicity"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/head"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/headLabel"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/tailNavigable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/tailLabel"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Relationship/tailMultiplicity"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/tail"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/tailLabel"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Multiplicity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Multiplicity/upper"/>

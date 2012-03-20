@@ -607,9 +607,19 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getRelationship_HeadLabel()
+  {
+    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getRelationship_HeadMultiplicity()
   {
-    return (EReference)relationshipEClass.getEStructuralFeatures().get(3);
+    return (EReference)relationshipEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -618,16 +628,6 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * @generated
    */
   public EAttribute getRelationship_Head()
-  {
-    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRelationship_HeadLabel()
   {
     return (EAttribute)relationshipEClass.getEStructuralFeatures().get(5);
   }
@@ -647,9 +647,19 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getRelationship_TailLabel()
+  {
+    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getRelationship_TailMultiplicity()
   {
-    return (EReference)relationshipEClass.getEStructuralFeatures().get(7);
+    return (EReference)relationshipEClass.getEStructuralFeatures().get(8);
   }
 
   /**
@@ -658,16 +668,6 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * @generated
    */
   public EAttribute getRelationship_Tail()
-  {
-    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(8);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRelationship_TailLabel()
   {
     return (EAttribute)relationshipEClass.getEStructuralFeatures().get(9);
   }
@@ -977,13 +977,13 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     createEAttribute(relationshipEClass, RELATIONSHIP__TYPE);
     createEAttribute(relationshipEClass, RELATIONSHIP__LABEL);
     createEAttribute(relationshipEClass, RELATIONSHIP__HEAD_NAVIGABLE);
+    createEAttribute(relationshipEClass, RELATIONSHIP__HEAD_LABEL);
     createEReference(relationshipEClass, RELATIONSHIP__HEAD_MULTIPLICITY);
     createEAttribute(relationshipEClass, RELATIONSHIP__HEAD);
-    createEAttribute(relationshipEClass, RELATIONSHIP__HEAD_LABEL);
     createEAttribute(relationshipEClass, RELATIONSHIP__TAIL_NAVIGABLE);
+    createEAttribute(relationshipEClass, RELATIONSHIP__TAIL_LABEL);
     createEReference(relationshipEClass, RELATIONSHIP__TAIL_MULTIPLICITY);
     createEAttribute(relationshipEClass, RELATIONSHIP__TAIL);
-    createEAttribute(relationshipEClass, RELATIONSHIP__TAIL_LABEL);
 
     multiplicityEClass = createEClass(MULTIPLICITY);
     createEAttribute(multiplicityEClass, MULTIPLICITY__UPPER);
@@ -1106,13 +1106,13 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     initEAttribute(getRelationship_Type(), this.getRelationshipType(), "type", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRelationship_Label(), ecorePackage.getEString(), "label", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRelationship_HeadNavigable(), ecorePackage.getEBoolean(), "headNavigable", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRelationship_HeadLabel(), ecorePackage.getEString(), "headLabel", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRelationship_HeadMultiplicity(), this.getMultiplicity(), null, "headMultiplicity", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRelationship_Head(), ecorePackage.getEString(), "head", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRelationship_HeadLabel(), ecorePackage.getEString(), "headLabel", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRelationship_TailNavigable(), ecorePackage.getEBoolean(), "tailNavigable", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRelationship_TailLabel(), ecorePackage.getEString(), "tailLabel", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRelationship_TailMultiplicity(), this.getMultiplicity(), null, "tailMultiplicity", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRelationship_Tail(), ecorePackage.getEString(), "tail", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRelationship_TailLabel(), ecorePackage.getEString(), "tailLabel", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(multiplicityEClass, Multiplicity.class, "Multiplicity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMultiplicity_Upper(), ecorePackage.getEString(), "upper", null, 0, 1, Multiplicity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

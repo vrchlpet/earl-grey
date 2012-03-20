@@ -196,31 +196,37 @@
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.21"/>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="label" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.15"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.7"/>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="headNavigable" operator="?=">
-          <terminal xsi:type="xtext:Keyword" value="navigable"/>
+          <terminal xsi:type="xtext:Keyword" value="role"/>
         </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="headMultiplicity" operator="=">
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Assignment" feature="headLabel" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.7"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=":"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="headMultiplicity" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="head" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.5"/>
         </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="headLabel" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.15"/>
-        </elements>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="tailNavigable" operator="?=">
-          <terminal xsi:type="xtext:Keyword" value="navigable"/>
+          <terminal xsi:type="xtext:Keyword" value="role"/>
         </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="tailMultiplicity" operator="=">
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Assignment" feature="tailLabel" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.7"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=":"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="tailMultiplicity" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="tail" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.5"/>
-        </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="tailLabel" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.15"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="end"/>
       </alternatives>

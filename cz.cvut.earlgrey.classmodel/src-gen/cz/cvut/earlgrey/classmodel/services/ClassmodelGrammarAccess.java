@@ -456,35 +456,39 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cTypeRelationshipTypeEnumRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
 		private final Assignment cLabelAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cLabelSTRINGTerminalRuleCall_2_0 = (RuleCall)cLabelAssignment_2.eContents().get(0);
+		private final RuleCall cLabelCompositeIDParserRuleCall_2_0 = (RuleCall)cLabelAssignment_2.eContents().get(0);
 		private final Assignment cHeadNavigableAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final Keyword cHeadNavigableNavigableKeyword_3_0 = (Keyword)cHeadNavigableAssignment_3.eContents().get(0);
-		private final Assignment cHeadMultiplicityAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cHeadMultiplicityMultiplicityParserRuleCall_4_0 = (RuleCall)cHeadMultiplicityAssignment_4.eContents().get(0);
-		private final Assignment cHeadAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cHeadExtendedIDParserRuleCall_5_0 = (RuleCall)cHeadAssignment_5.eContents().get(0);
-		private final Assignment cHeadLabelAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cHeadLabelSTRINGTerminalRuleCall_6_0 = (RuleCall)cHeadLabelAssignment_6.eContents().get(0);
+		private final Keyword cHeadNavigableRoleKeyword_3_0 = (Keyword)cHeadNavigableAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Assignment cHeadLabelAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
+		private final RuleCall cHeadLabelCompositeIDParserRuleCall_4_0_0 = (RuleCall)cHeadLabelAssignment_4_0.eContents().get(0);
+		private final Keyword cColonKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
+		private final Assignment cHeadMultiplicityAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cHeadMultiplicityMultiplicityParserRuleCall_5_0 = (RuleCall)cHeadMultiplicityAssignment_5.eContents().get(0);
+		private final Assignment cHeadAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cHeadExtendedIDParserRuleCall_6_0 = (RuleCall)cHeadAssignment_6.eContents().get(0);
 		private final Assignment cTailNavigableAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final Keyword cTailNavigableNavigableKeyword_7_0 = (Keyword)cTailNavigableAssignment_7.eContents().get(0);
-		private final Assignment cTailMultiplicityAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cTailMultiplicityMultiplicityParserRuleCall_8_0 = (RuleCall)cTailMultiplicityAssignment_8.eContents().get(0);
-		private final Assignment cTailAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cTailExtendedIDParserRuleCall_9_0 = (RuleCall)cTailAssignment_9.eContents().get(0);
-		private final Assignment cTailLabelAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cTailLabelSTRINGTerminalRuleCall_10_0 = (RuleCall)cTailLabelAssignment_10.eContents().get(0);
+		private final Keyword cTailNavigableRoleKeyword_7_0 = (Keyword)cTailNavigableAssignment_7.eContents().get(0);
+		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
+		private final Assignment cTailLabelAssignment_8_0 = (Assignment)cGroup_8.eContents().get(0);
+		private final RuleCall cTailLabelCompositeIDParserRuleCall_8_0_0 = (RuleCall)cTailLabelAssignment_8_0.eContents().get(0);
+		private final Keyword cColonKeyword_8_1 = (Keyword)cGroup_8.eContents().get(1);
+		private final Assignment cTailMultiplicityAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cTailMultiplicityMultiplicityParserRuleCall_9_0 = (RuleCall)cTailMultiplicityAssignment_9.eContents().get(0);
+		private final Assignment cTailAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cTailExtendedIDParserRuleCall_10_0 = (RuleCall)cTailAssignment_10.eContents().get(0);
 		private final Keyword cEndKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//// e.g.: composition 0..1 Tree 0..* Leaf end
 		//Relationship:
-		//	annotation+=Annotation* => type=RelationshipType label=STRING? headNavigable?="navigable"?
-		//	headMultiplicity=Multiplicity? head=ExtendedID / *':'* / headLabel=STRING? tailNavigable?="navigable"?
-		//	tailMultiplicity=Multiplicity? tail=ExtendedID / *':'* / tailLabel=STRING? "end";
+		//	annotation+=Annotation* => type=RelationshipType label=CompositeID? headNavigable?="role"? (headLabel=CompositeID
+		//	":")? headMultiplicity=Multiplicity head=ExtendedID tailNavigable?="role"? (tailLabel=CompositeID ":")?
+		//	tailMultiplicity=Multiplicity tail=ExtendedID "end";
 		public ParserRule getRule() { return rule; }
 
-		//annotation+=Annotation* => type=RelationshipType label=STRING? headNavigable?="navigable"?
-		//headMultiplicity=Multiplicity? head=ExtendedID / *':'* / headLabel=STRING? tailNavigable?="navigable"?
-		//tailMultiplicity=Multiplicity? tail=ExtendedID / *':'* / tailLabel=STRING? "end"
+		//annotation+=Annotation* => type=RelationshipType label=CompositeID? headNavigable?="role"? (headLabel=CompositeID ":")?
+		//headMultiplicity=Multiplicity head=ExtendedID tailNavigable?="role"? (tailLabel=CompositeID ":")?
+		//tailMultiplicity=Multiplicity tail=ExtendedID "end"
 		public Group getGroup() { return cGroup; }
 
 		//annotation+=Annotation*
@@ -499,59 +503,71 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		//RelationshipType
 		public RuleCall getTypeRelationshipTypeEnumRuleCall_1_0() { return cTypeRelationshipTypeEnumRuleCall_1_0; }
 
-		//label=STRING?
+		//label=CompositeID?
 		public Assignment getLabelAssignment_2() { return cLabelAssignment_2; }
 
-		//STRING
-		public RuleCall getLabelSTRINGTerminalRuleCall_2_0() { return cLabelSTRINGTerminalRuleCall_2_0; }
+		//CompositeID
+		public RuleCall getLabelCompositeIDParserRuleCall_2_0() { return cLabelCompositeIDParserRuleCall_2_0; }
 
-		//headNavigable?="navigable"?
+		//headNavigable?="role"?
 		public Assignment getHeadNavigableAssignment_3() { return cHeadNavigableAssignment_3; }
 
-		//"navigable"
-		public Keyword getHeadNavigableNavigableKeyword_3_0() { return cHeadNavigableNavigableKeyword_3_0; }
+		//"role"
+		public Keyword getHeadNavigableRoleKeyword_3_0() { return cHeadNavigableRoleKeyword_3_0; }
 
-		//headMultiplicity=Multiplicity?
-		public Assignment getHeadMultiplicityAssignment_4() { return cHeadMultiplicityAssignment_4; }
+		//(headLabel=CompositeID ":")?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//headLabel=CompositeID
+		public Assignment getHeadLabelAssignment_4_0() { return cHeadLabelAssignment_4_0; }
+
+		//CompositeID
+		public RuleCall getHeadLabelCompositeIDParserRuleCall_4_0_0() { return cHeadLabelCompositeIDParserRuleCall_4_0_0; }
+
+		//":"
+		public Keyword getColonKeyword_4_1() { return cColonKeyword_4_1; }
+
+		//headMultiplicity=Multiplicity
+		public Assignment getHeadMultiplicityAssignment_5() { return cHeadMultiplicityAssignment_5; }
 
 		//Multiplicity
-		public RuleCall getHeadMultiplicityMultiplicityParserRuleCall_4_0() { return cHeadMultiplicityMultiplicityParserRuleCall_4_0; }
+		public RuleCall getHeadMultiplicityMultiplicityParserRuleCall_5_0() { return cHeadMultiplicityMultiplicityParserRuleCall_5_0; }
 
 		//head=ExtendedID
-		public Assignment getHeadAssignment_5() { return cHeadAssignment_5; }
+		public Assignment getHeadAssignment_6() { return cHeadAssignment_6; }
 
 		//ExtendedID
-		public RuleCall getHeadExtendedIDParserRuleCall_5_0() { return cHeadExtendedIDParserRuleCall_5_0; }
+		public RuleCall getHeadExtendedIDParserRuleCall_6_0() { return cHeadExtendedIDParserRuleCall_6_0; }
 
-		/// *':'* / headLabel=STRING?
-		public Assignment getHeadLabelAssignment_6() { return cHeadLabelAssignment_6; }
-
-		//STRING
-		public RuleCall getHeadLabelSTRINGTerminalRuleCall_6_0() { return cHeadLabelSTRINGTerminalRuleCall_6_0; }
-
-		//tailNavigable?="navigable"?
+		//tailNavigable?="role"?
 		public Assignment getTailNavigableAssignment_7() { return cTailNavigableAssignment_7; }
 
-		//"navigable"
-		public Keyword getTailNavigableNavigableKeyword_7_0() { return cTailNavigableNavigableKeyword_7_0; }
+		//"role"
+		public Keyword getTailNavigableRoleKeyword_7_0() { return cTailNavigableRoleKeyword_7_0; }
 
-		//tailMultiplicity=Multiplicity?
-		public Assignment getTailMultiplicityAssignment_8() { return cTailMultiplicityAssignment_8; }
+		//(tailLabel=CompositeID ":")?
+		public Group getGroup_8() { return cGroup_8; }
+
+		//tailLabel=CompositeID
+		public Assignment getTailLabelAssignment_8_0() { return cTailLabelAssignment_8_0; }
+
+		//CompositeID
+		public RuleCall getTailLabelCompositeIDParserRuleCall_8_0_0() { return cTailLabelCompositeIDParserRuleCall_8_0_0; }
+
+		//":"
+		public Keyword getColonKeyword_8_1() { return cColonKeyword_8_1; }
+
+		//tailMultiplicity=Multiplicity
+		public Assignment getTailMultiplicityAssignment_9() { return cTailMultiplicityAssignment_9; }
 
 		//Multiplicity
-		public RuleCall getTailMultiplicityMultiplicityParserRuleCall_8_0() { return cTailMultiplicityMultiplicityParserRuleCall_8_0; }
+		public RuleCall getTailMultiplicityMultiplicityParserRuleCall_9_0() { return cTailMultiplicityMultiplicityParserRuleCall_9_0; }
 
 		//tail=ExtendedID
-		public Assignment getTailAssignment_9() { return cTailAssignment_9; }
+		public Assignment getTailAssignment_10() { return cTailAssignment_10; }
 
 		//ExtendedID
-		public RuleCall getTailExtendedIDParserRuleCall_9_0() { return cTailExtendedIDParserRuleCall_9_0; }
-
-		/// *':'* / tailLabel=STRING?
-		public Assignment getTailLabelAssignment_10() { return cTailLabelAssignment_10; }
-
-		//STRING
-		public RuleCall getTailLabelSTRINGTerminalRuleCall_10_0() { return cTailLabelSTRINGTerminalRuleCall_10_0; }
+		public RuleCall getTailExtendedIDParserRuleCall_10_0() { return cTailExtendedIDParserRuleCall_10_0; }
 
 		//"end"
 		public Keyword getEndKeyword_11() { return cEndKeyword_11; }
@@ -1281,9 +1297,9 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// e.g.: composition 0..1 Tree 0..* Leaf end
 	//Relationship:
-	//	annotation+=Annotation* => type=RelationshipType label=STRING? headNavigable?="navigable"?
-	//	headMultiplicity=Multiplicity? head=ExtendedID / *':'* / headLabel=STRING? tailNavigable?="navigable"?
-	//	tailMultiplicity=Multiplicity? tail=ExtendedID / *':'* / tailLabel=STRING? "end";
+	//	annotation+=Annotation* => type=RelationshipType label=CompositeID? headNavigable?="role"? (headLabel=CompositeID
+	//	":")? headMultiplicity=Multiplicity head=ExtendedID tailNavigable?="role"? (tailLabel=CompositeID ":")?
+	//	tailMultiplicity=Multiplicity tail=ExtendedID "end";
 	public RelationshipElements getRelationshipAccess() {
 		return (pRelationship != null) ? pRelationship : (pRelationship = new RelationshipElements());
 	}

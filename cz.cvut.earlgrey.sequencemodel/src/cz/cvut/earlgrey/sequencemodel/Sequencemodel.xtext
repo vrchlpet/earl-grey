@@ -131,6 +131,7 @@ DeleteMessage:
     sourceParticipant=ID 'destroys' targetParticipant=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
 ;
 
+//TODO: rewrite this rule, do we really need begin-end?
 SelfMessage:
     sourceParticipant=ID 'self' '.' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? return=ReturnMessage?
     (=>  'begin'

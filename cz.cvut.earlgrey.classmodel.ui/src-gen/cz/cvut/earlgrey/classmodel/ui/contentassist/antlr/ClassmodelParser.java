@@ -61,6 +61,8 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getEnumeratorAccess().getGroup(), "rule__Enumerator__Group__0");
 					put(grammarAccess.getEnumeratorAccess().getGroup_1(), "rule__Enumerator__Group_1__0");
 					put(grammarAccess.getRelationshipAccess().getGroup(), "rule__Relationship__Group__0");
+					put(grammarAccess.getRelationshipAccess().getGroup_4(), "rule__Relationship__Group_4__0");
+					put(grammarAccess.getRelationshipAccess().getGroup_8(), "rule__Relationship__Group_8__0");
 					put(grammarAccess.getMultiplicityAccess().getGroup(), "rule__Multiplicity__Group__0");
 					put(grammarAccess.getMultiplicityAccess().getGroup_1(), "rule__Multiplicity__Group_1__0");
 					put(grammarAccess.getConstantAccess().getGroup(), "rule__Constant__Group__0");
@@ -114,13 +116,13 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRelationshipAccess().getTypeAssignment_1(), "rule__Relationship__TypeAssignment_1");
 					put(grammarAccess.getRelationshipAccess().getLabelAssignment_2(), "rule__Relationship__LabelAssignment_2");
 					put(grammarAccess.getRelationshipAccess().getHeadNavigableAssignment_3(), "rule__Relationship__HeadNavigableAssignment_3");
-					put(grammarAccess.getRelationshipAccess().getHeadMultiplicityAssignment_4(), "rule__Relationship__HeadMultiplicityAssignment_4");
-					put(grammarAccess.getRelationshipAccess().getHeadAssignment_5(), "rule__Relationship__HeadAssignment_5");
-					put(grammarAccess.getRelationshipAccess().getHeadLabelAssignment_6(), "rule__Relationship__HeadLabelAssignment_6");
+					put(grammarAccess.getRelationshipAccess().getHeadLabelAssignment_4_0(), "rule__Relationship__HeadLabelAssignment_4_0");
+					put(grammarAccess.getRelationshipAccess().getHeadMultiplicityAssignment_5(), "rule__Relationship__HeadMultiplicityAssignment_5");
+					put(grammarAccess.getRelationshipAccess().getHeadAssignment_6(), "rule__Relationship__HeadAssignment_6");
 					put(grammarAccess.getRelationshipAccess().getTailNavigableAssignment_7(), "rule__Relationship__TailNavigableAssignment_7");
-					put(grammarAccess.getRelationshipAccess().getTailMultiplicityAssignment_8(), "rule__Relationship__TailMultiplicityAssignment_8");
-					put(grammarAccess.getRelationshipAccess().getTailAssignment_9(), "rule__Relationship__TailAssignment_9");
-					put(grammarAccess.getRelationshipAccess().getTailLabelAssignment_10(), "rule__Relationship__TailLabelAssignment_10");
+					put(grammarAccess.getRelationshipAccess().getTailLabelAssignment_8_0(), "rule__Relationship__TailLabelAssignment_8_0");
+					put(grammarAccess.getRelationshipAccess().getTailMultiplicityAssignment_9(), "rule__Relationship__TailMultiplicityAssignment_9");
+					put(grammarAccess.getRelationshipAccess().getTailAssignment_10(), "rule__Relationship__TailAssignment_10");
 					put(grammarAccess.getMultiplicityAccess().getUpperAssignment_0(), "rule__Multiplicity__UpperAssignment_0");
 					put(grammarAccess.getMultiplicityAccess().getLowerAssignment_1_1(), "rule__Multiplicity__LowerAssignment_1_1");
 					put(grammarAccess.getConstantAccess().getVisibilityAssignment_0(), "rule__Constant__VisibilityAssignment_0");

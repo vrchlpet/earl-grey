@@ -75,9 +75,9 @@ Enumerator returns Feature:
 // e.g.: composition 0..1 Tree 0..* Leaf end
 Relationship:
     annotation+=Annotation* =>
-    type=RelationshipType (label=STRING)?
-        (headNavigable?='navigable')? (headMultiplicity=Multiplicity)? head=ExtendedID (/*':'*/ headLabel=STRING)?
-        (tailNavigable?='navigable')? (tailMultiplicity=Multiplicity)? tail=ExtendedID (/*':'*/ tailLabel=STRING)?
+    type=RelationshipType (label=CompositeID)?
+        (headNavigable?='role')? (headLabel=CompositeID ':')? headMultiplicity=Multiplicity head=ExtendedID
+        (tailNavigable?='role')? (tailLabel=CompositeID ':')? tailMultiplicity=Multiplicity tail=ExtendedID
     'end'
 ;
 

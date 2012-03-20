@@ -424,15 +424,15 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	 *     (
 	 *         annotation+=Annotation* 
 	 *         type=RelationshipType 
-	 *         label=STRING? 
-	 *         headNavigable?='navigable'? 
-	 *         headMultiplicity=Multiplicity? 
+	 *         label=CompositeID? 
+	 *         headNavigable?='role'? 
+	 *         headLabel=CompositeID? 
+	 *         headMultiplicity=Multiplicity 
 	 *         head=ExtendedID 
-	 *         headLabel=STRING? 
-	 *         tailNavigable?='navigable'? 
-	 *         tailMultiplicity=Multiplicity? 
-	 *         tail=ExtendedID 
-	 *         tailLabel=STRING?
+	 *         tailNavigable?='role'? 
+	 *         tailLabel=CompositeID? 
+	 *         tailMultiplicity=Multiplicity 
+	 *         tail=ExtendedID
 	 *     )
 	 */
 	protected void sequence_Relationship(EObject context, Relationship semanticObject) {
