@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="cz.cvut.earlgrey.plugin.category.wizards"
+            name="Earl Grey Wizards">
+      </category>
+      <wizard
+            category="cz.cvut.earlgrey.classmodel.ui"
+            class="cz.cvut.earlgrey.plugin.wizards.EearlGreyProjectNewWizard"
+            icon="icons/eg-icon.gif"
+            id="cz.cvut.earlgrey.plugin.wizard.new.custom"
+            name="Earl Grey Project">
+      </wizard>
+   </extension>
+   <extension
+         id="cz.cvut.earlgrey.plugin.natures.projectNature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="cz.cvut.earlgrey.plugin.natures.ProjectNature">
+         </run>
+      </runtime>
+   </extension>
+
+</plugin>
