@@ -3155,9 +3155,9 @@ rule__Multiplicity__Group__0__Impl
     }
 :
 (
-{ before(grammarAccess.getMultiplicityAccess().getUpperAssignment_0()); }
-(rule__Multiplicity__UpperAssignment_0)
-{ after(grammarAccess.getMultiplicityAccess().getUpperAssignment_0()); }
+{ before(grammarAccess.getMultiplicityAccess().getLowerAssignment_0()); }
+(rule__Multiplicity__LowerAssignment_0)
+{ after(grammarAccess.getMultiplicityAccess().getLowerAssignment_0()); }
 )
 
 ;
@@ -3246,9 +3246,9 @@ rule__Multiplicity__Group_1__1__Impl
     }
 :
 (
-{ before(grammarAccess.getMultiplicityAccess().getLowerAssignment_1_1()); }
-(rule__Multiplicity__LowerAssignment_1_1)
-{ after(grammarAccess.getMultiplicityAccess().getLowerAssignment_1_1()); }
+{ before(grammarAccess.getMultiplicityAccess().getUpperAssignment_1_1()); }
+(rule__Multiplicity__UpperAssignment_1_1)
+{ after(grammarAccess.getMultiplicityAccess().getUpperAssignment_1_1()); }
 )
 
 ;
@@ -6076,14 +6076,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Multiplicity__UpperAssignment_0
+rule__Multiplicity__LowerAssignment_0
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getMultiplicityAccess().getUpperMultiplicityValueParserRuleCall_0_0()); }
-	ruleMultiplicityValue{ after(grammarAccess.getMultiplicityAccess().getUpperMultiplicityValueParserRuleCall_0_0()); }
+{ before(grammarAccess.getMultiplicityAccess().getLowerMultiplicityValueParserRuleCall_0_0()); }
+	ruleMultiplicityValue{ after(grammarAccess.getMultiplicityAccess().getLowerMultiplicityValueParserRuleCall_0_0()); }
 )
 
 ;
@@ -6091,14 +6091,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Multiplicity__LowerAssignment_1_1
+rule__Multiplicity__UpperAssignment_1_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getMultiplicityAccess().getLowerMultiplicityValueParserRuleCall_1_1_0()); }
-	ruleMultiplicityValue{ after(grammarAccess.getMultiplicityAccess().getLowerMultiplicityValueParserRuleCall_1_1_0()); }
+{ before(grammarAccess.getMultiplicityAccess().getUpperMultiplicityValueParserRuleCall_1_1_0()); }
+	ruleMultiplicityValue{ after(grammarAccess.getMultiplicityAccess().getUpperMultiplicityValueParserRuleCall_1_1_0()); }
 )
 
 ;

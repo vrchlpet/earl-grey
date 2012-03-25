@@ -677,7 +677,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMultiplicity_Upper()
+  public EAttribute getMultiplicity_Lower()
   {
     return (EAttribute)multiplicityEClass.getEStructuralFeatures().get(0);
   }
@@ -687,7 +687,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMultiplicity_Lower()
+  public EAttribute getMultiplicity_Upper()
   {
     return (EAttribute)multiplicityEClass.getEStructuralFeatures().get(1);
   }
@@ -975,8 +975,8 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     createEReference(relationshipEClass, RELATIONSHIP__TAIL_MULTIPLICITY);
 
     multiplicityEClass = createEClass(MULTIPLICITY);
-    createEAttribute(multiplicityEClass, MULTIPLICITY__UPPER);
     createEAttribute(multiplicityEClass, MULTIPLICITY__LOWER);
+    createEAttribute(multiplicityEClass, MULTIPLICITY__UPPER);
 
     constantEClass = createEClass(CONSTANT);
 
@@ -1104,8 +1104,8 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     initEReference(getRelationship_TailMultiplicity(), this.getMultiplicity(), null, "tailMultiplicity", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(multiplicityEClass, Multiplicity.class, "Multiplicity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMultiplicity_Upper(), ecorePackage.getEString(), "upper", null, 0, 1, Multiplicity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMultiplicity_Lower(), ecorePackage.getEString(), "lower", null, 0, 1, Multiplicity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMultiplicity_Upper(), ecorePackage.getEString(), "upper", null, 0, 1, Multiplicity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(constantEClass, Constant.class, "Constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

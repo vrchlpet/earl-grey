@@ -625,38 +625,38 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	public class MultiplicityElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Multiplicity");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cUpperAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cUpperMultiplicityValueParserRuleCall_0_0 = (RuleCall)cUpperAssignment_0.eContents().get(0);
+		private final Assignment cLowerAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cLowerMultiplicityValueParserRuleCall_0_0 = (RuleCall)cLowerAssignment_0.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cFullStopFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cLowerAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cLowerMultiplicityValueParserRuleCall_1_1_0 = (RuleCall)cLowerAssignment_1_1.eContents().get(0);
+		private final Assignment cUpperAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cUpperMultiplicityValueParserRuleCall_1_1_0 = (RuleCall)cUpperAssignment_1_1.eContents().get(0);
 		
 		//// e.g.: 0..1
 		//Multiplicity:
-		//	upper=MultiplicityValue (".." lower=MultiplicityValue)?;
+		//	lower=MultiplicityValue (".." upper=MultiplicityValue)?;
 		public ParserRule getRule() { return rule; }
 
-		//upper=MultiplicityValue (".." lower=MultiplicityValue)?
+		//lower=MultiplicityValue (".." upper=MultiplicityValue)?
 		public Group getGroup() { return cGroup; }
 
-		//upper=MultiplicityValue
-		public Assignment getUpperAssignment_0() { return cUpperAssignment_0; }
+		//lower=MultiplicityValue
+		public Assignment getLowerAssignment_0() { return cLowerAssignment_0; }
 
 		//MultiplicityValue
-		public RuleCall getUpperMultiplicityValueParserRuleCall_0_0() { return cUpperMultiplicityValueParserRuleCall_0_0; }
+		public RuleCall getLowerMultiplicityValueParserRuleCall_0_0() { return cLowerMultiplicityValueParserRuleCall_0_0; }
 
-		//(=> ".." lower=MultiplicityValue)?
+		//(=> ".." upper=MultiplicityValue)?
 		public Group getGroup_1() { return cGroup_1; }
 
 		//=> ".."
 		public Keyword getFullStopFullStopKeyword_1_0() { return cFullStopFullStopKeyword_1_0; }
 
-		//lower=MultiplicityValue
-		public Assignment getLowerAssignment_1_1() { return cLowerAssignment_1_1; }
+		//upper=MultiplicityValue
+		public Assignment getUpperAssignment_1_1() { return cUpperAssignment_1_1; }
 
 		//MultiplicityValue
-		public RuleCall getLowerMultiplicityValueParserRuleCall_1_1_0() { return cLowerMultiplicityValueParserRuleCall_1_1_0; }
+		public RuleCall getUpperMultiplicityValueParserRuleCall_1_1_0() { return cUpperMultiplicityValueParserRuleCall_1_1_0; }
 	}
 
 	public class MultiplicityValueElements extends AbstractParserRuleElementFinder {
@@ -1367,7 +1367,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// e.g.: 0..1
 	//Multiplicity:
-	//	upper=MultiplicityValue (".." lower=MultiplicityValue)?;
+	//	lower=MultiplicityValue (".." upper=MultiplicityValue)?;
 	public MultiplicityElements getMultiplicityAccess() {
 		return (pMultiplicity != null) ? pMultiplicity : (pMultiplicity = new MultiplicityElements());
 	}

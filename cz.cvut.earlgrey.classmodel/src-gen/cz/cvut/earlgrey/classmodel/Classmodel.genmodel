@@ -75,8 +75,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Relationship/tailMultiplicity"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Multiplicity">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Multiplicity/upper"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Multiplicity/lower"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Multiplicity/upper"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Constant"/>
     <genClasses ecoreClass="Classmodel.ecore#//Operation">

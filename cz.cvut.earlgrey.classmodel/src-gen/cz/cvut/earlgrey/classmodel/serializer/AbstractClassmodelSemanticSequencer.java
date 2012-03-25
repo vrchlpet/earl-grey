@@ -356,7 +356,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (upper=MultiplicityValue lower=MultiplicityValue?)
+	 *     (lower=MultiplicityValue upper=MultiplicityValue?)
 	 */
 	protected void sequence_Multiplicity(EObject context, Multiplicity semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

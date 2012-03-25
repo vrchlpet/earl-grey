@@ -1153,16 +1153,16 @@ ruleMultiplicity returns [EObject current=null]
 ((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMultiplicityAccess().getUpperMultiplicityValueParserRuleCall_0_0()); 
+	        newCompositeNode(grammarAccess.getMultiplicityAccess().getLowerMultiplicityValueParserRuleCall_0_0()); 
 	    }
-		lv_upper_0_0=ruleMultiplicityValue		{
+		lv_lower_0_0=ruleMultiplicityValue		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMultiplicityRule());
 	        }
        		set(
        			$current, 
-       			"upper",
-        		lv_upper_0_0, 
+       			"lower",
+        		lv_lower_0_0, 
         		"MultiplicityValue");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -1176,16 +1176,16 @@ ruleMultiplicity returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMultiplicityAccess().getLowerMultiplicityValueParserRuleCall_1_1_0()); 
+	        newCompositeNode(grammarAccess.getMultiplicityAccess().getUpperMultiplicityValueParserRuleCall_1_1_0()); 
 	    }
-		lv_lower_2_0=ruleMultiplicityValue		{
+		lv_upper_2_0=ruleMultiplicityValue		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMultiplicityRule());
 	        }
        		set(
        			$current, 
-       			"lower",
-        		lv_lower_2_0, 
+       			"upper",
+        		lv_upper_2_0, 
         		"MultiplicityValue");
 	        afterParserOrEnumRuleCall();
 	    }

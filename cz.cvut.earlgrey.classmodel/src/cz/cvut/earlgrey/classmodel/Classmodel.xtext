@@ -89,7 +89,7 @@ Relationship:
 
 // e.g.: 0..1
 Multiplicity:
-    upper=MultiplicityValue (=> '..' lower=MultiplicityValue)?
+    lower=MultiplicityValue (=> '..' upper=MultiplicityValue)?
 ;
 
 MultiplicityValue returns ecore::EString:

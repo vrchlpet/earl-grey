@@ -634,22 +634,22 @@ public interface ClassmodelPackage extends EPackage
   int MULTIPLICITY = 11;
 
   /**
-   * The feature id for the '<em><b>Upper</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MULTIPLICITY__UPPER = 0;
-
-  /**
    * The feature id for the '<em><b>Lower</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MULTIPLICITY__LOWER = 1;
+  int MULTIPLICITY__LOWER = 0;
+
+  /**
+   * The feature id for the '<em><b>Upper</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICITY__UPPER = 1;
 
   /**
    * The number of structural features of the '<em>Multiplicity</em>' class.
@@ -1480,17 +1480,6 @@ public interface ClassmodelPackage extends EPackage
   EClass getMultiplicity();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Multiplicity#getUpper <em>Upper</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Upper</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Multiplicity#getUpper()
-   * @see #getMultiplicity()
-   * @generated
-   */
-  EAttribute getMultiplicity_Upper();
-
-  /**
    * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Multiplicity#getLower <em>Lower</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1500,6 +1489,17 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   EAttribute getMultiplicity_Lower();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Multiplicity#getUpper <em>Upper</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Upper</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Multiplicity#getUpper()
+   * @see #getMultiplicity()
+   * @generated
+   */
+  EAttribute getMultiplicity_Upper();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Constant <em>Constant</em>}'.
@@ -2097,20 +2097,20 @@ public interface ClassmodelPackage extends EPackage
     EClass MULTIPLICITY = eINSTANCE.getMultiplicity();
 
     /**
-     * The meta object literal for the '<em><b>Upper</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MULTIPLICITY__UPPER = eINSTANCE.getMultiplicity_Upper();
-
-    /**
      * The meta object literal for the '<em><b>Lower</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute MULTIPLICITY__LOWER = eINSTANCE.getMultiplicity_Lower();
+
+    /**
+     * The meta object literal for the '<em><b>Upper</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MULTIPLICITY__UPPER = eINSTANCE.getMultiplicity_Upper();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ConstantImpl <em>Constant</em>}' class.

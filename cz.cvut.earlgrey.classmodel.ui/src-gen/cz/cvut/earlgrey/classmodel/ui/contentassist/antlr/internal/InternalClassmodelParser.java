@@ -9539,26 +9539,26 @@ public class InternalClassmodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Multiplicity__Group__0__Impl"
-    // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3152:1: rule__Multiplicity__Group__0__Impl : ( ( rule__Multiplicity__UpperAssignment_0 ) ) ;
+    // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3152:1: rule__Multiplicity__Group__0__Impl : ( ( rule__Multiplicity__LowerAssignment_0 ) ) ;
     public final void rule__Multiplicity__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3156:1: ( ( ( rule__Multiplicity__UpperAssignment_0 ) ) )
-            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3157:1: ( ( rule__Multiplicity__UpperAssignment_0 ) )
+            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3156:1: ( ( ( rule__Multiplicity__LowerAssignment_0 ) ) )
+            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3157:1: ( ( rule__Multiplicity__LowerAssignment_0 ) )
             {
-            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3157:1: ( ( rule__Multiplicity__UpperAssignment_0 ) )
-            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3158:1: ( rule__Multiplicity__UpperAssignment_0 )
+            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3157:1: ( ( rule__Multiplicity__LowerAssignment_0 ) )
+            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3158:1: ( rule__Multiplicity__LowerAssignment_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMultiplicityAccess().getUpperAssignment_0()); 
+               before(grammarAccess.getMultiplicityAccess().getLowerAssignment_0()); 
             }
-            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3159:1: ( rule__Multiplicity__UpperAssignment_0 )
-            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3159:2: rule__Multiplicity__UpperAssignment_0
+            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3159:1: ( rule__Multiplicity__LowerAssignment_0 )
+            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3159:2: rule__Multiplicity__LowerAssignment_0
             {
-            pushFollow(FOLLOW_rule__Multiplicity__UpperAssignment_0_in_rule__Multiplicity__Group__0__Impl6496);
-            rule__Multiplicity__UpperAssignment_0();
+            pushFollow(FOLLOW_rule__Multiplicity__LowerAssignment_0_in_rule__Multiplicity__Group__0__Impl6496);
+            rule__Multiplicity__LowerAssignment_0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -9566,7 +9566,7 @@ public class InternalClassmodelParser extends AbstractInternalContentAssistParse
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMultiplicityAccess().getUpperAssignment_0()); 
+               after(grammarAccess.getMultiplicityAccess().getLowerAssignment_0()); 
             }
 
             }
@@ -9803,26 +9803,26 @@ public class InternalClassmodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Multiplicity__Group_1__1__Impl"
-    // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3243:1: rule__Multiplicity__Group_1__1__Impl : ( ( rule__Multiplicity__LowerAssignment_1_1 ) ) ;
+    // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3243:1: rule__Multiplicity__Group_1__1__Impl : ( ( rule__Multiplicity__UpperAssignment_1_1 ) ) ;
     public final void rule__Multiplicity__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3247:1: ( ( ( rule__Multiplicity__LowerAssignment_1_1 ) ) )
-            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3248:1: ( ( rule__Multiplicity__LowerAssignment_1_1 ) )
+            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3247:1: ( ( ( rule__Multiplicity__UpperAssignment_1_1 ) ) )
+            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3248:1: ( ( rule__Multiplicity__UpperAssignment_1_1 ) )
             {
-            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3248:1: ( ( rule__Multiplicity__LowerAssignment_1_1 ) )
-            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3249:1: ( rule__Multiplicity__LowerAssignment_1_1 )
+            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3248:1: ( ( rule__Multiplicity__UpperAssignment_1_1 ) )
+            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3249:1: ( rule__Multiplicity__UpperAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMultiplicityAccess().getLowerAssignment_1_1()); 
+               before(grammarAccess.getMultiplicityAccess().getUpperAssignment_1_1()); 
             }
-            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3250:1: ( rule__Multiplicity__LowerAssignment_1_1 )
-            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3250:2: rule__Multiplicity__LowerAssignment_1_1
+            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3250:1: ( rule__Multiplicity__UpperAssignment_1_1 )
+            // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:3250:2: rule__Multiplicity__UpperAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Multiplicity__LowerAssignment_1_1_in_rule__Multiplicity__Group_1__1__Impl6679);
-            rule__Multiplicity__LowerAssignment_1_1();
+            pushFollow(FOLLOW_rule__Multiplicity__UpperAssignment_1_1_in_rule__Multiplicity__Group_1__1__Impl6679);
+            rule__Multiplicity__UpperAssignment_1_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -9830,7 +9830,7 @@ public class InternalClassmodelParser extends AbstractInternalContentAssistParse
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMultiplicityAccess().getLowerAssignment_1_1()); 
+               after(grammarAccess.getMultiplicityAccess().getUpperAssignment_1_1()); 
             }
 
             }
@@ -17842,9 +17842,9 @@ public class InternalClassmodelParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Relationship__TailMultiplicityAssignment_13"
 
 
-    // $ANTLR start "rule__Multiplicity__UpperAssignment_0"
-    // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:6079:1: rule__Multiplicity__UpperAssignment_0 : ( ruleMultiplicityValue ) ;
-    public final void rule__Multiplicity__UpperAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__Multiplicity__LowerAssignment_0"
+    // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:6079:1: rule__Multiplicity__LowerAssignment_0 : ( ruleMultiplicityValue ) ;
+    public final void rule__Multiplicity__LowerAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -17856,15 +17856,15 @@ public class InternalClassmodelParser extends AbstractInternalContentAssistParse
             // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:6085:1: ruleMultiplicityValue
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMultiplicityAccess().getUpperMultiplicityValueParserRuleCall_0_0()); 
+               before(grammarAccess.getMultiplicityAccess().getLowerMultiplicityValueParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleMultiplicityValue_in_rule__Multiplicity__UpperAssignment_012533);
+            pushFollow(FOLLOW_ruleMultiplicityValue_in_rule__Multiplicity__LowerAssignment_012533);
             ruleMultiplicityValue();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMultiplicityAccess().getUpperMultiplicityValueParserRuleCall_0_0()); 
+               after(grammarAccess.getMultiplicityAccess().getLowerMultiplicityValueParserRuleCall_0_0()); 
             }
 
             }
@@ -17884,12 +17884,12 @@ public class InternalClassmodelParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Multiplicity__UpperAssignment_0"
+    // $ANTLR end "rule__Multiplicity__LowerAssignment_0"
 
 
-    // $ANTLR start "rule__Multiplicity__LowerAssignment_1_1"
-    // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:6094:1: rule__Multiplicity__LowerAssignment_1_1 : ( ruleMultiplicityValue ) ;
-    public final void rule__Multiplicity__LowerAssignment_1_1() throws RecognitionException {
+    // $ANTLR start "rule__Multiplicity__UpperAssignment_1_1"
+    // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:6094:1: rule__Multiplicity__UpperAssignment_1_1 : ( ruleMultiplicityValue ) ;
+    public final void rule__Multiplicity__UpperAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -17901,15 +17901,15 @@ public class InternalClassmodelParser extends AbstractInternalContentAssistParse
             // ../cz.cvut.earlgrey.classmodel.ui/src-gen/cz/cvut/earlgrey/classmodel/ui/contentassist/antlr/internal/InternalClassmodel.g:6100:1: ruleMultiplicityValue
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMultiplicityAccess().getLowerMultiplicityValueParserRuleCall_1_1_0()); 
+               before(grammarAccess.getMultiplicityAccess().getUpperMultiplicityValueParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleMultiplicityValue_in_rule__Multiplicity__LowerAssignment_1_112564);
+            pushFollow(FOLLOW_ruleMultiplicityValue_in_rule__Multiplicity__UpperAssignment_1_112564);
             ruleMultiplicityValue();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMultiplicityAccess().getLowerMultiplicityValueParserRuleCall_1_1_0()); 
+               after(grammarAccess.getMultiplicityAccess().getUpperMultiplicityValueParserRuleCall_1_1_0()); 
             }
 
             }
@@ -17929,7 +17929,7 @@ public class InternalClassmodelParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Multiplicity__LowerAssignment_1_1"
+    // $ANTLR end "rule__Multiplicity__UpperAssignment_1_1"
 
 
     // $ANTLR start "rule__Constant__VisibilityAssignment_0"
@@ -20176,14 +20176,14 @@ public class InternalClassmodelParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_40_in_rule__Relationship__Group_10__2__Impl6429 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Multiplicity__Group__0__Impl_in_rule__Multiplicity__Group__06466 = new BitSet(new long[]{0x0000020000000000L});
     public static final BitSet FOLLOW_rule__Multiplicity__Group__1_in_rule__Multiplicity__Group__06469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiplicity__UpperAssignment_0_in_rule__Multiplicity__Group__0__Impl6496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Multiplicity__LowerAssignment_0_in_rule__Multiplicity__Group__0__Impl6496 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Multiplicity__Group__1__Impl_in_rule__Multiplicity__Group__16526 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Multiplicity__Group_1__0_in_rule__Multiplicity__Group__1__Impl6553 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Multiplicity__Group_1__0__Impl_in_rule__Multiplicity__Group_1__06588 = new BitSet(new long[]{0x0000000000010010L});
     public static final BitSet FOLLOW_rule__Multiplicity__Group_1__1_in_rule__Multiplicity__Group_1__06591 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_41_in_rule__Multiplicity__Group_1__0__Impl6620 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Multiplicity__Group_1__1__Impl_in_rule__Multiplicity__Group_1__16652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiplicity__LowerAssignment_1_1_in_rule__Multiplicity__Group_1__1__Impl6679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Multiplicity__UpperAssignment_1_1_in_rule__Multiplicity__Group_1__1__Impl6679 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Constant__Group__0__Impl_in_rule__Constant__Group__06713 = new BitSet(new long[]{0x0000800018180100L});
     public static final BitSet FOLLOW_rule__Constant__Group__1_in_rule__Constant__Group__06716 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Constant__VisibilityAssignment_0_in_rule__Constant__Group__0__Impl6743 = new BitSet(new long[]{0x0000000000000002L});
@@ -20406,8 +20406,8 @@ public class InternalClassmodelParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_ruleCompositeID_in_rule__Relationship__TailLabelAssignment_10_112432 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExtendedID_in_rule__Relationship__TailAssignment_1112467 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleMultiplicity_in_rule__Relationship__TailMultiplicityAssignment_1312502 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiplicityValue_in_rule__Multiplicity__UpperAssignment_012533 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiplicityValue_in_rule__Multiplicity__LowerAssignment_1_112564 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiplicityValue_in_rule__Multiplicity__LowerAssignment_012533 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiplicityValue_in_rule__Multiplicity__UpperAssignment_1_112564 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleVisibility_in_rule__Constant__VisibilityAssignment_012595 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__Constant__NameAssignment_112626 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleImplicitValue_in_rule__Constant__ValueAssignment_312657 = new BitSet(new long[]{0x0000000000000002L});
