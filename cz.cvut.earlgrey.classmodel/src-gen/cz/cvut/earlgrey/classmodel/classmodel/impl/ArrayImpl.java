@@ -8,10 +8,13 @@ package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
+import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -32,24 +35,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class ArrayImpl extends MinimalEObjectImpl.Container implements Array
 {
   /**
-   * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
+   * The cached value of the '{@link #getSize() <em>Size</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getSize()
    * @generated
    * @ordered
    */
-  protected static final int SIZE_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSize()
-   * @generated
-   * @ordered
-   */
-  protected int size = SIZE_EDEFAULT;
+  protected Multiplicity size;
 
   /**
    * <!-- begin-user-doc -->
@@ -77,7 +70,7 @@ public class ArrayImpl extends MinimalEObjectImpl.Container implements Array
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getSize()
+  public Multiplicity getSize()
   {
     return size;
   }
@@ -87,12 +80,53 @@ public class ArrayImpl extends MinimalEObjectImpl.Container implements Array
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSize(int newSize)
+  public NotificationChain basicSetSize(Multiplicity newSize, NotificationChain msgs)
   {
-    int oldSize = size;
+    Multiplicity oldSize = size;
     size = newSize;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.ARRAY__SIZE, oldSize, size));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ClassmodelPackage.ARRAY__SIZE, oldSize, newSize);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSize(Multiplicity newSize)
+  {
+    if (newSize != size)
+    {
+      NotificationChain msgs = null;
+      if (size != null)
+        msgs = ((InternalEObject)size).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ClassmodelPackage.ARRAY__SIZE, null, msgs);
+      if (newSize != null)
+        msgs = ((InternalEObject)newSize).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ClassmodelPackage.ARRAY__SIZE, null, msgs);
+      msgs = basicSetSize(newSize, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.ARRAY__SIZE, newSize, newSize));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case ClassmodelPackage.ARRAY__SIZE:
+        return basicSetSize(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -122,7 +156,7 @@ public class ArrayImpl extends MinimalEObjectImpl.Container implements Array
     switch (featureID)
     {
       case ClassmodelPackage.ARRAY__SIZE:
-        setSize((Integer)newValue);
+        setSize((Multiplicity)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -139,7 +173,7 @@ public class ArrayImpl extends MinimalEObjectImpl.Container implements Array
     switch (featureID)
     {
       case ClassmodelPackage.ARRAY__SIZE:
-        setSize(SIZE_EDEFAULT);
+        setSize((Multiplicity)null);
         return;
     }
     super.eUnset(featureID);
@@ -156,26 +190,9 @@ public class ArrayImpl extends MinimalEObjectImpl.Container implements Array
     switch (featureID)
     {
       case ClassmodelPackage.ARRAY__SIZE:
-        return size != SIZE_EDEFAULT;
+        return size != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (size: ");
-    result.append(size);
-    result.append(')');
-    return result.toString();
   }
 
 } //ArrayImpl

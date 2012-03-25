@@ -25,7 +25,7 @@ public class ClassmodelFormatter extends AbstractDefaultFormatter {
 		// c.setLinewrap(1, 2, 3).after(f.getPackageRule());
 		c.setLinewrap(1, 2, 3).around(f.getElementRule());
 		c.setLinewrap(1, 1, 2).around(f.getFeatureRule());
-		c.setLinewrap(1, 1, 2).around(f.getEnumeratorRule());
+		// c.setLinewrap(1, 1, 2).around(f.getEnumeratorRule());
 
 		c.setNoSpace().after(f.getVisibilityRule());
 

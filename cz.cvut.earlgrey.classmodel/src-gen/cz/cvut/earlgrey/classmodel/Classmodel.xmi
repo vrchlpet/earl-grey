@@ -38,8 +38,16 @@
       <alternatives xsi:type="xtext:Alternatives">
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Entity">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/classmodel/Classmodel#//Entity"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
       </alternatives>
     </rules>
@@ -87,8 +95,17 @@
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
         </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" predicated="true" feature="generalization" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" predicated="true" value="isA"/>
+          <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
+            </elements>
+          </elements>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="constraint" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.23"/>
@@ -97,23 +114,6 @@
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="end"/>
-      </alternatives>
-    </rules>
-    <rules xsi:type="xtext:ParserRule" name="Generalization">
-      <type metamodel="/0/@metamodelDeclarations.1">
-        <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/classmodel/Classmodel#//Generalization"/>
-      </type>
-      <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="isA"/>
-        <elements xsi:type="xtext:Assignment" feature="classifier" operator="+=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
-        </elements>
-        <elements xsi:type="xtext:Group" cardinality="*">
-          <elements xsi:type="xtext:Keyword" value=","/>
-          <elements xsi:type="xtext:Assignment" feature="classifier" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
-          </elements>
-        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Type">
@@ -125,7 +125,12 @@
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.22"/>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.5"/>
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/classmodel/Classmodel#//Entity"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.5"/>
+          </terminal>
         </elements>
       </alternatives>
     </rules>
@@ -199,35 +204,55 @@
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.7"/>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="headNavigable" operator="?=">
-          <terminal xsi:type="xtext:Keyword" value="role"/>
+          <terminal xsi:type="xtext:Keyword" value="unnavigable"/>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="headVisibility" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.22"/>
+          </elements>
           <elements xsi:type="xtext:Assignment" feature="headLabel" operator="=">
             <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.7"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=":"/>
         </elements>
+        <elements xsi:type="xtext:Assignment" feature="head" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/classmodel/Classmodel#//Entity"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.5"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="["/>
         <elements xsi:type="xtext:Assignment" feature="headMultiplicity" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
         </elements>
-        <elements xsi:type="xtext:Assignment" feature="head" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.5"/>
-        </elements>
+        <elements xsi:type="xtext:Keyword" value="]"/>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="tailNavigable" operator="?=">
-          <terminal xsi:type="xtext:Keyword" value="role"/>
+          <terminal xsi:type="xtext:Keyword" value="unnavigable"/>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="tailVisibility" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.22"/>
+          </elements>
           <elements xsi:type="xtext:Assignment" feature="tailLabel" operator="=">
             <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.7"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=":"/>
         </elements>
+        <elements xsi:type="xtext:Assignment" feature="tail" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/classmodel/Classmodel#//Entity"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.5"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="["/>
         <elements xsi:type="xtext:Assignment" feature="tailMultiplicity" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
         </elements>
-        <elements xsi:type="xtext:Assignment" feature="tail" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.5"/>
-        </elements>
+        <elements xsi:type="xtext:Keyword" value="]"/>
         <elements xsi:type="xtext:Keyword" value="end"/>
       </alternatives>
     </rules>
@@ -379,7 +404,12 @@
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Assignment" feature="type" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.5"/>
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/classmodel/Classmodel#//Entity"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.5"/>
+          </terminal>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="*" feature="array" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
@@ -398,7 +428,7 @@
         </elements>
         <elements xsi:type="xtext:Keyword" value="["/>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="size" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.14"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="]"/>
       </alternatives>

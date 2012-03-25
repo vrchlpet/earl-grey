@@ -15,9 +15,13 @@ Import:
 
 Element:
     Relationship
-    | Classifier
     | Package
-    | Datatype
+    | Entity
+;
+
+Entity:
+    Datatype
+    | Classifier
     | Enumeration
 ;
 
@@ -38,20 +42,20 @@ Package:
 // e.g.: class node /*..*/ end
 Classifier:
     annotation+=Annotation* =>
-    'class' name=ID (=> generalization=Generalization)?
+    'class' name=ID (=> 'isA' generalization+=Type (',' generalization+=Type)*)?
         (constraint=CONSTRAINT)?
         feature+=Feature*
     'end'
 ;
 
 // e.g.: class Apple isA +Fruit
-Generalization:
-    'isA' classifier+=Type (',' classifier+=Type)*
-;
+//Generalization:
+//    'isA' classifier+=Type (',' classifier+=Type)*
+//;
 
 // e.g.: isA +Fruit
 Type:
-    visibility=Visibility? name=ExtendedID
+    visibility=Visibility? name=[Entity|ExtendedID]
 ;
 
 Feature:
@@ -72,12 +76,14 @@ Enumerator returns Feature:
     name=ID (=> '=' value=ImplicitValue)? (constraint=CONSTRAINT)?
 ;
 
-// e.g.: composition 0..1 Tree 0..* Leaf end
+// e.g.: composition Tree [0..1] Leaf [0..*] end
 Relationship:
     annotation+=Annotation* =>
     type=RelationshipType (label=CompositeID)?
-        (headNavigable?='role')? (headLabel=CompositeID ':')? headMultiplicity=Multiplicity head=ExtendedID
-        (tailNavigable?='role')? (tailLabel=CompositeID ':')? tailMultiplicity=Multiplicity tail=ExtendedID
+        (headNavigable?='unnavigable')? (headVisibility=Visibility? headLabel=CompositeID ':')?
+            head=[Entity|ExtendedID] '[' headMultiplicity=Multiplicity ']'
+        (tailNavigable?='unnavigable')? (tailVisibility=Visibility? tailLabel=CompositeID ':')?
+            tail=[Entity|ExtendedID] '[' tailMultiplicity=Multiplicity ']'
     'end'
 ;
 
@@ -112,11 +118,11 @@ Attribute:
 ;
 
 Reference:
-    type=ExtendedID array+=Array*
+    type=[Entity|ExtendedID] array+=Array*
 ;
 
 Array:
-    {Array} '[' size=NATURAL? ']'
+    {Array} '[' size=Multiplicity? ']'
 ;
 
 ImplicitValue returns ecore::EString:

@@ -13,9 +13,9 @@ import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
 import cz.cvut.earlgrey.classmodel.classmodel.Constant;
 import cz.cvut.earlgrey.classmodel.classmodel.Datatype;
 import cz.cvut.earlgrey.classmodel.classmodel.Element;
+import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
-import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
 import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
@@ -114,10 +114,19 @@ public class ClassmodelSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ClassmodelPackage.ENTITY:
+      {
+        Entity entity = (Entity)theEObject;
+        T result = caseEntity(entity);
+        if (result == null) result = caseElement(entity);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case ClassmodelPackage.DATATYPE:
       {
         Datatype datatype = (Datatype)theEObject;
         T result = caseDatatype(datatype);
+        if (result == null) result = caseEntity(datatype);
         if (result == null) result = caseElement(datatype);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -134,14 +143,8 @@ public class ClassmodelSwitch<T> extends Switch<T>
       {
         Classifier classifier = (Classifier)theEObject;
         T result = caseClassifier(classifier);
+        if (result == null) result = caseEntity(classifier);
         if (result == null) result = caseElement(classifier);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case ClassmodelPackage.GENERALIZATION:
-      {
-        Generalization generalization = (Generalization)theEObject;
-        T result = caseGeneralization(generalization);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -163,6 +166,7 @@ public class ClassmodelSwitch<T> extends Switch<T>
       {
         Enumeration enumeration = (Enumeration)theEObject;
         T result = caseEnumeration(enumeration);
+        if (result == null) result = caseEntity(enumeration);
         if (result == null) result = caseElement(enumeration);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -281,6 +285,22 @@ public class ClassmodelSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEntity(Entity object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Datatype</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -324,22 +344,6 @@ public class ClassmodelSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseClassifier(Classifier object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Generalization</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Generalization</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseGeneralization(Generalization object)
   {
     return null;
   }

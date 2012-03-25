@@ -157,14 +157,14 @@ public interface ClassmodelPackage extends EPackage
   int ELEMENT_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.DatatypeImpl <em>Datatype</em>}' class.
+   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EntityImpl <em>Entity</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.DatatypeImpl
-   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getDatatype()
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.EntityImpl
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getEntity()
    * @generated
    */
-  int DATATYPE = 3;
+  int ENTITY = 3;
 
   /**
    * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
@@ -173,7 +173,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DATATYPE__ANNOTATION = ELEMENT__ANNOTATION;
+  int ENTITY__ANNOTATION = ELEMENT__ANNOTATION;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -182,7 +182,44 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DATATYPE__NAME = ELEMENT_FEATURE_COUNT + 0;
+  int ENTITY__NAME = ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Entity</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENTITY_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.DatatypeImpl <em>Datatype</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.DatatypeImpl
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getDatatype()
+   * @generated
+   */
+  int DATATYPE = 4;
+
+  /**
+   * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATATYPE__ANNOTATION = ENTITY__ANNOTATION;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATATYPE__NAME = ENTITY__NAME;
 
   /**
    * The number of structural features of the '<em>Datatype</em>' class.
@@ -191,7 +228,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DATATYPE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
+  int DATATYPE_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.PackageImpl <em>Package</em>}' class.
@@ -201,7 +238,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getPackage()
    * @generated
    */
-  int PACKAGE = 4;
+  int PACKAGE = 5;
 
   /**
    * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
@@ -247,7 +284,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getClassifier()
    * @generated
    */
-  int CLASSIFIER = 5;
+  int CLASSIFIER = 6;
 
   /**
    * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
@@ -256,7 +293,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLASSIFIER__ANNOTATION = ELEMENT__ANNOTATION;
+  int CLASSIFIER__ANNOTATION = ENTITY__ANNOTATION;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -265,16 +302,16 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLASSIFIER__NAME = ELEMENT_FEATURE_COUNT + 0;
+  int CLASSIFIER__NAME = ENTITY__NAME;
 
   /**
-   * The feature id for the '<em><b>Generalization</b></em>' containment reference.
+   * The feature id for the '<em><b>Generalization</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CLASSIFIER__GENERALIZATION = ELEMENT_FEATURE_COUNT + 1;
+  int CLASSIFIER__GENERALIZATION = ENTITY_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Constraint</b></em>' attribute.
@@ -283,7 +320,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLASSIFIER__CONSTRAINT = ELEMENT_FEATURE_COUNT + 2;
+  int CLASSIFIER__CONSTRAINT = ENTITY_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Feature</b></em>' containment reference list.
@@ -292,7 +329,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLASSIFIER__FEATURE = ELEMENT_FEATURE_COUNT + 3;
+  int CLASSIFIER__FEATURE = ENTITY_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Classifier</em>' class.
@@ -301,35 +338,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLASSIFIER_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 4;
-
-  /**
-   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.GeneralizationImpl <em>Generalization</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.GeneralizationImpl
-   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getGeneralization()
-   * @generated
-   */
-  int GENERALIZATION = 6;
-
-  /**
-   * The feature id for the '<em><b>Classifier</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GENERALIZATION__CLASSIFIER = 0;
-
-  /**
-   * The number of structural features of the '<em>Generalization</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GENERALIZATION_FEATURE_COUNT = 1;
+  int CLASSIFIER_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.TypeImpl <em>Type</em>}' class.
@@ -351,7 +360,7 @@ public interface ClassmodelPackage extends EPackage
   int TYPE__VISIBILITY = 0;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The feature id for the '<em><b>Name</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -440,7 +449,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENUMERATION__ANNOTATION = ELEMENT__ANNOTATION;
+  int ENUMERATION__ANNOTATION = ENTITY__ANNOTATION;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -449,7 +458,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENUMERATION__NAME = ELEMENT_FEATURE_COUNT + 0;
+  int ENUMERATION__NAME = ENTITY__NAME;
 
   /**
    * The feature id for the '<em><b>Constraint</b></em>' attribute.
@@ -458,7 +467,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENUMERATION__CONSTRAINT = ELEMENT_FEATURE_COUNT + 1;
+  int ENUMERATION__CONSTRAINT = ENTITY_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Enumerator</b></em>' containment reference list.
@@ -467,7 +476,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENUMERATION__ENUMERATOR = ELEMENT_FEATURE_COUNT + 2;
+  int ENUMERATION__ENUMERATOR = ENTITY_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Enumeration</em>' class.
@@ -476,7 +485,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENUMERATION_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 3;
+  int ENUMERATION_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl <em>Relationship</em>}' class.
@@ -525,25 +534,25 @@ public interface ClassmodelPackage extends EPackage
   int RELATIONSHIP__HEAD_NAVIGABLE = ELEMENT_FEATURE_COUNT + 2;
 
   /**
+   * The feature id for the '<em><b>Head Visibility</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONSHIP__HEAD_VISIBILITY = ELEMENT_FEATURE_COUNT + 3;
+
+  /**
    * The feature id for the '<em><b>Head Label</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RELATIONSHIP__HEAD_LABEL = ELEMENT_FEATURE_COUNT + 3;
+  int RELATIONSHIP__HEAD_LABEL = ELEMENT_FEATURE_COUNT + 4;
 
   /**
-   * The feature id for the '<em><b>Head Multiplicity</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RELATIONSHIP__HEAD_MULTIPLICITY = ELEMENT_FEATURE_COUNT + 4;
-
-  /**
-   * The feature id for the '<em><b>Head</b></em>' attribute.
+   * The feature id for the '<em><b>Head</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -552,13 +561,31 @@ public interface ClassmodelPackage extends EPackage
   int RELATIONSHIP__HEAD = ELEMENT_FEATURE_COUNT + 5;
 
   /**
+   * The feature id for the '<em><b>Head Multiplicity</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONSHIP__HEAD_MULTIPLICITY = ELEMENT_FEATURE_COUNT + 6;
+
+  /**
    * The feature id for the '<em><b>Tail Navigable</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RELATIONSHIP__TAIL_NAVIGABLE = ELEMENT_FEATURE_COUNT + 6;
+  int RELATIONSHIP__TAIL_NAVIGABLE = ELEMENT_FEATURE_COUNT + 7;
+
+  /**
+   * The feature id for the '<em><b>Tail Visibility</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONSHIP__TAIL_VISIBILITY = ELEMENT_FEATURE_COUNT + 8;
 
   /**
    * The feature id for the '<em><b>Tail Label</b></em>' attribute.
@@ -567,7 +594,16 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RELATIONSHIP__TAIL_LABEL = ELEMENT_FEATURE_COUNT + 7;
+  int RELATIONSHIP__TAIL_LABEL = ELEMENT_FEATURE_COUNT + 9;
+
+  /**
+   * The feature id for the '<em><b>Tail</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONSHIP__TAIL = ELEMENT_FEATURE_COUNT + 10;
 
   /**
    * The feature id for the '<em><b>Tail Multiplicity</b></em>' containment reference.
@@ -576,16 +612,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RELATIONSHIP__TAIL_MULTIPLICITY = ELEMENT_FEATURE_COUNT + 8;
-
-  /**
-   * The feature id for the '<em><b>Tail</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RELATIONSHIP__TAIL = ELEMENT_FEATURE_COUNT + 9;
+  int RELATIONSHIP__TAIL_MULTIPLICITY = ELEMENT_FEATURE_COUNT + 11;
 
   /**
    * The number of structural features of the '<em>Relationship</em>' class.
@@ -594,7 +621,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RELATIONSHIP_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 10;
+  int RELATIONSHIP_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 12;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.MultiplicityImpl <em>Multiplicity</em>}' class.
@@ -927,7 +954,7 @@ public interface ClassmodelPackage extends EPackage
   int REFERENCE = 16;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * The feature id for the '<em><b>Type</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -964,7 +991,7 @@ public interface ClassmodelPackage extends EPackage
   int ARRAY = 17;
 
   /**
-   * The feature id for the '<em><b>Size</b></em>' attribute.
+   * The feature id for the '<em><b>Size</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1077,6 +1104,27 @@ public interface ClassmodelPackage extends EPackage
   EReference getElement_Annotation();
 
   /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Entity <em>Entity</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Entity</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Entity
+   * @generated
+   */
+  EClass getEntity();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Entity#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Entity#getName()
+   * @see #getEntity()
+   * @generated
+   */
+  EAttribute getEntity_Name();
+
+  /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Datatype <em>Datatype</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1085,17 +1133,6 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   EClass getDatatype();
-
-  /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Datatype#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Datatype#getName()
-   * @see #getDatatype()
-   * @generated
-   */
-  EAttribute getDatatype_Name();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Package <em>Package</em>}'.
@@ -1140,21 +1177,10 @@ public interface ClassmodelPackage extends EPackage
   EClass getClassifier();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Classifier#getName <em>Name</em>}'.
+   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.classmodel.classmodel.Classifier#getGeneralization <em>Generalization</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Classifier#getName()
-   * @see #getClassifier()
-   * @generated
-   */
-  EAttribute getClassifier_Name();
-
-  /**
-   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Classifier#getGeneralization <em>Generalization</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Generalization</em>'.
+   * @return the meta object for the containment reference list '<em>Generalization</em>'.
    * @see cz.cvut.earlgrey.classmodel.classmodel.Classifier#getGeneralization()
    * @see #getClassifier()
    * @generated
@@ -1184,27 +1210,6 @@ public interface ClassmodelPackage extends EPackage
   EReference getClassifier_Feature();
 
   /**
-   * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Generalization <em>Generalization</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Generalization</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Generalization
-   * @generated
-   */
-  EClass getGeneralization();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.classmodel.classmodel.Generalization#getClassifier <em>Classifier</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Classifier</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Generalization#getClassifier()
-   * @see #getGeneralization()
-   * @generated
-   */
-  EReference getGeneralization_Classifier();
-
-  /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Type <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1226,15 +1231,15 @@ public interface ClassmodelPackage extends EPackage
   EAttribute getType_Visibility();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Type#getName <em>Name</em>}'.
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Type#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
+   * @return the meta object for the reference '<em>Name</em>'.
    * @see cz.cvut.earlgrey.classmodel.classmodel.Type#getName()
    * @see #getType()
    * @generated
    */
-  EAttribute getType_Name();
+  EReference getType_Name();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Feature <em>Feature</em>}'.
@@ -1299,17 +1304,6 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   EClass getEnumeration();
-
-  /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Enumeration#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Enumeration#getName()
-   * @see #getEnumeration()
-   * @generated
-   */
-  EAttribute getEnumeration_Name();
 
   /**
    * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Enumeration#getConstraint <em>Constraint</em>}'.
@@ -1377,6 +1371,17 @@ public interface ClassmodelPackage extends EPackage
   EAttribute getRelationship_HeadNavigable();
 
   /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadVisibility <em>Head Visibility</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Head Visibility</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadVisibility()
+   * @see #getRelationship()
+   * @generated
+   */
+  EAttribute getRelationship_HeadVisibility();
+
+  /**
    * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadLabel <em>Head Label</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1386,6 +1391,17 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   EAttribute getRelationship_HeadLabel();
+
+  /**
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHead <em>Head</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Head</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHead()
+   * @see #getRelationship()
+   * @generated
+   */
+  EReference getRelationship_Head();
 
   /**
    * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadMultiplicity <em>Head Multiplicity</em>}'.
@@ -1399,17 +1415,6 @@ public interface ClassmodelPackage extends EPackage
   EReference getRelationship_HeadMultiplicity();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHead <em>Head</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Head</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHead()
-   * @see #getRelationship()
-   * @generated
-   */
-  EAttribute getRelationship_Head();
-
-  /**
    * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#isTailNavigable <em>Tail Navigable</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1419,6 +1424,17 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   EAttribute getRelationship_TailNavigable();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailVisibility <em>Tail Visibility</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Tail Visibility</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailVisibility()
+   * @see #getRelationship()
+   * @generated
+   */
+  EAttribute getRelationship_TailVisibility();
 
   /**
    * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailLabel <em>Tail Label</em>}'.
@@ -1432,6 +1448,17 @@ public interface ClassmodelPackage extends EPackage
   EAttribute getRelationship_TailLabel();
 
   /**
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTail <em>Tail</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Tail</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTail()
+   * @see #getRelationship()
+   * @generated
+   */
+  EReference getRelationship_Tail();
+
+  /**
    * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailMultiplicity <em>Tail Multiplicity</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1441,17 +1468,6 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   EReference getRelationship_TailMultiplicity();
-
-  /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTail <em>Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Tail</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTail()
-   * @see #getRelationship()
-   * @generated
-   */
-  EAttribute getRelationship_Tail();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Multiplicity <em>Multiplicity</em>}'.
@@ -1635,15 +1651,15 @@ public interface ClassmodelPackage extends EPackage
   EClass getReference();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Reference#getType <em>Type</em>}'.
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Reference#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
+   * @return the meta object for the reference '<em>Type</em>'.
    * @see cz.cvut.earlgrey.classmodel.classmodel.Reference#getType()
    * @see #getReference()
    * @generated
    */
-  EAttribute getReference_Type();
+  EReference getReference_Type();
 
   /**
    * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.classmodel.classmodel.Reference#getArray <em>Array</em>}'.
@@ -1667,15 +1683,15 @@ public interface ClassmodelPackage extends EPackage
   EClass getArray();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Array#getSize <em>Size</em>}'.
+   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Array#getSize <em>Size</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Size</em>'.
+   * @return the meta object for the containment reference '<em>Size</em>'.
    * @see cz.cvut.earlgrey.classmodel.classmodel.Array#getSize()
    * @see #getArray()
    * @generated
    */
-  EAttribute getArray_Size();
+  EReference getArray_Size();
 
   /**
    * Returns the meta object for enum '{@link cz.cvut.earlgrey.classmodel.classmodel.RelationshipType <em>Relationship Type</em>}'.
@@ -1783,6 +1799,24 @@ public interface ClassmodelPackage extends EPackage
     EReference ELEMENT__ANNOTATION = eINSTANCE.getElement_Annotation();
 
     /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EntityImpl <em>Entity</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.EntityImpl
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getEntity()
+     * @generated
+     */
+    EClass ENTITY = eINSTANCE.getEntity();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ENTITY__NAME = eINSTANCE.getEntity_Name();
+
+    /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.DatatypeImpl <em>Datatype</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1791,14 +1825,6 @@ public interface ClassmodelPackage extends EPackage
      * @generated
      */
     EClass DATATYPE = eINSTANCE.getDatatype();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute DATATYPE__NAME = eINSTANCE.getDatatype_Name();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.PackageImpl <em>Package</em>}' class.
@@ -1837,15 +1863,7 @@ public interface ClassmodelPackage extends EPackage
     EClass CLASSIFIER = eINSTANCE.getClassifier();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CLASSIFIER__NAME = eINSTANCE.getClassifier_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Generalization</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Generalization</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1869,24 +1887,6 @@ public interface ClassmodelPackage extends EPackage
     EReference CLASSIFIER__FEATURE = eINSTANCE.getClassifier_Feature();
 
     /**
-     * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.GeneralizationImpl <em>Generalization</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.GeneralizationImpl
-     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getGeneralization()
-     * @generated
-     */
-    EClass GENERALIZATION = eINSTANCE.getGeneralization();
-
-    /**
-     * The meta object literal for the '<em><b>Classifier</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference GENERALIZATION__CLASSIFIER = eINSTANCE.getGeneralization_Classifier();
-
-    /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.TypeImpl <em>Type</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1905,12 +1905,12 @@ public interface ClassmodelPackage extends EPackage
     EAttribute TYPE__VISIBILITY = eINSTANCE.getType_Visibility();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Name</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TYPE__NAME = eINSTANCE.getType_Name();
+    EReference TYPE__NAME = eINSTANCE.getType_Name();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.FeatureImpl <em>Feature</em>}' class.
@@ -1965,14 +1965,6 @@ public interface ClassmodelPackage extends EPackage
     EClass ENUMERATION = eINSTANCE.getEnumeration();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ENUMERATION__NAME = eINSTANCE.getEnumeration_Name();
-
-    /**
      * The meta object literal for the '<em><b>Constraint</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2023,12 +2015,28 @@ public interface ClassmodelPackage extends EPackage
     EAttribute RELATIONSHIP__HEAD_NAVIGABLE = eINSTANCE.getRelationship_HeadNavigable();
 
     /**
+     * The meta object literal for the '<em><b>Head Visibility</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RELATIONSHIP__HEAD_VISIBILITY = eINSTANCE.getRelationship_HeadVisibility();
+
+    /**
      * The meta object literal for the '<em><b>Head Label</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute RELATIONSHIP__HEAD_LABEL = eINSTANCE.getRelationship_HeadLabel();
+
+    /**
+     * The meta object literal for the '<em><b>Head</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RELATIONSHIP__HEAD = eINSTANCE.getRelationship_Head();
 
     /**
      * The meta object literal for the '<em><b>Head Multiplicity</b></em>' containment reference feature.
@@ -2039,20 +2047,20 @@ public interface ClassmodelPackage extends EPackage
     EReference RELATIONSHIP__HEAD_MULTIPLICITY = eINSTANCE.getRelationship_HeadMultiplicity();
 
     /**
-     * The meta object literal for the '<em><b>Head</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute RELATIONSHIP__HEAD = eINSTANCE.getRelationship_Head();
-
-    /**
      * The meta object literal for the '<em><b>Tail Navigable</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute RELATIONSHIP__TAIL_NAVIGABLE = eINSTANCE.getRelationship_TailNavigable();
+
+    /**
+     * The meta object literal for the '<em><b>Tail Visibility</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RELATIONSHIP__TAIL_VISIBILITY = eINSTANCE.getRelationship_TailVisibility();
 
     /**
      * The meta object literal for the '<em><b>Tail Label</b></em>' attribute feature.
@@ -2063,20 +2071,20 @@ public interface ClassmodelPackage extends EPackage
     EAttribute RELATIONSHIP__TAIL_LABEL = eINSTANCE.getRelationship_TailLabel();
 
     /**
+     * The meta object literal for the '<em><b>Tail</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RELATIONSHIP__TAIL = eINSTANCE.getRelationship_Tail();
+
+    /**
      * The meta object literal for the '<em><b>Tail Multiplicity</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference RELATIONSHIP__TAIL_MULTIPLICITY = eINSTANCE.getRelationship_TailMultiplicity();
-
-    /**
-     * The meta object literal for the '<em><b>Tail</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute RELATIONSHIP__TAIL = eINSTANCE.getRelationship_Tail();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.MultiplicityImpl <em>Multiplicity</em>}' class.
@@ -2227,12 +2235,12 @@ public interface ClassmodelPackage extends EPackage
     EClass REFERENCE = eINSTANCE.getReference();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Type</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute REFERENCE__TYPE = eINSTANCE.getReference_Type();
+    EReference REFERENCE__TYPE = eINSTANCE.getReference_Type();
 
     /**
      * The meta object literal for the '<em><b>Array</b></em>' containment reference list feature.
@@ -2253,12 +2261,12 @@ public interface ClassmodelPackage extends EPackage
     EClass ARRAY = eINSTANCE.getArray();
 
     /**
-     * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Size</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ARRAY__SIZE = eINSTANCE.getArray_Size();
+    EReference ARRAY__SIZE = eINSTANCE.getArray_Size();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.RelationshipType <em>Relationship Type</em>}' enum.

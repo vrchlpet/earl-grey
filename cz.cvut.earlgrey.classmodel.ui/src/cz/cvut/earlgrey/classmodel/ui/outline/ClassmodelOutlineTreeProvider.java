@@ -7,7 +7,8 @@ import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
 import cz.cvut.earlgrey.annotation.annotation.Annotation;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
-import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
+import cz.cvut.earlgrey.classmodel.classmodel.Entity;
+import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
@@ -75,9 +76,9 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	 * @param node Instance
 	 * @return true - to make Generalization node as a leaf
 	 */
-	protected boolean _isLeaf(Generalization node) {
-		return true;
-	}
+	// protected boolean _isLeaf(Generalization node) {
+	// return true;
+	// }
 
 	/**
 	 * Defines Annotation node in Outline View tree as a leaf.
@@ -136,14 +137,19 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		if (element.getHead() == null) {
 			return null;
 		}
-		StyledString styled = new StyledString(element.getHead()
+		StyledString styled = new StyledString(
+				getEntityName(element.getHead())
 				+ EMPTY_STRING);
 		styled.append(Styles.getStyledString(getRelationshipType(element)));
-		String ret = element.getTail();
-		if (ret != null) {
-			styled.append(EMPTY_STRING + ret);
-		}
+		styled.append(EMPTY_STRING + getEntityName(element.getTail()));
 		return styled;
+	}
+
+	private String getEntityName(Entity e) {
+		if (e != null) {
+			return e.getName();
+		}
+		return null;
 	}
 
 	/**
@@ -186,9 +192,9 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	private String traverseReference(Reference ref) {
 		StringBuffer buffer = new StringBuffer();
 		if (ref != null) {
-			String type = ref.getType();
+			Entity type = ref.getType();
 			if (type != null) {
-				buffer.append(type);
+				buffer.append(type.getName());
 				for (Array array : ref.getArray()) {
 					buffer.append(arrayAsString(array));
 				}
@@ -207,8 +213,12 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		String output = "";
 		if (array != null) {
 			output += ARRAY_LEFT;
-			if (array.getSize() > 0) {
-				output += Integer.toString(array.getSize());
+			Multiplicity size = array.getSize();
+			if (size != null) {
+				output += size.getLower();
+				if (size.getUpper() != null) {
+					output += ".." + size.getUpper();
+				}
 			}
 			output += ARRAY_RIGHT;
 		}

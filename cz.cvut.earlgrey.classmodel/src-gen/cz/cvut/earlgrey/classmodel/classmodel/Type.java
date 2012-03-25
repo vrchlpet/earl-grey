@@ -57,29 +57,29 @@ public interface Type extends EObject
   void setVisibility(Visibility value);
 
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Name</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Name</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
+   * @return the value of the '<em>Name</em>' reference.
+   * @see #setName(Entity)
    * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getType_Name()
    * @model
    * @generated
    */
-  String getName();
+  Entity getName();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Type#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Type#getName <em>Name</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
+   * @param value the new value of the '<em>Name</em>' reference.
    * @see #getName()
    * @generated
    */
-  void setName(String value);
+  void setName(Entity value);
 
 } // Type

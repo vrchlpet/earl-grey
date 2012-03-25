@@ -38,6 +38,7 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getElementAccess().getAlternatives(), "rule__Element__Alternatives");
+					put(grammarAccess.getEntityAccess().getAlternatives(), "rule__Entity__Alternatives");
 					put(grammarAccess.getFeatureAccess().getAlternatives_0(), "rule__Feature__Alternatives_0");
 					put(grammarAccess.getMultiplicityValueAccess().getAlternatives(), "rule__MultiplicityValue__Alternatives");
 					put(grammarAccess.getImplicitValueAccess().getAlternatives(), "rule__ImplicitValue__Alternatives");
@@ -53,8 +54,8 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDatatypeAccess().getGroup(), "rule__Datatype__Group__0");
 					put(grammarAccess.getPackageAccess().getGroup(), "rule__Package__Group__0");
 					put(grammarAccess.getClassifierAccess().getGroup(), "rule__Classifier__Group__0");
-					put(grammarAccess.getGeneralizationAccess().getGroup(), "rule__Generalization__Group__0");
-					put(grammarAccess.getGeneralizationAccess().getGroup_2(), "rule__Generalization__Group_2__0");
+					put(grammarAccess.getClassifierAccess().getGroup_3(), "rule__Classifier__Group_3__0");
+					put(grammarAccess.getClassifierAccess().getGroup_3_2(), "rule__Classifier__Group_3_2__0");
 					put(grammarAccess.getTypeAccess().getGroup(), "rule__Type__Group__0");
 					put(grammarAccess.getFeatureAccess().getGroup(), "rule__Feature__Group__0");
 					put(grammarAccess.getEnumerationAccess().getGroup(), "rule__Enumeration__Group__0");
@@ -62,7 +63,7 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getEnumeratorAccess().getGroup_1(), "rule__Enumerator__Group_1__0");
 					put(grammarAccess.getRelationshipAccess().getGroup(), "rule__Relationship__Group__0");
 					put(grammarAccess.getRelationshipAccess().getGroup_4(), "rule__Relationship__Group_4__0");
-					put(grammarAccess.getRelationshipAccess().getGroup_8(), "rule__Relationship__Group_8__0");
+					put(grammarAccess.getRelationshipAccess().getGroup_10(), "rule__Relationship__Group_10__0");
 					put(grammarAccess.getMultiplicityAccess().getGroup(), "rule__Multiplicity__Group__0");
 					put(grammarAccess.getMultiplicityAccess().getGroup_1(), "rule__Multiplicity__Group_1__0");
 					put(grammarAccess.getConstantAccess().getGroup(), "rule__Constant__Group__0");
@@ -97,11 +98,10 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPackageAccess().getElementAssignment_3(), "rule__Package__ElementAssignment_3");
 					put(grammarAccess.getClassifierAccess().getAnnotationAssignment_0(), "rule__Classifier__AnnotationAssignment_0");
 					put(grammarAccess.getClassifierAccess().getNameAssignment_2(), "rule__Classifier__NameAssignment_2");
-					put(grammarAccess.getClassifierAccess().getGeneralizationAssignment_3(), "rule__Classifier__GeneralizationAssignment_3");
+					put(grammarAccess.getClassifierAccess().getGeneralizationAssignment_3_1(), "rule__Classifier__GeneralizationAssignment_3_1");
+					put(grammarAccess.getClassifierAccess().getGeneralizationAssignment_3_2_1(), "rule__Classifier__GeneralizationAssignment_3_2_1");
 					put(grammarAccess.getClassifierAccess().getConstraintAssignment_4(), "rule__Classifier__ConstraintAssignment_4");
 					put(grammarAccess.getClassifierAccess().getFeatureAssignment_5(), "rule__Classifier__FeatureAssignment_5");
-					put(grammarAccess.getGeneralizationAccess().getClassifierAssignment_1(), "rule__Generalization__ClassifierAssignment_1");
-					put(grammarAccess.getGeneralizationAccess().getClassifierAssignment_2_1(), "rule__Generalization__ClassifierAssignment_2_1");
 					put(grammarAccess.getTypeAccess().getVisibilityAssignment_0(), "rule__Type__VisibilityAssignment_0");
 					put(grammarAccess.getTypeAccess().getNameAssignment_1(), "rule__Type__NameAssignment_1");
 					put(grammarAccess.getFeatureAccess().getConstraintAssignment_1(), "rule__Feature__ConstraintAssignment_1");
@@ -116,13 +116,15 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRelationshipAccess().getTypeAssignment_1(), "rule__Relationship__TypeAssignment_1");
 					put(grammarAccess.getRelationshipAccess().getLabelAssignment_2(), "rule__Relationship__LabelAssignment_2");
 					put(grammarAccess.getRelationshipAccess().getHeadNavigableAssignment_3(), "rule__Relationship__HeadNavigableAssignment_3");
-					put(grammarAccess.getRelationshipAccess().getHeadLabelAssignment_4_0(), "rule__Relationship__HeadLabelAssignment_4_0");
-					put(grammarAccess.getRelationshipAccess().getHeadMultiplicityAssignment_5(), "rule__Relationship__HeadMultiplicityAssignment_5");
-					put(grammarAccess.getRelationshipAccess().getHeadAssignment_6(), "rule__Relationship__HeadAssignment_6");
-					put(grammarAccess.getRelationshipAccess().getTailNavigableAssignment_7(), "rule__Relationship__TailNavigableAssignment_7");
-					put(grammarAccess.getRelationshipAccess().getTailLabelAssignment_8_0(), "rule__Relationship__TailLabelAssignment_8_0");
-					put(grammarAccess.getRelationshipAccess().getTailMultiplicityAssignment_9(), "rule__Relationship__TailMultiplicityAssignment_9");
-					put(grammarAccess.getRelationshipAccess().getTailAssignment_10(), "rule__Relationship__TailAssignment_10");
+					put(grammarAccess.getRelationshipAccess().getHeadVisibilityAssignment_4_0(), "rule__Relationship__HeadVisibilityAssignment_4_0");
+					put(grammarAccess.getRelationshipAccess().getHeadLabelAssignment_4_1(), "rule__Relationship__HeadLabelAssignment_4_1");
+					put(grammarAccess.getRelationshipAccess().getHeadAssignment_5(), "rule__Relationship__HeadAssignment_5");
+					put(grammarAccess.getRelationshipAccess().getHeadMultiplicityAssignment_7(), "rule__Relationship__HeadMultiplicityAssignment_7");
+					put(grammarAccess.getRelationshipAccess().getTailNavigableAssignment_9(), "rule__Relationship__TailNavigableAssignment_9");
+					put(grammarAccess.getRelationshipAccess().getTailVisibilityAssignment_10_0(), "rule__Relationship__TailVisibilityAssignment_10_0");
+					put(grammarAccess.getRelationshipAccess().getTailLabelAssignment_10_1(), "rule__Relationship__TailLabelAssignment_10_1");
+					put(grammarAccess.getRelationshipAccess().getTailAssignment_11(), "rule__Relationship__TailAssignment_11");
+					put(grammarAccess.getRelationshipAccess().getTailMultiplicityAssignment_13(), "rule__Relationship__TailMultiplicityAssignment_13");
 					put(grammarAccess.getMultiplicityAccess().getUpperAssignment_0(), "rule__Multiplicity__UpperAssignment_0");
 					put(grammarAccess.getMultiplicityAccess().getLowerAssignment_1_1(), "rule__Multiplicity__LowerAssignment_1_1");
 					put(grammarAccess.getConstantAccess().getVisibilityAssignment_0(), "rule__Constant__VisibilityAssignment_0");

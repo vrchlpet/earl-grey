@@ -16,7 +16,6 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Classifier#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Classifier#getGeneralization <em>Generalization</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Classifier#getConstraint <em>Constraint</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Classifier#getFeature <em>Feature</em>}</li>
@@ -27,59 +26,23 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Classifier extends Element
+public interface Classifier extends Entity
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Generalization</b></em>' containment reference list.
+   * The list contents are of type {@link cz.cvut.earlgrey.classmodel.classmodel.Type}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Generalization</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getClassifier_Name()
-   * @model
-   * @generated
-   */
-  String getName();
-
-  /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Classifier#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
-
-  /**
-   * Returns the value of the '<em><b>Generalization</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Generalization</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Generalization</em>' containment reference.
-   * @see #setGeneralization(Generalization)
+   * @return the value of the '<em>Generalization</em>' containment reference list.
    * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getClassifier_Generalization()
    * @model containment="true"
    * @generated
    */
-  Generalization getGeneralization();
-
-  /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Classifier#getGeneralization <em>Generalization</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Generalization</em>' containment reference.
-   * @see #getGeneralization()
-   * @generated
-   */
-  void setGeneralization(Generalization value);
+  EList<Type> getGeneralization();
 
   /**
    * Returns the value of the '<em><b>Constraint</b></em>' attribute.

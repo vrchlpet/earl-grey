@@ -32,7 +32,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EnumerationImpl#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EnumerationImpl#getConstraint <em>Constraint</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EnumerationImpl#getEnumerator <em>Enumerator</em>}</li>
  * </ul>
@@ -40,28 +39,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class EnumerationImpl extends ElementImpl implements Enumeration
+public class EnumerationImpl extends EntityImpl implements Enumeration
 {
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
   /**
    * The default value of the '{@link #getConstraint() <em>Constraint</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -111,29 +90,6 @@ public class EnumerationImpl extends ElementImpl implements Enumeration
   protected EClass eStaticClass()
   {
     return ClassmodelPackage.Literals.ENUMERATION;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.ENUMERATION__NAME, oldName, name));
   }
 
   /**
@@ -199,8 +155,6 @@ public class EnumerationImpl extends ElementImpl implements Enumeration
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ENUMERATION__NAME:
-        return getName();
       case ClassmodelPackage.ENUMERATION__CONSTRAINT:
         return getConstraint();
       case ClassmodelPackage.ENUMERATION__ENUMERATOR:
@@ -220,9 +174,6 @@ public class EnumerationImpl extends ElementImpl implements Enumeration
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ENUMERATION__NAME:
-        setName((String)newValue);
-        return;
       case ClassmodelPackage.ENUMERATION__CONSTRAINT:
         setConstraint((String)newValue);
         return;
@@ -244,9 +195,6 @@ public class EnumerationImpl extends ElementImpl implements Enumeration
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ENUMERATION__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case ClassmodelPackage.ENUMERATION__CONSTRAINT:
         setConstraint(CONSTRAINT_EDEFAULT);
         return;
@@ -267,8 +215,6 @@ public class EnumerationImpl extends ElementImpl implements Enumeration
   {
     switch (featureID)
     {
-      case ClassmodelPackage.ENUMERATION__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case ClassmodelPackage.ENUMERATION__CONSTRAINT:
         return CONSTRAINT_EDEFAULT == null ? constraint != null : !CONSTRAINT_EDEFAULT.equals(constraint);
       case ClassmodelPackage.ENUMERATION__ENUMERATOR:
@@ -288,9 +234,7 @@ public class EnumerationImpl extends ElementImpl implements Enumeration
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", constraint: ");
+    result.append(" (constraint: ");
     result.append(constraint);
     result.append(')');
     return result.toString();

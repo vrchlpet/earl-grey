@@ -9,7 +9,7 @@ package cz.cvut.earlgrey.classmodel.classmodel.impl;
 import cz.cvut.earlgrey.classmodel.classmodel.Classifier;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
-import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
+import cz.cvut.earlgrey.classmodel.classmodel.Type;
 
 import java.util.Collection;
 
@@ -33,7 +33,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ClassifierImpl#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ClassifierImpl#getGeneralization <em>Generalization</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ClassifierImpl#getConstraint <em>Constraint</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ClassifierImpl#getFeature <em>Feature</em>}</li>
@@ -42,37 +41,17 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ClassifierImpl extends ElementImpl implements Classifier
+public class ClassifierImpl extends EntityImpl implements Classifier
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getGeneralization() <em>Generalization</em>}' containment reference.
+   * The cached value of the '{@link #getGeneralization() <em>Generalization</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getGeneralization()
    * @generated
    * @ordered
    */
-  protected Generalization generalization;
+  protected EList<Type> generalization;
 
   /**
    * The default value of the '{@link #getConstraint() <em>Constraint</em>}' attribute.
@@ -130,70 +109,13 @@ public class ClassifierImpl extends ElementImpl implements Classifier
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public EList<Type> getGeneralization()
   {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.CLASSIFIER__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Generalization getGeneralization()
-  {
+    if (generalization == null)
+    {
+      generalization = new EObjectContainmentEList<Type>(Type.class, this, ClassmodelPackage.CLASSIFIER__GENERALIZATION);
+    }
     return generalization;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetGeneralization(Generalization newGeneralization, NotificationChain msgs)
-  {
-    Generalization oldGeneralization = generalization;
-    generalization = newGeneralization;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ClassmodelPackage.CLASSIFIER__GENERALIZATION, oldGeneralization, newGeneralization);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setGeneralization(Generalization newGeneralization)
-  {
-    if (newGeneralization != generalization)
-    {
-      NotificationChain msgs = null;
-      if (generalization != null)
-        msgs = ((InternalEObject)generalization).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ClassmodelPackage.CLASSIFIER__GENERALIZATION, null, msgs);
-      if (newGeneralization != null)
-        msgs = ((InternalEObject)newGeneralization).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ClassmodelPackage.CLASSIFIER__GENERALIZATION, null, msgs);
-      msgs = basicSetGeneralization(newGeneralization, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.CLASSIFIER__GENERALIZATION, newGeneralization, newGeneralization));
   }
 
   /**
@@ -244,7 +166,7 @@ public class ClassifierImpl extends ElementImpl implements Classifier
     switch (featureID)
     {
       case ClassmodelPackage.CLASSIFIER__GENERALIZATION:
-        return basicSetGeneralization(null, msgs);
+        return ((InternalEList<?>)getGeneralization()).basicRemove(otherEnd, msgs);
       case ClassmodelPackage.CLASSIFIER__FEATURE:
         return ((InternalEList<?>)getFeature()).basicRemove(otherEnd, msgs);
     }
@@ -261,8 +183,6 @@ public class ClassifierImpl extends ElementImpl implements Classifier
   {
     switch (featureID)
     {
-      case ClassmodelPackage.CLASSIFIER__NAME:
-        return getName();
       case ClassmodelPackage.CLASSIFIER__GENERALIZATION:
         return getGeneralization();
       case ClassmodelPackage.CLASSIFIER__CONSTRAINT:
@@ -284,11 +204,9 @@ public class ClassifierImpl extends ElementImpl implements Classifier
   {
     switch (featureID)
     {
-      case ClassmodelPackage.CLASSIFIER__NAME:
-        setName((String)newValue);
-        return;
       case ClassmodelPackage.CLASSIFIER__GENERALIZATION:
-        setGeneralization((Generalization)newValue);
+        getGeneralization().clear();
+        getGeneralization().addAll((Collection<? extends Type>)newValue);
         return;
       case ClassmodelPackage.CLASSIFIER__CONSTRAINT:
         setConstraint((String)newValue);
@@ -311,11 +229,8 @@ public class ClassifierImpl extends ElementImpl implements Classifier
   {
     switch (featureID)
     {
-      case ClassmodelPackage.CLASSIFIER__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case ClassmodelPackage.CLASSIFIER__GENERALIZATION:
-        setGeneralization((Generalization)null);
+        getGeneralization().clear();
         return;
       case ClassmodelPackage.CLASSIFIER__CONSTRAINT:
         setConstraint(CONSTRAINT_EDEFAULT);
@@ -337,10 +252,8 @@ public class ClassifierImpl extends ElementImpl implements Classifier
   {
     switch (featureID)
     {
-      case ClassmodelPackage.CLASSIFIER__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case ClassmodelPackage.CLASSIFIER__GENERALIZATION:
-        return generalization != null;
+        return generalization != null && !generalization.isEmpty();
       case ClassmodelPackage.CLASSIFIER__CONSTRAINT:
         return CONSTRAINT_EDEFAULT == null ? constraint != null : !CONSTRAINT_EDEFAULT.equals(constraint);
       case ClassmodelPackage.CLASSIFIER__FEATURE:
@@ -360,9 +273,7 @@ public class ClassifierImpl extends ElementImpl implements Classifier
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", constraint: ");
+    result.append(" (constraint: ");
     result.append(constraint);
     result.append(')');
     return result.toString();

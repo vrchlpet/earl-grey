@@ -14,9 +14,9 @@ import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
 import cz.cvut.earlgrey.classmodel.classmodel.Constant;
 import cz.cvut.earlgrey.classmodel.classmodel.Datatype;
 import cz.cvut.earlgrey.classmodel.classmodel.Element;
+import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
-import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
 import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
@@ -92,10 +92,10 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
       case ClassmodelPackage.MODEL: return createModel();
       case ClassmodelPackage.IMPORT: return createImport();
       case ClassmodelPackage.ELEMENT: return createElement();
+      case ClassmodelPackage.ENTITY: return createEntity();
       case ClassmodelPackage.DATATYPE: return createDatatype();
       case ClassmodelPackage.PACKAGE: return createPackage();
       case ClassmodelPackage.CLASSIFIER: return createClassifier();
-      case ClassmodelPackage.GENERALIZATION: return createGeneralization();
       case ClassmodelPackage.TYPE: return createType();
       case ClassmodelPackage.FEATURE: return createFeature();
       case ClassmodelPackage.ENUMERATION: return createEnumeration();
@@ -188,6 +188,17 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public Entity createEntity()
+  {
+    EntityImpl entity = new EntityImpl();
+    return entity;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Datatype createDatatype()
   {
     DatatypeImpl datatype = new DatatypeImpl();
@@ -214,17 +225,6 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
   {
     ClassifierImpl classifier = new ClassifierImpl();
     return classifier;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Generalization createGeneralization()
-  {
-    GeneralizationImpl generalization = new GeneralizationImpl();
-    return generalization;
   }
 
   /**

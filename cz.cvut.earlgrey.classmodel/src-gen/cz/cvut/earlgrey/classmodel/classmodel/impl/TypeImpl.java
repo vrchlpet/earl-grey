@@ -7,12 +7,14 @@
 package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
+import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.Type;
 import cz.cvut.earlgrey.classmodel.classmodel.Visibility;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -54,24 +56,14 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
   protected Visibility visibility = VISIBILITY_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected Entity name;
 
   /**
    * <!-- begin-user-doc -->
@@ -122,7 +114,27 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public Entity getName()
+  {
+    if (name != null && name.eIsProxy())
+    {
+      InternalEObject oldName = (InternalEObject)name;
+      name = (Entity)eResolveProxy(oldName);
+      if (name != oldName)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassmodelPackage.TYPE__NAME, oldName, name));
+      }
+    }
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Entity basicGetName()
   {
     return name;
   }
@@ -132,9 +144,9 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setName(Entity newName)
   {
-    String oldName = name;
+    Entity oldName = name;
     name = newName;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.TYPE__NAME, oldName, name));
@@ -153,7 +165,8 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
       case ClassmodelPackage.TYPE__VISIBILITY:
         return getVisibility();
       case ClassmodelPackage.TYPE__NAME:
-        return getName();
+        if (resolve) return getName();
+        return basicGetName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -172,7 +185,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
         setVisibility((Visibility)newValue);
         return;
       case ClassmodelPackage.TYPE__NAME:
-        setName((String)newValue);
+        setName((Entity)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -192,7 +205,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
         setVisibility(VISIBILITY_EDEFAULT);
         return;
       case ClassmodelPackage.TYPE__NAME:
-        setName(NAME_EDEFAULT);
+        setName((Entity)null);
         return;
     }
     super.eUnset(featureID);
@@ -211,7 +224,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
       case ClassmodelPackage.TYPE__VISIBILITY:
         return visibility != VISIBILITY_EDEFAULT;
       case ClassmodelPackage.TYPE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        return name != null;
     }
     return super.eIsSet(featureID);
   }
@@ -229,8 +242,6 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (visibility: ");
     result.append(visibility);
-    result.append(", name: ");
-    result.append(name);
     result.append(')');
     return result.toString();
   }

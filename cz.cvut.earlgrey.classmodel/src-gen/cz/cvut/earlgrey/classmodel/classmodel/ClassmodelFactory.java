@@ -54,6 +54,15 @@ public interface ClassmodelFactory extends EFactory
   Element createElement();
 
   /**
+   * Returns a new object of class '<em>Entity</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Entity</em>'.
+   * @generated
+   */
+  Entity createEntity();
+
+  /**
    * Returns a new object of class '<em>Datatype</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -79,15 +88,6 @@ public interface ClassmodelFactory extends EFactory
    * @generated
    */
   Classifier createClassifier();
-
-  /**
-   * Returns a new object of class '<em>Generalization</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Generalization</em>'.
-   * @generated
-   */
-  Generalization createGeneralization();
 
   /**
    * Returns a new object of class '<em>Type</em>'.
