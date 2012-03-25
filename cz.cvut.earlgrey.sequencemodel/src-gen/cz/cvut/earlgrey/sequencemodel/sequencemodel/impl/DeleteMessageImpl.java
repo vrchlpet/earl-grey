@@ -7,11 +7,13 @@
 package cz.cvut.earlgrey.sequencemodel.sequencemodel.impl;
 
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.DeleteMessage;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -32,44 +34,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
 {
   /**
-   * The default value of the '{@link #getSourceParticipant() <em>Source Participant</em>}' attribute.
+   * The cached value of the '{@link #getSourceParticipant() <em>Source Participant</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getSourceParticipant()
    * @generated
    * @ordered
    */
-  protected static final String SOURCE_PARTICIPANT_EDEFAULT = null;
+  protected Participant sourceParticipant;
 
   /**
-   * The cached value of the '{@link #getSourceParticipant() <em>Source Participant</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSourceParticipant()
-   * @generated
-   * @ordered
-   */
-  protected String sourceParticipant = SOURCE_PARTICIPANT_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getTargetParticipant() <em>Target Participant</em>}' attribute.
+   * The cached value of the '{@link #getTargetParticipant() <em>Target Participant</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getTargetParticipant()
    * @generated
    * @ordered
    */
-  protected static final String TARGET_PARTICIPANT_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getTargetParticipant() <em>Target Participant</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTargetParticipant()
-   * @generated
-   * @ordered
-   */
-  protected String targetParticipant = TARGET_PARTICIPANT_EDEFAULT;
+  protected Participant targetParticipant;
 
   /**
    * <!-- begin-user-doc -->
@@ -97,7 +79,27 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getSourceParticipant()
+  public Participant getSourceParticipant()
+  {
+    if (sourceParticipant != null && sourceParticipant.eIsProxy())
+    {
+      InternalEObject oldSourceParticipant = (InternalEObject)sourceParticipant;
+      sourceParticipant = (Participant)eResolveProxy(oldSourceParticipant);
+      if (sourceParticipant != oldSourceParticipant)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SequencemodelPackage.DELETE_MESSAGE__SOURCE_PARTICIPANT, oldSourceParticipant, sourceParticipant));
+      }
+    }
+    return sourceParticipant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Participant basicGetSourceParticipant()
   {
     return sourceParticipant;
   }
@@ -107,9 +109,9 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSourceParticipant(String newSourceParticipant)
+  public void setSourceParticipant(Participant newSourceParticipant)
   {
-    String oldSourceParticipant = sourceParticipant;
+    Participant oldSourceParticipant = sourceParticipant;
     sourceParticipant = newSourceParticipant;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.DELETE_MESSAGE__SOURCE_PARTICIPANT, oldSourceParticipant, sourceParticipant));
@@ -120,7 +122,27 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getTargetParticipant()
+  public Participant getTargetParticipant()
+  {
+    if (targetParticipant != null && targetParticipant.eIsProxy())
+    {
+      InternalEObject oldTargetParticipant = (InternalEObject)targetParticipant;
+      targetParticipant = (Participant)eResolveProxy(oldTargetParticipant);
+      if (targetParticipant != oldTargetParticipant)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SequencemodelPackage.DELETE_MESSAGE__TARGET_PARTICIPANT, oldTargetParticipant, targetParticipant));
+      }
+    }
+    return targetParticipant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Participant basicGetTargetParticipant()
   {
     return targetParticipant;
   }
@@ -130,9 +152,9 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTargetParticipant(String newTargetParticipant)
+  public void setTargetParticipant(Participant newTargetParticipant)
   {
-    String oldTargetParticipant = targetParticipant;
+    Participant oldTargetParticipant = targetParticipant;
     targetParticipant = newTargetParticipant;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.DELETE_MESSAGE__TARGET_PARTICIPANT, oldTargetParticipant, targetParticipant));
@@ -149,9 +171,11 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
     switch (featureID)
     {
       case SequencemodelPackage.DELETE_MESSAGE__SOURCE_PARTICIPANT:
-        return getSourceParticipant();
+        if (resolve) return getSourceParticipant();
+        return basicGetSourceParticipant();
       case SequencemodelPackage.DELETE_MESSAGE__TARGET_PARTICIPANT:
-        return getTargetParticipant();
+        if (resolve) return getTargetParticipant();
+        return basicGetTargetParticipant();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -167,10 +191,10 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
     switch (featureID)
     {
       case SequencemodelPackage.DELETE_MESSAGE__SOURCE_PARTICIPANT:
-        setSourceParticipant((String)newValue);
+        setSourceParticipant((Participant)newValue);
         return;
       case SequencemodelPackage.DELETE_MESSAGE__TARGET_PARTICIPANT:
-        setTargetParticipant((String)newValue);
+        setTargetParticipant((Participant)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -187,10 +211,10 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
     switch (featureID)
     {
       case SequencemodelPackage.DELETE_MESSAGE__SOURCE_PARTICIPANT:
-        setSourceParticipant(SOURCE_PARTICIPANT_EDEFAULT);
+        setSourceParticipant((Participant)null);
         return;
       case SequencemodelPackage.DELETE_MESSAGE__TARGET_PARTICIPANT:
-        setTargetParticipant(TARGET_PARTICIPANT_EDEFAULT);
+        setTargetParticipant((Participant)null);
         return;
     }
     super.eUnset(featureID);
@@ -207,30 +231,11 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
     switch (featureID)
     {
       case SequencemodelPackage.DELETE_MESSAGE__SOURCE_PARTICIPANT:
-        return SOURCE_PARTICIPANT_EDEFAULT == null ? sourceParticipant != null : !SOURCE_PARTICIPANT_EDEFAULT.equals(sourceParticipant);
+        return sourceParticipant != null;
       case SequencemodelPackage.DELETE_MESSAGE__TARGET_PARTICIPANT:
-        return TARGET_PARTICIPANT_EDEFAULT == null ? targetParticipant != null : !TARGET_PARTICIPANT_EDEFAULT.equals(targetParticipant);
+        return targetParticipant != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (sourceParticipant: ");
-    result.append(sourceParticipant);
-    result.append(", targetParticipant: ");
-    result.append(targetParticipant);
-    result.append(')');
-    return result.toString();
   }
 
 } //DeleteMessageImpl

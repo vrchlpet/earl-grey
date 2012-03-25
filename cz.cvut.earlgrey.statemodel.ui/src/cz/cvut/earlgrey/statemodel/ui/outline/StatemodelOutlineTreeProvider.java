@@ -4,6 +4,7 @@
 package cz.cvut.earlgrey.statemodel.ui.outline;
 
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
+import cz.cvut.earlgrey.statemodel.statemodel.State;
 import cz.cvut.earlgrey.statemodel.statemodel.Transition;
 import cz.cvut.earlgrey.xtext.formatting.Styles;
 
@@ -20,7 +21,11 @@ public class StatemodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	 * @return label as StyledString
 	 */
 	public Object _text(Transition ele) {
-		return Styles.getStyledString(ele.getState());
+		State st = ele.getState();
+		if(st !=null) {
+			return Styles.getStyledString(st.getName());
+		}
+		return null;
 	}
 
 	/**

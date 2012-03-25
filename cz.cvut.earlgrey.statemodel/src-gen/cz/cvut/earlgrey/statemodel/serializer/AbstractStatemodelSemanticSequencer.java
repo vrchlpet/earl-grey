@@ -189,7 +189,7 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (annotation+=Annotation* name=CompositeID state+=State*)
+	 *     (annotation+=Annotation* name=[Entity|ExtendedID] state+=State*)
 	 */
 	protected void sequence_Statemachine(EObject context, Statemachine semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -207,7 +207,7 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (guard=ValueWithSpaces? action=ValueWithSpaces? state=CompositeID)
+	 *     (guard=ValueWithSpaces? action=ValueWithSpaces? state=[State|CompositeID])
 	 */
 	protected void sequence_Transition(EObject context, Transition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

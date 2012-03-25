@@ -6,6 +6,7 @@ package cz.cvut.earlgrey.sequencemodel.ui.outline;
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
 import cz.cvut.earlgrey.annotation.annotation.Annotation;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Message;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Reference;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage;
 
 /**
@@ -41,7 +42,18 @@ public class SequencemodelOutlineTreeProvider extends DefaultOutlineTreeProvider
 	 * @return label as StyledString
 	 */
 	public Object _text(ReturnMessage ele) {
-		return ele.getName().getType();
+		if (ele != null) {
+			return getEntityName(ele.getName());
+		}
+		return null;
 	}
+
+	private String getEntityName(Reference reference) {
+		if (reference != null && reference.getType() != null) {
+			return reference.getType().getName();
+		}
+		return null;
+	}
+
 
 }

@@ -6,18 +6,23 @@
  */
 package cz.cvut.earlgrey.statemodel.statemodel.impl;
 
+import cz.cvut.earlgrey.classmodel.classmodel.Entity;
+
 import cz.cvut.earlgrey.statemodel.statemodel.State;
 import cz.cvut.earlgrey.statemodel.statemodel.Statemachine;
 import cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -29,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemachineImpl#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemachineImpl#getState <em>State</em>}</li>
  * </ul>
  * </p>
@@ -37,6 +43,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class StatemachineImpl extends ElementImpl implements Statemachine
 {
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected Entity name;
+
   /**
    * The cached value of the '{@link #getState() <em>State</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -66,6 +82,49 @@ public class StatemachineImpl extends ElementImpl implements Statemachine
   protected EClass eStaticClass()
   {
     return StatemodelPackage.Literals.STATEMACHINE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Entity getName()
+  {
+    if (name != null && name.eIsProxy())
+    {
+      InternalEObject oldName = (InternalEObject)name;
+      name = (Entity)eResolveProxy(oldName);
+      if (name != oldName)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatemodelPackage.STATEMACHINE__NAME, oldName, name));
+      }
+    }
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Entity basicGetName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(Entity newName)
+  {
+    Entity oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, StatemodelPackage.STATEMACHINE__NAME, oldName, name));
   }
 
   /**
@@ -108,6 +167,9 @@ public class StatemachineImpl extends ElementImpl implements Statemachine
   {
     switch (featureID)
     {
+      case StatemodelPackage.STATEMACHINE__NAME:
+        if (resolve) return getName();
+        return basicGetName();
       case StatemodelPackage.STATEMACHINE__STATE:
         return getState();
     }
@@ -125,6 +187,9 @@ public class StatemachineImpl extends ElementImpl implements Statemachine
   {
     switch (featureID)
     {
+      case StatemodelPackage.STATEMACHINE__NAME:
+        setName((Entity)newValue);
+        return;
       case StatemodelPackage.STATEMACHINE__STATE:
         getState().clear();
         getState().addAll((Collection<? extends State>)newValue);
@@ -143,6 +208,9 @@ public class StatemachineImpl extends ElementImpl implements Statemachine
   {
     switch (featureID)
     {
+      case StatemodelPackage.STATEMACHINE__NAME:
+        setName((Entity)null);
+        return;
       case StatemodelPackage.STATEMACHINE__STATE:
         getState().clear();
         return;
@@ -160,6 +228,8 @@ public class StatemachineImpl extends ElementImpl implements Statemachine
   {
     switch (featureID)
     {
+      case StatemodelPackage.STATEMACHINE__NAME:
+        return name != null;
       case StatemodelPackage.STATEMACHINE__STATE:
         return state != null && !state.isEmpty();
     }

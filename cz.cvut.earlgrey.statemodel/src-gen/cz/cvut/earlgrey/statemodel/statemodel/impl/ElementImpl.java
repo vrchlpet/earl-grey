@@ -13,7 +13,6 @@ import cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -21,7 +20,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -35,7 +33,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.ElementImpl#getAnnotation <em>Annotation</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.ElementImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -52,26 +49,6 @@ public class ElementImpl extends MinimalEObjectImpl.Container implements Element
    * @ordered
    */
   protected EList<Annotation> annotation;
-
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -113,29 +90,6 @@ public class ElementImpl extends MinimalEObjectImpl.Container implements Element
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, StatemodelPackage.ELEMENT__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -159,8 +113,6 @@ public class ElementImpl extends MinimalEObjectImpl.Container implements Element
     {
       case StatemodelPackage.ELEMENT__ANNOTATION:
         return getAnnotation();
-      case StatemodelPackage.ELEMENT__NAME:
-        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -180,9 +132,6 @@ public class ElementImpl extends MinimalEObjectImpl.Container implements Element
         getAnnotation().clear();
         getAnnotation().addAll((Collection<? extends Annotation>)newValue);
         return;
-      case StatemodelPackage.ELEMENT__NAME:
-        setName((String)newValue);
-        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -200,9 +149,6 @@ public class ElementImpl extends MinimalEObjectImpl.Container implements Element
       case StatemodelPackage.ELEMENT__ANNOTATION:
         getAnnotation().clear();
         return;
-      case StatemodelPackage.ELEMENT__NAME:
-        setName(NAME_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -219,27 +165,8 @@ public class ElementImpl extends MinimalEObjectImpl.Container implements Element
     {
       case StatemodelPackage.ELEMENT__ANNOTATION:
         return annotation != null && !annotation.isEmpty();
-      case StatemodelPackage.ELEMENT__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //ElementImpl

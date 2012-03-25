@@ -7,6 +7,7 @@
 package cz.cvut.earlgrey.sequencemodel.sequencemodel.impl;
 
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.FoundMessage;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
 
@@ -36,24 +37,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class FoundMessageImpl extends MessageImpl implements FoundMessage
 {
   /**
-   * The default value of the '{@link #getTargetParticipant() <em>Target Participant</em>}' attribute.
+   * The cached value of the '{@link #getTargetParticipant() <em>Target Participant</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getTargetParticipant()
    * @generated
    * @ordered
    */
-  protected static final String TARGET_PARTICIPANT_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getTargetParticipant() <em>Target Participant</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTargetParticipant()
-   * @generated
-   * @ordered
-   */
-  protected String targetParticipant = TARGET_PARTICIPANT_EDEFAULT;
+  protected Participant targetParticipant;
 
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -111,7 +102,27 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getTargetParticipant()
+  public Participant getTargetParticipant()
+  {
+    if (targetParticipant != null && targetParticipant.eIsProxy())
+    {
+      InternalEObject oldTargetParticipant = (InternalEObject)targetParticipant;
+      targetParticipant = (Participant)eResolveProxy(oldTargetParticipant);
+      if (targetParticipant != oldTargetParticipant)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SequencemodelPackage.FOUND_MESSAGE__TARGET_PARTICIPANT, oldTargetParticipant, targetParticipant));
+      }
+    }
+    return targetParticipant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Participant basicGetTargetParticipant()
   {
     return targetParticipant;
   }
@@ -121,9 +132,9 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTargetParticipant(String newTargetParticipant)
+  public void setTargetParticipant(Participant newTargetParticipant)
   {
-    String oldTargetParticipant = targetParticipant;
+    Participant oldTargetParticipant = targetParticipant;
     targetParticipant = newTargetParticipant;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.FOUND_MESSAGE__TARGET_PARTICIPANT, oldTargetParticipant, targetParticipant));
@@ -227,7 +238,8 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
     switch (featureID)
     {
       case SequencemodelPackage.FOUND_MESSAGE__TARGET_PARTICIPANT:
-        return getTargetParticipant();
+        if (resolve) return getTargetParticipant();
+        return basicGetTargetParticipant();
       case SequencemodelPackage.FOUND_MESSAGE__NAME:
         return getName();
       case SequencemodelPackage.FOUND_MESSAGE__RETURN:
@@ -247,7 +259,7 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
     switch (featureID)
     {
       case SequencemodelPackage.FOUND_MESSAGE__TARGET_PARTICIPANT:
-        setTargetParticipant((String)newValue);
+        setTargetParticipant((Participant)newValue);
         return;
       case SequencemodelPackage.FOUND_MESSAGE__NAME:
         setName((String)newValue);
@@ -270,7 +282,7 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
     switch (featureID)
     {
       case SequencemodelPackage.FOUND_MESSAGE__TARGET_PARTICIPANT:
-        setTargetParticipant(TARGET_PARTICIPANT_EDEFAULT);
+        setTargetParticipant((Participant)null);
         return;
       case SequencemodelPackage.FOUND_MESSAGE__NAME:
         setName(NAME_EDEFAULT);
@@ -293,7 +305,7 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
     switch (featureID)
     {
       case SequencemodelPackage.FOUND_MESSAGE__TARGET_PARTICIPANT:
-        return TARGET_PARTICIPANT_EDEFAULT == null ? targetParticipant != null : !TARGET_PARTICIPANT_EDEFAULT.equals(targetParticipant);
+        return targetParticipant != null;
       case SequencemodelPackage.FOUND_MESSAGE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case SequencemodelPackage.FOUND_MESSAGE__RETURN:
@@ -313,9 +325,7 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (targetParticipant: ");
-    result.append(targetParticipant);
-    result.append(", name: ");
+    result.append(" (name: ");
     result.append(name);
     result.append(')');
     return result.toString();

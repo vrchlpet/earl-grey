@@ -4,6 +4,7 @@ import org.eclipse.emf.mwe.utils.*
 import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
 
+
 var grammarURI = "classpath:/cz/cvut/earlgrey/sequencemodel/Sequencemodel.xtext"
 var file.extensions = "ssd"
 var projectName = "cz.cvut.earlgrey.sequencemodel"
@@ -13,6 +14,8 @@ Workflow {
     bean = StandaloneSetup {
         scanClassPath = true
         platformUri = "${runtimeProject}/.."
+        registerGeneratedEPackage = "cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage"
+        registerGenModelFile = "platform:/resource/cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/Classmodel.genmodel"
         registerGeneratedEPackage = "cz.cvut.earlgrey.annotation.annotation.AnnotationPackage"
         registerGenModelFile = "platform:/resource/cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/Annotation.genmodel"
     }
@@ -77,7 +80,7 @@ Workflow {
             // fragment = exporting.SimpleNamesFragment {}
 
             // scoping and exporting API
-            //fragment = scoping.ImportNamespacesScopingFragment {}
+            fragment = scoping.ImportNamespacesScopingFragment {}
             fragment = exporting.QualifiedNamesFragment {}  //importURI
             fragment = builder.BuilderIntegrationFragment {}  //importURI
 

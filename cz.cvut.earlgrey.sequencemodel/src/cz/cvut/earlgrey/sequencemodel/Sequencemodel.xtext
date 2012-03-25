@@ -1,6 +1,7 @@
 grammar cz.cvut.earlgrey.sequencemodel.Sequencemodel with cz.cvut.earlgrey.annotation.Annotation
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://www.cvut.cz/earlgrey/classmodel/Classmodel" as cls
 
 generate sequencemodel "http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel"
 
@@ -14,14 +15,14 @@ Import:
 Sequence:
     annotation+=Annotation* =>
     'sequence' name=ID
-        (=> participant+=Participant (=> ',' participant+=Participant)*)?
+        participant+=Participant (=> ',' participant+=Participant)*
         transition+=Transition*
     'end'
 ;
 
 // e.g.: Node
 Participant:
-    name=ID
+    name=ID (':' classifier=[cls::Entity|ExtendedID])?
 ;
 
 Transition:
@@ -106,20 +107,20 @@ Message:
 ;
 
 FoundMessage:
-    'calls' (targetParticipant=ID '.')? => name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? 
+    'calls' (targetParticipant=[Participant|ID] '.')? => name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? 
     return=ReturnMessage?
 ;
 
 // e.g.: Handler calls Node.getChild()
 CallMessage:
-    sourceParticipant=ID 'calls' (targetParticipant=ID '.')? => name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? 
+    sourceParticipant=[Participant|ID] 'calls' (targetParticipant=[Participant|ID] '.')? => name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? 
     return=ReturnMessage?
 ;
 
 // e.g.: new Node
 // TODO: implicitValues? "new Node(null, 5, 8)" -- child, x, y
 NewMessage:
-    sourceParticipant=ID 'creates' targetParticipant=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
+    sourceParticipant=[Participant|ID] 'creates' targetParticipant=[Participant|ID] (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
 ;
 
 // e.g.: return childs
@@ -128,12 +129,12 @@ ReturnMessage:
 ;
 
 DeleteMessage:
-    sourceParticipant=ID 'destroys' targetParticipant=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
+    sourceParticipant=[Participant|ID] 'destroys' targetParticipant=[Participant|ID] (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
 ;
 
 //TODO: rewrite this rule, do we really need begin-end?
 SelfMessage:
-    sourceParticipant=ID 'self' '.' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? return=ReturnMessage?
+    sourceParticipant=[Participant|ID] 'self' '.' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? return=ReturnMessage?
     (=>  'begin'
         transition+=Transition*
     'end')?
@@ -145,7 +146,7 @@ Parameter:
 ;
 
 Reference:
-    type=ID array+=Array*
+    type=[cls::Entity|ExtendedID] array+=Array*
 ;
 
 Array:

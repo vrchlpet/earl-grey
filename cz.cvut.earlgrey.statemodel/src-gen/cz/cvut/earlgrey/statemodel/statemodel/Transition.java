@@ -81,29 +81,29 @@ public interface Transition extends EObject
   void setAction(String value);
 
   /**
-   * Returns the value of the '<em><b>State</b></em>' attribute.
+   * Returns the value of the '<em><b>State</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>State</em>' attribute isn't clear,
+   * If the meaning of the '<em>State</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>State</em>' attribute.
-   * @see #setState(String)
+   * @return the value of the '<em>State</em>' reference.
+   * @see #setState(State)
    * @see cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage#getTransition_State()
    * @model
    * @generated
    */
-  String getState();
+  State getState();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getState <em>State</em>}' attribute.
+   * Sets the value of the '{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getState <em>State</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>State</em>' attribute.
+   * @param value the new value of the '<em>State</em>' reference.
    * @see #getState()
    * @generated
    */
-  void setState(String value);
+  void setState(State value);
 
 } // Transition

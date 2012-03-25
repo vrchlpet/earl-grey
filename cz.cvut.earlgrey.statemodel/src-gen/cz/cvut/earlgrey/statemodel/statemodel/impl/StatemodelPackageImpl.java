@@ -8,6 +8,8 @@ package cz.cvut.earlgrey.statemodel.statemodel.impl;
 
 import cz.cvut.earlgrey.annotation.annotation.AnnotationPackage;
 
+import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
+
 import cz.cvut.earlgrey.statemodel.statemodel.Activity;
 import cz.cvut.earlgrey.statemodel.statemodel.Element;
 import cz.cvut.earlgrey.statemodel.statemodel.Import;
@@ -148,7 +150,7 @@ public class StatemodelPackageImpl extends EPackageImpl implements StatemodelPac
     isInited = true;
 
     // Initialize simple dependencies
-    AnnotationPackage.eINSTANCE.eClass();
+    ClassmodelPackage.eINSTANCE.eClass();
 
     // Create package meta-data objects
     theStatemodelPackage.createPackageContents();
@@ -240,16 +242,6 @@ public class StatemodelPackageImpl extends EPackageImpl implements StatemodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getElement_Name()
-  {
-    return (EAttribute)elementEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getStatemachine()
   {
     return statemachineEClass;
@@ -260,9 +252,19 @@ public class StatemodelPackageImpl extends EPackageImpl implements StatemodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getStatemachine_State()
+  public EReference getStatemachine_Name()
   {
     return (EReference)statemachineEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getStatemachine_State()
+  {
+    return (EReference)statemachineEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -290,9 +292,19 @@ public class StatemodelPackageImpl extends EPackageImpl implements StatemodelPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getState_Name()
+  {
+    return (EAttribute)stateEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getState_Element()
   {
-    return (EReference)stateEClass.getEStructuralFeatures().get(1);
+    return (EReference)stateEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -370,9 +382,9 @@ public class StatemodelPackageImpl extends EPackageImpl implements StatemodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTransition_State()
+  public EReference getTransition_State()
   {
-    return (EAttribute)transitionEClass.getEStructuralFeatures().get(2);
+    return (EReference)transitionEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -424,13 +436,14 @@ public class StatemodelPackageImpl extends EPackageImpl implements StatemodelPac
 
     elementEClass = createEClass(ELEMENT);
     createEReference(elementEClass, ELEMENT__ANNOTATION);
-    createEAttribute(elementEClass, ELEMENT__NAME);
 
     statemachineEClass = createEClass(STATEMACHINE);
+    createEReference(statemachineEClass, STATEMACHINE__NAME);
     createEReference(statemachineEClass, STATEMACHINE__STATE);
 
     stateEClass = createEClass(STATE);
     createEAttribute(stateEClass, STATE__TYPE);
+    createEAttribute(stateEClass, STATE__NAME);
     createEReference(stateEClass, STATE__ELEMENT);
 
     activityEClass = createEClass(ACTIVITY);
@@ -442,7 +455,7 @@ public class StatemodelPackageImpl extends EPackageImpl implements StatemodelPac
     transitionEClass = createEClass(TRANSITION);
     createEAttribute(transitionEClass, TRANSITION__GUARD);
     createEAttribute(transitionEClass, TRANSITION__ACTION);
-    createEAttribute(transitionEClass, TRANSITION__STATE);
+    createEReference(transitionEClass, TRANSITION__STATE);
 
     // Create enums
     stateTypeEEnum = createEEnum(STATE_TYPE);
@@ -474,6 +487,7 @@ public class StatemodelPackageImpl extends EPackageImpl implements StatemodelPac
 
     // Obtain other dependent packages
     AnnotationPackage theAnnotationPackage = (AnnotationPackage)EPackage.Registry.INSTANCE.getEPackage(AnnotationPackage.eNS_URI);
+    ClassmodelPackage theClassmodelPackage = (ClassmodelPackage)EPackage.Registry.INSTANCE.getEPackage(ClassmodelPackage.eNS_URI);
 
     // Create type parameters
 
@@ -495,13 +509,14 @@ public class StatemodelPackageImpl extends EPackageImpl implements StatemodelPac
 
     initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getElement_Annotation(), theAnnotationPackage.getAnnotation(), null, "annotation", null, 0, -1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(statemachineEClass, Statemachine.class, "Statemachine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getStatemachine_Name(), theClassmodelPackage.getEntity(), null, "name", null, 0, 1, Statemachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getStatemachine_State(), this.getState(), null, "state", null, 0, -1, Statemachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getState_Type(), this.getStateType(), "type", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getState_Name(), ecorePackage.getEString(), "name", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getState_Element(), this.getActivity(), null, "element", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(activityEClass, Activity.class, "Activity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -513,7 +528,7 @@ public class StatemodelPackageImpl extends EPackageImpl implements StatemodelPac
     initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTransition_Guard(), ecorePackage.getEString(), "guard", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTransition_Action(), ecorePackage.getEString(), "action", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTransition_State(), ecorePackage.getEString(), "state", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTransition_State(), this.getState(), null, "state", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(stateTypeEEnum, StateType.class, "StateType");

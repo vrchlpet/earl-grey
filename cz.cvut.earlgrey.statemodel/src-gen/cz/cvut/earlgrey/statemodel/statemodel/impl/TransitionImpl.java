@@ -6,12 +6,14 @@
  */
 package cz.cvut.earlgrey.statemodel.statemodel.impl;
 
+import cz.cvut.earlgrey.statemodel.statemodel.State;
 import cz.cvut.earlgrey.statemodel.statemodel.StatemodelPackage;
 import cz.cvut.earlgrey.statemodel.statemodel.Transition;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -74,24 +76,14 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   protected String action = ACTION_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getState() <em>State</em>}' attribute.
+   * The cached value of the '{@link #getState() <em>State</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getState()
    * @generated
    * @ordered
    */
-  protected static final String STATE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getState() <em>State</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getState()
-   * @generated
-   * @ordered
-   */
-  protected String state = STATE_EDEFAULT;
+  protected State state;
 
   /**
    * <!-- begin-user-doc -->
@@ -165,7 +157,27 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getState()
+  public State getState()
+  {
+    if (state != null && state.eIsProxy())
+    {
+      InternalEObject oldState = (InternalEObject)state;
+      state = (State)eResolveProxy(oldState);
+      if (state != oldState)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatemodelPackage.TRANSITION__STATE, oldState, state));
+      }
+    }
+    return state;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public State basicGetState()
   {
     return state;
   }
@@ -175,9 +187,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setState(String newState)
+  public void setState(State newState)
   {
-    String oldState = state;
+    State oldState = state;
     state = newState;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, StatemodelPackage.TRANSITION__STATE, oldState, state));
@@ -198,7 +210,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
       case StatemodelPackage.TRANSITION__ACTION:
         return getAction();
       case StatemodelPackage.TRANSITION__STATE:
-        return getState();
+        if (resolve) return getState();
+        return basicGetState();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -220,7 +233,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
         setAction((String)newValue);
         return;
       case StatemodelPackage.TRANSITION__STATE:
-        setState((String)newValue);
+        setState((State)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -243,7 +256,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
         setAction(ACTION_EDEFAULT);
         return;
       case StatemodelPackage.TRANSITION__STATE:
-        setState(STATE_EDEFAULT);
+        setState((State)null);
         return;
     }
     super.eUnset(featureID);
@@ -264,7 +277,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
       case StatemodelPackage.TRANSITION__ACTION:
         return ACTION_EDEFAULT == null ? action != null : !ACTION_EDEFAULT.equals(action);
       case StatemodelPackage.TRANSITION__STATE:
-        return STATE_EDEFAULT == null ? state != null : !STATE_EDEFAULT.equals(state);
+        return state != null;
     }
     return super.eIsSet(featureID);
   }
@@ -284,8 +297,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
     result.append(guard);
     result.append(", action: ");
     result.append(action);
-    result.append(", state: ");
-    result.append(state);
     result.append(')');
     return result.toString();
   }

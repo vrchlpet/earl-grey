@@ -15,9 +15,9 @@ Workflow {
         scanClassPath = true
         platformUri = "${runtimeProject}/.."
         //registerGeneratedEPackage = "org.eclipse.xtext.xbase.XbasePackage"
-//        registerGeneratedEPackage = "cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage"
+        registerGeneratedEPackage = "cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage"
 //        //FIXME: fix genmodel path to not contain /src-gen/
-//        registerGenModelFile = "platform:/resource/cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/Classmodel.genmodel"
+        registerGenModelFile = "platform:/resource/cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/Classmodel.genmodel"
         registerGeneratedEPackage = "cz.cvut.earlgrey.annotation.annotation.AnnotationPackage"
         registerGenModelFile = "platform:/resource/cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/Annotation.genmodel"
     }

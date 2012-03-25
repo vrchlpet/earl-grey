@@ -6,7 +6,7 @@
     modelPluginID="cz.cvut.earlgrey.statemodel" forceOverwrite="true" modelName="Statemodel"
     updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="cz.cvut.earlgrey.statemodel.edit"
-    editorPluginID="cz.cvut.earlgrey.statemodel.editor" usedGenPackages="../../../../../../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/Annotation.genmodel#//annotation">
+    editorPluginID="cz.cvut.earlgrey.statemodel.editor" usedGenPackages="../../../../../../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/Annotation.genmodel#//annotation ../../../../../../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/Classmodel.genmodel#//classmodel">
   <genPackages prefix="Statemodel" basePackage="cz.cvut.earlgrey.statemodel" disposableProviderFactory="true"
       ecorePackage="Statemodel.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Statemodel.ecore#//StateType">
@@ -23,13 +23,14 @@
     </genClasses>
     <genClasses ecoreClass="Statemodel.ecore#//Element">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Statemodel.ecore#//Element/annotation"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//Element/name"/>
     </genClasses>
     <genClasses ecoreClass="Statemodel.ecore#//Statemachine">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Statemodel.ecore#//Statemachine/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Statemodel.ecore#//Statemachine/state"/>
     </genClasses>
     <genClasses ecoreClass="Statemodel.ecore#//State">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//State/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//State/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Statemodel.ecore#//State/element"/>
     </genClasses>
     <genClasses ecoreClass="Statemodel.ecore#//Activity"/>
@@ -40,7 +41,7 @@
     <genClasses ecoreClass="Statemodel.ecore#//Transition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//Transition/guard"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//Transition/action"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Statemodel.ecore#//Transition/state"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Statemodel.ecore#//Transition/state"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -100,7 +100,8 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cAnnotationAnnotationParserRuleCall_0_0 = (RuleCall)cAnnotationAssignment_0.eContents().get(0);
 		private final Keyword cStatemachineKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameCompositeIDParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final CrossReference cNameEntityCrossReference_2_0 = (CrossReference)cNameAssignment_2.eContents().get(0);
+		private final RuleCall cNameEntityExtendedIDParserRuleCall_2_0_1 = (RuleCall)cNameEntityCrossReference_2_0.eContents().get(1);
 		private final Assignment cStateAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cStateStateParserRuleCall_3_0 = (RuleCall)cStateAssignment_3.eContents().get(0);
 		private final Keyword cEndKeyword_4 = (Keyword)cGroup.eContents().get(4);
@@ -108,10 +109,10 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		//// e.g.: statemachine Node end
 		//
 		//Statemachine:
-		//	annotation+=Annotation* => "statemachine" name=CompositeID state+=State* "end";
+		//	annotation+=Annotation* => "statemachine" name=[cls::Entity|ExtendedID] state+=State* "end";
 		public ParserRule getRule() { return rule; }
 
-		//annotation+=Annotation* => "statemachine" name=CompositeID state+=State* "end"
+		//annotation+=Annotation* => "statemachine" name=[cls::Entity|ExtendedID] state+=State* "end"
 		public Group getGroup() { return cGroup; }
 
 		//annotation+=Annotation*
@@ -123,11 +124,14 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		//=> "statemachine"
 		public Keyword getStatemachineKeyword_1() { return cStatemachineKeyword_1; }
 
-		//name=CompositeID
+		//name=[cls::Entity|ExtendedID]
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 
-		//CompositeID
-		public RuleCall getNameCompositeIDParserRuleCall_2_0() { return cNameCompositeIDParserRuleCall_2_0; }
+		//[cls::Entity|ExtendedID]
+		public CrossReference getNameEntityCrossReference_2_0() { return cNameEntityCrossReference_2_0; }
+
+		//ExtendedID
+		public RuleCall getNameEntityExtendedIDParserRuleCall_2_0_1() { return cNameEntityExtendedIDParserRuleCall_2_0_1; }
 
 		//state+=State*
 		public Assignment getStateAssignment_3() { return cStateAssignment_3; }
@@ -260,13 +264,14 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cActionValueWithSpacesParserRuleCall_1_0_0 = (RuleCall)cActionAssignment_1_0.eContents().get(0);
 		private final RuleCall cARROWTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		private final Assignment cStateAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cStateCompositeIDParserRuleCall_3_0 = (RuleCall)cStateAssignment_3.eContents().get(0);
+		private final CrossReference cStateStateCrossReference_3_0 = (CrossReference)cStateAssignment_3.eContents().get(0);
+		private final RuleCall cStateStateCompositeIDParserRuleCall_3_0_1 = (RuleCall)cStateStateCrossReference_3_0.eContents().get(1);
 		
 		//Transition:
-		//	("if" guard=ValueWithSpaces "then")? => (action=ValueWithSpaces)? => ARROW => state=CompositeID;
+		//	("if" guard=ValueWithSpaces "then")? => (action=ValueWithSpaces)? => ARROW => state=[State|CompositeID];
 		public ParserRule getRule() { return rule; }
 
-		//("if" guard=ValueWithSpaces "then")? => (action=ValueWithSpaces)? => ARROW => state=CompositeID
+		//("if" guard=ValueWithSpaces "then")? => (action=ValueWithSpaces)? => ARROW => state=[State|CompositeID]
 		public Group getGroup() { return cGroup; }
 
 		//("if" guard=ValueWithSpaces "then")?
@@ -296,11 +301,14 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		//=> ARROW
 		public RuleCall getARROWTerminalRuleCall_2() { return cARROWTerminalRuleCall_2; }
 
-		//=> state=CompositeID
+		//=> state=[State|CompositeID]
 		public Assignment getStateAssignment_3() { return cStateAssignment_3; }
 
+		//[State|CompositeID]
+		public CrossReference getStateStateCrossReference_3_0() { return cStateStateCrossReference_3_0; }
+
 		//CompositeID
-		public RuleCall getStateCompositeIDParserRuleCall_3_0() { return cStateCompositeIDParserRuleCall_3_0; }
+		public RuleCall getStateStateCompositeIDParserRuleCall_3_0_1() { return cStateStateCompositeIDParserRuleCall_3_0_1; }
 	}
 
 	public class ValueWithSpacesElements extends AbstractParserRuleElementFinder {
@@ -464,7 +472,7 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	//// e.g.: statemachine Node end
 	//
 	//Statemachine:
-	//	annotation+=Annotation* => "statemachine" name=CompositeID state+=State* "end";
+	//	annotation+=Annotation* => "statemachine" name=[cls::Entity|ExtendedID] state+=State* "end";
 	public StatemachineElements getStatemachineAccess() {
 		return (pStatemachine != null) ? pStatemachine : (pStatemachine = new StatemachineElements());
 	}
@@ -508,7 +516,7 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Transition:
-	//	("if" guard=ValueWithSpaces "then")? => (action=ValueWithSpaces)? => ARROW => state=CompositeID;
+	//	("if" guard=ValueWithSpaces "then")? => (action=ValueWithSpaces)? => ARROW => state=[State|CompositeID];
 	public TransitionElements getTransitionAccess() {
 		return (pTransition != null) ? pTransition : (pTransition = new TransitionElements());
 	}
@@ -572,6 +580,7 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	} 
 
 	//// e.g.: @Generate(Java)
+	//
 	//Annotation:
 	//	"@" name=ExtendedID ("(" parameter+=Parameter ("," parameter+=Parameter)* ")")?;
 	public AnnotationGrammarAccess.AnnotationElements getAnnotationAccess() {
@@ -593,6 +602,7 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// e.g.: @Generate(language = Java)
+	//
 	//AssignParameter returns Parameter:
 	//	name=ExtendedID "=" value=Value;
 	public AnnotationGrammarAccess.AssignParameterElements getAssignParameterAccess() {
@@ -604,6 +614,7 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// e.g.: @Generate(Java)
+	//
 	//ValueParameter returns Parameter:
 	//	value=Value;
 	public AnnotationGrammarAccess.ValueParameterElements getValueParameterAccess() {
@@ -615,6 +626,7 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// e.g.: null
+	//
 	//Value returns ecore::EString:
 	//	Integer | STRING | ExtendedID | BOOLEAN | NULL | Real;
 	public AnnotationGrammarAccess.ValueElements getValueAccess() {
@@ -666,6 +678,7 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// FIXME: http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B
+	//
 	//terminal OPERATOR:
 	//	"++" | "--" | "==" | ">=" | "<=" | "!=" | "<>" | "||" | "&&" | "-=" | "+=" | "=" | ">>" | "<<" | "|=";
 	public TerminalRule getOPERATORRule() {

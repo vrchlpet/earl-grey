@@ -256,17 +256,17 @@ ruleStatemachine returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getStatemachineAccess().getNameCompositeIDParserRuleCall_2_0()); 
-	    }
-		lv_name_2_0=ruleCompositeID		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getStatemachineRule());
+		  /* */ 
+		}
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getStatemachineRule());
 	        }
-       		set(
-       			$current, 
-       			"name",
-        		lv_name_2_0, 
-        		"CompositeID");
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getStatemachineAccess().getNameEntityCrossReference_2_0()); 
+	    }
+		ruleExtendedID		{ 
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -580,22 +580,22 @@ ruleValueWithSpaces
     }
 )((
 (
-ruleCompositeID
+		ruleCompositeID
 )
 )=>
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTransitionAccess().getStateCompositeIDParserRuleCall_3_0()); 
-	    }
-		lv_state_5_0=ruleCompositeID		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getTransitionRule());
+		  /* */ 
+		}
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getTransitionRule());
 	        }
-       		set(
-       			$current, 
-       			"state",
-        		lv_state_5_0, 
-        		"CompositeID");
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getTransitionAccess().getStateStateCrossReference_3_0()); 
+	    }
+		ruleCompositeID		{ 
 	        afterParserOrEnumRuleCall();
 	    }
 

@@ -6,6 +6,7 @@
  */
 package cz.cvut.earlgrey.sequencemodel.sequencemodel.impl;
 
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
@@ -45,24 +46,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class SelfMessageImpl extends MessageImpl implements SelfMessage
 {
   /**
-   * The default value of the '{@link #getSourceParticipant() <em>Source Participant</em>}' attribute.
+   * The cached value of the '{@link #getSourceParticipant() <em>Source Participant</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getSourceParticipant()
    * @generated
    * @ordered
    */
-  protected static final String SOURCE_PARTICIPANT_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getSourceParticipant() <em>Source Participant</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSourceParticipant()
-   * @generated
-   * @ordered
-   */
-  protected String sourceParticipant = SOURCE_PARTICIPANT_EDEFAULT;
+  protected Participant sourceParticipant;
 
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -130,7 +121,27 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getSourceParticipant()
+  public Participant getSourceParticipant()
+  {
+    if (sourceParticipant != null && sourceParticipant.eIsProxy())
+    {
+      InternalEObject oldSourceParticipant = (InternalEObject)sourceParticipant;
+      sourceParticipant = (Participant)eResolveProxy(oldSourceParticipant);
+      if (sourceParticipant != oldSourceParticipant)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SequencemodelPackage.SELF_MESSAGE__SOURCE_PARTICIPANT, oldSourceParticipant, sourceParticipant));
+      }
+    }
+    return sourceParticipant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Participant basicGetSourceParticipant()
   {
     return sourceParticipant;
   }
@@ -140,9 +151,9 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSourceParticipant(String newSourceParticipant)
+  public void setSourceParticipant(Participant newSourceParticipant)
   {
-    String oldSourceParticipant = sourceParticipant;
+    Participant oldSourceParticipant = sourceParticipant;
     sourceParticipant = newSourceParticipant;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.SELF_MESSAGE__SOURCE_PARTICIPANT, oldSourceParticipant, sourceParticipant));
@@ -262,7 +273,8 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
     switch (featureID)
     {
       case SequencemodelPackage.SELF_MESSAGE__SOURCE_PARTICIPANT:
-        return getSourceParticipant();
+        if (resolve) return getSourceParticipant();
+        return basicGetSourceParticipant();
       case SequencemodelPackage.SELF_MESSAGE__NAME:
         return getName();
       case SequencemodelPackage.SELF_MESSAGE__RETURN:
@@ -285,7 +297,7 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
     switch (featureID)
     {
       case SequencemodelPackage.SELF_MESSAGE__SOURCE_PARTICIPANT:
-        setSourceParticipant((String)newValue);
+        setSourceParticipant((Participant)newValue);
         return;
       case SequencemodelPackage.SELF_MESSAGE__NAME:
         setName((String)newValue);
@@ -312,7 +324,7 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
     switch (featureID)
     {
       case SequencemodelPackage.SELF_MESSAGE__SOURCE_PARTICIPANT:
-        setSourceParticipant(SOURCE_PARTICIPANT_EDEFAULT);
+        setSourceParticipant((Participant)null);
         return;
       case SequencemodelPackage.SELF_MESSAGE__NAME:
         setName(NAME_EDEFAULT);
@@ -338,7 +350,7 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
     switch (featureID)
     {
       case SequencemodelPackage.SELF_MESSAGE__SOURCE_PARTICIPANT:
-        return SOURCE_PARTICIPANT_EDEFAULT == null ? sourceParticipant != null : !SOURCE_PARTICIPANT_EDEFAULT.equals(sourceParticipant);
+        return sourceParticipant != null;
       case SequencemodelPackage.SELF_MESSAGE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case SequencemodelPackage.SELF_MESSAGE__RETURN:
@@ -360,9 +372,7 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (sourceParticipant: ");
-    result.append(sourceParticipant);
-    result.append(", name: ");
+    result.append(" (name: ");
     result.append(name);
     result.append(')');
     return result.toString();

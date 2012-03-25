@@ -2545,8 +2545,12 @@ rule__Statemachine__NameAssignment_2
     }
 :
 (
-{ before(grammarAccess.getStatemachineAccess().getNameCompositeIDParserRuleCall_2_0()); }
-	ruleCompositeID{ after(grammarAccess.getStatemachineAccess().getNameCompositeIDParserRuleCall_2_0()); }
+{ before(grammarAccess.getStatemachineAccess().getNameEntityCrossReference_2_0()); }
+(
+{ before(grammarAccess.getStatemachineAccess().getNameEntityExtendedIDParserRuleCall_2_0_1()); }
+	ruleExtendedID{ after(grammarAccess.getStatemachineAccess().getNameEntityExtendedIDParserRuleCall_2_0_1()); }
+)
+{ after(grammarAccess.getStatemachineAccess().getNameEntityCrossReference_2_0()); }
 )
 
 ;
@@ -2695,8 +2699,12 @@ rule__Transition__StateAssignment_3
     }
 :
 (
-{ before(grammarAccess.getTransitionAccess().getStateCompositeIDParserRuleCall_3_0()); }
-	ruleCompositeID{ after(grammarAccess.getTransitionAccess().getStateCompositeIDParserRuleCall_3_0()); }
+{ before(grammarAccess.getTransitionAccess().getStateStateCrossReference_3_0()); }
+(
+{ before(grammarAccess.getTransitionAccess().getStateStateCompositeIDParserRuleCall_3_0_1()); }
+	ruleCompositeID{ after(grammarAccess.getTransitionAccess().getStateStateCompositeIDParserRuleCall_3_0_1()); }
+)
+{ after(grammarAccess.getTransitionAccess().getStateStateCrossReference_3_0()); }
 )
 
 ;

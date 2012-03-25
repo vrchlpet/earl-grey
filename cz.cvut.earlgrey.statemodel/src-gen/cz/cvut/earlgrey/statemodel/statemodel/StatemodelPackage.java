@@ -146,22 +146,13 @@ public interface StatemodelPackage extends EPackage
   int ELEMENT__ANNOTATION = 0;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ELEMENT__NAME = 1;
-
-  /**
    * The number of structural features of the '<em>Element</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ELEMENT_FEATURE_COUNT = 2;
+  int ELEMENT_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemachineImpl <em>Statemachine</em>}' class.
@@ -183,13 +174,13 @@ public interface StatemodelPackage extends EPackage
   int STATEMACHINE__ANNOTATION = ELEMENT__ANNOTATION;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The feature id for the '<em><b>Name</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATEMACHINE__NAME = ELEMENT__NAME;
+  int STATEMACHINE__NAME = ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>State</b></em>' containment reference list.
@@ -198,7 +189,7 @@ public interface StatemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATEMACHINE__STATE = ELEMENT_FEATURE_COUNT + 0;
+  int STATEMACHINE__STATE = ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Statemachine</em>' class.
@@ -207,7 +198,7 @@ public interface StatemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATEMACHINE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
+  int STATEMACHINE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StateImpl <em>State</em>}' class.
@@ -229,15 +220,6 @@ public interface StatemodelPackage extends EPackage
   int STATE__ANNOTATION = ELEMENT__ANNOTATION;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATE__NAME = ELEMENT__NAME;
-
-  /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -247,13 +229,22 @@ public interface StatemodelPackage extends EPackage
   int STATE__TYPE = ELEMENT_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATE__NAME = ELEMENT_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Element</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATE__ELEMENT = ELEMENT_FEATURE_COUNT + 1;
+  int STATE__ELEMENT = ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>State</em>' class.
@@ -262,7 +253,7 @@ public interface StatemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 2;
+  int STATE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.statemodel.statemodel.impl.ActivityImpl <em>Activity</em>}' class.
@@ -349,7 +340,7 @@ public interface StatemodelPackage extends EPackage
   int TRANSITION__ACTION = 1;
 
   /**
-   * The feature id for the '<em><b>State</b></em>' attribute.
+   * The feature id for the '<em><b>State</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -452,17 +443,6 @@ public interface StatemodelPackage extends EPackage
   EReference getElement_Annotation();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.statemodel.statemodel.Element#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see cz.cvut.earlgrey.statemodel.statemodel.Element#getName()
-   * @see #getElement()
-   * @generated
-   */
-  EAttribute getElement_Name();
-
-  /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.statemodel.statemodel.Statemachine <em>Statemachine</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -471,6 +451,17 @@ public interface StatemodelPackage extends EPackage
    * @generated
    */
   EClass getStatemachine();
+
+  /**
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.statemodel.statemodel.Statemachine#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Name</em>'.
+   * @see cz.cvut.earlgrey.statemodel.statemodel.Statemachine#getName()
+   * @see #getStatemachine()
+   * @generated
+   */
+  EReference getStatemachine_Name();
 
   /**
    * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.statemodel.statemodel.Statemachine#getState <em>State</em>}'.
@@ -503,6 +494,17 @@ public interface StatemodelPackage extends EPackage
    * @generated
    */
   EAttribute getState_Type();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.statemodel.statemodel.State#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see cz.cvut.earlgrey.statemodel.statemodel.State#getName()
+   * @see #getState()
+   * @generated
+   */
+  EAttribute getState_Name();
 
   /**
    * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.statemodel.statemodel.State#getElement <em>Element</em>}'.
@@ -590,15 +592,15 @@ public interface StatemodelPackage extends EPackage
   EAttribute getTransition_Action();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getState <em>State</em>}'.
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.statemodel.statemodel.Transition#getState <em>State</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>State</em>'.
+   * @return the meta object for the reference '<em>State</em>'.
    * @see cz.cvut.earlgrey.statemodel.statemodel.Transition#getState()
    * @see #getTransition()
    * @generated
    */
-  EAttribute getTransition_State();
+  EReference getTransition_State();
 
   /**
    * Returns the meta object for enum '{@link cz.cvut.earlgrey.statemodel.statemodel.StateType <em>State Type</em>}'.
@@ -696,14 +698,6 @@ public interface StatemodelPackage extends EPackage
     EReference ELEMENT__ANNOTATION = eINSTANCE.getElement_Annotation();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ELEMENT__NAME = eINSTANCE.getElement_Name();
-
-    /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StatemachineImpl <em>Statemachine</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -712,6 +706,14 @@ public interface StatemodelPackage extends EPackage
      * @generated
      */
     EClass STATEMACHINE = eINSTANCE.getStatemachine();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STATEMACHINE__NAME = eINSTANCE.getStatemachine_Name();
 
     /**
      * The meta object literal for the '<em><b>State</b></em>' containment reference list feature.
@@ -738,6 +740,14 @@ public interface StatemodelPackage extends EPackage
      * @generated
      */
     EAttribute STATE__TYPE = eINSTANCE.getState_Type();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STATE__NAME = eINSTANCE.getState_Name();
 
     /**
      * The meta object literal for the '<em><b>Element</b></em>' containment reference list feature.
@@ -810,12 +820,12 @@ public interface StatemodelPackage extends EPackage
     EAttribute TRANSITION__ACTION = eINSTANCE.getTransition_Action();
 
     /**
-     * The meta object literal for the '<em><b>State</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>State</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TRANSITION__STATE = eINSTANCE.getTransition_State();
+    EReference TRANSITION__STATE = eINSTANCE.getTransition_State();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.statemodel.statemodel.StateType <em>State Type</em>}' enum.

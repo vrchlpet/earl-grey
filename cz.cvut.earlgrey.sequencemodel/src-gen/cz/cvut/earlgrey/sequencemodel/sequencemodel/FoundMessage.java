@@ -28,30 +28,30 @@ package cz.cvut.earlgrey.sequencemodel.sequencemodel;
 public interface FoundMessage extends Message
 {
   /**
-   * Returns the value of the '<em><b>Target Participant</b></em>' attribute.
+   * Returns the value of the '<em><b>Target Participant</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Target Participant</em>' attribute isn't clear,
+   * If the meaning of the '<em>Target Participant</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Target Participant</em>' attribute.
-   * @see #setTargetParticipant(String)
+   * @return the value of the '<em>Target Participant</em>' reference.
+   * @see #setTargetParticipant(Participant)
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getFoundMessage_TargetParticipant()
    * @model
    * @generated
    */
-  String getTargetParticipant();
+  Participant getTargetParticipant();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.FoundMessage#getTargetParticipant <em>Target Participant</em>}' attribute.
+   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.FoundMessage#getTargetParticipant <em>Target Participant</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Target Participant</em>' attribute.
+   * @param value the new value of the '<em>Target Participant</em>' reference.
    * @see #getTargetParticipant()
    * @generated
    */
-  void setTargetParticipant(String value);
+  void setTargetParticipant(Participant value);
 
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.

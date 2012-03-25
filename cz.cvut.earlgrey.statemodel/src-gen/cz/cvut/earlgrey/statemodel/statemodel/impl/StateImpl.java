@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StateImpl#getType <em>Type</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StateImpl#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.statemodel.statemodel.impl.StateImpl#getElement <em>Element</em>}</li>
  * </ul>
  * </p>
@@ -61,6 +62,26 @@ public class StateImpl extends ElementImpl implements State
    * @ordered
    */
   protected StateType type = TYPE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getElement() <em>Element</em>}' containment reference list.
@@ -121,6 +142,29 @@ public class StateImpl extends ElementImpl implements State
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, StatemodelPackage.STATE__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<Activity> getElement()
   {
     if (element == null)
@@ -158,6 +202,8 @@ public class StateImpl extends ElementImpl implements State
     {
       case StatemodelPackage.STATE__TYPE:
         return getType();
+      case StatemodelPackage.STATE__NAME:
+        return getName();
       case StatemodelPackage.STATE__ELEMENT:
         return getElement();
     }
@@ -177,6 +223,9 @@ public class StateImpl extends ElementImpl implements State
     {
       case StatemodelPackage.STATE__TYPE:
         setType((StateType)newValue);
+        return;
+      case StatemodelPackage.STATE__NAME:
+        setName((String)newValue);
         return;
       case StatemodelPackage.STATE__ELEMENT:
         getElement().clear();
@@ -199,6 +248,9 @@ public class StateImpl extends ElementImpl implements State
       case StatemodelPackage.STATE__TYPE:
         setType(TYPE_EDEFAULT);
         return;
+      case StatemodelPackage.STATE__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case StatemodelPackage.STATE__ELEMENT:
         getElement().clear();
         return;
@@ -218,6 +270,8 @@ public class StateImpl extends ElementImpl implements State
     {
       case StatemodelPackage.STATE__TYPE:
         return type != TYPE_EDEFAULT;
+      case StatemodelPackage.STATE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case StatemodelPackage.STATE__ELEMENT:
         return element != null && !element.isEmpty();
     }
@@ -237,6 +291,8 @@ public class StateImpl extends ElementImpl implements State
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (type: ");
     result.append(type);
+    result.append(", name: ");
+    result.append(name);
     result.append(')');
     return result.toString();
   }

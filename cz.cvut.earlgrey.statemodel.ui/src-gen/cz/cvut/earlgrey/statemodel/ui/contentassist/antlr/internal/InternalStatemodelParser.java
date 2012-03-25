@@ -7453,28 +7453,40 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Statemachine__NameAssignment_2"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2542:1: rule__Statemachine__NameAssignment_2 : ( ruleCompositeID ) ;
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2542:1: rule__Statemachine__NameAssignment_2 : ( ( ruleExtendedID ) ) ;
     public final void rule__Statemachine__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2546:1: ( ( ruleCompositeID ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2547:1: ( ruleCompositeID )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2546:1: ( ( ( ruleExtendedID ) ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2547:1: ( ( ruleExtendedID ) )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2547:1: ( ruleCompositeID )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2548:1: ruleCompositeID
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2547:1: ( ( ruleExtendedID ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2548:1: ( ruleExtendedID )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getStatemachineAccess().getNameCompositeIDParserRuleCall_2_0()); 
+               before(grammarAccess.getStatemachineAccess().getNameEntityCrossReference_2_0()); 
             }
-            pushFollow(FOLLOW_ruleCompositeID_in_rule__Statemachine__NameAssignment_25154);
-            ruleCompositeID();
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2549:1: ( ruleExtendedID )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2550:1: ruleExtendedID
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getStatemachineAccess().getNameEntityExtendedIDParserRuleCall_2_0_1()); 
+            }
+            pushFollow(FOLLOW_ruleExtendedID_in_rule__Statemachine__NameAssignment_25158);
+            ruleExtendedID();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getStatemachineAccess().getNameCompositeIDParserRuleCall_2_0()); 
+               after(grammarAccess.getStatemachineAccess().getNameEntityExtendedIDParserRuleCall_2_0_1()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getStatemachineAccess().getNameEntityCrossReference_2_0()); 
             }
 
             }
@@ -7498,22 +7510,22 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Statemachine__StateAssignment_3"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2557:1: rule__Statemachine__StateAssignment_3 : ( ruleState ) ;
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2561:1: rule__Statemachine__StateAssignment_3 : ( ruleState ) ;
     public final void rule__Statemachine__StateAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2561:1: ( ( ruleState ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2562:1: ( ruleState )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2565:1: ( ( ruleState ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2566:1: ( ruleState )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2562:1: ( ruleState )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2563:1: ruleState
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2566:1: ( ruleState )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2567:1: ruleState
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatemachineAccess().getStateStateParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleState_in_rule__Statemachine__StateAssignment_35185);
+            pushFollow(FOLLOW_ruleState_in_rule__Statemachine__StateAssignment_35193);
             ruleState();
 
             state._fsp--;
@@ -7543,22 +7555,22 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__State__AnnotationAssignment_0"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2572:1: rule__State__AnnotationAssignment_0 : ( ruleAnnotation ) ;
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2576:1: rule__State__AnnotationAssignment_0 : ( ruleAnnotation ) ;
     public final void rule__State__AnnotationAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2576:1: ( ( ruleAnnotation ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2577:1: ( ruleAnnotation )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2580:1: ( ( ruleAnnotation ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2581:1: ( ruleAnnotation )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2577:1: ( ruleAnnotation )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2578:1: ruleAnnotation
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2581:1: ( ruleAnnotation )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2582:1: ruleAnnotation
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStateAccess().getAnnotationAnnotationParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleAnnotation_in_rule__State__AnnotationAssignment_05216);
+            pushFollow(FOLLOW_ruleAnnotation_in_rule__State__AnnotationAssignment_05224);
             ruleAnnotation();
 
             state._fsp--;
@@ -7588,22 +7600,22 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__State__TypeAssignment_1"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2587:1: rule__State__TypeAssignment_1 : ( ruleStateType ) ;
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2591:1: rule__State__TypeAssignment_1 : ( ruleStateType ) ;
     public final void rule__State__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2591:1: ( ( ruleStateType ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2592:1: ( ruleStateType )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2595:1: ( ( ruleStateType ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2596:1: ( ruleStateType )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2592:1: ( ruleStateType )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2593:1: ruleStateType
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2596:1: ( ruleStateType )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2597:1: ruleStateType
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStateAccess().getTypeStateTypeEnumRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleStateType_in_rule__State__TypeAssignment_15247);
+            pushFollow(FOLLOW_ruleStateType_in_rule__State__TypeAssignment_15255);
             ruleStateType();
 
             state._fsp--;
@@ -7633,22 +7645,22 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__State__NameAssignment_2"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2602:1: rule__State__NameAssignment_2 : ( ruleCompositeID ) ;
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2606:1: rule__State__NameAssignment_2 : ( ruleCompositeID ) ;
     public final void rule__State__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2606:1: ( ( ruleCompositeID ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2607:1: ( ruleCompositeID )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2610:1: ( ( ruleCompositeID ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2611:1: ( ruleCompositeID )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2607:1: ( ruleCompositeID )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2608:1: ruleCompositeID
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2611:1: ( ruleCompositeID )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2612:1: ruleCompositeID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStateAccess().getNameCompositeIDParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleCompositeID_in_rule__State__NameAssignment_25278);
+            pushFollow(FOLLOW_ruleCompositeID_in_rule__State__NameAssignment_25286);
             ruleCompositeID();
 
             state._fsp--;
@@ -7678,22 +7690,22 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__State__ElementAssignment_3"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2617:1: rule__State__ElementAssignment_3 : ( ruleActivity ) ;
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2621:1: rule__State__ElementAssignment_3 : ( ruleActivity ) ;
     public final void rule__State__ElementAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2621:1: ( ( ruleActivity ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2622:1: ( ruleActivity )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2625:1: ( ( ruleActivity ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2626:1: ( ruleActivity )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2622:1: ( ruleActivity )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2623:1: ruleActivity
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2626:1: ( ruleActivity )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2627:1: ruleActivity
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStateAccess().getElementActivityParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleActivity_in_rule__State__ElementAssignment_35309);
+            pushFollow(FOLLOW_ruleActivity_in_rule__State__ElementAssignment_35317);
             ruleActivity();
 
             state._fsp--;
@@ -7723,22 +7735,22 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TransitionBlock__EventAssignment_0"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2632:1: rule__TransitionBlock__EventAssignment_0 : ( ruleValueWithSpaces ) ;
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2636:1: rule__TransitionBlock__EventAssignment_0 : ( ruleValueWithSpaces ) ;
     public final void rule__TransitionBlock__EventAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2636:1: ( ( ruleValueWithSpaces ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2637:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2640:1: ( ( ruleValueWithSpaces ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2641:1: ( ruleValueWithSpaces )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2637:1: ( ruleValueWithSpaces )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2638:1: ruleValueWithSpaces
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2641:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2642:1: ruleValueWithSpaces
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTransitionBlockAccess().getEventValueWithSpacesParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__TransitionBlock__EventAssignment_05340);
+            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__TransitionBlock__EventAssignment_05348);
             ruleValueWithSpaces();
 
             state._fsp--;
@@ -7768,22 +7780,22 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TransitionBlock__TransitionAssignment_2"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2647:1: rule__TransitionBlock__TransitionAssignment_2 : ( ruleTransition ) ;
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2651:1: rule__TransitionBlock__TransitionAssignment_2 : ( ruleTransition ) ;
     public final void rule__TransitionBlock__TransitionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2651:1: ( ( ruleTransition ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2652:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2655:1: ( ( ruleTransition ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2656:1: ( ruleTransition )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2652:1: ( ruleTransition )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2653:1: ruleTransition
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2656:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2657:1: ruleTransition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTransitionBlockAccess().getTransitionTransitionParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleTransition_in_rule__TransitionBlock__TransitionAssignment_25371);
+            pushFollow(FOLLOW_ruleTransition_in_rule__TransitionBlock__TransitionAssignment_25379);
             ruleTransition();
 
             state._fsp--;
@@ -7813,22 +7825,22 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Transition__GuardAssignment_0_1"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2662:1: rule__Transition__GuardAssignment_0_1 : ( ruleValueWithSpaces ) ;
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2666:1: rule__Transition__GuardAssignment_0_1 : ( ruleValueWithSpaces ) ;
     public final void rule__Transition__GuardAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2666:1: ( ( ruleValueWithSpaces ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2667:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2670:1: ( ( ruleValueWithSpaces ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2671:1: ( ruleValueWithSpaces )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2667:1: ( ruleValueWithSpaces )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2668:1: ruleValueWithSpaces
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2671:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2672:1: ruleValueWithSpaces
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTransitionAccess().getGuardValueWithSpacesParserRuleCall_0_1_0()); 
             }
-            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__Transition__GuardAssignment_0_15402);
+            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__Transition__GuardAssignment_0_15410);
             ruleValueWithSpaces();
 
             state._fsp--;
@@ -7858,22 +7870,22 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Transition__ActionAssignment_1_0"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2677:1: rule__Transition__ActionAssignment_1_0 : ( ruleValueWithSpaces ) ;
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2681:1: rule__Transition__ActionAssignment_1_0 : ( ruleValueWithSpaces ) ;
     public final void rule__Transition__ActionAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2681:1: ( ( ruleValueWithSpaces ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2682:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2685:1: ( ( ruleValueWithSpaces ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2686:1: ( ruleValueWithSpaces )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2682:1: ( ruleValueWithSpaces )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2683:1: ruleValueWithSpaces
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2686:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2687:1: ruleValueWithSpaces
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTransitionAccess().getActionValueWithSpacesParserRuleCall_1_0_0()); 
             }
-            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__Transition__ActionAssignment_1_05433);
+            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__Transition__ActionAssignment_1_05441);
             ruleValueWithSpaces();
 
             state._fsp--;
@@ -7903,28 +7915,40 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Transition__StateAssignment_3"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2692:1: rule__Transition__StateAssignment_3 : ( ruleCompositeID ) ;
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2696:1: rule__Transition__StateAssignment_3 : ( ( ruleCompositeID ) ) ;
     public final void rule__Transition__StateAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2696:1: ( ( ruleCompositeID ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2697:1: ( ruleCompositeID )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2700:1: ( ( ( ruleCompositeID ) ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2701:1: ( ( ruleCompositeID ) )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2697:1: ( ruleCompositeID )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2698:1: ruleCompositeID
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2701:1: ( ( ruleCompositeID ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2702:1: ( ruleCompositeID )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getTransitionAccess().getStateCompositeIDParserRuleCall_3_0()); 
+               before(grammarAccess.getTransitionAccess().getStateStateCrossReference_3_0()); 
             }
-            pushFollow(FOLLOW_ruleCompositeID_in_rule__Transition__StateAssignment_35464);
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2703:1: ( ruleCompositeID )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2704:1: ruleCompositeID
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getTransitionAccess().getStateStateCompositeIDParserRuleCall_3_0_1()); 
+            }
+            pushFollow(FOLLOW_ruleCompositeID_in_rule__Transition__StateAssignment_35476);
             ruleCompositeID();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getTransitionAccess().getStateCompositeIDParserRuleCall_3_0()); 
+               after(grammarAccess.getTransitionAccess().getStateStateCompositeIDParserRuleCall_3_0_1()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getTransitionAccess().getStateStateCrossReference_3_0()); 
             }
 
             }
@@ -7948,22 +7972,22 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__NameAssignment_1"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2707:1: rule__Annotation__NameAssignment_1 : ( ruleExtendedID ) ;
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2715:1: rule__Annotation__NameAssignment_1 : ( ruleExtendedID ) ;
     public final void rule__Annotation__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2711:1: ( ( ruleExtendedID ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2712:1: ( ruleExtendedID )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2719:1: ( ( ruleExtendedID ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2720:1: ( ruleExtendedID )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2712:1: ( ruleExtendedID )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2713:1: ruleExtendedID
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2720:1: ( ruleExtendedID )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2721:1: ruleExtendedID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnnotationAccess().getNameExtendedIDParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExtendedID_in_rule__Annotation__NameAssignment_15495);
+            pushFollow(FOLLOW_ruleExtendedID_in_rule__Annotation__NameAssignment_15511);
             ruleExtendedID();
 
             state._fsp--;
@@ -7993,22 +8017,22 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__ParameterAssignment_2_1"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2722:1: rule__Annotation__ParameterAssignment_2_1 : ( ruleParameter ) ;
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2730:1: rule__Annotation__ParameterAssignment_2_1 : ( ruleParameter ) ;
     public final void rule__Annotation__ParameterAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2726:1: ( ( ruleParameter ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2727:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2734:1: ( ( ruleParameter ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2735:1: ( ruleParameter )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2727:1: ( ruleParameter )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2728:1: ruleParameter
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2735:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2736:1: ruleParameter
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnnotationAccess().getParameterParameterParserRuleCall_2_1_0()); 
             }
-            pushFollow(FOLLOW_ruleParameter_in_rule__Annotation__ParameterAssignment_2_15526);
+            pushFollow(FOLLOW_ruleParameter_in_rule__Annotation__ParameterAssignment_2_15542);
             ruleParameter();
 
             state._fsp--;
@@ -8038,22 +8062,22 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__ParameterAssignment_2_2_1"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2737:1: rule__Annotation__ParameterAssignment_2_2_1 : ( ruleParameter ) ;
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2745:1: rule__Annotation__ParameterAssignment_2_2_1 : ( ruleParameter ) ;
     public final void rule__Annotation__ParameterAssignment_2_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2741:1: ( ( ruleParameter ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2742:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2749:1: ( ( ruleParameter ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2750:1: ( ruleParameter )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2742:1: ( ruleParameter )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2743:1: ruleParameter
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2750:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2751:1: ruleParameter
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnnotationAccess().getParameterParameterParserRuleCall_2_2_1_0()); 
             }
-            pushFollow(FOLLOW_ruleParameter_in_rule__Annotation__ParameterAssignment_2_2_15557);
+            pushFollow(FOLLOW_ruleParameter_in_rule__Annotation__ParameterAssignment_2_2_15573);
             ruleParameter();
 
             state._fsp--;
@@ -8083,22 +8107,22 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssignParameter__NameAssignment_0"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2752:1: rule__AssignParameter__NameAssignment_0 : ( ruleExtendedID ) ;
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2760:1: rule__AssignParameter__NameAssignment_0 : ( ruleExtendedID ) ;
     public final void rule__AssignParameter__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2756:1: ( ( ruleExtendedID ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2757:1: ( ruleExtendedID )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2764:1: ( ( ruleExtendedID ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2765:1: ( ruleExtendedID )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2757:1: ( ruleExtendedID )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2758:1: ruleExtendedID
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2765:1: ( ruleExtendedID )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2766:1: ruleExtendedID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignParameterAccess().getNameExtendedIDParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleExtendedID_in_rule__AssignParameter__NameAssignment_05588);
+            pushFollow(FOLLOW_ruleExtendedID_in_rule__AssignParameter__NameAssignment_05604);
             ruleExtendedID();
 
             state._fsp--;
@@ -8128,22 +8152,22 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssignParameter__ValueAssignment_2"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2767:1: rule__AssignParameter__ValueAssignment_2 : ( ruleValue ) ;
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2775:1: rule__AssignParameter__ValueAssignment_2 : ( ruleValue ) ;
     public final void rule__AssignParameter__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2771:1: ( ( ruleValue ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2772:1: ( ruleValue )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2779:1: ( ( ruleValue ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2780:1: ( ruleValue )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2772:1: ( ruleValue )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2773:1: ruleValue
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2780:1: ( ruleValue )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2781:1: ruleValue
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignParameterAccess().getValueValueParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleValue_in_rule__AssignParameter__ValueAssignment_25619);
+            pushFollow(FOLLOW_ruleValue_in_rule__AssignParameter__ValueAssignment_25635);
             ruleValue();
 
             state._fsp--;
@@ -8173,22 +8197,22 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ValueParameter__ValueAssignment"
-    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2782:1: rule__ValueParameter__ValueAssignment : ( ruleValue ) ;
+    // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2790:1: rule__ValueParameter__ValueAssignment : ( ruleValue ) ;
     public final void rule__ValueParameter__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2786:1: ( ( ruleValue ) )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2787:1: ( ruleValue )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2794:1: ( ( ruleValue ) )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2795:1: ( ruleValue )
             {
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2787:1: ( ruleValue )
-            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2788:1: ruleValue
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2795:1: ( ruleValue )
+            // ../cz.cvut.earlgrey.statemodel.ui/src-gen/cz/cvut/earlgrey/statemodel/ui/contentassist/antlr/internal/InternalStatemodel.g:2796:1: ruleValue
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getValueParameterAccess().getValueValueParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleValue_in_rule__ValueParameter__ValueAssignment5650);
+            pushFollow(FOLLOW_ruleValue_in_rule__ValueParameter__ValueAssignment5666);
             ruleValue();
 
             state._fsp--;
@@ -8526,7 +8550,7 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_rule__Statemachine__Group__0__Impl_in_rule__Statemachine__Group__02030 = new BitSet(new long[]{0x0000000010800000L});
     public static final BitSet FOLLOW_rule__Statemachine__Group__1_in_rule__Statemachine__Group__02033 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Statemachine__AnnotationAssignment_0_in_rule__Statemachine__Group__0__Impl2060 = new BitSet(new long[]{0x0000000010000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__1__Impl_in_rule__Statemachine__Group__12091 = new BitSet(new long[]{0x0000000000000880L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__1__Impl_in_rule__Statemachine__Group__12091 = new BitSet(new long[]{0x0000000000000800L});
     public static final BitSet FOLLOW_rule__Statemachine__Group__2_in_rule__Statemachine__Group__12094 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_23_in_rule__Statemachine__Group__1__Impl2123 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Statemachine__Group__2__Impl_in_rule__Statemachine__Group__22155 = new BitSet(new long[]{0x0000000011B80000L});
@@ -8657,23 +8681,23 @@ public class InternalStatemodelParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_ruleElement_in_rule__Model__ElementsAssignment_15061 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_STRING_in_rule__Import__ImportURIAssignment_15092 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAnnotation_in_rule__Statemachine__AnnotationAssignment_05123 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompositeID_in_rule__Statemachine__NameAssignment_25154 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleState_in_rule__Statemachine__StateAssignment_35185 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_rule__State__AnnotationAssignment_05216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStateType_in_rule__State__TypeAssignment_15247 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompositeID_in_rule__State__NameAssignment_25278 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleActivity_in_rule__State__ElementAssignment_35309 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__TransitionBlock__EventAssignment_05340 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_rule__TransitionBlock__TransitionAssignment_25371 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__Transition__GuardAssignment_0_15402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__Transition__ActionAssignment_1_05433 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompositeID_in_rule__Transition__StateAssignment_35464 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExtendedID_in_rule__Annotation__NameAssignment_15495 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_rule__Annotation__ParameterAssignment_2_15526 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_rule__Annotation__ParameterAssignment_2_2_15557 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExtendedID_in_rule__AssignParameter__NameAssignment_05588 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__AssignParameter__ValueAssignment_25619 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__ValueParameter__ValueAssignment5650 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExtendedID_in_rule__Statemachine__NameAssignment_25158 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleState_in_rule__Statemachine__StateAssignment_35193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_rule__State__AnnotationAssignment_05224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStateType_in_rule__State__TypeAssignment_15255 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompositeID_in_rule__State__NameAssignment_25286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleActivity_in_rule__State__ElementAssignment_35317 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__TransitionBlock__EventAssignment_05348 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_rule__TransitionBlock__TransitionAssignment_25379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__Transition__GuardAssignment_0_15410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__Transition__ActionAssignment_1_05441 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompositeID_in_rule__Transition__StateAssignment_35476 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExtendedID_in_rule__Annotation__NameAssignment_15511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameter_in_rule__Annotation__ParameterAssignment_2_15542 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameter_in_rule__Annotation__ParameterAssignment_2_2_15573 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExtendedID_in_rule__AssignParameter__NameAssignment_05604 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__AssignParameter__ValueAssignment_25635 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__ValueParameter__ValueAssignment5666 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Transition__Group_1__0_in_synpred26_InternalStatemodel3013 = new BitSet(new long[]{0x0000000000000002L});
 
 }

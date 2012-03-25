@@ -6,6 +6,8 @@
  */
 package cz.cvut.earlgrey.sequencemodel.sequencemodel;
 
+import cz.cvut.earlgrey.classmodel.classmodel.Entity;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -30,30 +32,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface Reference extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Type</b></em>' attribute.
+   * Returns the value of the '<em><b>Type</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Type</em>' attribute isn't clear,
+   * If the meaning of the '<em>Type</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Type</em>' attribute.
-   * @see #setType(String)
+   * @return the value of the '<em>Type</em>' reference.
+   * @see #setType(Entity)
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getReference_Type()
    * @model
    * @generated
    */
-  String getType();
+  Entity getType();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Reference#getType <em>Type</em>}' attribute.
+   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Reference#getType <em>Type</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' attribute.
+   * @param value the new value of the '<em>Type</em>' reference.
    * @see #getType()
    * @generated
    */
-  void setType(String value);
+  void setType(Entity value);
 
   /**
    * Returns the value of the '<em><b>Array</b></em>' containment reference list.

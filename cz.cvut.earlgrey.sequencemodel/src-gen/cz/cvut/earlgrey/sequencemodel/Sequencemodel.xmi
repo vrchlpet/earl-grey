@@ -4,11 +4,14 @@
     <metamodelDeclarations xsi:type="xtext:ReferencedMetamodel" alias="ecore">
       <ePackage href="http://www.eclipse.org/emf/2002/Ecore#/"/>
     </metamodelDeclarations>
+    <metamodelDeclarations xsi:type="xtext:ReferencedMetamodel" alias="cls">
+      <ePackage href="http://www.cvut.cz/earlgrey/classmodel/Classmodel#/"/>
+    </metamodelDeclarations>
     <metamodelDeclarations xsi:type="xtext:GeneratedMetamodel" name="sequencemodel">
       <ePackage href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#/"/>
     </metamodelDeclarations>
     <rules xsi:type="xtext:ParserRule" name="Model">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Model"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -21,7 +24,7 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Import">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Import"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -32,7 +35,7 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Sequence">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Sequence"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -43,15 +46,13 @@
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
         </elements>
-        <elements xsi:type="xtext:Group" cardinality="?">
-          <elements xsi:type="xtext:Assignment" predicated="true" feature="participant" operator="+=">
+        <elements xsi:type="xtext:Assignment" feature="participant" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Keyword" predicated="true" value=","/>
+          <elements xsi:type="xtext:Assignment" feature="participant" operator="+=">
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
-          </elements>
-          <elements xsi:type="xtext:Group" cardinality="*">
-            <elements xsi:type="xtext:Keyword" predicated="true" value=","/>
-            <elements xsi:type="xtext:Assignment" feature="participant" operator="+=">
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
-            </elements>
           </elements>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="*" feature="transition" operator="+=">
@@ -61,15 +62,28 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Participant">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Participant"/>
       </type>
-      <alternatives xsi:type="xtext:Assignment" feature="name" operator="=">
-        <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="classifier" operator="=">
+            <terminal xsi:type="xtext:CrossReference">
+              <type metamodel="/0/@metamodelDeclarations.1">
+                <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/classmodel/Classmodel#//Entity"/>
+              </type>
+              <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.5"/>
+            </terminal>
+          </elements>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Transition">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Transition"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
@@ -78,7 +92,7 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Fragment">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Fragment"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
@@ -91,7 +105,7 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="IfElseFragment">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//IfElseFragment"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -123,7 +137,7 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="ForeachFragment">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//ForeachFragment"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -139,7 +153,7 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="LoopFragment">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//LoopFragment"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -155,7 +169,7 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="AssertFragment">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//AssertFragment"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -171,12 +185,12 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="BreakFragment">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//BreakFragment"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Action">
-          <type metamodel="/0/@metamodelDeclarations.1">
+          <type metamodel="/0/@metamodelDeclarations.2">
             <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//BreakFragment"/>
           </type>
         </elements>
@@ -194,12 +208,12 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="NextFragment">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//NextFragment"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Action">
-          <type metamodel="/0/@metamodelDeclarations.1">
+          <type metamodel="/0/@metamodelDeclarations.2">
             <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//NextFragment"/>
           </type>
         </elements>
@@ -217,7 +231,7 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Message">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Message"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
@@ -229,14 +243,19 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="FoundMessage">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//FoundMessage"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="calls"/>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Assignment" feature="targetParticipant" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+            <terminal xsi:type="xtext:CrossReference">
+              <type metamodel="/0/@metamodelDeclarations.2">
+                <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Participant"/>
+              </type>
+              <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+            </terminal>
           </elements>
           <elements xsi:type="xtext:Keyword" value="."/>
         </elements>
@@ -264,17 +283,27 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="CallMessage">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//CallMessage"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Assignment" feature="sourceParticipant" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.2">
+              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Participant"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+          </terminal>
         </elements>
         <elements xsi:type="xtext:Keyword" value="calls"/>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Assignment" feature="targetParticipant" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+            <terminal xsi:type="xtext:CrossReference">
+              <type metamodel="/0/@metamodelDeclarations.2">
+                <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Participant"/>
+              </type>
+              <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+            </terminal>
           </elements>
           <elements xsi:type="xtext:Keyword" value="."/>
         </elements>
@@ -302,16 +331,26 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="NewMessage">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//NewMessage"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Assignment" feature="sourceParticipant" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.2">
+              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Participant"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+          </terminal>
         </elements>
         <elements xsi:type="xtext:Keyword" value="creates"/>
         <elements xsi:type="xtext:Assignment" feature="targetParticipant" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.2">
+              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Participant"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+          </terminal>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Keyword" predicated="true" value="("/>
@@ -331,7 +370,7 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="ReturnMessage">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//ReturnMessage"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -357,16 +396,26 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="DeleteMessage">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//DeleteMessage"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Assignment" feature="sourceParticipant" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.2">
+              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Participant"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+          </terminal>
         </elements>
         <elements xsi:type="xtext:Keyword" value="destroys"/>
         <elements xsi:type="xtext:Assignment" feature="targetParticipant" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.2">
+              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Participant"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+          </terminal>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Keyword" predicated="true" value="("/>
@@ -386,12 +435,17 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="SelfMessage">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//SelfMessage"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Assignment" feature="sourceParticipant" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.2">
+              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Participant"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+          </terminal>
         </elements>
         <elements xsi:type="xtext:Keyword" value="self"/>
         <elements xsi:type="xtext:Keyword" value="."/>
@@ -426,7 +480,7 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Parameter">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Parameter"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -442,12 +496,17 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Reference">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Reference"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Assignment" feature="type" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.13"/>
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/classmodel/Classmodel#//Entity"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.5"/>
+          </terminal>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="*" feature="array" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.21"/>
@@ -455,12 +514,12 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Array">
-      <type metamodel="/0/@metamodelDeclarations.1">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Array"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Action">
-          <type metamodel="/0/@metamodelDeclarations.1">
+          <type metamodel="/0/@metamodelDeclarations.2">
             <classifier xsi:type="ecore:EClass" href="http://www.cvut.cz/earlgrey/sequencemodel/Sequencemodel#//Array"/>
           </type>
         </elements>

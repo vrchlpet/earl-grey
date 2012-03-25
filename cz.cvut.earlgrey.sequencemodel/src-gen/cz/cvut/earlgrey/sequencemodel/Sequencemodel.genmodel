@@ -6,7 +6,7 @@
     modelPluginID="cz.cvut.earlgrey.sequencemodel" forceOverwrite="true" modelName="Sequencemodel"
     updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="cz.cvut.earlgrey.sequencemodel.edit"
-    editorPluginID="cz.cvut.earlgrey.sequencemodel.editor" usedGenPackages="../../../../../../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/Annotation.genmodel#//annotation">
+    editorPluginID="cz.cvut.earlgrey.sequencemodel.editor" usedGenPackages="../../../../../../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/Annotation.genmodel#//annotation ../../../../../../cz.cvut.earlgrey.classmodel/src-gen/cz/cvut/earlgrey/classmodel/Classmodel.genmodel#//classmodel">
   <genPackages prefix="Sequencemodel" basePackage="cz.cvut.earlgrey.sequencemodel"
       disposableProviderFactory="true" ecorePackage="Sequencemodel.ecore#/">
     <genClasses ecoreClass="Sequencemodel.ecore#//Model">
@@ -24,6 +24,7 @@
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//Participant">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Participant/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Participant/classifier"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//Transition"/>
     <genClasses ecoreClass="Sequencemodel.ecore#//Fragment">
@@ -44,30 +45,30 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Message/parameter"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//FoundMessage">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//FoundMessage/targetParticipant"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//FoundMessage/targetParticipant"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//FoundMessage/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//FoundMessage/return"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//CallMessage">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//CallMessage/sourceParticipant"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//CallMessage/targetParticipant"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//CallMessage/sourceParticipant"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//CallMessage/targetParticipant"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//CallMessage/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//CallMessage/return"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//NewMessage">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//NewMessage/sourceParticipant"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//NewMessage/targetParticipant"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//NewMessage/sourceParticipant"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//NewMessage/targetParticipant"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//ReturnMessage">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//ReturnMessage/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//ReturnMessage/parameter"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//DeleteMessage">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//DeleteMessage/sourceParticipant"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//DeleteMessage/targetParticipant"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//DeleteMessage/sourceParticipant"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//DeleteMessage/targetParticipant"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//SelfMessage">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//SelfMessage/sourceParticipant"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//SelfMessage/sourceParticipant"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//SelfMessage/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//SelfMessage/return"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//SelfMessage/transition"/>
@@ -76,7 +77,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Parameter/type"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//Reference">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Reference/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Reference/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Reference/array"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//Array">
