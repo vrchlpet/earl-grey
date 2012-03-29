@@ -767,9 +767,19 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getParameter_Name()
+  {
+    return (EAttribute)parameterEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getParameter_Type()
   {
-    return (EReference)parameterEClass.getEStructuralFeatures().get(0);
+    return (EReference)parameterEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -779,7 +789,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    */
   public EAttribute getParameter_Implicit()
   {
-    return (EAttribute)parameterEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)parameterEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -987,6 +997,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     createEAttribute(operationEClass, OPERATION__BODY);
 
     parameterEClass = createEClass(PARAMETER);
+    createEAttribute(parameterEClass, PARAMETER__NAME);
     createEReference(parameterEClass, PARAMETER__TYPE);
     createEAttribute(parameterEClass, PARAMETER__IMPLICIT);
 
@@ -1047,7 +1058,6 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     relationshipEClass.getESuperTypes().add(this.getElement());
     constantEClass.getESuperTypes().add(this.getFeature());
     operationEClass.getESuperTypes().add(this.getFeature());
-    parameterEClass.getESuperTypes().add(theAnnotationPackage.getParameter());
     attributeEClass.getESuperTypes().add(this.getFeature());
 
     // Initialize classes and features; add operations and parameters
@@ -1116,6 +1126,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     initEAttribute(getOperation_Body(), ecorePackage.getEString(), "body", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getParameter_Name(), ecorePackage.getEString(), "name", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getParameter_Type(), this.getReference(), null, "type", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getParameter_Implicit(), ecorePackage.getEString(), "implicit", null, 0, -1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

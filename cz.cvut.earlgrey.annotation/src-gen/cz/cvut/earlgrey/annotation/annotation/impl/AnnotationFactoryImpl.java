@@ -69,7 +69,7 @@ public class AnnotationFactoryImpl extends EFactoryImpl implements AnnotationFac
     switch (eClass.getClassifierID())
     {
       case AnnotationPackage.ANNOTATION: return createAnnotation();
-      case AnnotationPackage.PARAMETER: return createParameter();
+      case AnnotationPackage.PROPERTY: return createProperty();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -91,10 +91,10 @@ public class AnnotationFactoryImpl extends EFactoryImpl implements AnnotationFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Parameter createParameter()
+  public Property createProperty()
   {
-    ParameterImpl parameter = new ParameterImpl();
-    return parameter;
+    PropertyImpl property = new PropertyImpl();
+    return property;
   }
 
   /**

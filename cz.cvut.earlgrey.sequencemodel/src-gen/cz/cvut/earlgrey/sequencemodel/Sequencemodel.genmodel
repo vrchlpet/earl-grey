@@ -74,6 +74,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//SelfMessage/transition"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Parameter/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Parameter/type"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//Reference">

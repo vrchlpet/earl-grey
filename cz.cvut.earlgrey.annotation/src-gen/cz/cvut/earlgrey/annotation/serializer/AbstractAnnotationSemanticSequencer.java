@@ -4,7 +4,7 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 import cz.cvut.earlgrey.annotation.annotation.Annotation;
 import cz.cvut.earlgrey.annotation.annotation.AnnotationPackage;
-import cz.cvut.earlgrey.annotation.annotation.Parameter;
+import cz.cvut.earlgrey.annotation.annotation.Property;
 import cz.cvut.earlgrey.annotation.services.AnnotationGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
@@ -52,17 +52,17 @@ public class AbstractAnnotationSemanticSequencer extends AbstractSemanticSequenc
 					return; 
 				}
 				else break;
-			case AnnotationPackage.PARAMETER:
-				if(context == grammarAccess.getAssignParameterRule()) {
-					sequence_AssignParameter(context, (Parameter) semanticObject); 
+			case AnnotationPackage.PROPERTY:
+				if(context == grammarAccess.getAssignPropertyRule()) {
+					sequence_AssignProperty(context, (Property) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getParameterRule()) {
-					sequence_Parameter(context, (Parameter) semanticObject); 
+				else if(context == grammarAccess.getPropertyRule()) {
+					sequence_Property(context, (Property) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getValueParameterRule()) {
-					sequence_ValueParameter(context, (Parameter) semanticObject); 
+				else if(context == grammarAccess.getValuePropertyRule()) {
+					sequence_ValueProperty(context, (Property) semanticObject); 
 					return; 
 				}
 				else break;
@@ -72,7 +72,7 @@ public class AbstractAnnotationSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (name=ExtendedID (parameter+=Parameter parameter+=Parameter*)?)
+	 *     (name=ExtendedID (property+=Property property+=Property*)?)
 	 */
 	protected void sequence_Annotation(EObject context, Annotation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -83,17 +83,17 @@ public class AbstractAnnotationSemanticSequencer extends AbstractSemanticSequenc
 	 * Constraint:
 	 *     (name=ExtendedID value=Value)
 	 */
-	protected void sequence_AssignParameter(EObject context, Parameter semanticObject) {
+	protected void sequence_AssignProperty(EObject context, Property semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, AnnotationPackage.Literals.PARAMETER__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnnotationPackage.Literals.PARAMETER__NAME));
-			if(transientValues.isValueTransient(semanticObject, AnnotationPackage.Literals.PARAMETER__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnnotationPackage.Literals.PARAMETER__VALUE));
+			if(transientValues.isValueTransient(semanticObject, AnnotationPackage.Literals.PROPERTY__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnnotationPackage.Literals.PROPERTY__NAME));
+			if(transientValues.isValueTransient(semanticObject, AnnotationPackage.Literals.PROPERTY__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnnotationPackage.Literals.PROPERTY__VALUE));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAssignParameterAccess().getNameExtendedIDParserRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getAssignParameterAccess().getValueValueParserRuleCall_2_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getAssignPropertyAccess().getNameExtendedIDParserRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getAssignPropertyAccess().getValueValueParserRuleCall_2_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -102,7 +102,7 @@ public class AbstractAnnotationSemanticSequencer extends AbstractSemanticSequenc
 	 * Constraint:
 	 *     ((name=ExtendedID value=Value) | value=Value)
 	 */
-	protected void sequence_Parameter(EObject context, Parameter semanticObject) {
+	protected void sequence_Property(EObject context, Property semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -111,7 +111,7 @@ public class AbstractAnnotationSemanticSequencer extends AbstractSemanticSequenc
 	 * Constraint:
 	 *     value=Value
 	 */
-	protected void sequence_ValueParameter(EObject context, Parameter semanticObject) {
+	protected void sequence_ValueProperty(EObject context, Property semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 }

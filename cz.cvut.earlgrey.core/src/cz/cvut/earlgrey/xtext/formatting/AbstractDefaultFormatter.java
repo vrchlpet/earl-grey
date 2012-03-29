@@ -1,7 +1,6 @@
 package cz.cvut.earlgrey.xtext.formatting;
 
 import java.util.List;
-
 import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.formatting.impl.AbstractDeclarativeFormatter;
 import org.eclipse.xtext.formatting.impl.FormattingConfig;
@@ -52,6 +51,10 @@ AbstractDeclarativeFormatter {
 
 		for (Keyword comma : f.findKeywords(",")) {
 			c.setNoSpace().before(comma);
+		}
+
+		for (Keyword comma : f.findKeywords("@")) {
+			c.setNoSpace().after(comma);
 		}
 
 		List<Pair<Keyword, Keyword>> pairs = f.findKeywordPairs("{", "}");

@@ -18,8 +18,7 @@ import org.antlr.runtime.*;
 import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
+
 @SuppressWarnings("all")
 public class InternalAnnotationParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
@@ -85,24 +84,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleAnnotation"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:61:1: entryRuleAnnotation : ruleAnnotation EOF ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:60:1: entryRuleAnnotation : ruleAnnotation EOF ;
     public final void entryRuleAnnotation() throws RecognitionException {
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:62:1: ( ruleAnnotation EOF )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:63:1: ruleAnnotation EOF
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:61:1: ( ruleAnnotation EOF )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:62:1: ruleAnnotation EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationRule()); 
-            }
-            pushFollow(FOLLOW_ruleAnnotation_in_entryRuleAnnotation67);
+             before(grammarAccess.getAnnotationRule()); 
+            pushFollow(FOLLOW_ruleAnnotation_in_entryRuleAnnotation61);
             ruleAnnotation();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAnnotation74); if (state.failed) return ;
+
+             after(grammarAccess.getAnnotationRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAnnotation68); 
 
             }
 
@@ -119,35 +114,31 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleAnnotation"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:70:1: ruleAnnotation : ( ( rule__Annotation__Group__0 ) ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:69:1: ruleAnnotation : ( ( rule__Annotation__Group__0 ) ) ;
     public final void ruleAnnotation() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:74:2: ( ( ( rule__Annotation__Group__0 ) ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:75:1: ( ( rule__Annotation__Group__0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:73:2: ( ( ( rule__Annotation__Group__0 ) ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:74:1: ( ( rule__Annotation__Group__0 ) )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:75:1: ( ( rule__Annotation__Group__0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:74:1: ( ( rule__Annotation__Group__0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:75:1: ( rule__Annotation__Group__0 )
+            {
+             before(grammarAccess.getAnnotationAccess().getGroup()); 
             // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:76:1: ( rule__Annotation__Group__0 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:76:2: rule__Annotation__Group__0
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getGroup()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:77:1: ( rule__Annotation__Group__0 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:77:2: rule__Annotation__Group__0
-            {
-            pushFollow(FOLLOW_rule__Annotation__Group__0_in_ruleAnnotation100);
+            pushFollow(FOLLOW_rule__Annotation__Group__0_in_ruleAnnotation94);
             rule__Annotation__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getGroup()); 
-            }
+             after(grammarAccess.getAnnotationAccess().getGroup()); 
 
             }
 
@@ -169,25 +160,21 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
     // $ANTLR end "ruleAnnotation"
 
 
-    // $ANTLR start "entryRuleParameter"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:89:1: entryRuleParameter : ruleParameter EOF ;
-    public final void entryRuleParameter() throws RecognitionException {
+    // $ANTLR start "entryRuleProperty"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:88:1: entryRuleProperty : ruleProperty EOF ;
+    public final void entryRuleProperty() throws RecognitionException {
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:90:1: ( ruleParameter EOF )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:91:1: ruleParameter EOF
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:89:1: ( ruleProperty EOF )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:90:1: ruleProperty EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getParameterRule()); 
-            }
-            pushFollow(FOLLOW_ruleParameter_in_entryRuleParameter127);
-            ruleParameter();
+             before(grammarAccess.getPropertyRule()); 
+            pushFollow(FOLLOW_ruleProperty_in_entryRuleProperty121);
+            ruleProperty();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getParameterRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleParameter134); if (state.failed) return ;
+
+             after(grammarAccess.getPropertyRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleProperty128); 
 
             }
 
@@ -200,39 +187,35 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "entryRuleParameter"
+    // $ANTLR end "entryRuleProperty"
 
 
-    // $ANTLR start "ruleParameter"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:98:1: ruleParameter : ( ( rule__Parameter__Alternatives ) ) ;
-    public final void ruleParameter() throws RecognitionException {
+    // $ANTLR start "ruleProperty"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:97:1: ruleProperty : ( ( rule__Property__Alternatives ) ) ;
+    public final void ruleProperty() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:102:2: ( ( ( rule__Parameter__Alternatives ) ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:103:1: ( ( rule__Parameter__Alternatives ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:101:2: ( ( ( rule__Property__Alternatives ) ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:102:1: ( ( rule__Property__Alternatives ) )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:103:1: ( ( rule__Parameter__Alternatives ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:104:1: ( rule__Parameter__Alternatives )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:102:1: ( ( rule__Property__Alternatives ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:103:1: ( rule__Property__Alternatives )
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getParameterAccess().getAlternatives()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:105:1: ( rule__Parameter__Alternatives )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:105:2: rule__Parameter__Alternatives
+             before(grammarAccess.getPropertyAccess().getAlternatives()); 
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:104:1: ( rule__Property__Alternatives )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:104:2: rule__Property__Alternatives
             {
-            pushFollow(FOLLOW_rule__Parameter__Alternatives_in_ruleParameter160);
-            rule__Parameter__Alternatives();
+            pushFollow(FOLLOW_rule__Property__Alternatives_in_ruleProperty154);
+            rule__Property__Alternatives();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getParameterAccess().getAlternatives()); 
-            }
+             after(grammarAccess.getPropertyAccess().getAlternatives()); 
 
             }
 
@@ -251,28 +234,24 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "ruleParameter"
+    // $ANTLR end "ruleProperty"
 
 
-    // $ANTLR start "entryRuleAssignParameter"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:117:1: entryRuleAssignParameter : ruleAssignParameter EOF ;
-    public final void entryRuleAssignParameter() throws RecognitionException {
+    // $ANTLR start "entryRuleAssignProperty"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:116:1: entryRuleAssignProperty : ruleAssignProperty EOF ;
+    public final void entryRuleAssignProperty() throws RecognitionException {
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:118:1: ( ruleAssignParameter EOF )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:119:1: ruleAssignParameter EOF
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:117:1: ( ruleAssignProperty EOF )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:118:1: ruleAssignProperty EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAssignParameterRule()); 
-            }
-            pushFollow(FOLLOW_ruleAssignParameter_in_entryRuleAssignParameter187);
-            ruleAssignParameter();
+             before(grammarAccess.getAssignPropertyRule()); 
+            pushFollow(FOLLOW_ruleAssignProperty_in_entryRuleAssignProperty181);
+            ruleAssignProperty();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAssignParameterRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAssignParameter194); if (state.failed) return ;
+
+             after(grammarAccess.getAssignPropertyRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAssignProperty188); 
 
             }
 
@@ -285,39 +264,35 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "entryRuleAssignParameter"
+    // $ANTLR end "entryRuleAssignProperty"
 
 
-    // $ANTLR start "ruleAssignParameter"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:126:1: ruleAssignParameter : ( ( rule__AssignParameter__Group__0 ) ) ;
-    public final void ruleAssignParameter() throws RecognitionException {
+    // $ANTLR start "ruleAssignProperty"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:125:1: ruleAssignProperty : ( ( rule__AssignProperty__Group__0 ) ) ;
+    public final void ruleAssignProperty() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:130:2: ( ( ( rule__AssignParameter__Group__0 ) ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:131:1: ( ( rule__AssignParameter__Group__0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:129:2: ( ( ( rule__AssignProperty__Group__0 ) ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:130:1: ( ( rule__AssignProperty__Group__0 ) )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:131:1: ( ( rule__AssignParameter__Group__0 ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:132:1: ( rule__AssignParameter__Group__0 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:130:1: ( ( rule__AssignProperty__Group__0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:131:1: ( rule__AssignProperty__Group__0 )
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAssignParameterAccess().getGroup()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:133:1: ( rule__AssignParameter__Group__0 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:133:2: rule__AssignParameter__Group__0
+             before(grammarAccess.getAssignPropertyAccess().getGroup()); 
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:132:1: ( rule__AssignProperty__Group__0 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:132:2: rule__AssignProperty__Group__0
             {
-            pushFollow(FOLLOW_rule__AssignParameter__Group__0_in_ruleAssignParameter220);
-            rule__AssignParameter__Group__0();
+            pushFollow(FOLLOW_rule__AssignProperty__Group__0_in_ruleAssignProperty214);
+            rule__AssignProperty__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAssignParameterAccess().getGroup()); 
-            }
+             after(grammarAccess.getAssignPropertyAccess().getGroup()); 
 
             }
 
@@ -336,28 +311,24 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "ruleAssignParameter"
+    // $ANTLR end "ruleAssignProperty"
 
 
-    // $ANTLR start "entryRuleValueParameter"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:145:1: entryRuleValueParameter : ruleValueParameter EOF ;
-    public final void entryRuleValueParameter() throws RecognitionException {
+    // $ANTLR start "entryRuleValueProperty"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:144:1: entryRuleValueProperty : ruleValueProperty EOF ;
+    public final void entryRuleValueProperty() throws RecognitionException {
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:146:1: ( ruleValueParameter EOF )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:147:1: ruleValueParameter EOF
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:145:1: ( ruleValueProperty EOF )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:146:1: ruleValueProperty EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getValueParameterRule()); 
-            }
-            pushFollow(FOLLOW_ruleValueParameter_in_entryRuleValueParameter247);
-            ruleValueParameter();
+             before(grammarAccess.getValuePropertyRule()); 
+            pushFollow(FOLLOW_ruleValueProperty_in_entryRuleValueProperty241);
+            ruleValueProperty();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getValueParameterRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleValueParameter254); if (state.failed) return ;
+
+             after(grammarAccess.getValuePropertyRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleValueProperty248); 
 
             }
 
@@ -370,39 +341,35 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "entryRuleValueParameter"
+    // $ANTLR end "entryRuleValueProperty"
 
 
-    // $ANTLR start "ruleValueParameter"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:154:1: ruleValueParameter : ( ( rule__ValueParameter__ValueAssignment ) ) ;
-    public final void ruleValueParameter() throws RecognitionException {
+    // $ANTLR start "ruleValueProperty"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:153:1: ruleValueProperty : ( ( rule__ValueProperty__ValueAssignment ) ) ;
+    public final void ruleValueProperty() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:158:2: ( ( ( rule__ValueParameter__ValueAssignment ) ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:159:1: ( ( rule__ValueParameter__ValueAssignment ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:157:2: ( ( ( rule__ValueProperty__ValueAssignment ) ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:158:1: ( ( rule__ValueProperty__ValueAssignment ) )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:159:1: ( ( rule__ValueParameter__ValueAssignment ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:160:1: ( rule__ValueParameter__ValueAssignment )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:158:1: ( ( rule__ValueProperty__ValueAssignment ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:159:1: ( rule__ValueProperty__ValueAssignment )
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getValueParameterAccess().getValueAssignment()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:161:1: ( rule__ValueParameter__ValueAssignment )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:161:2: rule__ValueParameter__ValueAssignment
+             before(grammarAccess.getValuePropertyAccess().getValueAssignment()); 
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:160:1: ( rule__ValueProperty__ValueAssignment )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:160:2: rule__ValueProperty__ValueAssignment
             {
-            pushFollow(FOLLOW_rule__ValueParameter__ValueAssignment_in_ruleValueParameter280);
-            rule__ValueParameter__ValueAssignment();
+            pushFollow(FOLLOW_rule__ValueProperty__ValueAssignment_in_ruleValueProperty274);
+            rule__ValueProperty__ValueAssignment();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getValueParameterAccess().getValueAssignment()); 
-            }
+             after(grammarAccess.getValuePropertyAccess().getValueAssignment()); 
 
             }
 
@@ -421,28 +388,24 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "ruleValueParameter"
+    // $ANTLR end "ruleValueProperty"
 
 
     // $ANTLR start "entryRuleValue"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:173:1: entryRuleValue : ruleValue EOF ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:172:1: entryRuleValue : ruleValue EOF ;
     public final void entryRuleValue() throws RecognitionException {
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:174:1: ( ruleValue EOF )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:175:1: ruleValue EOF
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:173:1: ( ruleValue EOF )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:174:1: ruleValue EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getValueRule()); 
-            }
-            pushFollow(FOLLOW_ruleValue_in_entryRuleValue307);
+             before(grammarAccess.getValueRule()); 
+            pushFollow(FOLLOW_ruleValue_in_entryRuleValue301);
             ruleValue();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getValueRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleValue314); if (state.failed) return ;
+
+             after(grammarAccess.getValueRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleValue308); 
 
             }
 
@@ -459,35 +422,31 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleValue"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:182:1: ruleValue : ( ( rule__Value__Alternatives ) ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:181:1: ruleValue : ( ( rule__Value__Alternatives ) ) ;
     public final void ruleValue() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:186:2: ( ( ( rule__Value__Alternatives ) ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:187:1: ( ( rule__Value__Alternatives ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:185:2: ( ( ( rule__Value__Alternatives ) ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:186:1: ( ( rule__Value__Alternatives ) )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:187:1: ( ( rule__Value__Alternatives ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:186:1: ( ( rule__Value__Alternatives ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:187:1: ( rule__Value__Alternatives )
+            {
+             before(grammarAccess.getValueAccess().getAlternatives()); 
             // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:188:1: ( rule__Value__Alternatives )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:188:2: rule__Value__Alternatives
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getValueAccess().getAlternatives()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:189:1: ( rule__Value__Alternatives )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:189:2: rule__Value__Alternatives
-            {
-            pushFollow(FOLLOW_rule__Value__Alternatives_in_ruleValue340);
+            pushFollow(FOLLOW_rule__Value__Alternatives_in_ruleValue334);
             rule__Value__Alternatives();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getValueAccess().getAlternatives()); 
-            }
+             after(grammarAccess.getValueAccess().getAlternatives()); 
 
             }
 
@@ -510,24 +469,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleExtendedID"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:201:1: entryRuleExtendedID : ruleExtendedID EOF ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:200:1: entryRuleExtendedID : ruleExtendedID EOF ;
     public final void entryRuleExtendedID() throws RecognitionException {
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:202:1: ( ruleExtendedID EOF )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:203:1: ruleExtendedID EOF
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:201:1: ( ruleExtendedID EOF )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:202:1: ruleExtendedID EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getExtendedIDRule()); 
-            }
-            pushFollow(FOLLOW_ruleExtendedID_in_entryRuleExtendedID367);
+             before(grammarAccess.getExtendedIDRule()); 
+            pushFollow(FOLLOW_ruleExtendedID_in_entryRuleExtendedID361);
             ruleExtendedID();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getExtendedIDRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleExtendedID374); if (state.failed) return ;
+
+             after(grammarAccess.getExtendedIDRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleExtendedID368); 
 
             }
 
@@ -544,35 +499,31 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleExtendedID"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:210:1: ruleExtendedID : ( ( rule__ExtendedID__Group__0 ) ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:209:1: ruleExtendedID : ( ( rule__ExtendedID__Group__0 ) ) ;
     public final void ruleExtendedID() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:214:2: ( ( ( rule__ExtendedID__Group__0 ) ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:215:1: ( ( rule__ExtendedID__Group__0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:213:2: ( ( ( rule__ExtendedID__Group__0 ) ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:214:1: ( ( rule__ExtendedID__Group__0 ) )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:215:1: ( ( rule__ExtendedID__Group__0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:214:1: ( ( rule__ExtendedID__Group__0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:215:1: ( rule__ExtendedID__Group__0 )
+            {
+             before(grammarAccess.getExtendedIDAccess().getGroup()); 
             // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:216:1: ( rule__ExtendedID__Group__0 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:216:2: rule__ExtendedID__Group__0
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getExtendedIDAccess().getGroup()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:217:1: ( rule__ExtendedID__Group__0 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:217:2: rule__ExtendedID__Group__0
-            {
-            pushFollow(FOLLOW_rule__ExtendedID__Group__0_in_ruleExtendedID400);
+            pushFollow(FOLLOW_rule__ExtendedID__Group__0_in_ruleExtendedID394);
             rule__ExtendedID__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getExtendedIDAccess().getGroup()); 
-            }
+             after(grammarAccess.getExtendedIDAccess().getGroup()); 
 
             }
 
@@ -595,24 +546,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleReal"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:233:1: entryRuleReal : ruleReal EOF ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:232:1: entryRuleReal : ruleReal EOF ;
     public final void entryRuleReal() throws RecognitionException {
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:234:1: ( ruleReal EOF )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:235:1: ruleReal EOF
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:233:1: ( ruleReal EOF )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:234:1: ruleReal EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRealRule()); 
-            }
-            pushFollow(FOLLOW_ruleReal_in_entryRuleReal431);
+             before(grammarAccess.getRealRule()); 
+            pushFollow(FOLLOW_ruleReal_in_entryRuleReal425);
             ruleReal();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRealRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleReal438); if (state.failed) return ;
+
+             after(grammarAccess.getRealRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleReal432); 
 
             }
 
@@ -629,35 +576,31 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleReal"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:242:1: ruleReal : ( ( rule__Real__Group__0 ) ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:241:1: ruleReal : ( ( rule__Real__Group__0 ) ) ;
     public final void ruleReal() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:246:2: ( ( ( rule__Real__Group__0 ) ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:247:1: ( ( rule__Real__Group__0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:245:2: ( ( ( rule__Real__Group__0 ) ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:246:1: ( ( rule__Real__Group__0 ) )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:247:1: ( ( rule__Real__Group__0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:246:1: ( ( rule__Real__Group__0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:247:1: ( rule__Real__Group__0 )
+            {
+             before(grammarAccess.getRealAccess().getGroup()); 
             // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:248:1: ( rule__Real__Group__0 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:248:2: rule__Real__Group__0
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRealAccess().getGroup()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:249:1: ( rule__Real__Group__0 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:249:2: rule__Real__Group__0
-            {
-            pushFollow(FOLLOW_rule__Real__Group__0_in_ruleReal464);
+            pushFollow(FOLLOW_rule__Real__Group__0_in_ruleReal458);
             rule__Real__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRealAccess().getGroup()); 
-            }
+             after(grammarAccess.getRealAccess().getGroup()); 
 
             }
 
@@ -680,24 +623,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleInteger"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:261:1: entryRuleInteger : ruleInteger EOF ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:260:1: entryRuleInteger : ruleInteger EOF ;
     public final void entryRuleInteger() throws RecognitionException {
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:262:1: ( ruleInteger EOF )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:263:1: ruleInteger EOF
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:261:1: ( ruleInteger EOF )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:262:1: ruleInteger EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getIntegerRule()); 
-            }
-            pushFollow(FOLLOW_ruleInteger_in_entryRuleInteger491);
+             before(grammarAccess.getIntegerRule()); 
+            pushFollow(FOLLOW_ruleInteger_in_entryRuleInteger485);
             ruleInteger();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getIntegerRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInteger498); if (state.failed) return ;
+
+             after(grammarAccess.getIntegerRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInteger492); 
 
             }
 
@@ -714,35 +653,31 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleInteger"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:270:1: ruleInteger : ( ( rule__Integer__Group__0 ) ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:269:1: ruleInteger : ( ( rule__Integer__Group__0 ) ) ;
     public final void ruleInteger() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:274:2: ( ( ( rule__Integer__Group__0 ) ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:275:1: ( ( rule__Integer__Group__0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:273:2: ( ( ( rule__Integer__Group__0 ) ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:274:1: ( ( rule__Integer__Group__0 ) )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:275:1: ( ( rule__Integer__Group__0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:274:1: ( ( rule__Integer__Group__0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:275:1: ( rule__Integer__Group__0 )
+            {
+             before(grammarAccess.getIntegerAccess().getGroup()); 
             // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:276:1: ( rule__Integer__Group__0 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:276:2: rule__Integer__Group__0
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getIntegerAccess().getGroup()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:277:1: ( rule__Integer__Group__0 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:277:2: rule__Integer__Group__0
-            {
-            pushFollow(FOLLOW_rule__Integer__Group__0_in_ruleInteger524);
+            pushFollow(FOLLOW_rule__Integer__Group__0_in_ruleInteger518);
             rule__Integer__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getIntegerAccess().getGroup()); 
-            }
+             after(grammarAccess.getIntegerAccess().getGroup()); 
 
             }
 
@@ -764,34 +699,30 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
     // $ANTLR end "ruleInteger"
 
 
-    // $ANTLR start "rule__Parameter__Alternatives"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:289:1: rule__Parameter__Alternatives : ( ( ruleAssignParameter ) | ( ruleValueParameter ) );
-    public final void rule__Parameter__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__Property__Alternatives"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:288:1: rule__Property__Alternatives : ( ( ruleAssignProperty ) | ( ruleValueProperty ) );
+    public final void rule__Property__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:293:1: ( ( ruleAssignParameter ) | ( ruleValueParameter ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:292:1: ( ( ruleAssignProperty ) | ( ruleValueProperty ) )
             int alt1=2;
             alt1 = dfa1.predict(input);
             switch (alt1) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:294:1: ( ruleAssignParameter )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:293:1: ( ruleAssignProperty )
                     {
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:294:1: ( ruleAssignParameter )
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:295:1: ruleAssignParameter
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:293:1: ( ruleAssignProperty )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:294:1: ruleAssignProperty
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getParameterAccess().getAssignParameterParserRuleCall_0()); 
-                    }
-                    pushFollow(FOLLOW_ruleAssignParameter_in_rule__Parameter__Alternatives560);
-                    ruleAssignParameter();
+                     before(grammarAccess.getPropertyAccess().getAssignPropertyParserRuleCall_0()); 
+                    pushFollow(FOLLOW_ruleAssignProperty_in_rule__Property__Alternatives554);
+                    ruleAssignProperty();
 
                     state._fsp--;
-                    if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getParameterAccess().getAssignParameterParserRuleCall_0()); 
-                    }
+
+                     after(grammarAccess.getPropertyAccess().getAssignPropertyParserRuleCall_0()); 
 
                     }
 
@@ -799,22 +730,18 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:300:6: ( ruleValueParameter )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:299:6: ( ruleValueProperty )
                     {
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:300:6: ( ruleValueParameter )
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:301:1: ruleValueParameter
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:299:6: ( ruleValueProperty )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:300:1: ruleValueProperty
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getParameterAccess().getValueParameterParserRuleCall_1()); 
-                    }
-                    pushFollow(FOLLOW_ruleValueParameter_in_rule__Parameter__Alternatives577);
-                    ruleValueParameter();
+                     before(grammarAccess.getPropertyAccess().getValuePropertyParserRuleCall_1()); 
+                    pushFollow(FOLLOW_ruleValueProperty_in_rule__Property__Alternatives571);
+                    ruleValueProperty();
 
                     state._fsp--;
-                    if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getParameterAccess().getValueParameterParserRuleCall_1()); 
-                    }
+
+                     after(grammarAccess.getPropertyAccess().getValuePropertyParserRuleCall_1()); 
 
                     }
 
@@ -835,17 +762,17 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Parameter__Alternatives"
+    // $ANTLR end "rule__Property__Alternatives"
 
 
     // $ANTLR start "rule__Value__Alternatives"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:311:1: rule__Value__Alternatives : ( ( ruleInteger ) | ( RULE_STRING ) | ( ruleExtendedID ) | ( RULE_BOOLEAN ) | ( RULE_NULL ) | ( ruleReal ) );
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:310:1: rule__Value__Alternatives : ( ( ruleInteger ) | ( RULE_STRING ) | ( ruleExtendedID ) | ( RULE_BOOLEAN ) | ( RULE_NULL ) | ( ruleReal ) );
     public final void rule__Value__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:315:1: ( ( ruleInteger ) | ( RULE_STRING ) | ( ruleExtendedID ) | ( RULE_BOOLEAN ) | ( RULE_NULL ) | ( ruleReal ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:314:1: ( ( ruleInteger ) | ( RULE_STRING ) | ( ruleExtendedID ) | ( RULE_BOOLEAN ) | ( RULE_NULL ) | ( ruleReal ) )
             int alt2=6;
             switch ( input.LA(1) ) {
             case 17:
@@ -855,14 +782,13 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
                 if ( (LA2_1==RULE_NATURAL) ) {
                     int LA2_2 = input.LA(3);
 
-                    if ( (LA2_2==EOF||(LA2_2>=20 && LA2_2<=21)) ) {
-                        alt2=1;
-                    }
-                    else if ( (LA2_2==23) ) {
+                    if ( (LA2_2==23) ) {
                         alt2=6;
                     }
+                    else if ( (LA2_2==EOF||(LA2_2>=20 && LA2_2<=21)) ) {
+                        alt2=1;
+                    }
                     else {
-                        if (state.backtracking>0) {state.failed=true; return ;}
                         NoViableAltException nvae =
                             new NoViableAltException("", 2, 2, input);
 
@@ -870,7 +796,6 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
                     }
                 }
                 else {
-                    if (state.backtracking>0) {state.failed=true; return ;}
                     NoViableAltException nvae =
                         new NoViableAltException("", 2, 1, input);
 
@@ -882,14 +807,13 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
                 {
                 int LA2_2 = input.LA(2);
 
-                if ( (LA2_2==EOF||(LA2_2>=20 && LA2_2<=21)) ) {
-                    alt2=1;
-                }
-                else if ( (LA2_2==23) ) {
+                if ( (LA2_2==23) ) {
                     alt2=6;
                 }
+                else if ( (LA2_2==EOF||(LA2_2>=20 && LA2_2<=21)) ) {
+                    alt2=1;
+                }
                 else {
-                    if (state.backtracking>0) {state.failed=true; return ;}
                     NoViableAltException nvae =
                         new NoViableAltException("", 2, 2, input);
 
@@ -918,7 +842,6 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
                 }
                 break;
             default:
-                if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
                     new NoViableAltException("", 2, 0, input);
 
@@ -927,22 +850,18 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
             switch (alt2) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:316:1: ( ruleInteger )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:315:1: ( ruleInteger )
                     {
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:316:1: ( ruleInteger )
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:317:1: ruleInteger
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:315:1: ( ruleInteger )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:316:1: ruleInteger
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getValueAccess().getIntegerParserRuleCall_0()); 
-                    }
-                    pushFollow(FOLLOW_ruleInteger_in_rule__Value__Alternatives609);
+                     before(grammarAccess.getValueAccess().getIntegerParserRuleCall_0()); 
+                    pushFollow(FOLLOW_ruleInteger_in_rule__Value__Alternatives603);
                     ruleInteger();
 
                     state._fsp--;
-                    if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getValueAccess().getIntegerParserRuleCall_0()); 
-                    }
+
+                     after(grammarAccess.getValueAccess().getIntegerParserRuleCall_0()); 
 
                     }
 
@@ -950,18 +869,14 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:322:6: ( RULE_STRING )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:321:6: ( RULE_STRING )
                     {
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:322:6: ( RULE_STRING )
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:323:1: RULE_STRING
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:321:6: ( RULE_STRING )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:322:1: RULE_STRING
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getValueAccess().getSTRINGTerminalRuleCall_1()); 
-                    }
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Value__Alternatives626); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getValueAccess().getSTRINGTerminalRuleCall_1()); 
-                    }
+                     before(grammarAccess.getValueAccess().getSTRINGTerminalRuleCall_1()); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Value__Alternatives620); 
+                     after(grammarAccess.getValueAccess().getSTRINGTerminalRuleCall_1()); 
 
                     }
 
@@ -969,22 +884,18 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:328:6: ( ruleExtendedID )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:327:6: ( ruleExtendedID )
                     {
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:328:6: ( ruleExtendedID )
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:329:1: ruleExtendedID
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:327:6: ( ruleExtendedID )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:328:1: ruleExtendedID
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getValueAccess().getExtendedIDParserRuleCall_2()); 
-                    }
-                    pushFollow(FOLLOW_ruleExtendedID_in_rule__Value__Alternatives643);
+                     before(grammarAccess.getValueAccess().getExtendedIDParserRuleCall_2()); 
+                    pushFollow(FOLLOW_ruleExtendedID_in_rule__Value__Alternatives637);
                     ruleExtendedID();
 
                     state._fsp--;
-                    if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getValueAccess().getExtendedIDParserRuleCall_2()); 
-                    }
+
+                     after(grammarAccess.getValueAccess().getExtendedIDParserRuleCall_2()); 
 
                     }
 
@@ -992,18 +903,14 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 4 :
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:334:6: ( RULE_BOOLEAN )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:333:6: ( RULE_BOOLEAN )
                     {
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:334:6: ( RULE_BOOLEAN )
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:335:1: RULE_BOOLEAN
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:333:6: ( RULE_BOOLEAN )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:334:1: RULE_BOOLEAN
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getValueAccess().getBOOLEANTerminalRuleCall_3()); 
-                    }
-                    match(input,RULE_BOOLEAN,FOLLOW_RULE_BOOLEAN_in_rule__Value__Alternatives660); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getValueAccess().getBOOLEANTerminalRuleCall_3()); 
-                    }
+                     before(grammarAccess.getValueAccess().getBOOLEANTerminalRuleCall_3()); 
+                    match(input,RULE_BOOLEAN,FOLLOW_RULE_BOOLEAN_in_rule__Value__Alternatives654); 
+                     after(grammarAccess.getValueAccess().getBOOLEANTerminalRuleCall_3()); 
 
                     }
 
@@ -1011,18 +918,14 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 5 :
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:340:6: ( RULE_NULL )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:339:6: ( RULE_NULL )
                     {
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:340:6: ( RULE_NULL )
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:341:1: RULE_NULL
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:339:6: ( RULE_NULL )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:340:1: RULE_NULL
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getValueAccess().getNULLTerminalRuleCall_4()); 
-                    }
-                    match(input,RULE_NULL,FOLLOW_RULE_NULL_in_rule__Value__Alternatives677); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getValueAccess().getNULLTerminalRuleCall_4()); 
-                    }
+                     before(grammarAccess.getValueAccess().getNULLTerminalRuleCall_4()); 
+                    match(input,RULE_NULL,FOLLOW_RULE_NULL_in_rule__Value__Alternatives671); 
+                     after(grammarAccess.getValueAccess().getNULLTerminalRuleCall_4()); 
 
                     }
 
@@ -1030,22 +933,18 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 6 :
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:346:6: ( ruleReal )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:345:6: ( ruleReal )
                     {
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:346:6: ( ruleReal )
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:347:1: ruleReal
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:345:6: ( ruleReal )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:346:1: ruleReal
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getValueAccess().getRealParserRuleCall_5()); 
-                    }
-                    pushFollow(FOLLOW_ruleReal_in_rule__Value__Alternatives694);
+                     before(grammarAccess.getValueAccess().getRealParserRuleCall_5()); 
+                    pushFollow(FOLLOW_ruleReal_in_rule__Value__Alternatives688);
                     ruleReal();
 
                     state._fsp--;
-                    if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getValueAccess().getRealParserRuleCall_5()); 
-                    }
+
+                     after(grammarAccess.getValueAccess().getRealParserRuleCall_5()); 
 
                     }
 
@@ -1070,13 +969,13 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Alternatives_4_0"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:359:1: rule__Real__Alternatives_4_0 : ( ( 'e' ) | ( 'E' ) );
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:358:1: rule__Real__Alternatives_4_0 : ( ( 'e' ) | ( 'E' ) );
     public final void rule__Real__Alternatives_4_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:363:1: ( ( 'e' ) | ( 'E' ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:362:1: ( ( 'e' ) | ( 'E' ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -1087,7 +986,6 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
                 alt3=2;
             }
             else {
-                if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
                     new NoViableAltException("", 3, 0, input);
 
@@ -1095,18 +993,14 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
             }
             switch (alt3) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:364:1: ( 'e' )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:363:1: ( 'e' )
                     {
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:364:1: ( 'e' )
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:365:1: 'e'
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:363:1: ( 'e' )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:364:1: 'e'
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getRealAccess().getEKeyword_4_0_0()); 
-                    }
-                    match(input,14,FOLLOW_14_in_rule__Real__Alternatives_4_0729); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getRealAccess().getEKeyword_4_0_0()); 
-                    }
+                     before(grammarAccess.getRealAccess().getEKeyword_4_0_0()); 
+                    match(input,14,FOLLOW_14_in_rule__Real__Alternatives_4_0723); 
+                     after(grammarAccess.getRealAccess().getEKeyword_4_0_0()); 
 
                     }
 
@@ -1114,18 +1008,14 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:372:6: ( 'E' )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:371:6: ( 'E' )
                     {
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:372:6: ( 'E' )
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:373:1: 'E'
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:371:6: ( 'E' )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:372:1: 'E'
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getRealAccess().getEKeyword_4_0_1()); 
-                    }
-                    match(input,15,FOLLOW_15_in_rule__Real__Alternatives_4_0749); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getRealAccess().getEKeyword_4_0_1()); 
-                    }
+                     before(grammarAccess.getRealAccess().getEKeyword_4_0_1()); 
+                    match(input,15,FOLLOW_15_in_rule__Real__Alternatives_4_0743); 
+                     after(grammarAccess.getRealAccess().getEKeyword_4_0_1()); 
 
                     }
 
@@ -1150,13 +1040,13 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Alternatives_4_1"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:385:1: rule__Real__Alternatives_4_1 : ( ( '+' ) | ( '-' ) );
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:384:1: rule__Real__Alternatives_4_1 : ( ( '+' ) | ( '-' ) );
     public final void rule__Real__Alternatives_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:389:1: ( ( '+' ) | ( '-' ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:388:1: ( ( '+' ) | ( '-' ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1167,7 +1057,6 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
                 alt4=2;
             }
             else {
-                if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
                     new NoViableAltException("", 4, 0, input);
 
@@ -1175,18 +1064,14 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
             }
             switch (alt4) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:390:1: ( '+' )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:389:1: ( '+' )
                     {
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:390:1: ( '+' )
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:391:1: '+'
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:389:1: ( '+' )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:390:1: '+'
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getRealAccess().getPlusSignKeyword_4_1_0()); 
-                    }
-                    match(input,16,FOLLOW_16_in_rule__Real__Alternatives_4_1784); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getRealAccess().getPlusSignKeyword_4_1_0()); 
-                    }
+                     before(grammarAccess.getRealAccess().getPlusSignKeyword_4_1_0()); 
+                    match(input,16,FOLLOW_16_in_rule__Real__Alternatives_4_1778); 
+                     after(grammarAccess.getRealAccess().getPlusSignKeyword_4_1_0()); 
 
                     }
 
@@ -1194,18 +1079,14 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:398:6: ( '-' )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:397:6: ( '-' )
                     {
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:398:6: ( '-' )
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:399:1: '-'
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:397:6: ( '-' )
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:398:1: '-'
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getRealAccess().getHyphenMinusKeyword_4_1_1()); 
-                    }
-                    match(input,17,FOLLOW_17_in_rule__Real__Alternatives_4_1804); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getRealAccess().getHyphenMinusKeyword_4_1_1()); 
-                    }
+                     before(grammarAccess.getRealAccess().getHyphenMinusKeyword_4_1_1()); 
+                    match(input,17,FOLLOW_17_in_rule__Real__Alternatives_4_1798); 
+                     after(grammarAccess.getRealAccess().getHyphenMinusKeyword_4_1_1()); 
 
                     }
 
@@ -1230,25 +1111,25 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group__0"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:413:1: rule__Annotation__Group__0 : rule__Annotation__Group__0__Impl rule__Annotation__Group__1 ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:412:1: rule__Annotation__Group__0 : rule__Annotation__Group__0__Impl rule__Annotation__Group__1 ;
     public final void rule__Annotation__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:417:1: ( rule__Annotation__Group__0__Impl rule__Annotation__Group__1 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:418:2: rule__Annotation__Group__0__Impl rule__Annotation__Group__1
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:416:1: ( rule__Annotation__Group__0__Impl rule__Annotation__Group__1 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:417:2: rule__Annotation__Group__0__Impl rule__Annotation__Group__1
             {
-            pushFollow(FOLLOW_rule__Annotation__Group__0__Impl_in_rule__Annotation__Group__0836);
+            pushFollow(FOLLOW_rule__Annotation__Group__0__Impl_in_rule__Annotation__Group__0830);
             rule__Annotation__Group__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Annotation__Group__1_in_rule__Annotation__Group__0839);
+
+            pushFollow(FOLLOW_rule__Annotation__Group__1_in_rule__Annotation__Group__0833);
             rule__Annotation__Group__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -1268,25 +1149,21 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group__0__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:425:1: rule__Annotation__Group__0__Impl : ( '@' ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:424:1: rule__Annotation__Group__0__Impl : ( '@' ) ;
     public final void rule__Annotation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:429:1: ( ( '@' ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:430:1: ( '@' )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:428:1: ( ( '@' ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:429:1: ( '@' )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:430:1: ( '@' )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:431:1: '@'
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:429:1: ( '@' )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:430:1: '@'
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getCommercialAtKeyword_0()); 
-            }
-            match(input,18,FOLLOW_18_in_rule__Annotation__Group__0__Impl867); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getCommercialAtKeyword_0()); 
-            }
+             before(grammarAccess.getAnnotationAccess().getCommercialAtKeyword_0()); 
+            match(input,18,FOLLOW_18_in_rule__Annotation__Group__0__Impl861); 
+             after(grammarAccess.getAnnotationAccess().getCommercialAtKeyword_0()); 
 
             }
 
@@ -1309,25 +1186,25 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group__1"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:444:1: rule__Annotation__Group__1 : rule__Annotation__Group__1__Impl rule__Annotation__Group__2 ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:443:1: rule__Annotation__Group__1 : rule__Annotation__Group__1__Impl rule__Annotation__Group__2 ;
     public final void rule__Annotation__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:448:1: ( rule__Annotation__Group__1__Impl rule__Annotation__Group__2 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:449:2: rule__Annotation__Group__1__Impl rule__Annotation__Group__2
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:447:1: ( rule__Annotation__Group__1__Impl rule__Annotation__Group__2 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:448:2: rule__Annotation__Group__1__Impl rule__Annotation__Group__2
             {
-            pushFollow(FOLLOW_rule__Annotation__Group__1__Impl_in_rule__Annotation__Group__1898);
+            pushFollow(FOLLOW_rule__Annotation__Group__1__Impl_in_rule__Annotation__Group__1892);
             rule__Annotation__Group__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Annotation__Group__2_in_rule__Annotation__Group__1901);
+
+            pushFollow(FOLLOW_rule__Annotation__Group__2_in_rule__Annotation__Group__1895);
             rule__Annotation__Group__2();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -1347,35 +1224,31 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group__1__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:456:1: rule__Annotation__Group__1__Impl : ( ( rule__Annotation__NameAssignment_1 ) ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:455:1: rule__Annotation__Group__1__Impl : ( ( rule__Annotation__NameAssignment_1 ) ) ;
     public final void rule__Annotation__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:460:1: ( ( ( rule__Annotation__NameAssignment_1 ) ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:461:1: ( ( rule__Annotation__NameAssignment_1 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:459:1: ( ( ( rule__Annotation__NameAssignment_1 ) ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:460:1: ( ( rule__Annotation__NameAssignment_1 ) )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:461:1: ( ( rule__Annotation__NameAssignment_1 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:460:1: ( ( rule__Annotation__NameAssignment_1 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:461:1: ( rule__Annotation__NameAssignment_1 )
+            {
+             before(grammarAccess.getAnnotationAccess().getNameAssignment_1()); 
             // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:462:1: ( rule__Annotation__NameAssignment_1 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:462:2: rule__Annotation__NameAssignment_1
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getNameAssignment_1()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:463:1: ( rule__Annotation__NameAssignment_1 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:463:2: rule__Annotation__NameAssignment_1
-            {
-            pushFollow(FOLLOW_rule__Annotation__NameAssignment_1_in_rule__Annotation__Group__1__Impl928);
+            pushFollow(FOLLOW_rule__Annotation__NameAssignment_1_in_rule__Annotation__Group__1__Impl922);
             rule__Annotation__NameAssignment_1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getNameAssignment_1()); 
-            }
+             after(grammarAccess.getAnnotationAccess().getNameAssignment_1()); 
 
             }
 
@@ -1398,20 +1271,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group__2"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:473:1: rule__Annotation__Group__2 : rule__Annotation__Group__2__Impl ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:472:1: rule__Annotation__Group__2 : rule__Annotation__Group__2__Impl ;
     public final void rule__Annotation__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:477:1: ( rule__Annotation__Group__2__Impl )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:478:2: rule__Annotation__Group__2__Impl
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:476:1: ( rule__Annotation__Group__2__Impl )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:477:2: rule__Annotation__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Annotation__Group__2__Impl_in_rule__Annotation__Group__2958);
+            pushFollow(FOLLOW_rule__Annotation__Group__2__Impl_in_rule__Annotation__Group__2952);
             rule__Annotation__Group__2__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -1431,22 +1304,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group__2__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:484:1: rule__Annotation__Group__2__Impl : ( ( rule__Annotation__Group_2__0 )? ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:483:1: rule__Annotation__Group__2__Impl : ( ( rule__Annotation__Group_2__0 )? ) ;
     public final void rule__Annotation__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:488:1: ( ( ( rule__Annotation__Group_2__0 )? ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:489:1: ( ( rule__Annotation__Group_2__0 )? )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:487:1: ( ( ( rule__Annotation__Group_2__0 )? ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:488:1: ( ( rule__Annotation__Group_2__0 )? )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:489:1: ( ( rule__Annotation__Group_2__0 )? )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:488:1: ( ( rule__Annotation__Group_2__0 )? )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:489:1: ( rule__Annotation__Group_2__0 )?
+            {
+             before(grammarAccess.getAnnotationAccess().getGroup_2()); 
             // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:490:1: ( rule__Annotation__Group_2__0 )?
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getGroup_2()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:491:1: ( rule__Annotation__Group_2__0 )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -1455,22 +1326,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
             }
             switch (alt5) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:491:2: rule__Annotation__Group_2__0
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:490:2: rule__Annotation__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__Annotation__Group_2__0_in_rule__Annotation__Group__2__Impl985);
+                    pushFollow(FOLLOW_rule__Annotation__Group_2__0_in_rule__Annotation__Group__2__Impl979);
                     rule__Annotation__Group_2__0();
 
                     state._fsp--;
-                    if (state.failed) return ;
+
 
                     }
                     break;
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getGroup_2()); 
-            }
+             after(grammarAccess.getAnnotationAccess().getGroup_2()); 
 
             }
 
@@ -1493,25 +1362,25 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group_2__0"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:507:1: rule__Annotation__Group_2__0 : rule__Annotation__Group_2__0__Impl rule__Annotation__Group_2__1 ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:506:1: rule__Annotation__Group_2__0 : rule__Annotation__Group_2__0__Impl rule__Annotation__Group_2__1 ;
     public final void rule__Annotation__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:511:1: ( rule__Annotation__Group_2__0__Impl rule__Annotation__Group_2__1 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:512:2: rule__Annotation__Group_2__0__Impl rule__Annotation__Group_2__1
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:510:1: ( rule__Annotation__Group_2__0__Impl rule__Annotation__Group_2__1 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:511:2: rule__Annotation__Group_2__0__Impl rule__Annotation__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Annotation__Group_2__0__Impl_in_rule__Annotation__Group_2__01022);
+            pushFollow(FOLLOW_rule__Annotation__Group_2__0__Impl_in_rule__Annotation__Group_2__01016);
             rule__Annotation__Group_2__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Annotation__Group_2__1_in_rule__Annotation__Group_2__01025);
+
+            pushFollow(FOLLOW_rule__Annotation__Group_2__1_in_rule__Annotation__Group_2__01019);
             rule__Annotation__Group_2__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -1531,31 +1400,21 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group_2__0__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:519:1: rule__Annotation__Group_2__0__Impl : ( ( '(' ) ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:518:1: rule__Annotation__Group_2__0__Impl : ( '(' ) ;
     public final void rule__Annotation__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:523:1: ( ( ( '(' ) ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:524:1: ( ( '(' ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:522:1: ( ( '(' ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:523:1: ( '(' )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:524:1: ( ( '(' ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:525:1: ( '(' )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:523:1: ( '(' )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:524:1: '('
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getLeftParenthesisKeyword_2_0()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:526:1: ( '(' )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:527:2: '('
-            {
-            match(input,19,FOLLOW_19_in_rule__Annotation__Group_2__0__Impl1054); if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getLeftParenthesisKeyword_2_0()); 
-            }
+             before(grammarAccess.getAnnotationAccess().getLeftParenthesisKeyword_2_0()); 
+            match(input,19,FOLLOW_19_in_rule__Annotation__Group_2__0__Impl1047); 
+             after(grammarAccess.getAnnotationAccess().getLeftParenthesisKeyword_2_0()); 
 
             }
 
@@ -1578,25 +1437,25 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group_2__1"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:538:1: rule__Annotation__Group_2__1 : rule__Annotation__Group_2__1__Impl rule__Annotation__Group_2__2 ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:537:1: rule__Annotation__Group_2__1 : rule__Annotation__Group_2__1__Impl rule__Annotation__Group_2__2 ;
     public final void rule__Annotation__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:542:1: ( rule__Annotation__Group_2__1__Impl rule__Annotation__Group_2__2 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:543:2: rule__Annotation__Group_2__1__Impl rule__Annotation__Group_2__2
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:541:1: ( rule__Annotation__Group_2__1__Impl rule__Annotation__Group_2__2 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:542:2: rule__Annotation__Group_2__1__Impl rule__Annotation__Group_2__2
             {
-            pushFollow(FOLLOW_rule__Annotation__Group_2__1__Impl_in_rule__Annotation__Group_2__11086);
+            pushFollow(FOLLOW_rule__Annotation__Group_2__1__Impl_in_rule__Annotation__Group_2__11078);
             rule__Annotation__Group_2__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Annotation__Group_2__2_in_rule__Annotation__Group_2__11089);
+
+            pushFollow(FOLLOW_rule__Annotation__Group_2__2_in_rule__Annotation__Group_2__11081);
             rule__Annotation__Group_2__2();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -1616,35 +1475,31 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group_2__1__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:550:1: rule__Annotation__Group_2__1__Impl : ( ( rule__Annotation__ParameterAssignment_2_1 ) ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:549:1: rule__Annotation__Group_2__1__Impl : ( ( rule__Annotation__PropertyAssignment_2_1 ) ) ;
     public final void rule__Annotation__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:554:1: ( ( ( rule__Annotation__ParameterAssignment_2_1 ) ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:555:1: ( ( rule__Annotation__ParameterAssignment_2_1 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:553:1: ( ( ( rule__Annotation__PropertyAssignment_2_1 ) ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:554:1: ( ( rule__Annotation__PropertyAssignment_2_1 ) )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:555:1: ( ( rule__Annotation__ParameterAssignment_2_1 ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:556:1: ( rule__Annotation__ParameterAssignment_2_1 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:554:1: ( ( rule__Annotation__PropertyAssignment_2_1 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:555:1: ( rule__Annotation__PropertyAssignment_2_1 )
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getParameterAssignment_2_1()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:557:1: ( rule__Annotation__ParameterAssignment_2_1 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:557:2: rule__Annotation__ParameterAssignment_2_1
+             before(grammarAccess.getAnnotationAccess().getPropertyAssignment_2_1()); 
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:556:1: ( rule__Annotation__PropertyAssignment_2_1 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:556:2: rule__Annotation__PropertyAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Annotation__ParameterAssignment_2_1_in_rule__Annotation__Group_2__1__Impl1116);
-            rule__Annotation__ParameterAssignment_2_1();
+            pushFollow(FOLLOW_rule__Annotation__PropertyAssignment_2_1_in_rule__Annotation__Group_2__1__Impl1108);
+            rule__Annotation__PropertyAssignment_2_1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getParameterAssignment_2_1()); 
-            }
+             after(grammarAccess.getAnnotationAccess().getPropertyAssignment_2_1()); 
 
             }
 
@@ -1667,25 +1522,25 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group_2__2"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:567:1: rule__Annotation__Group_2__2 : rule__Annotation__Group_2__2__Impl rule__Annotation__Group_2__3 ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:566:1: rule__Annotation__Group_2__2 : rule__Annotation__Group_2__2__Impl rule__Annotation__Group_2__3 ;
     public final void rule__Annotation__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:571:1: ( rule__Annotation__Group_2__2__Impl rule__Annotation__Group_2__3 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:572:2: rule__Annotation__Group_2__2__Impl rule__Annotation__Group_2__3
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:570:1: ( rule__Annotation__Group_2__2__Impl rule__Annotation__Group_2__3 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:571:2: rule__Annotation__Group_2__2__Impl rule__Annotation__Group_2__3
             {
-            pushFollow(FOLLOW_rule__Annotation__Group_2__2__Impl_in_rule__Annotation__Group_2__21146);
+            pushFollow(FOLLOW_rule__Annotation__Group_2__2__Impl_in_rule__Annotation__Group_2__21138);
             rule__Annotation__Group_2__2__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Annotation__Group_2__3_in_rule__Annotation__Group_2__21149);
+
+            pushFollow(FOLLOW_rule__Annotation__Group_2__3_in_rule__Annotation__Group_2__21141);
             rule__Annotation__Group_2__3();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -1705,22 +1560,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group_2__2__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:579:1: rule__Annotation__Group_2__2__Impl : ( ( rule__Annotation__Group_2_2__0 )* ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:578:1: rule__Annotation__Group_2__2__Impl : ( ( rule__Annotation__Group_2_2__0 )* ) ;
     public final void rule__Annotation__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:583:1: ( ( ( rule__Annotation__Group_2_2__0 )* ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:584:1: ( ( rule__Annotation__Group_2_2__0 )* )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:582:1: ( ( ( rule__Annotation__Group_2_2__0 )* ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:583:1: ( ( rule__Annotation__Group_2_2__0 )* )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:584:1: ( ( rule__Annotation__Group_2_2__0 )* )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:583:1: ( ( rule__Annotation__Group_2_2__0 )* )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:584:1: ( rule__Annotation__Group_2_2__0 )*
+            {
+             before(grammarAccess.getAnnotationAccess().getGroup_2_2()); 
             // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:585:1: ( rule__Annotation__Group_2_2__0 )*
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getGroup_2_2()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:586:1: ( rule__Annotation__Group_2_2__0 )*
             loop6:
             do {
                 int alt6=2;
@@ -1733,13 +1586,13 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
                 switch (alt6) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:586:2: rule__Annotation__Group_2_2__0
+            	    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:585:2: rule__Annotation__Group_2_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Annotation__Group_2_2__0_in_rule__Annotation__Group_2__2__Impl1176);
+            	    pushFollow(FOLLOW_rule__Annotation__Group_2_2__0_in_rule__Annotation__Group_2__2__Impl1168);
             	    rule__Annotation__Group_2_2__0();
 
             	    state._fsp--;
-            	    if (state.failed) return ;
+
 
             	    }
             	    break;
@@ -1749,9 +1602,7 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
                 }
             } while (true);
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getGroup_2_2()); 
-            }
+             after(grammarAccess.getAnnotationAccess().getGroup_2_2()); 
 
             }
 
@@ -1774,20 +1625,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group_2__3"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:596:1: rule__Annotation__Group_2__3 : rule__Annotation__Group_2__3__Impl ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:595:1: rule__Annotation__Group_2__3 : rule__Annotation__Group_2__3__Impl ;
     public final void rule__Annotation__Group_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:600:1: ( rule__Annotation__Group_2__3__Impl )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:601:2: rule__Annotation__Group_2__3__Impl
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:599:1: ( rule__Annotation__Group_2__3__Impl )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:600:2: rule__Annotation__Group_2__3__Impl
             {
-            pushFollow(FOLLOW_rule__Annotation__Group_2__3__Impl_in_rule__Annotation__Group_2__31207);
+            pushFollow(FOLLOW_rule__Annotation__Group_2__3__Impl_in_rule__Annotation__Group_2__31199);
             rule__Annotation__Group_2__3__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -1807,25 +1658,21 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group_2__3__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:607:1: rule__Annotation__Group_2__3__Impl : ( ')' ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:606:1: rule__Annotation__Group_2__3__Impl : ( ')' ) ;
     public final void rule__Annotation__Group_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:611:1: ( ( ')' ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:612:1: ( ')' )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:610:1: ( ( ')' ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:611:1: ( ')' )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:612:1: ( ')' )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:613:1: ')'
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:611:1: ( ')' )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:612:1: ')'
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getRightParenthesisKeyword_2_3()); 
-            }
-            match(input,20,FOLLOW_20_in_rule__Annotation__Group_2__3__Impl1235); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getRightParenthesisKeyword_2_3()); 
-            }
+             before(grammarAccess.getAnnotationAccess().getRightParenthesisKeyword_2_3()); 
+            match(input,20,FOLLOW_20_in_rule__Annotation__Group_2__3__Impl1227); 
+             after(grammarAccess.getAnnotationAccess().getRightParenthesisKeyword_2_3()); 
 
             }
 
@@ -1848,25 +1695,25 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group_2_2__0"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:634:1: rule__Annotation__Group_2_2__0 : rule__Annotation__Group_2_2__0__Impl rule__Annotation__Group_2_2__1 ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:633:1: rule__Annotation__Group_2_2__0 : rule__Annotation__Group_2_2__0__Impl rule__Annotation__Group_2_2__1 ;
     public final void rule__Annotation__Group_2_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:638:1: ( rule__Annotation__Group_2_2__0__Impl rule__Annotation__Group_2_2__1 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:639:2: rule__Annotation__Group_2_2__0__Impl rule__Annotation__Group_2_2__1
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:637:1: ( rule__Annotation__Group_2_2__0__Impl rule__Annotation__Group_2_2__1 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:638:2: rule__Annotation__Group_2_2__0__Impl rule__Annotation__Group_2_2__1
             {
-            pushFollow(FOLLOW_rule__Annotation__Group_2_2__0__Impl_in_rule__Annotation__Group_2_2__01274);
+            pushFollow(FOLLOW_rule__Annotation__Group_2_2__0__Impl_in_rule__Annotation__Group_2_2__01266);
             rule__Annotation__Group_2_2__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Annotation__Group_2_2__1_in_rule__Annotation__Group_2_2__01277);
+
+            pushFollow(FOLLOW_rule__Annotation__Group_2_2__1_in_rule__Annotation__Group_2_2__01269);
             rule__Annotation__Group_2_2__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -1886,25 +1733,21 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group_2_2__0__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:646:1: rule__Annotation__Group_2_2__0__Impl : ( ',' ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:645:1: rule__Annotation__Group_2_2__0__Impl : ( ',' ) ;
     public final void rule__Annotation__Group_2_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:650:1: ( ( ',' ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:651:1: ( ',' )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:649:1: ( ( ',' ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:650:1: ( ',' )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:651:1: ( ',' )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:652:1: ','
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:650:1: ( ',' )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:651:1: ','
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getCommaKeyword_2_2_0()); 
-            }
-            match(input,21,FOLLOW_21_in_rule__Annotation__Group_2_2__0__Impl1305); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getCommaKeyword_2_2_0()); 
-            }
+             before(grammarAccess.getAnnotationAccess().getCommaKeyword_2_2_0()); 
+            match(input,21,FOLLOW_21_in_rule__Annotation__Group_2_2__0__Impl1297); 
+             after(grammarAccess.getAnnotationAccess().getCommaKeyword_2_2_0()); 
 
             }
 
@@ -1927,20 +1770,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group_2_2__1"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:665:1: rule__Annotation__Group_2_2__1 : rule__Annotation__Group_2_2__1__Impl ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:664:1: rule__Annotation__Group_2_2__1 : rule__Annotation__Group_2_2__1__Impl ;
     public final void rule__Annotation__Group_2_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:669:1: ( rule__Annotation__Group_2_2__1__Impl )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:670:2: rule__Annotation__Group_2_2__1__Impl
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:668:1: ( rule__Annotation__Group_2_2__1__Impl )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:669:2: rule__Annotation__Group_2_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Annotation__Group_2_2__1__Impl_in_rule__Annotation__Group_2_2__11336);
+            pushFollow(FOLLOW_rule__Annotation__Group_2_2__1__Impl_in_rule__Annotation__Group_2_2__11328);
             rule__Annotation__Group_2_2__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -1960,35 +1803,31 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__Group_2_2__1__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:676:1: rule__Annotation__Group_2_2__1__Impl : ( ( rule__Annotation__ParameterAssignment_2_2_1 ) ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:675:1: rule__Annotation__Group_2_2__1__Impl : ( ( rule__Annotation__PropertyAssignment_2_2_1 ) ) ;
     public final void rule__Annotation__Group_2_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:680:1: ( ( ( rule__Annotation__ParameterAssignment_2_2_1 ) ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:681:1: ( ( rule__Annotation__ParameterAssignment_2_2_1 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:679:1: ( ( ( rule__Annotation__PropertyAssignment_2_2_1 ) ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:680:1: ( ( rule__Annotation__PropertyAssignment_2_2_1 ) )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:681:1: ( ( rule__Annotation__ParameterAssignment_2_2_1 ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:682:1: ( rule__Annotation__ParameterAssignment_2_2_1 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:680:1: ( ( rule__Annotation__PropertyAssignment_2_2_1 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:681:1: ( rule__Annotation__PropertyAssignment_2_2_1 )
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getParameterAssignment_2_2_1()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:683:1: ( rule__Annotation__ParameterAssignment_2_2_1 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:683:2: rule__Annotation__ParameterAssignment_2_2_1
+             before(grammarAccess.getAnnotationAccess().getPropertyAssignment_2_2_1()); 
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:682:1: ( rule__Annotation__PropertyAssignment_2_2_1 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:682:2: rule__Annotation__PropertyAssignment_2_2_1
             {
-            pushFollow(FOLLOW_rule__Annotation__ParameterAssignment_2_2_1_in_rule__Annotation__Group_2_2__1__Impl1363);
-            rule__Annotation__ParameterAssignment_2_2_1();
+            pushFollow(FOLLOW_rule__Annotation__PropertyAssignment_2_2_1_in_rule__Annotation__Group_2_2__1__Impl1355);
+            rule__Annotation__PropertyAssignment_2_2_1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getParameterAssignment_2_2_1()); 
-            }
+             after(grammarAccess.getAnnotationAccess().getPropertyAssignment_2_2_1()); 
 
             }
 
@@ -2010,76 +1849,25 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Annotation__Group_2_2__1__Impl"
 
 
-    // $ANTLR start "rule__AssignParameter__Group__0"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:697:1: rule__AssignParameter__Group__0 : rule__AssignParameter__Group__0__Impl rule__AssignParameter__Group__1 ;
-    public final void rule__AssignParameter__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__AssignProperty__Group__0"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:696:1: rule__AssignProperty__Group__0 : rule__AssignProperty__Group__0__Impl rule__AssignProperty__Group__1 ;
+    public final void rule__AssignProperty__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:701:1: ( rule__AssignParameter__Group__0__Impl rule__AssignParameter__Group__1 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:702:2: rule__AssignParameter__Group__0__Impl rule__AssignParameter__Group__1
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:700:1: ( rule__AssignProperty__Group__0__Impl rule__AssignProperty__Group__1 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:701:2: rule__AssignProperty__Group__0__Impl rule__AssignProperty__Group__1
             {
-            pushFollow(FOLLOW_rule__AssignParameter__Group__0__Impl_in_rule__AssignParameter__Group__01397);
-            rule__AssignParameter__Group__0__Impl();
+            pushFollow(FOLLOW_rule__AssignProperty__Group__0__Impl_in_rule__AssignProperty__Group__01389);
+            rule__AssignProperty__Group__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__AssignParameter__Group__1_in_rule__AssignParameter__Group__01400);
-            rule__AssignParameter__Group__1();
+
+            pushFollow(FOLLOW_rule__AssignProperty__Group__1_in_rule__AssignProperty__Group__01392);
+            rule__AssignProperty__Group__1();
 
             state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AssignParameter__Group__0"
-
-
-    // $ANTLR start "rule__AssignParameter__Group__0__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:709:1: rule__AssignParameter__Group__0__Impl : ( ( rule__AssignParameter__NameAssignment_0 ) ) ;
-    public final void rule__AssignParameter__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:713:1: ( ( ( rule__AssignParameter__NameAssignment_0 ) ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:714:1: ( ( rule__AssignParameter__NameAssignment_0 ) )
-            {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:714:1: ( ( rule__AssignParameter__NameAssignment_0 ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:715:1: ( rule__AssignParameter__NameAssignment_0 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAssignParameterAccess().getNameAssignment_0()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:716:1: ( rule__AssignParameter__NameAssignment_0 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:716:2: rule__AssignParameter__NameAssignment_0
-            {
-            pushFollow(FOLLOW_rule__AssignParameter__NameAssignment_0_in_rule__AssignParameter__Group__0__Impl1427);
-            rule__AssignParameter__NameAssignment_0();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAssignParameterAccess().getNameAssignment_0()); 
-            }
-
-            }
 
 
             }
@@ -2096,67 +1884,35 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__AssignParameter__Group__0__Impl"
+    // $ANTLR end "rule__AssignProperty__Group__0"
 
 
-    // $ANTLR start "rule__AssignParameter__Group__1"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:726:1: rule__AssignParameter__Group__1 : rule__AssignParameter__Group__1__Impl rule__AssignParameter__Group__2 ;
-    public final void rule__AssignParameter__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:730:1: ( rule__AssignParameter__Group__1__Impl rule__AssignParameter__Group__2 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:731:2: rule__AssignParameter__Group__1__Impl rule__AssignParameter__Group__2
-            {
-            pushFollow(FOLLOW_rule__AssignParameter__Group__1__Impl_in_rule__AssignParameter__Group__11457);
-            rule__AssignParameter__Group__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__AssignParameter__Group__2_in_rule__AssignParameter__Group__11460);
-            rule__AssignParameter__Group__2();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AssignParameter__Group__1"
-
-
-    // $ANTLR start "rule__AssignParameter__Group__1__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:738:1: rule__AssignParameter__Group__1__Impl : ( '=' ) ;
-    public final void rule__AssignParameter__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__AssignProperty__Group__0__Impl"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:708:1: rule__AssignProperty__Group__0__Impl : ( ( rule__AssignProperty__NameAssignment_0 ) ) ;
+    public final void rule__AssignProperty__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:742:1: ( ( '=' ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:743:1: ( '=' )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:712:1: ( ( ( rule__AssignProperty__NameAssignment_0 ) ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:713:1: ( ( rule__AssignProperty__NameAssignment_0 ) )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:743:1: ( '=' )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:744:1: '='
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:713:1: ( ( rule__AssignProperty__NameAssignment_0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:714:1: ( rule__AssignProperty__NameAssignment_0 )
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAssignParameterAccess().getEqualsSignKeyword_1()); 
+             before(grammarAccess.getAssignPropertyAccess().getNameAssignment_0()); 
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:715:1: ( rule__AssignProperty__NameAssignment_0 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:715:2: rule__AssignProperty__NameAssignment_0
+            {
+            pushFollow(FOLLOW_rule__AssignProperty__NameAssignment_0_in_rule__AssignProperty__Group__0__Impl1419);
+            rule__AssignProperty__NameAssignment_0();
+
+            state._fsp--;
+
+
             }
-            match(input,22,FOLLOW_22_in_rule__AssignParameter__Group__1__Impl1488); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAssignParameterAccess().getEqualsSignKeyword_1()); 
-            }
+
+             after(grammarAccess.getAssignPropertyAccess().getNameAssignment_0()); 
 
             }
 
@@ -2175,74 +1931,28 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__AssignParameter__Group__1__Impl"
+    // $ANTLR end "rule__AssignProperty__Group__0__Impl"
 
 
-    // $ANTLR start "rule__AssignParameter__Group__2"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:757:1: rule__AssignParameter__Group__2 : rule__AssignParameter__Group__2__Impl ;
-    public final void rule__AssignParameter__Group__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:761:1: ( rule__AssignParameter__Group__2__Impl )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:762:2: rule__AssignParameter__Group__2__Impl
-            {
-            pushFollow(FOLLOW_rule__AssignParameter__Group__2__Impl_in_rule__AssignParameter__Group__21519);
-            rule__AssignParameter__Group__2__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AssignParameter__Group__2"
-
-
-    // $ANTLR start "rule__AssignParameter__Group__2__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:768:1: rule__AssignParameter__Group__2__Impl : ( ( rule__AssignParameter__ValueAssignment_2 ) ) ;
-    public final void rule__AssignParameter__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__AssignProperty__Group__1"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:725:1: rule__AssignProperty__Group__1 : rule__AssignProperty__Group__1__Impl rule__AssignProperty__Group__2 ;
+    public final void rule__AssignProperty__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:772:1: ( ( ( rule__AssignParameter__ValueAssignment_2 ) ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:773:1: ( ( rule__AssignParameter__ValueAssignment_2 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:729:1: ( rule__AssignProperty__Group__1__Impl rule__AssignProperty__Group__2 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:730:2: rule__AssignProperty__Group__1__Impl rule__AssignProperty__Group__2
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:773:1: ( ( rule__AssignParameter__ValueAssignment_2 ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:774:1: ( rule__AssignParameter__ValueAssignment_2 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAssignParameterAccess().getValueAssignment_2()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:775:1: ( rule__AssignParameter__ValueAssignment_2 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:775:2: rule__AssignParameter__ValueAssignment_2
-            {
-            pushFollow(FOLLOW_rule__AssignParameter__ValueAssignment_2_in_rule__AssignParameter__Group__2__Impl1546);
-            rule__AssignParameter__ValueAssignment_2();
+            pushFollow(FOLLOW_rule__AssignProperty__Group__1__Impl_in_rule__AssignProperty__Group__11449);
+            rule__AssignProperty__Group__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
 
-            }
+            pushFollow(FOLLOW_rule__AssignProperty__Group__2_in_rule__AssignProperty__Group__11452);
+            rule__AssignProperty__Group__2();
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAssignParameterAccess().getValueAssignment_2()); 
-            }
-
-            }
+            state._fsp--;
 
 
             }
@@ -2259,29 +1969,146 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__AssignParameter__Group__2__Impl"
+    // $ANTLR end "rule__AssignProperty__Group__1"
+
+
+    // $ANTLR start "rule__AssignProperty__Group__1__Impl"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:737:1: rule__AssignProperty__Group__1__Impl : ( '=' ) ;
+    public final void rule__AssignProperty__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:741:1: ( ( '=' ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:742:1: ( '=' )
+            {
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:742:1: ( '=' )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:743:1: '='
+            {
+             before(grammarAccess.getAssignPropertyAccess().getEqualsSignKeyword_1()); 
+            match(input,22,FOLLOW_22_in_rule__AssignProperty__Group__1__Impl1480); 
+             after(grammarAccess.getAssignPropertyAccess().getEqualsSignKeyword_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AssignProperty__Group__1__Impl"
+
+
+    // $ANTLR start "rule__AssignProperty__Group__2"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:756:1: rule__AssignProperty__Group__2 : rule__AssignProperty__Group__2__Impl ;
+    public final void rule__AssignProperty__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:760:1: ( rule__AssignProperty__Group__2__Impl )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:761:2: rule__AssignProperty__Group__2__Impl
+            {
+            pushFollow(FOLLOW_rule__AssignProperty__Group__2__Impl_in_rule__AssignProperty__Group__21511);
+            rule__AssignProperty__Group__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AssignProperty__Group__2"
+
+
+    // $ANTLR start "rule__AssignProperty__Group__2__Impl"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:767:1: rule__AssignProperty__Group__2__Impl : ( ( rule__AssignProperty__ValueAssignment_2 ) ) ;
+    public final void rule__AssignProperty__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:771:1: ( ( ( rule__AssignProperty__ValueAssignment_2 ) ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:772:1: ( ( rule__AssignProperty__ValueAssignment_2 ) )
+            {
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:772:1: ( ( rule__AssignProperty__ValueAssignment_2 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:773:1: ( rule__AssignProperty__ValueAssignment_2 )
+            {
+             before(grammarAccess.getAssignPropertyAccess().getValueAssignment_2()); 
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:774:1: ( rule__AssignProperty__ValueAssignment_2 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:774:2: rule__AssignProperty__ValueAssignment_2
+            {
+            pushFollow(FOLLOW_rule__AssignProperty__ValueAssignment_2_in_rule__AssignProperty__Group__2__Impl1538);
+            rule__AssignProperty__ValueAssignment_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getAssignPropertyAccess().getValueAssignment_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AssignProperty__Group__2__Impl"
 
 
     // $ANTLR start "rule__ExtendedID__Group__0"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:791:1: rule__ExtendedID__Group__0 : rule__ExtendedID__Group__0__Impl rule__ExtendedID__Group__1 ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:790:1: rule__ExtendedID__Group__0 : rule__ExtendedID__Group__0__Impl rule__ExtendedID__Group__1 ;
     public final void rule__ExtendedID__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:795:1: ( rule__ExtendedID__Group__0__Impl rule__ExtendedID__Group__1 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:796:2: rule__ExtendedID__Group__0__Impl rule__ExtendedID__Group__1
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:794:1: ( rule__ExtendedID__Group__0__Impl rule__ExtendedID__Group__1 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:795:2: rule__ExtendedID__Group__0__Impl rule__ExtendedID__Group__1
             {
-            pushFollow(FOLLOW_rule__ExtendedID__Group__0__Impl_in_rule__ExtendedID__Group__01582);
+            pushFollow(FOLLOW_rule__ExtendedID__Group__0__Impl_in_rule__ExtendedID__Group__01574);
             rule__ExtendedID__Group__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ExtendedID__Group__1_in_rule__ExtendedID__Group__01585);
+
+            pushFollow(FOLLOW_rule__ExtendedID__Group__1_in_rule__ExtendedID__Group__01577);
             rule__ExtendedID__Group__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -2301,25 +2128,21 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExtendedID__Group__0__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:803:1: rule__ExtendedID__Group__0__Impl : ( RULE_ID ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:802:1: rule__ExtendedID__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__ExtendedID__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:807:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:808:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:806:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:807:1: ( RULE_ID )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:808:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:809:1: RULE_ID
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:807:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:808:1: RULE_ID
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getExtendedIDAccess().getIDTerminalRuleCall_0()); 
-            }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ExtendedID__Group__0__Impl1612); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getExtendedIDAccess().getIDTerminalRuleCall_0()); 
-            }
+             before(grammarAccess.getExtendedIDAccess().getIDTerminalRuleCall_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ExtendedID__Group__0__Impl1604); 
+             after(grammarAccess.getExtendedIDAccess().getIDTerminalRuleCall_0()); 
 
             }
 
@@ -2342,20 +2165,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExtendedID__Group__1"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:820:1: rule__ExtendedID__Group__1 : rule__ExtendedID__Group__1__Impl ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:819:1: rule__ExtendedID__Group__1 : rule__ExtendedID__Group__1__Impl ;
     public final void rule__ExtendedID__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:824:1: ( rule__ExtendedID__Group__1__Impl )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:825:2: rule__ExtendedID__Group__1__Impl
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:823:1: ( rule__ExtendedID__Group__1__Impl )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:824:2: rule__ExtendedID__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__ExtendedID__Group__1__Impl_in_rule__ExtendedID__Group__11641);
+            pushFollow(FOLLOW_rule__ExtendedID__Group__1__Impl_in_rule__ExtendedID__Group__11633);
             rule__ExtendedID__Group__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -2375,22 +2198,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExtendedID__Group__1__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:831:1: rule__ExtendedID__Group__1__Impl : ( ( rule__ExtendedID__Group_1__0 )* ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:830:1: rule__ExtendedID__Group__1__Impl : ( ( rule__ExtendedID__Group_1__0 )* ) ;
     public final void rule__ExtendedID__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:835:1: ( ( ( rule__ExtendedID__Group_1__0 )* ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:836:1: ( ( rule__ExtendedID__Group_1__0 )* )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:834:1: ( ( ( rule__ExtendedID__Group_1__0 )* ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:835:1: ( ( rule__ExtendedID__Group_1__0 )* )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:836:1: ( ( rule__ExtendedID__Group_1__0 )* )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:835:1: ( ( rule__ExtendedID__Group_1__0 )* )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:836:1: ( rule__ExtendedID__Group_1__0 )*
+            {
+             before(grammarAccess.getExtendedIDAccess().getGroup_1()); 
             // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:837:1: ( rule__ExtendedID__Group_1__0 )*
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getExtendedIDAccess().getGroup_1()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:838:1: ( rule__ExtendedID__Group_1__0 )*
             loop7:
             do {
                 int alt7=2;
@@ -2403,13 +2224,13 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
                 switch (alt7) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:838:2: rule__ExtendedID__Group_1__0
+            	    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:837:2: rule__ExtendedID__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__ExtendedID__Group_1__0_in_rule__ExtendedID__Group__1__Impl1668);
+            	    pushFollow(FOLLOW_rule__ExtendedID__Group_1__0_in_rule__ExtendedID__Group__1__Impl1660);
             	    rule__ExtendedID__Group_1__0();
 
             	    state._fsp--;
-            	    if (state.failed) return ;
+
 
             	    }
             	    break;
@@ -2419,9 +2240,7 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
                 }
             } while (true);
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getExtendedIDAccess().getGroup_1()); 
-            }
+             after(grammarAccess.getExtendedIDAccess().getGroup_1()); 
 
             }
 
@@ -2444,25 +2263,25 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExtendedID__Group_1__0"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:852:1: rule__ExtendedID__Group_1__0 : rule__ExtendedID__Group_1__0__Impl rule__ExtendedID__Group_1__1 ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:851:1: rule__ExtendedID__Group_1__0 : rule__ExtendedID__Group_1__0__Impl rule__ExtendedID__Group_1__1 ;
     public final void rule__ExtendedID__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:856:1: ( rule__ExtendedID__Group_1__0__Impl rule__ExtendedID__Group_1__1 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:857:2: rule__ExtendedID__Group_1__0__Impl rule__ExtendedID__Group_1__1
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:855:1: ( rule__ExtendedID__Group_1__0__Impl rule__ExtendedID__Group_1__1 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:856:2: rule__ExtendedID__Group_1__0__Impl rule__ExtendedID__Group_1__1
             {
-            pushFollow(FOLLOW_rule__ExtendedID__Group_1__0__Impl_in_rule__ExtendedID__Group_1__01703);
+            pushFollow(FOLLOW_rule__ExtendedID__Group_1__0__Impl_in_rule__ExtendedID__Group_1__01695);
             rule__ExtendedID__Group_1__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ExtendedID__Group_1__1_in_rule__ExtendedID__Group_1__01706);
+
+            pushFollow(FOLLOW_rule__ExtendedID__Group_1__1_in_rule__ExtendedID__Group_1__01698);
             rule__ExtendedID__Group_1__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -2482,25 +2301,21 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExtendedID__Group_1__0__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:864:1: rule__ExtendedID__Group_1__0__Impl : ( '.' ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:863:1: rule__ExtendedID__Group_1__0__Impl : ( '.' ) ;
     public final void rule__ExtendedID__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:868:1: ( ( '.' ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:869:1: ( '.' )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:867:1: ( ( '.' ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:868:1: ( '.' )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:869:1: ( '.' )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:870:1: '.'
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:868:1: ( '.' )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:869:1: '.'
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getExtendedIDAccess().getFullStopKeyword_1_0()); 
-            }
-            match(input,23,FOLLOW_23_in_rule__ExtendedID__Group_1__0__Impl1734); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getExtendedIDAccess().getFullStopKeyword_1_0()); 
-            }
+             before(grammarAccess.getExtendedIDAccess().getFullStopKeyword_1_0()); 
+            match(input,23,FOLLOW_23_in_rule__ExtendedID__Group_1__0__Impl1726); 
+             after(grammarAccess.getExtendedIDAccess().getFullStopKeyword_1_0()); 
 
             }
 
@@ -2523,20 +2338,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExtendedID__Group_1__1"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:883:1: rule__ExtendedID__Group_1__1 : rule__ExtendedID__Group_1__1__Impl ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:882:1: rule__ExtendedID__Group_1__1 : rule__ExtendedID__Group_1__1__Impl ;
     public final void rule__ExtendedID__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:887:1: ( rule__ExtendedID__Group_1__1__Impl )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:888:2: rule__ExtendedID__Group_1__1__Impl
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:886:1: ( rule__ExtendedID__Group_1__1__Impl )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:887:2: rule__ExtendedID__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__ExtendedID__Group_1__1__Impl_in_rule__ExtendedID__Group_1__11765);
+            pushFollow(FOLLOW_rule__ExtendedID__Group_1__1__Impl_in_rule__ExtendedID__Group_1__11757);
             rule__ExtendedID__Group_1__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -2556,25 +2371,21 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExtendedID__Group_1__1__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:894:1: rule__ExtendedID__Group_1__1__Impl : ( RULE_ID ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:893:1: rule__ExtendedID__Group_1__1__Impl : ( RULE_ID ) ;
     public final void rule__ExtendedID__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:898:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:899:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:897:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:898:1: ( RULE_ID )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:899:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:900:1: RULE_ID
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:898:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:899:1: RULE_ID
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getExtendedIDAccess().getIDTerminalRuleCall_1_1()); 
-            }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ExtendedID__Group_1__1__Impl1792); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getExtendedIDAccess().getIDTerminalRuleCall_1_1()); 
-            }
+             before(grammarAccess.getExtendedIDAccess().getIDTerminalRuleCall_1_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ExtendedID__Group_1__1__Impl1784); 
+             after(grammarAccess.getExtendedIDAccess().getIDTerminalRuleCall_1_1()); 
 
             }
 
@@ -2597,25 +2408,25 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Group__0"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:915:1: rule__Real__Group__0 : rule__Real__Group__0__Impl rule__Real__Group__1 ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:914:1: rule__Real__Group__0 : rule__Real__Group__0__Impl rule__Real__Group__1 ;
     public final void rule__Real__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:919:1: ( rule__Real__Group__0__Impl rule__Real__Group__1 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:920:2: rule__Real__Group__0__Impl rule__Real__Group__1
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:918:1: ( rule__Real__Group__0__Impl rule__Real__Group__1 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:919:2: rule__Real__Group__0__Impl rule__Real__Group__1
             {
-            pushFollow(FOLLOW_rule__Real__Group__0__Impl_in_rule__Real__Group__01825);
+            pushFollow(FOLLOW_rule__Real__Group__0__Impl_in_rule__Real__Group__01817);
             rule__Real__Group__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Real__Group__1_in_rule__Real__Group__01828);
+
+            pushFollow(FOLLOW_rule__Real__Group__1_in_rule__Real__Group__01820);
             rule__Real__Group__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -2635,22 +2446,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Group__0__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:927:1: rule__Real__Group__0__Impl : ( ( '-' )? ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:926:1: rule__Real__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__Real__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:931:1: ( ( ( '-' )? ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:932:1: ( ( '-' )? )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:930:1: ( ( ( '-' )? ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:931:1: ( ( '-' )? )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:932:1: ( ( '-' )? )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:931:1: ( ( '-' )? )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:932:1: ( '-' )?
+            {
+             before(grammarAccess.getRealAccess().getHyphenMinusKeyword_0()); 
             // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:933:1: ( '-' )?
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRealAccess().getHyphenMinusKeyword_0()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:934:1: ( '-' )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -2659,18 +2468,16 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
             }
             switch (alt8) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:935:2: '-'
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:934:2: '-'
                     {
-                    match(input,17,FOLLOW_17_in_rule__Real__Group__0__Impl1857); if (state.failed) return ;
+                    match(input,17,FOLLOW_17_in_rule__Real__Group__0__Impl1849); 
 
                     }
                     break;
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRealAccess().getHyphenMinusKeyword_0()); 
-            }
+             after(grammarAccess.getRealAccess().getHyphenMinusKeyword_0()); 
 
             }
 
@@ -2693,25 +2500,25 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Group__1"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:946:1: rule__Real__Group__1 : rule__Real__Group__1__Impl rule__Real__Group__2 ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:945:1: rule__Real__Group__1 : rule__Real__Group__1__Impl rule__Real__Group__2 ;
     public final void rule__Real__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:950:1: ( rule__Real__Group__1__Impl rule__Real__Group__2 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:951:2: rule__Real__Group__1__Impl rule__Real__Group__2
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:949:1: ( rule__Real__Group__1__Impl rule__Real__Group__2 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:950:2: rule__Real__Group__1__Impl rule__Real__Group__2
             {
-            pushFollow(FOLLOW_rule__Real__Group__1__Impl_in_rule__Real__Group__11890);
+            pushFollow(FOLLOW_rule__Real__Group__1__Impl_in_rule__Real__Group__11882);
             rule__Real__Group__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Real__Group__2_in_rule__Real__Group__11893);
+
+            pushFollow(FOLLOW_rule__Real__Group__2_in_rule__Real__Group__11885);
             rule__Real__Group__2();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -2731,25 +2538,21 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Group__1__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:958:1: rule__Real__Group__1__Impl : ( RULE_NATURAL ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:957:1: rule__Real__Group__1__Impl : ( RULE_NATURAL ) ;
     public final void rule__Real__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:962:1: ( ( RULE_NATURAL ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:963:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:961:1: ( ( RULE_NATURAL ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:962:1: ( RULE_NATURAL )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:963:1: ( RULE_NATURAL )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:964:1: RULE_NATURAL
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:962:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:963:1: RULE_NATURAL
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_1()); 
-            }
-            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Real__Group__1__Impl1920); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_1()); 
-            }
+             before(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_1()); 
+            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Real__Group__1__Impl1912); 
+             after(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_1()); 
 
             }
 
@@ -2772,25 +2575,25 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Group__2"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:975:1: rule__Real__Group__2 : rule__Real__Group__2__Impl rule__Real__Group__3 ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:974:1: rule__Real__Group__2 : rule__Real__Group__2__Impl rule__Real__Group__3 ;
     public final void rule__Real__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:979:1: ( rule__Real__Group__2__Impl rule__Real__Group__3 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:980:2: rule__Real__Group__2__Impl rule__Real__Group__3
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:978:1: ( rule__Real__Group__2__Impl rule__Real__Group__3 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:979:2: rule__Real__Group__2__Impl rule__Real__Group__3
             {
-            pushFollow(FOLLOW_rule__Real__Group__2__Impl_in_rule__Real__Group__21949);
+            pushFollow(FOLLOW_rule__Real__Group__2__Impl_in_rule__Real__Group__21941);
             rule__Real__Group__2__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Real__Group__3_in_rule__Real__Group__21952);
+
+            pushFollow(FOLLOW_rule__Real__Group__3_in_rule__Real__Group__21944);
             rule__Real__Group__3();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -2810,25 +2613,21 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Group__2__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:987:1: rule__Real__Group__2__Impl : ( '.' ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:986:1: rule__Real__Group__2__Impl : ( '.' ) ;
     public final void rule__Real__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:991:1: ( ( '.' ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:992:1: ( '.' )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:990:1: ( ( '.' ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:991:1: ( '.' )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:992:1: ( '.' )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:993:1: '.'
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:991:1: ( '.' )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:992:1: '.'
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRealAccess().getFullStopKeyword_2()); 
-            }
-            match(input,23,FOLLOW_23_in_rule__Real__Group__2__Impl1980); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRealAccess().getFullStopKeyword_2()); 
-            }
+             before(grammarAccess.getRealAccess().getFullStopKeyword_2()); 
+            match(input,23,FOLLOW_23_in_rule__Real__Group__2__Impl1972); 
+             after(grammarAccess.getRealAccess().getFullStopKeyword_2()); 
 
             }
 
@@ -2851,25 +2650,25 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Group__3"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1006:1: rule__Real__Group__3 : rule__Real__Group__3__Impl rule__Real__Group__4 ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1005:1: rule__Real__Group__3 : rule__Real__Group__3__Impl rule__Real__Group__4 ;
     public final void rule__Real__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1010:1: ( rule__Real__Group__3__Impl rule__Real__Group__4 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1011:2: rule__Real__Group__3__Impl rule__Real__Group__4
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1009:1: ( rule__Real__Group__3__Impl rule__Real__Group__4 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1010:2: rule__Real__Group__3__Impl rule__Real__Group__4
             {
-            pushFollow(FOLLOW_rule__Real__Group__3__Impl_in_rule__Real__Group__32011);
+            pushFollow(FOLLOW_rule__Real__Group__3__Impl_in_rule__Real__Group__32003);
             rule__Real__Group__3__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Real__Group__4_in_rule__Real__Group__32014);
+
+            pushFollow(FOLLOW_rule__Real__Group__4_in_rule__Real__Group__32006);
             rule__Real__Group__4();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -2889,25 +2688,21 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Group__3__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1018:1: rule__Real__Group__3__Impl : ( RULE_NATURAL ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1017:1: rule__Real__Group__3__Impl : ( RULE_NATURAL ) ;
     public final void rule__Real__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1022:1: ( ( RULE_NATURAL ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1023:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1021:1: ( ( RULE_NATURAL ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1022:1: ( RULE_NATURAL )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1023:1: ( RULE_NATURAL )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1024:1: RULE_NATURAL
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1022:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1023:1: RULE_NATURAL
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_3()); 
-            }
-            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Real__Group__3__Impl2041); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_3()); 
-            }
+             before(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_3()); 
+            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Real__Group__3__Impl2033); 
+             after(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_3()); 
 
             }
 
@@ -2930,20 +2725,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Group__4"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1035:1: rule__Real__Group__4 : rule__Real__Group__4__Impl ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1034:1: rule__Real__Group__4 : rule__Real__Group__4__Impl ;
     public final void rule__Real__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1039:1: ( rule__Real__Group__4__Impl )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1040:2: rule__Real__Group__4__Impl
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1038:1: ( rule__Real__Group__4__Impl )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1039:2: rule__Real__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Real__Group__4__Impl_in_rule__Real__Group__42070);
+            pushFollow(FOLLOW_rule__Real__Group__4__Impl_in_rule__Real__Group__42062);
             rule__Real__Group__4__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -2963,22 +2758,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Group__4__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1046:1: rule__Real__Group__4__Impl : ( ( rule__Real__Group_4__0 )? ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1045:1: rule__Real__Group__4__Impl : ( ( rule__Real__Group_4__0 )? ) ;
     public final void rule__Real__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1050:1: ( ( ( rule__Real__Group_4__0 )? ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1051:1: ( ( rule__Real__Group_4__0 )? )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1049:1: ( ( ( rule__Real__Group_4__0 )? ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1050:1: ( ( rule__Real__Group_4__0 )? )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1051:1: ( ( rule__Real__Group_4__0 )? )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1050:1: ( ( rule__Real__Group_4__0 )? )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1051:1: ( rule__Real__Group_4__0 )?
+            {
+             before(grammarAccess.getRealAccess().getGroup_4()); 
             // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1052:1: ( rule__Real__Group_4__0 )?
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRealAccess().getGroup_4()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1053:1: ( rule__Real__Group_4__0 )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -2987,22 +2780,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
             }
             switch (alt9) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1053:2: rule__Real__Group_4__0
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1052:2: rule__Real__Group_4__0
                     {
-                    pushFollow(FOLLOW_rule__Real__Group_4__0_in_rule__Real__Group__4__Impl2097);
+                    pushFollow(FOLLOW_rule__Real__Group_4__0_in_rule__Real__Group__4__Impl2089);
                     rule__Real__Group_4__0();
 
                     state._fsp--;
-                    if (state.failed) return ;
+
 
                     }
                     break;
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRealAccess().getGroup_4()); 
-            }
+             after(grammarAccess.getRealAccess().getGroup_4()); 
 
             }
 
@@ -3025,25 +2816,25 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Group_4__0"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1073:1: rule__Real__Group_4__0 : rule__Real__Group_4__0__Impl rule__Real__Group_4__1 ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1072:1: rule__Real__Group_4__0 : rule__Real__Group_4__0__Impl rule__Real__Group_4__1 ;
     public final void rule__Real__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1077:1: ( rule__Real__Group_4__0__Impl rule__Real__Group_4__1 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1078:2: rule__Real__Group_4__0__Impl rule__Real__Group_4__1
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1076:1: ( rule__Real__Group_4__0__Impl rule__Real__Group_4__1 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1077:2: rule__Real__Group_4__0__Impl rule__Real__Group_4__1
             {
-            pushFollow(FOLLOW_rule__Real__Group_4__0__Impl_in_rule__Real__Group_4__02138);
+            pushFollow(FOLLOW_rule__Real__Group_4__0__Impl_in_rule__Real__Group_4__02130);
             rule__Real__Group_4__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Real__Group_4__1_in_rule__Real__Group_4__02141);
+
+            pushFollow(FOLLOW_rule__Real__Group_4__1_in_rule__Real__Group_4__02133);
             rule__Real__Group_4__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -3063,35 +2854,31 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Group_4__0__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1085:1: rule__Real__Group_4__0__Impl : ( ( rule__Real__Alternatives_4_0 ) ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1084:1: rule__Real__Group_4__0__Impl : ( ( rule__Real__Alternatives_4_0 ) ) ;
     public final void rule__Real__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1089:1: ( ( ( rule__Real__Alternatives_4_0 ) ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1090:1: ( ( rule__Real__Alternatives_4_0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1088:1: ( ( ( rule__Real__Alternatives_4_0 ) ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1089:1: ( ( rule__Real__Alternatives_4_0 ) )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1090:1: ( ( rule__Real__Alternatives_4_0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1089:1: ( ( rule__Real__Alternatives_4_0 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1090:1: ( rule__Real__Alternatives_4_0 )
+            {
+             before(grammarAccess.getRealAccess().getAlternatives_4_0()); 
             // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1091:1: ( rule__Real__Alternatives_4_0 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1091:2: rule__Real__Alternatives_4_0
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRealAccess().getAlternatives_4_0()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1092:1: ( rule__Real__Alternatives_4_0 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1092:2: rule__Real__Alternatives_4_0
-            {
-            pushFollow(FOLLOW_rule__Real__Alternatives_4_0_in_rule__Real__Group_4__0__Impl2168);
+            pushFollow(FOLLOW_rule__Real__Alternatives_4_0_in_rule__Real__Group_4__0__Impl2160);
             rule__Real__Alternatives_4_0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRealAccess().getAlternatives_4_0()); 
-            }
+             after(grammarAccess.getRealAccess().getAlternatives_4_0()); 
 
             }
 
@@ -3114,25 +2901,25 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Group_4__1"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1102:1: rule__Real__Group_4__1 : rule__Real__Group_4__1__Impl rule__Real__Group_4__2 ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1101:1: rule__Real__Group_4__1 : rule__Real__Group_4__1__Impl rule__Real__Group_4__2 ;
     public final void rule__Real__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1106:1: ( rule__Real__Group_4__1__Impl rule__Real__Group_4__2 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1107:2: rule__Real__Group_4__1__Impl rule__Real__Group_4__2
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1105:1: ( rule__Real__Group_4__1__Impl rule__Real__Group_4__2 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1106:2: rule__Real__Group_4__1__Impl rule__Real__Group_4__2
             {
-            pushFollow(FOLLOW_rule__Real__Group_4__1__Impl_in_rule__Real__Group_4__12198);
+            pushFollow(FOLLOW_rule__Real__Group_4__1__Impl_in_rule__Real__Group_4__12190);
             rule__Real__Group_4__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Real__Group_4__2_in_rule__Real__Group_4__12201);
+
+            pushFollow(FOLLOW_rule__Real__Group_4__2_in_rule__Real__Group_4__12193);
             rule__Real__Group_4__2();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -3152,35 +2939,31 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Group_4__1__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1114:1: rule__Real__Group_4__1__Impl : ( ( rule__Real__Alternatives_4_1 ) ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1113:1: rule__Real__Group_4__1__Impl : ( ( rule__Real__Alternatives_4_1 ) ) ;
     public final void rule__Real__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1118:1: ( ( ( rule__Real__Alternatives_4_1 ) ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1119:1: ( ( rule__Real__Alternatives_4_1 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1117:1: ( ( ( rule__Real__Alternatives_4_1 ) ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1118:1: ( ( rule__Real__Alternatives_4_1 ) )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1119:1: ( ( rule__Real__Alternatives_4_1 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1118:1: ( ( rule__Real__Alternatives_4_1 ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1119:1: ( rule__Real__Alternatives_4_1 )
+            {
+             before(grammarAccess.getRealAccess().getAlternatives_4_1()); 
             // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1120:1: ( rule__Real__Alternatives_4_1 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1120:2: rule__Real__Alternatives_4_1
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRealAccess().getAlternatives_4_1()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1121:1: ( rule__Real__Alternatives_4_1 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1121:2: rule__Real__Alternatives_4_1
-            {
-            pushFollow(FOLLOW_rule__Real__Alternatives_4_1_in_rule__Real__Group_4__1__Impl2228);
+            pushFollow(FOLLOW_rule__Real__Alternatives_4_1_in_rule__Real__Group_4__1__Impl2220);
             rule__Real__Alternatives_4_1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRealAccess().getAlternatives_4_1()); 
-            }
+             after(grammarAccess.getRealAccess().getAlternatives_4_1()); 
 
             }
 
@@ -3203,20 +2986,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Group_4__2"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1131:1: rule__Real__Group_4__2 : rule__Real__Group_4__2__Impl ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1130:1: rule__Real__Group_4__2 : rule__Real__Group_4__2__Impl ;
     public final void rule__Real__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1135:1: ( rule__Real__Group_4__2__Impl )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1136:2: rule__Real__Group_4__2__Impl
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1134:1: ( rule__Real__Group_4__2__Impl )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1135:2: rule__Real__Group_4__2__Impl
             {
-            pushFollow(FOLLOW_rule__Real__Group_4__2__Impl_in_rule__Real__Group_4__22258);
+            pushFollow(FOLLOW_rule__Real__Group_4__2__Impl_in_rule__Real__Group_4__22250);
             rule__Real__Group_4__2__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -3236,25 +3019,21 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Real__Group_4__2__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1142:1: rule__Real__Group_4__2__Impl : ( RULE_NATURAL ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1141:1: rule__Real__Group_4__2__Impl : ( RULE_NATURAL ) ;
     public final void rule__Real__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1146:1: ( ( RULE_NATURAL ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1147:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1145:1: ( ( RULE_NATURAL ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1146:1: ( RULE_NATURAL )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1147:1: ( RULE_NATURAL )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1148:1: RULE_NATURAL
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1146:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1147:1: RULE_NATURAL
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_4_2()); 
-            }
-            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Real__Group_4__2__Impl2285); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_4_2()); 
-            }
+             before(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_4_2()); 
+            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Real__Group_4__2__Impl2277); 
+             after(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_4_2()); 
 
             }
 
@@ -3277,25 +3056,25 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Integer__Group__0"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1165:1: rule__Integer__Group__0 : rule__Integer__Group__0__Impl rule__Integer__Group__1 ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1164:1: rule__Integer__Group__0 : rule__Integer__Group__0__Impl rule__Integer__Group__1 ;
     public final void rule__Integer__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1169:1: ( rule__Integer__Group__0__Impl rule__Integer__Group__1 )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1170:2: rule__Integer__Group__0__Impl rule__Integer__Group__1
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1168:1: ( rule__Integer__Group__0__Impl rule__Integer__Group__1 )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1169:2: rule__Integer__Group__0__Impl rule__Integer__Group__1
             {
-            pushFollow(FOLLOW_rule__Integer__Group__0__Impl_in_rule__Integer__Group__02320);
+            pushFollow(FOLLOW_rule__Integer__Group__0__Impl_in_rule__Integer__Group__02312);
             rule__Integer__Group__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Integer__Group__1_in_rule__Integer__Group__02323);
+
+            pushFollow(FOLLOW_rule__Integer__Group__1_in_rule__Integer__Group__02315);
             rule__Integer__Group__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -3315,22 +3094,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Integer__Group__0__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1177:1: rule__Integer__Group__0__Impl : ( ( '-' )? ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1176:1: rule__Integer__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__Integer__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1181:1: ( ( ( '-' )? ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1182:1: ( ( '-' )? )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1180:1: ( ( ( '-' )? ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1181:1: ( ( '-' )? )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1182:1: ( ( '-' )? )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1181:1: ( ( '-' )? )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1182:1: ( '-' )?
+            {
+             before(grammarAccess.getIntegerAccess().getHyphenMinusKeyword_0()); 
             // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1183:1: ( '-' )?
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getIntegerAccess().getHyphenMinusKeyword_0()); 
-            }
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1184:1: ( '-' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -3339,18 +3116,16 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
             }
             switch (alt10) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1185:2: '-'
+                    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1184:2: '-'
                     {
-                    match(input,17,FOLLOW_17_in_rule__Integer__Group__0__Impl2352); if (state.failed) return ;
+                    match(input,17,FOLLOW_17_in_rule__Integer__Group__0__Impl2344); 
 
                     }
                     break;
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getIntegerAccess().getHyphenMinusKeyword_0()); 
-            }
+             after(grammarAccess.getIntegerAccess().getHyphenMinusKeyword_0()); 
 
             }
 
@@ -3373,20 +3148,20 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Integer__Group__1"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1196:1: rule__Integer__Group__1 : rule__Integer__Group__1__Impl ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1195:1: rule__Integer__Group__1 : rule__Integer__Group__1__Impl ;
     public final void rule__Integer__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1200:1: ( rule__Integer__Group__1__Impl )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1201:2: rule__Integer__Group__1__Impl
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1199:1: ( rule__Integer__Group__1__Impl )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1200:2: rule__Integer__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Integer__Group__1__Impl_in_rule__Integer__Group__12385);
+            pushFollow(FOLLOW_rule__Integer__Group__1__Impl_in_rule__Integer__Group__12377);
             rule__Integer__Group__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -3406,25 +3181,21 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Integer__Group__1__Impl"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1207:1: rule__Integer__Group__1__Impl : ( RULE_NATURAL ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1206:1: rule__Integer__Group__1__Impl : ( RULE_NATURAL ) ;
     public final void rule__Integer__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1211:1: ( ( RULE_NATURAL ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1212:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1210:1: ( ( RULE_NATURAL ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1211:1: ( RULE_NATURAL )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1212:1: ( RULE_NATURAL )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1213:1: RULE_NATURAL
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1211:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1212:1: RULE_NATURAL
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getIntegerAccess().getNATURALTerminalRuleCall_1()); 
-            }
-            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Integer__Group__1__Impl2412); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getIntegerAccess().getNATURALTerminalRuleCall_1()); 
-            }
+             before(grammarAccess.getIntegerAccess().getNATURALTerminalRuleCall_1()); 
+            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Integer__Group__1__Impl2404); 
+             after(grammarAccess.getIntegerAccess().getNATURALTerminalRuleCall_1()); 
 
             }
 
@@ -3447,29 +3218,25 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Annotation__NameAssignment_1"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1229:1: rule__Annotation__NameAssignment_1 : ( ruleExtendedID ) ;
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1228:1: rule__Annotation__NameAssignment_1 : ( ruleExtendedID ) ;
     public final void rule__Annotation__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1233:1: ( ( ruleExtendedID ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1234:1: ( ruleExtendedID )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1232:1: ( ( ruleExtendedID ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1233:1: ( ruleExtendedID )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1234:1: ( ruleExtendedID )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1235:1: ruleExtendedID
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1233:1: ( ruleExtendedID )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1234:1: ruleExtendedID
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getNameExtendedIDParserRuleCall_1_0()); 
-            }
-            pushFollow(FOLLOW_ruleExtendedID_in_rule__Annotation__NameAssignment_12450);
+             before(grammarAccess.getAnnotationAccess().getNameExtendedIDParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleExtendedID_in_rule__Annotation__NameAssignment_12442);
             ruleExtendedID();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getNameExtendedIDParserRuleCall_1_0()); 
-            }
+
+             after(grammarAccess.getAnnotationAccess().getNameExtendedIDParserRuleCall_1_0()); 
 
             }
 
@@ -3491,30 +3258,26 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Annotation__NameAssignment_1"
 
 
-    // $ANTLR start "rule__Annotation__ParameterAssignment_2_1"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1244:1: rule__Annotation__ParameterAssignment_2_1 : ( ruleParameter ) ;
-    public final void rule__Annotation__ParameterAssignment_2_1() throws RecognitionException {
+    // $ANTLR start "rule__Annotation__PropertyAssignment_2_1"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1243:1: rule__Annotation__PropertyAssignment_2_1 : ( ruleProperty ) ;
+    public final void rule__Annotation__PropertyAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1248:1: ( ( ruleParameter ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1249:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1247:1: ( ( ruleProperty ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1248:1: ( ruleProperty )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1249:1: ( ruleParameter )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1250:1: ruleParameter
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1248:1: ( ruleProperty )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1249:1: ruleProperty
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getParameterParameterParserRuleCall_2_1_0()); 
-            }
-            pushFollow(FOLLOW_ruleParameter_in_rule__Annotation__ParameterAssignment_2_12481);
-            ruleParameter();
+             before(grammarAccess.getAnnotationAccess().getPropertyPropertyParserRuleCall_2_1_0()); 
+            pushFollow(FOLLOW_ruleProperty_in_rule__Annotation__PropertyAssignment_2_12473);
+            ruleProperty();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getParameterParameterParserRuleCall_2_1_0()); 
-            }
+
+             after(grammarAccess.getAnnotationAccess().getPropertyPropertyParserRuleCall_2_1_0()); 
 
             }
 
@@ -3533,33 +3296,29 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Annotation__ParameterAssignment_2_1"
+    // $ANTLR end "rule__Annotation__PropertyAssignment_2_1"
 
 
-    // $ANTLR start "rule__Annotation__ParameterAssignment_2_2_1"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1259:1: rule__Annotation__ParameterAssignment_2_2_1 : ( ruleParameter ) ;
-    public final void rule__Annotation__ParameterAssignment_2_2_1() throws RecognitionException {
+    // $ANTLR start "rule__Annotation__PropertyAssignment_2_2_1"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1258:1: rule__Annotation__PropertyAssignment_2_2_1 : ( ruleProperty ) ;
+    public final void rule__Annotation__PropertyAssignment_2_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1263:1: ( ( ruleParameter ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1264:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1262:1: ( ( ruleProperty ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1263:1: ( ruleProperty )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1264:1: ( ruleParameter )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1265:1: ruleParameter
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1263:1: ( ruleProperty )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1264:1: ruleProperty
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getParameterParameterParserRuleCall_2_2_1_0()); 
-            }
-            pushFollow(FOLLOW_ruleParameter_in_rule__Annotation__ParameterAssignment_2_2_12512);
-            ruleParameter();
+             before(grammarAccess.getAnnotationAccess().getPropertyPropertyParserRuleCall_2_2_1_0()); 
+            pushFollow(FOLLOW_ruleProperty_in_rule__Annotation__PropertyAssignment_2_2_12504);
+            ruleProperty();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getParameterParameterParserRuleCall_2_2_1_0()); 
-            }
+
+             after(grammarAccess.getAnnotationAccess().getPropertyPropertyParserRuleCall_2_2_1_0()); 
 
             }
 
@@ -3578,33 +3337,29 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Annotation__ParameterAssignment_2_2_1"
+    // $ANTLR end "rule__Annotation__PropertyAssignment_2_2_1"
 
 
-    // $ANTLR start "rule__AssignParameter__NameAssignment_0"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1274:1: rule__AssignParameter__NameAssignment_0 : ( ruleExtendedID ) ;
-    public final void rule__AssignParameter__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__AssignProperty__NameAssignment_0"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1273:1: rule__AssignProperty__NameAssignment_0 : ( ruleExtendedID ) ;
+    public final void rule__AssignProperty__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1278:1: ( ( ruleExtendedID ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1279:1: ( ruleExtendedID )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1277:1: ( ( ruleExtendedID ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1278:1: ( ruleExtendedID )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1279:1: ( ruleExtendedID )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1280:1: ruleExtendedID
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1278:1: ( ruleExtendedID )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1279:1: ruleExtendedID
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAssignParameterAccess().getNameExtendedIDParserRuleCall_0_0()); 
-            }
-            pushFollow(FOLLOW_ruleExtendedID_in_rule__AssignParameter__NameAssignment_02543);
+             before(grammarAccess.getAssignPropertyAccess().getNameExtendedIDParserRuleCall_0_0()); 
+            pushFollow(FOLLOW_ruleExtendedID_in_rule__AssignProperty__NameAssignment_02535);
             ruleExtendedID();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAssignParameterAccess().getNameExtendedIDParserRuleCall_0_0()); 
-            }
+
+             after(grammarAccess.getAssignPropertyAccess().getNameExtendedIDParserRuleCall_0_0()); 
 
             }
 
@@ -3623,33 +3378,29 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__AssignParameter__NameAssignment_0"
+    // $ANTLR end "rule__AssignProperty__NameAssignment_0"
 
 
-    // $ANTLR start "rule__AssignParameter__ValueAssignment_2"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1289:1: rule__AssignParameter__ValueAssignment_2 : ( ruleValue ) ;
-    public final void rule__AssignParameter__ValueAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__AssignProperty__ValueAssignment_2"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1288:1: rule__AssignProperty__ValueAssignment_2 : ( ruleValue ) ;
+    public final void rule__AssignProperty__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1293:1: ( ( ruleValue ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1294:1: ( ruleValue )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1292:1: ( ( ruleValue ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1293:1: ( ruleValue )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1294:1: ( ruleValue )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1295:1: ruleValue
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1293:1: ( ruleValue )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1294:1: ruleValue
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAssignParameterAccess().getValueValueParserRuleCall_2_0()); 
-            }
-            pushFollow(FOLLOW_ruleValue_in_rule__AssignParameter__ValueAssignment_22574);
+             before(grammarAccess.getAssignPropertyAccess().getValueValueParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleValue_in_rule__AssignProperty__ValueAssignment_22566);
             ruleValue();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAssignParameterAccess().getValueValueParserRuleCall_2_0()); 
-            }
+
+             after(grammarAccess.getAssignPropertyAccess().getValueValueParserRuleCall_2_0()); 
 
             }
 
@@ -3668,33 +3419,29 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__AssignParameter__ValueAssignment_2"
+    // $ANTLR end "rule__AssignProperty__ValueAssignment_2"
 
 
-    // $ANTLR start "rule__ValueParameter__ValueAssignment"
-    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1304:1: rule__ValueParameter__ValueAssignment : ( ruleValue ) ;
-    public final void rule__ValueParameter__ValueAssignment() throws RecognitionException {
+    // $ANTLR start "rule__ValueProperty__ValueAssignment"
+    // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1303:1: rule__ValueProperty__ValueAssignment : ( ruleValue ) ;
+    public final void rule__ValueProperty__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1308:1: ( ( ruleValue ) )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1309:1: ( ruleValue )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1307:1: ( ( ruleValue ) )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1308:1: ( ruleValue )
             {
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1309:1: ( ruleValue )
-            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1310:1: ruleValue
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1308:1: ( ruleValue )
+            // ../cz.cvut.earlgrey.annotation.ui/src-gen/cz/cvut/earlgrey/annotation/ui/contentassist/antlr/internal/InternalAnnotation.g:1309:1: ruleValue
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getValueParameterAccess().getValueValueParserRuleCall_0()); 
-            }
-            pushFollow(FOLLOW_ruleValue_in_rule__ValueParameter__ValueAssignment2605);
+             before(grammarAccess.getValuePropertyAccess().getValueValueParserRuleCall_0()); 
+            pushFollow(FOLLOW_ruleValue_in_rule__ValueProperty__ValueAssignment2597);
             ruleValue();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getValueParameterAccess().getValueValueParserRuleCall_0()); 
-            }
+
+             after(grammarAccess.getValuePropertyAccess().getValueValueParserRuleCall_0()); 
 
             }
 
@@ -3713,7 +3460,7 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ValueParameter__ValueAssignment"
+    // $ANTLR end "rule__ValueProperty__ValueAssignment"
 
     // Delegated rules
 
@@ -3770,121 +3517,121 @@ public class InternalAnnotationParser extends AbstractInternalContentAssistParse
             this.transition = DFA1_transition;
         }
         public String getDescription() {
-            return "289:1: rule__Parameter__Alternatives : ( ( ruleAssignParameter ) | ( ruleValueParameter ) );";
+            return "288:1: rule__Property__Alternatives : ( ( ruleAssignProperty ) | ( ruleValueProperty ) );";
         }
     }
  
 
-    public static final BitSet FOLLOW_ruleAnnotation_in_entryRuleAnnotation67 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAnnotation74 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group__0_in_ruleAnnotation100 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_entryRuleParameter127 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleParameter134 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Parameter__Alternatives_in_ruleParameter160 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAssignParameter_in_entryRuleAssignParameter187 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAssignParameter194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignParameter__Group__0_in_ruleAssignParameter220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueParameter_in_entryRuleValueParameter247 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleValueParameter254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ValueParameter__ValueAssignment_in_ruleValueParameter280 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_entryRuleValue307 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleValue314 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Value__Alternatives_in_ruleValue340 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExtendedID_in_entryRuleExtendedID367 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleExtendedID374 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExtendedID__Group__0_in_ruleExtendedID400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReal_in_entryRuleReal431 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleReal438 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group__0_in_ruleReal464 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInteger_in_entryRuleInteger491 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInteger498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Integer__Group__0_in_ruleInteger524 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAssignParameter_in_rule__Parameter__Alternatives560 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueParameter_in_rule__Parameter__Alternatives577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInteger_in_rule__Value__Alternatives609 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Value__Alternatives626 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExtendedID_in_rule__Value__Alternatives643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BOOLEAN_in_rule__Value__Alternatives660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NULL_in_rule__Value__Alternatives677 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReal_in_rule__Value__Alternatives694 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Real__Alternatives_4_0729 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Real__Alternatives_4_0749 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Real__Alternatives_4_1784 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Real__Alternatives_4_1804 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group__0__Impl_in_rule__Annotation__Group__0836 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_rule__Annotation__Group__1_in_rule__Annotation__Group__0839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Annotation__Group__0__Impl867 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group__1__Impl_in_rule__Annotation__Group__1898 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Annotation__Group__2_in_rule__Annotation__Group__1901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__NameAssignment_1_in_rule__Annotation__Group__1__Impl928 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group__2__Impl_in_rule__Annotation__Group__2958 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__0_in_rule__Annotation__Group__2__Impl985 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__0__Impl_in_rule__Annotation__Group_2__01022 = new BitSet(new long[]{0x00000000000201F0L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__1_in_rule__Annotation__Group_2__01025 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__Annotation__Group_2__0__Impl1054 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__1__Impl_in_rule__Annotation__Group_2__11086 = new BitSet(new long[]{0x0000000000300000L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__2_in_rule__Annotation__Group_2__11089 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__ParameterAssignment_2_1_in_rule__Annotation__Group_2__1__Impl1116 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__2__Impl_in_rule__Annotation__Group_2__21146 = new BitSet(new long[]{0x0000000000300000L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__3_in_rule__Annotation__Group_2__21149 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2_2__0_in_rule__Annotation__Group_2__2__Impl1176 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__3__Impl_in_rule__Annotation__Group_2__31207 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__Annotation__Group_2__3__Impl1235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2_2__0__Impl_in_rule__Annotation__Group_2_2__01274 = new BitSet(new long[]{0x00000000000201F0L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2_2__1_in_rule__Annotation__Group_2_2__01277 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Annotation__Group_2_2__0__Impl1305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2_2__1__Impl_in_rule__Annotation__Group_2_2__11336 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__ParameterAssignment_2_2_1_in_rule__Annotation__Group_2_2__1__Impl1363 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignParameter__Group__0__Impl_in_rule__AssignParameter__Group__01397 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__AssignParameter__Group__1_in_rule__AssignParameter__Group__01400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignParameter__NameAssignment_0_in_rule__AssignParameter__Group__0__Impl1427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignParameter__Group__1__Impl_in_rule__AssignParameter__Group__11457 = new BitSet(new long[]{0x00000000000201F0L});
-    public static final BitSet FOLLOW_rule__AssignParameter__Group__2_in_rule__AssignParameter__Group__11460 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__AssignParameter__Group__1__Impl1488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignParameter__Group__2__Impl_in_rule__AssignParameter__Group__21519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignParameter__ValueAssignment_2_in_rule__AssignParameter__Group__2__Impl1546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExtendedID__Group__0__Impl_in_rule__ExtendedID__Group__01582 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__ExtendedID__Group__1_in_rule__ExtendedID__Group__01585 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ExtendedID__Group__0__Impl1612 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExtendedID__Group__1__Impl_in_rule__ExtendedID__Group__11641 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExtendedID__Group_1__0_in_rule__ExtendedID__Group__1__Impl1668 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_rule__ExtendedID__Group_1__0__Impl_in_rule__ExtendedID__Group_1__01703 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_rule__ExtendedID__Group_1__1_in_rule__ExtendedID__Group_1__01706 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__ExtendedID__Group_1__0__Impl1734 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExtendedID__Group_1__1__Impl_in_rule__ExtendedID__Group_1__11765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ExtendedID__Group_1__1__Impl1792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group__0__Impl_in_rule__Real__Group__01825 = new BitSet(new long[]{0x00000000000201F0L});
-    public static final BitSet FOLLOW_rule__Real__Group__1_in_rule__Real__Group__01828 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Real__Group__0__Impl1857 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group__1__Impl_in_rule__Real__Group__11890 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__Real__Group__2_in_rule__Real__Group__11893 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Real__Group__1__Impl1920 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group__2__Impl_in_rule__Real__Group__21949 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_rule__Real__Group__3_in_rule__Real__Group__21952 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Real__Group__2__Impl1980 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group__3__Impl_in_rule__Real__Group__32011 = new BitSet(new long[]{0x000000000000C000L});
-    public static final BitSet FOLLOW_rule__Real__Group__4_in_rule__Real__Group__32014 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Real__Group__3__Impl2041 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group__4__Impl_in_rule__Real__Group__42070 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group_4__0_in_rule__Real__Group__4__Impl2097 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group_4__0__Impl_in_rule__Real__Group_4__02138 = new BitSet(new long[]{0x0000000000030000L});
-    public static final BitSet FOLLOW_rule__Real__Group_4__1_in_rule__Real__Group_4__02141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Alternatives_4_0_in_rule__Real__Group_4__0__Impl2168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group_4__1__Impl_in_rule__Real__Group_4__12198 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_rule__Real__Group_4__2_in_rule__Real__Group_4__12201 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Alternatives_4_1_in_rule__Real__Group_4__1__Impl2228 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group_4__2__Impl_in_rule__Real__Group_4__22258 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Real__Group_4__2__Impl2285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Integer__Group__0__Impl_in_rule__Integer__Group__02320 = new BitSet(new long[]{0x0000000000020100L});
-    public static final BitSet FOLLOW_rule__Integer__Group__1_in_rule__Integer__Group__02323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Integer__Group__0__Impl2352 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Integer__Group__1__Impl_in_rule__Integer__Group__12385 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Integer__Group__1__Impl2412 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExtendedID_in_rule__Annotation__NameAssignment_12450 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_rule__Annotation__ParameterAssignment_2_12481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_rule__Annotation__ParameterAssignment_2_2_12512 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExtendedID_in_rule__AssignParameter__NameAssignment_02543 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__AssignParameter__ValueAssignment_22574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__ValueParameter__ValueAssignment2605 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_entryRuleAnnotation61 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAnnotation68 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group__0_in_ruleAnnotation94 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperty_in_entryRuleProperty121 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleProperty128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Property__Alternatives_in_ruleProperty154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAssignProperty_in_entryRuleAssignProperty181 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAssignProperty188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignProperty__Group__0_in_ruleAssignProperty214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueProperty_in_entryRuleValueProperty241 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleValueProperty248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ValueProperty__ValueAssignment_in_ruleValueProperty274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_entryRuleValue301 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleValue308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Value__Alternatives_in_ruleValue334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExtendedID_in_entryRuleExtendedID361 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleExtendedID368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExtendedID__Group__0_in_ruleExtendedID394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleReal_in_entryRuleReal425 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleReal432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group__0_in_ruleReal458 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInteger_in_entryRuleInteger485 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInteger492 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Integer__Group__0_in_ruleInteger518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAssignProperty_in_rule__Property__Alternatives554 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueProperty_in_rule__Property__Alternatives571 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInteger_in_rule__Value__Alternatives603 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Value__Alternatives620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExtendedID_in_rule__Value__Alternatives637 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_BOOLEAN_in_rule__Value__Alternatives654 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NULL_in_rule__Value__Alternatives671 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleReal_in_rule__Value__Alternatives688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Real__Alternatives_4_0723 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Real__Alternatives_4_0743 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Real__Alternatives_4_1778 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Real__Alternatives_4_1798 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group__0__Impl_in_rule__Annotation__Group__0830 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_rule__Annotation__Group__1_in_rule__Annotation__Group__0833 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__Annotation__Group__0__Impl861 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group__1__Impl_in_rule__Annotation__Group__1892 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Annotation__Group__2_in_rule__Annotation__Group__1895 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__NameAssignment_1_in_rule__Annotation__Group__1__Impl922 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group__2__Impl_in_rule__Annotation__Group__2952 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2__0_in_rule__Annotation__Group__2__Impl979 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2__0__Impl_in_rule__Annotation__Group_2__01016 = new BitSet(new long[]{0x00000000000201F0L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2__1_in_rule__Annotation__Group_2__01019 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__Annotation__Group_2__0__Impl1047 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2__1__Impl_in_rule__Annotation__Group_2__11078 = new BitSet(new long[]{0x0000000000300000L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2__2_in_rule__Annotation__Group_2__11081 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__PropertyAssignment_2_1_in_rule__Annotation__Group_2__1__Impl1108 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2__2__Impl_in_rule__Annotation__Group_2__21138 = new BitSet(new long[]{0x0000000000300000L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2__3_in_rule__Annotation__Group_2__21141 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2_2__0_in_rule__Annotation__Group_2__2__Impl1168 = new BitSet(new long[]{0x0000000000200002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2__3__Impl_in_rule__Annotation__Group_2__31199 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__Annotation__Group_2__3__Impl1227 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2_2__0__Impl_in_rule__Annotation__Group_2_2__01266 = new BitSet(new long[]{0x00000000000201F0L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2_2__1_in_rule__Annotation__Group_2_2__01269 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__Annotation__Group_2_2__0__Impl1297 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2_2__1__Impl_in_rule__Annotation__Group_2_2__11328 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__PropertyAssignment_2_2_1_in_rule__Annotation__Group_2_2__1__Impl1355 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignProperty__Group__0__Impl_in_rule__AssignProperty__Group__01389 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__AssignProperty__Group__1_in_rule__AssignProperty__Group__01392 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignProperty__NameAssignment_0_in_rule__AssignProperty__Group__0__Impl1419 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignProperty__Group__1__Impl_in_rule__AssignProperty__Group__11449 = new BitSet(new long[]{0x00000000000201F0L});
+    public static final BitSet FOLLOW_rule__AssignProperty__Group__2_in_rule__AssignProperty__Group__11452 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__AssignProperty__Group__1__Impl1480 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignProperty__Group__2__Impl_in_rule__AssignProperty__Group__21511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignProperty__ValueAssignment_2_in_rule__AssignProperty__Group__2__Impl1538 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExtendedID__Group__0__Impl_in_rule__ExtendedID__Group__01574 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__ExtendedID__Group__1_in_rule__ExtendedID__Group__01577 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ExtendedID__Group__0__Impl1604 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExtendedID__Group__1__Impl_in_rule__ExtendedID__Group__11633 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExtendedID__Group_1__0_in_rule__ExtendedID__Group__1__Impl1660 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__ExtendedID__Group_1__0__Impl_in_rule__ExtendedID__Group_1__01695 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_rule__ExtendedID__Group_1__1_in_rule__ExtendedID__Group_1__01698 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__ExtendedID__Group_1__0__Impl1726 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExtendedID__Group_1__1__Impl_in_rule__ExtendedID__Group_1__11757 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ExtendedID__Group_1__1__Impl1784 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group__0__Impl_in_rule__Real__Group__01817 = new BitSet(new long[]{0x00000000000201F0L});
+    public static final BitSet FOLLOW_rule__Real__Group__1_in_rule__Real__Group__01820 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Real__Group__0__Impl1849 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group__1__Impl_in_rule__Real__Group__11882 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__Real__Group__2_in_rule__Real__Group__11885 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Real__Group__1__Impl1912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group__2__Impl_in_rule__Real__Group__21941 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_rule__Real__Group__3_in_rule__Real__Group__21944 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Real__Group__2__Impl1972 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group__3__Impl_in_rule__Real__Group__32003 = new BitSet(new long[]{0x000000000000C000L});
+    public static final BitSet FOLLOW_rule__Real__Group__4_in_rule__Real__Group__32006 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Real__Group__3__Impl2033 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group__4__Impl_in_rule__Real__Group__42062 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group_4__0_in_rule__Real__Group__4__Impl2089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group_4__0__Impl_in_rule__Real__Group_4__02130 = new BitSet(new long[]{0x0000000000030000L});
+    public static final BitSet FOLLOW_rule__Real__Group_4__1_in_rule__Real__Group_4__02133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Alternatives_4_0_in_rule__Real__Group_4__0__Impl2160 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group_4__1__Impl_in_rule__Real__Group_4__12190 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_rule__Real__Group_4__2_in_rule__Real__Group_4__12193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Alternatives_4_1_in_rule__Real__Group_4__1__Impl2220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group_4__2__Impl_in_rule__Real__Group_4__22250 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Real__Group_4__2__Impl2277 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Integer__Group__0__Impl_in_rule__Integer__Group__02312 = new BitSet(new long[]{0x0000000000020100L});
+    public static final BitSet FOLLOW_rule__Integer__Group__1_in_rule__Integer__Group__02315 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Integer__Group__0__Impl2344 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Integer__Group__1__Impl_in_rule__Integer__Group__12377 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Integer__Group__1__Impl2404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExtendedID_in_rule__Annotation__NameAssignment_12442 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperty_in_rule__Annotation__PropertyAssignment_2_12473 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperty_in_rule__Annotation__PropertyAssignment_2_2_12504 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExtendedID_in_rule__AssignProperty__NameAssignment_02535 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__AssignProperty__ValueAssignment_22566 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__ValueProperty__ValueAssignment2597 = new BitSet(new long[]{0x0000000000000002L});
 
 }

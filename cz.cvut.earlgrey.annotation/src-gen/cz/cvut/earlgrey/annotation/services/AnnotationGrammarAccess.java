@@ -24,20 +24,21 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameExtendedIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cParameterAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cParameterParameterParserRuleCall_2_1_0 = (RuleCall)cParameterAssignment_2_1.eContents().get(0);
+		private final Assignment cPropertyAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cPropertyPropertyParserRuleCall_2_1_0 = (RuleCall)cPropertyAssignment_2_1.eContents().get(0);
 		private final Group cGroup_2_2 = (Group)cGroup_2.eContents().get(2);
 		private final Keyword cCommaKeyword_2_2_0 = (Keyword)cGroup_2_2.eContents().get(0);
-		private final Assignment cParameterAssignment_2_2_1 = (Assignment)cGroup_2_2.eContents().get(1);
-		private final RuleCall cParameterParameterParserRuleCall_2_2_1_0 = (RuleCall)cParameterAssignment_2_2_1.eContents().get(0);
+		private final Assignment cPropertyAssignment_2_2_1 = (Assignment)cGroup_2_2.eContents().get(1);
+		private final RuleCall cPropertyPropertyParserRuleCall_2_2_1_0 = (RuleCall)cPropertyAssignment_2_2_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
 		
 		//// e.g.: @Generate(Java)
+		//
 		//Annotation:
-		//	"@" name=ExtendedID ("(" parameter+=Parameter ("," parameter+=Parameter)* ")")?;
+		//	"@" name=ExtendedID ("(" property+=Property ("," property+=Property)* ")")?;
 		public ParserRule getRule() { return rule; }
 
-		//"@" name=ExtendedID ("(" parameter+=Parameter ("," parameter+=Parameter)* ")")?
+		//"@" name=ExtendedID ("(" property+=Property ("," property+=Property)* ")")?
 		public Group getGroup() { return cGroup; }
 
 		//"@"
@@ -49,56 +50,56 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 		//ExtendedID
 		public RuleCall getNameExtendedIDParserRuleCall_1_0() { return cNameExtendedIDParserRuleCall_1_0; }
 
-		//(=> "(" parameter+=Parameter ("," parameter+=Parameter)* ")")?
+		//("(" property+=Property ("," property+=Property)* ")")?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//=> "("
+		//"("
 		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
 
-		//parameter+=Parameter
-		public Assignment getParameterAssignment_2_1() { return cParameterAssignment_2_1; }
+		//property+=Property
+		public Assignment getPropertyAssignment_2_1() { return cPropertyAssignment_2_1; }
 
-		//Parameter
-		public RuleCall getParameterParameterParserRuleCall_2_1_0() { return cParameterParameterParserRuleCall_2_1_0; }
+		//Property
+		public RuleCall getPropertyPropertyParserRuleCall_2_1_0() { return cPropertyPropertyParserRuleCall_2_1_0; }
 
-		//("," parameter+=Parameter)*
+		//("," property+=Property)*
 		public Group getGroup_2_2() { return cGroup_2_2; }
 
 		//","
 		public Keyword getCommaKeyword_2_2_0() { return cCommaKeyword_2_2_0; }
 
-		//parameter+=Parameter
-		public Assignment getParameterAssignment_2_2_1() { return cParameterAssignment_2_2_1; }
+		//property+=Property
+		public Assignment getPropertyAssignment_2_2_1() { return cPropertyAssignment_2_2_1; }
 
-		//Parameter
-		public RuleCall getParameterParameterParserRuleCall_2_2_1_0() { return cParameterParameterParserRuleCall_2_2_1_0; }
+		//Property
+		public RuleCall getPropertyPropertyParserRuleCall_2_2_1_0() { return cPropertyPropertyParserRuleCall_2_2_1_0; }
 
 		//")"
 		public Keyword getRightParenthesisKeyword_2_3() { return cRightParenthesisKeyword_2_3; }
 	}
 
-	public class ParameterElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Parameter");
+	public class PropertyElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Property");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cAssignParameterParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cValueParameterParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cAssignPropertyParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cValuePropertyParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//Parameter:
-		//	AssignParameter | ValueParameter;
+		//Property:
+		//	AssignProperty | ValueProperty;
 		public ParserRule getRule() { return rule; }
 
-		//AssignParameter | ValueParameter
+		//AssignProperty | ValueProperty
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//AssignParameter
-		public RuleCall getAssignParameterParserRuleCall_0() { return cAssignParameterParserRuleCall_0; }
+		//AssignProperty
+		public RuleCall getAssignPropertyParserRuleCall_0() { return cAssignPropertyParserRuleCall_0; }
 
-		//ValueParameter
-		public RuleCall getValueParameterParserRuleCall_1() { return cValueParameterParserRuleCall_1; }
+		//ValueProperty
+		public RuleCall getValuePropertyParserRuleCall_1() { return cValuePropertyParserRuleCall_1; }
 	}
 
-	public class AssignParameterElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AssignParameter");
+	public class AssignPropertyElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AssignProperty");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cNameExtendedIDParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
@@ -107,7 +108,8 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValueValueParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
 		
 		//// e.g.: @Generate(language = Java)
-		//AssignParameter returns Parameter:
+		//
+		//AssignProperty returns Property:
 		//	name=ExtendedID "=" value=Value;
 		public ParserRule getRule() { return rule; }
 
@@ -130,13 +132,14 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getValueValueParserRuleCall_2_0() { return cValueValueParserRuleCall_2_0; }
 	}
 
-	public class ValueParameterElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ValueParameter");
+	public class ValuePropertyElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ValueProperty");
 		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
 		private final RuleCall cValueValueParserRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
 		
 		//// e.g.: @Generate(Java)
-		//ValueParameter returns Parameter:
+		//
+		//ValueProperty returns Property:
 		//	value=Value;
 		public ParserRule getRule() { return rule; }
 
@@ -158,6 +161,7 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRealParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		
 		//// e.g.: null
+		//
 		//Value returns ecore::EString:
 		//	Integer | STRING | ExtendedID | BOOLEAN | NULL | Real;
 		public ParserRule getRule() { return rule; }
@@ -220,8 +224,11 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cWSTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//// e.g.: Extended Value with whitespace support. In order to make
+		//
 		//// this rule works, use hidden() as in following example:
+		//
 		//// Guard hidden(): 'if ' expr=Expression ' then';   
+		//
 		//ValueWithSpaces hidden():
 		//	(Value | ANY_OTHER | WS)*;
 		public ParserRule getRule() { return rule; }
@@ -341,9 +348,9 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	private AnnotationElements pAnnotation;
-	private ParameterElements pParameter;
-	private AssignParameterElements pAssignParameter;
-	private ValueParameterElements pValueParameter;
+	private PropertyElements pProperty;
+	private AssignPropertyElements pAssignProperty;
+	private ValuePropertyElements pValueProperty;
 	private ValueElements pValue;
 	private ExtendedIDElements pExtendedID;
 	private ValueWithSpacesElements pValueWithSpaces;
@@ -375,8 +382,9 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//// e.g.: @Generate(Java)
+	//
 	//Annotation:
-	//	"@" name=ExtendedID ("(" parameter+=Parameter ("," parameter+=Parameter)* ")")?;
+	//	"@" name=ExtendedID ("(" property+=Property ("," property+=Property)* ")")?;
 	public AnnotationElements getAnnotationAccess() {
 		return (pAnnotation != null) ? pAnnotation : (pAnnotation = new AnnotationElements());
 	}
@@ -385,39 +393,42 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 		return getAnnotationAccess().getRule();
 	}
 
-	//Parameter:
-	//	AssignParameter | ValueParameter;
-	public ParameterElements getParameterAccess() {
-		return (pParameter != null) ? pParameter : (pParameter = new ParameterElements());
+	//Property:
+	//	AssignProperty | ValueProperty;
+	public PropertyElements getPropertyAccess() {
+		return (pProperty != null) ? pProperty : (pProperty = new PropertyElements());
 	}
 	
-	public ParserRule getParameterRule() {
-		return getParameterAccess().getRule();
+	public ParserRule getPropertyRule() {
+		return getPropertyAccess().getRule();
 	}
 
 	//// e.g.: @Generate(language = Java)
-	//AssignParameter returns Parameter:
+	//
+	//AssignProperty returns Property:
 	//	name=ExtendedID "=" value=Value;
-	public AssignParameterElements getAssignParameterAccess() {
-		return (pAssignParameter != null) ? pAssignParameter : (pAssignParameter = new AssignParameterElements());
+	public AssignPropertyElements getAssignPropertyAccess() {
+		return (pAssignProperty != null) ? pAssignProperty : (pAssignProperty = new AssignPropertyElements());
 	}
 	
-	public ParserRule getAssignParameterRule() {
-		return getAssignParameterAccess().getRule();
+	public ParserRule getAssignPropertyRule() {
+		return getAssignPropertyAccess().getRule();
 	}
 
 	//// e.g.: @Generate(Java)
-	//ValueParameter returns Parameter:
+	//
+	//ValueProperty returns Property:
 	//	value=Value;
-	public ValueParameterElements getValueParameterAccess() {
-		return (pValueParameter != null) ? pValueParameter : (pValueParameter = new ValueParameterElements());
+	public ValuePropertyElements getValuePropertyAccess() {
+		return (pValueProperty != null) ? pValueProperty : (pValueProperty = new ValuePropertyElements());
 	}
 	
-	public ParserRule getValueParameterRule() {
-		return getValueParameterAccess().getRule();
+	public ParserRule getValuePropertyRule() {
+		return getValuePropertyAccess().getRule();
 	}
 
 	//// e.g.: null
+	//
 	//Value returns ecore::EString:
 	//	Integer | STRING | ExtendedID | BOOLEAN | NULL | Real;
 	public ValueElements getValueAccess() {
@@ -439,8 +450,11 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// e.g.: Extended Value with whitespace support. In order to make
+	//
 	//// this rule works, use hidden() as in following example:
+	//
 	//// Guard hidden(): 'if ' expr=Expression ' then';   
+	//
 	//ValueWithSpaces hidden():
 	//	(Value | ANY_OTHER | WS)*;
 	public ValueWithSpacesElements getValueWithSpacesAccess() {
@@ -482,6 +496,7 @@ public class AnnotationGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// FIXME: http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B
+	//
 	//terminal OPERATOR:
 	//	"++" | "--" | "==" | ">=" | "<=" | "!=" | "<>" | "||" | "&&" | "-=" | "+=" | "=" | ">>" | "<<" | "|=";
 	public TerminalRule getOPERATORRule() {

@@ -4,7 +4,7 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 import cz.cvut.earlgrey.annotation.annotation.Annotation;
 import cz.cvut.earlgrey.annotation.annotation.AnnotationPackage;
-import cz.cvut.earlgrey.annotation.annotation.Parameter;
+import cz.cvut.earlgrey.annotation.annotation.Property;
 import cz.cvut.earlgrey.annotation.serializer.AnnotationSemanticSequencer;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
@@ -18,6 +18,7 @@ import cz.cvut.earlgrey.classmodel.classmodel.Import;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
 import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
+import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
 import cz.cvut.earlgrey.classmodel.classmodel.Type;
@@ -74,13 +75,17 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 					return; 
 				}
 				else break;
-			case AnnotationPackage.PARAMETER:
-				if(context == grammarAccess.getAssignParameterRule()) {
-					sequence_AssignParameter(context, (Parameter) semanticObject); 
+			case AnnotationPackage.PROPERTY:
+				if(context == grammarAccess.getAssignPropertyRule()) {
+					sequence_AssignProperty(context, (Property) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getValueParameterRule()) {
-					sequence_ValueParameter(context, (Parameter) semanticObject); 
+				else if(context == grammarAccess.getPropertyRule()) {
+					sequence_Property(context, (Property) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getValuePropertyRule()) {
+					sequence_ValueProperty(context, (Property) semanticObject); 
 					return; 
 				}
 				else break;
@@ -179,7 +184,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 				else break;
 			case ClassmodelPackage.PARAMETER:
 				if(context == grammarAccess.getParameterRule()) {
-					sequence_Parameter(context, (cz.cvut.earlgrey.classmodel.classmodel.Parameter) semanticObject); 
+					sequence_Parameter(context, (Parameter) semanticObject); 
 					return; 
 				}
 				else break;
@@ -208,7 +213,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (name=ExtendedID (parameter+=Parameter parameter+=Parameter*)?)
+	 *     (name=ExtendedID (property+=Property property+=Property*)?)
 	 */
 	protected void sequence_Annotation(EObject context, Annotation semanticObject) {
 		superSequencer.createSequence(context, semanticObject);
@@ -228,7 +233,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	 * Constraint:
 	 *     (name=ExtendedID value=Value)
 	 */
-	protected void sequence_AssignParameter(EObject context, Parameter semanticObject) {
+	protected void sequence_AssignProperty(EObject context, Property semanticObject) {
 		superSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -392,8 +397,17 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	 * Constraint:
 	 *     (name=ID type=Reference (implicit+=ImplicitValue implicit+=ImplicitValue*)?)
 	 */
-	protected void sequence_Parameter(EObject context, cz.cvut.earlgrey.classmodel.classmodel.Parameter semanticObject) {
+	protected void sequence_Parameter(EObject context, Parameter semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     ((name=ExtendedID value=Value) | value=Value)
+	 */
+	protected void sequence_Property(EObject context, Property semanticObject) {
+		superSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -440,7 +454,7 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	 * Constraint:
 	 *     value=Value
 	 */
-	protected void sequence_ValueParameter(EObject context, Parameter semanticObject) {
+	protected void sequence_ValueProperty(EObject context, Property semanticObject) {
 		superSequencer.createSequence(context, semanticObject);
 	}
 }

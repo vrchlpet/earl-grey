@@ -38,10 +38,10 @@ public class ClassmodelFormatter extends AbstractDefaultFormatter {
 		c.setLinewrap(1, 2, 3).after(f.getDatatypeRule());
 		c.setLinewrap(1, 2, 3).after(f.getRelationshipRule());
 		c.setNoSpace().after(f.getVisibilityRule());
+		c.setLinewrap(1, 1, 2).around(f.getAnnotationRule());
 
 		initDefault(c, f); // loads default format config
 
-		// TODO: refactor
 		setIndent(f, c, CLASS, END);
 		setIndent(f, c, PACKAGE, END);
 		setIndent(f, c, ENUM, END);

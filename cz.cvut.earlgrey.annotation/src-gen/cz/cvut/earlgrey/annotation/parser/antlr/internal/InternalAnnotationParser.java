@@ -17,8 +17,7 @@ import org.antlr.runtime.*;
 import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
+
 @SuppressWarnings("all")
 public class InternalAnnotationParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
@@ -96,18 +95,14 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
             // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:68:2: (iv_ruleAnnotation= ruleAnnotation EOF )
             // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:69:2: iv_ruleAnnotation= ruleAnnotation EOF
             {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getAnnotationRule()); 
-            }
+             newCompositeNode(grammarAccess.getAnnotationRule()); 
             pushFollow(FOLLOW_ruleAnnotation_in_entryRuleAnnotation75);
             iv_ruleAnnotation=ruleAnnotation();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleAnnotation; 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAnnotation85); if (state.failed) return current;
+
+             current =iv_ruleAnnotation; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAnnotation85); 
 
             }
 
@@ -125,7 +120,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAnnotation"
-    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:76:1: ruleAnnotation returns [EObject current=null] : (otherlv_0= '@' ( (lv_name_1_0= ruleExtendedID ) ) ( ( ( '(' )=>otherlv_2= '(' ) ( (lv_parameter_3_0= ruleParameter ) ) (otherlv_4= ',' ( (lv_parameter_5_0= ruleParameter ) ) )* otherlv_6= ')' )? ) ;
+    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:76:1: ruleAnnotation returns [EObject current=null] : (otherlv_0= '@' ( (lv_name_1_0= ruleExtendedID ) ) (otherlv_2= '(' ( (lv_property_3_0= ruleProperty ) ) (otherlv_4= ',' ( (lv_property_5_0= ruleProperty ) ) )* otherlv_6= ')' )? ) ;
     public final EObject ruleAnnotation() throws RecognitionException {
         EObject current = null;
 
@@ -135,120 +130,102 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
         Token otherlv_6=null;
         AntlrDatatypeRuleToken lv_name_1_0 = null;
 
-        EObject lv_parameter_3_0 = null;
+        EObject lv_property_3_0 = null;
 
-        EObject lv_parameter_5_0 = null;
+        EObject lv_property_5_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:79:28: ( (otherlv_0= '@' ( (lv_name_1_0= ruleExtendedID ) ) ( ( ( '(' )=>otherlv_2= '(' ) ( (lv_parameter_3_0= ruleParameter ) ) (otherlv_4= ',' ( (lv_parameter_5_0= ruleParameter ) ) )* otherlv_6= ')' )? ) )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:80:1: (otherlv_0= '@' ( (lv_name_1_0= ruleExtendedID ) ) ( ( ( '(' )=>otherlv_2= '(' ) ( (lv_parameter_3_0= ruleParameter ) ) (otherlv_4= ',' ( (lv_parameter_5_0= ruleParameter ) ) )* otherlv_6= ')' )? )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:79:28: ( (otherlv_0= '@' ( (lv_name_1_0= ruleExtendedID ) ) (otherlv_2= '(' ( (lv_property_3_0= ruleProperty ) ) (otherlv_4= ',' ( (lv_property_5_0= ruleProperty ) ) )* otherlv_6= ')' )? ) )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:80:1: (otherlv_0= '@' ( (lv_name_1_0= ruleExtendedID ) ) (otherlv_2= '(' ( (lv_property_3_0= ruleProperty ) ) (otherlv_4= ',' ( (lv_property_5_0= ruleProperty ) ) )* otherlv_6= ')' )? )
             {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:80:1: (otherlv_0= '@' ( (lv_name_1_0= ruleExtendedID ) ) ( ( ( '(' )=>otherlv_2= '(' ) ( (lv_parameter_3_0= ruleParameter ) ) (otherlv_4= ',' ( (lv_parameter_5_0= ruleParameter ) ) )* otherlv_6= ')' )? )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:80:3: otherlv_0= '@' ( (lv_name_1_0= ruleExtendedID ) ) ( ( ( '(' )=>otherlv_2= '(' ) ( (lv_parameter_3_0= ruleParameter ) ) (otherlv_4= ',' ( (lv_parameter_5_0= ruleParameter ) ) )* otherlv_6= ')' )?
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:80:1: (otherlv_0= '@' ( (lv_name_1_0= ruleExtendedID ) ) (otherlv_2= '(' ( (lv_property_3_0= ruleProperty ) ) (otherlv_4= ',' ( (lv_property_5_0= ruleProperty ) ) )* otherlv_6= ')' )? )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:80:3: otherlv_0= '@' ( (lv_name_1_0= ruleExtendedID ) ) (otherlv_2= '(' ( (lv_property_3_0= ruleProperty ) ) (otherlv_4= ',' ( (lv_property_5_0= ruleProperty ) ) )* otherlv_6= ')' )?
             {
-            otherlv_0=(Token)match(input,14,FOLLOW_14_in_ruleAnnotation122); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            otherlv_0=(Token)match(input,14,FOLLOW_14_in_ruleAnnotation122); 
 
-                  	newLeafNode(otherlv_0, grammarAccess.getAnnotationAccess().getCommercialAtKeyword_0());
-                  
-            }
+                	newLeafNode(otherlv_0, grammarAccess.getAnnotationAccess().getCommercialAtKeyword_0());
+                
             // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:84:1: ( (lv_name_1_0= ruleExtendedID ) )
             // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:85:1: (lv_name_1_0= ruleExtendedID )
             {
             // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:85:1: (lv_name_1_0= ruleExtendedID )
             // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:86:3: lv_name_1_0= ruleExtendedID
             {
-            if ( state.backtracking==0 ) {
-               
-              	        newCompositeNode(grammarAccess.getAnnotationAccess().getNameExtendedIDParserRuleCall_1_0()); 
-              	    
-            }
+             
+            	        newCompositeNode(grammarAccess.getAnnotationAccess().getNameExtendedIDParserRuleCall_1_0()); 
+            	    
             pushFollow(FOLLOW_ruleExtendedID_in_ruleAnnotation143);
             lv_name_1_0=ruleExtendedID();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
 
-              	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getAnnotationRule());
-              	        }
-                     		set(
-                     			current, 
-                     			"name",
-                      		lv_name_1_0, 
-                      		"ExtendedID");
-              	        afterParserOrEnumRuleCall();
-              	    
-            }
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getAnnotationRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"name",
+                    		lv_name_1_0, 
+                    		"ExtendedID");
+            	        afterParserOrEnumRuleCall();
+            	    
 
             }
 
 
             }
 
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:102:2: ( ( ( '(' )=>otherlv_2= '(' ) ( (lv_parameter_3_0= ruleParameter ) ) (otherlv_4= ',' ( (lv_parameter_5_0= ruleParameter ) ) )* otherlv_6= ')' )?
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:102:2: (otherlv_2= '(' ( (lv_property_3_0= ruleProperty ) ) (otherlv_4= ',' ( (lv_property_5_0= ruleProperty ) ) )* otherlv_6= ')' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
-            if ( (LA2_0==15) && (synpred1_InternalAnnotation())) {
+            if ( (LA2_0==15) ) {
                 alt2=1;
             }
             switch (alt2) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:102:3: ( ( '(' )=>otherlv_2= '(' ) ( (lv_parameter_3_0= ruleParameter ) ) (otherlv_4= ',' ( (lv_parameter_5_0= ruleParameter ) ) )* otherlv_6= ')'
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:102:4: otherlv_2= '(' ( (lv_property_3_0= ruleProperty ) ) (otherlv_4= ',' ( (lv_property_5_0= ruleProperty ) ) )* otherlv_6= ')'
                     {
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:102:3: ( ( '(' )=>otherlv_2= '(' )
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:102:4: ( '(' )=>otherlv_2= '('
-                    {
-                    otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleAnnotation164); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleAnnotation156); 
 
-                          	newLeafNode(otherlv_2, grammarAccess.getAnnotationAccess().getLeftParenthesisKeyword_2_0());
-                          
-                    }
-
-                    }
-
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:107:2: ( (lv_parameter_3_0= ruleParameter ) )
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:108:1: (lv_parameter_3_0= ruleParameter )
+                        	newLeafNode(otherlv_2, grammarAccess.getAnnotationAccess().getLeftParenthesisKeyword_2_0());
+                        
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:106:1: ( (lv_property_3_0= ruleProperty ) )
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:107:1: (lv_property_3_0= ruleProperty )
                     {
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:108:1: (lv_parameter_3_0= ruleParameter )
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:109:3: lv_parameter_3_0= ruleParameter
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:107:1: (lv_property_3_0= ruleProperty )
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:108:3: lv_property_3_0= ruleProperty
                     {
-                    if ( state.backtracking==0 ) {
-                       
-                      	        newCompositeNode(grammarAccess.getAnnotationAccess().getParameterParameterParserRuleCall_2_1_0()); 
-                      	    
-                    }
-                    pushFollow(FOLLOW_ruleParameter_in_ruleAnnotation186);
-                    lv_parameter_3_0=ruleParameter();
+                     
+                    	        newCompositeNode(grammarAccess.getAnnotationAccess().getPropertyPropertyParserRuleCall_2_1_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleProperty_in_ruleAnnotation177);
+                    lv_property_3_0=ruleProperty();
 
                     state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
 
-                      	        if (current==null) {
-                      	            current = createModelElementForParent(grammarAccess.getAnnotationRule());
-                      	        }
-                             		add(
-                             			current, 
-                             			"parameter",
-                              		lv_parameter_3_0, 
-                              		"Parameter");
-                      	        afterParserOrEnumRuleCall();
-                      	    
-                    }
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getAnnotationRule());
+                    	        }
+                           		add(
+                           			current, 
+                           			"property",
+                            		lv_property_3_0, 
+                            		"Property");
+                    	        afterParserOrEnumRuleCall();
+                    	    
 
                     }
 
 
                     }
 
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:125:2: (otherlv_4= ',' ( (lv_parameter_5_0= ruleParameter ) ) )*
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:124:2: (otherlv_4= ',' ( (lv_property_5_0= ruleProperty ) ) )*
                     loop1:
                     do {
                         int alt1=2;
@@ -261,43 +238,37 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
                         switch (alt1) {
                     	case 1 :
-                    	    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:125:4: otherlv_4= ',' ( (lv_parameter_5_0= ruleParameter ) )
+                    	    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:124:4: otherlv_4= ',' ( (lv_property_5_0= ruleProperty ) )
                     	    {
-                    	    otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleAnnotation199); if (state.failed) return current;
-                    	    if ( state.backtracking==0 ) {
+                    	    otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleAnnotation190); 
 
-                    	          	newLeafNode(otherlv_4, grammarAccess.getAnnotationAccess().getCommaKeyword_2_2_0());
-                    	          
-                    	    }
-                    	    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:129:1: ( (lv_parameter_5_0= ruleParameter ) )
-                    	    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:130:1: (lv_parameter_5_0= ruleParameter )
+                    	        	newLeafNode(otherlv_4, grammarAccess.getAnnotationAccess().getCommaKeyword_2_2_0());
+                    	        
+                    	    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:128:1: ( (lv_property_5_0= ruleProperty ) )
+                    	    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:129:1: (lv_property_5_0= ruleProperty )
                     	    {
-                    	    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:130:1: (lv_parameter_5_0= ruleParameter )
-                    	    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:131:3: lv_parameter_5_0= ruleParameter
+                    	    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:129:1: (lv_property_5_0= ruleProperty )
+                    	    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:130:3: lv_property_5_0= ruleProperty
                     	    {
-                    	    if ( state.backtracking==0 ) {
-                    	       
-                    	      	        newCompositeNode(grammarAccess.getAnnotationAccess().getParameterParameterParserRuleCall_2_2_1_0()); 
-                    	      	    
-                    	    }
-                    	    pushFollow(FOLLOW_ruleParameter_in_ruleAnnotation220);
-                    	    lv_parameter_5_0=ruleParameter();
+                    	     
+                    	    	        newCompositeNode(grammarAccess.getAnnotationAccess().getPropertyPropertyParserRuleCall_2_2_1_0()); 
+                    	    	    
+                    	    pushFollow(FOLLOW_ruleProperty_in_ruleAnnotation211);
+                    	    lv_property_5_0=ruleProperty();
 
                     	    state._fsp--;
-                    	    if (state.failed) return current;
-                    	    if ( state.backtracking==0 ) {
 
-                    	      	        if (current==null) {
-                    	      	            current = createModelElementForParent(grammarAccess.getAnnotationRule());
-                    	      	        }
-                    	             		add(
-                    	             			current, 
-                    	             			"parameter",
-                    	              		lv_parameter_5_0, 
-                    	              		"Parameter");
-                    	      	        afterParserOrEnumRuleCall();
-                    	      	    
-                    	    }
+
+                    	    	        if (current==null) {
+                    	    	            current = createModelElementForParent(grammarAccess.getAnnotationRule());
+                    	    	        }
+                    	           		add(
+                    	           			current, 
+                    	           			"property",
+                    	            		lv_property_5_0, 
+                    	            		"Property");
+                    	    	        afterParserOrEnumRuleCall();
+                    	    	    
 
                     	    }
 
@@ -313,12 +284,10 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_6=(Token)match(input,17,FOLLOW_17_in_ruleAnnotation234); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_6=(Token)match(input,17,FOLLOW_17_in_ruleAnnotation225); 
 
-                          	newLeafNode(otherlv_6, grammarAccess.getAnnotationAccess().getRightParenthesisKeyword_2_3());
-                          
-                    }
+                        	newLeafNode(otherlv_6, grammarAccess.getAnnotationAccess().getRightParenthesisKeyword_2_3());
+                        
 
                     }
                     break;
@@ -331,9 +300,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
             }
 
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -347,30 +314,26 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleAnnotation"
 
 
-    // $ANTLR start "entryRuleParameter"
-    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:159:1: entryRuleParameter returns [EObject current=null] : iv_ruleParameter= ruleParameter EOF ;
-    public final EObject entryRuleParameter() throws RecognitionException {
+    // $ANTLR start "entryRuleProperty"
+    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:158:1: entryRuleProperty returns [EObject current=null] : iv_ruleProperty= ruleProperty EOF ;
+    public final EObject entryRuleProperty() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleParameter = null;
+        EObject iv_ruleProperty = null;
 
 
         try {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:160:2: (iv_ruleParameter= ruleParameter EOF )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:161:2: iv_ruleParameter= ruleParameter EOF
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:159:2: (iv_ruleProperty= ruleProperty EOF )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:160:2: iv_ruleProperty= ruleProperty EOF
             {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getParameterRule()); 
-            }
-            pushFollow(FOLLOW_ruleParameter_in_entryRuleParameter272);
-            iv_ruleParameter=ruleParameter();
+             newCompositeNode(grammarAccess.getPropertyRule()); 
+            pushFollow(FOLLOW_ruleProperty_in_entryRuleProperty263);
+            iv_ruleProperty=ruleProperty();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleParameter; 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleParameter282); if (state.failed) return current;
+
+             current =iv_ruleProperty; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleProperty273); 
 
             }
 
@@ -384,70 +347,62 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleParameter"
+    // $ANTLR end "entryRuleProperty"
 
 
-    // $ANTLR start "ruleParameter"
-    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:168:1: ruleParameter returns [EObject current=null] : (this_AssignParameter_0= ruleAssignParameter | this_ValueParameter_1= ruleValueParameter ) ;
-    public final EObject ruleParameter() throws RecognitionException {
+    // $ANTLR start "ruleProperty"
+    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:167:1: ruleProperty returns [EObject current=null] : (this_AssignProperty_0= ruleAssignProperty | this_ValueProperty_1= ruleValueProperty ) ;
+    public final EObject ruleProperty() throws RecognitionException {
         EObject current = null;
 
-        EObject this_AssignParameter_0 = null;
+        EObject this_AssignProperty_0 = null;
 
-        EObject this_ValueParameter_1 = null;
+        EObject this_ValueProperty_1 = null;
 
 
          enterRule(); 
             
         try {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:171:28: ( (this_AssignParameter_0= ruleAssignParameter | this_ValueParameter_1= ruleValueParameter ) )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:172:1: (this_AssignParameter_0= ruleAssignParameter | this_ValueParameter_1= ruleValueParameter )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:170:28: ( (this_AssignProperty_0= ruleAssignProperty | this_ValueProperty_1= ruleValueProperty ) )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:171:1: (this_AssignProperty_0= ruleAssignProperty | this_ValueProperty_1= ruleValueProperty )
             {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:172:1: (this_AssignParameter_0= ruleAssignParameter | this_ValueParameter_1= ruleValueParameter )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:171:1: (this_AssignProperty_0= ruleAssignProperty | this_ValueProperty_1= ruleValueProperty )
             int alt3=2;
             alt3 = dfa3.predict(input);
             switch (alt3) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:173:5: this_AssignParameter_0= ruleAssignParameter
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:172:5: this_AssignProperty_0= ruleAssignProperty
                     {
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getParameterAccess().getAssignParameterParserRuleCall_0()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleAssignParameter_in_ruleParameter329);
-                    this_AssignParameter_0=ruleAssignParameter();
+                     
+                            newCompositeNode(grammarAccess.getPropertyAccess().getAssignPropertyParserRuleCall_0()); 
+                        
+                    pushFollow(FOLLOW_ruleAssignProperty_in_ruleProperty320);
+                    this_AssignProperty_0=ruleAssignProperty();
 
                     state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-                       
-                              current = this_AssignParameter_0; 
-                              afterParserOrEnumRuleCall();
-                          
-                    }
+
+                     
+                            current = this_AssignProperty_0; 
+                            afterParserOrEnumRuleCall();
+                        
 
                     }
                     break;
                 case 2 :
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:183:5: this_ValueParameter_1= ruleValueParameter
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:182:5: this_ValueProperty_1= ruleValueProperty
                     {
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getParameterAccess().getValueParameterParserRuleCall_1()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleValueParameter_in_ruleParameter356);
-                    this_ValueParameter_1=ruleValueParameter();
+                     
+                            newCompositeNode(grammarAccess.getPropertyAccess().getValuePropertyParserRuleCall_1()); 
+                        
+                    pushFollow(FOLLOW_ruleValueProperty_in_ruleProperty347);
+                    this_ValueProperty_1=ruleValueProperty();
 
                     state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-                       
-                              current = this_ValueParameter_1; 
-                              afterParserOrEnumRuleCall();
-                          
-                    }
+
+                     
+                            current = this_ValueProperty_1; 
+                            afterParserOrEnumRuleCall();
+                        
 
                     }
                     break;
@@ -457,9 +412,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
             }
 
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -470,33 +423,29 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleParameter"
+    // $ANTLR end "ruleProperty"
 
 
-    // $ANTLR start "entryRuleAssignParameter"
-    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:199:1: entryRuleAssignParameter returns [EObject current=null] : iv_ruleAssignParameter= ruleAssignParameter EOF ;
-    public final EObject entryRuleAssignParameter() throws RecognitionException {
+    // $ANTLR start "entryRuleAssignProperty"
+    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:198:1: entryRuleAssignProperty returns [EObject current=null] : iv_ruleAssignProperty= ruleAssignProperty EOF ;
+    public final EObject entryRuleAssignProperty() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleAssignParameter = null;
+        EObject iv_ruleAssignProperty = null;
 
 
         try {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:200:2: (iv_ruleAssignParameter= ruleAssignParameter EOF )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:201:2: iv_ruleAssignParameter= ruleAssignParameter EOF
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:199:2: (iv_ruleAssignProperty= ruleAssignProperty EOF )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:200:2: iv_ruleAssignProperty= ruleAssignProperty EOF
             {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getAssignParameterRule()); 
-            }
-            pushFollow(FOLLOW_ruleAssignParameter_in_entryRuleAssignParameter391);
-            iv_ruleAssignParameter=ruleAssignParameter();
+             newCompositeNode(grammarAccess.getAssignPropertyRule()); 
+            pushFollow(FOLLOW_ruleAssignProperty_in_entryRuleAssignProperty382);
+            iv_ruleAssignProperty=ruleAssignProperty();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleAssignParameter; 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAssignParameter401); if (state.failed) return current;
+
+             current =iv_ruleAssignProperty; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAssignProperty392); 
 
             }
 
@@ -510,12 +459,12 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleAssignParameter"
+    // $ANTLR end "entryRuleAssignProperty"
 
 
-    // $ANTLR start "ruleAssignParameter"
-    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:208:1: ruleAssignParameter returns [EObject current=null] : ( ( (lv_name_0_0= ruleExtendedID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) ) ) ;
-    public final EObject ruleAssignParameter() throws RecognitionException {
+    // $ANTLR start "ruleAssignProperty"
+    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:207:1: ruleAssignProperty returns [EObject current=null] : ( ( (lv_name_0_0= ruleExtendedID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) ) ) ;
+    public final EObject ruleAssignProperty() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
@@ -527,82 +476,72 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:211:28: ( ( ( (lv_name_0_0= ruleExtendedID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) ) ) )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:212:1: ( ( (lv_name_0_0= ruleExtendedID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) ) )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:210:28: ( ( ( (lv_name_0_0= ruleExtendedID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) ) ) )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:211:1: ( ( (lv_name_0_0= ruleExtendedID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) ) )
             {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:212:1: ( ( (lv_name_0_0= ruleExtendedID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) ) )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:212:2: ( (lv_name_0_0= ruleExtendedID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:211:1: ( ( (lv_name_0_0= ruleExtendedID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) ) )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:211:2: ( (lv_name_0_0= ruleExtendedID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) )
             {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:212:2: ( (lv_name_0_0= ruleExtendedID ) )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:213:1: (lv_name_0_0= ruleExtendedID )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:211:2: ( (lv_name_0_0= ruleExtendedID ) )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:212:1: (lv_name_0_0= ruleExtendedID )
             {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:213:1: (lv_name_0_0= ruleExtendedID )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:214:3: lv_name_0_0= ruleExtendedID
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:212:1: (lv_name_0_0= ruleExtendedID )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:213:3: lv_name_0_0= ruleExtendedID
             {
-            if ( state.backtracking==0 ) {
-               
-              	        newCompositeNode(grammarAccess.getAssignParameterAccess().getNameExtendedIDParserRuleCall_0_0()); 
-              	    
-            }
-            pushFollow(FOLLOW_ruleExtendedID_in_ruleAssignParameter447);
+             
+            	        newCompositeNode(grammarAccess.getAssignPropertyAccess().getNameExtendedIDParserRuleCall_0_0()); 
+            	    
+            pushFollow(FOLLOW_ruleExtendedID_in_ruleAssignProperty438);
             lv_name_0_0=ruleExtendedID();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
 
-              	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getAssignParameterRule());
-              	        }
-                     		set(
-                     			current, 
-                     			"name",
-                      		lv_name_0_0, 
-                      		"ExtendedID");
-              	        afterParserOrEnumRuleCall();
-              	    
-            }
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getAssignPropertyRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"name",
+                    		lv_name_0_0, 
+                    		"ExtendedID");
+            	        afterParserOrEnumRuleCall();
+            	    
 
             }
 
 
             }
 
-            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleAssignParameter459); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleAssignProperty450); 
 
-                  	newLeafNode(otherlv_1, grammarAccess.getAssignParameterAccess().getEqualsSignKeyword_1());
-                  
-            }
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:234:1: ( (lv_value_2_0= ruleValue ) )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:235:1: (lv_value_2_0= ruleValue )
+                	newLeafNode(otherlv_1, grammarAccess.getAssignPropertyAccess().getEqualsSignKeyword_1());
+                
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:233:1: ( (lv_value_2_0= ruleValue ) )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:234:1: (lv_value_2_0= ruleValue )
             {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:235:1: (lv_value_2_0= ruleValue )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:236:3: lv_value_2_0= ruleValue
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:234:1: (lv_value_2_0= ruleValue )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:235:3: lv_value_2_0= ruleValue
             {
-            if ( state.backtracking==0 ) {
-               
-              	        newCompositeNode(grammarAccess.getAssignParameterAccess().getValueValueParserRuleCall_2_0()); 
-              	    
-            }
-            pushFollow(FOLLOW_ruleValue_in_ruleAssignParameter480);
+             
+            	        newCompositeNode(grammarAccess.getAssignPropertyAccess().getValueValueParserRuleCall_2_0()); 
+            	    
+            pushFollow(FOLLOW_ruleValue_in_ruleAssignProperty471);
             lv_value_2_0=ruleValue();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
 
-              	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getAssignParameterRule());
-              	        }
-                     		set(
-                     			current, 
-                     			"value",
-                      		lv_value_2_0, 
-                      		"Value");
-              	        afterParserOrEnumRuleCall();
-              	    
-            }
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getAssignPropertyRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"value",
+                    		lv_value_2_0, 
+                    		"Value");
+            	        afterParserOrEnumRuleCall();
+            	    
 
             }
 
@@ -615,9 +554,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
             }
 
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -628,33 +565,29 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleAssignParameter"
+    // $ANTLR end "ruleAssignProperty"
 
 
-    // $ANTLR start "entryRuleValueParameter"
-    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:260:1: entryRuleValueParameter returns [EObject current=null] : iv_ruleValueParameter= ruleValueParameter EOF ;
-    public final EObject entryRuleValueParameter() throws RecognitionException {
+    // $ANTLR start "entryRuleValueProperty"
+    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:259:1: entryRuleValueProperty returns [EObject current=null] : iv_ruleValueProperty= ruleValueProperty EOF ;
+    public final EObject entryRuleValueProperty() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleValueParameter = null;
+        EObject iv_ruleValueProperty = null;
 
 
         try {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:261:2: (iv_ruleValueParameter= ruleValueParameter EOF )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:262:2: iv_ruleValueParameter= ruleValueParameter EOF
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:260:2: (iv_ruleValueProperty= ruleValueProperty EOF )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:261:2: iv_ruleValueProperty= ruleValueProperty EOF
             {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getValueParameterRule()); 
-            }
-            pushFollow(FOLLOW_ruleValueParameter_in_entryRuleValueParameter516);
-            iv_ruleValueParameter=ruleValueParameter();
+             newCompositeNode(grammarAccess.getValuePropertyRule()); 
+            pushFollow(FOLLOW_ruleValueProperty_in_entryRuleValueProperty507);
+            iv_ruleValueProperty=ruleValueProperty();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleValueParameter; 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleValueParameter526); if (state.failed) return current;
+
+             current =iv_ruleValueProperty; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleValueProperty517); 
 
             }
 
@@ -668,12 +601,12 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleValueParameter"
+    // $ANTLR end "entryRuleValueProperty"
 
 
-    // $ANTLR start "ruleValueParameter"
-    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:269:1: ruleValueParameter returns [EObject current=null] : ( (lv_value_0_0= ruleValue ) ) ;
-    public final EObject ruleValueParameter() throws RecognitionException {
+    // $ANTLR start "ruleValueProperty"
+    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:268:1: ruleValueProperty returns [EObject current=null] : ( (lv_value_0_0= ruleValue ) ) ;
+    public final EObject ruleValueProperty() throws RecognitionException {
         EObject current = null;
 
         AntlrDatatypeRuleToken lv_value_0_0 = null;
@@ -682,38 +615,34 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:272:28: ( ( (lv_value_0_0= ruleValue ) ) )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:273:1: ( (lv_value_0_0= ruleValue ) )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:271:28: ( ( (lv_value_0_0= ruleValue ) ) )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:272:1: ( (lv_value_0_0= ruleValue ) )
             {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:273:1: ( (lv_value_0_0= ruleValue ) )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:274:1: (lv_value_0_0= ruleValue )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:272:1: ( (lv_value_0_0= ruleValue ) )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:273:1: (lv_value_0_0= ruleValue )
             {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:274:1: (lv_value_0_0= ruleValue )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:275:3: lv_value_0_0= ruleValue
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:273:1: (lv_value_0_0= ruleValue )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:274:3: lv_value_0_0= ruleValue
             {
-            if ( state.backtracking==0 ) {
-               
-              	        newCompositeNode(grammarAccess.getValueParameterAccess().getValueValueParserRuleCall_0()); 
-              	    
-            }
-            pushFollow(FOLLOW_ruleValue_in_ruleValueParameter571);
+             
+            	        newCompositeNode(grammarAccess.getValuePropertyAccess().getValueValueParserRuleCall_0()); 
+            	    
+            pushFollow(FOLLOW_ruleValue_in_ruleValueProperty562);
             lv_value_0_0=ruleValue();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
 
-              	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getValueParameterRule());
-              	        }
-                     		set(
-                     			current, 
-                     			"value",
-                      		lv_value_0_0, 
-                      		"Value");
-              	        afterParserOrEnumRuleCall();
-              	    
-            }
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getValuePropertyRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"value",
+                    		lv_value_0_0, 
+                    		"Value");
+            	        afterParserOrEnumRuleCall();
+            	    
 
             }
 
@@ -723,9 +652,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
             }
 
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -736,11 +663,11 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleValueParameter"
+    // $ANTLR end "ruleValueProperty"
 
 
     // $ANTLR start "entryRuleValue"
-    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:299:1: entryRuleValue returns [String current=null] : iv_ruleValue= ruleValue EOF ;
+    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:298:1: entryRuleValue returns [String current=null] : iv_ruleValue= ruleValue EOF ;
     public final String entryRuleValue() throws RecognitionException {
         String current = null;
 
@@ -748,21 +675,17 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:300:2: (iv_ruleValue= ruleValue EOF )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:301:2: iv_ruleValue= ruleValue EOF
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:299:2: (iv_ruleValue= ruleValue EOF )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:300:2: iv_ruleValue= ruleValue EOF
             {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getValueRule()); 
-            }
-            pushFollow(FOLLOW_ruleValue_in_entryRuleValue607);
+             newCompositeNode(grammarAccess.getValueRule()); 
+            pushFollow(FOLLOW_ruleValue_in_entryRuleValue598);
             iv_ruleValue=ruleValue();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleValue.getText(); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleValue618); if (state.failed) return current;
+
+             current =iv_ruleValue.getText(); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleValue609); 
 
             }
 
@@ -780,7 +703,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleValue"
-    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:308:1: ruleValue returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Integer_0= ruleInteger | this_STRING_1= RULE_STRING | this_ExtendedID_2= ruleExtendedID | this_BOOLEAN_3= RULE_BOOLEAN | this_NULL_4= RULE_NULL | this_Real_5= ruleReal ) ;
+    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:307:1: ruleValue returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Integer_0= ruleInteger | this_STRING_1= RULE_STRING | this_ExtendedID_2= ruleExtendedID | this_BOOLEAN_3= RULE_BOOLEAN | this_NULL_4= RULE_NULL | this_Real_5= ruleReal ) ;
     public final AntlrDatatypeRuleToken ruleValue() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -797,10 +720,10 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:311:28: ( (this_Integer_0= ruleInteger | this_STRING_1= RULE_STRING | this_ExtendedID_2= ruleExtendedID | this_BOOLEAN_3= RULE_BOOLEAN | this_NULL_4= RULE_NULL | this_Real_5= ruleReal ) )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:312:1: (this_Integer_0= ruleInteger | this_STRING_1= RULE_STRING | this_ExtendedID_2= ruleExtendedID | this_BOOLEAN_3= RULE_BOOLEAN | this_NULL_4= RULE_NULL | this_Real_5= ruleReal )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:310:28: ( (this_Integer_0= ruleInteger | this_STRING_1= RULE_STRING | this_ExtendedID_2= ruleExtendedID | this_BOOLEAN_3= RULE_BOOLEAN | this_NULL_4= RULE_NULL | this_Real_5= ruleReal ) )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:311:1: (this_Integer_0= ruleInteger | this_STRING_1= RULE_STRING | this_ExtendedID_2= ruleExtendedID | this_BOOLEAN_3= RULE_BOOLEAN | this_NULL_4= RULE_NULL | this_Real_5= ruleReal )
             {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:312:1: (this_Integer_0= ruleInteger | this_STRING_1= RULE_STRING | this_ExtendedID_2= ruleExtendedID | this_BOOLEAN_3= RULE_BOOLEAN | this_NULL_4= RULE_NULL | this_Real_5= ruleReal )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:311:1: (this_Integer_0= ruleInteger | this_STRING_1= RULE_STRING | this_ExtendedID_2= ruleExtendedID | this_BOOLEAN_3= RULE_BOOLEAN | this_NULL_4= RULE_NULL | this_Real_5= ruleReal )
             int alt4=6;
             switch ( input.LA(1) ) {
             case 20:
@@ -810,14 +733,13 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                 if ( (LA4_1==RULE_NATURAL) ) {
                     int LA4_2 = input.LA(3);
 
-                    if ( (LA4_2==19) ) {
-                        alt4=6;
-                    }
-                    else if ( (LA4_2==EOF||(LA4_2>=16 && LA4_2<=17)) ) {
+                    if ( (LA4_2==EOF||(LA4_2>=16 && LA4_2<=17)) ) {
                         alt4=1;
                     }
+                    else if ( (LA4_2==19) ) {
+                        alt4=6;
+                    }
                     else {
-                        if (state.backtracking>0) {state.failed=true; return current;}
                         NoViableAltException nvae =
                             new NoViableAltException("", 4, 2, input);
 
@@ -825,7 +747,6 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                     }
                 }
                 else {
-                    if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
                         new NoViableAltException("", 4, 1, input);
 
@@ -837,14 +758,13 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                 {
                 int LA4_2 = input.LA(2);
 
-                if ( (LA4_2==19) ) {
-                    alt4=6;
-                }
-                else if ( (LA4_2==EOF||(LA4_2>=16 && LA4_2<=17)) ) {
+                if ( (LA4_2==EOF||(LA4_2>=16 && LA4_2<=17)) ) {
                     alt4=1;
                 }
+                else if ( (LA4_2==19) ) {
+                    alt4=6;
+                }
                 else {
-                    if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
                         new NoViableAltException("", 4, 2, input);
 
@@ -873,7 +793,6 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                 }
                 break;
             default:
-                if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
                     new NoViableAltException("", 4, 0, input);
 
@@ -882,131 +801,101 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
             switch (alt4) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:313:5: this_Integer_0= ruleInteger
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:312:5: this_Integer_0= ruleInteger
                     {
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getValueAccess().getIntegerParserRuleCall_0()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleInteger_in_ruleValue665);
+                     
+                            newCompositeNode(grammarAccess.getValueAccess().getIntegerParserRuleCall_0()); 
+                        
+                    pushFollow(FOLLOW_ruleInteger_in_ruleValue656);
                     this_Integer_0=ruleInteger();
 
                     state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
 
-                      		current.merge(this_Integer_0);
-                          
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
-                    }
+
+                    		current.merge(this_Integer_0);
+                        
+                     
+                            afterParserOrEnumRuleCall();
+                        
 
                     }
                     break;
                 case 2 :
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:324:10: this_STRING_1= RULE_STRING
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:323:10: this_STRING_1= RULE_STRING
                     {
-                    this_STRING_1=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleValue691); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    this_STRING_1=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleValue682); 
 
-                      		current.merge(this_STRING_1);
-                          
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                          newLeafNode(this_STRING_1, grammarAccess.getValueAccess().getSTRINGTerminalRuleCall_1()); 
-                          
-                    }
+                    		current.merge(this_STRING_1);
+                        
+                     
+                        newLeafNode(this_STRING_1, grammarAccess.getValueAccess().getSTRINGTerminalRuleCall_1()); 
+                        
 
                     }
                     break;
                 case 3 :
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:333:5: this_ExtendedID_2= ruleExtendedID
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:332:5: this_ExtendedID_2= ruleExtendedID
                     {
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getValueAccess().getExtendedIDParserRuleCall_2()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleExtendedID_in_ruleValue724);
+                     
+                            newCompositeNode(grammarAccess.getValueAccess().getExtendedIDParserRuleCall_2()); 
+                        
+                    pushFollow(FOLLOW_ruleExtendedID_in_ruleValue715);
                     this_ExtendedID_2=ruleExtendedID();
 
                     state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
 
-                      		current.merge(this_ExtendedID_2);
-                          
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
-                    }
+
+                    		current.merge(this_ExtendedID_2);
+                        
+                     
+                            afterParserOrEnumRuleCall();
+                        
 
                     }
                     break;
                 case 4 :
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:344:10: this_BOOLEAN_3= RULE_BOOLEAN
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:343:10: this_BOOLEAN_3= RULE_BOOLEAN
                     {
-                    this_BOOLEAN_3=(Token)match(input,RULE_BOOLEAN,FOLLOW_RULE_BOOLEAN_in_ruleValue750); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    this_BOOLEAN_3=(Token)match(input,RULE_BOOLEAN,FOLLOW_RULE_BOOLEAN_in_ruleValue741); 
 
-                      		current.merge(this_BOOLEAN_3);
-                          
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                          newLeafNode(this_BOOLEAN_3, grammarAccess.getValueAccess().getBOOLEANTerminalRuleCall_3()); 
-                          
-                    }
+                    		current.merge(this_BOOLEAN_3);
+                        
+                     
+                        newLeafNode(this_BOOLEAN_3, grammarAccess.getValueAccess().getBOOLEANTerminalRuleCall_3()); 
+                        
 
                     }
                     break;
                 case 5 :
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:352:10: this_NULL_4= RULE_NULL
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:351:10: this_NULL_4= RULE_NULL
                     {
-                    this_NULL_4=(Token)match(input,RULE_NULL,FOLLOW_RULE_NULL_in_ruleValue776); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    this_NULL_4=(Token)match(input,RULE_NULL,FOLLOW_RULE_NULL_in_ruleValue767); 
 
-                      		current.merge(this_NULL_4);
-                          
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                          newLeafNode(this_NULL_4, grammarAccess.getValueAccess().getNULLTerminalRuleCall_4()); 
-                          
-                    }
+                    		current.merge(this_NULL_4);
+                        
+                     
+                        newLeafNode(this_NULL_4, grammarAccess.getValueAccess().getNULLTerminalRuleCall_4()); 
+                        
 
                     }
                     break;
                 case 6 :
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:361:5: this_Real_5= ruleReal
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:360:5: this_Real_5= ruleReal
                     {
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getValueAccess().getRealParserRuleCall_5()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleReal_in_ruleValue809);
+                     
+                            newCompositeNode(grammarAccess.getValueAccess().getRealParserRuleCall_5()); 
+                        
+                    pushFollow(FOLLOW_ruleReal_in_ruleValue800);
                     this_Real_5=ruleReal();
 
                     state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
 
-                      		current.merge(this_Real_5);
-                          
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
-                    }
+
+                    		current.merge(this_Real_5);
+                        
+                     
+                            afterParserOrEnumRuleCall();
+                        
 
                     }
                     break;
@@ -1016,9 +905,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
             }
 
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -1033,7 +920,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExtendedID"
-    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:379:1: entryRuleExtendedID returns [String current=null] : iv_ruleExtendedID= ruleExtendedID EOF ;
+    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:378:1: entryRuleExtendedID returns [String current=null] : iv_ruleExtendedID= ruleExtendedID EOF ;
     public final String entryRuleExtendedID() throws RecognitionException {
         String current = null;
 
@@ -1041,21 +928,17 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:380:2: (iv_ruleExtendedID= ruleExtendedID EOF )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:381:2: iv_ruleExtendedID= ruleExtendedID EOF
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:379:2: (iv_ruleExtendedID= ruleExtendedID EOF )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:380:2: iv_ruleExtendedID= ruleExtendedID EOF
             {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getExtendedIDRule()); 
-            }
-            pushFollow(FOLLOW_ruleExtendedID_in_entryRuleExtendedID855);
+             newCompositeNode(grammarAccess.getExtendedIDRule()); 
+            pushFollow(FOLLOW_ruleExtendedID_in_entryRuleExtendedID846);
             iv_ruleExtendedID=ruleExtendedID();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleExtendedID.getText(); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleExtendedID866); if (state.failed) return current;
+
+             current =iv_ruleExtendedID.getText(); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleExtendedID857); 
 
             }
 
@@ -1073,7 +956,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExtendedID"
-    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:388:1: ruleExtendedID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:387:1: ruleExtendedID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleExtendedID() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1084,24 +967,20 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:391:28: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:392:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:390:28: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:391:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:392:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:392:6: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:391:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:391:6: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExtendedID906); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExtendedID897); 
 
-              		current.merge(this_ID_0);
-                  
-            }
-            if ( state.backtracking==0 ) {
-               
-                  newLeafNode(this_ID_0, grammarAccess.getExtendedIDAccess().getIDTerminalRuleCall_0()); 
-                  
-            }
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:399:1: (kw= '.' this_ID_2= RULE_ID )*
+            		current.merge(this_ID_0);
+                
+             
+                newLeafNode(this_ID_0, grammarAccess.getExtendedIDAccess().getIDTerminalRuleCall_0()); 
+                
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:398:1: (kw= '.' this_ID_2= RULE_ID )*
             loop5:
             do {
                 int alt5=2;
@@ -1114,26 +993,20 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:400:2: kw= '.' this_ID_2= RULE_ID
+            	    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:399:2: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,19,FOLLOW_19_in_ruleExtendedID925); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
+            	    kw=(Token)match(input,19,FOLLOW_19_in_ruleExtendedID916); 
 
-            	              current.merge(kw);
-            	              newLeafNode(kw, grammarAccess.getExtendedIDAccess().getFullStopKeyword_1_0()); 
-            	          
-            	    }
-            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExtendedID940); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
+            	            current.merge(kw);
+            	            newLeafNode(kw, grammarAccess.getExtendedIDAccess().getFullStopKeyword_1_0()); 
+            	        
+            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExtendedID931); 
 
-            	      		current.merge(this_ID_2);
-            	          
-            	    }
-            	    if ( state.backtracking==0 ) {
-            	       
-            	          newLeafNode(this_ID_2, grammarAccess.getExtendedIDAccess().getIDTerminalRuleCall_1_1()); 
-            	          
-            	    }
+            	    		current.merge(this_ID_2);
+            	        
+            	     
+            	        newLeafNode(this_ID_2, grammarAccess.getExtendedIDAccess().getIDTerminalRuleCall_1_1()); 
+            	        
 
             	    }
             	    break;
@@ -1149,9 +1022,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
             }
 
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -1166,7 +1037,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleReal"
-    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:424:1: entryRuleReal returns [String current=null] : iv_ruleReal= ruleReal EOF ;
+    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:423:1: entryRuleReal returns [String current=null] : iv_ruleReal= ruleReal EOF ;
     public final String entryRuleReal() throws RecognitionException {
         String current = null;
 
@@ -1174,21 +1045,17 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:425:2: (iv_ruleReal= ruleReal EOF )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:426:2: iv_ruleReal= ruleReal EOF
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:424:2: (iv_ruleReal= ruleReal EOF )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:425:2: iv_ruleReal= ruleReal EOF
             {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getRealRule()); 
-            }
-            pushFollow(FOLLOW_ruleReal_in_entryRuleReal992);
+             newCompositeNode(grammarAccess.getRealRule()); 
+            pushFollow(FOLLOW_ruleReal_in_entryRuleReal983);
             iv_ruleReal=ruleReal();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleReal.getText(); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleReal1003); if (state.failed) return current;
+
+             current =iv_ruleReal.getText(); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleReal994); 
 
             }
 
@@ -1206,7 +1073,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleReal"
-    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:433:1: ruleReal returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_NATURAL_1= RULE_NATURAL kw= '.' this_NATURAL_3= RULE_NATURAL ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' ) this_NATURAL_8= RULE_NATURAL )? ) ;
+    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:432:1: ruleReal returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_NATURAL_1= RULE_NATURAL kw= '.' this_NATURAL_3= RULE_NATURAL ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' ) this_NATURAL_8= RULE_NATURAL )? ) ;
     public final AntlrDatatypeRuleToken ruleReal() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1218,13 +1085,13 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:436:28: ( ( (kw= '-' )? this_NATURAL_1= RULE_NATURAL kw= '.' this_NATURAL_3= RULE_NATURAL ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' ) this_NATURAL_8= RULE_NATURAL )? ) )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:437:1: ( (kw= '-' )? this_NATURAL_1= RULE_NATURAL kw= '.' this_NATURAL_3= RULE_NATURAL ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' ) this_NATURAL_8= RULE_NATURAL )? )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:435:28: ( ( (kw= '-' )? this_NATURAL_1= RULE_NATURAL kw= '.' this_NATURAL_3= RULE_NATURAL ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' ) this_NATURAL_8= RULE_NATURAL )? ) )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:436:1: ( (kw= '-' )? this_NATURAL_1= RULE_NATURAL kw= '.' this_NATURAL_3= RULE_NATURAL ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' ) this_NATURAL_8= RULE_NATURAL )? )
             {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:437:1: ( (kw= '-' )? this_NATURAL_1= RULE_NATURAL kw= '.' this_NATURAL_3= RULE_NATURAL ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' ) this_NATURAL_8= RULE_NATURAL )? )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:437:2: (kw= '-' )? this_NATURAL_1= RULE_NATURAL kw= '.' this_NATURAL_3= RULE_NATURAL ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' ) this_NATURAL_8= RULE_NATURAL )?
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:436:1: ( (kw= '-' )? this_NATURAL_1= RULE_NATURAL kw= '.' this_NATURAL_3= RULE_NATURAL ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' ) this_NATURAL_8= RULE_NATURAL )? )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:436:2: (kw= '-' )? this_NATURAL_1= RULE_NATURAL kw= '.' this_NATURAL_3= RULE_NATURAL ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' ) this_NATURAL_8= RULE_NATURAL )?
             {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:437:2: (kw= '-' )?
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:436:2: (kw= '-' )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1233,51 +1100,39 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
             }
             switch (alt6) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:438:2: kw= '-'
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:437:2: kw= '-'
                     {
-                    kw=(Token)match(input,20,FOLLOW_20_in_ruleReal1042); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    kw=(Token)match(input,20,FOLLOW_20_in_ruleReal1033); 
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getRealAccess().getHyphenMinusKeyword_0()); 
-                          
-                    }
+                            current.merge(kw);
+                            newLeafNode(kw, grammarAccess.getRealAccess().getHyphenMinusKeyword_0()); 
+                        
 
                     }
                     break;
 
             }
 
-            this_NATURAL_1=(Token)match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_ruleReal1059); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            this_NATURAL_1=(Token)match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_ruleReal1050); 
 
-              		current.merge(this_NATURAL_1);
-                  
-            }
-            if ( state.backtracking==0 ) {
-               
-                  newLeafNode(this_NATURAL_1, grammarAccess.getRealAccess().getNATURALTerminalRuleCall_1()); 
-                  
-            }
-            kw=(Token)match(input,19,FOLLOW_19_in_ruleReal1077); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            		current.merge(this_NATURAL_1);
+                
+             
+                newLeafNode(this_NATURAL_1, grammarAccess.getRealAccess().getNATURALTerminalRuleCall_1()); 
+                
+            kw=(Token)match(input,19,FOLLOW_19_in_ruleReal1068); 
 
-                      current.merge(kw);
-                      newLeafNode(kw, grammarAccess.getRealAccess().getFullStopKeyword_2()); 
-                  
-            }
-            this_NATURAL_3=(Token)match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_ruleReal1092); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+                    current.merge(kw);
+                    newLeafNode(kw, grammarAccess.getRealAccess().getFullStopKeyword_2()); 
+                
+            this_NATURAL_3=(Token)match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_ruleReal1083); 
 
-              		current.merge(this_NATURAL_3);
-                  
-            }
-            if ( state.backtracking==0 ) {
-               
-                  newLeafNode(this_NATURAL_3, grammarAccess.getRealAccess().getNATURALTerminalRuleCall_3()); 
-                  
-            }
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:463:1: ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' ) this_NATURAL_8= RULE_NATURAL )?
+            		current.merge(this_NATURAL_3);
+                
+             
+                newLeafNode(this_NATURAL_3, grammarAccess.getRealAccess().getNATURALTerminalRuleCall_3()); 
+                
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:462:1: ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' ) this_NATURAL_8= RULE_NATURAL )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1286,9 +1141,9 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
             }
             switch (alt9) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:463:2: (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' ) this_NATURAL_8= RULE_NATURAL
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:462:2: (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' ) this_NATURAL_8= RULE_NATURAL
                     {
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:463:2: (kw= 'e' | kw= 'E' )
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:462:2: (kw= 'e' | kw= 'E' )
                     int alt7=2;
                     int LA7_0 = input.LA(1);
 
@@ -1299,7 +1154,6 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                         alt7=2;
                     }
                     else {
-                        if (state.backtracking>0) {state.failed=true; return current;}
                         NoViableAltException nvae =
                             new NoViableAltException("", 7, 0, input);
 
@@ -1307,35 +1161,31 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt7) {
                         case 1 :
-                            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:464:2: kw= 'e'
+                            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:463:2: kw= 'e'
                             {
-                            kw=(Token)match(input,21,FOLLOW_21_in_ruleReal1112); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
+                            kw=(Token)match(input,21,FOLLOW_21_in_ruleReal1103); 
 
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getRealAccess().getEKeyword_4_0_0()); 
-                                  
-                            }
+                                    current.merge(kw);
+                                    newLeafNode(kw, grammarAccess.getRealAccess().getEKeyword_4_0_0()); 
+                                
 
                             }
                             break;
                         case 2 :
-                            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:471:2: kw= 'E'
+                            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:470:2: kw= 'E'
                             {
-                            kw=(Token)match(input,22,FOLLOW_22_in_ruleReal1131); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
+                            kw=(Token)match(input,22,FOLLOW_22_in_ruleReal1122); 
 
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getRealAccess().getEKeyword_4_0_1()); 
-                                  
-                            }
+                                    current.merge(kw);
+                                    newLeafNode(kw, grammarAccess.getRealAccess().getEKeyword_4_0_1()); 
+                                
 
                             }
                             break;
 
                     }
 
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:476:2: (kw= '+' | kw= '-' )
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:475:2: (kw= '+' | kw= '-' )
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
@@ -1346,7 +1196,6 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                         alt8=2;
                     }
                     else {
-                        if (state.backtracking>0) {state.failed=true; return current;}
                         NoViableAltException nvae =
                             new NoViableAltException("", 8, 0, input);
 
@@ -1354,45 +1203,37 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt8) {
                         case 1 :
-                            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:477:2: kw= '+'
+                            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:476:2: kw= '+'
                             {
-                            kw=(Token)match(input,23,FOLLOW_23_in_ruleReal1146); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
+                            kw=(Token)match(input,23,FOLLOW_23_in_ruleReal1137); 
 
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getRealAccess().getPlusSignKeyword_4_1_0()); 
-                                  
-                            }
+                                    current.merge(kw);
+                                    newLeafNode(kw, grammarAccess.getRealAccess().getPlusSignKeyword_4_1_0()); 
+                                
 
                             }
                             break;
                         case 2 :
-                            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:484:2: kw= '-'
+                            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:483:2: kw= '-'
                             {
-                            kw=(Token)match(input,20,FOLLOW_20_in_ruleReal1165); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
+                            kw=(Token)match(input,20,FOLLOW_20_in_ruleReal1156); 
 
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getRealAccess().getHyphenMinusKeyword_4_1_1()); 
-                                  
-                            }
+                                    current.merge(kw);
+                                    newLeafNode(kw, grammarAccess.getRealAccess().getHyphenMinusKeyword_4_1_1()); 
+                                
 
                             }
                             break;
 
                     }
 
-                    this_NATURAL_8=(Token)match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_ruleReal1181); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    this_NATURAL_8=(Token)match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_ruleReal1172); 
 
-                      		current.merge(this_NATURAL_8);
-                          
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                          newLeafNode(this_NATURAL_8, grammarAccess.getRealAccess().getNATURALTerminalRuleCall_4_2()); 
-                          
-                    }
+                    		current.merge(this_NATURAL_8);
+                        
+                     
+                        newLeafNode(this_NATURAL_8, grammarAccess.getRealAccess().getNATURALTerminalRuleCall_4_2()); 
+                        
 
                     }
                     break;
@@ -1405,9 +1246,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
             }
 
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -1422,7 +1261,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInteger"
-    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:504:1: entryRuleInteger returns [String current=null] : iv_ruleInteger= ruleInteger EOF ;
+    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:503:1: entryRuleInteger returns [String current=null] : iv_ruleInteger= ruleInteger EOF ;
     public final String entryRuleInteger() throws RecognitionException {
         String current = null;
 
@@ -1430,21 +1269,17 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:505:2: (iv_ruleInteger= ruleInteger EOF )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:506:2: iv_ruleInteger= ruleInteger EOF
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:504:2: (iv_ruleInteger= ruleInteger EOF )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:505:2: iv_ruleInteger= ruleInteger EOF
             {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getIntegerRule()); 
-            }
-            pushFollow(FOLLOW_ruleInteger_in_entryRuleInteger1229);
+             newCompositeNode(grammarAccess.getIntegerRule()); 
+            pushFollow(FOLLOW_ruleInteger_in_entryRuleInteger1220);
             iv_ruleInteger=ruleInteger();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleInteger.getText(); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInteger1240); if (state.failed) return current;
+
+             current =iv_ruleInteger.getText(); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInteger1231); 
 
             }
 
@@ -1462,7 +1297,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInteger"
-    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:513:1: ruleInteger returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_NATURAL_1= RULE_NATURAL ) ;
+    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:512:1: ruleInteger returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_NATURAL_1= RULE_NATURAL ) ;
     public final AntlrDatatypeRuleToken ruleInteger() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1472,13 +1307,13 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:516:28: ( ( (kw= '-' )? this_NATURAL_1= RULE_NATURAL ) )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:517:1: ( (kw= '-' )? this_NATURAL_1= RULE_NATURAL )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:515:28: ( ( (kw= '-' )? this_NATURAL_1= RULE_NATURAL ) )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:516:1: ( (kw= '-' )? this_NATURAL_1= RULE_NATURAL )
             {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:517:1: ( (kw= '-' )? this_NATURAL_1= RULE_NATURAL )
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:517:2: (kw= '-' )? this_NATURAL_1= RULE_NATURAL
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:516:1: ( (kw= '-' )? this_NATURAL_1= RULE_NATURAL )
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:516:2: (kw= '-' )? this_NATURAL_1= RULE_NATURAL
             {
-            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:517:2: (kw= '-' )?
+            // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:516:2: (kw= '-' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1487,41 +1322,33 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
             }
             switch (alt10) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:518:2: kw= '-'
+                    // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:517:2: kw= '-'
                     {
-                    kw=(Token)match(input,20,FOLLOW_20_in_ruleInteger1279); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    kw=(Token)match(input,20,FOLLOW_20_in_ruleInteger1270); 
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getIntegerAccess().getHyphenMinusKeyword_0()); 
-                          
-                    }
+                            current.merge(kw);
+                            newLeafNode(kw, grammarAccess.getIntegerAccess().getHyphenMinusKeyword_0()); 
+                        
 
                     }
                     break;
 
             }
 
-            this_NATURAL_1=(Token)match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_ruleInteger1296); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            this_NATURAL_1=(Token)match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_ruleInteger1287); 
 
-              		current.merge(this_NATURAL_1);
-                  
-            }
-            if ( state.backtracking==0 ) {
-               
-                  newLeafNode(this_NATURAL_1, grammarAccess.getIntegerAccess().getNATURALTerminalRuleCall_1()); 
-                  
-            }
+            		current.merge(this_NATURAL_1);
+                
+             
+                newLeafNode(this_NATURAL_1, grammarAccess.getIntegerAccess().getNATURALTerminalRuleCall_1()); 
+                
 
             }
 
 
             }
 
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -1534,33 +1361,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
     }
     // $ANTLR end "ruleInteger"
 
-    // $ANTLR start synpred1_InternalAnnotation
-    public final void synpred1_InternalAnnotation_fragment() throws RecognitionException {   
-        // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:102:4: ( '(' )
-        // ../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/parser/antlr/internal/InternalAnnotation.g:102:6: '('
-        {
-        match(input,15,FOLLOW_15_in_synpred1_InternalAnnotation156); if (state.failed) return ;
-
-        }
-    }
-    // $ANTLR end synpred1_InternalAnnotation
-
     // Delegated rules
-
-    public final boolean synpred1_InternalAnnotation() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred1_InternalAnnotation_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
 
 
     protected DFA3 dfa3 = new DFA3(this);
@@ -1615,7 +1416,7 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
             this.transition = DFA3_transition;
         }
         public String getDescription() {
-            return "172:1: (this_AssignParameter_0= ruleAssignParameter | this_ValueParameter_1= ruleValueParameter )";
+            return "171:1: (this_AssignProperty_0= ruleAssignProperty | this_ValueProperty_1= ruleValueProperty )";
         }
     }
  
@@ -1624,51 +1425,50 @@ public class InternalAnnotationParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleAnnotation85 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_14_in_ruleAnnotation122 = new BitSet(new long[]{0x0000000000000080L});
     public static final BitSet FOLLOW_ruleExtendedID_in_ruleAnnotation143 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleAnnotation164 = new BitSet(new long[]{0x00000000001001F0L});
-    public static final BitSet FOLLOW_ruleParameter_in_ruleAnnotation186 = new BitSet(new long[]{0x0000000000030000L});
-    public static final BitSet FOLLOW_16_in_ruleAnnotation199 = new BitSet(new long[]{0x00000000001001F0L});
-    public static final BitSet FOLLOW_ruleParameter_in_ruleAnnotation220 = new BitSet(new long[]{0x0000000000030000L});
-    public static final BitSet FOLLOW_17_in_ruleAnnotation234 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_entryRuleParameter272 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleParameter282 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAssignParameter_in_ruleParameter329 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueParameter_in_ruleParameter356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAssignParameter_in_entryRuleAssignParameter391 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAssignParameter401 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExtendedID_in_ruleAssignParameter447 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleAssignParameter459 = new BitSet(new long[]{0x00000000001001F0L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleAssignParameter480 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueParameter_in_entryRuleValueParameter516 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleValueParameter526 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleValueParameter571 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_entryRuleValue607 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleValue618 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInteger_in_ruleValue665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleValue691 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExtendedID_in_ruleValue724 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BOOLEAN_in_ruleValue750 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NULL_in_ruleValue776 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReal_in_ruleValue809 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExtendedID_in_entryRuleExtendedID855 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleExtendedID866 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExtendedID906 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_19_in_ruleExtendedID925 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExtendedID940 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_ruleReal_in_entryRuleReal992 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleReal1003 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleReal1042 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_RULE_NATURAL_in_ruleReal1059 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleReal1077 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_RULE_NATURAL_in_ruleReal1092 = new BitSet(new long[]{0x0000000000600002L});
-    public static final BitSet FOLLOW_21_in_ruleReal1112 = new BitSet(new long[]{0x0000000000900000L});
-    public static final BitSet FOLLOW_22_in_ruleReal1131 = new BitSet(new long[]{0x0000000000900000L});
-    public static final BitSet FOLLOW_23_in_ruleReal1146 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_20_in_ruleReal1165 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_RULE_NATURAL_in_ruleReal1181 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInteger_in_entryRuleInteger1229 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInteger1240 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleInteger1279 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_RULE_NATURAL_in_ruleInteger1296 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_synpred1_InternalAnnotation156 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_ruleAnnotation156 = new BitSet(new long[]{0x00000000001001F0L});
+    public static final BitSet FOLLOW_ruleProperty_in_ruleAnnotation177 = new BitSet(new long[]{0x0000000000030000L});
+    public static final BitSet FOLLOW_16_in_ruleAnnotation190 = new BitSet(new long[]{0x00000000001001F0L});
+    public static final BitSet FOLLOW_ruleProperty_in_ruleAnnotation211 = new BitSet(new long[]{0x0000000000030000L});
+    public static final BitSet FOLLOW_17_in_ruleAnnotation225 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperty_in_entryRuleProperty263 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleProperty273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAssignProperty_in_ruleProperty320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueProperty_in_ruleProperty347 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAssignProperty_in_entryRuleAssignProperty382 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAssignProperty392 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExtendedID_in_ruleAssignProperty438 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleAssignProperty450 = new BitSet(new long[]{0x00000000001001F0L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleAssignProperty471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueProperty_in_entryRuleValueProperty507 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleValueProperty517 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleValueProperty562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_entryRuleValue598 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleValue609 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInteger_in_ruleValue656 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleValue682 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExtendedID_in_ruleValue715 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_BOOLEAN_in_ruleValue741 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NULL_in_ruleValue767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleReal_in_ruleValue800 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExtendedID_in_entryRuleExtendedID846 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleExtendedID857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleExtendedID897 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_19_in_ruleExtendedID916 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleExtendedID931 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_ruleReal_in_entryRuleReal983 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleReal994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_ruleReal1033 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_NATURAL_in_ruleReal1050 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleReal1068 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_NATURAL_in_ruleReal1083 = new BitSet(new long[]{0x0000000000600002L});
+    public static final BitSet FOLLOW_21_in_ruleReal1103 = new BitSet(new long[]{0x0000000000900000L});
+    public static final BitSet FOLLOW_22_in_ruleReal1122 = new BitSet(new long[]{0x0000000000900000L});
+    public static final BitSet FOLLOW_23_in_ruleReal1137 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_20_in_ruleReal1156 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_NATURAL_in_ruleReal1172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInteger_in_entryRuleInteger1220 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInteger1231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_ruleInteger1270 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_NATURAL_in_ruleInteger1287 = new BitSet(new long[]{0x0000000000000002L});
 
 }

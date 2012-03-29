@@ -83,10 +83,10 @@ public class AnnotationSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case AnnotationPackage.PARAMETER:
+      case AnnotationPackage.PROPERTY:
       {
-        Parameter parameter = (Parameter)theEObject;
-        T result = caseParameter(parameter);
+        Property property = (Property)theEObject;
+        T result = caseProperty(property);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -111,17 +111,17 @@ public class AnnotationSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Parameter</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Property</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parameter</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Property</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseParameter(Parameter object)
+  public T caseProperty(Property object)
   {
     return null;
   }

@@ -27,10 +27,12 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Model:
 		//	imports+=Import* //(annotation+=Annotation*) => 
+		//
 		//	elements+=Element*;
 		public ParserRule getRule() { return rule; }
 
 		//imports+=Import* //(annotation+=Annotation*) => 
+		//
 		//elements+=Element*
 		public Group getGroup() { return cGroup; }
 
@@ -129,6 +131,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		
 		//// e.g.: datatype int
+		//
 		//Datatype:
 		//	annotation+=Annotation* => "datatype" name=ID;
 		public ParserRule getRule() { return rule; }
@@ -165,6 +168,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEndKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//// e.g.: package utils / *..* / end
+		//
 		//Package:
 		//	annotation+=Annotation* => "package" name=ID element+=Element* "end";
 		public ParserRule getRule() { return rule; }
@@ -220,6 +224,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEndKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//// e.g.: class node / *..* / end
+		//
 		//Classifier:
 		//	annotation+=Annotation* => "class" name=ID ("isA" generalization+=Type ("," generalization+=Type)*)?
 		//	constraint=CONSTRAINT? feature+=Feature* "end";
@@ -294,10 +299,15 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameEntityExtendedIDParserRuleCall_1_0_1 = (RuleCall)cNameEntityCrossReference_1_0.eContents().get(1);
 		
 		//// e.g.: class Apple isA +Fruit
+		//
 		////Generalization:
+		//
 		////    'isA' classifier+=Type (',' classifier+=Type)*
+		//
 		////;
+		//
 		//// e.g.: isA +Fruit
+		//
 		//Type:
 		//	visibility=Visibility? name=[Entity|ExtendedID];
 		public ParserRule getRule() { return rule; }
@@ -372,6 +382,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEndKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//// e.g.: enum Weekend Saturday Sunday end
+		//
 		//Enumeration:
 		//	annotation+=Annotation* => "enum" name=ID constraint=CONSTRAINT? enumerator+=Enumerator* "end";
 		public ParserRule getRule() { return rule; }
@@ -423,6 +434,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cConstraintCONSTRAINTTerminalRuleCall_2_0 = (RuleCall)cConstraintAssignment_2.eContents().get(0);
 		
 		//// An element of an Enumeration
+		//
 		//Enumerator returns Feature:
 		//	name=ID ("=" value=ImplicitValue)? constraint=CONSTRAINT?;
 		public ParserRule getRule() { return rule; }
@@ -497,6 +509,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEndKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		
 		//// e.g.: composition Tree [0..1] Leaf [0..*] end
+		//
 		//Relationship:
 		//	annotation+=Annotation* => type=RelationshipType label=CompositeID? headNavigable?="unnavigable"?
 		//	(headVisibility=Visibility? headLabel=CompositeID ":")? head=[Entity|ExtendedID] "[" headMultiplicity=Multiplicity "]"
@@ -633,6 +646,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUpperMultiplicityValueParserRuleCall_1_1_0 = (RuleCall)cUpperAssignment_1_1.eContents().get(0);
 		
 		//// e.g.: 0..1
+		//
 		//Multiplicity:
 		//	lower=MultiplicityValue (".." upper=MultiplicityValue)?;
 		public ParserRule getRule() { return rule; }
@@ -691,6 +705,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValueImplicitValueParserRuleCall_3_0 = (RuleCall)cValueAssignment_3.eContents().get(0);
 		
 		//// e.g.: BUFFER_LENGTH = 512
+		//
 		//Constant:
 		//	visibility=Visibility? name=ID "=" value=ImplicitValue;
 		public ParserRule getRule() { return rule; }
@@ -747,6 +762,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cBodyBODYTerminalRuleCall_6_0 = (RuleCall)cBodyAssignment_6.eContents().get(0);
 		
 		//// e.g.: +add(Name : String) : void
+		//
 		//Operation:
 		//	(visibility=Visibility? & static?="static"?) name=ID "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")"
 		//	(":" return=Reference)? body=BODY?;
@@ -841,6 +857,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cImplicitImplicitValueParserRuleCall_3_2_1_0 = (RuleCall)cImplicitAssignment_3_2_1.eContents().get(0);
 		
 		//// e.g.: Name : String = "John"
+		//
 		//Parameter:
 		//	name=ID ":" type=Reference ("=" implicit+=ImplicitValue ("," implicit+=ImplicitValue)*)?;
 		public ParserRule getRule() { return rule; }
@@ -911,6 +928,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cImplicitImplicitValueParserRuleCall_4_2_1_0 = (RuleCall)cImplicitAssignment_4_2_1.eContents().get(0);
 		
 		//// e.g.: +matrix : int[5][5]
+		//
 		//Attribute:
 		//	(visibility=Visibility? & static?="static"?) name=ID ":" type=Reference ("=" implicit+=ImplicitValue (","
 		//	implicit+=ImplicitValue)*)?;
@@ -1231,6 +1249,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Model:
 	//	imports+=Import* //(annotation+=Annotation*) => 
+	//
 	//	elements+=Element*;
 	public ModelElements getModelAccess() {
 		return (pModel != null) ? pModel : (pModel = new ModelElements());
@@ -1271,6 +1290,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// e.g.: datatype int
+	//
 	//Datatype:
 	//	annotation+=Annotation* => "datatype" name=ID;
 	public DatatypeElements getDatatypeAccess() {
@@ -1282,6 +1302,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// e.g.: package utils / *..* / end
+	//
 	//Package:
 	//	annotation+=Annotation* => "package" name=ID element+=Element* "end";
 	public PackageElements getPackageAccess() {
@@ -1293,6 +1314,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// e.g.: class node / *..* / end
+	//
 	//Classifier:
 	//	annotation+=Annotation* => "class" name=ID ("isA" generalization+=Type ("," generalization+=Type)*)?
 	//	constraint=CONSTRAINT? feature+=Feature* "end";
@@ -1305,10 +1327,15 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// e.g.: class Apple isA +Fruit
+	//
 	////Generalization:
+	//
 	////    'isA' classifier+=Type (',' classifier+=Type)*
+	//
 	////;
+	//
 	//// e.g.: isA +Fruit
+	//
 	//Type:
 	//	visibility=Visibility? name=[Entity|ExtendedID];
 	public TypeElements getTypeAccess() {
@@ -1330,6 +1357,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// e.g.: enum Weekend Saturday Sunday end
+	//
 	//Enumeration:
 	//	annotation+=Annotation* => "enum" name=ID constraint=CONSTRAINT? enumerator+=Enumerator* "end";
 	public EnumerationElements getEnumerationAccess() {
@@ -1341,6 +1369,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// An element of an Enumeration
+	//
 	//Enumerator returns Feature:
 	//	name=ID ("=" value=ImplicitValue)? constraint=CONSTRAINT?;
 	public EnumeratorElements getEnumeratorAccess() {
@@ -1352,6 +1381,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// e.g.: composition Tree [0..1] Leaf [0..*] end
+	//
 	//Relationship:
 	//	annotation+=Annotation* => type=RelationshipType label=CompositeID? headNavigable?="unnavigable"?
 	//	(headVisibility=Visibility? headLabel=CompositeID ":")? head=[Entity|ExtendedID] "[" headMultiplicity=Multiplicity "]"
@@ -1366,6 +1396,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// e.g.: 0..1
+	//
 	//Multiplicity:
 	//	lower=MultiplicityValue (".." upper=MultiplicityValue)?;
 	public MultiplicityElements getMultiplicityAccess() {
@@ -1387,6 +1418,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// e.g.: BUFFER_LENGTH = 512
+	//
 	//Constant:
 	//	visibility=Visibility? name=ID "=" value=ImplicitValue;
 	public ConstantElements getConstantAccess() {
@@ -1398,6 +1430,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// e.g.: +add(Name : String) : void
+	//
 	//Operation:
 	//	(visibility=Visibility? & static?="static"?) name=ID "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")"
 	//	(":" return=Reference)? body=BODY?;
@@ -1410,6 +1443,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// e.g.: Name : String = "John"
+	//
 	//Parameter:
 	//	name=ID ":" type=Reference ("=" implicit+=ImplicitValue ("," implicit+=ImplicitValue)*)?;
 	public ParameterElements getParameterAccess() {
@@ -1421,6 +1455,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// e.g.: +matrix : int[5][5]
+	//
 	//Attribute:
 	//	(visibility=Visibility? & static?="static"?) name=ID ":" type=Reference ("=" implicit+=ImplicitValue (","
 	//	implicit+=ImplicitValue)*)?;
@@ -1484,6 +1519,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// {name.length > 0}
+	//
 	//terminal CONSTRAINT:
 	//	"{"->"}";
 	public TerminalRule getCONSTRAINTRule() {
@@ -1497,8 +1533,9 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	} 
 
 	//// e.g.: @Generate(Java)
+	//
 	//Annotation:
-	//	"@" name=ExtendedID ("(" parameter+=Parameter ("," parameter+=Parameter)* ")")?;
+	//	"@" name=ExtendedID ("(" property+=Property ("," property+=Property)* ")")?;
 	public AnnotationGrammarAccess.AnnotationElements getAnnotationAccess() {
 		return gaAnnotation.getAnnotationAccess();
 	}
@@ -1507,29 +1544,42 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getAnnotationAccess().getRule();
 	}
 
-	//// e.g.: @Generate(language = Java)
-	//AssignParameter returns Parameter:
-	//	name=ExtendedID "=" value=Value;
-	public AnnotationGrammarAccess.AssignParameterElements getAssignParameterAccess() {
-		return gaAnnotation.getAssignParameterAccess();
+	//Property:
+	//	AssignProperty | ValueProperty;
+	public AnnotationGrammarAccess.PropertyElements getPropertyAccess() {
+		return gaAnnotation.getPropertyAccess();
 	}
 	
-	public ParserRule getAssignParameterRule() {
-		return getAssignParameterAccess().getRule();
+	public ParserRule getPropertyRule() {
+		return getPropertyAccess().getRule();
+	}
+
+	//// e.g.: @Generate(language = Java)
+	//
+	//AssignProperty returns Property:
+	//	name=ExtendedID "=" value=Value;
+	public AnnotationGrammarAccess.AssignPropertyElements getAssignPropertyAccess() {
+		return gaAnnotation.getAssignPropertyAccess();
+	}
+	
+	public ParserRule getAssignPropertyRule() {
+		return getAssignPropertyAccess().getRule();
 	}
 
 	//// e.g.: @Generate(Java)
-	//ValueParameter returns Parameter:
+	//
+	//ValueProperty returns Property:
 	//	value=Value;
-	public AnnotationGrammarAccess.ValueParameterElements getValueParameterAccess() {
-		return gaAnnotation.getValueParameterAccess();
+	public AnnotationGrammarAccess.ValuePropertyElements getValuePropertyAccess() {
+		return gaAnnotation.getValuePropertyAccess();
 	}
 	
-	public ParserRule getValueParameterRule() {
-		return getValueParameterAccess().getRule();
+	public ParserRule getValuePropertyRule() {
+		return getValuePropertyAccess().getRule();
 	}
 
 	//// e.g.: null
+	//
 	//Value returns ecore::EString:
 	//	Integer | STRING | ExtendedID | BOOLEAN | NULL | Real;
 	public AnnotationGrammarAccess.ValueElements getValueAccess() {
@@ -1551,8 +1601,11 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// e.g.: Extended Value with whitespace support. In order to make
+	//
 	//// this rule works, use hidden() as in following example:
+	//
 	//// Guard hidden(): 'if ' expr=Expression ' then';   
+	//
 	//ValueWithSpaces hidden():
 	//	(Value | ANY_OTHER | WS)*;
 	public AnnotationGrammarAccess.ValueWithSpacesElements getValueWithSpacesAccess() {
@@ -1594,6 +1647,7 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// FIXME: http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B
+	//
 	//terminal OPERATOR:
 	//	"++" | "--" | "==" | ">=" | "<=" | "!=" | "<>" | "||" | "&&" | "-=" | "+=" | "=" | ">>" | "<<" | "|=";
 	public TerminalRule getOPERATORRule() {

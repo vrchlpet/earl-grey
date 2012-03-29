@@ -9,7 +9,7 @@ package cz.cvut.earlgrey.annotation.annotation.impl;
 import cz.cvut.earlgrey.annotation.annotation.Annotation;
 import cz.cvut.earlgrey.annotation.annotation.AnnotationFactory;
 import cz.cvut.earlgrey.annotation.annotation.AnnotationPackage;
-import cz.cvut.earlgrey.annotation.annotation.Parameter;
+import cz.cvut.earlgrey.annotation.annotation.Property;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -38,7 +38,7 @@ public class AnnotationPackageImpl extends EPackageImpl implements AnnotationPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass parameterEClass = null;
+  private EClass propertyEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -128,7 +128,7 @@ public class AnnotationPackageImpl extends EPackageImpl implements AnnotationPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAnnotation_Parameter()
+  public EReference getAnnotation_Property()
   {
     return (EReference)annotationEClass.getEStructuralFeatures().get(1);
   }
@@ -138,9 +138,9 @@ public class AnnotationPackageImpl extends EPackageImpl implements AnnotationPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getParameter()
+  public EClass getProperty()
   {
-    return parameterEClass;
+    return propertyEClass;
   }
 
   /**
@@ -148,9 +148,9 @@ public class AnnotationPackageImpl extends EPackageImpl implements AnnotationPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getParameter_Name()
+  public EAttribute getProperty_Name()
   {
-    return (EAttribute)parameterEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)propertyEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -158,9 +158,9 @@ public class AnnotationPackageImpl extends EPackageImpl implements AnnotationPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getParameter_Value()
+  public EAttribute getProperty_Value()
   {
-    return (EAttribute)parameterEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)propertyEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -195,11 +195,11 @@ public class AnnotationPackageImpl extends EPackageImpl implements AnnotationPac
     // Create classes and their features
     annotationEClass = createEClass(ANNOTATION);
     createEAttribute(annotationEClass, ANNOTATION__NAME);
-    createEReference(annotationEClass, ANNOTATION__PARAMETER);
+    createEReference(annotationEClass, ANNOTATION__PROPERTY);
 
-    parameterEClass = createEClass(PARAMETER);
-    createEAttribute(parameterEClass, PARAMETER__NAME);
-    createEAttribute(parameterEClass, PARAMETER__VALUE);
+    propertyEClass = createEClass(PROPERTY);
+    createEAttribute(propertyEClass, PROPERTY__NAME);
+    createEAttribute(propertyEClass, PROPERTY__VALUE);
   }
 
   /**
@@ -235,11 +235,11 @@ public class AnnotationPackageImpl extends EPackageImpl implements AnnotationPac
     // Initialize classes and features; add operations and parameters
     initEClass(annotationEClass, Annotation.class, "Annotation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAnnotation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAnnotation_Parameter(), this.getParameter(), null, "parameter", null, 0, -1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAnnotation_Property(), this.getProperty(), null, "property", null, 0, -1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getParameter_Name(), ecorePackage.getEString(), "name", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getParameter_Value(), ecorePackage.getEString(), "value", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(propertyEClass, Property.class, "Property", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getProperty_Name(), ecorePackage.getEString(), "name", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProperty_Value(), ecorePackage.getEString(), "value", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

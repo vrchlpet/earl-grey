@@ -36,13 +36,13 @@ public interface AnnotationFactory extends EFactory
   Annotation createAnnotation();
 
   /**
-   * Returns a new object of class '<em>Parameter</em>'.
+   * Returns a new object of class '<em>Property</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Parameter</em>'.
+   * @return a new object of class '<em>Property</em>'.
    * @generated
    */
-  Parameter createParameter();
+  Property createProperty();
 
   /**
    * Returns the package supported by this factory.

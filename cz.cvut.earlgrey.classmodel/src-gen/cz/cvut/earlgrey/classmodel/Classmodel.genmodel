@@ -86,6 +86,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Operation/body"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Parameter/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Parameter/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Parameter/implicit"/>
     </genClasses>

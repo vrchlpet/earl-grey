@@ -10,22 +10,22 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Parameter</b></em>'.
+ * A representation of the model object '<em><b>Property</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.annotation.annotation.Parameter#getName <em>Name</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.annotation.annotation.Parameter#getValue <em>Value</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.annotation.annotation.Property#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.annotation.annotation.Property#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
- * @see cz.cvut.earlgrey.annotation.annotation.AnnotationPackage#getParameter()
+ * @see cz.cvut.earlgrey.annotation.annotation.AnnotationPackage#getProperty()
  * @model
  * @generated
  */
-public interface Parameter extends EObject
+public interface Property extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -37,14 +37,14 @@ public interface Parameter extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see cz.cvut.earlgrey.annotation.annotation.AnnotationPackage#getParameter_Name()
+   * @see cz.cvut.earlgrey.annotation.annotation.AnnotationPackage#getProperty_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.annotation.annotation.Parameter#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link cz.cvut.earlgrey.annotation.annotation.Property#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -63,14 +63,14 @@ public interface Parameter extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Value</em>' attribute.
    * @see #setValue(String)
-   * @see cz.cvut.earlgrey.annotation.annotation.AnnotationPackage#getParameter_Value()
+   * @see cz.cvut.earlgrey.annotation.annotation.AnnotationPackage#getProperty_Value()
    * @model
    * @generated
    */
   String getValue();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.annotation.annotation.Parameter#getValue <em>Value</em>}' attribute.
+   * Sets the value of the '{@link cz.cvut.earlgrey.annotation.annotation.Property#getValue <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Value</em>' attribute.
@@ -79,4 +79,4 @@ public interface Parameter extends EObject
    */
   void setValue(String value);
 
-} // Parameter
+} // Property

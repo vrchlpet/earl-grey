@@ -7,7 +7,7 @@
 package cz.cvut.earlgrey.annotation.annotation.impl;
 
 import cz.cvut.earlgrey.annotation.annotation.AnnotationPackage;
-import cz.cvut.earlgrey.annotation.annotation.Parameter;
+import cz.cvut.earlgrey.annotation.annotation.Property;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -18,19 +18,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Parameter</b></em>'.
+ * An implementation of the model object '<em><b>Property</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.annotation.annotation.impl.ParameterImpl#getName <em>Name</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.annotation.annotation.impl.ParameterImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.annotation.annotation.impl.PropertyImpl#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.annotation.annotation.impl.PropertyImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ParameterImpl extends MinimalEObjectImpl.Container implements Parameter
+public class PropertyImpl extends MinimalEObjectImpl.Container implements Property
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -77,7 +77,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ParameterImpl()
+  protected PropertyImpl()
   {
     super();
   }
@@ -90,7 +90,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
   @Override
   protected EClass eStaticClass()
   {
-    return AnnotationPackage.Literals.PARAMETER;
+    return AnnotationPackage.Literals.PROPERTY;
   }
 
   /**
@@ -113,7 +113,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AnnotationPackage.PARAMETER__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, AnnotationPackage.PROPERTY__NAME, oldName, name));
   }
 
   /**
@@ -136,7 +136,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
     String oldValue = value;
     value = newValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AnnotationPackage.PARAMETER__VALUE, oldValue, value));
+      eNotify(new ENotificationImpl(this, Notification.SET, AnnotationPackage.PROPERTY__VALUE, oldValue, value));
   }
 
   /**
@@ -149,9 +149,9 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
   {
     switch (featureID)
     {
-      case AnnotationPackage.PARAMETER__NAME:
+      case AnnotationPackage.PROPERTY__NAME:
         return getName();
-      case AnnotationPackage.PARAMETER__VALUE:
+      case AnnotationPackage.PROPERTY__VALUE:
         return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -167,10 +167,10 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
   {
     switch (featureID)
     {
-      case AnnotationPackage.PARAMETER__NAME:
+      case AnnotationPackage.PROPERTY__NAME:
         setName((String)newValue);
         return;
-      case AnnotationPackage.PARAMETER__VALUE:
+      case AnnotationPackage.PROPERTY__VALUE:
         setValue((String)newValue);
         return;
     }
@@ -187,10 +187,10 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
   {
     switch (featureID)
     {
-      case AnnotationPackage.PARAMETER__NAME:
+      case AnnotationPackage.PROPERTY__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case AnnotationPackage.PARAMETER__VALUE:
+      case AnnotationPackage.PROPERTY__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
     }
@@ -207,9 +207,9 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
   {
     switch (featureID)
     {
-      case AnnotationPackage.PARAMETER__NAME:
+      case AnnotationPackage.PROPERTY__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case AnnotationPackage.PARAMETER__VALUE:
+      case AnnotationPackage.PROPERTY__VALUE:
         return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
     }
     return super.eIsSet(featureID);
@@ -234,4 +234,4 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
     return result.toString();
   }
 
-} //ParameterImpl
+} //PropertyImpl

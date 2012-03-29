@@ -4,7 +4,7 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 import cz.cvut.earlgrey.annotation.annotation.Annotation;
 import cz.cvut.earlgrey.annotation.annotation.AnnotationPackage;
-import cz.cvut.earlgrey.annotation.annotation.Parameter;
+import cz.cvut.earlgrey.annotation.annotation.Property;
 import cz.cvut.earlgrey.annotation.serializer.AnnotationSemanticSequencer;
 import cz.cvut.earlgrey.statemodel.services.StatemodelGrammarAccess;
 import cz.cvut.earlgrey.statemodel.statemodel.Import;
@@ -66,17 +66,17 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 					return; 
 				}
 				else break;
-			case AnnotationPackage.PARAMETER:
-				if(context == grammarAccess.getAssignParameterRule()) {
-					sequence_AssignParameter(context, (Parameter) semanticObject); 
+			case AnnotationPackage.PROPERTY:
+				if(context == grammarAccess.getAssignPropertyRule()) {
+					sequence_AssignProperty(context, (Property) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getParameterRule()) {
-					sequence_Parameter(context, (Parameter) semanticObject); 
+				else if(context == grammarAccess.getPropertyRule()) {
+					sequence_Property(context, (Property) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getValueParameterRule()) {
-					sequence_ValueParameter(context, (Parameter) semanticObject); 
+				else if(context == grammarAccess.getValuePropertyRule()) {
+					sequence_ValueProperty(context, (Property) semanticObject); 
 					return; 
 				}
 				else break;
@@ -128,7 +128,7 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (name=ExtendedID (parameter+=Parameter parameter+=Parameter*)?)
+	 *     (name=ExtendedID (property+=Property property+=Property*)?)
 	 */
 	protected void sequence_Annotation(EObject context, Annotation semanticObject) {
 		superSequencer.createSequence(context, semanticObject);
@@ -139,7 +139,7 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	 * Constraint:
 	 *     (name=ExtendedID value=Value)
 	 */
-	protected void sequence_AssignParameter(EObject context, Parameter semanticObject) {
+	protected void sequence_AssignProperty(EObject context, Property semanticObject) {
 		superSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -173,7 +173,7 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	 * Constraint:
 	 *     ((name=ExtendedID value=Value) | value=Value)
 	 */
-	protected void sequence_Parameter(EObject context, Parameter semanticObject) {
+	protected void sequence_Property(EObject context, Property semanticObject) {
 		superSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -218,7 +218,7 @@ public class AbstractStatemodelSemanticSequencer extends AbstractSemanticSequenc
 	 * Constraint:
 	 *     value=Value
 	 */
-	protected void sequence_ValueParameter(EObject context, Parameter semanticObject) {
+	protected void sequence_ValueProperty(EObject context, Property semanticObject) {
 		superSequencer.createSequence(context, semanticObject);
 	}
 }

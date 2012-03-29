@@ -8,7 +8,7 @@ package cz.cvut.earlgrey.annotation.annotation.impl;
 
 import cz.cvut.earlgrey.annotation.annotation.Annotation;
 import cz.cvut.earlgrey.annotation.annotation.AnnotationPackage;
-import cz.cvut.earlgrey.annotation.annotation.Parameter;
+import cz.cvut.earlgrey.annotation.annotation.Property;
 
 import java.util.Collection;
 
@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.annotation.annotation.impl.AnnotationImpl#getName <em>Name</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.annotation.annotation.impl.AnnotationImpl#getParameter <em>Parameter</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.annotation.annotation.impl.AnnotationImpl#getProperty <em>Property</em>}</li>
  * </ul>
  * </p>
  *
@@ -63,14 +63,14 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getParameter() <em>Parameter</em>}' containment reference list.
+   * The cached value of the '{@link #getProperty() <em>Property</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getParameter()
+   * @see #getProperty()
    * @generated
    * @ordered
    */
-  protected EList<Parameter> parameter;
+  protected EList<Property> property;
 
   /**
    * <!-- begin-user-doc -->
@@ -121,13 +121,13 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Parameter> getParameter()
+  public EList<Property> getProperty()
   {
-    if (parameter == null)
+    if (property == null)
     {
-      parameter = new EObjectContainmentEList<Parameter>(Parameter.class, this, AnnotationPackage.ANNOTATION__PARAMETER);
+      property = new EObjectContainmentEList<Property>(Property.class, this, AnnotationPackage.ANNOTATION__PROPERTY);
     }
-    return parameter;
+    return property;
   }
 
   /**
@@ -140,8 +140,8 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
   {
     switch (featureID)
     {
-      case AnnotationPackage.ANNOTATION__PARAMETER:
-        return ((InternalEList<?>)getParameter()).basicRemove(otherEnd, msgs);
+      case AnnotationPackage.ANNOTATION__PROPERTY:
+        return ((InternalEList<?>)getProperty()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -158,8 +158,8 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
     {
       case AnnotationPackage.ANNOTATION__NAME:
         return getName();
-      case AnnotationPackage.ANNOTATION__PARAMETER:
-        return getParameter();
+      case AnnotationPackage.ANNOTATION__PROPERTY:
+        return getProperty();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -178,9 +178,9 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
       case AnnotationPackage.ANNOTATION__NAME:
         setName((String)newValue);
         return;
-      case AnnotationPackage.ANNOTATION__PARAMETER:
-        getParameter().clear();
-        getParameter().addAll((Collection<? extends Parameter>)newValue);
+      case AnnotationPackage.ANNOTATION__PROPERTY:
+        getProperty().clear();
+        getProperty().addAll((Collection<? extends Property>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -199,8 +199,8 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
       case AnnotationPackage.ANNOTATION__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case AnnotationPackage.ANNOTATION__PARAMETER:
-        getParameter().clear();
+      case AnnotationPackage.ANNOTATION__PROPERTY:
+        getProperty().clear();
         return;
     }
     super.eUnset(featureID);
@@ -218,8 +218,8 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
     {
       case AnnotationPackage.ANNOTATION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case AnnotationPackage.ANNOTATION__PARAMETER:
-        return parameter != null && !parameter.isEmpty();
+      case AnnotationPackage.ANNOTATION__PROPERTY:
+        return property != null && !property.isEmpty();
     }
     return super.eIsSet(featureID);
   }

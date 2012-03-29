@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.annotation.annotation.Annotation#getName <em>Name</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.annotation.annotation.Annotation#getParameter <em>Parameter</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.annotation.annotation.Annotation#getProperty <em>Property</em>}</li>
  * </ul>
  * </p>
  *
@@ -56,19 +56,19 @@ public interface Annotation extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Parameter</b></em>' containment reference list.
-   * The list contents are of type {@link cz.cvut.earlgrey.annotation.annotation.Parameter}.
+   * Returns the value of the '<em><b>Property</b></em>' containment reference list.
+   * The list contents are of type {@link cz.cvut.earlgrey.annotation.annotation.Property}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Parameter</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Property</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Parameter</em>' containment reference list.
-   * @see cz.cvut.earlgrey.annotation.annotation.AnnotationPackage#getAnnotation_Parameter()
+   * @return the value of the '<em>Property</em>' containment reference list.
+   * @see cz.cvut.earlgrey.annotation.annotation.AnnotationPackage#getAnnotation_Property()
    * @model containment="true"
    * @generated
    */
-  EList<Parameter> getParameter();
+  EList<Property> getProperty();
 
 } // Annotation

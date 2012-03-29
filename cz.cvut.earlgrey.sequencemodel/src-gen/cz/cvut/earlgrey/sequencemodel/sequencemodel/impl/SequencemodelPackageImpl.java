@@ -795,9 +795,19 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getParameter_Name()
+  {
+    return (EAttribute)parameterEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getParameter_Type()
   {
-    return (EReference)parameterEClass.getEStructuralFeatures().get(0);
+    return (EReference)parameterEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -951,6 +961,7 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
     createEReference(selfMessageEClass, SELF_MESSAGE__TRANSITION);
 
     parameterEClass = createEClass(PARAMETER);
+    createEAttribute(parameterEClass, PARAMETER__NAME);
     createEReference(parameterEClass, PARAMETER__TYPE);
 
     referenceEClass = createEClass(REFERENCE);
@@ -1007,7 +1018,6 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
     newMessageEClass.getESuperTypes().add(this.getMessage());
     deleteMessageEClass.getESuperTypes().add(this.getMessage());
     selfMessageEClass.getESuperTypes().add(this.getMessage());
-    parameterEClass.getESuperTypes().add(theAnnotationPackage.getParameter());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1081,6 +1091,7 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
     initEReference(getSelfMessage_Transition(), this.getTransition(), null, "transition", null, 0, -1, SelfMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getParameter_Name(), ecorePackage.getEString(), "name", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getParameter_Type(), this.getReference(), null, "type", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(referenceEClass, Reference.class, "Reference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

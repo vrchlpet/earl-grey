@@ -80,13 +80,13 @@ public interface AnnotationPackage extends EPackage
   int ANNOTATION__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
+   * The feature id for the '<em><b>Property</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ANNOTATION__PARAMETER = 1;
+  int ANNOTATION__PROPERTY = 1;
 
   /**
    * The number of structural features of the '<em>Annotation</em>' class.
@@ -98,14 +98,14 @@ public interface AnnotationPackage extends EPackage
   int ANNOTATION_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link cz.cvut.earlgrey.annotation.annotation.impl.ParameterImpl <em>Parameter</em>}' class.
+   * The meta object id for the '{@link cz.cvut.earlgrey.annotation.annotation.impl.PropertyImpl <em>Property</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see cz.cvut.earlgrey.annotation.annotation.impl.ParameterImpl
-   * @see cz.cvut.earlgrey.annotation.annotation.impl.AnnotationPackageImpl#getParameter()
+   * @see cz.cvut.earlgrey.annotation.annotation.impl.PropertyImpl
+   * @see cz.cvut.earlgrey.annotation.annotation.impl.AnnotationPackageImpl#getProperty()
    * @generated
    */
-  int PARAMETER = 1;
+  int PROPERTY = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -114,7 +114,7 @@ public interface AnnotationPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PARAMETER__NAME = 0;
+  int PROPERTY__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -123,16 +123,16 @@ public interface AnnotationPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PARAMETER__VALUE = 1;
+  int PROPERTY__VALUE = 1;
 
   /**
-   * The number of structural features of the '<em>Parameter</em>' class.
+   * The number of structural features of the '<em>Property</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARAMETER_FEATURE_COUNT = 2;
+  int PROPERTY_FEATURE_COUNT = 2;
 
 
   /**
@@ -157,47 +157,47 @@ public interface AnnotationPackage extends EPackage
   EAttribute getAnnotation_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.annotation.annotation.Annotation#getParameter <em>Parameter</em>}'.
+   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.annotation.annotation.Annotation#getProperty <em>Property</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Parameter</em>'.
-   * @see cz.cvut.earlgrey.annotation.annotation.Annotation#getParameter()
+   * @return the meta object for the containment reference list '<em>Property</em>'.
+   * @see cz.cvut.earlgrey.annotation.annotation.Annotation#getProperty()
    * @see #getAnnotation()
    * @generated
    */
-  EReference getAnnotation_Parameter();
+  EReference getAnnotation_Property();
 
   /**
-   * Returns the meta object for class '{@link cz.cvut.earlgrey.annotation.annotation.Parameter <em>Parameter</em>}'.
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.annotation.annotation.Property <em>Property</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Parameter</em>'.
-   * @see cz.cvut.earlgrey.annotation.annotation.Parameter
+   * @return the meta object for class '<em>Property</em>'.
+   * @see cz.cvut.earlgrey.annotation.annotation.Property
    * @generated
    */
-  EClass getParameter();
+  EClass getProperty();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.annotation.annotation.Parameter#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.annotation.annotation.Property#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see cz.cvut.earlgrey.annotation.annotation.Parameter#getName()
-   * @see #getParameter()
+   * @see cz.cvut.earlgrey.annotation.annotation.Property#getName()
+   * @see #getProperty()
    * @generated
    */
-  EAttribute getParameter_Name();
+  EAttribute getProperty_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.annotation.annotation.Parameter#getValue <em>Value</em>}'.
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.annotation.annotation.Property#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Value</em>'.
-   * @see cz.cvut.earlgrey.annotation.annotation.Parameter#getValue()
-   * @see #getParameter()
+   * @see cz.cvut.earlgrey.annotation.annotation.Property#getValue()
+   * @see #getProperty()
    * @generated
    */
-  EAttribute getParameter_Value();
+  EAttribute getProperty_Value();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -241,22 +241,22 @@ public interface AnnotationPackage extends EPackage
     EAttribute ANNOTATION__NAME = eINSTANCE.getAnnotation_Name();
 
     /**
-     * The meta object literal for the '<em><b>Parameter</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Property</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ANNOTATION__PARAMETER = eINSTANCE.getAnnotation_Parameter();
+    EReference ANNOTATION__PROPERTY = eINSTANCE.getAnnotation_Property();
 
     /**
-     * The meta object literal for the '{@link cz.cvut.earlgrey.annotation.annotation.impl.ParameterImpl <em>Parameter</em>}' class.
+     * The meta object literal for the '{@link cz.cvut.earlgrey.annotation.annotation.impl.PropertyImpl <em>Property</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see cz.cvut.earlgrey.annotation.annotation.impl.ParameterImpl
-     * @see cz.cvut.earlgrey.annotation.annotation.impl.AnnotationPackageImpl#getParameter()
+     * @see cz.cvut.earlgrey.annotation.annotation.impl.PropertyImpl
+     * @see cz.cvut.earlgrey.annotation.annotation.impl.AnnotationPackageImpl#getProperty()
      * @generated
      */
-    EClass PARAMETER = eINSTANCE.getParameter();
+    EClass PROPERTY = eINSTANCE.getProperty();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -264,7 +264,7 @@ public interface AnnotationPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PARAMETER__NAME = eINSTANCE.getParameter_Name();
+    EAttribute PROPERTY__NAME = eINSTANCE.getProperty_Name();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -272,7 +272,7 @@ public interface AnnotationPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PARAMETER__VALUE = eINSTANCE.getParameter_Value();
+    EAttribute PROPERTY__VALUE = eINSTANCE.getProperty_Value();
 
   }
 

@@ -11,11 +11,11 @@
       ecorePackage="Annotation.ecore#/">
     <genClasses ecoreClass="Annotation.ecore#//Annotation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Annotation.ecore#//Annotation/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Annotation.ecore#//Annotation/parameter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Annotation.ecore#//Annotation/property"/>
     </genClasses>
-    <genClasses ecoreClass="Annotation.ecore#//Parameter">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Annotation.ecore#//Parameter/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Annotation.ecore#//Parameter/value"/>
+    <genClasses ecoreClass="Annotation.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Annotation.ecore#//Property/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Annotation.ecore#//Property/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

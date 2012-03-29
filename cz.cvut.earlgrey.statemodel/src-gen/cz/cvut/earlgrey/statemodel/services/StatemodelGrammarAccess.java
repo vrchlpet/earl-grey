@@ -582,7 +582,7 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 	//// e.g.: @Generate(Java)
 	//
 	//Annotation:
-	//	"@" name=ExtendedID ("(" parameter+=Parameter ("," parameter+=Parameter)* ")")?;
+	//	"@" name=ExtendedID ("(" property+=Property ("," property+=Property)* ")")?;
 	public AnnotationGrammarAccess.AnnotationElements getAnnotationAccess() {
 		return gaAnnotation.getAnnotationAccess();
 	}
@@ -591,38 +591,38 @@ public class StatemodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getAnnotationAccess().getRule();
 	}
 
-	//Parameter:
-	//	AssignParameter | ValueParameter;
-	public AnnotationGrammarAccess.ParameterElements getParameterAccess() {
-		return gaAnnotation.getParameterAccess();
+	//Property:
+	//	AssignProperty | ValueProperty;
+	public AnnotationGrammarAccess.PropertyElements getPropertyAccess() {
+		return gaAnnotation.getPropertyAccess();
 	}
 	
-	public ParserRule getParameterRule() {
-		return getParameterAccess().getRule();
+	public ParserRule getPropertyRule() {
+		return getPropertyAccess().getRule();
 	}
 
 	//// e.g.: @Generate(language = Java)
 	//
-	//AssignParameter returns Parameter:
+	//AssignProperty returns Property:
 	//	name=ExtendedID "=" value=Value;
-	public AnnotationGrammarAccess.AssignParameterElements getAssignParameterAccess() {
-		return gaAnnotation.getAssignParameterAccess();
+	public AnnotationGrammarAccess.AssignPropertyElements getAssignPropertyAccess() {
+		return gaAnnotation.getAssignPropertyAccess();
 	}
 	
-	public ParserRule getAssignParameterRule() {
-		return getAssignParameterAccess().getRule();
+	public ParserRule getAssignPropertyRule() {
+		return getAssignPropertyAccess().getRule();
 	}
 
 	//// e.g.: @Generate(Java)
 	//
-	//ValueParameter returns Parameter:
+	//ValueProperty returns Property:
 	//	value=Value;
-	public AnnotationGrammarAccess.ValueParameterElements getValueParameterAccess() {
-		return gaAnnotation.getValueParameterAccess();
+	public AnnotationGrammarAccess.ValuePropertyElements getValuePropertyAccess() {
+		return gaAnnotation.getValuePropertyAccess();
 	}
 	
-	public ParserRule getValueParameterRule() {
-		return getValueParameterAccess().getRule();
+	public ParserRule getValuePropertyRule() {
+		return getValuePropertyAccess().getRule();
 	}
 
 	//// e.g.: null

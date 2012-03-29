@@ -237,7 +237,6 @@ public class SequencemodelSwitch<T> extends Switch<T>
       {
         Parameter parameter = (Parameter)theEObject;
         T result = caseParameter(parameter);
-        if (result == null) result = caseAnnotation_Parameter(parameter);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -607,22 +606,6 @@ public class SequencemodelSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseArray(Array object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Parameter</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parameter</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAnnotation_Parameter(cz.cvut.earlgrey.annotation.annotation.Parameter object)
   {
     return null;
   }
