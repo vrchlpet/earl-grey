@@ -107,7 +107,7 @@ Message:
 ;
 
 FoundMessage:
-    'calls' (targetParticipant=[Participant|ID] '.')? => name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? 
+    'calls' targetParticipant=[Participant|ID] '.' => name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? 
     return=ReturnMessage?
 ;
 
