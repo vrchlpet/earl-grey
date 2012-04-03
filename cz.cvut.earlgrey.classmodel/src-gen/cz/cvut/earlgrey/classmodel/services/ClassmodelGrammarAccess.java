@@ -217,21 +217,25 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
 		private final Assignment cGeneralizationAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
 		private final RuleCall cGeneralizationTypeParserRuleCall_3_2_1_0 = (RuleCall)cGeneralizationAssignment_3_2_1.eContents().get(0);
-		private final Assignment cConstraintAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cConstraintCONSTRAINTTerminalRuleCall_4_0 = (RuleCall)cConstraintAssignment_4.eContents().get(0);
-		private final Assignment cFeatureAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cFeatureFeatureParserRuleCall_5_0 = (RuleCall)cFeatureAssignment_5.eContents().get(0);
-		private final Keyword cEndKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cInKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cUpperClassAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cUpperClassTypeParserRuleCall_4_1_0 = (RuleCall)cUpperClassAssignment_4_1.eContents().get(0);
+		private final Assignment cConstraintAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cConstraintCONSTRAINTTerminalRuleCall_5_0 = (RuleCall)cConstraintAssignment_5.eContents().get(0);
+		private final Assignment cFeatureAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cFeatureFeatureParserRuleCall_6_0 = (RuleCall)cFeatureAssignment_6.eContents().get(0);
+		private final Keyword cEndKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//// e.g.: class node / *..* / end
 		//
 		//Classifier:
-		//	annotation+=Annotation* => "class" name=ID ("isA" generalization+=Type ("," generalization+=Type)*)?
-		//	constraint=CONSTRAINT? feature+=Feature* "end";
+		//	annotation+=Annotation* => "class" name=ID ("isA" generalization+=Type ("," generalization+=Type)*)? ("in"
+		//	upperClass=Type)? constraint=CONSTRAINT? feature+=Feature* "end";
 		public ParserRule getRule() { return rule; }
 
-		//annotation+=Annotation* => "class" name=ID ("isA" generalization+=Type ("," generalization+=Type)*)?
-		//constraint=CONSTRAINT? feature+=Feature* "end"
+		//annotation+=Annotation* => "class" name=ID ("isA" generalization+=Type ("," generalization+=Type)*)? ("in"
+		//upperClass=Type)? constraint=CONSTRAINT? feature+=Feature* "end"
 		public Group getGroup() { return cGroup; }
 
 		//annotation+=Annotation*
@@ -273,20 +277,32 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 		//Type
 		public RuleCall getGeneralizationTypeParserRuleCall_3_2_1_0() { return cGeneralizationTypeParserRuleCall_3_2_1_0; }
 
+		//(=> "in" upperClass=Type)?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//=> "in"
+		public Keyword getInKeyword_4_0() { return cInKeyword_4_0; }
+
+		//upperClass=Type
+		public Assignment getUpperClassAssignment_4_1() { return cUpperClassAssignment_4_1; }
+
+		//Type
+		public RuleCall getUpperClassTypeParserRuleCall_4_1_0() { return cUpperClassTypeParserRuleCall_4_1_0; }
+
 		//constraint=CONSTRAINT?
-		public Assignment getConstraintAssignment_4() { return cConstraintAssignment_4; }
+		public Assignment getConstraintAssignment_5() { return cConstraintAssignment_5; }
 
 		//CONSTRAINT
-		public RuleCall getConstraintCONSTRAINTTerminalRuleCall_4_0() { return cConstraintCONSTRAINTTerminalRuleCall_4_0; }
+		public RuleCall getConstraintCONSTRAINTTerminalRuleCall_5_0() { return cConstraintCONSTRAINTTerminalRuleCall_5_0; }
 
 		//feature+=Feature*
-		public Assignment getFeatureAssignment_5() { return cFeatureAssignment_5; }
+		public Assignment getFeatureAssignment_6() { return cFeatureAssignment_6; }
 
 		//Feature
-		public RuleCall getFeatureFeatureParserRuleCall_5_0() { return cFeatureFeatureParserRuleCall_5_0; }
+		public RuleCall getFeatureFeatureParserRuleCall_6_0() { return cFeatureFeatureParserRuleCall_6_0; }
 
 		//"end"
-		public Keyword getEndKeyword_6() { return cEndKeyword_6; }
+		public Keyword getEndKeyword_7() { return cEndKeyword_7; }
 	}
 
 	public class TypeElements extends AbstractParserRuleElementFinder {
@@ -1316,8 +1332,8 @@ public class ClassmodelGrammarAccess extends AbstractGrammarElementFinder {
 	//// e.g.: class node / *..* / end
 	//
 	//Classifier:
-	//	annotation+=Annotation* => "class" name=ID ("isA" generalization+=Type ("," generalization+=Type)*)?
-	//	constraint=CONSTRAINT? feature+=Feature* "end";
+	//	annotation+=Annotation* => "class" name=ID ("isA" generalization+=Type ("," generalization+=Type)*)? ("in"
+	//	upperClass=Type)? constraint=CONSTRAINT? feature+=Feature* "end";
 	public ClassifierElements getClassifierAccess() {
 		return (pClassifier != null) ? pClassifier : (pClassifier = new ClassifierElements());
 	}

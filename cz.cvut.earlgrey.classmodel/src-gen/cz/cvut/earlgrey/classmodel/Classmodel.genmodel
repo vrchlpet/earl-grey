@@ -43,6 +43,7 @@
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Classifier">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Classifier/generalization"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Classifier/upperClass"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Classifier/constraint"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Classifier/feature"/>
     </genClasses>

@@ -29,6 +29,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Classifier" eSuperTypes="#//Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="generalization" upperBound="-1"
         eType="#//Type" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="upperClass" eType="#//Type"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="constraint" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="feature" upperBound="-1"
         eType="#//Feature" containment="true"/>

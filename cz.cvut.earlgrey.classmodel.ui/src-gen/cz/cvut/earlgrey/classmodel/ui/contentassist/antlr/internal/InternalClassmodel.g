@@ -1839,9 +1839,9 @@ rule__Classifier__Group__4__Impl
     }
 :
 (
-{ before(grammarAccess.getClassifierAccess().getConstraintAssignment_4()); }
-(rule__Classifier__ConstraintAssignment_4)?
-{ after(grammarAccess.getClassifierAccess().getConstraintAssignment_4()); }
+{ before(grammarAccess.getClassifierAccess().getGroup_4()); }
+(rule__Classifier__Group_4__0)?
+{ after(grammarAccess.getClassifierAccess().getGroup_4()); }
 )
 
 ;
@@ -1868,9 +1868,9 @@ rule__Classifier__Group__5__Impl
     }
 :
 (
-{ before(grammarAccess.getClassifierAccess().getFeatureAssignment_5()); }
-(rule__Classifier__FeatureAssignment_5)*
-{ after(grammarAccess.getClassifierAccess().getFeatureAssignment_5()); }
+{ before(grammarAccess.getClassifierAccess().getConstraintAssignment_5()); }
+(rule__Classifier__ConstraintAssignment_5)?
+{ after(grammarAccess.getClassifierAccess().getConstraintAssignment_5()); }
 )
 
 ;
@@ -1885,6 +1885,7 @@ rule__Classifier__Group__6
     }
 :
 	rule__Classifier__Group__6__Impl
+	rule__Classifier__Group__7
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1896,17 +1897,47 @@ rule__Classifier__Group__6__Impl
     }
 :
 (
-{ before(grammarAccess.getClassifierAccess().getEndKeyword_6()); }
-
-	'end' 
-
-{ after(grammarAccess.getClassifierAccess().getEndKeyword_6()); }
+{ before(grammarAccess.getClassifierAccess().getFeatureAssignment_6()); }
+(rule__Classifier__FeatureAssignment_6)*
+{ after(grammarAccess.getClassifierAccess().getFeatureAssignment_6()); }
 )
 
 ;
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__Classifier__Group__7
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__Classifier__Group__7__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Classifier__Group__7__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getClassifierAccess().getEndKeyword_7()); }
+
+	'end' 
+
+{ after(grammarAccess.getClassifierAccess().getEndKeyword_7()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 
 
 
@@ -2068,6 +2099,69 @@ rule__Classifier__Group_3_2__1__Impl
 { before(grammarAccess.getClassifierAccess().getGeneralizationAssignment_3_2_1()); }
 (rule__Classifier__GeneralizationAssignment_3_2_1)
 { after(grammarAccess.getClassifierAccess().getGeneralizationAssignment_3_2_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+rule__Classifier__Group_4__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__Classifier__Group_4__0__Impl
+	rule__Classifier__Group_4__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Classifier__Group_4__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getClassifierAccess().getInKeyword_4_0()); }
+(
+	'in' 
+)
+{ after(grammarAccess.getClassifierAccess().getInKeyword_4_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Classifier__Group_4__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__Classifier__Group_4__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Classifier__Group_4__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getClassifierAccess().getUpperClassAssignment_4_1()); }
+(rule__Classifier__UpperClassAssignment_4_1)
+{ after(grammarAccess.getClassifierAccess().getUpperClassAssignment_4_1()); }
 )
 
 ;
@@ -5868,14 +5962,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Classifier__ConstraintAssignment_4
+rule__Classifier__UpperClassAssignment_4_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getClassifierAccess().getConstraintCONSTRAINTTerminalRuleCall_4_0()); }
-	RULE_CONSTRAINT{ after(grammarAccess.getClassifierAccess().getConstraintCONSTRAINTTerminalRuleCall_4_0()); }
+{ before(grammarAccess.getClassifierAccess().getUpperClassTypeParserRuleCall_4_1_0()); }
+	ruleType{ after(grammarAccess.getClassifierAccess().getUpperClassTypeParserRuleCall_4_1_0()); }
 )
 
 ;
@@ -5883,14 +5977,29 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Classifier__FeatureAssignment_5
+rule__Classifier__ConstraintAssignment_5
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getClassifierAccess().getFeatureFeatureParserRuleCall_5_0()); }
-	ruleFeature{ after(grammarAccess.getClassifierAccess().getFeatureFeatureParserRuleCall_5_0()); }
+{ before(grammarAccess.getClassifierAccess().getConstraintCONSTRAINTTerminalRuleCall_5_0()); }
+	RULE_CONSTRAINT{ after(grammarAccess.getClassifierAccess().getConstraintCONSTRAINTTerminalRuleCall_5_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Classifier__FeatureAssignment_6
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getClassifierAccess().getFeatureFeatureParserRuleCall_6_0()); }
+	ruleFeature{ after(grammarAccess.getClassifierAccess().getFeatureFeatureParserRuleCall_6_0()); }
 )
 
 ;

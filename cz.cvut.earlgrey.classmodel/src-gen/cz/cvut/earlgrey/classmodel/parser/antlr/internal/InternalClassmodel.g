@@ -510,11 +510,34 @@ ruleClassifier returns [EObject current=null]
 	    }
 
 )
-))*)?(
+))*)?(((	'in' 
+)=>	otherlv_7='in' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getClassifierAccess().getInKeyword_4_0());
+    }
+)(
 (
-		lv_constraint_7_0=RULE_CONSTRAINT
+		{ 
+	        newCompositeNode(grammarAccess.getClassifierAccess().getUpperClassTypeParserRuleCall_4_1_0()); 
+	    }
+		lv_upperClass_8_0=ruleType		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getClassifierRule());
+	        }
+       		set(
+       			$current, 
+       			"upperClass",
+        		lv_upperClass_8_0, 
+        		"Type");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))?(
+(
+		lv_constraint_9_0=RULE_CONSTRAINT
 		{
-			newLeafNode(lv_constraint_7_0, grammarAccess.getClassifierAccess().getConstraintCONSTRAINTTerminalRuleCall_4_0()); 
+			newLeafNode(lv_constraint_9_0, grammarAccess.getClassifierAccess().getConstraintCONSTRAINTTerminalRuleCall_5_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -523,7 +546,7 @@ ruleClassifier returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"constraint",
-        		lv_constraint_7_0, 
+        		lv_constraint_9_0, 
         		"CONSTRAINT");
 	    }
 
@@ -531,24 +554,24 @@ ruleClassifier returns [EObject current=null]
 )?(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getClassifierAccess().getFeatureFeatureParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getClassifierAccess().getFeatureFeatureParserRuleCall_6_0()); 
 	    }
-		lv_feature_8_0=ruleFeature		{
+		lv_feature_10_0=ruleFeature		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getClassifierRule());
 	        }
        		add(
        			$current, 
        			"feature",
-        		lv_feature_8_0, 
+        		lv_feature_10_0, 
         		"Feature");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)*	otherlv_9='end' 
+)*	otherlv_11='end' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getClassifierAccess().getEndKeyword_6());
+    	newLeafNode(otherlv_11, grammarAccess.getClassifierAccess().getEndKeyword_7());
     }
 )
 ;

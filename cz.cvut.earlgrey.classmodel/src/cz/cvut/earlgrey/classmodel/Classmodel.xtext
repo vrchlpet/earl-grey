@@ -42,7 +42,7 @@ Package:
 // e.g.: class node /*..*/ end
 Classifier:
     annotation+=Annotation* =>
-    'class' name=ID (=> 'isA' generalization+=Type (',' generalization+=Type)*)?
+    'class' name=ID (=> 'isA' generalization+=Type (',' generalization+=Type)*)? (=> 'in' upperClass=Type)?
         (constraint=CONSTRAINT)?
         feature+=Feature*
     'end'

@@ -407,9 +407,19 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getClassifier_UpperClass()
+  {
+    return (EReference)classifierEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getClassifier_Constraint()
   {
-    return (EAttribute)classifierEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)classifierEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -419,7 +429,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    */
   public EReference getClassifier_Feature()
   {
-    return (EReference)classifierEClass.getEStructuralFeatures().get(2);
+    return (EReference)classifierEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -953,6 +963,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
 
     classifierEClass = createEClass(CLASSIFIER);
     createEReference(classifierEClass, CLASSIFIER__GENERALIZATION);
+    createEReference(classifierEClass, CLASSIFIER__UPPER_CLASS);
     createEAttribute(classifierEClass, CLASSIFIER__CONSTRAINT);
     createEReference(classifierEClass, CLASSIFIER__FEATURE);
 
@@ -1082,6 +1093,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
 
     initEClass(classifierEClass, Classifier.class, "Classifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getClassifier_Generalization(), this.getType(), null, "generalization", null, 0, -1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getClassifier_UpperClass(), this.getType(), null, "upperClass", null, 0, 1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getClassifier_Constraint(), ecorePackage.getEString(), "constraint", null, 0, 1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getClassifier_Feature(), this.getFeature(), null, "feature", null, 0, -1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

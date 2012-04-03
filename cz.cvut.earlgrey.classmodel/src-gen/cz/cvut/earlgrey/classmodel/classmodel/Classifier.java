@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Classifier#getGeneralization <em>Generalization</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Classifier#getUpperClass <em>Upper Class</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Classifier#getConstraint <em>Constraint</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.Classifier#getFeature <em>Feature</em>}</li>
  * </ul>
@@ -43,6 +44,32 @@ public interface Classifier extends Entity
    * @generated
    */
   EList<Type> getGeneralization();
+
+  /**
+   * Returns the value of the '<em><b>Upper Class</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Upper Class</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Upper Class</em>' containment reference.
+   * @see #setUpperClass(Type)
+   * @see cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage#getClassifier_UpperClass()
+   * @model containment="true"
+   * @generated
+   */
+  Type getUpperClass();
+
+  /**
+   * Sets the value of the '{@link cz.cvut.earlgrey.classmodel.classmodel.Classifier#getUpperClass <em>Upper Class</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Upper Class</em>' containment reference.
+   * @see #getUpperClass()
+   * @generated
+   */
+  void setUpperClass(Type value);
 
   /**
    * Returns the value of the '<em><b>Constraint</b></em>' attribute.

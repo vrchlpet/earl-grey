@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ClassifierImpl#getGeneralization <em>Generalization</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ClassifierImpl#getUpperClass <em>Upper Class</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ClassifierImpl#getConstraint <em>Constraint</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.ClassifierImpl#getFeature <em>Feature</em>}</li>
  * </ul>
@@ -52,6 +53,16 @@ public class ClassifierImpl extends EntityImpl implements Classifier
    * @ordered
    */
   protected EList<Type> generalization;
+
+  /**
+   * The cached value of the '{@link #getUpperClass() <em>Upper Class</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getUpperClass()
+   * @generated
+   * @ordered
+   */
+  protected Type upperClass;
 
   /**
    * The default value of the '{@link #getConstraint() <em>Constraint</em>}' attribute.
@@ -123,6 +134,54 @@ public class ClassifierImpl extends EntityImpl implements Classifier
    * <!-- end-user-doc -->
    * @generated
    */
+  public Type getUpperClass()
+  {
+    return upperClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetUpperClass(Type newUpperClass, NotificationChain msgs)
+  {
+    Type oldUpperClass = upperClass;
+    upperClass = newUpperClass;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ClassmodelPackage.CLASSIFIER__UPPER_CLASS, oldUpperClass, newUpperClass);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setUpperClass(Type newUpperClass)
+  {
+    if (newUpperClass != upperClass)
+    {
+      NotificationChain msgs = null;
+      if (upperClass != null)
+        msgs = ((InternalEObject)upperClass).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ClassmodelPackage.CLASSIFIER__UPPER_CLASS, null, msgs);
+      if (newUpperClass != null)
+        msgs = ((InternalEObject)newUpperClass).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ClassmodelPackage.CLASSIFIER__UPPER_CLASS, null, msgs);
+      msgs = basicSetUpperClass(newUpperClass, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.CLASSIFIER__UPPER_CLASS, newUpperClass, newUpperClass));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getConstraint()
   {
     return constraint;
@@ -167,6 +226,8 @@ public class ClassifierImpl extends EntityImpl implements Classifier
     {
       case ClassmodelPackage.CLASSIFIER__GENERALIZATION:
         return ((InternalEList<?>)getGeneralization()).basicRemove(otherEnd, msgs);
+      case ClassmodelPackage.CLASSIFIER__UPPER_CLASS:
+        return basicSetUpperClass(null, msgs);
       case ClassmodelPackage.CLASSIFIER__FEATURE:
         return ((InternalEList<?>)getFeature()).basicRemove(otherEnd, msgs);
     }
@@ -185,6 +246,8 @@ public class ClassifierImpl extends EntityImpl implements Classifier
     {
       case ClassmodelPackage.CLASSIFIER__GENERALIZATION:
         return getGeneralization();
+      case ClassmodelPackage.CLASSIFIER__UPPER_CLASS:
+        return getUpperClass();
       case ClassmodelPackage.CLASSIFIER__CONSTRAINT:
         return getConstraint();
       case ClassmodelPackage.CLASSIFIER__FEATURE:
@@ -207,6 +270,9 @@ public class ClassifierImpl extends EntityImpl implements Classifier
       case ClassmodelPackage.CLASSIFIER__GENERALIZATION:
         getGeneralization().clear();
         getGeneralization().addAll((Collection<? extends Type>)newValue);
+        return;
+      case ClassmodelPackage.CLASSIFIER__UPPER_CLASS:
+        setUpperClass((Type)newValue);
         return;
       case ClassmodelPackage.CLASSIFIER__CONSTRAINT:
         setConstraint((String)newValue);
@@ -232,6 +298,9 @@ public class ClassifierImpl extends EntityImpl implements Classifier
       case ClassmodelPackage.CLASSIFIER__GENERALIZATION:
         getGeneralization().clear();
         return;
+      case ClassmodelPackage.CLASSIFIER__UPPER_CLASS:
+        setUpperClass((Type)null);
+        return;
       case ClassmodelPackage.CLASSIFIER__CONSTRAINT:
         setConstraint(CONSTRAINT_EDEFAULT);
         return;
@@ -254,6 +323,8 @@ public class ClassifierImpl extends EntityImpl implements Classifier
     {
       case ClassmodelPackage.CLASSIFIER__GENERALIZATION:
         return generalization != null && !generalization.isEmpty();
+      case ClassmodelPackage.CLASSIFIER__UPPER_CLASS:
+        return upperClass != null;
       case ClassmodelPackage.CLASSIFIER__CONSTRAINT:
         return CONSTRAINT_EDEFAULT == null ? constraint != null : !CONSTRAINT_EDEFAULT.equals(constraint);
       case ClassmodelPackage.CLASSIFIER__FEATURE:

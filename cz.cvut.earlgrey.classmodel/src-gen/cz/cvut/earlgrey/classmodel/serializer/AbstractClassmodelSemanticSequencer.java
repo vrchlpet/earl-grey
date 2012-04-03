@@ -249,7 +249,14 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (annotation+=Annotation* name=ID (generalization+=Type generalization+=Type*)? constraint=CONSTRAINT? feature+=Feature*)
+	 *     (
+	 *         annotation+=Annotation* 
+	 *         name=ID 
+	 *         (generalization+=Type generalization+=Type*)? 
+	 *         upperClass=Type? 
+	 *         constraint=CONSTRAINT? 
+	 *         feature+=Feature*
+	 *     )
 	 */
 	protected void sequence_Classifier(EObject context, Classifier semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

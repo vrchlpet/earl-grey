@@ -57,6 +57,7 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getClassifierAccess().getGroup(), "rule__Classifier__Group__0");
 					put(grammarAccess.getClassifierAccess().getGroup_3(), "rule__Classifier__Group_3__0");
 					put(grammarAccess.getClassifierAccess().getGroup_3_2(), "rule__Classifier__Group_3_2__0");
+					put(grammarAccess.getClassifierAccess().getGroup_4(), "rule__Classifier__Group_4__0");
 					put(grammarAccess.getTypeAccess().getGroup(), "rule__Type__Group__0");
 					put(grammarAccess.getFeatureAccess().getGroup(), "rule__Feature__Group__0");
 					put(grammarAccess.getEnumerationAccess().getGroup(), "rule__Enumeration__Group__0");
@@ -101,8 +102,9 @@ public class ClassmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getClassifierAccess().getNameAssignment_2(), "rule__Classifier__NameAssignment_2");
 					put(grammarAccess.getClassifierAccess().getGeneralizationAssignment_3_1(), "rule__Classifier__GeneralizationAssignment_3_1");
 					put(grammarAccess.getClassifierAccess().getGeneralizationAssignment_3_2_1(), "rule__Classifier__GeneralizationAssignment_3_2_1");
-					put(grammarAccess.getClassifierAccess().getConstraintAssignment_4(), "rule__Classifier__ConstraintAssignment_4");
-					put(grammarAccess.getClassifierAccess().getFeatureAssignment_5(), "rule__Classifier__FeatureAssignment_5");
+					put(grammarAccess.getClassifierAccess().getUpperClassAssignment_4_1(), "rule__Classifier__UpperClassAssignment_4_1");
+					put(grammarAccess.getClassifierAccess().getConstraintAssignment_5(), "rule__Classifier__ConstraintAssignment_5");
+					put(grammarAccess.getClassifierAccess().getFeatureAssignment_6(), "rule__Classifier__FeatureAssignment_6");
 					put(grammarAccess.getTypeAccess().getVisibilityAssignment_0(), "rule__Type__VisibilityAssignment_0");
 					put(grammarAccess.getTypeAccess().getNameAssignment_1(), "rule__Type__NameAssignment_1");
 					put(grammarAccess.getFeatureAccess().getConstraintAssignment_1(), "rule__Feature__ConstraintAssignment_1");

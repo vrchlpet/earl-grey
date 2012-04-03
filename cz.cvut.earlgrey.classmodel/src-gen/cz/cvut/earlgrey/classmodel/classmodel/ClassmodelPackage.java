@@ -312,13 +312,22 @@ public interface ClassmodelPackage extends EPackage
   int CLASSIFIER__GENERALIZATION = ENTITY_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Upper Class</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLASSIFIER__UPPER_CLASS = ENTITY_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Constraint</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CLASSIFIER__CONSTRAINT = ENTITY_FEATURE_COUNT + 1;
+  int CLASSIFIER__CONSTRAINT = ENTITY_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Feature</b></em>' containment reference list.
@@ -327,7 +336,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLASSIFIER__FEATURE = ENTITY_FEATURE_COUNT + 2;
+  int CLASSIFIER__FEATURE = ENTITY_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Classifier</em>' class.
@@ -336,7 +345,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLASSIFIER_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 3;
+  int CLASSIFIER_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.TypeImpl <em>Type</em>}' class.
@@ -1177,6 +1186,17 @@ public interface ClassmodelPackage extends EPackage
   EReference getClassifier_Generalization();
 
   /**
+   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Classifier#getUpperClass <em>Upper Class</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Upper Class</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Classifier#getUpperClass()
+   * @see #getClassifier()
+   * @generated
+   */
+  EReference getClassifier_UpperClass();
+
+  /**
    * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Classifier#getConstraint <em>Constraint</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1869,6 +1889,14 @@ public interface ClassmodelPackage extends EPackage
      * @generated
      */
     EReference CLASSIFIER__GENERALIZATION = eINSTANCE.getClassifier_Generalization();
+
+    /**
+     * The meta object literal for the '<em><b>Upper Class</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CLASSIFIER__UPPER_CLASS = eINSTANCE.getClassifier_UpperClass();
 
     /**
      * The meta object literal for the '<em><b>Constraint</b></em>' attribute feature.
