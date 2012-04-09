@@ -9,6 +9,7 @@ package cz.cvut.earlgrey.classmodel.classmodel.impl;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
 import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
+import cz.cvut.earlgrey.classmodel.classmodel.Type;
 
 import java.util.Collection;
 
@@ -32,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EnumerationImpl#getUpperClass <em>Upper Class</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EnumerationImpl#getConstraint <em>Constraint</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.classmodel.classmodel.impl.EnumerationImpl#getEnumerator <em>Enumerator</em>}</li>
  * </ul>
@@ -41,6 +43,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class EnumerationImpl extends EntityImpl implements Enumeration
 {
+  /**
+   * The cached value of the '{@link #getUpperClass() <em>Upper Class</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getUpperClass()
+   * @generated
+   * @ordered
+   */
+  protected Type upperClass;
+
   /**
    * The default value of the '{@link #getConstraint() <em>Constraint</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -97,6 +109,54 @@ public class EnumerationImpl extends EntityImpl implements Enumeration
    * <!-- end-user-doc -->
    * @generated
    */
+  public Type getUpperClass()
+  {
+    return upperClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetUpperClass(Type newUpperClass, NotificationChain msgs)
+  {
+    Type oldUpperClass = upperClass;
+    upperClass = newUpperClass;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ClassmodelPackage.ENUMERATION__UPPER_CLASS, oldUpperClass, newUpperClass);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setUpperClass(Type newUpperClass)
+  {
+    if (newUpperClass != upperClass)
+    {
+      NotificationChain msgs = null;
+      if (upperClass != null)
+        msgs = ((InternalEObject)upperClass).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ClassmodelPackage.ENUMERATION__UPPER_CLASS, null, msgs);
+      if (newUpperClass != null)
+        msgs = ((InternalEObject)newUpperClass).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ClassmodelPackage.ENUMERATION__UPPER_CLASS, null, msgs);
+      msgs = basicSetUpperClass(newUpperClass, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ClassmodelPackage.ENUMERATION__UPPER_CLASS, newUpperClass, newUpperClass));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getConstraint()
   {
     return constraint;
@@ -139,6 +199,8 @@ public class EnumerationImpl extends EntityImpl implements Enumeration
   {
     switch (featureID)
     {
+      case ClassmodelPackage.ENUMERATION__UPPER_CLASS:
+        return basicSetUpperClass(null, msgs);
       case ClassmodelPackage.ENUMERATION__ENUMERATOR:
         return ((InternalEList<?>)getEnumerator()).basicRemove(otherEnd, msgs);
     }
@@ -155,6 +217,8 @@ public class EnumerationImpl extends EntityImpl implements Enumeration
   {
     switch (featureID)
     {
+      case ClassmodelPackage.ENUMERATION__UPPER_CLASS:
+        return getUpperClass();
       case ClassmodelPackage.ENUMERATION__CONSTRAINT:
         return getConstraint();
       case ClassmodelPackage.ENUMERATION__ENUMERATOR:
@@ -174,6 +238,9 @@ public class EnumerationImpl extends EntityImpl implements Enumeration
   {
     switch (featureID)
     {
+      case ClassmodelPackage.ENUMERATION__UPPER_CLASS:
+        setUpperClass((Type)newValue);
+        return;
       case ClassmodelPackage.ENUMERATION__CONSTRAINT:
         setConstraint((String)newValue);
         return;
@@ -195,6 +262,9 @@ public class EnumerationImpl extends EntityImpl implements Enumeration
   {
     switch (featureID)
     {
+      case ClassmodelPackage.ENUMERATION__UPPER_CLASS:
+        setUpperClass((Type)null);
+        return;
       case ClassmodelPackage.ENUMERATION__CONSTRAINT:
         setConstraint(CONSTRAINT_EDEFAULT);
         return;
@@ -215,6 +285,8 @@ public class EnumerationImpl extends EntityImpl implements Enumeration
   {
     switch (featureID)
     {
+      case ClassmodelPackage.ENUMERATION__UPPER_CLASS:
+        return upperClass != null;
       case ClassmodelPackage.ENUMERATION__CONSTRAINT:
         return CONSTRAINT_EDEFAULT == null ? constraint != null : !CONSTRAINT_EDEFAULT.equals(constraint);
       case ClassmodelPackage.ENUMERATION__ENUMERATOR:

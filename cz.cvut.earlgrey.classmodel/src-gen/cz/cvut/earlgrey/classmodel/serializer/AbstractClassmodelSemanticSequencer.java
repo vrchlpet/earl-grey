@@ -6,21 +6,26 @@ import cz.cvut.earlgrey.annotation.annotation.Annotation;
 import cz.cvut.earlgrey.annotation.annotation.AnnotationPackage;
 import cz.cvut.earlgrey.annotation.annotation.Property;
 import cz.cvut.earlgrey.annotation.serializer.AnnotationSemanticSequencer;
+import cz.cvut.earlgrey.classmodel.classmodel.Aggregation;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
+import cz.cvut.earlgrey.classmodel.classmodel.Association;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.Classifier;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
+import cz.cvut.earlgrey.classmodel.classmodel.Composition;
 import cz.cvut.earlgrey.classmodel.classmodel.Constant;
 import cz.cvut.earlgrey.classmodel.classmodel.Datatype;
+import cz.cvut.earlgrey.classmodel.classmodel.Dependency;
 import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
+import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
 import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
+import cz.cvut.earlgrey.classmodel.classmodel.Realization;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
-import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
 import cz.cvut.earlgrey.classmodel.classmodel.Type;
 import cz.cvut.earlgrey.classmodel.services.ClassmodelGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
@@ -91,9 +96,25 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 				else break;
 			}
 		else if(semanticObject.eClass().getEPackage() == ClassmodelPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case ClassmodelPackage.AGGREGATION:
+				if(context == grammarAccess.getAggregationRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getRelationshipRule()) {
+					sequence_Aggregation(context, (Aggregation) semanticObject); 
+					return; 
+				}
+				else break;
 			case ClassmodelPackage.ARRAY:
 				if(context == grammarAccess.getArrayRule()) {
 					sequence_Array(context, (Array) semanticObject); 
+					return; 
+				}
+				else break;
+			case ClassmodelPackage.ASSOCIATION:
+				if(context == grammarAccess.getAssociationRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getRelationshipRule()) {
+					sequence_Association(context, (Association) semanticObject); 
 					return; 
 				}
 				else break;
@@ -115,6 +136,14 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 					return; 
 				}
 				else break;
+			case ClassmodelPackage.COMPOSITION:
+				if(context == grammarAccess.getCompositionRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getRelationshipRule()) {
+					sequence_Composition(context, (Composition) semanticObject); 
+					return; 
+				}
+				else break;
 			case ClassmodelPackage.CONSTANT:
 				if(context == grammarAccess.getConstantRule()) {
 					sequence_Constant(context, (Constant) semanticObject); 
@@ -133,6 +162,14 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 					return; 
 				}
 				else break;
+			case ClassmodelPackage.DEPENDENCY:
+				if(context == grammarAccess.getDependencyRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getRelationshipRule()) {
+					sequence_Dependency(context, (Dependency) semanticObject); 
+					return; 
+				}
+				else break;
 			case ClassmodelPackage.ENUMERATION:
 				if(context == grammarAccess.getElementRule() ||
 				   context == grammarAccess.getEntityRule() ||
@@ -144,6 +181,14 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 			case ClassmodelPackage.FEATURE:
 				if(context == grammarAccess.getEnumeratorRule()) {
 					sequence_Enumerator(context, (Feature) semanticObject); 
+					return; 
+				}
+				else break;
+			case ClassmodelPackage.GENERALIZATION:
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getGeneralizationRule() ||
+				   context == grammarAccess.getRelationshipRule()) {
+					sequence_Generalization(context, (Generalization) semanticObject); 
 					return; 
 				}
 				else break;
@@ -188,16 +233,17 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 					return; 
 				}
 				else break;
-			case ClassmodelPackage.REFERENCE:
-				if(context == grammarAccess.getReferenceRule()) {
-					sequence_Reference(context, (Reference) semanticObject); 
+			case ClassmodelPackage.REALIZATION:
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getRealizationRule() ||
+				   context == grammarAccess.getRelationshipRule()) {
+					sequence_Realization(context, (Realization) semanticObject); 
 					return; 
 				}
 				else break;
-			case ClassmodelPackage.RELATIONSHIP:
-				if(context == grammarAccess.getElementRule() ||
-				   context == grammarAccess.getRelationshipRule()) {
-					sequence_Relationship(context, (Relationship) semanticObject); 
+			case ClassmodelPackage.REFERENCE:
+				if(context == grammarAccess.getReferenceRule()) {
+					sequence_Reference(context, (Reference) semanticObject); 
 					return; 
 				}
 				else break;
@@ -210,6 +256,26 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         annotation+=Annotation* 
+	 *         label=CompositeID? 
+	 *         headNavigable?='unnavigable'? 
+	 *         (headVisibility=Visibility? headLabel=CompositeID)? 
+	 *         head=[Entity|ExtendedID] 
+	 *         headMultiplicity=Multiplicity 
+	 *         tailNavigable?='unnavigable'? 
+	 *         (tailVisibility=Visibility? tailLabel=CompositeID)? 
+	 *         tail=[Entity|ExtendedID] 
+	 *         tailMultiplicity=Multiplicity
+	 *     )
+	 */
+	protected void sequence_Aggregation(EObject context, Aggregation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
 	
 	/**
 	 * Constraint:
@@ -240,6 +306,26 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
+	 *     (
+	 *         annotation+=Annotation* 
+	 *         label=CompositeID? 
+	 *         headNavigable?='unnavigable'? 
+	 *         (headVisibility=Visibility? headLabel=CompositeID)? 
+	 *         head=[Entity|ExtendedID] 
+	 *         headMultiplicity=Multiplicity 
+	 *         tailNavigable?='unnavigable'? 
+	 *         (tailVisibility=Visibility? tailLabel=CompositeID)? 
+	 *         tail=[Entity|ExtendedID] 
+	 *         tailMultiplicity=Multiplicity
+	 *     )
+	 */
+	protected void sequence_Association(EObject context, Association semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (visibility=Visibility? static?='static'? name=ID type=Reference (implicit+=ImplicitValue implicit+=ImplicitValue*)?)
 	 */
 	protected void sequence_Attribute(EObject context, Attribute semanticObject) {
@@ -265,6 +351,26 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
+	 *     (
+	 *         annotation+=Annotation* 
+	 *         label=CompositeID? 
+	 *         headNavigable?='unnavigable'? 
+	 *         (headVisibility=Visibility? headLabel=CompositeID)? 
+	 *         head=[Entity|ExtendedID] 
+	 *         headMultiplicity=Multiplicity 
+	 *         tailNavigable?='unnavigable'? 
+	 *         (tailVisibility=Visibility? tailLabel=CompositeID)? 
+	 *         tail=[Entity|ExtendedID] 
+	 *         tailMultiplicity=Multiplicity
+	 *     )
+	 */
+	protected void sequence_Composition(EObject context, Composition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (visibility=Visibility? name=ID value=ImplicitValue)
 	 */
 	protected void sequence_Constant(EObject context, Constant semanticObject) {
@@ -283,7 +389,16 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (annotation+=Annotation* name=ID constraint=CONSTRAINT? enumerator+=Enumerator*)
+	 *     (annotation+=Annotation* label=CompositeID? head=[Entity|ExtendedID] tail=[Entity|ExtendedID])
+	 */
+	protected void sequence_Dependency(EObject context, Dependency semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (annotation+=Annotation* name=ID upperClass=Type? constraint=CONSTRAINT? enumerator+=Enumerator*)
 	 */
 	protected void sequence_Enumeration(EObject context, Enumeration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -337,6 +452,15 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	 *     )
 	 */
 	protected void sequence_Feature(EObject context, Operation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (annotation+=Annotation* label=CompositeID? head=[Entity|ExtendedID] tail=[Entity|ExtendedID])
+	 */
+	protected void sequence_Generalization(EObject context, Generalization semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -420,30 +544,18 @@ public class AbstractClassmodelSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (type=[Entity|ExtendedID] array+=Array*)
+	 *     (annotation+=Annotation* label=CompositeID? head=[Entity|ExtendedID] tail=[Entity|ExtendedID])
 	 */
-	protected void sequence_Reference(EObject context, Reference semanticObject) {
+	protected void sequence_Realization(EObject context, Realization semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         annotation+=Annotation* 
-	 *         type=RelationshipType 
-	 *         label=CompositeID? 
-	 *         headNavigable?='unnavigable'? 
-	 *         (headVisibility=Visibility? headLabel=CompositeID)? 
-	 *         head=[Entity|ExtendedID] 
-	 *         headMultiplicity=Multiplicity 
-	 *         tailNavigable?='unnavigable'? 
-	 *         (tailVisibility=Visibility? tailLabel=CompositeID)? 
-	 *         tail=[Entity|ExtendedID] 
-	 *         tailMultiplicity=Multiplicity
-	 *     )
+	 *     (type=[Entity|ExtendedID] array+=Array*)
 	 */
-	protected void sequence_Relationship(EObject context, Relationship semanticObject) {
+	protected void sequence_Reference(EObject context, Reference semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

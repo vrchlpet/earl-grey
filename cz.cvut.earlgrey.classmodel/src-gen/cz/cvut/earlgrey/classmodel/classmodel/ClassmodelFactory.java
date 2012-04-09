@@ -126,6 +126,60 @@ public interface ClassmodelFactory extends EFactory
   Relationship createRelationship();
 
   /**
+   * Returns a new object of class '<em>Association</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Association</em>'.
+   * @generated
+   */
+  Association createAssociation();
+
+  /**
+   * Returns a new object of class '<em>Aggregation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Aggregation</em>'.
+   * @generated
+   */
+  Aggregation createAggregation();
+
+  /**
+   * Returns a new object of class '<em>Composition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Composition</em>'.
+   * @generated
+   */
+  Composition createComposition();
+
+  /**
+   * Returns a new object of class '<em>Generalization</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Generalization</em>'.
+   * @generated
+   */
+  Generalization createGeneralization();
+
+  /**
+   * Returns a new object of class '<em>Dependency</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dependency</em>'.
+   * @generated
+   */
+  Dependency createDependency();
+
+  /**
+   * Returns a new object of class '<em>Realization</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Realization</em>'.
+   * @generated
+   */
+  Realization createRealization();
+
+  /**
    * Returns a new object of class '<em>Multiplicity</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

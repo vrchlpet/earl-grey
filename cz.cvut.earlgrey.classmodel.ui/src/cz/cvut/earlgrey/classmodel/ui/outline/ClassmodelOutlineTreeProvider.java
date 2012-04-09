@@ -1,7 +1,5 @@
 package cz.cvut.earlgrey.classmodel.ui.outline;
 
-import java.util.HashMap;
-import java.util.Map;
 import org.eclipse.jface.viewers.StyledString;
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
 import cz.cvut.earlgrey.annotation.annotation.Annotation;
@@ -13,7 +11,6 @@ import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
-import cz.cvut.earlgrey.classmodel.classmodel.RelationshipType;
 import cz.cvut.earlgrey.xtext.formatting.Styles;
 
 /**
@@ -29,16 +26,18 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	private static final String ROUND_BRACKET_RIGHT = ")";
 	private static final String ROUND_BRACKET_LEFT = "(";
 	private static final String EMPTY_STRING = " ";
-	private static Map<RelationshipType, String> relation = new HashMap<RelationshipType, String>();
 
-	static {
-		relation.put(RelationshipType.AGGREGATION, "isAggregatedOf");
-		relation.put(RelationshipType.ASSOCIATION, "associates");
-		relation.put(RelationshipType.COMPOSITION, "isComposedOf");
-		relation.put(RelationshipType.DEPENCY, "dependsOn");
-		relation.put(RelationshipType.GENERALIZATION, "isA");
-		relation.put(RelationshipType.REALIZATION, "realizes");
-	}
+	// private static Map<RelationshipType, String> relation = new
+	// HashMap<RelationshipType, String>();
+
+	// static {
+	// relation.put(RelationshipType.AGGREGATION, "isAggregatedOf");
+	// relation.put(RelationshipType.ASSOCIATION, "associates");
+	// relation.put(RelationshipType.COMPOSITION, "isComposedOf");
+	// relation.put(RelationshipType.DEPENCY, "dependsOn");
+	// relation.put(RelationshipType.GENERALIZATION, "isA");
+	// relation.put(RelationshipType.REALIZATION, "realizes");
+	// }
 
 	/**
 	 * Defines Operation node in Outline View tree as a leaf.
@@ -133,17 +132,17 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	 * @param ele Instance of a Relation
 	 * @return label as StyledString
 	 */
-	public Object _text(Relationship element) {
-		if (element.getHead() == null) {
-			return null;
-		}
-		StyledString styled = new StyledString(
-				getEntityName(element.getHead())
-				+ EMPTY_STRING);
-		styled.append(Styles.getStyledString(getRelationshipType(element)));
-		styled.append(EMPTY_STRING + getEntityName(element.getTail()));
-		return styled;
-	}
+	// public Object _text(Relationship element) {
+	// if (element.getHead() == null) {
+	// return null;
+	// }
+	// StyledString styled = new StyledString(
+	// getEntityName(element.getHead())
+	// + EMPTY_STRING);
+	// styled.append(Styles.getStyledString(getRelationshipType(element)));
+	// styled.append(EMPTY_STRING + getEntityName(element.getTail()));
+	// return styled;
+	// }
 
 	private String getEntityName(Entity e) {
 		if (e != null) {
@@ -158,12 +157,12 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	 * @param ele Relationship instance
 	 * @return Relationship type as String
 	 */
-	private String getRelationshipType(Relationship ele) {
-		if (ele != null) {
-			return relation.get(ele.getType());
-		}
-		return relation.get(RelationshipType.ASSOCIATION);
-	}
+	// private String getRelationshipType(Relationship ele) {
+	// if (ele != null) {
+	// return relation.get(ele.getType());
+	// }
+	// return relation.get(RelationshipType.ASSOCIATION);
+	// }
 
 	/**
 	 * Factory method used to create styled label with given prefix and postfix.

@@ -12,8 +12,6 @@ import cz.cvut.earlgrey.classmodel.classmodel.Feature;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
-import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
-import cz.cvut.earlgrey.classmodel.classmodel.RelationshipType;
 import cz.cvut.earlgrey.classmodel.classmodel.Visibility;
 
 /**
@@ -31,15 +29,16 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 	private static final String PACKAGE = "package_obj.gif";
 	private static final String METHOD_PREFIX = "method_";
 	private static final String ATTRIBUTE_PREFIX = "field_";
-	private static Map<RelationshipType, String> relation = new HashMap<RelationshipType, String>();
+	// private static Map<RelationshipType, String> relation = new
+	// HashMap<RelationshipType, String>();
 	private static Map<Visibility, String> visibility = new HashMap<Visibility, String>();
 	static {
-		relation.put(RelationshipType.AGGREGATION, "Aggregation.gif");
-		relation.put(RelationshipType.ASSOCIATION, "Association.gif");
-		relation.put(RelationshipType.COMPOSITION, "Composition.gif");
-		relation.put(RelationshipType.DEPENCY, "Dependency.gif");
-		relation.put(RelationshipType.GENERALIZATION, "Generalization.gif");
-		relation.put(RelationshipType.REALIZATION, "Realization.gif");
+		// relation.put(RelationshipType.AGGREGATION, "Aggregation.gif");
+		// relation.put(RelationshipType.ASSOCIATION, "Association.gif");
+		// relation.put(RelationshipType.COMPOSITION, "Composition.gif");
+		// relation.put(RelationshipType.DEPENCY, "Dependency.gif");
+		// relation.put(RelationshipType.GENERALIZATION, "Generalization.gif");
+		// relation.put(RelationshipType.REALIZATION, "Realization.gif");
 
 		visibility.put(Visibility.PUBLIC, "public_obj.gif");
 		visibility.put(Visibility.PRIVATE, "private_obj.gif");
@@ -57,12 +56,12 @@ public class ClassmodelLabelProvider extends DefaultEObjectLabelProvider {
 	 * @param ele Instance of an Relation
 	 * @return image's filename as String
 	 */
-	String image(Relationship ele) {
-		if (ele != null) {
-			return relation.get(ele.getType());
-		}
-		return relation.get(RelationshipType.ASSOCIATION);
-	}
+	// String image(Relationship ele) {
+	// if (ele != null) {
+	// return relation.get(ele.getType());
+	// }
+	// return relation.get(RelationshipType.ASSOCIATION);
+	// }
 
 	/**
 	 * Returns Operation's image used in Outline View.

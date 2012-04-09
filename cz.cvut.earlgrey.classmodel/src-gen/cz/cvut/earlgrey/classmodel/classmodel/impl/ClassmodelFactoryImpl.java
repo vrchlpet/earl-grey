@@ -6,25 +6,30 @@
  */
 package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
+import cz.cvut.earlgrey.classmodel.classmodel.Aggregation;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
+import cz.cvut.earlgrey.classmodel.classmodel.Association;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.Classifier;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelFactory;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
+import cz.cvut.earlgrey.classmodel.classmodel.Composition;
 import cz.cvut.earlgrey.classmodel.classmodel.Constant;
 import cz.cvut.earlgrey.classmodel.classmodel.Datatype;
+import cz.cvut.earlgrey.classmodel.classmodel.Dependency;
 import cz.cvut.earlgrey.classmodel.classmodel.Element;
 import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
+import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
 import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
+import cz.cvut.earlgrey.classmodel.classmodel.Realization;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
-import cz.cvut.earlgrey.classmodel.classmodel.RelationshipType;
 import cz.cvut.earlgrey.classmodel.classmodel.Type;
 import cz.cvut.earlgrey.classmodel.classmodel.Visibility;
 
@@ -100,6 +105,12 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
       case ClassmodelPackage.FEATURE: return createFeature();
       case ClassmodelPackage.ENUMERATION: return createEnumeration();
       case ClassmodelPackage.RELATIONSHIP: return createRelationship();
+      case ClassmodelPackage.ASSOCIATION: return createAssociation();
+      case ClassmodelPackage.AGGREGATION: return createAggregation();
+      case ClassmodelPackage.COMPOSITION: return createComposition();
+      case ClassmodelPackage.GENERALIZATION: return createGeneralization();
+      case ClassmodelPackage.DEPENDENCY: return createDependency();
+      case ClassmodelPackage.REALIZATION: return createRealization();
       case ClassmodelPackage.MULTIPLICITY: return createMultiplicity();
       case ClassmodelPackage.CONSTANT: return createConstant();
       case ClassmodelPackage.OPERATION: return createOperation();
@@ -122,8 +133,6 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
   {
     switch (eDataType.getClassifierID())
     {
-      case ClassmodelPackage.RELATIONSHIP_TYPE:
-        return createRelationshipTypeFromString(eDataType, initialValue);
       case ClassmodelPackage.VISIBILITY:
         return createVisibilityFromString(eDataType, initialValue);
       default:
@@ -141,8 +150,6 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
   {
     switch (eDataType.getClassifierID())
     {
-      case ClassmodelPackage.RELATIONSHIP_TYPE:
-        return convertRelationshipTypeToString(eDataType, instanceValue);
       case ClassmodelPackage.VISIBILITY:
         return convertVisibilityToString(eDataType, instanceValue);
       default:
@@ -276,6 +283,72 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public Association createAssociation()
+  {
+    AssociationImpl association = new AssociationImpl();
+    return association;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Aggregation createAggregation()
+  {
+    AggregationImpl aggregation = new AggregationImpl();
+    return aggregation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Composition createComposition()
+  {
+    CompositionImpl composition = new CompositionImpl();
+    return composition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Generalization createGeneralization()
+  {
+    GeneralizationImpl generalization = new GeneralizationImpl();
+    return generalization;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Dependency createDependency()
+  {
+    DependencyImpl dependency = new DependencyImpl();
+    return dependency;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Realization createRealization()
+  {
+    RealizationImpl realization = new RealizationImpl();
+    return realization;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Multiplicity createMultiplicity()
   {
     MultiplicityImpl multiplicity = new MultiplicityImpl();
@@ -346,28 +419,6 @@ public class ClassmodelFactoryImpl extends EFactoryImpl implements ClassmodelFac
   {
     ArrayImpl array = new ArrayImpl();
     return array;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public RelationshipType createRelationshipTypeFromString(EDataType eDataType, String initialValue)
-  {
-    RelationshipType result = RelationshipType.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertRelationshipTypeToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**

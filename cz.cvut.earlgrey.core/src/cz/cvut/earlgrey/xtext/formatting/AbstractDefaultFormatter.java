@@ -157,7 +157,7 @@ AbstractDeclarativeFormatter {
 	}
 
 	/**
-	 * Linewraps an EObject using big spaces (2 linewraps after an EObject, max.
+	 * Linewraps an EObject using big spaces (1 linewraps after an EObject, max.
 	 * 3).
 	 * 
 	 * @param c An instance of the FormattingConfig.
@@ -165,7 +165,7 @@ AbstractDeclarativeFormatter {
 	 * @param style Style of a formatting.
 	 */
 	protected void setLineWrapBig(FormattingConfig c, EObject key, Style style) {
-		setLineWrap(c, key, style, 2, 2, 3);
+		setLineWrap(c, key, style, 1, 2, 2);
 	}
 
 	/**

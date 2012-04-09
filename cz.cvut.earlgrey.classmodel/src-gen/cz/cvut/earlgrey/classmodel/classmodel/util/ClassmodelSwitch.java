@@ -6,21 +6,27 @@
  */
 package cz.cvut.earlgrey.classmodel.classmodel.util;
 
+import cz.cvut.earlgrey.classmodel.classmodel.Aggregation;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
+import cz.cvut.earlgrey.classmodel.classmodel.Association;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.Classifier;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
+import cz.cvut.earlgrey.classmodel.classmodel.Composition;
 import cz.cvut.earlgrey.classmodel.classmodel.Constant;
 import cz.cvut.earlgrey.classmodel.classmodel.Datatype;
+import cz.cvut.earlgrey.classmodel.classmodel.Dependency;
 import cz.cvut.earlgrey.classmodel.classmodel.Element;
 import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
+import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
 import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
+import cz.cvut.earlgrey.classmodel.classmodel.Realization;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
 import cz.cvut.earlgrey.classmodel.classmodel.Type;
@@ -176,6 +182,60 @@ public class ClassmodelSwitch<T> extends Switch<T>
         Relationship relationship = (Relationship)theEObject;
         T result = caseRelationship(relationship);
         if (result == null) result = caseElement(relationship);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ClassmodelPackage.ASSOCIATION:
+      {
+        Association association = (Association)theEObject;
+        T result = caseAssociation(association);
+        if (result == null) result = caseRelationship(association);
+        if (result == null) result = caseElement(association);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ClassmodelPackage.AGGREGATION:
+      {
+        Aggregation aggregation = (Aggregation)theEObject;
+        T result = caseAggregation(aggregation);
+        if (result == null) result = caseRelationship(aggregation);
+        if (result == null) result = caseElement(aggregation);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ClassmodelPackage.COMPOSITION:
+      {
+        Composition composition = (Composition)theEObject;
+        T result = caseComposition(composition);
+        if (result == null) result = caseRelationship(composition);
+        if (result == null) result = caseElement(composition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ClassmodelPackage.GENERALIZATION:
+      {
+        Generalization generalization = (Generalization)theEObject;
+        T result = caseGeneralization(generalization);
+        if (result == null) result = caseRelationship(generalization);
+        if (result == null) result = caseElement(generalization);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ClassmodelPackage.DEPENDENCY:
+      {
+        Dependency dependency = (Dependency)theEObject;
+        T result = caseDependency(dependency);
+        if (result == null) result = caseRelationship(dependency);
+        if (result == null) result = caseElement(dependency);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ClassmodelPackage.REALIZATION:
+      {
+        Realization realization = (Realization)theEObject;
+        T result = caseRealization(realization);
+        if (result == null) result = caseRelationship(realization);
+        if (result == null) result = caseElement(realization);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -407,6 +467,102 @@ public class ClassmodelSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseRelationship(Relationship object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Association</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Association</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAssociation(Association object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Aggregation</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Aggregation</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAggregation(Aggregation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Composition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Composition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseComposition(Composition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Generalization</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Generalization</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGeneralization(Generalization object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dependency</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dependency</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDependency(Dependency object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Realization</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Realization</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRealization(Realization object)
   {
     return null;
   }

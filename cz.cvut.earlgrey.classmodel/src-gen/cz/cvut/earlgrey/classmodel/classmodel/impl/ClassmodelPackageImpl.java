@@ -8,25 +8,30 @@ package cz.cvut.earlgrey.classmodel.classmodel.impl;
 
 import cz.cvut.earlgrey.annotation.annotation.AnnotationPackage;
 
+import cz.cvut.earlgrey.classmodel.classmodel.Aggregation;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
+import cz.cvut.earlgrey.classmodel.classmodel.Association;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.Classifier;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelFactory;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
+import cz.cvut.earlgrey.classmodel.classmodel.Composition;
 import cz.cvut.earlgrey.classmodel.classmodel.Constant;
 import cz.cvut.earlgrey.classmodel.classmodel.Datatype;
+import cz.cvut.earlgrey.classmodel.classmodel.Dependency;
 import cz.cvut.earlgrey.classmodel.classmodel.Element;
 import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
+import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
 import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
+import cz.cvut.earlgrey.classmodel.classmodel.Realization;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
-import cz.cvut.earlgrey.classmodel.classmodel.RelationshipType;
 import cz.cvut.earlgrey.classmodel.classmodel.Type;
 import cz.cvut.earlgrey.classmodel.classmodel.Visibility;
 
@@ -128,6 +133,48 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass associationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass aggregationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass compositionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass generalizationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dependencyEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass realizationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass multiplicityEClass = null;
 
   /**
@@ -171,13 +218,6 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * @generated
    */
   private EClass arrayEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EEnum relationshipTypeEEnum = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -527,9 +567,19 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getEnumeration_UpperClass()
+  {
+    return (EReference)enumerationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getEnumeration_Constraint()
   {
-    return (EAttribute)enumerationEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)enumerationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -539,7 +589,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    */
   public EReference getEnumeration_Enumerator()
   {
-    return (EReference)enumerationEClass.getEStructuralFeatures().get(1);
+    return (EReference)enumerationEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -557,7 +607,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRelationship_Type()
+  public EAttribute getRelationship_Label()
   {
     return (EAttribute)relationshipEClass.getEStructuralFeatures().get(0);
   }
@@ -567,89 +617,9 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRelationship_Label()
-  {
-    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRelationship_HeadNavigable()
-  {
-    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRelationship_HeadVisibility()
-  {
-    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRelationship_HeadLabel()
-  {
-    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getRelationship_Head()
   {
-    return (EReference)relationshipEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRelationship_HeadMultiplicity()
-  {
-    return (EReference)relationshipEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRelationship_TailNavigable()
-  {
-    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(7);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRelationship_TailVisibility()
-  {
-    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(8);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRelationship_TailLabel()
-  {
-    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(9);
+    return (EReference)relationshipEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -659,7 +629,7 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    */
   public EReference getRelationship_Tail()
   {
-    return (EReference)relationshipEClass.getEStructuralFeatures().get(10);
+    return (EReference)relationshipEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -667,9 +637,299 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRelationship_TailMultiplicity()
+  public EClass getAssociation()
   {
-    return (EReference)relationshipEClass.getEStructuralFeatures().get(11);
+    return associationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAssociation_HeadNavigable()
+  {
+    return (EAttribute)associationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAssociation_HeadVisibility()
+  {
+    return (EAttribute)associationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAssociation_HeadLabel()
+  {
+    return (EAttribute)associationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAssociation_HeadMultiplicity()
+  {
+    return (EReference)associationEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAssociation_TailNavigable()
+  {
+    return (EAttribute)associationEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAssociation_TailVisibility()
+  {
+    return (EAttribute)associationEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAssociation_TailLabel()
+  {
+    return (EAttribute)associationEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAssociation_TailMultiplicity()
+  {
+    return (EReference)associationEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAggregation()
+  {
+    return aggregationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAggregation_HeadNavigable()
+  {
+    return (EAttribute)aggregationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAggregation_HeadVisibility()
+  {
+    return (EAttribute)aggregationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAggregation_HeadLabel()
+  {
+    return (EAttribute)aggregationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAggregation_HeadMultiplicity()
+  {
+    return (EReference)aggregationEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAggregation_TailNavigable()
+  {
+    return (EAttribute)aggregationEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAggregation_TailVisibility()
+  {
+    return (EAttribute)aggregationEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAggregation_TailLabel()
+  {
+    return (EAttribute)aggregationEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAggregation_TailMultiplicity()
+  {
+    return (EReference)aggregationEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getComposition()
+  {
+    return compositionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getComposition_HeadNavigable()
+  {
+    return (EAttribute)compositionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getComposition_HeadVisibility()
+  {
+    return (EAttribute)compositionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getComposition_HeadLabel()
+  {
+    return (EAttribute)compositionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getComposition_HeadMultiplicity()
+  {
+    return (EReference)compositionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getComposition_TailNavigable()
+  {
+    return (EAttribute)compositionEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getComposition_TailVisibility()
+  {
+    return (EAttribute)compositionEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getComposition_TailLabel()
+  {
+    return (EAttribute)compositionEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getComposition_TailMultiplicity()
+  {
+    return (EReference)compositionEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGeneralization()
+  {
+    return generalizationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDependency()
+  {
+    return dependencyEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRealization()
+  {
+    return realizationEClass;
   }
 
   /**
@@ -897,16 +1157,6 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EEnum getRelationshipType()
-  {
-    return relationshipTypeEEnum;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EEnum getVisibility()
   {
     return visibilityEEnum;
@@ -978,22 +1228,50 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     createEAttribute(featureEClass, FEATURE__VISIBILITY);
 
     enumerationEClass = createEClass(ENUMERATION);
+    createEReference(enumerationEClass, ENUMERATION__UPPER_CLASS);
     createEAttribute(enumerationEClass, ENUMERATION__CONSTRAINT);
     createEReference(enumerationEClass, ENUMERATION__ENUMERATOR);
 
     relationshipEClass = createEClass(RELATIONSHIP);
-    createEAttribute(relationshipEClass, RELATIONSHIP__TYPE);
     createEAttribute(relationshipEClass, RELATIONSHIP__LABEL);
-    createEAttribute(relationshipEClass, RELATIONSHIP__HEAD_NAVIGABLE);
-    createEAttribute(relationshipEClass, RELATIONSHIP__HEAD_VISIBILITY);
-    createEAttribute(relationshipEClass, RELATIONSHIP__HEAD_LABEL);
     createEReference(relationshipEClass, RELATIONSHIP__HEAD);
-    createEReference(relationshipEClass, RELATIONSHIP__HEAD_MULTIPLICITY);
-    createEAttribute(relationshipEClass, RELATIONSHIP__TAIL_NAVIGABLE);
-    createEAttribute(relationshipEClass, RELATIONSHIP__TAIL_VISIBILITY);
-    createEAttribute(relationshipEClass, RELATIONSHIP__TAIL_LABEL);
     createEReference(relationshipEClass, RELATIONSHIP__TAIL);
-    createEReference(relationshipEClass, RELATIONSHIP__TAIL_MULTIPLICITY);
+
+    associationEClass = createEClass(ASSOCIATION);
+    createEAttribute(associationEClass, ASSOCIATION__HEAD_NAVIGABLE);
+    createEAttribute(associationEClass, ASSOCIATION__HEAD_VISIBILITY);
+    createEAttribute(associationEClass, ASSOCIATION__HEAD_LABEL);
+    createEReference(associationEClass, ASSOCIATION__HEAD_MULTIPLICITY);
+    createEAttribute(associationEClass, ASSOCIATION__TAIL_NAVIGABLE);
+    createEAttribute(associationEClass, ASSOCIATION__TAIL_VISIBILITY);
+    createEAttribute(associationEClass, ASSOCIATION__TAIL_LABEL);
+    createEReference(associationEClass, ASSOCIATION__TAIL_MULTIPLICITY);
+
+    aggregationEClass = createEClass(AGGREGATION);
+    createEAttribute(aggregationEClass, AGGREGATION__HEAD_NAVIGABLE);
+    createEAttribute(aggregationEClass, AGGREGATION__HEAD_VISIBILITY);
+    createEAttribute(aggregationEClass, AGGREGATION__HEAD_LABEL);
+    createEReference(aggregationEClass, AGGREGATION__HEAD_MULTIPLICITY);
+    createEAttribute(aggregationEClass, AGGREGATION__TAIL_NAVIGABLE);
+    createEAttribute(aggregationEClass, AGGREGATION__TAIL_VISIBILITY);
+    createEAttribute(aggregationEClass, AGGREGATION__TAIL_LABEL);
+    createEReference(aggregationEClass, AGGREGATION__TAIL_MULTIPLICITY);
+
+    compositionEClass = createEClass(COMPOSITION);
+    createEAttribute(compositionEClass, COMPOSITION__HEAD_NAVIGABLE);
+    createEAttribute(compositionEClass, COMPOSITION__HEAD_VISIBILITY);
+    createEAttribute(compositionEClass, COMPOSITION__HEAD_LABEL);
+    createEReference(compositionEClass, COMPOSITION__HEAD_MULTIPLICITY);
+    createEAttribute(compositionEClass, COMPOSITION__TAIL_NAVIGABLE);
+    createEAttribute(compositionEClass, COMPOSITION__TAIL_VISIBILITY);
+    createEAttribute(compositionEClass, COMPOSITION__TAIL_LABEL);
+    createEReference(compositionEClass, COMPOSITION__TAIL_MULTIPLICITY);
+
+    generalizationEClass = createEClass(GENERALIZATION);
+
+    dependencyEClass = createEClass(DEPENDENCY);
+
+    realizationEClass = createEClass(REALIZATION);
 
     multiplicityEClass = createEClass(MULTIPLICITY);
     createEAttribute(multiplicityEClass, MULTIPLICITY__LOWER);
@@ -1025,7 +1303,6 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     createEReference(arrayEClass, ARRAY__SIZE);
 
     // Create enums
-    relationshipTypeEEnum = createEEnum(RELATIONSHIP_TYPE);
     visibilityEEnum = createEEnum(VISIBILITY);
   }
 
@@ -1067,6 +1344,12 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     classifierEClass.getESuperTypes().add(this.getEntity());
     enumerationEClass.getESuperTypes().add(this.getEntity());
     relationshipEClass.getESuperTypes().add(this.getElement());
+    associationEClass.getESuperTypes().add(this.getRelationship());
+    aggregationEClass.getESuperTypes().add(this.getRelationship());
+    compositionEClass.getESuperTypes().add(this.getRelationship());
+    generalizationEClass.getESuperTypes().add(this.getRelationship());
+    dependencyEClass.getESuperTypes().add(this.getRelationship());
+    realizationEClass.getESuperTypes().add(this.getRelationship());
     constantEClass.getESuperTypes().add(this.getFeature());
     operationEClass.getESuperTypes().add(this.getFeature());
     attributeEClass.getESuperTypes().add(this.getFeature());
@@ -1108,22 +1391,50 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     initEAttribute(getFeature_Visibility(), this.getVisibility(), "visibility", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(enumerationEClass, Enumeration.class, "Enumeration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getEnumeration_UpperClass(), this.getType(), null, "upperClass", null, 0, 1, Enumeration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEnumeration_Constraint(), ecorePackage.getEString(), "constraint", null, 0, 1, Enumeration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEnumeration_Enumerator(), this.getFeature(), null, "enumerator", null, 0, -1, Enumeration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(relationshipEClass, Relationship.class, "Relationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRelationship_Type(), this.getRelationshipType(), "type", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRelationship_Label(), ecorePackage.getEString(), "label", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRelationship_HeadNavigable(), ecorePackage.getEBoolean(), "headNavigable", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRelationship_HeadVisibility(), this.getVisibility(), "headVisibility", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRelationship_HeadLabel(), ecorePackage.getEString(), "headLabel", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRelationship_Head(), this.getEntity(), null, "head", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRelationship_HeadMultiplicity(), this.getMultiplicity(), null, "headMultiplicity", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRelationship_TailNavigable(), ecorePackage.getEBoolean(), "tailNavigable", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRelationship_TailVisibility(), this.getVisibility(), "tailVisibility", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRelationship_TailLabel(), ecorePackage.getEString(), "tailLabel", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRelationship_Tail(), this.getEntity(), null, "tail", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRelationship_TailMultiplicity(), this.getMultiplicity(), null, "tailMultiplicity", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(associationEClass, Association.class, "Association", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAssociation_HeadNavigable(), ecorePackage.getEBoolean(), "headNavigable", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAssociation_HeadVisibility(), this.getVisibility(), "headVisibility", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAssociation_HeadLabel(), ecorePackage.getEString(), "headLabel", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAssociation_HeadMultiplicity(), this.getMultiplicity(), null, "headMultiplicity", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAssociation_TailNavigable(), ecorePackage.getEBoolean(), "tailNavigable", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAssociation_TailVisibility(), this.getVisibility(), "tailVisibility", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAssociation_TailLabel(), ecorePackage.getEString(), "tailLabel", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAssociation_TailMultiplicity(), this.getMultiplicity(), null, "tailMultiplicity", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(aggregationEClass, Aggregation.class, "Aggregation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAggregation_HeadNavigable(), ecorePackage.getEBoolean(), "headNavigable", null, 0, 1, Aggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAggregation_HeadVisibility(), this.getVisibility(), "headVisibility", null, 0, 1, Aggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAggregation_HeadLabel(), ecorePackage.getEString(), "headLabel", null, 0, 1, Aggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAggregation_HeadMultiplicity(), this.getMultiplicity(), null, "headMultiplicity", null, 0, 1, Aggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAggregation_TailNavigable(), ecorePackage.getEBoolean(), "tailNavigable", null, 0, 1, Aggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAggregation_TailVisibility(), this.getVisibility(), "tailVisibility", null, 0, 1, Aggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAggregation_TailLabel(), ecorePackage.getEString(), "tailLabel", null, 0, 1, Aggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAggregation_TailMultiplicity(), this.getMultiplicity(), null, "tailMultiplicity", null, 0, 1, Aggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(compositionEClass, Composition.class, "Composition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getComposition_HeadNavigable(), ecorePackage.getEBoolean(), "headNavigable", null, 0, 1, Composition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getComposition_HeadVisibility(), this.getVisibility(), "headVisibility", null, 0, 1, Composition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getComposition_HeadLabel(), ecorePackage.getEString(), "headLabel", null, 0, 1, Composition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getComposition_HeadMultiplicity(), this.getMultiplicity(), null, "headMultiplicity", null, 0, 1, Composition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getComposition_TailNavigable(), ecorePackage.getEBoolean(), "tailNavigable", null, 0, 1, Composition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getComposition_TailVisibility(), this.getVisibility(), "tailVisibility", null, 0, 1, Composition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getComposition_TailLabel(), ecorePackage.getEString(), "tailLabel", null, 0, 1, Composition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getComposition_TailMultiplicity(), this.getMultiplicity(), null, "tailMultiplicity", null, 0, 1, Composition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(generalizationEClass, Generalization.class, "Generalization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(dependencyEClass, Dependency.class, "Dependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(realizationEClass, Realization.class, "Realization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(multiplicityEClass, Multiplicity.class, "Multiplicity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMultiplicity_Lower(), ecorePackage.getEString(), "lower", null, 0, 1, Multiplicity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1155,14 +1466,6 @@ public class ClassmodelPackageImpl extends EPackageImpl implements ClassmodelPac
     initEReference(getArray_Size(), this.getMultiplicity(), null, "size", null, 0, 1, Array.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
-    initEEnum(relationshipTypeEEnum, RelationshipType.class, "RelationshipType");
-    addEEnumLiteral(relationshipTypeEEnum, RelationshipType.ASSOCIATION);
-    addEEnumLiteral(relationshipTypeEEnum, RelationshipType.DEPENCY);
-    addEEnumLiteral(relationshipTypeEEnum, RelationshipType.GENERALIZATION);
-    addEEnumLiteral(relationshipTypeEEnum, RelationshipType.REALIZATION);
-    addEEnumLiteral(relationshipTypeEEnum, RelationshipType.AGGREGATION);
-    addEEnumLiteral(relationshipTypeEEnum, RelationshipType.COMPOSITION);
-
     initEEnum(visibilityEEnum, Visibility.class, "Visibility");
     addEEnumLiteral(visibilityEEnum, Visibility.PUBLIC);
     addEEnumLiteral(visibilityEEnum, Visibility.PRIVATE);

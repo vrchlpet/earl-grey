@@ -9,14 +9,6 @@
     editorPluginID="cz.cvut.earlgrey.classmodel.editor" usedGenPackages="../../../../../../cz.cvut.earlgrey.annotation/src-gen/cz/cvut/earlgrey/annotation/Annotation.genmodel#//annotation">
   <genPackages prefix="Classmodel" basePackage="cz.cvut.earlgrey.classmodel" disposableProviderFactory="true"
       ecorePackage="Classmodel.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Classmodel.ecore#//RelationshipType">
-      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationshipType/ASSOCIATION"/>
-      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationshipType/DEPENCY"/>
-      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationshipType/GENERALIZATION"/>
-      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationshipType/REALIZATION"/>
-      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationshipType/AGGREGATION"/>
-      <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//RelationshipType/COMPOSITION"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Classmodel.ecore#//Visibility">
       <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//Visibility/PUBLIC"/>
       <genEnumLiterals ecoreEnumLiteral="Classmodel.ecore#//Visibility/PRIVATE"/>
@@ -58,23 +50,48 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Feature/visibility"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Enumeration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Enumeration/upperClass"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Enumeration/constraint"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Enumeration/enumerator"/>
     </genClasses>
     <genClasses ecoreClass="Classmodel.ecore#//Relationship">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/label"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/headNavigable"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/headVisibility"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/headLabel"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Relationship/head"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Relationship/headMultiplicity"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/tailNavigable"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/tailVisibility"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Relationship/tailLabel"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Relationship/tail"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Relationship/tailMultiplicity"/>
     </genClasses>
+    <genClasses ecoreClass="Classmodel.ecore#//Association">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Association/headNavigable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Association/headVisibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Association/headLabel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Association/headMultiplicity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Association/tailNavigable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Association/tailVisibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Association/tailLabel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Association/tailMultiplicity"/>
+    </genClasses>
+    <genClasses ecoreClass="Classmodel.ecore#//Aggregation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Aggregation/headNavigable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Aggregation/headVisibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Aggregation/headLabel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Aggregation/headMultiplicity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Aggregation/tailNavigable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Aggregation/tailVisibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Aggregation/tailLabel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Aggregation/tailMultiplicity"/>
+    </genClasses>
+    <genClasses ecoreClass="Classmodel.ecore#//Composition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Composition/headNavigable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Composition/headVisibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Composition/headLabel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Composition/headMultiplicity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Composition/tailNavigable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Composition/tailVisibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Composition/tailLabel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Classmodel.ecore#//Composition/tailMultiplicity"/>
+    </genClasses>
+    <genClasses ecoreClass="Classmodel.ecore#//Generalization"/>
+    <genClasses ecoreClass="Classmodel.ecore#//Dependency"/>
+    <genClasses ecoreClass="Classmodel.ecore#//Realization"/>
     <genClasses ecoreClass="Classmodel.ecore#//Multiplicity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Multiplicity/lower"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Classmodel.ecore#//Multiplicity/upper"/>

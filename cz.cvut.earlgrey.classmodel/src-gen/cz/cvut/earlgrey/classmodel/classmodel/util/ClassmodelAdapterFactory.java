@@ -6,21 +6,27 @@
  */
 package cz.cvut.earlgrey.classmodel.classmodel.util;
 
+import cz.cvut.earlgrey.classmodel.classmodel.Aggregation;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
+import cz.cvut.earlgrey.classmodel.classmodel.Association;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
 import cz.cvut.earlgrey.classmodel.classmodel.Classifier;
 import cz.cvut.earlgrey.classmodel.classmodel.ClassmodelPackage;
+import cz.cvut.earlgrey.classmodel.classmodel.Composition;
 import cz.cvut.earlgrey.classmodel.classmodel.Constant;
 import cz.cvut.earlgrey.classmodel.classmodel.Datatype;
+import cz.cvut.earlgrey.classmodel.classmodel.Dependency;
 import cz.cvut.earlgrey.classmodel.classmodel.Element;
 import cz.cvut.earlgrey.classmodel.classmodel.Entity;
 import cz.cvut.earlgrey.classmodel.classmodel.Enumeration;
 import cz.cvut.earlgrey.classmodel.classmodel.Feature;
+import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Import;
 import cz.cvut.earlgrey.classmodel.classmodel.Model;
 import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
+import cz.cvut.earlgrey.classmodel.classmodel.Realization;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
 import cz.cvut.earlgrey.classmodel.classmodel.Type;
@@ -149,6 +155,36 @@ public class ClassmodelAdapterFactory extends AdapterFactoryImpl
       public Adapter caseRelationship(Relationship object)
       {
         return createRelationshipAdapter();
+      }
+      @Override
+      public Adapter caseAssociation(Association object)
+      {
+        return createAssociationAdapter();
+      }
+      @Override
+      public Adapter caseAggregation(Aggregation object)
+      {
+        return createAggregationAdapter();
+      }
+      @Override
+      public Adapter caseComposition(Composition object)
+      {
+        return createCompositionAdapter();
+      }
+      @Override
+      public Adapter caseGeneralization(Generalization object)
+      {
+        return createGeneralizationAdapter();
+      }
+      @Override
+      public Adapter caseDependency(Dependency object)
+      {
+        return createDependencyAdapter();
+      }
+      @Override
+      public Adapter caseRealization(Realization object)
+      {
+        return createRealizationAdapter();
       }
       @Override
       public Adapter caseMultiplicity(Multiplicity object)
@@ -368,6 +404,96 @@ public class ClassmodelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createRelationshipAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.classmodel.classmodel.Association <em>Association</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Association
+   * @generated
+   */
+  public Adapter createAssociationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.classmodel.classmodel.Aggregation <em>Aggregation</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Aggregation
+   * @generated
+   */
+  public Adapter createAggregationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.classmodel.classmodel.Composition <em>Composition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Composition
+   * @generated
+   */
+  public Adapter createCompositionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.classmodel.classmodel.Generalization <em>Generalization</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Generalization
+   * @generated
+   */
+  public Adapter createGeneralizationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.classmodel.classmodel.Dependency <em>Dependency</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Dependency
+   * @generated
+   */
+  public Adapter createDependencyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.classmodel.classmodel.Realization <em>Realization</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Realization
+   * @generated
+   */
+  public Adapter createRealizationAdapter()
   {
     return null;
   }

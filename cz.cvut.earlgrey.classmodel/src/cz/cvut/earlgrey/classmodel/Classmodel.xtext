@@ -65,7 +65,7 @@ Feature:
 // e.g.: enum Weekend Saturday Sunday end
 Enumeration:
     annotation+=Annotation* =>
-    'enum' name=ID
+    'enum' name=ID (=> 'in' upperClass=Type)?
         (constraint=CONSTRAINT)?
         enumerator+=Enumerator*
     'end'
@@ -78,12 +78,73 @@ Enumerator returns Feature:
 
 // e.g.: composition Tree [0..1] Leaf [0..*] end
 Relationship:
+    Association
+    | Aggregation
+    | Composition
+    | Generalization
+    | Dependency
+    | Realization
+;
+
+//enum AssociationType:
+//    ASSOCIATION = 'association'
+//    | AGGREGATION = 'aggregation'
+//    | COMPOSITION = 'composition'
+//;
+
+
+//ugly, breaking DRY principle!!!
+Association:
     annotation+=Annotation* =>
-    type=RelationshipType (label=CompositeID)?
+    'association' (label=CompositeID)?
         (headNavigable?='unnavigable')? (headVisibility=Visibility? headLabel=CompositeID ':')?
             head=[Entity|ExtendedID] '[' headMultiplicity=Multiplicity ']'
         (tailNavigable?='unnavigable')? (tailVisibility=Visibility? tailLabel=CompositeID ':')?
             tail=[Entity|ExtendedID] '[' tailMultiplicity=Multiplicity ']'
+    'end'
+;
+
+Aggregation:
+    annotation+=Annotation* =>
+    'aggregation' (label=CompositeID)?
+        (headNavigable?='unnavigable')? (headVisibility=Visibility? headLabel=CompositeID ':')?
+            head=[Entity|ExtendedID] '[' headMultiplicity=Multiplicity ']'
+        (tailNavigable?='unnavigable')? (tailVisibility=Visibility? tailLabel=CompositeID ':')?
+            tail=[Entity|ExtendedID] '[' tailMultiplicity=Multiplicity ']'
+    'end'
+;
+
+Composition:
+    annotation+=Annotation* =>
+    'composition' (label=CompositeID)?
+        (headNavigable?='unnavigable')? (headVisibility=Visibility? headLabel=CompositeID ':')?
+            head=[Entity|ExtendedID] '[' headMultiplicity=Multiplicity ']'
+        (tailNavigable?='unnavigable')? (tailVisibility=Visibility? tailLabel=CompositeID ':')?
+            tail=[Entity|ExtendedID] '[' tailMultiplicity=Multiplicity ']'
+    'end'
+;
+
+Generalization:
+    annotation+=Annotation* =>
+    'generalization' (label=CompositeID)?
+            head=[Entity|ExtendedID]
+            tail=[Entity|ExtendedID]
+    'end'
+;
+
+Dependency:
+    annotation+=Annotation* =>
+    'dependency' (label=CompositeID)?
+            head=[Entity|ExtendedID]
+            tail=[Entity|ExtendedID]
+    'end'
+;
+
+Realization:
+    annotation+=Annotation* =>
+    'realization' (label=CompositeID)?
+            head=[Entity|ExtendedID]
+            tail=[Entity|ExtendedID]
     'end'
 ;
 
@@ -132,15 +193,6 @@ ImplicitValue returns ecore::EString:
     | Integer
     | Real
     | ID
-;
-
-enum RelationshipType:
-    ASSOCIATION = 'association'
-    | DEPENCY = 'depency'
-    | GENERALIZATION = 'generalization'
-    | REALIZATION = 'realization'
-    | AGGREGATION = 'aggregation'
-    | COMPOSITION = 'composition'
 ;
 
 enum Visibility:

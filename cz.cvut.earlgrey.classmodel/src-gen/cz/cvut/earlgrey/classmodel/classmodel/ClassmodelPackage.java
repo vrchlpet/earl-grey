@@ -468,13 +468,22 @@ public interface ClassmodelPackage extends EPackage
   int ENUMERATION__NAME = ENTITY__NAME;
 
   /**
+   * The feature id for the '<em><b>Upper Class</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATION__UPPER_CLASS = ENTITY_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>Constraint</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ENUMERATION__CONSTRAINT = ENTITY_FEATURE_COUNT + 0;
+  int ENUMERATION__CONSTRAINT = ENTITY_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Enumerator</b></em>' containment reference list.
@@ -483,7 +492,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENUMERATION__ENUMERATOR = ENTITY_FEATURE_COUNT + 1;
+  int ENUMERATION__ENUMERATOR = ENTITY_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Enumeration</em>' class.
@@ -492,7 +501,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENUMERATION_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 2;
+  int ENUMERATION_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RelationshipImpl <em>Relationship</em>}' class.
@@ -514,49 +523,13 @@ public interface ClassmodelPackage extends EPackage
   int RELATIONSHIP__ANNOTATION = ELEMENT__ANNOTATION;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RELATIONSHIP__TYPE = ELEMENT_FEATURE_COUNT + 0;
-
-  /**
    * The feature id for the '<em><b>Label</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RELATIONSHIP__LABEL = ELEMENT_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Head Navigable</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RELATIONSHIP__HEAD_NAVIGABLE = ELEMENT_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>Head Visibility</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RELATIONSHIP__HEAD_VISIBILITY = ELEMENT_FEATURE_COUNT + 3;
-
-  /**
-   * The feature id for the '<em><b>Head Label</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RELATIONSHIP__HEAD_LABEL = ELEMENT_FEATURE_COUNT + 4;
+  int RELATIONSHIP__LABEL = ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Head</b></em>' reference.
@@ -565,43 +538,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RELATIONSHIP__HEAD = ELEMENT_FEATURE_COUNT + 5;
-
-  /**
-   * The feature id for the '<em><b>Head Multiplicity</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RELATIONSHIP__HEAD_MULTIPLICITY = ELEMENT_FEATURE_COUNT + 6;
-
-  /**
-   * The feature id for the '<em><b>Tail Navigable</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RELATIONSHIP__TAIL_NAVIGABLE = ELEMENT_FEATURE_COUNT + 7;
-
-  /**
-   * The feature id for the '<em><b>Tail Visibility</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RELATIONSHIP__TAIL_VISIBILITY = ELEMENT_FEATURE_COUNT + 8;
-
-  /**
-   * The feature id for the '<em><b>Tail Label</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RELATIONSHIP__TAIL_LABEL = ELEMENT_FEATURE_COUNT + 9;
+  int RELATIONSHIP__HEAD = ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Tail</b></em>' reference.
@@ -610,16 +547,7 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RELATIONSHIP__TAIL = ELEMENT_FEATURE_COUNT + 10;
-
-  /**
-   * The feature id for the '<em><b>Tail Multiplicity</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RELATIONSHIP__TAIL_MULTIPLICITY = ELEMENT_FEATURE_COUNT + 11;
+  int RELATIONSHIP__TAIL = ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Relationship</em>' class.
@@ -628,7 +556,553 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RELATIONSHIP_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 12;
+  int RELATIONSHIP_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AssociationImpl <em>Association</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.AssociationImpl
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getAssociation()
+   * @generated
+   */
+  int ASSOCIATION = 11;
+
+  /**
+   * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION__ANNOTATION = RELATIONSHIP__ANNOTATION;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION__LABEL = RELATIONSHIP__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Head</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION__HEAD = RELATIONSHIP__HEAD;
+
+  /**
+   * The feature id for the '<em><b>Tail</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION__TAIL = RELATIONSHIP__TAIL;
+
+  /**
+   * The feature id for the '<em><b>Head Navigable</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION__HEAD_NAVIGABLE = RELATIONSHIP_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Head Visibility</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION__HEAD_VISIBILITY = RELATIONSHIP_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Head Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION__HEAD_LABEL = RELATIONSHIP_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Head Multiplicity</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION__HEAD_MULTIPLICITY = RELATIONSHIP_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Tail Navigable</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION__TAIL_NAVIGABLE = RELATIONSHIP_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Tail Visibility</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION__TAIL_VISIBILITY = RELATIONSHIP_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Tail Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION__TAIL_LABEL = RELATIONSHIP_FEATURE_COUNT + 6;
+
+  /**
+   * The feature id for the '<em><b>Tail Multiplicity</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION__TAIL_MULTIPLICITY = RELATIONSHIP_FEATURE_COUNT + 7;
+
+  /**
+   * The number of structural features of the '<em>Association</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION_FEATURE_COUNT = RELATIONSHIP_FEATURE_COUNT + 8;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AggregationImpl <em>Aggregation</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.AggregationImpl
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getAggregation()
+   * @generated
+   */
+  int AGGREGATION = 12;
+
+  /**
+   * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGGREGATION__ANNOTATION = RELATIONSHIP__ANNOTATION;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGGREGATION__LABEL = RELATIONSHIP__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Head</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGGREGATION__HEAD = RELATIONSHIP__HEAD;
+
+  /**
+   * The feature id for the '<em><b>Tail</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGGREGATION__TAIL = RELATIONSHIP__TAIL;
+
+  /**
+   * The feature id for the '<em><b>Head Navigable</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGGREGATION__HEAD_NAVIGABLE = RELATIONSHIP_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Head Visibility</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGGREGATION__HEAD_VISIBILITY = RELATIONSHIP_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Head Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGGREGATION__HEAD_LABEL = RELATIONSHIP_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Head Multiplicity</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGGREGATION__HEAD_MULTIPLICITY = RELATIONSHIP_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Tail Navigable</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGGREGATION__TAIL_NAVIGABLE = RELATIONSHIP_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Tail Visibility</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGGREGATION__TAIL_VISIBILITY = RELATIONSHIP_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Tail Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGGREGATION__TAIL_LABEL = RELATIONSHIP_FEATURE_COUNT + 6;
+
+  /**
+   * The feature id for the '<em><b>Tail Multiplicity</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGGREGATION__TAIL_MULTIPLICITY = RELATIONSHIP_FEATURE_COUNT + 7;
+
+  /**
+   * The number of structural features of the '<em>Aggregation</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGGREGATION_FEATURE_COUNT = RELATIONSHIP_FEATURE_COUNT + 8;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.CompositionImpl <em>Composition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.CompositionImpl
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getComposition()
+   * @generated
+   */
+  int COMPOSITION = 13;
+
+  /**
+   * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPOSITION__ANNOTATION = RELATIONSHIP__ANNOTATION;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPOSITION__LABEL = RELATIONSHIP__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Head</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPOSITION__HEAD = RELATIONSHIP__HEAD;
+
+  /**
+   * The feature id for the '<em><b>Tail</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPOSITION__TAIL = RELATIONSHIP__TAIL;
+
+  /**
+   * The feature id for the '<em><b>Head Navigable</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPOSITION__HEAD_NAVIGABLE = RELATIONSHIP_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Head Visibility</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPOSITION__HEAD_VISIBILITY = RELATIONSHIP_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Head Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPOSITION__HEAD_LABEL = RELATIONSHIP_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Head Multiplicity</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPOSITION__HEAD_MULTIPLICITY = RELATIONSHIP_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Tail Navigable</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPOSITION__TAIL_NAVIGABLE = RELATIONSHIP_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Tail Visibility</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPOSITION__TAIL_VISIBILITY = RELATIONSHIP_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Tail Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPOSITION__TAIL_LABEL = RELATIONSHIP_FEATURE_COUNT + 6;
+
+  /**
+   * The feature id for the '<em><b>Tail Multiplicity</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPOSITION__TAIL_MULTIPLICITY = RELATIONSHIP_FEATURE_COUNT + 7;
+
+  /**
+   * The number of structural features of the '<em>Composition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPOSITION_FEATURE_COUNT = RELATIONSHIP_FEATURE_COUNT + 8;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.GeneralizationImpl <em>Generalization</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.GeneralizationImpl
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getGeneralization()
+   * @generated
+   */
+  int GENERALIZATION = 14;
+
+  /**
+   * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERALIZATION__ANNOTATION = RELATIONSHIP__ANNOTATION;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERALIZATION__LABEL = RELATIONSHIP__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Head</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERALIZATION__HEAD = RELATIONSHIP__HEAD;
+
+  /**
+   * The feature id for the '<em><b>Tail</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERALIZATION__TAIL = RELATIONSHIP__TAIL;
+
+  /**
+   * The number of structural features of the '<em>Generalization</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERALIZATION_FEATURE_COUNT = RELATIONSHIP_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.DependencyImpl <em>Dependency</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.DependencyImpl
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getDependency()
+   * @generated
+   */
+  int DEPENDENCY = 15;
+
+  /**
+   * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEPENDENCY__ANNOTATION = RELATIONSHIP__ANNOTATION;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEPENDENCY__LABEL = RELATIONSHIP__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Head</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEPENDENCY__HEAD = RELATIONSHIP__HEAD;
+
+  /**
+   * The feature id for the '<em><b>Tail</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEPENDENCY__TAIL = RELATIONSHIP__TAIL;
+
+  /**
+   * The number of structural features of the '<em>Dependency</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEPENDENCY_FEATURE_COUNT = RELATIONSHIP_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RealizationImpl <em>Realization</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.RealizationImpl
+   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getRealization()
+   * @generated
+   */
+  int REALIZATION = 16;
+
+  /**
+   * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REALIZATION__ANNOTATION = RELATIONSHIP__ANNOTATION;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REALIZATION__LABEL = RELATIONSHIP__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Head</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REALIZATION__HEAD = RELATIONSHIP__HEAD;
+
+  /**
+   * The feature id for the '<em><b>Tail</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REALIZATION__TAIL = RELATIONSHIP__TAIL;
+
+  /**
+   * The number of structural features of the '<em>Realization</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REALIZATION_FEATURE_COUNT = RELATIONSHIP_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.MultiplicityImpl <em>Multiplicity</em>}' class.
@@ -638,7 +1112,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getMultiplicity()
    * @generated
    */
-  int MULTIPLICITY = 11;
+  int MULTIPLICITY = 17;
 
   /**
    * The feature id for the '<em><b>Lower</b></em>' attribute.
@@ -675,7 +1149,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getConstant()
    * @generated
    */
-  int CONSTANT = 12;
+  int CONSTANT = 18;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -730,7 +1204,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getOperation()
    * @generated
    */
-  int OPERATION = 13;
+  int OPERATION = 19;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -821,7 +1295,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getParameter()
    * @generated
    */
-  int PARAMETER = 14;
+  int PARAMETER = 20;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -867,7 +1341,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getAttribute()
    * @generated
    */
-  int ATTRIBUTE = 15;
+  int ATTRIBUTE = 21;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -949,7 +1423,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getReference()
    * @generated
    */
-  int REFERENCE = 16;
+  int REFERENCE = 22;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' reference.
@@ -986,7 +1460,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getArray()
    * @generated
    */
-  int ARRAY = 17;
+  int ARRAY = 23;
 
   /**
    * The feature id for the '<em><b>Size</b></em>' containment reference.
@@ -1007,16 +1481,6 @@ public interface ClassmodelPackage extends EPackage
   int ARRAY_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.RelationshipType <em>Relationship Type</em>}' enum.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see cz.cvut.earlgrey.classmodel.classmodel.RelationshipType
-   * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getRelationshipType()
-   * @generated
-   */
-  int RELATIONSHIP_TYPE = 18;
-
-  /**
    * The meta object id for the '{@link cz.cvut.earlgrey.classmodel.classmodel.Visibility <em>Visibility</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1024,7 +1488,7 @@ public interface ClassmodelPackage extends EPackage
    * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getVisibility()
    * @generated
    */
-  int VISIBILITY = 19;
+  int VISIBILITY = 24;
 
 
   /**
@@ -1315,6 +1779,17 @@ public interface ClassmodelPackage extends EPackage
   EClass getEnumeration();
 
   /**
+   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Enumeration#getUpperClass <em>Upper Class</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Upper Class</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Enumeration#getUpperClass()
+   * @see #getEnumeration()
+   * @generated
+   */
+  EReference getEnumeration_UpperClass();
+
+  /**
    * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Enumeration#getConstraint <em>Constraint</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1347,17 +1822,6 @@ public interface ClassmodelPackage extends EPackage
   EClass getRelationship();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#getType()
-   * @see #getRelationship()
-   * @generated
-   */
-  EAttribute getRelationship_Type();
-
-  /**
    * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getLabel <em>Label</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1367,39 +1831,6 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   EAttribute getRelationship_Label();
-
-  /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#isHeadNavigable <em>Head Navigable</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Head Navigable</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#isHeadNavigable()
-   * @see #getRelationship()
-   * @generated
-   */
-  EAttribute getRelationship_HeadNavigable();
-
-  /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadVisibility <em>Head Visibility</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Head Visibility</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadVisibility()
-   * @see #getRelationship()
-   * @generated
-   */
-  EAttribute getRelationship_HeadVisibility();
-
-  /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadLabel <em>Head Label</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Head Label</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadLabel()
-   * @see #getRelationship()
-   * @generated
-   */
-  EAttribute getRelationship_HeadLabel();
 
   /**
    * Returns the meta object for the reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHead <em>Head</em>}'.
@@ -1413,50 +1844,6 @@ public interface ClassmodelPackage extends EPackage
   EReference getRelationship_Head();
 
   /**
-   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadMultiplicity <em>Head Multiplicity</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Head Multiplicity</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#getHeadMultiplicity()
-   * @see #getRelationship()
-   * @generated
-   */
-  EReference getRelationship_HeadMultiplicity();
-
-  /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#isTailNavigable <em>Tail Navigable</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Tail Navigable</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#isTailNavigable()
-   * @see #getRelationship()
-   * @generated
-   */
-  EAttribute getRelationship_TailNavigable();
-
-  /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailVisibility <em>Tail Visibility</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Tail Visibility</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailVisibility()
-   * @see #getRelationship()
-   * @generated
-   */
-  EAttribute getRelationship_TailVisibility();
-
-  /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailLabel <em>Tail Label</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Tail Label</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailLabel()
-   * @see #getRelationship()
-   * @generated
-   */
-  EAttribute getRelationship_TailLabel();
-
-  /**
    * Returns the meta object for the reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTail <em>Tail</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1468,15 +1855,328 @@ public interface ClassmodelPackage extends EPackage
   EReference getRelationship_Tail();
 
   /**
-   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailMultiplicity <em>Tail Multiplicity</em>}'.
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Association <em>Association</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Association</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Association
+   * @generated
+   */
+  EClass getAssociation();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Association#isHeadNavigable <em>Head Navigable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Head Navigable</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Association#isHeadNavigable()
+   * @see #getAssociation()
+   * @generated
+   */
+  EAttribute getAssociation_HeadNavigable();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Association#getHeadVisibility <em>Head Visibility</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Head Visibility</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Association#getHeadVisibility()
+   * @see #getAssociation()
+   * @generated
+   */
+  EAttribute getAssociation_HeadVisibility();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Association#getHeadLabel <em>Head Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Head Label</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Association#getHeadLabel()
+   * @see #getAssociation()
+   * @generated
+   */
+  EAttribute getAssociation_HeadLabel();
+
+  /**
+   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Association#getHeadMultiplicity <em>Head Multiplicity</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Head Multiplicity</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Association#getHeadMultiplicity()
+   * @see #getAssociation()
+   * @generated
+   */
+  EReference getAssociation_HeadMultiplicity();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Association#isTailNavigable <em>Tail Navigable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Tail Navigable</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Association#isTailNavigable()
+   * @see #getAssociation()
+   * @generated
+   */
+  EAttribute getAssociation_TailNavigable();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Association#getTailVisibility <em>Tail Visibility</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Tail Visibility</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Association#getTailVisibility()
+   * @see #getAssociation()
+   * @generated
+   */
+  EAttribute getAssociation_TailVisibility();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Association#getTailLabel <em>Tail Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Tail Label</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Association#getTailLabel()
+   * @see #getAssociation()
+   * @generated
+   */
+  EAttribute getAssociation_TailLabel();
+
+  /**
+   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Association#getTailMultiplicity <em>Tail Multiplicity</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Tail Multiplicity</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.Relationship#getTailMultiplicity()
-   * @see #getRelationship()
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Association#getTailMultiplicity()
+   * @see #getAssociation()
    * @generated
    */
-  EReference getRelationship_TailMultiplicity();
+  EReference getAssociation_TailMultiplicity();
+
+  /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Aggregation <em>Aggregation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Aggregation</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Aggregation
+   * @generated
+   */
+  EClass getAggregation();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Aggregation#isHeadNavigable <em>Head Navigable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Head Navigable</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Aggregation#isHeadNavigable()
+   * @see #getAggregation()
+   * @generated
+   */
+  EAttribute getAggregation_HeadNavigable();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Aggregation#getHeadVisibility <em>Head Visibility</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Head Visibility</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Aggregation#getHeadVisibility()
+   * @see #getAggregation()
+   * @generated
+   */
+  EAttribute getAggregation_HeadVisibility();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Aggregation#getHeadLabel <em>Head Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Head Label</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Aggregation#getHeadLabel()
+   * @see #getAggregation()
+   * @generated
+   */
+  EAttribute getAggregation_HeadLabel();
+
+  /**
+   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Aggregation#getHeadMultiplicity <em>Head Multiplicity</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Head Multiplicity</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Aggregation#getHeadMultiplicity()
+   * @see #getAggregation()
+   * @generated
+   */
+  EReference getAggregation_HeadMultiplicity();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Aggregation#isTailNavigable <em>Tail Navigable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Tail Navigable</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Aggregation#isTailNavigable()
+   * @see #getAggregation()
+   * @generated
+   */
+  EAttribute getAggregation_TailNavigable();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Aggregation#getTailVisibility <em>Tail Visibility</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Tail Visibility</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Aggregation#getTailVisibility()
+   * @see #getAggregation()
+   * @generated
+   */
+  EAttribute getAggregation_TailVisibility();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Aggregation#getTailLabel <em>Tail Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Tail Label</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Aggregation#getTailLabel()
+   * @see #getAggregation()
+   * @generated
+   */
+  EAttribute getAggregation_TailLabel();
+
+  /**
+   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Aggregation#getTailMultiplicity <em>Tail Multiplicity</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Tail Multiplicity</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Aggregation#getTailMultiplicity()
+   * @see #getAggregation()
+   * @generated
+   */
+  EReference getAggregation_TailMultiplicity();
+
+  /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Composition <em>Composition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Composition</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Composition
+   * @generated
+   */
+  EClass getComposition();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Composition#isHeadNavigable <em>Head Navigable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Head Navigable</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Composition#isHeadNavigable()
+   * @see #getComposition()
+   * @generated
+   */
+  EAttribute getComposition_HeadNavigable();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Composition#getHeadVisibility <em>Head Visibility</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Head Visibility</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Composition#getHeadVisibility()
+   * @see #getComposition()
+   * @generated
+   */
+  EAttribute getComposition_HeadVisibility();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Composition#getHeadLabel <em>Head Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Head Label</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Composition#getHeadLabel()
+   * @see #getComposition()
+   * @generated
+   */
+  EAttribute getComposition_HeadLabel();
+
+  /**
+   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Composition#getHeadMultiplicity <em>Head Multiplicity</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Head Multiplicity</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Composition#getHeadMultiplicity()
+   * @see #getComposition()
+   * @generated
+   */
+  EReference getComposition_HeadMultiplicity();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Composition#isTailNavigable <em>Tail Navigable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Tail Navigable</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Composition#isTailNavigable()
+   * @see #getComposition()
+   * @generated
+   */
+  EAttribute getComposition_TailNavigable();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Composition#getTailVisibility <em>Tail Visibility</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Tail Visibility</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Composition#getTailVisibility()
+   * @see #getComposition()
+   * @generated
+   */
+  EAttribute getComposition_TailVisibility();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.classmodel.classmodel.Composition#getTailLabel <em>Tail Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Tail Label</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Composition#getTailLabel()
+   * @see #getComposition()
+   * @generated
+   */
+  EAttribute getComposition_TailLabel();
+
+  /**
+   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.classmodel.classmodel.Composition#getTailMultiplicity <em>Tail Multiplicity</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Tail Multiplicity</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Composition#getTailMultiplicity()
+   * @see #getComposition()
+   * @generated
+   */
+  EReference getComposition_TailMultiplicity();
+
+  /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Generalization <em>Generalization</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Generalization</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Generalization
+   * @generated
+   */
+  EClass getGeneralization();
+
+  /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Dependency <em>Dependency</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Dependency</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Dependency
+   * @generated
+   */
+  EClass getDependency();
+
+  /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Realization <em>Realization</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Realization</em>'.
+   * @see cz.cvut.earlgrey.classmodel.classmodel.Realization
+   * @generated
+   */
+  EClass getRealization();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.classmodel.classmodel.Multiplicity <em>Multiplicity</em>}'.
@@ -1712,16 +2412,6 @@ public interface ClassmodelPackage extends EPackage
    * @generated
    */
   EReference getArray_Size();
-
-  /**
-   * Returns the meta object for enum '{@link cz.cvut.earlgrey.classmodel.classmodel.RelationshipType <em>Relationship Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Relationship Type</em>'.
-   * @see cz.cvut.earlgrey.classmodel.classmodel.RelationshipType
-   * @generated
-   */
-  EEnum getRelationshipType();
 
   /**
    * Returns the meta object for enum '{@link cz.cvut.earlgrey.classmodel.classmodel.Visibility <em>Visibility</em>}'.
@@ -1993,6 +2683,14 @@ public interface ClassmodelPackage extends EPackage
     EClass ENUMERATION = eINSTANCE.getEnumeration();
 
     /**
+     * The meta object literal for the '<em><b>Upper Class</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ENUMERATION__UPPER_CLASS = eINSTANCE.getEnumeration_UpperClass();
+
+    /**
      * The meta object literal for the '<em><b>Constraint</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2019,44 +2717,12 @@ public interface ClassmodelPackage extends EPackage
     EClass RELATIONSHIP = eINSTANCE.getRelationship();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute RELATIONSHIP__TYPE = eINSTANCE.getRelationship_Type();
-
-    /**
      * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute RELATIONSHIP__LABEL = eINSTANCE.getRelationship_Label();
-
-    /**
-     * The meta object literal for the '<em><b>Head Navigable</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute RELATIONSHIP__HEAD_NAVIGABLE = eINSTANCE.getRelationship_HeadNavigable();
-
-    /**
-     * The meta object literal for the '<em><b>Head Visibility</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute RELATIONSHIP__HEAD_VISIBILITY = eINSTANCE.getRelationship_HeadVisibility();
-
-    /**
-     * The meta object literal for the '<em><b>Head Label</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute RELATIONSHIP__HEAD_LABEL = eINSTANCE.getRelationship_HeadLabel();
 
     /**
      * The meta object literal for the '<em><b>Head</b></em>' reference feature.
@@ -2067,38 +2733,6 @@ public interface ClassmodelPackage extends EPackage
     EReference RELATIONSHIP__HEAD = eINSTANCE.getRelationship_Head();
 
     /**
-     * The meta object literal for the '<em><b>Head Multiplicity</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference RELATIONSHIP__HEAD_MULTIPLICITY = eINSTANCE.getRelationship_HeadMultiplicity();
-
-    /**
-     * The meta object literal for the '<em><b>Tail Navigable</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute RELATIONSHIP__TAIL_NAVIGABLE = eINSTANCE.getRelationship_TailNavigable();
-
-    /**
-     * The meta object literal for the '<em><b>Tail Visibility</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute RELATIONSHIP__TAIL_VISIBILITY = eINSTANCE.getRelationship_TailVisibility();
-
-    /**
-     * The meta object literal for the '<em><b>Tail Label</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute RELATIONSHIP__TAIL_LABEL = eINSTANCE.getRelationship_TailLabel();
-
-    /**
      * The meta object literal for the '<em><b>Tail</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2107,12 +2741,256 @@ public interface ClassmodelPackage extends EPackage
     EReference RELATIONSHIP__TAIL = eINSTANCE.getRelationship_Tail();
 
     /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AssociationImpl <em>Association</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.AssociationImpl
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getAssociation()
+     * @generated
+     */
+    EClass ASSOCIATION = eINSTANCE.getAssociation();
+
+    /**
+     * The meta object literal for the '<em><b>Head Navigable</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSOCIATION__HEAD_NAVIGABLE = eINSTANCE.getAssociation_HeadNavigable();
+
+    /**
+     * The meta object literal for the '<em><b>Head Visibility</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSOCIATION__HEAD_VISIBILITY = eINSTANCE.getAssociation_HeadVisibility();
+
+    /**
+     * The meta object literal for the '<em><b>Head Label</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSOCIATION__HEAD_LABEL = eINSTANCE.getAssociation_HeadLabel();
+
+    /**
+     * The meta object literal for the '<em><b>Head Multiplicity</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ASSOCIATION__HEAD_MULTIPLICITY = eINSTANCE.getAssociation_HeadMultiplicity();
+
+    /**
+     * The meta object literal for the '<em><b>Tail Navigable</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSOCIATION__TAIL_NAVIGABLE = eINSTANCE.getAssociation_TailNavigable();
+
+    /**
+     * The meta object literal for the '<em><b>Tail Visibility</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSOCIATION__TAIL_VISIBILITY = eINSTANCE.getAssociation_TailVisibility();
+
+    /**
+     * The meta object literal for the '<em><b>Tail Label</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSOCIATION__TAIL_LABEL = eINSTANCE.getAssociation_TailLabel();
+
+    /**
      * The meta object literal for the '<em><b>Tail Multiplicity</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference RELATIONSHIP__TAIL_MULTIPLICITY = eINSTANCE.getRelationship_TailMultiplicity();
+    EReference ASSOCIATION__TAIL_MULTIPLICITY = eINSTANCE.getAssociation_TailMultiplicity();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.AggregationImpl <em>Aggregation</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.AggregationImpl
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getAggregation()
+     * @generated
+     */
+    EClass AGGREGATION = eINSTANCE.getAggregation();
+
+    /**
+     * The meta object literal for the '<em><b>Head Navigable</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AGGREGATION__HEAD_NAVIGABLE = eINSTANCE.getAggregation_HeadNavigable();
+
+    /**
+     * The meta object literal for the '<em><b>Head Visibility</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AGGREGATION__HEAD_VISIBILITY = eINSTANCE.getAggregation_HeadVisibility();
+
+    /**
+     * The meta object literal for the '<em><b>Head Label</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AGGREGATION__HEAD_LABEL = eINSTANCE.getAggregation_HeadLabel();
+
+    /**
+     * The meta object literal for the '<em><b>Head Multiplicity</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AGGREGATION__HEAD_MULTIPLICITY = eINSTANCE.getAggregation_HeadMultiplicity();
+
+    /**
+     * The meta object literal for the '<em><b>Tail Navigable</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AGGREGATION__TAIL_NAVIGABLE = eINSTANCE.getAggregation_TailNavigable();
+
+    /**
+     * The meta object literal for the '<em><b>Tail Visibility</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AGGREGATION__TAIL_VISIBILITY = eINSTANCE.getAggregation_TailVisibility();
+
+    /**
+     * The meta object literal for the '<em><b>Tail Label</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AGGREGATION__TAIL_LABEL = eINSTANCE.getAggregation_TailLabel();
+
+    /**
+     * The meta object literal for the '<em><b>Tail Multiplicity</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AGGREGATION__TAIL_MULTIPLICITY = eINSTANCE.getAggregation_TailMultiplicity();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.CompositionImpl <em>Composition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.CompositionImpl
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getComposition()
+     * @generated
+     */
+    EClass COMPOSITION = eINSTANCE.getComposition();
+
+    /**
+     * The meta object literal for the '<em><b>Head Navigable</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMPOSITION__HEAD_NAVIGABLE = eINSTANCE.getComposition_HeadNavigable();
+
+    /**
+     * The meta object literal for the '<em><b>Head Visibility</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMPOSITION__HEAD_VISIBILITY = eINSTANCE.getComposition_HeadVisibility();
+
+    /**
+     * The meta object literal for the '<em><b>Head Label</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMPOSITION__HEAD_LABEL = eINSTANCE.getComposition_HeadLabel();
+
+    /**
+     * The meta object literal for the '<em><b>Head Multiplicity</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMPOSITION__HEAD_MULTIPLICITY = eINSTANCE.getComposition_HeadMultiplicity();
+
+    /**
+     * The meta object literal for the '<em><b>Tail Navigable</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMPOSITION__TAIL_NAVIGABLE = eINSTANCE.getComposition_TailNavigable();
+
+    /**
+     * The meta object literal for the '<em><b>Tail Visibility</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMPOSITION__TAIL_VISIBILITY = eINSTANCE.getComposition_TailVisibility();
+
+    /**
+     * The meta object literal for the '<em><b>Tail Label</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMPOSITION__TAIL_LABEL = eINSTANCE.getComposition_TailLabel();
+
+    /**
+     * The meta object literal for the '<em><b>Tail Multiplicity</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMPOSITION__TAIL_MULTIPLICITY = eINSTANCE.getComposition_TailMultiplicity();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.GeneralizationImpl <em>Generalization</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.GeneralizationImpl
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getGeneralization()
+     * @generated
+     */
+    EClass GENERALIZATION = eINSTANCE.getGeneralization();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.DependencyImpl <em>Dependency</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.DependencyImpl
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getDependency()
+     * @generated
+     */
+    EClass DEPENDENCY = eINSTANCE.getDependency();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.RealizationImpl <em>Realization</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.RealizationImpl
+     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getRealization()
+     * @generated
+     */
+    EClass REALIZATION = eINSTANCE.getRealization();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.impl.MultiplicityImpl <em>Multiplicity</em>}' class.
@@ -2303,16 +3181,6 @@ public interface ClassmodelPackage extends EPackage
      * @generated
      */
     EReference ARRAY__SIZE = eINSTANCE.getArray_Size();
-
-    /**
-     * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.RelationshipType <em>Relationship Type</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see cz.cvut.earlgrey.classmodel.classmodel.RelationshipType
-     * @see cz.cvut.earlgrey.classmodel.classmodel.impl.ClassmodelPackageImpl#getRelationshipType()
-     * @generated
-     */
-    EEnum RELATIONSHIP_TYPE = eINSTANCE.getRelationshipType();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.classmodel.classmodel.Visibility <em>Visibility</em>}' enum.

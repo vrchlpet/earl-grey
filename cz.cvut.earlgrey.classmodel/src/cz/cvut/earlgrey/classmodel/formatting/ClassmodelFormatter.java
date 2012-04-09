@@ -1,8 +1,14 @@
 package cz.cvut.earlgrey.classmodel.formatting;
 
+import org.eclipse.xtext.AbstractElement;
 import org.eclipse.xtext.formatting.impl.FormattingConfig;
 import cz.cvut.earlgrey.classmodel.services.ClassmodelGrammarAccess;
-import cz.cvut.earlgrey.classmodel.services.ClassmodelGrammarAccess.RelationshipElements;
+import cz.cvut.earlgrey.classmodel.services.ClassmodelGrammarAccess.AggregationElements;
+import cz.cvut.earlgrey.classmodel.services.ClassmodelGrammarAccess.AssociationElements;
+import cz.cvut.earlgrey.classmodel.services.ClassmodelGrammarAccess.CompositionElements;
+import cz.cvut.earlgrey.classmodel.services.ClassmodelGrammarAccess.DependencyElements;
+import cz.cvut.earlgrey.classmodel.services.ClassmodelGrammarAccess.GeneralizationElements;
+import cz.cvut.earlgrey.classmodel.services.ClassmodelGrammarAccess.RealizationElements;
 import cz.cvut.earlgrey.xtext.formatting.AbstractDefaultFormatter;
 
 /**
@@ -29,6 +35,13 @@ public class ClassmodelFormatter extends AbstractDefaultFormatter {
 		formatElement(c, f);
 		formatPairs(c, f);
 		formatComment(c, f);
+
+		formatAssociation(c, f.getAssociationAccess());
+		formatAggregation(c, f.getAggregationAccess());
+		formatComposition(c, f.getCompositionAccess());
+		formatGeneralization(c, f.getGeneralizationAccess());
+		formatDependency(c, f.getDependencyAccess());
+		formatRealization(c, f.getRealizationAccess());
 	}
 
 	/**
@@ -42,7 +55,82 @@ public class ClassmodelFormatter extends AbstractDefaultFormatter {
 		setIndentAndWrapKeywords(f, c, PACKAGE, END);
 		setIndentAndWrapKeywords(f, c, ENUM, END);
 
-		formatRelationship(c, f.getRelationshipAccess());
+	}
+
+	/**
+	 * Formats generalization relationship.
+	 * 
+	 * @param c An instance of the FormattingConfig.
+	 * @param r An instance of the GeneralizationElements.
+	 */
+	private void formatGeneralization(FormattingConfig c,
+			GeneralizationElements r) {
+		formatRelationship(c, r.getGeneralizationKeyword_1(),
+				r.getLabelAssignment_2(), r.getEndKeyword_5(),
+				r.getHeadAssignment_3(), r.getTailAssignment_4());
+	}
+
+	/**
+	 * Formats dependency relationship.
+	 * 
+	 * @param c An instance of the FormattingConfig.
+	 * @param r An instance of the GeneralizationElements.
+	 */
+	private void formatDependency(FormattingConfig c, DependencyElements r) {
+		formatRelationship(c, r.getDependencyKeyword_1(),
+				r.getLabelAssignment_2(), r.getEndKeyword_5(),
+				r.getHeadAssignment_3(), r.getTailAssignment_4());
+	}
+
+	/**
+	 * Formats realization relationship.
+	 * 
+	 * @param c An instance of the FormattingConfig.
+	 * @param r An instance of the GeneralizationElements.
+	 */
+	private void formatRealization(FormattingConfig c, RealizationElements r) {
+		formatRelationship(c, r.getRealizationKeyword_1(),
+				r.getLabelAssignment_2(), r.getEndKeyword_5(),
+				r.getHeadAssignment_3(), r.getTailAssignment_4());
+	}
+
+	/**
+	 * Formats association relationship.
+	 * 
+	 * @param c An instance of the FormattingConfig.
+	 * @param r An instance of the GeneralizationElements.
+	 */
+	private void formatAssociation(FormattingConfig c, AssociationElements r) {
+		formatRelationship(c, r.getAssociationKeyword_1(),
+				r.getLabelAssignment_2(), r.getEndKeyword_15(),
+				r.getRightSquareBracketKeyword_14(),
+				r.getRightSquareBracketKeyword_8());
+	}
+
+	/**
+	 * Formats composition relationship.
+	 * 
+	 * @param c An instance of the FormattingConfig.
+	 * @param r An instance of the GeneralizationElements.
+	 */
+	private void formatComposition(FormattingConfig c, CompositionElements r) {
+		formatRelationship(c, r.getCompositionKeyword_1(),
+				r.getLabelAssignment_2(), r.getEndKeyword_15(),
+				r.getRightSquareBracketKeyword_14(),
+				r.getRightSquareBracketKeyword_8());
+	}
+
+	/**
+	 * Formats aggregation relationship.
+	 * 
+	 * @param c An instance of the FormattingConfig.
+	 * @param r An instance of the GeneralizationElements.
+	 */
+	private void formatAggregation(FormattingConfig c, AggregationElements r) {
+		formatRelationship(c, r.getAggregationKeyword_1(),
+				r.getLabelAssignment_2(), r.getEndKeyword_15(),
+				r.getRightSquareBracketKeyword_14(),
+				r.getRightSquareBracketKeyword_8());
 	}
 
 	/**
@@ -81,16 +169,24 @@ public class ClassmodelFormatter extends AbstractDefaultFormatter {
 	 * Formats relationship rule.
 	 * 
 	 * @param c An instance of the FormattingConfig.
-	 * @param f An instance of RelationshipElement access rule.
+	 * @param relation Relationship assigment 'composition'
+	 * @param label Relationship labeling, 'composition "name"'
+	 * @param end Name of the 'end' element.
+	 * @param bracket
+	 * @param bracket2
 	 */
-	private void formatRelationship(FormattingConfig c, RelationshipElements rel) {
-		setLineWrapBig(c, rel.getTypeAssignment_1(), Style.BEFORE);// type=RelationshipType
-		setLineWrap(c, rel.getTypeAssignment_1(), Style.AFTER); // type=RelationshipType
-		setNoLineWrap(c, rel.getLabelCompositeIDParserRuleCall_2_0(),
-				Style.BEFORE); // label=CompositeID
-		setLineWrap(c, rel.getLabelCompositeIDParserRuleCall_2_0(), Style.AFTER);
-		c.setIndentation(rel.getTypeAssignment_1(), rel.getEndKeyword_15());
-		setLineWrap(c, rel.getRightSquareBracketKeyword_8(), Style.AFTER); // ]
-		setLineWrap(c, rel.getRightSquareBracketKeyword_14(), Style.AFTER); // ]
+	private void formatRelationship(FormattingConfig c,
+			AbstractElement relation, AbstractElement label,
+			AbstractElement end, AbstractElement bracket,
+			AbstractElement bracket2) {
+		setLineWrapBig(c, relation, Style.BEFORE);// relationshipType
+		setLineWrap(c, relation, Style.AFTER); // relationshipType
+
+		setNoLineWrap(c, label, Style.BEFORE); // label=CompositeID
+		setLineWrap(c, label, Style.AFTER); // label=CompositeID
+
+		c.setIndentation(relation, end); // relationshipType ... end
+		setLineWrap(c, bracket, Style.AFTER); // ]
+		setLineWrap(c, bracket2, Style.AFTER); // ]
 	}
 }
