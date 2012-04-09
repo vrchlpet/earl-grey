@@ -1,14 +1,22 @@
 package cz.cvut.earlgrey.classmodel.ui.outline;
 
+import java.util.HashMap;
+import java.util.Map;
 import org.eclipse.jface.viewers.StyledString;
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
 import cz.cvut.earlgrey.annotation.annotation.Annotation;
+import cz.cvut.earlgrey.classmodel.classmodel.Aggregation;
 import cz.cvut.earlgrey.classmodel.classmodel.Array;
+import cz.cvut.earlgrey.classmodel.classmodel.Association;
 import cz.cvut.earlgrey.classmodel.classmodel.Attribute;
+import cz.cvut.earlgrey.classmodel.classmodel.Composition;
+import cz.cvut.earlgrey.classmodel.classmodel.Dependency;
 import cz.cvut.earlgrey.classmodel.classmodel.Entity;
+import cz.cvut.earlgrey.classmodel.classmodel.Generalization;
 import cz.cvut.earlgrey.classmodel.classmodel.Multiplicity;
 import cz.cvut.earlgrey.classmodel.classmodel.Operation;
 import cz.cvut.earlgrey.classmodel.classmodel.Parameter;
+import cz.cvut.earlgrey.classmodel.classmodel.Realization;
 import cz.cvut.earlgrey.classmodel.classmodel.Reference;
 import cz.cvut.earlgrey.classmodel.classmodel.Relationship;
 import cz.cvut.earlgrey.xtext.formatting.Styles;
@@ -27,17 +35,16 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	private static final String ROUND_BRACKET_LEFT = "(";
 	private static final String EMPTY_STRING = " ";
 
-	// private static Map<RelationshipType, String> relation = new
-	// HashMap<RelationshipType, String>();
+	private static Map<Class<?>, String> relation = new HashMap<Class<?>, String>();
 
-	// static {
-	// relation.put(RelationshipType.AGGREGATION, "isAggregatedOf");
-	// relation.put(RelationshipType.ASSOCIATION, "associates");
-	// relation.put(RelationshipType.COMPOSITION, "isComposedOf");
-	// relation.put(RelationshipType.DEPENCY, "dependsOn");
-	// relation.put(RelationshipType.GENERALIZATION, "isA");
-	// relation.put(RelationshipType.REALIZATION, "realizes");
-	// }
+	static {
+		relation.put(Aggregation.class, "isAggregatedOf");
+		relation.put(Association.class, "associates");
+		relation.put(Composition.class, "isComposedOf");
+		relation.put(Dependency.class, "dependsOn");
+		relation.put(Generalization.class, "isA");
+		relation.put(Realization.class, "realizes");
+	}
 
 	/**
 	 * Defines Operation node in Outline View tree as a leaf.
@@ -132,18 +139,23 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	 * @param ele Instance of a Relation
 	 * @return label as StyledString
 	 */
-	// public Object _text(Relationship element) {
-	// if (element.getHead() == null) {
-	// return null;
-	// }
-	// StyledString styled = new StyledString(
-	// getEntityName(element.getHead())
-	// + EMPTY_STRING);
-	// styled.append(Styles.getStyledString(getRelationshipType(element)));
-	// styled.append(EMPTY_STRING + getEntityName(element.getTail()));
-	// return styled;
-	// }
+	public Object _text(Relationship element) {
+		if (element.getHead() == null) {
+			return null;
+		}
+		StyledString styled = new StyledString(getEntityName(element.getHead())
+				+ EMPTY_STRING);
+		styled.append(Styles.getStyledString(getRelationshipType(element)));
+		styled.append(EMPTY_STRING + getEntityName(element.getTail()));
+		return styled;
+	}
 
+	/**
+	 * Returns name of the Entity as String.
+	 * 
+	 * @param e An instance of the Entity.
+	 * @return String name of the Entity.
+	 */
 	private String getEntityName(Entity e) {
 		if (e != null) {
 			return e.getName();
@@ -157,12 +169,12 @@ public class ClassmodelOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	 * @param ele Relationship instance
 	 * @return Relationship type as String
 	 */
-	// private String getRelationshipType(Relationship ele) {
-	// if (ele != null) {
-	// return relation.get(ele.getType());
-	// }
-	// return relation.get(RelationshipType.ASSOCIATION);
-	// }
+	private String getRelationshipType(Relationship ele) {
+		if (ele != null) {
+			return relation.get(ele.eClass().getInstanceClass());
+		}
+		return relation.get(Association.class);
+	}
 
 	/**
 	 * Factory method used to create styled label with given prefix and postfix.
