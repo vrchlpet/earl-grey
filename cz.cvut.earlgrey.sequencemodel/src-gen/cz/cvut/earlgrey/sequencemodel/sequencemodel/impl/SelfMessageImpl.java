@@ -7,7 +7,7 @@
 package cz.cvut.earlgrey.sequencemodel.sequencemodel.impl;
 
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant;
-import cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Return;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Transition;
@@ -62,7 +62,7 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
    * @generated
    * @ordered
    */
-  protected ReturnMessage return_;
+  protected Return return_;
 
   /**
    * The cached value of the '{@link #getTransition() <em>Transition</em>}' containment reference list.
@@ -143,7 +143,7 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public ReturnMessage getReturn()
+  public Return getReturn()
   {
     return return_;
   }
@@ -153,9 +153,9 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetReturn(ReturnMessage newReturn, NotificationChain msgs)
+  public NotificationChain basicSetReturn(Return newReturn, NotificationChain msgs)
   {
-    ReturnMessage oldReturn = return_;
+    Return oldReturn = return_;
     return_ = newReturn;
     if (eNotificationRequired())
     {
@@ -170,7 +170,7 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setReturn(ReturnMessage newReturn)
+  public void setReturn(Return newReturn)
   {
     if (newReturn != return_)
     {
@@ -254,7 +254,7 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
         setSource((Participant)newValue);
         return;
       case SequencemodelPackage.SELF_MESSAGE__RETURN:
-        setReturn((ReturnMessage)newValue);
+        setReturn((Return)newValue);
         return;
       case SequencemodelPackage.SELF_MESSAGE__TRANSITION:
         getTransition().clear();
@@ -278,7 +278,7 @@ public class SelfMessageImpl extends MessageImpl implements SelfMessage
         setSource((Participant)null);
         return;
       case SequencemodelPackage.SELF_MESSAGE__RETURN:
-        setReturn((ReturnMessage)null);
+        setReturn((Return)null);
         return;
       case SequencemodelPackage.SELF_MESSAGE__TRANSITION:
         getTransition().clear();

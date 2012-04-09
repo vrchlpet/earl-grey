@@ -63,12 +63,12 @@ public interface SelfMessage extends Message
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Return</em>' containment reference.
-   * @see #setReturn(ReturnMessage)
+   * @see #setReturn(Return)
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getSelfMessage_Return()
    * @model containment="true"
    * @generated
    */
-  ReturnMessage getReturn();
+  Return getReturn();
 
   /**
    * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getReturn <em>Return</em>}' containment reference.
@@ -78,7 +78,7 @@ public interface SelfMessage extends Message
    * @see #getReturn()
    * @generated
    */
-  void setReturn(ReturnMessage value);
+  void setReturn(Return value);
 
   /**
    * Returns the value of the '<em><b>Transition</b></em>' containment reference list.

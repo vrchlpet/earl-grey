@@ -7,7 +7,6 @@ import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
 import cz.cvut.earlgrey.annotation.annotation.Annotation;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Message;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Reference;
-import cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage;
 
 /**
  * customization of the default outline structure
@@ -35,18 +34,18 @@ public class SequencemodelOutlineTreeProvider extends DefaultOutlineTreeProvider
 		return true;
 	}
 
-	/**
-	 * Returns styled ReturnMessage label used in Outline View.
-	 * 
-	 * @param ele Instance of an ReturnMessage
-	 * @return label as StyledString
-	 */
-	public Object _text(ReturnMessage ele) {
-		if (ele != null) {
-			return getEntityName(ele.getName());
-		}
-		return null;
-	}
+	// /**
+	// * Returns styled ReturnMessage label used in Outline View.
+	// *
+	// * @param ele Instance of an ReturnMessage
+	// * @return label as StyledString
+	// */
+	// public Object _text(Return ele) {
+	// if (ele != null) {
+	// return getEntityName(ele.getName());
+	// }
+	// return null;
+	// }
 
 	private String getEntityName(Reference reference) {
 		if (reference != null && reference.getType() != null) {

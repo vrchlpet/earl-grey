@@ -8,7 +8,7 @@ package cz.cvut.earlgrey.sequencemodel.sequencemodel.impl;
 
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant;
-import cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Return;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -64,7 +64,7 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
    * @generated
    * @ordered
    */
-  protected ReturnMessage return_;
+  protected Return return_;
 
   /**
    * <!-- begin-user-doc -->
@@ -178,7 +178,7 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public ReturnMessage getReturn()
+  public Return getReturn()
   {
     return return_;
   }
@@ -188,9 +188,9 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetReturn(ReturnMessage newReturn, NotificationChain msgs)
+  public NotificationChain basicSetReturn(Return newReturn, NotificationChain msgs)
   {
-    ReturnMessage oldReturn = return_;
+    Return oldReturn = return_;
     return_ = newReturn;
     if (eNotificationRequired())
     {
@@ -205,7 +205,7 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setReturn(ReturnMessage newReturn)
+  public void setReturn(Return newReturn)
   {
     if (newReturn != return_)
     {
@@ -276,7 +276,7 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
         setTarget((Participant)newValue);
         return;
       case SequencemodelPackage.CALL_MESSAGE__RETURN:
-        setReturn((ReturnMessage)newValue);
+        setReturn((Return)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -299,7 +299,7 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
         setTarget((Participant)null);
         return;
       case SequencemodelPackage.CALL_MESSAGE__RETURN:
-        setReturn((ReturnMessage)null);
+        setReturn((Return)null);
         return;
     }
     super.eUnset(featureID);

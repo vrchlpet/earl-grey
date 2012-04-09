@@ -212,6 +212,15 @@ public class SequencemodelSwitch<T> extends Switch<T>
       {
         ReturnMessage returnMessage = (ReturnMessage)theEObject;
         T result = caseReturnMessage(returnMessage);
+        if (result == null) result = caseMessage(returnMessage);
+        if (result == null) result = caseTransition(returnMessage);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SequencemodelPackage.RETURN:
+      {
+        Return return_ = (Return)theEObject;
+        T result = caseReturn(return_);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -526,6 +535,22 @@ public class SequencemodelSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseReturnMessage(ReturnMessage object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Return</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Return</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseReturn(Return object)
   {
     return null;
   }

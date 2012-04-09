@@ -100,7 +100,7 @@ NextFragment:
 Message:
     CallMessage
     | NewMessage
-//    | ReturnMessage
+    | ReturnMessage
     | DeleteMessage
     | SelfMessage
     | FoundMessage
@@ -108,13 +108,13 @@ Message:
 
 FoundMessage:
     'calls' targetParticipant=[Participant|ID] '.' => name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? 
-    return=ReturnMessage?
+    return=Return?
 ;
 
 // e.g.: Handler calls Node.getChild()
 CallMessage:
     source=[Participant|ID] 'calls' target=[Participant|ID] '.' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? 
-    return=ReturnMessage?
+    return=Return?
 ;
 
 // e.g.: new Node
@@ -123,9 +123,14 @@ NewMessage:
     source=[Participant|ID] 'creates' target=[Participant|ID] (=> '.' name=ID)? (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
 ;
 
-// e.g.: return childs
+// e.g.: A return B items
 ReturnMessage:
-    'returns' name=Reference (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
+    source=[Participant|ID] 'returns' target=[Participant|ID] name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
+;
+
+// e.g.: return childs
+Return:
+    'returns' name=ID array+=Array*
 ;
 
 DeleteMessage:
@@ -134,7 +139,7 @@ DeleteMessage:
 
 //TODO: rewrite this rule, do we really need begin-end?
 SelfMessage:
-    source=[Participant|ID] 'self' '.' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? return=ReturnMessage?
+    source=[Participant|ID] 'self' '.' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? return=Return?
     (=>  'begin'
         transition+=Transition*
     'end')?

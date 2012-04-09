@@ -180,6 +180,15 @@ public interface SequencemodelFactory extends EFactory
   ReturnMessage createReturnMessage();
 
   /**
+   * Returns a new object of class '<em>Return</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Return</em>'.
+   * @generated
+   */
+  Return createReturn();
+
+  /**
    * Returns a new object of class '<em>Delete Message</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

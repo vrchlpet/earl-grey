@@ -6,26 +6,16 @@
  */
 package cz.cvut.earlgrey.sequencemodel.sequencemodel.impl;
 
-import cz.cvut.earlgrey.sequencemodel.sequencemodel.Parameter;
-import cz.cvut.earlgrey.sequencemodel.sequencemodel.Reference;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,34 +24,34 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ReturnMessageImpl#getName <em>Name</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ReturnMessageImpl#getParameter <em>Parameter</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ReturnMessageImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ReturnMessageImpl#getTarget <em>Target</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ReturnMessageImpl extends MinimalEObjectImpl.Container implements ReturnMessage
+public class ReturnMessageImpl extends MessageImpl implements ReturnMessage
 {
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
+   * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getSource()
    * @generated
    * @ordered
    */
-  protected Reference name;
+  protected Participant source;
 
   /**
-   * The cached value of the '{@link #getParameter() <em>Parameter</em>}' containment reference list.
+   * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getParameter()
+   * @see #getTarget()
    * @generated
    * @ordered
    */
-  protected EList<Parameter> parameter;
+  protected Participant target;
 
   /**
    * <!-- begin-user-doc -->
@@ -89,9 +79,19 @@ public class ReturnMessageImpl extends MinimalEObjectImpl.Container implements R
    * <!-- end-user-doc -->
    * @generated
    */
-  public Reference getName()
+  public Participant getSource()
   {
-    return name;
+    if (source != null && source.eIsProxy())
+    {
+      InternalEObject oldSource = (InternalEObject)source;
+      source = (Participant)eResolveProxy(oldSource);
+      if (source != oldSource)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SequencemodelPackage.RETURN_MESSAGE__SOURCE, oldSource, source));
+      }
+    }
+    return source;
   }
 
   /**
@@ -99,16 +99,22 @@ public class ReturnMessageImpl extends MinimalEObjectImpl.Container implements R
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetName(Reference newName, NotificationChain msgs)
+  public Participant basicGetSource()
   {
-    Reference oldName = name;
-    name = newName;
+    return source;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSource(Participant newSource)
+  {
+    Participant oldSource = source;
+    source = newSource;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SequencemodelPackage.RETURN_MESSAGE__NAME, oldName, newName);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.RETURN_MESSAGE__SOURCE, oldSource, source));
   }
 
   /**
@@ -116,20 +122,19 @@ public class ReturnMessageImpl extends MinimalEObjectImpl.Container implements R
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(Reference newName)
+  public Participant getTarget()
   {
-    if (newName != name)
+    if (target != null && target.eIsProxy())
     {
-      NotificationChain msgs = null;
-      if (name != null)
-        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SequencemodelPackage.RETURN_MESSAGE__NAME, null, msgs);
-      if (newName != null)
-        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SequencemodelPackage.RETURN_MESSAGE__NAME, null, msgs);
-      msgs = basicSetName(newName, msgs);
-      if (msgs != null) msgs.dispatch();
+      InternalEObject oldTarget = (InternalEObject)target;
+      target = (Participant)eResolveProxy(oldTarget);
+      if (target != oldTarget)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SequencemodelPackage.RETURN_MESSAGE__TARGET, oldTarget, target));
+      }
     }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.RETURN_MESSAGE__NAME, newName, newName));
+    return target;
   }
 
   /**
@@ -137,13 +142,9 @@ public class ReturnMessageImpl extends MinimalEObjectImpl.Container implements R
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Parameter> getParameter()
+  public Participant basicGetTarget()
   {
-    if (parameter == null)
-    {
-      parameter = new EObjectContainmentEList<Parameter>(Parameter.class, this, SequencemodelPackage.RETURN_MESSAGE__PARAMETER);
-    }
-    return parameter;
+    return target;
   }
 
   /**
@@ -151,17 +152,12 @@ public class ReturnMessageImpl extends MinimalEObjectImpl.Container implements R
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  public void setTarget(Participant newTarget)
   {
-    switch (featureID)
-    {
-      case SequencemodelPackage.RETURN_MESSAGE__NAME:
-        return basicSetName(null, msgs);
-      case SequencemodelPackage.RETURN_MESSAGE__PARAMETER:
-        return ((InternalEList<?>)getParameter()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+    Participant oldTarget = target;
+    target = newTarget;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.RETURN_MESSAGE__TARGET, oldTarget, target));
   }
 
   /**
@@ -174,10 +170,12 @@ public class ReturnMessageImpl extends MinimalEObjectImpl.Container implements R
   {
     switch (featureID)
     {
-      case SequencemodelPackage.RETURN_MESSAGE__NAME:
-        return getName();
-      case SequencemodelPackage.RETURN_MESSAGE__PARAMETER:
-        return getParameter();
+      case SequencemodelPackage.RETURN_MESSAGE__SOURCE:
+        if (resolve) return getSource();
+        return basicGetSource();
+      case SequencemodelPackage.RETURN_MESSAGE__TARGET:
+        if (resolve) return getTarget();
+        return basicGetTarget();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -187,18 +185,16 @@ public class ReturnMessageImpl extends MinimalEObjectImpl.Container implements R
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case SequencemodelPackage.RETURN_MESSAGE__NAME:
-        setName((Reference)newValue);
+      case SequencemodelPackage.RETURN_MESSAGE__SOURCE:
+        setSource((Participant)newValue);
         return;
-      case SequencemodelPackage.RETURN_MESSAGE__PARAMETER:
-        getParameter().clear();
-        getParameter().addAll((Collection<? extends Parameter>)newValue);
+      case SequencemodelPackage.RETURN_MESSAGE__TARGET:
+        setTarget((Participant)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -214,11 +210,11 @@ public class ReturnMessageImpl extends MinimalEObjectImpl.Container implements R
   {
     switch (featureID)
     {
-      case SequencemodelPackage.RETURN_MESSAGE__NAME:
-        setName((Reference)null);
+      case SequencemodelPackage.RETURN_MESSAGE__SOURCE:
+        setSource((Participant)null);
         return;
-      case SequencemodelPackage.RETURN_MESSAGE__PARAMETER:
-        getParameter().clear();
+      case SequencemodelPackage.RETURN_MESSAGE__TARGET:
+        setTarget((Participant)null);
         return;
     }
     super.eUnset(featureID);
@@ -234,10 +230,10 @@ public class ReturnMessageImpl extends MinimalEObjectImpl.Container implements R
   {
     switch (featureID)
     {
-      case SequencemodelPackage.RETURN_MESSAGE__NAME:
-        return name != null;
-      case SequencemodelPackage.RETURN_MESSAGE__PARAMETER:
-        return parameter != null && !parameter.isEmpty();
+      case SequencemodelPackage.RETURN_MESSAGE__SOURCE:
+        return source != null;
+      case SequencemodelPackage.RETURN_MESSAGE__TARGET:
+        return target != null;
     }
     return super.eIsSet(featureID);
   }

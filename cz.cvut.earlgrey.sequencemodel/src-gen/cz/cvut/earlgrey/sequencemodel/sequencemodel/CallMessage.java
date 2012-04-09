@@ -88,12 +88,12 @@ public interface CallMessage extends Message
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Return</em>' containment reference.
-   * @see #setReturn(ReturnMessage)
+   * @see #setReturn(Return)
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getCallMessage_Return()
    * @model containment="true"
    * @generated
    */
-  ReturnMessage getReturn();
+  Return getReturn();
 
   /**
    * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getReturn <em>Return</em>}' containment reference.
@@ -103,6 +103,6 @@ public interface CallMessage extends Message
    * @see #getReturn()
    * @generated
    */
-  void setReturn(ReturnMessage value);
+  void setReturn(Return value);
 
 } // CallMessage

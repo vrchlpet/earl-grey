@@ -23,7 +23,7 @@ public class AbstractSequencemodelSyntacticSequencer extends AbstractSyntacticSe
 	protected AbstractElementAlias match_FoundMessage___LeftParenthesisKeyword_4_0_RightParenthesisKeyword_4_2__q;
 	protected AbstractElementAlias match_IfElseFragment_ElseKeyword_5_0_q;
 	protected AbstractElementAlias match_NewMessage___LeftParenthesisKeyword_4_0_RightParenthesisKeyword_4_2__q;
-	protected AbstractElementAlias match_ReturnMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q;
+	protected AbstractElementAlias match_ReturnMessage___LeftParenthesisKeyword_4_0_RightParenthesisKeyword_4_2__q;
 	protected AbstractElementAlias match_SelfMessage___BeginKeyword_6_0_EndKeyword_6_2__q;
 	protected AbstractElementAlias match_SelfMessage___LeftParenthesisKeyword_4_0_RightParenthesisKeyword_4_2__q;
 	
@@ -35,7 +35,7 @@ public class AbstractSequencemodelSyntacticSequencer extends AbstractSyntacticSe
 		match_FoundMessage___LeftParenthesisKeyword_4_0_RightParenthesisKeyword_4_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getFoundMessageAccess().getLeftParenthesisKeyword_4_0()), new TokenAlias(false, false, grammarAccess.getFoundMessageAccess().getRightParenthesisKeyword_4_2()));
 		match_IfElseFragment_ElseKeyword_5_0_q = new TokenAlias(false, true, grammarAccess.getIfElseFragmentAccess().getElseKeyword_5_0());
 		match_NewMessage___LeftParenthesisKeyword_4_0_RightParenthesisKeyword_4_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getNewMessageAccess().getLeftParenthesisKeyword_4_0()), new TokenAlias(false, false, grammarAccess.getNewMessageAccess().getRightParenthesisKeyword_4_2()));
-		match_ReturnMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getReturnMessageAccess().getLeftParenthesisKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getReturnMessageAccess().getRightParenthesisKeyword_2_2()));
+		match_ReturnMessage___LeftParenthesisKeyword_4_0_RightParenthesisKeyword_4_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getReturnMessageAccess().getLeftParenthesisKeyword_4_0()), new TokenAlias(false, false, grammarAccess.getReturnMessageAccess().getRightParenthesisKeyword_4_2()));
 		match_SelfMessage___BeginKeyword_6_0_EndKeyword_6_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSelfMessageAccess().getBeginKeyword_6_0()), new TokenAlias(false, false, grammarAccess.getSelfMessageAccess().getEndKeyword_6_2()));
 		match_SelfMessage___LeftParenthesisKeyword_4_0_RightParenthesisKeyword_4_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSelfMessageAccess().getLeftParenthesisKeyword_4_0()), new TokenAlias(false, false, grammarAccess.getSelfMessageAccess().getRightParenthesisKeyword_4_2()));
 	}
@@ -62,8 +62,8 @@ public class AbstractSequencemodelSyntacticSequencer extends AbstractSyntacticSe
 				emit_IfElseFragment_ElseKeyword_5_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_NewMessage___LeftParenthesisKeyword_4_0_RightParenthesisKeyword_4_2__q.equals(syntax))
 				emit_NewMessage___LeftParenthesisKeyword_4_0_RightParenthesisKeyword_4_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ReturnMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q.equals(syntax))
-				emit_ReturnMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_ReturnMessage___LeftParenthesisKeyword_4_0_RightParenthesisKeyword_4_2__q.equals(syntax))
+				emit_ReturnMessage___LeftParenthesisKeyword_4_0_RightParenthesisKeyword_4_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_SelfMessage___BeginKeyword_6_0_EndKeyword_6_2__q.equals(syntax))
 				emit_SelfMessage___BeginKeyword_6_0_EndKeyword_6_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_SelfMessage___LeftParenthesisKeyword_4_0_RightParenthesisKeyword_4_2__q.equals(syntax))
@@ -116,7 +116,7 @@ public class AbstractSequencemodelSyntacticSequencer extends AbstractSyntacticSe
 	 * Syntax:
 	 *     ('(' ')')?
 	 */
-	protected void emit_ReturnMessage___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ReturnMessage___LeftParenthesisKeyword_4_0_RightParenthesisKeyword_4_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

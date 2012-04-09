@@ -580,21 +580,18 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cCallMessageParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cNewMessageParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cDeleteMessageParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cSelfMessageParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cFoundMessageParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cReturnMessageParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cDeleteMessageParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cSelfMessageParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cFoundMessageParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		
 		////
 		//
 		//Message:
-		//	CallMessage //    | ReturnMessage
-		//
-		//	| NewMessage | DeleteMessage | SelfMessage | FoundMessage;
+		//	CallMessage | NewMessage | ReturnMessage | DeleteMessage | SelfMessage | FoundMessage;
 		public ParserRule getRule() { return rule; }
 
-		//CallMessage //    | ReturnMessage
-		//
-		//| NewMessage | DeleteMessage | SelfMessage | FoundMessage
+		//CallMessage | NewMessage | ReturnMessage | DeleteMessage | SelfMessage | FoundMessage
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//CallMessage
@@ -603,14 +600,17 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		//NewMessage
 		public RuleCall getNewMessageParserRuleCall_1() { return cNewMessageParserRuleCall_1; }
 
+		//ReturnMessage
+		public RuleCall getReturnMessageParserRuleCall_2() { return cReturnMessageParserRuleCall_2; }
+
 		//DeleteMessage
-		public RuleCall getDeleteMessageParserRuleCall_2() { return cDeleteMessageParserRuleCall_2; }
+		public RuleCall getDeleteMessageParserRuleCall_3() { return cDeleteMessageParserRuleCall_3; }
 
 		//SelfMessage
-		public RuleCall getSelfMessageParserRuleCall_3() { return cSelfMessageParserRuleCall_3; }
+		public RuleCall getSelfMessageParserRuleCall_4() { return cSelfMessageParserRuleCall_4; }
 
 		//FoundMessage
-		public RuleCall getFoundMessageParserRuleCall_4() { return cFoundMessageParserRuleCall_4; }
+		public RuleCall getFoundMessageParserRuleCall_5() { return cFoundMessageParserRuleCall_5; }
 	}
 
 	public class FoundMessageElements extends AbstractParserRuleElementFinder {
@@ -634,15 +634,15 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cParameterParameterParserRuleCall_4_1_1_1_0 = (RuleCall)cParameterAssignment_4_1_1_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
 		private final Assignment cReturnAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cReturnReturnMessageParserRuleCall_5_0 = (RuleCall)cReturnAssignment_5.eContents().get(0);
+		private final RuleCall cReturnReturnParserRuleCall_5_0 = (RuleCall)cReturnAssignment_5.eContents().get(0);
 		
 		//FoundMessage:
 		//	"calls" targetParticipant=[Participant] "." => name=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)?
-		//	")")? return=ReturnMessage?;
+		//	")")? return=Return?;
 		public ParserRule getRule() { return rule; }
 
 		//"calls" targetParticipant=[Participant] "." => name=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
-		//return=ReturnMessage?
+		//return=Return?
 		public Group getGroup() { return cGroup; }
 
 		//"calls"
@@ -696,11 +696,11 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_4_2() { return cRightParenthesisKeyword_4_2; }
 
-		//return=ReturnMessage?
+		//return=Return?
 		public Assignment getReturnAssignment_5() { return cReturnAssignment_5; }
 
-		//ReturnMessage
-		public RuleCall getReturnReturnMessageParserRuleCall_5_0() { return cReturnReturnMessageParserRuleCall_5_0; }
+		//Return
+		public RuleCall getReturnReturnParserRuleCall_5_0() { return cReturnReturnParserRuleCall_5_0; }
 	}
 
 	public class CallMessageElements extends AbstractParserRuleElementFinder {
@@ -727,17 +727,17 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cParameterParameterParserRuleCall_5_1_1_1_0 = (RuleCall)cParameterAssignment_5_1_1_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_5_2 = (Keyword)cGroup_5.eContents().get(2);
 		private final Assignment cReturnAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cReturnReturnMessageParserRuleCall_6_0 = (RuleCall)cReturnAssignment_6.eContents().get(0);
+		private final RuleCall cReturnReturnParserRuleCall_6_0 = (RuleCall)cReturnAssignment_6.eContents().get(0);
 		
 		//// e.g.: Handler calls Node.getChild()
 		//
 		//CallMessage:
 		//	source=[Participant] "calls" target=[Participant] "." name=ID ("(" (=> parameter+=Parameter (","
-		//	parameter+=Parameter)*)? ")")? return=ReturnMessage?;
+		//	parameter+=Parameter)*)? ")")? return=Return?;
 		public ParserRule getRule() { return rule; }
 
 		//source=[Participant] "calls" target=[Participant] "." name=ID ("(" (=> parameter+=Parameter (","
-		//parameter+=Parameter)*)? ")")? return=ReturnMessage?
+		//parameter+=Parameter)*)? ")")? return=Return?
 		public Group getGroup() { return cGroup; }
 
 		//source=[Participant]
@@ -800,11 +800,11 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_5_2() { return cRightParenthesisKeyword_5_2; }
 
-		//return=ReturnMessage?
+		//return=Return?
 		public Assignment getReturnAssignment_6() { return cReturnAssignment_6; }
 
-		//ReturnMessage
-		public RuleCall getReturnReturnMessageParserRuleCall_6_0() { return cReturnReturnMessageParserRuleCall_6_0; }
+		//Return
+		public RuleCall getReturnReturnParserRuleCall_6_0() { return cReturnReturnParserRuleCall_6_0; }
 	}
 
 	public class NewMessageElements extends AbstractParserRuleElementFinder {
@@ -912,67 +912,127 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 	public class ReturnMessageElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ReturnMessage");
 		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSourceAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final CrossReference cSourceParticipantCrossReference_0_0 = (CrossReference)cSourceAssignment_0.eContents().get(0);
+		private final RuleCall cSourceParticipantIDTerminalRuleCall_0_0_1 = (RuleCall)cSourceParticipantCrossReference_0_0.eContents().get(1);
+		private final Keyword cReturnsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTargetAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cTargetParticipantCrossReference_2_0 = (CrossReference)cTargetAssignment_2.eContents().get(0);
+		private final RuleCall cTargetParticipantIDTerminalRuleCall_2_0_1 = (RuleCall)cTargetParticipantCrossReference_2_0.eContents().get(1);
+		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cLeftParenthesisKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Group cGroup_4_1 = (Group)cGroup_4.eContents().get(1);
+		private final Assignment cParameterAssignment_4_1_0 = (Assignment)cGroup_4_1.eContents().get(0);
+		private final RuleCall cParameterParameterParserRuleCall_4_1_0_0 = (RuleCall)cParameterAssignment_4_1_0.eContents().get(0);
+		private final Group cGroup_4_1_1 = (Group)cGroup_4_1.eContents().get(1);
+		private final Keyword cCommaKeyword_4_1_1_0 = (Keyword)cGroup_4_1_1.eContents().get(0);
+		private final Assignment cParameterAssignment_4_1_1_1 = (Assignment)cGroup_4_1_1.eContents().get(1);
+		private final RuleCall cParameterParameterParserRuleCall_4_1_1_1_0 = (RuleCall)cParameterAssignment_4_1_1_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
+		
+		//// e.g.: A return B items
+		//
+		//ReturnMessage:
+		//	source=[Participant] "returns" target=[Participant] name=ID ("(" (=> parameter+=Parameter (","
+		//	parameter+=Parameter)*)? ")")?;
+		public ParserRule getRule() { return rule; }
+
+		//source=[Participant] "returns" target=[Participant] name=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)?
+		//")")?
+		public Group getGroup() { return cGroup; }
+
+		//source=[Participant]
+		public Assignment getSourceAssignment_0() { return cSourceAssignment_0; }
+
+		//[Participant]
+		public CrossReference getSourceParticipantCrossReference_0_0() { return cSourceParticipantCrossReference_0_0; }
+
+		//ID
+		public RuleCall getSourceParticipantIDTerminalRuleCall_0_0_1() { return cSourceParticipantIDTerminalRuleCall_0_0_1; }
+
+		//"returns"
+		public Keyword getReturnsKeyword_1() { return cReturnsKeyword_1; }
+
+		//target=[Participant]
+		public Assignment getTargetAssignment_2() { return cTargetAssignment_2; }
+
+		//[Participant]
+		public CrossReference getTargetParticipantCrossReference_2_0() { return cTargetParticipantCrossReference_2_0; }
+
+		//ID
+		public RuleCall getTargetParticipantIDTerminalRuleCall_2_0_1() { return cTargetParticipantIDTerminalRuleCall_2_0_1; }
+
+		//name=ID
+		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
+
+		//(=> "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//=> "("
+		public Keyword getLeftParenthesisKeyword_4_0() { return cLeftParenthesisKeyword_4_0; }
+
+		//(=> parameter+=Parameter ("," parameter+=Parameter)*)?
+		public Group getGroup_4_1() { return cGroup_4_1; }
+
+		//=> parameter+=Parameter
+		public Assignment getParameterAssignment_4_1_0() { return cParameterAssignment_4_1_0; }
+
+		//Parameter
+		public RuleCall getParameterParameterParserRuleCall_4_1_0_0() { return cParameterParameterParserRuleCall_4_1_0_0; }
+
+		//("," parameter+=Parameter)*
+		public Group getGroup_4_1_1() { return cGroup_4_1_1; }
+
+		//","
+		public Keyword getCommaKeyword_4_1_1_0() { return cCommaKeyword_4_1_1_0; }
+
+		//parameter+=Parameter
+		public Assignment getParameterAssignment_4_1_1_1() { return cParameterAssignment_4_1_1_1; }
+
+		//Parameter
+		public RuleCall getParameterParameterParserRuleCall_4_1_1_1_0() { return cParameterParameterParserRuleCall_4_1_1_1_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_4_2() { return cRightParenthesisKeyword_4_2; }
+	}
+
+	public class ReturnElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Return");
+		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cReturnsKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameReferenceParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
-		private final Assignment cParameterAssignment_2_1_0 = (Assignment)cGroup_2_1.eContents().get(0);
-		private final RuleCall cParameterParameterParserRuleCall_2_1_0_0 = (RuleCall)cParameterAssignment_2_1_0.eContents().get(0);
-		private final Group cGroup_2_1_1 = (Group)cGroup_2_1.eContents().get(1);
-		private final Keyword cCommaKeyword_2_1_1_0 = (Keyword)cGroup_2_1_1.eContents().get(0);
-		private final Assignment cParameterAssignment_2_1_1_1 = (Assignment)cGroup_2_1_1.eContents().get(1);
-		private final RuleCall cParameterParameterParserRuleCall_2_1_1_1_0 = (RuleCall)cParameterAssignment_2_1_1_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Assignment cArrayAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cArrayArrayParserRuleCall_2_0 = (RuleCall)cArrayAssignment_2.eContents().get(0);
 		
 		//// e.g.: return childs
 		//
-		//ReturnMessage:
-		//	"returns" name=Reference ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?;
+		//Return:
+		//	"returns" name=ID array+=Array*;
 		public ParserRule getRule() { return rule; }
 
-		//"returns" name=Reference ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
+		//"returns" name=ID array+=Array*
 		public Group getGroup() { return cGroup; }
 
 		//"returns"
 		public Keyword getReturnsKeyword_0() { return cReturnsKeyword_0; }
 
-		//name=Reference
+		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//Reference
-		public RuleCall getNameReferenceParserRuleCall_1_0() { return cNameReferenceParserRuleCall_1_0; }
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//(=> "(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
-		public Group getGroup_2() { return cGroup_2; }
+		//array+=Array*
+		public Assignment getArrayAssignment_2() { return cArrayAssignment_2; }
 
-		//=> "("
-		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
-
-		//(=> parameter+=Parameter ("," parameter+=Parameter)*)?
-		public Group getGroup_2_1() { return cGroup_2_1; }
-
-		//=> parameter+=Parameter
-		public Assignment getParameterAssignment_2_1_0() { return cParameterAssignment_2_1_0; }
-
-		//Parameter
-		public RuleCall getParameterParameterParserRuleCall_2_1_0_0() { return cParameterParameterParserRuleCall_2_1_0_0; }
-
-		//("," parameter+=Parameter)*
-		public Group getGroup_2_1_1() { return cGroup_2_1_1; }
-
-		//","
-		public Keyword getCommaKeyword_2_1_1_0() { return cCommaKeyword_2_1_1_0; }
-
-		//parameter+=Parameter
-		public Assignment getParameterAssignment_2_1_1_1() { return cParameterAssignment_2_1_1_1; }
-
-		//Parameter
-		public RuleCall getParameterParameterParserRuleCall_2_1_1_1_0() { return cParameterParameterParserRuleCall_2_1_1_1_0; }
-
-		//")"
-		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
+		//Array
+		public RuleCall getArrayArrayParserRuleCall_2_0() { return cArrayArrayParserRuleCall_2_0; }
 	}
 
 	public class DeleteMessageElements extends AbstractParserRuleElementFinder {
@@ -1094,7 +1154,7 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cParameterParameterParserRuleCall_4_1_1_1_0 = (RuleCall)cParameterAssignment_4_1_1_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
 		private final Assignment cReturnAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cReturnReturnMessageParserRuleCall_5_0 = (RuleCall)cReturnAssignment_5.eContents().get(0);
+		private final RuleCall cReturnReturnParserRuleCall_5_0 = (RuleCall)cReturnAssignment_5.eContents().get(0);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
 		private final Keyword cBeginKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
 		private final Assignment cTransitionAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
@@ -1105,11 +1165,11 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		//
 		//SelfMessage:
 		//	source=[Participant] "self" "." name=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
-		//	return=ReturnMessage? ("begin" transition+=Transition* "end")?;
+		//	return=Return? ("begin" transition+=Transition* "end")?;
 		public ParserRule getRule() { return rule; }
 
-		//source=[Participant] "self" "." name=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
-		//return=ReturnMessage? ("begin" transition+=Transition* "end")?
+		//source=[Participant] "self" "." name=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")? return=Return?
+		//("begin" transition+=Transition* "end")?
 		public Group getGroup() { return cGroup; }
 
 		//source=[Participant]
@@ -1163,11 +1223,11 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_4_2() { return cRightParenthesisKeyword_4_2; }
 
-		//return=ReturnMessage?
+		//return=Return?
 		public Assignment getReturnAssignment_5() { return cReturnAssignment_5; }
 
-		//ReturnMessage
-		public RuleCall getReturnReturnMessageParserRuleCall_5_0() { return cReturnReturnMessageParserRuleCall_5_0; }
+		//Return
+		public RuleCall getReturnReturnParserRuleCall_5_0() { return cReturnReturnParserRuleCall_5_0; }
 
 		//(=> "begin" transition+=Transition* "end")?
 		public Group getGroup_6() { return cGroup_6; }
@@ -1383,6 +1443,7 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 	private CallMessageElements pCallMessage;
 	private NewMessageElements pNewMessage;
 	private ReturnMessageElements pReturnMessage;
+	private ReturnElements pReturn;
 	private DeleteMessageElements pDeleteMessage;
 	private SelfMessageElements pSelfMessage;
 	private ParameterElements pParameter;
@@ -1575,9 +1636,7 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 	////
 	//
 	//Message:
-	//	CallMessage //    | ReturnMessage
-	//
-	//	| NewMessage | DeleteMessage | SelfMessage | FoundMessage;
+	//	CallMessage | NewMessage | ReturnMessage | DeleteMessage | SelfMessage | FoundMessage;
 	public MessageElements getMessageAccess() {
 		return (pMessage != null) ? pMessage : (pMessage = new MessageElements());
 	}
@@ -1588,7 +1647,7 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 
 	//FoundMessage:
 	//	"calls" targetParticipant=[Participant] "." => name=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)?
-	//	")")? return=ReturnMessage?;
+	//	")")? return=Return?;
 	public FoundMessageElements getFoundMessageAccess() {
 		return (pFoundMessage != null) ? pFoundMessage : (pFoundMessage = new FoundMessageElements());
 	}
@@ -1601,7 +1660,7 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 	//
 	//CallMessage:
 	//	source=[Participant] "calls" target=[Participant] "." name=ID ("(" (=> parameter+=Parameter (","
-	//	parameter+=Parameter)*)? ")")? return=ReturnMessage?;
+	//	parameter+=Parameter)*)? ")")? return=Return?;
 	public CallMessageElements getCallMessageAccess() {
 		return (pCallMessage != null) ? pCallMessage : (pCallMessage = new CallMessageElements());
 	}
@@ -1625,16 +1684,29 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getNewMessageAccess().getRule();
 	}
 
-	//// e.g.: return childs
+	//// e.g.: A return B items
 	//
 	//ReturnMessage:
-	//	"returns" name=Reference ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?;
+	//	source=[Participant] "returns" target=[Participant] name=ID ("(" (=> parameter+=Parameter (","
+	//	parameter+=Parameter)*)? ")")?;
 	public ReturnMessageElements getReturnMessageAccess() {
 		return (pReturnMessage != null) ? pReturnMessage : (pReturnMessage = new ReturnMessageElements());
 	}
 	
 	public ParserRule getReturnMessageRule() {
 		return getReturnMessageAccess().getRule();
+	}
+
+	//// e.g.: return childs
+	//
+	//Return:
+	//	"returns" name=ID array+=Array*;
+	public ReturnElements getReturnAccess() {
+		return (pReturn != null) ? pReturn : (pReturn = new ReturnElements());
+	}
+	
+	public ParserRule getReturnRule() {
+		return getReturnAccess().getRule();
 	}
 
 	//DeleteMessage:
@@ -1652,7 +1724,7 @@ public class SequencemodelGrammarAccess extends AbstractGrammarElementFinder {
 	//
 	//SelfMessage:
 	//	source=[Participant] "self" "." name=ID ("(" (=> parameter+=Parameter ("," parameter+=Parameter)*)? ")")?
-	//	return=ReturnMessage? ("begin" transition+=Transition* "end")?;
+	//	return=Return? ("begin" transition+=Transition* "end")?;
 	public SelfMessageElements getSelfMessageAccess() {
 		return (pSelfMessage != null) ? pSelfMessage : (pSelfMessage = new SelfMessageElements());
 	}

@@ -28,6 +28,7 @@ import cz.cvut.earlgrey.sequencemodel.sequencemodel.NextFragment;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Parameter;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Reference;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Return;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequence;
@@ -168,6 +169,13 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
    * @generated
    */
   private EClass returnMessageEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass returnEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -675,7 +683,7 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getReturnMessage_Name()
+  public EReference getReturnMessage_Source()
   {
     return (EReference)returnMessageEClass.getEStructuralFeatures().get(0);
   }
@@ -685,9 +693,39 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getReturnMessage_Parameter()
+  public EReference getReturnMessage_Target()
   {
     return (EReference)returnMessageEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getReturn()
+  {
+    return returnEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getReturn_Name()
+  {
+    return (EAttribute)returnEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getReturn_Array()
+  {
+    return (EReference)returnEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -926,8 +964,12 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
     createEReference(newMessageEClass, NEW_MESSAGE__TARGET);
 
     returnMessageEClass = createEClass(RETURN_MESSAGE);
-    createEReference(returnMessageEClass, RETURN_MESSAGE__NAME);
-    createEReference(returnMessageEClass, RETURN_MESSAGE__PARAMETER);
+    createEReference(returnMessageEClass, RETURN_MESSAGE__SOURCE);
+    createEReference(returnMessageEClass, RETURN_MESSAGE__TARGET);
+
+    returnEClass = createEClass(RETURN);
+    createEAttribute(returnEClass, RETURN__NAME);
+    createEReference(returnEClass, RETURN__ARRAY);
 
     deleteMessageEClass = createEClass(DELETE_MESSAGE);
     createEReference(deleteMessageEClass, DELETE_MESSAGE__SOURCE);
@@ -994,6 +1036,7 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
     foundMessageEClass.getESuperTypes().add(this.getMessage());
     callMessageEClass.getESuperTypes().add(this.getMessage());
     newMessageEClass.getESuperTypes().add(this.getMessage());
+    returnMessageEClass.getESuperTypes().add(this.getMessage());
     deleteMessageEClass.getESuperTypes().add(this.getMessage());
     selfMessageEClass.getESuperTypes().add(this.getMessage());
 
@@ -1042,20 +1085,24 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
 
     initEClass(foundMessageEClass, FoundMessage.class, "FoundMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFoundMessage_TargetParticipant(), this.getParticipant(), null, "targetParticipant", null, 0, 1, FoundMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFoundMessage_Return(), this.getReturnMessage(), null, "return", null, 0, 1, FoundMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFoundMessage_Return(), this.getReturn(), null, "return", null, 0, 1, FoundMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(callMessageEClass, CallMessage.class, "CallMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getCallMessage_Source(), this.getParticipant(), null, "source", null, 0, 1, CallMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCallMessage_Target(), this.getParticipant(), null, "target", null, 0, 1, CallMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCallMessage_Return(), this.getReturnMessage(), null, "return", null, 0, 1, CallMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCallMessage_Return(), this.getReturn(), null, "return", null, 0, 1, CallMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(newMessageEClass, NewMessage.class, "NewMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getNewMessage_Source(), this.getParticipant(), null, "source", null, 0, 1, NewMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getNewMessage_Target(), this.getParticipant(), null, "target", null, 0, 1, NewMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(returnMessageEClass, ReturnMessage.class, "ReturnMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getReturnMessage_Name(), this.getReference(), null, "name", null, 0, 1, ReturnMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getReturnMessage_Parameter(), this.getParameter(), null, "parameter", null, 0, -1, ReturnMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getReturnMessage_Source(), this.getParticipant(), null, "source", null, 0, 1, ReturnMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getReturnMessage_Target(), this.getParticipant(), null, "target", null, 0, 1, ReturnMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(returnEClass, Return.class, "Return", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getReturn_Name(), ecorePackage.getEString(), "name", null, 0, 1, Return.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getReturn_Array(), this.getArray(), null, "array", null, 0, -1, Return.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(deleteMessageEClass, DeleteMessage.class, "DeleteMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDeleteMessage_Source(), this.getParticipant(), null, "source", null, 0, 1, DeleteMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1063,7 +1110,7 @@ public class SequencemodelPackageImpl extends EPackageImpl implements Sequencemo
 
     initEClass(selfMessageEClass, SelfMessage.class, "SelfMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getSelfMessage_Source(), this.getParticipant(), null, "source", null, 0, 1, SelfMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSelfMessage_Return(), this.getReturnMessage(), null, "return", null, 0, 1, SelfMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSelfMessage_Return(), this.getReturn(), null, "return", null, 0, 1, SelfMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSelfMessage_Transition(), this.getTransition(), null, "transition", null, 0, -1, SelfMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

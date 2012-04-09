@@ -164,6 +164,11 @@ public class SequencemodelAdapterFactory extends AdapterFactoryImpl
         return createReturnMessageAdapter();
       }
       @Override
+      public Adapter caseReturn(Return object)
+      {
+        return createReturnAdapter();
+      }
+      @Override
       public Adapter caseDeleteMessage(DeleteMessage object)
       {
         return createDeleteMessageAdapter();
@@ -461,6 +466,21 @@ public class SequencemodelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createReturnMessageAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Return <em>Return</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Return
+   * @generated
+   */
+  public Adapter createReturnAdapter()
   {
     return null;
   }

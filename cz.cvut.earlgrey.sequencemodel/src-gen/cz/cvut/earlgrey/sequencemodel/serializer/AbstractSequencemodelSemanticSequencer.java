@@ -22,6 +22,7 @@ import cz.cvut.earlgrey.sequencemodel.sequencemodel.NextFragment;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Parameter;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Reference;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Return;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Sequence;
@@ -211,8 +212,16 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 					return; 
 				}
 				else break;
+			case SequencemodelPackage.RETURN:
+				if(context == grammarAccess.getReturnRule()) {
+					sequence_Return(context, (Return) semanticObject); 
+					return; 
+				}
+				else break;
 			case SequencemodelPackage.RETURN_MESSAGE:
-				if(context == grammarAccess.getReturnMessageRule()) {
+				if(context == grammarAccess.getMessageRule() ||
+				   context == grammarAccess.getReturnMessageRule() ||
+				   context == grammarAccess.getTransitionRule()) {
 					sequence_ReturnMessage(context, (ReturnMessage) semanticObject); 
 					return; 
 				}
@@ -282,7 +291,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (source=[Participant|ID] target=[Participant|ID] name=ID (parameter+=Parameter parameter+=Parameter*)? return=ReturnMessage?)
+	 *     (source=[Participant|ID] target=[Participant|ID] name=ID (parameter+=Parameter parameter+=Parameter*)? return=Return?)
 	 */
 	protected void sequence_CallMessage(EObject context, CallMessage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -309,7 +318,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (targetParticipant=[Participant|ID] name=ID (parameter+=Parameter parameter+=Parameter*)? return=ReturnMessage?)
+	 *     (targetParticipant=[Participant|ID] name=ID (parameter+=Parameter parameter+=Parameter*)? return=Return?)
 	 */
 	protected void sequence_FoundMessage(EObject context, FoundMessage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -415,7 +424,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (name=Reference (parameter+=Parameter parameter+=Parameter*)?)
+	 *     (source=[Participant|ID] target=[Participant|ID] name=ID (parameter+=Parameter parameter+=Parameter*)?)
 	 */
 	protected void sequence_ReturnMessage(EObject context, ReturnMessage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -424,7 +433,16 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (source=[Participant|ID] name=ID (parameter+=Parameter parameter+=Parameter*)? return=ReturnMessage? transition+=Transition*)
+	 *     (name=ID array+=Array*)
+	 */
+	protected void sequence_Return(EObject context, Return semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (source=[Participant|ID] name=ID (parameter+=Parameter parameter+=Parameter*)? return=Return? transition+=Transition*)
 	 */
 	protected void sequence_SelfMessage(EObject context, SelfMessage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

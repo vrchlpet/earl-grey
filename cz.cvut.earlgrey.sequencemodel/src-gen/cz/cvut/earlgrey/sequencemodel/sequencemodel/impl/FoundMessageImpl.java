@@ -8,7 +8,7 @@ package cz.cvut.earlgrey.sequencemodel.sequencemodel.impl;
 
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.FoundMessage;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.Participant;
-import cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage;
+import cz.cvut.earlgrey.sequencemodel.sequencemodel.Return;
 import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -53,7 +53,7 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
    * @generated
    * @ordered
    */
-  protected ReturnMessage return_;
+  protected Return return_;
 
   /**
    * <!-- begin-user-doc -->
@@ -124,7 +124,7 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public ReturnMessage getReturn()
+  public Return getReturn()
   {
     return return_;
   }
@@ -134,9 +134,9 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetReturn(ReturnMessage newReturn, NotificationChain msgs)
+  public NotificationChain basicSetReturn(Return newReturn, NotificationChain msgs)
   {
-    ReturnMessage oldReturn = return_;
+    Return oldReturn = return_;
     return_ = newReturn;
     if (eNotificationRequired())
     {
@@ -151,7 +151,7 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setReturn(ReturnMessage newReturn)
+  public void setReturn(Return newReturn)
   {
     if (newReturn != return_)
     {
@@ -216,7 +216,7 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
         setTargetParticipant((Participant)newValue);
         return;
       case SequencemodelPackage.FOUND_MESSAGE__RETURN:
-        setReturn((ReturnMessage)newValue);
+        setReturn((Return)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -236,7 +236,7 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
         setTargetParticipant((Participant)null);
         return;
       case SequencemodelPackage.FOUND_MESSAGE__RETURN:
-        setReturn((ReturnMessage)null);
+        setReturn((Return)null);
         return;
     }
     super.eUnset(featureID);

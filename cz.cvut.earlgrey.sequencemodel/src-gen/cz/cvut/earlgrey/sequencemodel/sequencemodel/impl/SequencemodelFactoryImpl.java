@@ -85,6 +85,7 @@ public class SequencemodelFactoryImpl extends EFactoryImpl implements Sequencemo
       case SequencemodelPackage.CALL_MESSAGE: return createCallMessage();
       case SequencemodelPackage.NEW_MESSAGE: return createNewMessage();
       case SequencemodelPackage.RETURN_MESSAGE: return createReturnMessage();
+      case SequencemodelPackage.RETURN: return createReturn();
       case SequencemodelPackage.DELETE_MESSAGE: return createDeleteMessage();
       case SequencemodelPackage.SELF_MESSAGE: return createSelfMessage();
       case SequencemodelPackage.PARAMETER: return createParameter();
@@ -280,6 +281,17 @@ public class SequencemodelFactoryImpl extends EFactoryImpl implements Sequencemo
   {
     ReturnMessageImpl returnMessage = new ReturnMessageImpl();
     return returnMessage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Return createReturn()
+  {
+    ReturnImpl return_ = new ReturnImpl();
+    return return_;
   }
 
   /**

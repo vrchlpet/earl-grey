@@ -6,9 +6,6 @@
  */
 package cz.cvut.earlgrey.sequencemodel.sequencemodel;
 
-import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getName <em>Name</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getParameter <em>Parameter</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getSource <em>Source</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getTarget <em>Target</em>}</li>
  * </ul>
  * </p>
  *
@@ -27,48 +24,58 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ReturnMessage extends EObject
+public interface ReturnMessage extends Message
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' containment reference.
+   * Returns the value of the '<em><b>Source</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Source</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' containment reference.
-   * @see #setName(Reference)
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getReturnMessage_Name()
-   * @model containment="true"
+   * @return the value of the '<em>Source</em>' reference.
+   * @see #setSource(Participant)
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getReturnMessage_Source()
+   * @model
    * @generated
    */
-  Reference getName();
+  Participant getSource();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getName <em>Name</em>}' containment reference.
+   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getSource <em>Source</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' containment reference.
-   * @see #getName()
+   * @param value the new value of the '<em>Source</em>' reference.
+   * @see #getSource()
    * @generated
    */
-  void setName(Reference value);
+  void setSource(Participant value);
 
   /**
-   * Returns the value of the '<em><b>Parameter</b></em>' containment reference list.
-   * The list contents are of type {@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Parameter}.
+   * Returns the value of the '<em><b>Target</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Parameter</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Target</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Parameter</em>' containment reference list.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getReturnMessage_Parameter()
-   * @model containment="true"
+   * @return the value of the '<em>Target</em>' reference.
+   * @see #setTarget(Participant)
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getReturnMessage_Target()
+   * @model
    * @generated
    */
-  EList<Parameter> getParameter();
+  Participant getTarget();
+
+  /**
+   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getTarget <em>Target</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Target</em>' reference.
+   * @see #getTarget()
+   * @generated
+   */
+  void setTarget(Participant value);
 
 } // ReturnMessage

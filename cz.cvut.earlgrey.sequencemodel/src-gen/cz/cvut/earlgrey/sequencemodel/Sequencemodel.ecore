@@ -52,24 +52,27 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FoundMessage" eSuperTypes="#//Message">
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetParticipant" eType="#//Participant"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="return" eType="#//ReturnMessage"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="return" eType="#//Return"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CallMessage" eSuperTypes="#//Message">
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Participant"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Participant"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="return" eType="#//ReturnMessage"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="return" eType="#//Return"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NewMessage" eSuperTypes="#//Message">
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Participant"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Participant"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ReturnMessage">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//Reference"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
-        eType="#//Parameter" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReturnMessage" eSuperTypes="#//Message">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Participant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Participant"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Return">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="array" upperBound="-1"
+        eType="#//Array" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DeleteMessage" eSuperTypes="#//Message">
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Participant"/>
@@ -77,7 +80,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SelfMessage" eSuperTypes="#//Message">
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Participant"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="return" eType="#//ReturnMessage"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="return" eType="#//Return"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="transition" upperBound="-1"
         eType="#//Transition" containment="true"/>

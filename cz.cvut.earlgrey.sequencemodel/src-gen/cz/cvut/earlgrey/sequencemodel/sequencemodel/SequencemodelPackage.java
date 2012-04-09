@@ -744,13 +744,13 @@ public interface SequencemodelPackage extends EPackage
   int RETURN_MESSAGE = 16;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RETURN_MESSAGE__NAME = 0;
+  int RETURN_MESSAGE__NAME = MESSAGE__NAME;
 
   /**
    * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
@@ -759,7 +759,25 @@ public interface SequencemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RETURN_MESSAGE__PARAMETER = 1;
+  int RETURN_MESSAGE__PARAMETER = MESSAGE__PARAMETER;
+
+  /**
+   * The feature id for the '<em><b>Source</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RETURN_MESSAGE__SOURCE = MESSAGE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Target</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RETURN_MESSAGE__TARGET = MESSAGE_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Return Message</em>' class.
@@ -768,7 +786,44 @@ public interface SequencemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RETURN_MESSAGE_FEATURE_COUNT = 2;
+  int RETURN_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ReturnImpl <em>Return</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ReturnImpl
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getReturn()
+   * @generated
+   */
+  int RETURN = 17;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RETURN__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Array</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RETURN__ARRAY = 1;
+
+  /**
+   * The number of structural features of the '<em>Return</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RETURN_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.DeleteMessageImpl <em>Delete Message</em>}' class.
@@ -778,7 +833,7 @@ public interface SequencemodelPackage extends EPackage
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getDeleteMessage()
    * @generated
    */
-  int DELETE_MESSAGE = 17;
+  int DELETE_MESSAGE = 18;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -833,7 +888,7 @@ public interface SequencemodelPackage extends EPackage
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getSelfMessage()
    * @generated
    */
-  int SELF_MESSAGE = 18;
+  int SELF_MESSAGE = 19;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -897,7 +952,7 @@ public interface SequencemodelPackage extends EPackage
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getParameter()
    * @generated
    */
-  int PARAMETER = 19;
+  int PARAMETER = 20;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -934,7 +989,7 @@ public interface SequencemodelPackage extends EPackage
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getReference()
    * @generated
    */
-  int REFERENCE = 20;
+  int REFERENCE = 21;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' reference.
@@ -971,7 +1026,7 @@ public interface SequencemodelPackage extends EPackage
    * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getArray()
    * @generated
    */
-  int ARRAY = 21;
+  int ARRAY = 22;
 
   /**
    * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -1416,26 +1471,58 @@ public interface SequencemodelPackage extends EPackage
   EClass getReturnMessage();
 
   /**
-   * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getName <em>Name</em>}'.
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getSource <em>Source</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Name</em>'.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getName()
+   * @return the meta object for the reference '<em>Source</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getSource()
    * @see #getReturnMessage()
    * @generated
    */
-  EReference getReturnMessage_Name();
+  EReference getReturnMessage_Source();
 
   /**
-   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getParameter <em>Parameter</em>}'.
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getTarget <em>Target</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Parameter</em>'.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getParameter()
+   * @return the meta object for the reference '<em>Target</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage#getTarget()
    * @see #getReturnMessage()
    * @generated
    */
-  EReference getReturnMessage_Parameter();
+  EReference getReturnMessage_Target();
+
+  /**
+   * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Return <em>Return</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Return</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Return
+   * @generated
+   */
+  EClass getReturn();
+
+  /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Return#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Return#getName()
+   * @see #getReturn()
+   * @generated
+   */
+  EAttribute getReturn_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Return#getArray <em>Array</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Array</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Return#getArray()
+   * @see #getReturn()
+   * @generated
+   */
+  EReference getReturn_Array();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.DeleteMessage <em>Delete Message</em>}'.
@@ -1975,20 +2062,46 @@ public interface SequencemodelPackage extends EPackage
     EClass RETURN_MESSAGE = eINSTANCE.getReturnMessage();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Source</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference RETURN_MESSAGE__NAME = eINSTANCE.getReturnMessage_Name();
+    EReference RETURN_MESSAGE__SOURCE = eINSTANCE.getReturnMessage_Source();
 
     /**
-     * The meta object literal for the '<em><b>Parameter</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Target</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference RETURN_MESSAGE__PARAMETER = eINSTANCE.getReturnMessage_Parameter();
+    EReference RETURN_MESSAGE__TARGET = eINSTANCE.getReturnMessage_Target();
+
+    /**
+     * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ReturnImpl <em>Return</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ReturnImpl
+     * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SequencemodelPackageImpl#getReturn()
+     * @generated
+     */
+    EClass RETURN = eINSTANCE.getReturn();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RETURN__NAME = eINSTANCE.getReturn_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Array</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RETURN__ARRAY = eINSTANCE.getReturn_Array();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.DeleteMessageImpl <em>Delete Message</em>}' class.
