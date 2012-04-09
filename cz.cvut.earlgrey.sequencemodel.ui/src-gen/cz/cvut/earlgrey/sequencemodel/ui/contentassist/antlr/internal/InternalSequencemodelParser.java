@@ -3167,16 +3167,6 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
             if ( (LA4_0==RULE_ID) ) {
                 switch ( input.LA(2) ) {
-                case 39:
-                    {
-                    alt4=3;
-                    }
-                    break;
-                case 37:
-                    {
-                    alt4=2;
-                    }
-                    break;
                 case 33:
                     {
                     alt4=1;
@@ -3185,6 +3175,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
                 case 40:
                     {
                     alt4=4;
+                    }
+                    break;
+                case 37:
+                    {
+                    alt4=2;
+                    }
+                    break;
+                case 39:
+                    {
+                    alt4=3;
                     }
                     break;
                 default:
@@ -10443,26 +10443,26 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__CallMessage__Group__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3552:1: rule__CallMessage__Group__0__Impl : ( ( rule__CallMessage__SourceParticipantAssignment_0 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3552:1: rule__CallMessage__Group__0__Impl : ( ( rule__CallMessage__SourceAssignment_0 ) ) ;
     public final void rule__CallMessage__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3556:1: ( ( ( rule__CallMessage__SourceParticipantAssignment_0 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3557:1: ( ( rule__CallMessage__SourceParticipantAssignment_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3556:1: ( ( ( rule__CallMessage__SourceAssignment_0 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3557:1: ( ( rule__CallMessage__SourceAssignment_0 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3557:1: ( ( rule__CallMessage__SourceParticipantAssignment_0 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3558:1: ( rule__CallMessage__SourceParticipantAssignment_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3557:1: ( ( rule__CallMessage__SourceAssignment_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3558:1: ( rule__CallMessage__SourceAssignment_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getSourceParticipantAssignment_0()); 
+               before(grammarAccess.getCallMessageAccess().getSourceAssignment_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3559:1: ( rule__CallMessage__SourceParticipantAssignment_0 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3559:2: rule__CallMessage__SourceParticipantAssignment_0
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3559:1: ( rule__CallMessage__SourceAssignment_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3559:2: rule__CallMessage__SourceAssignment_0
             {
-            pushFollow(FOLLOW_rule__CallMessage__SourceParticipantAssignment_0_in_rule__CallMessage__Group__0__Impl7221);
-            rule__CallMessage__SourceParticipantAssignment_0();
+            pushFollow(FOLLOW_rule__CallMessage__SourceAssignment_0_in_rule__CallMessage__Group__0__Impl7221);
+            rule__CallMessage__SourceAssignment_0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -10470,7 +10470,7 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getSourceParticipantAssignment_0()); 
+               after(grammarAccess.getCallMessageAccess().getSourceAssignment_0()); 
             }
 
             }
@@ -10611,49 +10611,34 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__CallMessage__Group__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3612:1: rule__CallMessage__Group__2__Impl : ( ( rule__CallMessage__Group_2__0 )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3612:1: rule__CallMessage__Group__2__Impl : ( ( rule__CallMessage__TargetAssignment_2 ) ) ;
     public final void rule__CallMessage__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3616:1: ( ( ( rule__CallMessage__Group_2__0 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3617:1: ( ( rule__CallMessage__Group_2__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3616:1: ( ( ( rule__CallMessage__TargetAssignment_2 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3617:1: ( ( rule__CallMessage__TargetAssignment_2 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3617:1: ( ( rule__CallMessage__Group_2__0 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3618:1: ( rule__CallMessage__Group_2__0 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3617:1: ( ( rule__CallMessage__TargetAssignment_2 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3618:1: ( rule__CallMessage__TargetAssignment_2 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getGroup_2()); 
+               before(grammarAccess.getCallMessageAccess().getTargetAssignment_2()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3619:1: ( rule__CallMessage__Group_2__0 )?
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3619:1: ( rule__CallMessage__TargetAssignment_2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3619:2: rule__CallMessage__TargetAssignment_2
+            {
+            pushFollow(FOLLOW_rule__CallMessage__TargetAssignment_2_in_rule__CallMessage__Group__2__Impl7343);
+            rule__CallMessage__TargetAssignment_2();
 
-            if ( (LA33_0==RULE_ID) ) {
-                int LA33_1 = input.LA(2);
-
-                if ( (LA33_1==34) ) {
-                    alt33=1;
-                }
-            }
-            switch (alt33) {
-                case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3619:2: rule__CallMessage__Group_2__0
-                    {
-                    pushFollow(FOLLOW_rule__CallMessage__Group_2__0_in_rule__CallMessage__Group__2__Impl7343);
-                    rule__CallMessage__Group_2__0();
-
-                    state._fsp--;
-                    if (state.failed) return ;
-
-                    }
-                    break;
+            state._fsp--;
+            if (state.failed) return ;
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getGroup_2()); 
+               after(grammarAccess.getCallMessageAccess().getTargetAssignment_2()); 
             }
 
             }
@@ -10686,12 +10671,12 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3633:1: ( rule__CallMessage__Group__3__Impl rule__CallMessage__Group__4 )
             // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3634:2: rule__CallMessage__Group__3__Impl rule__CallMessage__Group__4
             {
-            pushFollow(FOLLOW_rule__CallMessage__Group__3__Impl_in_rule__CallMessage__Group__37374);
+            pushFollow(FOLLOW_rule__CallMessage__Group__3__Impl_in_rule__CallMessage__Group__37373);
             rule__CallMessage__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CallMessage__Group__4_in_rule__CallMessage__Group__37377);
+            pushFollow(FOLLOW_rule__CallMessage__Group__4_in_rule__CallMessage__Group__37376);
             rule__CallMessage__Group__4();
 
             state._fsp--;
@@ -10715,34 +10700,24 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__CallMessage__Group__3__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3641:1: rule__CallMessage__Group__3__Impl : ( ( rule__CallMessage__NameAssignment_3 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3641:1: rule__CallMessage__Group__3__Impl : ( '.' ) ;
     public final void rule__CallMessage__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3645:1: ( ( ( rule__CallMessage__NameAssignment_3 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3646:1: ( ( rule__CallMessage__NameAssignment_3 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3645:1: ( ( '.' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3646:1: ( '.' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3646:1: ( ( rule__CallMessage__NameAssignment_3 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3647:1: ( rule__CallMessage__NameAssignment_3 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3646:1: ( '.' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3647:1: '.'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getNameAssignment_3()); 
+               before(grammarAccess.getCallMessageAccess().getFullStopKeyword_3()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3648:1: ( rule__CallMessage__NameAssignment_3 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3648:2: rule__CallMessage__NameAssignment_3
-            {
-            pushFollow(FOLLOW_rule__CallMessage__NameAssignment_3_in_rule__CallMessage__Group__3__Impl7404);
-            rule__CallMessage__NameAssignment_3();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
+            match(input,34,FOLLOW_34_in_rule__CallMessage__Group__3__Impl7404); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getNameAssignment_3()); 
+               after(grammarAccess.getCallMessageAccess().getFullStopKeyword_3()); 
             }
 
             }
@@ -10766,21 +10741,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__CallMessage__Group__4"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3658:1: rule__CallMessage__Group__4 : rule__CallMessage__Group__4__Impl rule__CallMessage__Group__5 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3660:1: rule__CallMessage__Group__4 : rule__CallMessage__Group__4__Impl rule__CallMessage__Group__5 ;
     public final void rule__CallMessage__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3662:1: ( rule__CallMessage__Group__4__Impl rule__CallMessage__Group__5 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3663:2: rule__CallMessage__Group__4__Impl rule__CallMessage__Group__5
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3664:1: ( rule__CallMessage__Group__4__Impl rule__CallMessage__Group__5 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3665:2: rule__CallMessage__Group__4__Impl rule__CallMessage__Group__5
             {
-            pushFollow(FOLLOW_rule__CallMessage__Group__4__Impl_in_rule__CallMessage__Group__47434);
+            pushFollow(FOLLOW_rule__CallMessage__Group__4__Impl_in_rule__CallMessage__Group__47435);
             rule__CallMessage__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CallMessage__Group__5_in_rule__CallMessage__Group__47437);
+            pushFollow(FOLLOW_rule__CallMessage__Group__5_in_rule__CallMessage__Group__47438);
             rule__CallMessage__Group__5();
 
             state._fsp--;
@@ -10804,45 +10779,34 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__CallMessage__Group__4__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3670:1: rule__CallMessage__Group__4__Impl : ( ( rule__CallMessage__Group_4__0 )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3672:1: rule__CallMessage__Group__4__Impl : ( ( rule__CallMessage__NameAssignment_4 ) ) ;
     public final void rule__CallMessage__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3674:1: ( ( ( rule__CallMessage__Group_4__0 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3675:1: ( ( rule__CallMessage__Group_4__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3676:1: ( ( ( rule__CallMessage__NameAssignment_4 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3677:1: ( ( rule__CallMessage__NameAssignment_4 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3675:1: ( ( rule__CallMessage__Group_4__0 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3676:1: ( rule__CallMessage__Group_4__0 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3677:1: ( ( rule__CallMessage__NameAssignment_4 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3678:1: ( rule__CallMessage__NameAssignment_4 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getGroup_4()); 
+               before(grammarAccess.getCallMessageAccess().getNameAssignment_4()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3677:1: ( rule__CallMessage__Group_4__0 )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3679:1: ( rule__CallMessage__NameAssignment_4 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3679:2: rule__CallMessage__NameAssignment_4
+            {
+            pushFollow(FOLLOW_rule__CallMessage__NameAssignment_4_in_rule__CallMessage__Group__4__Impl7465);
+            rule__CallMessage__NameAssignment_4();
 
-            if ( (LA34_0==35) ) {
-                alt34=1;
-            }
-            switch (alt34) {
-                case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3677:2: rule__CallMessage__Group_4__0
-                    {
-                    pushFollow(FOLLOW_rule__CallMessage__Group_4__0_in_rule__CallMessage__Group__4__Impl7464);
-                    rule__CallMessage__Group_4__0();
-
-                    state._fsp--;
-                    if (state.failed) return ;
-
-                    }
-                    break;
+            state._fsp--;
+            if (state.failed) return ;
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getGroup_4()); 
+               after(grammarAccess.getCallMessageAccess().getNameAssignment_4()); 
             }
 
             }
@@ -10866,17 +10830,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__CallMessage__Group__5"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3687:1: rule__CallMessage__Group__5 : rule__CallMessage__Group__5__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3689:1: rule__CallMessage__Group__5 : rule__CallMessage__Group__5__Impl rule__CallMessage__Group__6 ;
     public final void rule__CallMessage__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3691:1: ( rule__CallMessage__Group__5__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3692:2: rule__CallMessage__Group__5__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3693:1: ( rule__CallMessage__Group__5__Impl rule__CallMessage__Group__6 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3694:2: rule__CallMessage__Group__5__Impl rule__CallMessage__Group__6
             {
             pushFollow(FOLLOW_rule__CallMessage__Group__5__Impl_in_rule__CallMessage__Group__57495);
             rule__CallMessage__Group__5__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__CallMessage__Group__6_in_rule__CallMessage__Group__57498);
+            rule__CallMessage__Group__6();
 
             state._fsp--;
             if (state.failed) return ;
@@ -10899,34 +10868,34 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__CallMessage__Group__5__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3698:1: rule__CallMessage__Group__5__Impl : ( ( rule__CallMessage__ReturnAssignment_5 )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3701:1: rule__CallMessage__Group__5__Impl : ( ( rule__CallMessage__Group_5__0 )? ) ;
     public final void rule__CallMessage__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3702:1: ( ( ( rule__CallMessage__ReturnAssignment_5 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3703:1: ( ( rule__CallMessage__ReturnAssignment_5 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3705:1: ( ( ( rule__CallMessage__Group_5__0 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3706:1: ( ( rule__CallMessage__Group_5__0 )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3703:1: ( ( rule__CallMessage__ReturnAssignment_5 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3704:1: ( rule__CallMessage__ReturnAssignment_5 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3706:1: ( ( rule__CallMessage__Group_5__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3707:1: ( rule__CallMessage__Group_5__0 )?
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getReturnAssignment_5()); 
+               before(grammarAccess.getCallMessageAccess().getGroup_5()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3705:1: ( rule__CallMessage__ReturnAssignment_5 )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3708:1: ( rule__CallMessage__Group_5__0 )?
+            int alt33=2;
+            int LA33_0 = input.LA(1);
 
-            if ( (LA35_0==38) ) {
-                alt35=1;
+            if ( (LA33_0==35) ) {
+                alt33=1;
             }
-            switch (alt35) {
+            switch (alt33) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3705:2: rule__CallMessage__ReturnAssignment_5
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3708:2: rule__CallMessage__Group_5__0
                     {
-                    pushFollow(FOLLOW_rule__CallMessage__ReturnAssignment_5_in_rule__CallMessage__Group__5__Impl7522);
-                    rule__CallMessage__ReturnAssignment_5();
+                    pushFollow(FOLLOW_rule__CallMessage__Group_5__0_in_rule__CallMessage__Group__5__Impl7525);
+                    rule__CallMessage__Group_5__0();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -10937,7 +10906,7 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getReturnAssignment_5()); 
+               after(grammarAccess.getCallMessageAccess().getGroup_5()); 
             }
 
             }
@@ -10960,23 +10929,18 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
     // $ANTLR end "rule__CallMessage__Group__5__Impl"
 
 
-    // $ANTLR start "rule__CallMessage__Group_2__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3727:1: rule__CallMessage__Group_2__0 : rule__CallMessage__Group_2__0__Impl rule__CallMessage__Group_2__1 ;
-    public final void rule__CallMessage__Group_2__0() throws RecognitionException {
+    // $ANTLR start "rule__CallMessage__Group__6"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3718:1: rule__CallMessage__Group__6 : rule__CallMessage__Group__6__Impl ;
+    public final void rule__CallMessage__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3731:1: ( rule__CallMessage__Group_2__0__Impl rule__CallMessage__Group_2__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3732:2: rule__CallMessage__Group_2__0__Impl rule__CallMessage__Group_2__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3722:1: ( rule__CallMessage__Group__6__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3723:2: rule__CallMessage__Group__6__Impl
             {
-            pushFollow(FOLLOW_rule__CallMessage__Group_2__0__Impl_in_rule__CallMessage__Group_2__07565);
-            rule__CallMessage__Group_2__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CallMessage__Group_2__1_in_rule__CallMessage__Group_2__07568);
-            rule__CallMessage__Group_2__1();
+            pushFollow(FOLLOW_rule__CallMessage__Group__6__Impl_in_rule__CallMessage__Group__67556);
+            rule__CallMessage__Group__6__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -10995,286 +10959,38 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__CallMessage__Group_2__0"
+    // $ANTLR end "rule__CallMessage__Group__6"
 
 
-    // $ANTLR start "rule__CallMessage__Group_2__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3739:1: rule__CallMessage__Group_2__0__Impl : ( ( rule__CallMessage__TargetParticipantAssignment_2_0 ) ) ;
-    public final void rule__CallMessage__Group_2__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3743:1: ( ( ( rule__CallMessage__TargetParticipantAssignment_2_0 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3744:1: ( ( rule__CallMessage__TargetParticipantAssignment_2_0 ) )
-            {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3744:1: ( ( rule__CallMessage__TargetParticipantAssignment_2_0 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3745:1: ( rule__CallMessage__TargetParticipantAssignment_2_0 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getTargetParticipantAssignment_2_0()); 
-            }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3746:1: ( rule__CallMessage__TargetParticipantAssignment_2_0 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3746:2: rule__CallMessage__TargetParticipantAssignment_2_0
-            {
-            pushFollow(FOLLOW_rule__CallMessage__TargetParticipantAssignment_2_0_in_rule__CallMessage__Group_2__0__Impl7595);
-            rule__CallMessage__TargetParticipantAssignment_2_0();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getTargetParticipantAssignment_2_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CallMessage__Group_2__0__Impl"
-
-
-    // $ANTLR start "rule__CallMessage__Group_2__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3756:1: rule__CallMessage__Group_2__1 : rule__CallMessage__Group_2__1__Impl ;
-    public final void rule__CallMessage__Group_2__1() throws RecognitionException {
+    // $ANTLR start "rule__CallMessage__Group__6__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3729:1: rule__CallMessage__Group__6__Impl : ( ( rule__CallMessage__ReturnAssignment_6 )? ) ;
+    public final void rule__CallMessage__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3760:1: ( rule__CallMessage__Group_2__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3761:2: rule__CallMessage__Group_2__1__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3733:1: ( ( ( rule__CallMessage__ReturnAssignment_6 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3734:1: ( ( rule__CallMessage__ReturnAssignment_6 )? )
             {
-            pushFollow(FOLLOW_rule__CallMessage__Group_2__1__Impl_in_rule__CallMessage__Group_2__17625);
-            rule__CallMessage__Group_2__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CallMessage__Group_2__1"
-
-
-    // $ANTLR start "rule__CallMessage__Group_2__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3767:1: rule__CallMessage__Group_2__1__Impl : ( '.' ) ;
-    public final void rule__CallMessage__Group_2__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3771:1: ( ( '.' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3772:1: ( '.' )
-            {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3772:1: ( '.' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3773:1: '.'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3734:1: ( ( rule__CallMessage__ReturnAssignment_6 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3735:1: ( rule__CallMessage__ReturnAssignment_6 )?
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getFullStopKeyword_2_1()); 
+               before(grammarAccess.getCallMessageAccess().getReturnAssignment_6()); 
             }
-            match(input,34,FOLLOW_34_in_rule__CallMessage__Group_2__1__Impl7653); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getFullStopKeyword_2_1()); 
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3736:1: ( rule__CallMessage__ReturnAssignment_6 )?
+            int alt34=2;
+            int LA34_0 = input.LA(1);
+
+            if ( (LA34_0==38) ) {
+                alt34=1;
             }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CallMessage__Group_2__1__Impl"
-
-
-    // $ANTLR start "rule__CallMessage__Group_4__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3790:1: rule__CallMessage__Group_4__0 : rule__CallMessage__Group_4__0__Impl rule__CallMessage__Group_4__1 ;
-    public final void rule__CallMessage__Group_4__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3794:1: ( rule__CallMessage__Group_4__0__Impl rule__CallMessage__Group_4__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3795:2: rule__CallMessage__Group_4__0__Impl rule__CallMessage__Group_4__1
-            {
-            pushFollow(FOLLOW_rule__CallMessage__Group_4__0__Impl_in_rule__CallMessage__Group_4__07688);
-            rule__CallMessage__Group_4__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CallMessage__Group_4__1_in_rule__CallMessage__Group_4__07691);
-            rule__CallMessage__Group_4__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CallMessage__Group_4__0"
-
-
-    // $ANTLR start "rule__CallMessage__Group_4__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3802:1: rule__CallMessage__Group_4__0__Impl : ( ( '(' ) ) ;
-    public final void rule__CallMessage__Group_4__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3806:1: ( ( ( '(' ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3807:1: ( ( '(' ) )
-            {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3807:1: ( ( '(' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3808:1: ( '(' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getLeftParenthesisKeyword_4_0()); 
-            }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3809:1: ( '(' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3810:2: '('
-            {
-            match(input,35,FOLLOW_35_in_rule__CallMessage__Group_4__0__Impl7720); if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getLeftParenthesisKeyword_4_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CallMessage__Group_4__0__Impl"
-
-
-    // $ANTLR start "rule__CallMessage__Group_4__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3821:1: rule__CallMessage__Group_4__1 : rule__CallMessage__Group_4__1__Impl rule__CallMessage__Group_4__2 ;
-    public final void rule__CallMessage__Group_4__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3825:1: ( rule__CallMessage__Group_4__1__Impl rule__CallMessage__Group_4__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3826:2: rule__CallMessage__Group_4__1__Impl rule__CallMessage__Group_4__2
-            {
-            pushFollow(FOLLOW_rule__CallMessage__Group_4__1__Impl_in_rule__CallMessage__Group_4__17752);
-            rule__CallMessage__Group_4__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CallMessage__Group_4__2_in_rule__CallMessage__Group_4__17755);
-            rule__CallMessage__Group_4__2();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CallMessage__Group_4__1"
-
-
-    // $ANTLR start "rule__CallMessage__Group_4__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3833:1: rule__CallMessage__Group_4__1__Impl : ( ( rule__CallMessage__Group_4_1__0 )? ) ;
-    public final void rule__CallMessage__Group_4__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3837:1: ( ( ( rule__CallMessage__Group_4_1__0 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3838:1: ( ( rule__CallMessage__Group_4_1__0 )? )
-            {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3838:1: ( ( rule__CallMessage__Group_4_1__0 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3839:1: ( rule__CallMessage__Group_4_1__0 )?
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getGroup_4_1()); 
-            }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3840:1: ( rule__CallMessage__Group_4_1__0 )?
-            int alt36=2;
-            int LA36_0 = input.LA(1);
-
-            if ( (LA36_0==RULE_ID) ) {
-                alt36=1;
-            }
-            switch (alt36) {
+            switch (alt34) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3840:2: rule__CallMessage__Group_4_1__0
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3736:2: rule__CallMessage__ReturnAssignment_6
                     {
-                    pushFollow(FOLLOW_rule__CallMessage__Group_4_1__0_in_rule__CallMessage__Group_4__1__Impl7782);
-                    rule__CallMessage__Group_4_1__0();
+                    pushFollow(FOLLOW_rule__CallMessage__ReturnAssignment_6_in_rule__CallMessage__Group__6__Impl7583);
+                    rule__CallMessage__ReturnAssignment_6();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -11285,7 +11001,7 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getGroup_4_1()); 
+               after(grammarAccess.getCallMessageAccess().getReturnAssignment_6()); 
             }
 
             }
@@ -11305,21 +11021,26 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__CallMessage__Group_4__1__Impl"
+    // $ANTLR end "rule__CallMessage__Group__6__Impl"
 
 
-    // $ANTLR start "rule__CallMessage__Group_4__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3850:1: rule__CallMessage__Group_4__2 : rule__CallMessage__Group_4__2__Impl ;
-    public final void rule__CallMessage__Group_4__2() throws RecognitionException {
+    // $ANTLR start "rule__CallMessage__Group_5__0"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3760:1: rule__CallMessage__Group_5__0 : rule__CallMessage__Group_5__0__Impl rule__CallMessage__Group_5__1 ;
+    public final void rule__CallMessage__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3854:1: ( rule__CallMessage__Group_4__2__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3855:2: rule__CallMessage__Group_4__2__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3764:1: ( rule__CallMessage__Group_5__0__Impl rule__CallMessage__Group_5__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3765:2: rule__CallMessage__Group_5__0__Impl rule__CallMessage__Group_5__1
             {
-            pushFollow(FOLLOW_rule__CallMessage__Group_4__2__Impl_in_rule__CallMessage__Group_4__27813);
-            rule__CallMessage__Group_4__2__Impl();
+            pushFollow(FOLLOW_rule__CallMessage__Group_5__0__Impl_in_rule__CallMessage__Group_5__07628);
+            rule__CallMessage__Group_5__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__CallMessage__Group_5__1_in_rule__CallMessage__Group_5__07631);
+            rule__CallMessage__Group_5__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -11338,28 +11059,34 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__CallMessage__Group_4__2"
+    // $ANTLR end "rule__CallMessage__Group_5__0"
 
 
-    // $ANTLR start "rule__CallMessage__Group_4__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3861:1: rule__CallMessage__Group_4__2__Impl : ( ')' ) ;
-    public final void rule__CallMessage__Group_4__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CallMessage__Group_5__0__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3772:1: rule__CallMessage__Group_5__0__Impl : ( ( '(' ) ) ;
+    public final void rule__CallMessage__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3865:1: ( ( ')' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3866:1: ( ')' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3776:1: ( ( ( '(' ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3777:1: ( ( '(' ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3866:1: ( ')' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3867:1: ')'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3777:1: ( ( '(' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3778:1: ( '(' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getRightParenthesisKeyword_4_2()); 
+               before(grammarAccess.getCallMessageAccess().getLeftParenthesisKeyword_5_0()); 
             }
-            match(input,36,FOLLOW_36_in_rule__CallMessage__Group_4__2__Impl7841); if (state.failed) return ;
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3779:1: ( '(' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3780:2: '('
+            {
+            match(input,35,FOLLOW_35_in_rule__CallMessage__Group_5__0__Impl7660); if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getRightParenthesisKeyword_4_2()); 
+               after(grammarAccess.getCallMessageAccess().getLeftParenthesisKeyword_5_0()); 
             }
 
             }
@@ -11379,110 +11106,26 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__CallMessage__Group_4__2__Impl"
+    // $ANTLR end "rule__CallMessage__Group_5__0__Impl"
 
 
-    // $ANTLR start "rule__CallMessage__Group_4_1__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3886:1: rule__CallMessage__Group_4_1__0 : rule__CallMessage__Group_4_1__0__Impl rule__CallMessage__Group_4_1__1 ;
-    public final void rule__CallMessage__Group_4_1__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3890:1: ( rule__CallMessage__Group_4_1__0__Impl rule__CallMessage__Group_4_1__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3891:2: rule__CallMessage__Group_4_1__0__Impl rule__CallMessage__Group_4_1__1
-            {
-            pushFollow(FOLLOW_rule__CallMessage__Group_4_1__0__Impl_in_rule__CallMessage__Group_4_1__07878);
-            rule__CallMessage__Group_4_1__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CallMessage__Group_4_1__1_in_rule__CallMessage__Group_4_1__07881);
-            rule__CallMessage__Group_4_1__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CallMessage__Group_4_1__0"
-
-
-    // $ANTLR start "rule__CallMessage__Group_4_1__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3898:1: rule__CallMessage__Group_4_1__0__Impl : ( ( rule__CallMessage__ParameterAssignment_4_1_0 ) ) ;
-    public final void rule__CallMessage__Group_4_1__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CallMessage__Group_5__1"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3791:1: rule__CallMessage__Group_5__1 : rule__CallMessage__Group_5__1__Impl rule__CallMessage__Group_5__2 ;
+    public final void rule__CallMessage__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3902:1: ( ( ( rule__CallMessage__ParameterAssignment_4_1_0 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3903:1: ( ( rule__CallMessage__ParameterAssignment_4_1_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3795:1: ( rule__CallMessage__Group_5__1__Impl rule__CallMessage__Group_5__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3796:2: rule__CallMessage__Group_5__1__Impl rule__CallMessage__Group_5__2
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3903:1: ( ( rule__CallMessage__ParameterAssignment_4_1_0 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3904:1: ( rule__CallMessage__ParameterAssignment_4_1_0 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getParameterAssignment_4_1_0()); 
-            }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3905:1: ( rule__CallMessage__ParameterAssignment_4_1_0 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3905:2: rule__CallMessage__ParameterAssignment_4_1_0
-            {
-            pushFollow(FOLLOW_rule__CallMessage__ParameterAssignment_4_1_0_in_rule__CallMessage__Group_4_1__0__Impl7908);
-            rule__CallMessage__ParameterAssignment_4_1_0();
+            pushFollow(FOLLOW_rule__CallMessage__Group_5__1__Impl_in_rule__CallMessage__Group_5__17692);
+            rule__CallMessage__Group_5__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getParameterAssignment_4_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CallMessage__Group_4_1__0__Impl"
-
-
-    // $ANTLR start "rule__CallMessage__Group_4_1__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3915:1: rule__CallMessage__Group_4_1__1 : rule__CallMessage__Group_4_1__1__Impl ;
-    public final void rule__CallMessage__Group_4_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3919:1: ( rule__CallMessage__Group_4_1__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3920:2: rule__CallMessage__Group_4_1__1__Impl
-            {
-            pushFollow(FOLLOW_rule__CallMessage__Group_4_1__1__Impl_in_rule__CallMessage__Group_4_1__17938);
-            rule__CallMessage__Group_4_1__1__Impl();
+            pushFollow(FOLLOW_rule__CallMessage__Group_5__2_in_rule__CallMessage__Group_5__17695);
+            rule__CallMessage__Group_5__2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -11501,42 +11144,300 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__CallMessage__Group_4_1__1"
+    // $ANTLR end "rule__CallMessage__Group_5__1"
 
 
-    // $ANTLR start "rule__CallMessage__Group_4_1__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3926:1: rule__CallMessage__Group_4_1__1__Impl : ( ( rule__CallMessage__Group_4_1_1__0 )* ) ;
-    public final void rule__CallMessage__Group_4_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CallMessage__Group_5__1__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3803:1: rule__CallMessage__Group_5__1__Impl : ( ( rule__CallMessage__Group_5_1__0 )? ) ;
+    public final void rule__CallMessage__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3930:1: ( ( ( rule__CallMessage__Group_4_1_1__0 )* ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3931:1: ( ( rule__CallMessage__Group_4_1_1__0 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3807:1: ( ( ( rule__CallMessage__Group_5_1__0 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3808:1: ( ( rule__CallMessage__Group_5_1__0 )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3931:1: ( ( rule__CallMessage__Group_4_1_1__0 )* )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3932:1: ( rule__CallMessage__Group_4_1_1__0 )*
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3808:1: ( ( rule__CallMessage__Group_5_1__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3809:1: ( rule__CallMessage__Group_5_1__0 )?
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getGroup_4_1_1()); 
+               before(grammarAccess.getCallMessageAccess().getGroup_5_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3933:1: ( rule__CallMessage__Group_4_1_1__0 )*
-            loop37:
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3810:1: ( rule__CallMessage__Group_5_1__0 )?
+            int alt35=2;
+            int LA35_0 = input.LA(1);
+
+            if ( (LA35_0==RULE_ID) ) {
+                alt35=1;
+            }
+            switch (alt35) {
+                case 1 :
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3810:2: rule__CallMessage__Group_5_1__0
+                    {
+                    pushFollow(FOLLOW_rule__CallMessage__Group_5_1__0_in_rule__CallMessage__Group_5__1__Impl7722);
+                    rule__CallMessage__Group_5_1__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getCallMessageAccess().getGroup_5_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CallMessage__Group_5__1__Impl"
+
+
+    // $ANTLR start "rule__CallMessage__Group_5__2"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3820:1: rule__CallMessage__Group_5__2 : rule__CallMessage__Group_5__2__Impl ;
+    public final void rule__CallMessage__Group_5__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3824:1: ( rule__CallMessage__Group_5__2__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3825:2: rule__CallMessage__Group_5__2__Impl
+            {
+            pushFollow(FOLLOW_rule__CallMessage__Group_5__2__Impl_in_rule__CallMessage__Group_5__27753);
+            rule__CallMessage__Group_5__2__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CallMessage__Group_5__2"
+
+
+    // $ANTLR start "rule__CallMessage__Group_5__2__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3831:1: rule__CallMessage__Group_5__2__Impl : ( ')' ) ;
+    public final void rule__CallMessage__Group_5__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3835:1: ( ( ')' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3836:1: ( ')' )
+            {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3836:1: ( ')' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3837:1: ')'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCallMessageAccess().getRightParenthesisKeyword_5_2()); 
+            }
+            match(input,36,FOLLOW_36_in_rule__CallMessage__Group_5__2__Impl7781); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getCallMessageAccess().getRightParenthesisKeyword_5_2()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CallMessage__Group_5__2__Impl"
+
+
+    // $ANTLR start "rule__CallMessage__Group_5_1__0"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3856:1: rule__CallMessage__Group_5_1__0 : rule__CallMessage__Group_5_1__0__Impl rule__CallMessage__Group_5_1__1 ;
+    public final void rule__CallMessage__Group_5_1__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3860:1: ( rule__CallMessage__Group_5_1__0__Impl rule__CallMessage__Group_5_1__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3861:2: rule__CallMessage__Group_5_1__0__Impl rule__CallMessage__Group_5_1__1
+            {
+            pushFollow(FOLLOW_rule__CallMessage__Group_5_1__0__Impl_in_rule__CallMessage__Group_5_1__07818);
+            rule__CallMessage__Group_5_1__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__CallMessage__Group_5_1__1_in_rule__CallMessage__Group_5_1__07821);
+            rule__CallMessage__Group_5_1__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CallMessage__Group_5_1__0"
+
+
+    // $ANTLR start "rule__CallMessage__Group_5_1__0__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3868:1: rule__CallMessage__Group_5_1__0__Impl : ( ( rule__CallMessage__ParameterAssignment_5_1_0 ) ) ;
+    public final void rule__CallMessage__Group_5_1__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3872:1: ( ( ( rule__CallMessage__ParameterAssignment_5_1_0 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3873:1: ( ( rule__CallMessage__ParameterAssignment_5_1_0 ) )
+            {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3873:1: ( ( rule__CallMessage__ParameterAssignment_5_1_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3874:1: ( rule__CallMessage__ParameterAssignment_5_1_0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCallMessageAccess().getParameterAssignment_5_1_0()); 
+            }
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3875:1: ( rule__CallMessage__ParameterAssignment_5_1_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3875:2: rule__CallMessage__ParameterAssignment_5_1_0
+            {
+            pushFollow(FOLLOW_rule__CallMessage__ParameterAssignment_5_1_0_in_rule__CallMessage__Group_5_1__0__Impl7848);
+            rule__CallMessage__ParameterAssignment_5_1_0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getCallMessageAccess().getParameterAssignment_5_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CallMessage__Group_5_1__0__Impl"
+
+
+    // $ANTLR start "rule__CallMessage__Group_5_1__1"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3885:1: rule__CallMessage__Group_5_1__1 : rule__CallMessage__Group_5_1__1__Impl ;
+    public final void rule__CallMessage__Group_5_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3889:1: ( rule__CallMessage__Group_5_1__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3890:2: rule__CallMessage__Group_5_1__1__Impl
+            {
+            pushFollow(FOLLOW_rule__CallMessage__Group_5_1__1__Impl_in_rule__CallMessage__Group_5_1__17878);
+            rule__CallMessage__Group_5_1__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CallMessage__Group_5_1__1"
+
+
+    // $ANTLR start "rule__CallMessage__Group_5_1__1__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3896:1: rule__CallMessage__Group_5_1__1__Impl : ( ( rule__CallMessage__Group_5_1_1__0 )* ) ;
+    public final void rule__CallMessage__Group_5_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3900:1: ( ( ( rule__CallMessage__Group_5_1_1__0 )* ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3901:1: ( ( rule__CallMessage__Group_5_1_1__0 )* )
+            {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3901:1: ( ( rule__CallMessage__Group_5_1_1__0 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3902:1: ( rule__CallMessage__Group_5_1_1__0 )*
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCallMessageAccess().getGroup_5_1_1()); 
+            }
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3903:1: ( rule__CallMessage__Group_5_1_1__0 )*
+            loop36:
             do {
-                int alt37=2;
-                int LA37_0 = input.LA(1);
+                int alt36=2;
+                int LA36_0 = input.LA(1);
 
-                if ( (LA37_0==21) ) {
-                    alt37=1;
+                if ( (LA36_0==21) ) {
+                    alt36=1;
                 }
 
 
-                switch (alt37) {
+                switch (alt36) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3933:2: rule__CallMessage__Group_4_1_1__0
+            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3903:2: rule__CallMessage__Group_5_1_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__CallMessage__Group_4_1_1__0_in_rule__CallMessage__Group_4_1__1__Impl7965);
-            	    rule__CallMessage__Group_4_1_1__0();
+            	    pushFollow(FOLLOW_rule__CallMessage__Group_5_1_1__0_in_rule__CallMessage__Group_5_1__1__Impl7905);
+            	    rule__CallMessage__Group_5_1_1__0();
 
             	    state._fsp--;
             	    if (state.failed) return ;
@@ -11545,12 +11446,12 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop37;
+            	    break loop36;
                 }
             } while (true);
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getGroup_4_1_1()); 
+               after(grammarAccess.getCallMessageAccess().getGroup_5_1_1()); 
             }
 
             }
@@ -11570,100 +11471,26 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__CallMessage__Group_4_1__1__Impl"
+    // $ANTLR end "rule__CallMessage__Group_5_1__1__Impl"
 
 
-    // $ANTLR start "rule__CallMessage__Group_4_1_1__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3947:1: rule__CallMessage__Group_4_1_1__0 : rule__CallMessage__Group_4_1_1__0__Impl rule__CallMessage__Group_4_1_1__1 ;
-    public final void rule__CallMessage__Group_4_1_1__0() throws RecognitionException {
+    // $ANTLR start "rule__CallMessage__Group_5_1_1__0"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3917:1: rule__CallMessage__Group_5_1_1__0 : rule__CallMessage__Group_5_1_1__0__Impl rule__CallMessage__Group_5_1_1__1 ;
+    public final void rule__CallMessage__Group_5_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3951:1: ( rule__CallMessage__Group_4_1_1__0__Impl rule__CallMessage__Group_4_1_1__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3952:2: rule__CallMessage__Group_4_1_1__0__Impl rule__CallMessage__Group_4_1_1__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3921:1: ( rule__CallMessage__Group_5_1_1__0__Impl rule__CallMessage__Group_5_1_1__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3922:2: rule__CallMessage__Group_5_1_1__0__Impl rule__CallMessage__Group_5_1_1__1
             {
-            pushFollow(FOLLOW_rule__CallMessage__Group_4_1_1__0__Impl_in_rule__CallMessage__Group_4_1_1__08000);
-            rule__CallMessage__Group_4_1_1__0__Impl();
+            pushFollow(FOLLOW_rule__CallMessage__Group_5_1_1__0__Impl_in_rule__CallMessage__Group_5_1_1__07940);
+            rule__CallMessage__Group_5_1_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CallMessage__Group_4_1_1__1_in_rule__CallMessage__Group_4_1_1__08003);
-            rule__CallMessage__Group_4_1_1__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CallMessage__Group_4_1_1__0"
-
-
-    // $ANTLR start "rule__CallMessage__Group_4_1_1__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3959:1: rule__CallMessage__Group_4_1_1__0__Impl : ( ',' ) ;
-    public final void rule__CallMessage__Group_4_1_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3963:1: ( ( ',' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3964:1: ( ',' )
-            {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3964:1: ( ',' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3965:1: ','
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getCommaKeyword_4_1_1_0()); 
-            }
-            match(input,21,FOLLOW_21_in_rule__CallMessage__Group_4_1_1__0__Impl8031); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getCommaKeyword_4_1_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CallMessage__Group_4_1_1__0__Impl"
-
-
-    // $ANTLR start "rule__CallMessage__Group_4_1_1__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3978:1: rule__CallMessage__Group_4_1_1__1 : rule__CallMessage__Group_4_1_1__1__Impl ;
-    public final void rule__CallMessage__Group_4_1_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3982:1: ( rule__CallMessage__Group_4_1_1__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3983:2: rule__CallMessage__Group_4_1_1__1__Impl
-            {
-            pushFollow(FOLLOW_rule__CallMessage__Group_4_1_1__1__Impl_in_rule__CallMessage__Group_4_1_1__18062);
-            rule__CallMessage__Group_4_1_1__1__Impl();
+            pushFollow(FOLLOW_rule__CallMessage__Group_5_1_1__1_in_rule__CallMessage__Group_5_1_1__07943);
+            rule__CallMessage__Group_5_1_1__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -11682,38 +11509,28 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__CallMessage__Group_4_1_1__1"
+    // $ANTLR end "rule__CallMessage__Group_5_1_1__0"
 
 
-    // $ANTLR start "rule__CallMessage__Group_4_1_1__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3989:1: rule__CallMessage__Group_4_1_1__1__Impl : ( ( rule__CallMessage__ParameterAssignment_4_1_1_1 ) ) ;
-    public final void rule__CallMessage__Group_4_1_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CallMessage__Group_5_1_1__0__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3929:1: rule__CallMessage__Group_5_1_1__0__Impl : ( ',' ) ;
+    public final void rule__CallMessage__Group_5_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3993:1: ( ( ( rule__CallMessage__ParameterAssignment_4_1_1_1 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3994:1: ( ( rule__CallMessage__ParameterAssignment_4_1_1_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3933:1: ( ( ',' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3934:1: ( ',' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3994:1: ( ( rule__CallMessage__ParameterAssignment_4_1_1_1 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3995:1: ( rule__CallMessage__ParameterAssignment_4_1_1_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3934:1: ( ',' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3935:1: ','
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getParameterAssignment_4_1_1_1()); 
+               before(grammarAccess.getCallMessageAccess().getCommaKeyword_5_1_1_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3996:1: ( rule__CallMessage__ParameterAssignment_4_1_1_1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3996:2: rule__CallMessage__ParameterAssignment_4_1_1_1
-            {
-            pushFollow(FOLLOW_rule__CallMessage__ParameterAssignment_4_1_1_1_in_rule__CallMessage__Group_4_1_1__1__Impl8089);
-            rule__CallMessage__ParameterAssignment_4_1_1_1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
+            match(input,21,FOLLOW_21_in_rule__CallMessage__Group_5_1_1__0__Impl7971); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getParameterAssignment_4_1_1_1()); 
+               after(grammarAccess.getCallMessageAccess().getCommaKeyword_5_1_1_0()); 
             }
 
             }
@@ -11733,25 +11550,109 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__CallMessage__Group_4_1_1__1__Impl"
+    // $ANTLR end "rule__CallMessage__Group_5_1_1__0__Impl"
+
+
+    // $ANTLR start "rule__CallMessage__Group_5_1_1__1"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3948:1: rule__CallMessage__Group_5_1_1__1 : rule__CallMessage__Group_5_1_1__1__Impl ;
+    public final void rule__CallMessage__Group_5_1_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3952:1: ( rule__CallMessage__Group_5_1_1__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3953:2: rule__CallMessage__Group_5_1_1__1__Impl
+            {
+            pushFollow(FOLLOW_rule__CallMessage__Group_5_1_1__1__Impl_in_rule__CallMessage__Group_5_1_1__18002);
+            rule__CallMessage__Group_5_1_1__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CallMessage__Group_5_1_1__1"
+
+
+    // $ANTLR start "rule__CallMessage__Group_5_1_1__1__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3959:1: rule__CallMessage__Group_5_1_1__1__Impl : ( ( rule__CallMessage__ParameterAssignment_5_1_1_1 ) ) ;
+    public final void rule__CallMessage__Group_5_1_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3963:1: ( ( ( rule__CallMessage__ParameterAssignment_5_1_1_1 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3964:1: ( ( rule__CallMessage__ParameterAssignment_5_1_1_1 ) )
+            {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3964:1: ( ( rule__CallMessage__ParameterAssignment_5_1_1_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3965:1: ( rule__CallMessage__ParameterAssignment_5_1_1_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCallMessageAccess().getParameterAssignment_5_1_1_1()); 
+            }
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3966:1: ( rule__CallMessage__ParameterAssignment_5_1_1_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3966:2: rule__CallMessage__ParameterAssignment_5_1_1_1
+            {
+            pushFollow(FOLLOW_rule__CallMessage__ParameterAssignment_5_1_1_1_in_rule__CallMessage__Group_5_1_1__1__Impl8029);
+            rule__CallMessage__ParameterAssignment_5_1_1_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getCallMessageAccess().getParameterAssignment_5_1_1_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CallMessage__Group_5_1_1__1__Impl"
 
 
     // $ANTLR start "rule__NewMessage__Group__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4010:1: rule__NewMessage__Group__0 : rule__NewMessage__Group__0__Impl rule__NewMessage__Group__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3980:1: rule__NewMessage__Group__0 : rule__NewMessage__Group__0__Impl rule__NewMessage__Group__1 ;
     public final void rule__NewMessage__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4014:1: ( rule__NewMessage__Group__0__Impl rule__NewMessage__Group__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4015:2: rule__NewMessage__Group__0__Impl rule__NewMessage__Group__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3984:1: ( rule__NewMessage__Group__0__Impl rule__NewMessage__Group__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3985:2: rule__NewMessage__Group__0__Impl rule__NewMessage__Group__1
             {
-            pushFollow(FOLLOW_rule__NewMessage__Group__0__Impl_in_rule__NewMessage__Group__08123);
+            pushFollow(FOLLOW_rule__NewMessage__Group__0__Impl_in_rule__NewMessage__Group__08063);
             rule__NewMessage__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__NewMessage__Group__1_in_rule__NewMessage__Group__08126);
+            pushFollow(FOLLOW_rule__NewMessage__Group__1_in_rule__NewMessage__Group__08066);
             rule__NewMessage__Group__1();
 
             state._fsp--;
@@ -11775,26 +11676,26 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__NewMessage__Group__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4022:1: rule__NewMessage__Group__0__Impl : ( ( rule__NewMessage__SourceParticipantAssignment_0 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3992:1: rule__NewMessage__Group__0__Impl : ( ( rule__NewMessage__SourceAssignment_0 ) ) ;
     public final void rule__NewMessage__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4026:1: ( ( ( rule__NewMessage__SourceParticipantAssignment_0 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4027:1: ( ( rule__NewMessage__SourceParticipantAssignment_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3996:1: ( ( ( rule__NewMessage__SourceAssignment_0 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3997:1: ( ( rule__NewMessage__SourceAssignment_0 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4027:1: ( ( rule__NewMessage__SourceParticipantAssignment_0 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4028:1: ( rule__NewMessage__SourceParticipantAssignment_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3997:1: ( ( rule__NewMessage__SourceAssignment_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3998:1: ( rule__NewMessage__SourceAssignment_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewMessageAccess().getSourceParticipantAssignment_0()); 
+               before(grammarAccess.getNewMessageAccess().getSourceAssignment_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4029:1: ( rule__NewMessage__SourceParticipantAssignment_0 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4029:2: rule__NewMessage__SourceParticipantAssignment_0
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3999:1: ( rule__NewMessage__SourceAssignment_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:3999:2: rule__NewMessage__SourceAssignment_0
             {
-            pushFollow(FOLLOW_rule__NewMessage__SourceParticipantAssignment_0_in_rule__NewMessage__Group__0__Impl8153);
-            rule__NewMessage__SourceParticipantAssignment_0();
+            pushFollow(FOLLOW_rule__NewMessage__SourceAssignment_0_in_rule__NewMessage__Group__0__Impl8093);
+            rule__NewMessage__SourceAssignment_0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -11802,7 +11703,7 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewMessageAccess().getSourceParticipantAssignment_0()); 
+               after(grammarAccess.getNewMessageAccess().getSourceAssignment_0()); 
             }
 
             }
@@ -11826,21 +11727,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__NewMessage__Group__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4039:1: rule__NewMessage__Group__1 : rule__NewMessage__Group__1__Impl rule__NewMessage__Group__2 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4009:1: rule__NewMessage__Group__1 : rule__NewMessage__Group__1__Impl rule__NewMessage__Group__2 ;
     public final void rule__NewMessage__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4043:1: ( rule__NewMessage__Group__1__Impl rule__NewMessage__Group__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4044:2: rule__NewMessage__Group__1__Impl rule__NewMessage__Group__2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4013:1: ( rule__NewMessage__Group__1__Impl rule__NewMessage__Group__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4014:2: rule__NewMessage__Group__1__Impl rule__NewMessage__Group__2
             {
-            pushFollow(FOLLOW_rule__NewMessage__Group__1__Impl_in_rule__NewMessage__Group__18183);
+            pushFollow(FOLLOW_rule__NewMessage__Group__1__Impl_in_rule__NewMessage__Group__18123);
             rule__NewMessage__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__NewMessage__Group__2_in_rule__NewMessage__Group__18186);
+            pushFollow(FOLLOW_rule__NewMessage__Group__2_in_rule__NewMessage__Group__18126);
             rule__NewMessage__Group__2();
 
             state._fsp--;
@@ -11864,22 +11765,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__NewMessage__Group__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4051:1: rule__NewMessage__Group__1__Impl : ( 'creates' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4021:1: rule__NewMessage__Group__1__Impl : ( 'creates' ) ;
     public final void rule__NewMessage__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4055:1: ( ( 'creates' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4056:1: ( 'creates' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4025:1: ( ( 'creates' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4026:1: ( 'creates' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4056:1: ( 'creates' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4057:1: 'creates'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4026:1: ( 'creates' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4027:1: 'creates'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNewMessageAccess().getCreatesKeyword_1()); 
             }
-            match(input,37,FOLLOW_37_in_rule__NewMessage__Group__1__Impl8214); if (state.failed) return ;
+            match(input,37,FOLLOW_37_in_rule__NewMessage__Group__1__Impl8154); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNewMessageAccess().getCreatesKeyword_1()); 
             }
@@ -11905,21 +11806,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__NewMessage__Group__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4070:1: rule__NewMessage__Group__2 : rule__NewMessage__Group__2__Impl rule__NewMessage__Group__3 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4040:1: rule__NewMessage__Group__2 : rule__NewMessage__Group__2__Impl rule__NewMessage__Group__3 ;
     public final void rule__NewMessage__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4074:1: ( rule__NewMessage__Group__2__Impl rule__NewMessage__Group__3 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4075:2: rule__NewMessage__Group__2__Impl rule__NewMessage__Group__3
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4044:1: ( rule__NewMessage__Group__2__Impl rule__NewMessage__Group__3 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4045:2: rule__NewMessage__Group__2__Impl rule__NewMessage__Group__3
             {
-            pushFollow(FOLLOW_rule__NewMessage__Group__2__Impl_in_rule__NewMessage__Group__28245);
+            pushFollow(FOLLOW_rule__NewMessage__Group__2__Impl_in_rule__NewMessage__Group__28185);
             rule__NewMessage__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__NewMessage__Group__3_in_rule__NewMessage__Group__28248);
+            pushFollow(FOLLOW_rule__NewMessage__Group__3_in_rule__NewMessage__Group__28188);
             rule__NewMessage__Group__3();
 
             state._fsp--;
@@ -11943,26 +11844,26 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__NewMessage__Group__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4082:1: rule__NewMessage__Group__2__Impl : ( ( rule__NewMessage__TargetParticipantAssignment_2 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4052:1: rule__NewMessage__Group__2__Impl : ( ( rule__NewMessage__TargetAssignment_2 ) ) ;
     public final void rule__NewMessage__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4086:1: ( ( ( rule__NewMessage__TargetParticipantAssignment_2 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4087:1: ( ( rule__NewMessage__TargetParticipantAssignment_2 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4056:1: ( ( ( rule__NewMessage__TargetAssignment_2 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4057:1: ( ( rule__NewMessage__TargetAssignment_2 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4087:1: ( ( rule__NewMessage__TargetParticipantAssignment_2 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4088:1: ( rule__NewMessage__TargetParticipantAssignment_2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4057:1: ( ( rule__NewMessage__TargetAssignment_2 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4058:1: ( rule__NewMessage__TargetAssignment_2 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewMessageAccess().getTargetParticipantAssignment_2()); 
+               before(grammarAccess.getNewMessageAccess().getTargetAssignment_2()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4089:1: ( rule__NewMessage__TargetParticipantAssignment_2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4089:2: rule__NewMessage__TargetParticipantAssignment_2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4059:1: ( rule__NewMessage__TargetAssignment_2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4059:2: rule__NewMessage__TargetAssignment_2
             {
-            pushFollow(FOLLOW_rule__NewMessage__TargetParticipantAssignment_2_in_rule__NewMessage__Group__2__Impl8275);
-            rule__NewMessage__TargetParticipantAssignment_2();
+            pushFollow(FOLLOW_rule__NewMessage__TargetAssignment_2_in_rule__NewMessage__Group__2__Impl8215);
+            rule__NewMessage__TargetAssignment_2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -11970,7 +11871,7 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewMessageAccess().getTargetParticipantAssignment_2()); 
+               after(grammarAccess.getNewMessageAccess().getTargetAssignment_2()); 
             }
 
             }
@@ -11994,17 +11895,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__NewMessage__Group__3"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4099:1: rule__NewMessage__Group__3 : rule__NewMessage__Group__3__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4069:1: rule__NewMessage__Group__3 : rule__NewMessage__Group__3__Impl rule__NewMessage__Group__4 ;
     public final void rule__NewMessage__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4103:1: ( rule__NewMessage__Group__3__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4104:2: rule__NewMessage__Group__3__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4073:1: ( rule__NewMessage__Group__3__Impl rule__NewMessage__Group__4 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4074:2: rule__NewMessage__Group__3__Impl rule__NewMessage__Group__4
             {
-            pushFollow(FOLLOW_rule__NewMessage__Group__3__Impl_in_rule__NewMessage__Group__38305);
+            pushFollow(FOLLOW_rule__NewMessage__Group__3__Impl_in_rule__NewMessage__Group__38245);
             rule__NewMessage__Group__3__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__NewMessage__Group__4_in_rule__NewMessage__Group__38248);
+            rule__NewMessage__Group__4();
 
             state._fsp--;
             if (state.failed) return ;
@@ -12027,33 +11933,33 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__NewMessage__Group__3__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4110:1: rule__NewMessage__Group__3__Impl : ( ( rule__NewMessage__Group_3__0 )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4081:1: rule__NewMessage__Group__3__Impl : ( ( rule__NewMessage__Group_3__0 )? ) ;
     public final void rule__NewMessage__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4114:1: ( ( ( rule__NewMessage__Group_3__0 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4115:1: ( ( rule__NewMessage__Group_3__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4085:1: ( ( ( rule__NewMessage__Group_3__0 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4086:1: ( ( rule__NewMessage__Group_3__0 )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4115:1: ( ( rule__NewMessage__Group_3__0 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4116:1: ( rule__NewMessage__Group_3__0 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4086:1: ( ( rule__NewMessage__Group_3__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4087:1: ( rule__NewMessage__Group_3__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNewMessageAccess().getGroup_3()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4117:1: ( rule__NewMessage__Group_3__0 )?
-            int alt38=2;
-            int LA38_0 = input.LA(1);
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4088:1: ( rule__NewMessage__Group_3__0 )?
+            int alt37=2;
+            int LA37_0 = input.LA(1);
 
-            if ( (LA38_0==35) ) {
-                alt38=1;
+            if ( (LA37_0==34) ) {
+                alt37=1;
             }
-            switch (alt38) {
+            switch (alt37) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4117:2: rule__NewMessage__Group_3__0
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4088:2: rule__NewMessage__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__NewMessage__Group_3__0_in_rule__NewMessage__Group__3__Impl8332);
+                    pushFollow(FOLLOW_rule__NewMessage__Group_3__0_in_rule__NewMessage__Group__3__Impl8275);
                     rule__NewMessage__Group_3__0();
 
                     state._fsp--;
@@ -12088,22 +11994,117 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
     // $ANTLR end "rule__NewMessage__Group__3__Impl"
 
 
+    // $ANTLR start "rule__NewMessage__Group__4"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4098:1: rule__NewMessage__Group__4 : rule__NewMessage__Group__4__Impl ;
+    public final void rule__NewMessage__Group__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4102:1: ( rule__NewMessage__Group__4__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4103:2: rule__NewMessage__Group__4__Impl
+            {
+            pushFollow(FOLLOW_rule__NewMessage__Group__4__Impl_in_rule__NewMessage__Group__48306);
+            rule__NewMessage__Group__4__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NewMessage__Group__4"
+
+
+    // $ANTLR start "rule__NewMessage__Group__4__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4109:1: rule__NewMessage__Group__4__Impl : ( ( rule__NewMessage__Group_4__0 )? ) ;
+    public final void rule__NewMessage__Group__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4113:1: ( ( ( rule__NewMessage__Group_4__0 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4114:1: ( ( rule__NewMessage__Group_4__0 )? )
+            {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4114:1: ( ( rule__NewMessage__Group_4__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4115:1: ( rule__NewMessage__Group_4__0 )?
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getNewMessageAccess().getGroup_4()); 
+            }
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4116:1: ( rule__NewMessage__Group_4__0 )?
+            int alt38=2;
+            int LA38_0 = input.LA(1);
+
+            if ( (LA38_0==35) ) {
+                alt38=1;
+            }
+            switch (alt38) {
+                case 1 :
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4116:2: rule__NewMessage__Group_4__0
+                    {
+                    pushFollow(FOLLOW_rule__NewMessage__Group_4__0_in_rule__NewMessage__Group__4__Impl8333);
+                    rule__NewMessage__Group_4__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getNewMessageAccess().getGroup_4()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NewMessage__Group__4__Impl"
+
+
     // $ANTLR start "rule__NewMessage__Group_3__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4135:1: rule__NewMessage__Group_3__0 : rule__NewMessage__Group_3__0__Impl rule__NewMessage__Group_3__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4136:1: rule__NewMessage__Group_3__0 : rule__NewMessage__Group_3__0__Impl rule__NewMessage__Group_3__1 ;
     public final void rule__NewMessage__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4139:1: ( rule__NewMessage__Group_3__0__Impl rule__NewMessage__Group_3__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4140:2: rule__NewMessage__Group_3__0__Impl rule__NewMessage__Group_3__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4140:1: ( rule__NewMessage__Group_3__0__Impl rule__NewMessage__Group_3__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4141:2: rule__NewMessage__Group_3__0__Impl rule__NewMessage__Group_3__1
             {
-            pushFollow(FOLLOW_rule__NewMessage__Group_3__0__Impl_in_rule__NewMessage__Group_3__08371);
+            pushFollow(FOLLOW_rule__NewMessage__Group_3__0__Impl_in_rule__NewMessage__Group_3__08374);
             rule__NewMessage__Group_3__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__NewMessage__Group_3__1_in_rule__NewMessage__Group_3__08374);
+            pushFollow(FOLLOW_rule__NewMessage__Group_3__1_in_rule__NewMessage__Group_3__08377);
             rule__NewMessage__Group_3__1();
 
             state._fsp--;
@@ -12127,30 +12128,30 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__NewMessage__Group_3__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4147:1: rule__NewMessage__Group_3__0__Impl : ( ( '(' ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4148:1: rule__NewMessage__Group_3__0__Impl : ( ( '.' ) ) ;
     public final void rule__NewMessage__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4151:1: ( ( ( '(' ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4152:1: ( ( '(' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4152:1: ( ( ( '.' ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4153:1: ( ( '.' ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4152:1: ( ( '(' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4153:1: ( '(' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4153:1: ( ( '.' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4154:1: ( '.' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewMessageAccess().getLeftParenthesisKeyword_3_0()); 
+               before(grammarAccess.getNewMessageAccess().getFullStopKeyword_3_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4154:1: ( '(' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4155:2: '('
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4155:1: ( '.' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4156:2: '.'
             {
-            match(input,35,FOLLOW_35_in_rule__NewMessage__Group_3__0__Impl8403); if (state.failed) return ;
+            match(input,34,FOLLOW_34_in_rule__NewMessage__Group_3__0__Impl8406); if (state.failed) return ;
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewMessageAccess().getLeftParenthesisKeyword_3_0()); 
+               after(grammarAccess.getNewMessageAccess().getFullStopKeyword_3_0()); 
             }
 
             }
@@ -12174,22 +12175,17 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__NewMessage__Group_3__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4166:1: rule__NewMessage__Group_3__1 : rule__NewMessage__Group_3__1__Impl rule__NewMessage__Group_3__2 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4167:1: rule__NewMessage__Group_3__1 : rule__NewMessage__Group_3__1__Impl ;
     public final void rule__NewMessage__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4170:1: ( rule__NewMessage__Group_3__1__Impl rule__NewMessage__Group_3__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4171:2: rule__NewMessage__Group_3__1__Impl rule__NewMessage__Group_3__2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4171:1: ( rule__NewMessage__Group_3__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4172:2: rule__NewMessage__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__NewMessage__Group_3__1__Impl_in_rule__NewMessage__Group_3__18435);
+            pushFollow(FOLLOW_rule__NewMessage__Group_3__1__Impl_in_rule__NewMessage__Group_3__18438);
             rule__NewMessage__Group_3__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__NewMessage__Group_3__2_in_rule__NewMessage__Group_3__18438);
-            rule__NewMessage__Group_3__2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -12212,45 +12208,34 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__NewMessage__Group_3__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4178:1: rule__NewMessage__Group_3__1__Impl : ( ( rule__NewMessage__Group_3_1__0 )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4178:1: rule__NewMessage__Group_3__1__Impl : ( ( rule__NewMessage__NameAssignment_3_1 ) ) ;
     public final void rule__NewMessage__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4182:1: ( ( ( rule__NewMessage__Group_3_1__0 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4183:1: ( ( rule__NewMessage__Group_3_1__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4182:1: ( ( ( rule__NewMessage__NameAssignment_3_1 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4183:1: ( ( rule__NewMessage__NameAssignment_3_1 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4183:1: ( ( rule__NewMessage__Group_3_1__0 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4184:1: ( rule__NewMessage__Group_3_1__0 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4183:1: ( ( rule__NewMessage__NameAssignment_3_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4184:1: ( rule__NewMessage__NameAssignment_3_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewMessageAccess().getGroup_3_1()); 
+               before(grammarAccess.getNewMessageAccess().getNameAssignment_3_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4185:1: ( rule__NewMessage__Group_3_1__0 )?
-            int alt39=2;
-            int LA39_0 = input.LA(1);
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4185:1: ( rule__NewMessage__NameAssignment_3_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4185:2: rule__NewMessage__NameAssignment_3_1
+            {
+            pushFollow(FOLLOW_rule__NewMessage__NameAssignment_3_1_in_rule__NewMessage__Group_3__1__Impl8465);
+            rule__NewMessage__NameAssignment_3_1();
 
-            if ( (LA39_0==RULE_ID) ) {
-                alt39=1;
-            }
-            switch (alt39) {
-                case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4185:2: rule__NewMessage__Group_3_1__0
-                    {
-                    pushFollow(FOLLOW_rule__NewMessage__Group_3_1__0_in_rule__NewMessage__Group_3__1__Impl8465);
-                    rule__NewMessage__Group_3_1__0();
-
-                    state._fsp--;
-                    if (state.failed) return ;
-
-                    }
-                    break;
+            state._fsp--;
+            if (state.failed) return ;
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewMessageAccess().getGroup_3_1()); 
+               after(grammarAccess.getNewMessageAccess().getNameAssignment_3_1()); 
             }
 
             }
@@ -12273,18 +12258,23 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
     // $ANTLR end "rule__NewMessage__Group_3__1__Impl"
 
 
-    // $ANTLR start "rule__NewMessage__Group_3__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4195:1: rule__NewMessage__Group_3__2 : rule__NewMessage__Group_3__2__Impl ;
-    public final void rule__NewMessage__Group_3__2() throws RecognitionException {
+    // $ANTLR start "rule__NewMessage__Group_4__0"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4199:1: rule__NewMessage__Group_4__0 : rule__NewMessage__Group_4__0__Impl rule__NewMessage__Group_4__1 ;
+    public final void rule__NewMessage__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4199:1: ( rule__NewMessage__Group_3__2__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4200:2: rule__NewMessage__Group_3__2__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4203:1: ( rule__NewMessage__Group_4__0__Impl rule__NewMessage__Group_4__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4204:2: rule__NewMessage__Group_4__0__Impl rule__NewMessage__Group_4__1
             {
-            pushFollow(FOLLOW_rule__NewMessage__Group_3__2__Impl_in_rule__NewMessage__Group_3__28496);
-            rule__NewMessage__Group_3__2__Impl();
+            pushFollow(FOLLOW_rule__NewMessage__Group_4__0__Impl_in_rule__NewMessage__Group_4__08499);
+            rule__NewMessage__Group_4__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__NewMessage__Group_4__1_in_rule__NewMessage__Group_4__08502);
+            rule__NewMessage__Group_4__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -12303,117 +12293,34 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__NewMessage__Group_3__2"
+    // $ANTLR end "rule__NewMessage__Group_4__0"
 
 
-    // $ANTLR start "rule__NewMessage__Group_3__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4206:1: rule__NewMessage__Group_3__2__Impl : ( ')' ) ;
-    public final void rule__NewMessage__Group_3__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4210:1: ( ( ')' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4211:1: ( ')' )
-            {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4211:1: ( ')' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4212:1: ')'
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewMessageAccess().getRightParenthesisKeyword_3_2()); 
-            }
-            match(input,36,FOLLOW_36_in_rule__NewMessage__Group_3__2__Impl8524); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewMessageAccess().getRightParenthesisKeyword_3_2()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__NewMessage__Group_3__2__Impl"
-
-
-    // $ANTLR start "rule__NewMessage__Group_3_1__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4231:1: rule__NewMessage__Group_3_1__0 : rule__NewMessage__Group_3_1__0__Impl rule__NewMessage__Group_3_1__1 ;
-    public final void rule__NewMessage__Group_3_1__0() throws RecognitionException {
+    // $ANTLR start "rule__NewMessage__Group_4__0__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4211:1: rule__NewMessage__Group_4__0__Impl : ( ( '(' ) ) ;
+    public final void rule__NewMessage__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4235:1: ( rule__NewMessage__Group_3_1__0__Impl rule__NewMessage__Group_3_1__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4236:2: rule__NewMessage__Group_3_1__0__Impl rule__NewMessage__Group_3_1__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4215:1: ( ( ( '(' ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4216:1: ( ( '(' ) )
             {
-            pushFollow(FOLLOW_rule__NewMessage__Group_3_1__0__Impl_in_rule__NewMessage__Group_3_1__08561);
-            rule__NewMessage__Group_3_1__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__NewMessage__Group_3_1__1_in_rule__NewMessage__Group_3_1__08564);
-            rule__NewMessage__Group_3_1__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__NewMessage__Group_3_1__0"
-
-
-    // $ANTLR start "rule__NewMessage__Group_3_1__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4243:1: rule__NewMessage__Group_3_1__0__Impl : ( ( rule__NewMessage__ParameterAssignment_3_1_0 ) ) ;
-    public final void rule__NewMessage__Group_3_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4247:1: ( ( ( rule__NewMessage__ParameterAssignment_3_1_0 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4248:1: ( ( rule__NewMessage__ParameterAssignment_3_1_0 ) )
-            {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4248:1: ( ( rule__NewMessage__ParameterAssignment_3_1_0 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4249:1: ( rule__NewMessage__ParameterAssignment_3_1_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4216:1: ( ( '(' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4217:1: ( '(' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewMessageAccess().getParameterAssignment_3_1_0()); 
+               before(grammarAccess.getNewMessageAccess().getLeftParenthesisKeyword_4_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4250:1: ( rule__NewMessage__ParameterAssignment_3_1_0 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4250:2: rule__NewMessage__ParameterAssignment_3_1_0
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4218:1: ( '(' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4219:2: '('
             {
-            pushFollow(FOLLOW_rule__NewMessage__ParameterAssignment_3_1_0_in_rule__NewMessage__Group_3_1__0__Impl8591);
-            rule__NewMessage__ParameterAssignment_3_1_0();
-
-            state._fsp--;
-            if (state.failed) return ;
+            match(input,35,FOLLOW_35_in_rule__NewMessage__Group_4__0__Impl8531); if (state.failed) return ;
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewMessageAccess().getParameterAssignment_3_1_0()); 
+               after(grammarAccess.getNewMessageAccess().getLeftParenthesisKeyword_4_0()); 
             }
 
             }
@@ -12433,21 +12340,26 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__NewMessage__Group_3_1__0__Impl"
+    // $ANTLR end "rule__NewMessage__Group_4__0__Impl"
 
 
-    // $ANTLR start "rule__NewMessage__Group_3_1__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4260:1: rule__NewMessage__Group_3_1__1 : rule__NewMessage__Group_3_1__1__Impl ;
-    public final void rule__NewMessage__Group_3_1__1() throws RecognitionException {
+    // $ANTLR start "rule__NewMessage__Group_4__1"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4230:1: rule__NewMessage__Group_4__1 : rule__NewMessage__Group_4__1__Impl rule__NewMessage__Group_4__2 ;
+    public final void rule__NewMessage__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4264:1: ( rule__NewMessage__Group_3_1__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4265:2: rule__NewMessage__Group_3_1__1__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4234:1: ( rule__NewMessage__Group_4__1__Impl rule__NewMessage__Group_4__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4235:2: rule__NewMessage__Group_4__1__Impl rule__NewMessage__Group_4__2
             {
-            pushFollow(FOLLOW_rule__NewMessage__Group_3_1__1__Impl_in_rule__NewMessage__Group_3_1__18621);
-            rule__NewMessage__Group_3_1__1__Impl();
+            pushFollow(FOLLOW_rule__NewMessage__Group_4__1__Impl_in_rule__NewMessage__Group_4__18563);
+            rule__NewMessage__Group_4__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__NewMessage__Group_4__2_in_rule__NewMessage__Group_4__18566);
+            rule__NewMessage__Group_4__2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -12466,26 +12378,284 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__NewMessage__Group_3_1__1"
+    // $ANTLR end "rule__NewMessage__Group_4__1"
 
 
-    // $ANTLR start "rule__NewMessage__Group_3_1__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4271:1: rule__NewMessage__Group_3_1__1__Impl : ( ( rule__NewMessage__Group_3_1_1__0 )* ) ;
-    public final void rule__NewMessage__Group_3_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__NewMessage__Group_4__1__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4242:1: rule__NewMessage__Group_4__1__Impl : ( ( rule__NewMessage__Group_4_1__0 )? ) ;
+    public final void rule__NewMessage__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4275:1: ( ( ( rule__NewMessage__Group_3_1_1__0 )* ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4276:1: ( ( rule__NewMessage__Group_3_1_1__0 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4246:1: ( ( ( rule__NewMessage__Group_4_1__0 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4247:1: ( ( rule__NewMessage__Group_4_1__0 )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4276:1: ( ( rule__NewMessage__Group_3_1_1__0 )* )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4277:1: ( rule__NewMessage__Group_3_1_1__0 )*
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4247:1: ( ( rule__NewMessage__Group_4_1__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4248:1: ( rule__NewMessage__Group_4_1__0 )?
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewMessageAccess().getGroup_3_1_1()); 
+               before(grammarAccess.getNewMessageAccess().getGroup_4_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4278:1: ( rule__NewMessage__Group_3_1_1__0 )*
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4249:1: ( rule__NewMessage__Group_4_1__0 )?
+            int alt39=2;
+            int LA39_0 = input.LA(1);
+
+            if ( (LA39_0==RULE_ID) ) {
+                alt39=1;
+            }
+            switch (alt39) {
+                case 1 :
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4249:2: rule__NewMessage__Group_4_1__0
+                    {
+                    pushFollow(FOLLOW_rule__NewMessage__Group_4_1__0_in_rule__NewMessage__Group_4__1__Impl8593);
+                    rule__NewMessage__Group_4_1__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getNewMessageAccess().getGroup_4_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NewMessage__Group_4__1__Impl"
+
+
+    // $ANTLR start "rule__NewMessage__Group_4__2"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4259:1: rule__NewMessage__Group_4__2 : rule__NewMessage__Group_4__2__Impl ;
+    public final void rule__NewMessage__Group_4__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4263:1: ( rule__NewMessage__Group_4__2__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4264:2: rule__NewMessage__Group_4__2__Impl
+            {
+            pushFollow(FOLLOW_rule__NewMessage__Group_4__2__Impl_in_rule__NewMessage__Group_4__28624);
+            rule__NewMessage__Group_4__2__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NewMessage__Group_4__2"
+
+
+    // $ANTLR start "rule__NewMessage__Group_4__2__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4270:1: rule__NewMessage__Group_4__2__Impl : ( ')' ) ;
+    public final void rule__NewMessage__Group_4__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4274:1: ( ( ')' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4275:1: ( ')' )
+            {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4275:1: ( ')' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4276:1: ')'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getNewMessageAccess().getRightParenthesisKeyword_4_2()); 
+            }
+            match(input,36,FOLLOW_36_in_rule__NewMessage__Group_4__2__Impl8652); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getNewMessageAccess().getRightParenthesisKeyword_4_2()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NewMessage__Group_4__2__Impl"
+
+
+    // $ANTLR start "rule__NewMessage__Group_4_1__0"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4295:1: rule__NewMessage__Group_4_1__0 : rule__NewMessage__Group_4_1__0__Impl rule__NewMessage__Group_4_1__1 ;
+    public final void rule__NewMessage__Group_4_1__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4299:1: ( rule__NewMessage__Group_4_1__0__Impl rule__NewMessage__Group_4_1__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4300:2: rule__NewMessage__Group_4_1__0__Impl rule__NewMessage__Group_4_1__1
+            {
+            pushFollow(FOLLOW_rule__NewMessage__Group_4_1__0__Impl_in_rule__NewMessage__Group_4_1__08689);
+            rule__NewMessage__Group_4_1__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__NewMessage__Group_4_1__1_in_rule__NewMessage__Group_4_1__08692);
+            rule__NewMessage__Group_4_1__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NewMessage__Group_4_1__0"
+
+
+    // $ANTLR start "rule__NewMessage__Group_4_1__0__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4307:1: rule__NewMessage__Group_4_1__0__Impl : ( ( rule__NewMessage__ParameterAssignment_4_1_0 ) ) ;
+    public final void rule__NewMessage__Group_4_1__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4311:1: ( ( ( rule__NewMessage__ParameterAssignment_4_1_0 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4312:1: ( ( rule__NewMessage__ParameterAssignment_4_1_0 ) )
+            {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4312:1: ( ( rule__NewMessage__ParameterAssignment_4_1_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4313:1: ( rule__NewMessage__ParameterAssignment_4_1_0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getNewMessageAccess().getParameterAssignment_4_1_0()); 
+            }
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4314:1: ( rule__NewMessage__ParameterAssignment_4_1_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4314:2: rule__NewMessage__ParameterAssignment_4_1_0
+            {
+            pushFollow(FOLLOW_rule__NewMessage__ParameterAssignment_4_1_0_in_rule__NewMessage__Group_4_1__0__Impl8719);
+            rule__NewMessage__ParameterAssignment_4_1_0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getNewMessageAccess().getParameterAssignment_4_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NewMessage__Group_4_1__0__Impl"
+
+
+    // $ANTLR start "rule__NewMessage__Group_4_1__1"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4324:1: rule__NewMessage__Group_4_1__1 : rule__NewMessage__Group_4_1__1__Impl ;
+    public final void rule__NewMessage__Group_4_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4328:1: ( rule__NewMessage__Group_4_1__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4329:2: rule__NewMessage__Group_4_1__1__Impl
+            {
+            pushFollow(FOLLOW_rule__NewMessage__Group_4_1__1__Impl_in_rule__NewMessage__Group_4_1__18749);
+            rule__NewMessage__Group_4_1__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NewMessage__Group_4_1__1"
+
+
+    // $ANTLR start "rule__NewMessage__Group_4_1__1__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4335:1: rule__NewMessage__Group_4_1__1__Impl : ( ( rule__NewMessage__Group_4_1_1__0 )* ) ;
+    public final void rule__NewMessage__Group_4_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4339:1: ( ( ( rule__NewMessage__Group_4_1_1__0 )* ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4340:1: ( ( rule__NewMessage__Group_4_1_1__0 )* )
+            {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4340:1: ( ( rule__NewMessage__Group_4_1_1__0 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4341:1: ( rule__NewMessage__Group_4_1_1__0 )*
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getNewMessageAccess().getGroup_4_1_1()); 
+            }
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4342:1: ( rule__NewMessage__Group_4_1_1__0 )*
             loop40:
             do {
                 int alt40=2;
@@ -12498,10 +12668,10 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
                 switch (alt40) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4278:2: rule__NewMessage__Group_3_1_1__0
+            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4342:2: rule__NewMessage__Group_4_1_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__NewMessage__Group_3_1_1__0_in_rule__NewMessage__Group_3_1__1__Impl8648);
-            	    rule__NewMessage__Group_3_1_1__0();
+            	    pushFollow(FOLLOW_rule__NewMessage__Group_4_1_1__0_in_rule__NewMessage__Group_4_1__1__Impl8776);
+            	    rule__NewMessage__Group_4_1_1__0();
 
             	    state._fsp--;
             	    if (state.failed) return ;
@@ -12515,7 +12685,7 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             } while (true);
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewMessageAccess().getGroup_3_1_1()); 
+               after(grammarAccess.getNewMessageAccess().getGroup_4_1_1()); 
             }
 
             }
@@ -12535,100 +12705,26 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__NewMessage__Group_3_1__1__Impl"
+    // $ANTLR end "rule__NewMessage__Group_4_1__1__Impl"
 
 
-    // $ANTLR start "rule__NewMessage__Group_3_1_1__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4292:1: rule__NewMessage__Group_3_1_1__0 : rule__NewMessage__Group_3_1_1__0__Impl rule__NewMessage__Group_3_1_1__1 ;
-    public final void rule__NewMessage__Group_3_1_1__0() throws RecognitionException {
+    // $ANTLR start "rule__NewMessage__Group_4_1_1__0"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4356:1: rule__NewMessage__Group_4_1_1__0 : rule__NewMessage__Group_4_1_1__0__Impl rule__NewMessage__Group_4_1_1__1 ;
+    public final void rule__NewMessage__Group_4_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4296:1: ( rule__NewMessage__Group_3_1_1__0__Impl rule__NewMessage__Group_3_1_1__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4297:2: rule__NewMessage__Group_3_1_1__0__Impl rule__NewMessage__Group_3_1_1__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4360:1: ( rule__NewMessage__Group_4_1_1__0__Impl rule__NewMessage__Group_4_1_1__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4361:2: rule__NewMessage__Group_4_1_1__0__Impl rule__NewMessage__Group_4_1_1__1
             {
-            pushFollow(FOLLOW_rule__NewMessage__Group_3_1_1__0__Impl_in_rule__NewMessage__Group_3_1_1__08683);
-            rule__NewMessage__Group_3_1_1__0__Impl();
+            pushFollow(FOLLOW_rule__NewMessage__Group_4_1_1__0__Impl_in_rule__NewMessage__Group_4_1_1__08811);
+            rule__NewMessage__Group_4_1_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__NewMessage__Group_3_1_1__1_in_rule__NewMessage__Group_3_1_1__08686);
-            rule__NewMessage__Group_3_1_1__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__NewMessage__Group_3_1_1__0"
-
-
-    // $ANTLR start "rule__NewMessage__Group_3_1_1__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4304:1: rule__NewMessage__Group_3_1_1__0__Impl : ( ',' ) ;
-    public final void rule__NewMessage__Group_3_1_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4308:1: ( ( ',' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4309:1: ( ',' )
-            {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4309:1: ( ',' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4310:1: ','
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewMessageAccess().getCommaKeyword_3_1_1_0()); 
-            }
-            match(input,21,FOLLOW_21_in_rule__NewMessage__Group_3_1_1__0__Impl8714); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewMessageAccess().getCommaKeyword_3_1_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__NewMessage__Group_3_1_1__0__Impl"
-
-
-    // $ANTLR start "rule__NewMessage__Group_3_1_1__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4323:1: rule__NewMessage__Group_3_1_1__1 : rule__NewMessage__Group_3_1_1__1__Impl ;
-    public final void rule__NewMessage__Group_3_1_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4327:1: ( rule__NewMessage__Group_3_1_1__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4328:2: rule__NewMessage__Group_3_1_1__1__Impl
-            {
-            pushFollow(FOLLOW_rule__NewMessage__Group_3_1_1__1__Impl_in_rule__NewMessage__Group_3_1_1__18745);
-            rule__NewMessage__Group_3_1_1__1__Impl();
+            pushFollow(FOLLOW_rule__NewMessage__Group_4_1_1__1_in_rule__NewMessage__Group_4_1_1__08814);
+            rule__NewMessage__Group_4_1_1__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -12647,38 +12743,28 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__NewMessage__Group_3_1_1__1"
+    // $ANTLR end "rule__NewMessage__Group_4_1_1__0"
 
 
-    // $ANTLR start "rule__NewMessage__Group_3_1_1__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4334:1: rule__NewMessage__Group_3_1_1__1__Impl : ( ( rule__NewMessage__ParameterAssignment_3_1_1_1 ) ) ;
-    public final void rule__NewMessage__Group_3_1_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__NewMessage__Group_4_1_1__0__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4368:1: rule__NewMessage__Group_4_1_1__0__Impl : ( ',' ) ;
+    public final void rule__NewMessage__Group_4_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4338:1: ( ( ( rule__NewMessage__ParameterAssignment_3_1_1_1 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4339:1: ( ( rule__NewMessage__ParameterAssignment_3_1_1_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4372:1: ( ( ',' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4373:1: ( ',' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4339:1: ( ( rule__NewMessage__ParameterAssignment_3_1_1_1 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4340:1: ( rule__NewMessage__ParameterAssignment_3_1_1_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4373:1: ( ',' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4374:1: ','
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewMessageAccess().getParameterAssignment_3_1_1_1()); 
+               before(grammarAccess.getNewMessageAccess().getCommaKeyword_4_1_1_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4341:1: ( rule__NewMessage__ParameterAssignment_3_1_1_1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4341:2: rule__NewMessage__ParameterAssignment_3_1_1_1
-            {
-            pushFollow(FOLLOW_rule__NewMessage__ParameterAssignment_3_1_1_1_in_rule__NewMessage__Group_3_1_1__1__Impl8772);
-            rule__NewMessage__ParameterAssignment_3_1_1_1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
+            match(input,21,FOLLOW_21_in_rule__NewMessage__Group_4_1_1__0__Impl8842); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewMessageAccess().getParameterAssignment_3_1_1_1()); 
+               after(grammarAccess.getNewMessageAccess().getCommaKeyword_4_1_1_0()); 
             }
 
             }
@@ -12698,25 +12784,109 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__NewMessage__Group_3_1_1__1__Impl"
+    // $ANTLR end "rule__NewMessage__Group_4_1_1__0__Impl"
+
+
+    // $ANTLR start "rule__NewMessage__Group_4_1_1__1"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4387:1: rule__NewMessage__Group_4_1_1__1 : rule__NewMessage__Group_4_1_1__1__Impl ;
+    public final void rule__NewMessage__Group_4_1_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4391:1: ( rule__NewMessage__Group_4_1_1__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4392:2: rule__NewMessage__Group_4_1_1__1__Impl
+            {
+            pushFollow(FOLLOW_rule__NewMessage__Group_4_1_1__1__Impl_in_rule__NewMessage__Group_4_1_1__18873);
+            rule__NewMessage__Group_4_1_1__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NewMessage__Group_4_1_1__1"
+
+
+    // $ANTLR start "rule__NewMessage__Group_4_1_1__1__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4398:1: rule__NewMessage__Group_4_1_1__1__Impl : ( ( rule__NewMessage__ParameterAssignment_4_1_1_1 ) ) ;
+    public final void rule__NewMessage__Group_4_1_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4402:1: ( ( ( rule__NewMessage__ParameterAssignment_4_1_1_1 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4403:1: ( ( rule__NewMessage__ParameterAssignment_4_1_1_1 ) )
+            {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4403:1: ( ( rule__NewMessage__ParameterAssignment_4_1_1_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4404:1: ( rule__NewMessage__ParameterAssignment_4_1_1_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getNewMessageAccess().getParameterAssignment_4_1_1_1()); 
+            }
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4405:1: ( rule__NewMessage__ParameterAssignment_4_1_1_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4405:2: rule__NewMessage__ParameterAssignment_4_1_1_1
+            {
+            pushFollow(FOLLOW_rule__NewMessage__ParameterAssignment_4_1_1_1_in_rule__NewMessage__Group_4_1_1__1__Impl8900);
+            rule__NewMessage__ParameterAssignment_4_1_1_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getNewMessageAccess().getParameterAssignment_4_1_1_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NewMessage__Group_4_1_1__1__Impl"
 
 
     // $ANTLR start "rule__ReturnMessage__Group__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4355:1: rule__ReturnMessage__Group__0 : rule__ReturnMessage__Group__0__Impl rule__ReturnMessage__Group__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4419:1: rule__ReturnMessage__Group__0 : rule__ReturnMessage__Group__0__Impl rule__ReturnMessage__Group__1 ;
     public final void rule__ReturnMessage__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4359:1: ( rule__ReturnMessage__Group__0__Impl rule__ReturnMessage__Group__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4360:2: rule__ReturnMessage__Group__0__Impl rule__ReturnMessage__Group__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4423:1: ( rule__ReturnMessage__Group__0__Impl rule__ReturnMessage__Group__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4424:2: rule__ReturnMessage__Group__0__Impl rule__ReturnMessage__Group__1
             {
-            pushFollow(FOLLOW_rule__ReturnMessage__Group__0__Impl_in_rule__ReturnMessage__Group__08806);
+            pushFollow(FOLLOW_rule__ReturnMessage__Group__0__Impl_in_rule__ReturnMessage__Group__08934);
             rule__ReturnMessage__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ReturnMessage__Group__1_in_rule__ReturnMessage__Group__08809);
+            pushFollow(FOLLOW_rule__ReturnMessage__Group__1_in_rule__ReturnMessage__Group__08937);
             rule__ReturnMessage__Group__1();
 
             state._fsp--;
@@ -12740,22 +12910,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4367:1: rule__ReturnMessage__Group__0__Impl : ( 'returns' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4431:1: rule__ReturnMessage__Group__0__Impl : ( 'returns' ) ;
     public final void rule__ReturnMessage__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4371:1: ( ( 'returns' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4372:1: ( 'returns' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4435:1: ( ( 'returns' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4436:1: ( 'returns' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4372:1: ( 'returns' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4373:1: 'returns'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4436:1: ( 'returns' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4437:1: 'returns'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReturnMessageAccess().getReturnsKeyword_0()); 
             }
-            match(input,38,FOLLOW_38_in_rule__ReturnMessage__Group__0__Impl8837); if (state.failed) return ;
+            match(input,38,FOLLOW_38_in_rule__ReturnMessage__Group__0__Impl8965); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getReturnMessageAccess().getReturnsKeyword_0()); 
             }
@@ -12781,21 +12951,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4386:1: rule__ReturnMessage__Group__1 : rule__ReturnMessage__Group__1__Impl rule__ReturnMessage__Group__2 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4450:1: rule__ReturnMessage__Group__1 : rule__ReturnMessage__Group__1__Impl rule__ReturnMessage__Group__2 ;
     public final void rule__ReturnMessage__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4390:1: ( rule__ReturnMessage__Group__1__Impl rule__ReturnMessage__Group__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4391:2: rule__ReturnMessage__Group__1__Impl rule__ReturnMessage__Group__2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4454:1: ( rule__ReturnMessage__Group__1__Impl rule__ReturnMessage__Group__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4455:2: rule__ReturnMessage__Group__1__Impl rule__ReturnMessage__Group__2
             {
-            pushFollow(FOLLOW_rule__ReturnMessage__Group__1__Impl_in_rule__ReturnMessage__Group__18868);
+            pushFollow(FOLLOW_rule__ReturnMessage__Group__1__Impl_in_rule__ReturnMessage__Group__18996);
             rule__ReturnMessage__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ReturnMessage__Group__2_in_rule__ReturnMessage__Group__18871);
+            pushFollow(FOLLOW_rule__ReturnMessage__Group__2_in_rule__ReturnMessage__Group__18999);
             rule__ReturnMessage__Group__2();
 
             state._fsp--;
@@ -12819,25 +12989,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4398:1: rule__ReturnMessage__Group__1__Impl : ( ( rule__ReturnMessage__NameAssignment_1 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4462:1: rule__ReturnMessage__Group__1__Impl : ( ( rule__ReturnMessage__NameAssignment_1 ) ) ;
     public final void rule__ReturnMessage__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4402:1: ( ( ( rule__ReturnMessage__NameAssignment_1 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4403:1: ( ( rule__ReturnMessage__NameAssignment_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4466:1: ( ( ( rule__ReturnMessage__NameAssignment_1 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4467:1: ( ( rule__ReturnMessage__NameAssignment_1 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4403:1: ( ( rule__ReturnMessage__NameAssignment_1 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4404:1: ( rule__ReturnMessage__NameAssignment_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4467:1: ( ( rule__ReturnMessage__NameAssignment_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4468:1: ( rule__ReturnMessage__NameAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReturnMessageAccess().getNameAssignment_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4405:1: ( rule__ReturnMessage__NameAssignment_1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4405:2: rule__ReturnMessage__NameAssignment_1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4469:1: ( rule__ReturnMessage__NameAssignment_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4469:2: rule__ReturnMessage__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__ReturnMessage__NameAssignment_1_in_rule__ReturnMessage__Group__1__Impl8898);
+            pushFollow(FOLLOW_rule__ReturnMessage__NameAssignment_1_in_rule__ReturnMessage__Group__1__Impl9026);
             rule__ReturnMessage__NameAssignment_1();
 
             state._fsp--;
@@ -12870,16 +13040,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4415:1: rule__ReturnMessage__Group__2 : rule__ReturnMessage__Group__2__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4479:1: rule__ReturnMessage__Group__2 : rule__ReturnMessage__Group__2__Impl ;
     public final void rule__ReturnMessage__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4419:1: ( rule__ReturnMessage__Group__2__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4420:2: rule__ReturnMessage__Group__2__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4483:1: ( rule__ReturnMessage__Group__2__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4484:2: rule__ReturnMessage__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__ReturnMessage__Group__2__Impl_in_rule__ReturnMessage__Group__28928);
+            pushFollow(FOLLOW_rule__ReturnMessage__Group__2__Impl_in_rule__ReturnMessage__Group__29056);
             rule__ReturnMessage__Group__2__Impl();
 
             state._fsp--;
@@ -12903,22 +13073,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4426:1: rule__ReturnMessage__Group__2__Impl : ( ( rule__ReturnMessage__Group_2__0 )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4490:1: rule__ReturnMessage__Group__2__Impl : ( ( rule__ReturnMessage__Group_2__0 )? ) ;
     public final void rule__ReturnMessage__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4430:1: ( ( ( rule__ReturnMessage__Group_2__0 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4431:1: ( ( rule__ReturnMessage__Group_2__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4494:1: ( ( ( rule__ReturnMessage__Group_2__0 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4495:1: ( ( rule__ReturnMessage__Group_2__0 )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4431:1: ( ( rule__ReturnMessage__Group_2__0 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4432:1: ( rule__ReturnMessage__Group_2__0 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4495:1: ( ( rule__ReturnMessage__Group_2__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4496:1: ( rule__ReturnMessage__Group_2__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReturnMessageAccess().getGroup_2()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4433:1: ( rule__ReturnMessage__Group_2__0 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4497:1: ( rule__ReturnMessage__Group_2__0 )?
             int alt41=2;
             int LA41_0 = input.LA(1);
 
@@ -12927,9 +13097,9 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             }
             switch (alt41) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4433:2: rule__ReturnMessage__Group_2__0
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4497:2: rule__ReturnMessage__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__ReturnMessage__Group_2__0_in_rule__ReturnMessage__Group__2__Impl8955);
+                    pushFollow(FOLLOW_rule__ReturnMessage__Group_2__0_in_rule__ReturnMessage__Group__2__Impl9083);
                     rule__ReturnMessage__Group_2__0();
 
                     state._fsp--;
@@ -12965,21 +13135,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group_2__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4449:1: rule__ReturnMessage__Group_2__0 : rule__ReturnMessage__Group_2__0__Impl rule__ReturnMessage__Group_2__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4513:1: rule__ReturnMessage__Group_2__0 : rule__ReturnMessage__Group_2__0__Impl rule__ReturnMessage__Group_2__1 ;
     public final void rule__ReturnMessage__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4453:1: ( rule__ReturnMessage__Group_2__0__Impl rule__ReturnMessage__Group_2__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4454:2: rule__ReturnMessage__Group_2__0__Impl rule__ReturnMessage__Group_2__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4517:1: ( rule__ReturnMessage__Group_2__0__Impl rule__ReturnMessage__Group_2__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4518:2: rule__ReturnMessage__Group_2__0__Impl rule__ReturnMessage__Group_2__1
             {
-            pushFollow(FOLLOW_rule__ReturnMessage__Group_2__0__Impl_in_rule__ReturnMessage__Group_2__08992);
+            pushFollow(FOLLOW_rule__ReturnMessage__Group_2__0__Impl_in_rule__ReturnMessage__Group_2__09120);
             rule__ReturnMessage__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ReturnMessage__Group_2__1_in_rule__ReturnMessage__Group_2__08995);
+            pushFollow(FOLLOW_rule__ReturnMessage__Group_2__1_in_rule__ReturnMessage__Group_2__09123);
             rule__ReturnMessage__Group_2__1();
 
             state._fsp--;
@@ -13003,25 +13173,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group_2__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4461:1: rule__ReturnMessage__Group_2__0__Impl : ( ( '(' ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4525:1: rule__ReturnMessage__Group_2__0__Impl : ( ( '(' ) ) ;
     public final void rule__ReturnMessage__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4465:1: ( ( ( '(' ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4466:1: ( ( '(' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4529:1: ( ( ( '(' ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4530:1: ( ( '(' ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4466:1: ( ( '(' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4467:1: ( '(' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4530:1: ( ( '(' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4531:1: ( '(' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReturnMessageAccess().getLeftParenthesisKeyword_2_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4468:1: ( '(' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4469:2: '('
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4532:1: ( '(' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4533:2: '('
             {
-            match(input,35,FOLLOW_35_in_rule__ReturnMessage__Group_2__0__Impl9024); if (state.failed) return ;
+            match(input,35,FOLLOW_35_in_rule__ReturnMessage__Group_2__0__Impl9152); if (state.failed) return ;
 
             }
 
@@ -13050,21 +13220,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group_2__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4480:1: rule__ReturnMessage__Group_2__1 : rule__ReturnMessage__Group_2__1__Impl rule__ReturnMessage__Group_2__2 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4544:1: rule__ReturnMessage__Group_2__1 : rule__ReturnMessage__Group_2__1__Impl rule__ReturnMessage__Group_2__2 ;
     public final void rule__ReturnMessage__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4484:1: ( rule__ReturnMessage__Group_2__1__Impl rule__ReturnMessage__Group_2__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4485:2: rule__ReturnMessage__Group_2__1__Impl rule__ReturnMessage__Group_2__2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4548:1: ( rule__ReturnMessage__Group_2__1__Impl rule__ReturnMessage__Group_2__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4549:2: rule__ReturnMessage__Group_2__1__Impl rule__ReturnMessage__Group_2__2
             {
-            pushFollow(FOLLOW_rule__ReturnMessage__Group_2__1__Impl_in_rule__ReturnMessage__Group_2__19056);
+            pushFollow(FOLLOW_rule__ReturnMessage__Group_2__1__Impl_in_rule__ReturnMessage__Group_2__19184);
             rule__ReturnMessage__Group_2__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ReturnMessage__Group_2__2_in_rule__ReturnMessage__Group_2__19059);
+            pushFollow(FOLLOW_rule__ReturnMessage__Group_2__2_in_rule__ReturnMessage__Group_2__19187);
             rule__ReturnMessage__Group_2__2();
 
             state._fsp--;
@@ -13088,22 +13258,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group_2__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4492:1: rule__ReturnMessage__Group_2__1__Impl : ( ( rule__ReturnMessage__Group_2_1__0 )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4556:1: rule__ReturnMessage__Group_2__1__Impl : ( ( rule__ReturnMessage__Group_2_1__0 )? ) ;
     public final void rule__ReturnMessage__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4496:1: ( ( ( rule__ReturnMessage__Group_2_1__0 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4497:1: ( ( rule__ReturnMessage__Group_2_1__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4560:1: ( ( ( rule__ReturnMessage__Group_2_1__0 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4561:1: ( ( rule__ReturnMessage__Group_2_1__0 )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4497:1: ( ( rule__ReturnMessage__Group_2_1__0 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4498:1: ( rule__ReturnMessage__Group_2_1__0 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4561:1: ( ( rule__ReturnMessage__Group_2_1__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4562:1: ( rule__ReturnMessage__Group_2_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReturnMessageAccess().getGroup_2_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4499:1: ( rule__ReturnMessage__Group_2_1__0 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4563:1: ( rule__ReturnMessage__Group_2_1__0 )?
             int alt42=2;
             int LA42_0 = input.LA(1);
 
@@ -13112,9 +13282,9 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             }
             switch (alt42) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4499:2: rule__ReturnMessage__Group_2_1__0
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4563:2: rule__ReturnMessage__Group_2_1__0
                     {
-                    pushFollow(FOLLOW_rule__ReturnMessage__Group_2_1__0_in_rule__ReturnMessage__Group_2__1__Impl9086);
+                    pushFollow(FOLLOW_rule__ReturnMessage__Group_2_1__0_in_rule__ReturnMessage__Group_2__1__Impl9214);
                     rule__ReturnMessage__Group_2_1__0();
 
                     state._fsp--;
@@ -13150,16 +13320,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group_2__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4509:1: rule__ReturnMessage__Group_2__2 : rule__ReturnMessage__Group_2__2__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4573:1: rule__ReturnMessage__Group_2__2 : rule__ReturnMessage__Group_2__2__Impl ;
     public final void rule__ReturnMessage__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4513:1: ( rule__ReturnMessage__Group_2__2__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4514:2: rule__ReturnMessage__Group_2__2__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4577:1: ( rule__ReturnMessage__Group_2__2__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4578:2: rule__ReturnMessage__Group_2__2__Impl
             {
-            pushFollow(FOLLOW_rule__ReturnMessage__Group_2__2__Impl_in_rule__ReturnMessage__Group_2__29117);
+            pushFollow(FOLLOW_rule__ReturnMessage__Group_2__2__Impl_in_rule__ReturnMessage__Group_2__29245);
             rule__ReturnMessage__Group_2__2__Impl();
 
             state._fsp--;
@@ -13183,22 +13353,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group_2__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4520:1: rule__ReturnMessage__Group_2__2__Impl : ( ')' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4584:1: rule__ReturnMessage__Group_2__2__Impl : ( ')' ) ;
     public final void rule__ReturnMessage__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4524:1: ( ( ')' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4525:1: ( ')' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4588:1: ( ( ')' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4589:1: ( ')' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4525:1: ( ')' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4526:1: ')'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4589:1: ( ')' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4590:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReturnMessageAccess().getRightParenthesisKeyword_2_2()); 
             }
-            match(input,36,FOLLOW_36_in_rule__ReturnMessage__Group_2__2__Impl9145); if (state.failed) return ;
+            match(input,36,FOLLOW_36_in_rule__ReturnMessage__Group_2__2__Impl9273); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getReturnMessageAccess().getRightParenthesisKeyword_2_2()); 
             }
@@ -13224,21 +13394,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group_2_1__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4545:1: rule__ReturnMessage__Group_2_1__0 : rule__ReturnMessage__Group_2_1__0__Impl rule__ReturnMessage__Group_2_1__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4609:1: rule__ReturnMessage__Group_2_1__0 : rule__ReturnMessage__Group_2_1__0__Impl rule__ReturnMessage__Group_2_1__1 ;
     public final void rule__ReturnMessage__Group_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4549:1: ( rule__ReturnMessage__Group_2_1__0__Impl rule__ReturnMessage__Group_2_1__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4550:2: rule__ReturnMessage__Group_2_1__0__Impl rule__ReturnMessage__Group_2_1__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4613:1: ( rule__ReturnMessage__Group_2_1__0__Impl rule__ReturnMessage__Group_2_1__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4614:2: rule__ReturnMessage__Group_2_1__0__Impl rule__ReturnMessage__Group_2_1__1
             {
-            pushFollow(FOLLOW_rule__ReturnMessage__Group_2_1__0__Impl_in_rule__ReturnMessage__Group_2_1__09182);
+            pushFollow(FOLLOW_rule__ReturnMessage__Group_2_1__0__Impl_in_rule__ReturnMessage__Group_2_1__09310);
             rule__ReturnMessage__Group_2_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ReturnMessage__Group_2_1__1_in_rule__ReturnMessage__Group_2_1__09185);
+            pushFollow(FOLLOW_rule__ReturnMessage__Group_2_1__1_in_rule__ReturnMessage__Group_2_1__09313);
             rule__ReturnMessage__Group_2_1__1();
 
             state._fsp--;
@@ -13262,25 +13432,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group_2_1__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4557:1: rule__ReturnMessage__Group_2_1__0__Impl : ( ( rule__ReturnMessage__ParameterAssignment_2_1_0 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4621:1: rule__ReturnMessage__Group_2_1__0__Impl : ( ( rule__ReturnMessage__ParameterAssignment_2_1_0 ) ) ;
     public final void rule__ReturnMessage__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4561:1: ( ( ( rule__ReturnMessage__ParameterAssignment_2_1_0 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4562:1: ( ( rule__ReturnMessage__ParameterAssignment_2_1_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4625:1: ( ( ( rule__ReturnMessage__ParameterAssignment_2_1_0 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4626:1: ( ( rule__ReturnMessage__ParameterAssignment_2_1_0 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4562:1: ( ( rule__ReturnMessage__ParameterAssignment_2_1_0 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4563:1: ( rule__ReturnMessage__ParameterAssignment_2_1_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4626:1: ( ( rule__ReturnMessage__ParameterAssignment_2_1_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4627:1: ( rule__ReturnMessage__ParameterAssignment_2_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReturnMessageAccess().getParameterAssignment_2_1_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4564:1: ( rule__ReturnMessage__ParameterAssignment_2_1_0 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4564:2: rule__ReturnMessage__ParameterAssignment_2_1_0
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4628:1: ( rule__ReturnMessage__ParameterAssignment_2_1_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4628:2: rule__ReturnMessage__ParameterAssignment_2_1_0
             {
-            pushFollow(FOLLOW_rule__ReturnMessage__ParameterAssignment_2_1_0_in_rule__ReturnMessage__Group_2_1__0__Impl9212);
+            pushFollow(FOLLOW_rule__ReturnMessage__ParameterAssignment_2_1_0_in_rule__ReturnMessage__Group_2_1__0__Impl9340);
             rule__ReturnMessage__ParameterAssignment_2_1_0();
 
             state._fsp--;
@@ -13313,16 +13483,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group_2_1__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4574:1: rule__ReturnMessage__Group_2_1__1 : rule__ReturnMessage__Group_2_1__1__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4638:1: rule__ReturnMessage__Group_2_1__1 : rule__ReturnMessage__Group_2_1__1__Impl ;
     public final void rule__ReturnMessage__Group_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4578:1: ( rule__ReturnMessage__Group_2_1__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4579:2: rule__ReturnMessage__Group_2_1__1__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4642:1: ( rule__ReturnMessage__Group_2_1__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4643:2: rule__ReturnMessage__Group_2_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__ReturnMessage__Group_2_1__1__Impl_in_rule__ReturnMessage__Group_2_1__19242);
+            pushFollow(FOLLOW_rule__ReturnMessage__Group_2_1__1__Impl_in_rule__ReturnMessage__Group_2_1__19370);
             rule__ReturnMessage__Group_2_1__1__Impl();
 
             state._fsp--;
@@ -13346,22 +13516,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group_2_1__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4585:1: rule__ReturnMessage__Group_2_1__1__Impl : ( ( rule__ReturnMessage__Group_2_1_1__0 )* ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4649:1: rule__ReturnMessage__Group_2_1__1__Impl : ( ( rule__ReturnMessage__Group_2_1_1__0 )* ) ;
     public final void rule__ReturnMessage__Group_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4589:1: ( ( ( rule__ReturnMessage__Group_2_1_1__0 )* ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4590:1: ( ( rule__ReturnMessage__Group_2_1_1__0 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4653:1: ( ( ( rule__ReturnMessage__Group_2_1_1__0 )* ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4654:1: ( ( rule__ReturnMessage__Group_2_1_1__0 )* )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4590:1: ( ( rule__ReturnMessage__Group_2_1_1__0 )* )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4591:1: ( rule__ReturnMessage__Group_2_1_1__0 )*
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4654:1: ( ( rule__ReturnMessage__Group_2_1_1__0 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4655:1: ( rule__ReturnMessage__Group_2_1_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReturnMessageAccess().getGroup_2_1_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4592:1: ( rule__ReturnMessage__Group_2_1_1__0 )*
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4656:1: ( rule__ReturnMessage__Group_2_1_1__0 )*
             loop43:
             do {
                 int alt43=2;
@@ -13374,9 +13544,9 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
                 switch (alt43) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4592:2: rule__ReturnMessage__Group_2_1_1__0
+            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4656:2: rule__ReturnMessage__Group_2_1_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__ReturnMessage__Group_2_1_1__0_in_rule__ReturnMessage__Group_2_1__1__Impl9269);
+            	    pushFollow(FOLLOW_rule__ReturnMessage__Group_2_1_1__0_in_rule__ReturnMessage__Group_2_1__1__Impl9397);
             	    rule__ReturnMessage__Group_2_1_1__0();
 
             	    state._fsp--;
@@ -13415,21 +13585,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group_2_1_1__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4606:1: rule__ReturnMessage__Group_2_1_1__0 : rule__ReturnMessage__Group_2_1_1__0__Impl rule__ReturnMessage__Group_2_1_1__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4670:1: rule__ReturnMessage__Group_2_1_1__0 : rule__ReturnMessage__Group_2_1_1__0__Impl rule__ReturnMessage__Group_2_1_1__1 ;
     public final void rule__ReturnMessage__Group_2_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4610:1: ( rule__ReturnMessage__Group_2_1_1__0__Impl rule__ReturnMessage__Group_2_1_1__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4611:2: rule__ReturnMessage__Group_2_1_1__0__Impl rule__ReturnMessage__Group_2_1_1__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4674:1: ( rule__ReturnMessage__Group_2_1_1__0__Impl rule__ReturnMessage__Group_2_1_1__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4675:2: rule__ReturnMessage__Group_2_1_1__0__Impl rule__ReturnMessage__Group_2_1_1__1
             {
-            pushFollow(FOLLOW_rule__ReturnMessage__Group_2_1_1__0__Impl_in_rule__ReturnMessage__Group_2_1_1__09304);
+            pushFollow(FOLLOW_rule__ReturnMessage__Group_2_1_1__0__Impl_in_rule__ReturnMessage__Group_2_1_1__09432);
             rule__ReturnMessage__Group_2_1_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ReturnMessage__Group_2_1_1__1_in_rule__ReturnMessage__Group_2_1_1__09307);
+            pushFollow(FOLLOW_rule__ReturnMessage__Group_2_1_1__1_in_rule__ReturnMessage__Group_2_1_1__09435);
             rule__ReturnMessage__Group_2_1_1__1();
 
             state._fsp--;
@@ -13453,22 +13623,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group_2_1_1__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4618:1: rule__ReturnMessage__Group_2_1_1__0__Impl : ( ',' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4682:1: rule__ReturnMessage__Group_2_1_1__0__Impl : ( ',' ) ;
     public final void rule__ReturnMessage__Group_2_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4622:1: ( ( ',' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4623:1: ( ',' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4686:1: ( ( ',' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4687:1: ( ',' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4623:1: ( ',' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4624:1: ','
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4687:1: ( ',' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4688:1: ','
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReturnMessageAccess().getCommaKeyword_2_1_1_0()); 
             }
-            match(input,21,FOLLOW_21_in_rule__ReturnMessage__Group_2_1_1__0__Impl9335); if (state.failed) return ;
+            match(input,21,FOLLOW_21_in_rule__ReturnMessage__Group_2_1_1__0__Impl9463); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getReturnMessageAccess().getCommaKeyword_2_1_1_0()); 
             }
@@ -13494,16 +13664,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group_2_1_1__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4637:1: rule__ReturnMessage__Group_2_1_1__1 : rule__ReturnMessage__Group_2_1_1__1__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4701:1: rule__ReturnMessage__Group_2_1_1__1 : rule__ReturnMessage__Group_2_1_1__1__Impl ;
     public final void rule__ReturnMessage__Group_2_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4641:1: ( rule__ReturnMessage__Group_2_1_1__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4642:2: rule__ReturnMessage__Group_2_1_1__1__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4705:1: ( rule__ReturnMessage__Group_2_1_1__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4706:2: rule__ReturnMessage__Group_2_1_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__ReturnMessage__Group_2_1_1__1__Impl_in_rule__ReturnMessage__Group_2_1_1__19366);
+            pushFollow(FOLLOW_rule__ReturnMessage__Group_2_1_1__1__Impl_in_rule__ReturnMessage__Group_2_1_1__19494);
             rule__ReturnMessage__Group_2_1_1__1__Impl();
 
             state._fsp--;
@@ -13527,25 +13697,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__Group_2_1_1__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4648:1: rule__ReturnMessage__Group_2_1_1__1__Impl : ( ( rule__ReturnMessage__ParameterAssignment_2_1_1_1 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4712:1: rule__ReturnMessage__Group_2_1_1__1__Impl : ( ( rule__ReturnMessage__ParameterAssignment_2_1_1_1 ) ) ;
     public final void rule__ReturnMessage__Group_2_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4652:1: ( ( ( rule__ReturnMessage__ParameterAssignment_2_1_1_1 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4653:1: ( ( rule__ReturnMessage__ParameterAssignment_2_1_1_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4716:1: ( ( ( rule__ReturnMessage__ParameterAssignment_2_1_1_1 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4717:1: ( ( rule__ReturnMessage__ParameterAssignment_2_1_1_1 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4653:1: ( ( rule__ReturnMessage__ParameterAssignment_2_1_1_1 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4654:1: ( rule__ReturnMessage__ParameterAssignment_2_1_1_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4717:1: ( ( rule__ReturnMessage__ParameterAssignment_2_1_1_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4718:1: ( rule__ReturnMessage__ParameterAssignment_2_1_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReturnMessageAccess().getParameterAssignment_2_1_1_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4655:1: ( rule__ReturnMessage__ParameterAssignment_2_1_1_1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4655:2: rule__ReturnMessage__ParameterAssignment_2_1_1_1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4719:1: ( rule__ReturnMessage__ParameterAssignment_2_1_1_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4719:2: rule__ReturnMessage__ParameterAssignment_2_1_1_1
             {
-            pushFollow(FOLLOW_rule__ReturnMessage__ParameterAssignment_2_1_1_1_in_rule__ReturnMessage__Group_2_1_1__1__Impl9393);
+            pushFollow(FOLLOW_rule__ReturnMessage__ParameterAssignment_2_1_1_1_in_rule__ReturnMessage__Group_2_1_1__1__Impl9521);
             rule__ReturnMessage__ParameterAssignment_2_1_1_1();
 
             state._fsp--;
@@ -13578,21 +13748,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__DeleteMessage__Group__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4669:1: rule__DeleteMessage__Group__0 : rule__DeleteMessage__Group__0__Impl rule__DeleteMessage__Group__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4733:1: rule__DeleteMessage__Group__0 : rule__DeleteMessage__Group__0__Impl rule__DeleteMessage__Group__1 ;
     public final void rule__DeleteMessage__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4673:1: ( rule__DeleteMessage__Group__0__Impl rule__DeleteMessage__Group__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4674:2: rule__DeleteMessage__Group__0__Impl rule__DeleteMessage__Group__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4737:1: ( rule__DeleteMessage__Group__0__Impl rule__DeleteMessage__Group__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4738:2: rule__DeleteMessage__Group__0__Impl rule__DeleteMessage__Group__1
             {
-            pushFollow(FOLLOW_rule__DeleteMessage__Group__0__Impl_in_rule__DeleteMessage__Group__09427);
+            pushFollow(FOLLOW_rule__DeleteMessage__Group__0__Impl_in_rule__DeleteMessage__Group__09555);
             rule__DeleteMessage__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__DeleteMessage__Group__1_in_rule__DeleteMessage__Group__09430);
+            pushFollow(FOLLOW_rule__DeleteMessage__Group__1_in_rule__DeleteMessage__Group__09558);
             rule__DeleteMessage__Group__1();
 
             state._fsp--;
@@ -13616,26 +13786,26 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__DeleteMessage__Group__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4681:1: rule__DeleteMessage__Group__0__Impl : ( ( rule__DeleteMessage__SourceParticipantAssignment_0 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4745:1: rule__DeleteMessage__Group__0__Impl : ( ( rule__DeleteMessage__SourceAssignment_0 ) ) ;
     public final void rule__DeleteMessage__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4685:1: ( ( ( rule__DeleteMessage__SourceParticipantAssignment_0 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4686:1: ( ( rule__DeleteMessage__SourceParticipantAssignment_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4749:1: ( ( ( rule__DeleteMessage__SourceAssignment_0 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4750:1: ( ( rule__DeleteMessage__SourceAssignment_0 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4686:1: ( ( rule__DeleteMessage__SourceParticipantAssignment_0 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4687:1: ( rule__DeleteMessage__SourceParticipantAssignment_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4750:1: ( ( rule__DeleteMessage__SourceAssignment_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4751:1: ( rule__DeleteMessage__SourceAssignment_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDeleteMessageAccess().getSourceParticipantAssignment_0()); 
+               before(grammarAccess.getDeleteMessageAccess().getSourceAssignment_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4688:1: ( rule__DeleteMessage__SourceParticipantAssignment_0 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4688:2: rule__DeleteMessage__SourceParticipantAssignment_0
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4752:1: ( rule__DeleteMessage__SourceAssignment_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4752:2: rule__DeleteMessage__SourceAssignment_0
             {
-            pushFollow(FOLLOW_rule__DeleteMessage__SourceParticipantAssignment_0_in_rule__DeleteMessage__Group__0__Impl9457);
-            rule__DeleteMessage__SourceParticipantAssignment_0();
+            pushFollow(FOLLOW_rule__DeleteMessage__SourceAssignment_0_in_rule__DeleteMessage__Group__0__Impl9585);
+            rule__DeleteMessage__SourceAssignment_0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -13643,7 +13813,7 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDeleteMessageAccess().getSourceParticipantAssignment_0()); 
+               after(grammarAccess.getDeleteMessageAccess().getSourceAssignment_0()); 
             }
 
             }
@@ -13667,21 +13837,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__DeleteMessage__Group__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4698:1: rule__DeleteMessage__Group__1 : rule__DeleteMessage__Group__1__Impl rule__DeleteMessage__Group__2 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4762:1: rule__DeleteMessage__Group__1 : rule__DeleteMessage__Group__1__Impl rule__DeleteMessage__Group__2 ;
     public final void rule__DeleteMessage__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4702:1: ( rule__DeleteMessage__Group__1__Impl rule__DeleteMessage__Group__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4703:2: rule__DeleteMessage__Group__1__Impl rule__DeleteMessage__Group__2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4766:1: ( rule__DeleteMessage__Group__1__Impl rule__DeleteMessage__Group__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4767:2: rule__DeleteMessage__Group__1__Impl rule__DeleteMessage__Group__2
             {
-            pushFollow(FOLLOW_rule__DeleteMessage__Group__1__Impl_in_rule__DeleteMessage__Group__19487);
+            pushFollow(FOLLOW_rule__DeleteMessage__Group__1__Impl_in_rule__DeleteMessage__Group__19615);
             rule__DeleteMessage__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__DeleteMessage__Group__2_in_rule__DeleteMessage__Group__19490);
+            pushFollow(FOLLOW_rule__DeleteMessage__Group__2_in_rule__DeleteMessage__Group__19618);
             rule__DeleteMessage__Group__2();
 
             state._fsp--;
@@ -13705,22 +13875,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__DeleteMessage__Group__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4710:1: rule__DeleteMessage__Group__1__Impl : ( 'destroys' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4774:1: rule__DeleteMessage__Group__1__Impl : ( 'destroys' ) ;
     public final void rule__DeleteMessage__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4714:1: ( ( 'destroys' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4715:1: ( 'destroys' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4778:1: ( ( 'destroys' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4779:1: ( 'destroys' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4715:1: ( 'destroys' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4716:1: 'destroys'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4779:1: ( 'destroys' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4780:1: 'destroys'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDeleteMessageAccess().getDestroysKeyword_1()); 
             }
-            match(input,39,FOLLOW_39_in_rule__DeleteMessage__Group__1__Impl9518); if (state.failed) return ;
+            match(input,39,FOLLOW_39_in_rule__DeleteMessage__Group__1__Impl9646); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDeleteMessageAccess().getDestroysKeyword_1()); 
             }
@@ -13746,21 +13916,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__DeleteMessage__Group__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4729:1: rule__DeleteMessage__Group__2 : rule__DeleteMessage__Group__2__Impl rule__DeleteMessage__Group__3 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4793:1: rule__DeleteMessage__Group__2 : rule__DeleteMessage__Group__2__Impl rule__DeleteMessage__Group__3 ;
     public final void rule__DeleteMessage__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4733:1: ( rule__DeleteMessage__Group__2__Impl rule__DeleteMessage__Group__3 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4734:2: rule__DeleteMessage__Group__2__Impl rule__DeleteMessage__Group__3
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4797:1: ( rule__DeleteMessage__Group__2__Impl rule__DeleteMessage__Group__3 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4798:2: rule__DeleteMessage__Group__2__Impl rule__DeleteMessage__Group__3
             {
-            pushFollow(FOLLOW_rule__DeleteMessage__Group__2__Impl_in_rule__DeleteMessage__Group__29549);
+            pushFollow(FOLLOW_rule__DeleteMessage__Group__2__Impl_in_rule__DeleteMessage__Group__29677);
             rule__DeleteMessage__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__DeleteMessage__Group__3_in_rule__DeleteMessage__Group__29552);
+            pushFollow(FOLLOW_rule__DeleteMessage__Group__3_in_rule__DeleteMessage__Group__29680);
             rule__DeleteMessage__Group__3();
 
             state._fsp--;
@@ -13784,26 +13954,26 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__DeleteMessage__Group__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4741:1: rule__DeleteMessage__Group__2__Impl : ( ( rule__DeleteMessage__TargetParticipantAssignment_2 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4805:1: rule__DeleteMessage__Group__2__Impl : ( ( rule__DeleteMessage__TargetAssignment_2 ) ) ;
     public final void rule__DeleteMessage__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4745:1: ( ( ( rule__DeleteMessage__TargetParticipantAssignment_2 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4746:1: ( ( rule__DeleteMessage__TargetParticipantAssignment_2 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4809:1: ( ( ( rule__DeleteMessage__TargetAssignment_2 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4810:1: ( ( rule__DeleteMessage__TargetAssignment_2 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4746:1: ( ( rule__DeleteMessage__TargetParticipantAssignment_2 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4747:1: ( rule__DeleteMessage__TargetParticipantAssignment_2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4810:1: ( ( rule__DeleteMessage__TargetAssignment_2 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4811:1: ( rule__DeleteMessage__TargetAssignment_2 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDeleteMessageAccess().getTargetParticipantAssignment_2()); 
+               before(grammarAccess.getDeleteMessageAccess().getTargetAssignment_2()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4748:1: ( rule__DeleteMessage__TargetParticipantAssignment_2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4748:2: rule__DeleteMessage__TargetParticipantAssignment_2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4812:1: ( rule__DeleteMessage__TargetAssignment_2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4812:2: rule__DeleteMessage__TargetAssignment_2
             {
-            pushFollow(FOLLOW_rule__DeleteMessage__TargetParticipantAssignment_2_in_rule__DeleteMessage__Group__2__Impl9579);
-            rule__DeleteMessage__TargetParticipantAssignment_2();
+            pushFollow(FOLLOW_rule__DeleteMessage__TargetAssignment_2_in_rule__DeleteMessage__Group__2__Impl9707);
+            rule__DeleteMessage__TargetAssignment_2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -13811,7 +13981,7 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDeleteMessageAccess().getTargetParticipantAssignment_2()); 
+               after(grammarAccess.getDeleteMessageAccess().getTargetAssignment_2()); 
             }
 
             }
@@ -13835,16 +14005,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__DeleteMessage__Group__3"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4758:1: rule__DeleteMessage__Group__3 : rule__DeleteMessage__Group__3__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4822:1: rule__DeleteMessage__Group__3 : rule__DeleteMessage__Group__3__Impl ;
     public final void rule__DeleteMessage__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4762:1: ( rule__DeleteMessage__Group__3__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4763:2: rule__DeleteMessage__Group__3__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4826:1: ( rule__DeleteMessage__Group__3__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4827:2: rule__DeleteMessage__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__DeleteMessage__Group__3__Impl_in_rule__DeleteMessage__Group__39609);
+            pushFollow(FOLLOW_rule__DeleteMessage__Group__3__Impl_in_rule__DeleteMessage__Group__39737);
             rule__DeleteMessage__Group__3__Impl();
 
             state._fsp--;
@@ -13868,33 +14038,33 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__DeleteMessage__Group__3__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4769:1: rule__DeleteMessage__Group__3__Impl : ( ( rule__DeleteMessage__Group_3__0 )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4833:1: rule__DeleteMessage__Group__3__Impl : ( ( rule__DeleteMessage__Group_3__0 )? ) ;
     public final void rule__DeleteMessage__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4773:1: ( ( ( rule__DeleteMessage__Group_3__0 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4774:1: ( ( rule__DeleteMessage__Group_3__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4837:1: ( ( ( rule__DeleteMessage__Group_3__0 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4838:1: ( ( rule__DeleteMessage__Group_3__0 )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4774:1: ( ( rule__DeleteMessage__Group_3__0 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4775:1: ( rule__DeleteMessage__Group_3__0 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4838:1: ( ( rule__DeleteMessage__Group_3__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4839:1: ( rule__DeleteMessage__Group_3__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDeleteMessageAccess().getGroup_3()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4776:1: ( rule__DeleteMessage__Group_3__0 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4840:1: ( rule__DeleteMessage__Group_3__0 )?
             int alt44=2;
             int LA44_0 = input.LA(1);
 
-            if ( (LA44_0==35) ) {
+            if ( (LA44_0==34) ) {
                 alt44=1;
             }
             switch (alt44) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4776:2: rule__DeleteMessage__Group_3__0
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4840:2: rule__DeleteMessage__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__DeleteMessage__Group_3__0_in_rule__DeleteMessage__Group__3__Impl9636);
+                    pushFollow(FOLLOW_rule__DeleteMessage__Group_3__0_in_rule__DeleteMessage__Group__3__Impl9764);
                     rule__DeleteMessage__Group_3__0();
 
                     state._fsp--;
@@ -13930,21 +14100,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__DeleteMessage__Group_3__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4794:1: rule__DeleteMessage__Group_3__0 : rule__DeleteMessage__Group_3__0__Impl rule__DeleteMessage__Group_3__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4858:1: rule__DeleteMessage__Group_3__0 : rule__DeleteMessage__Group_3__0__Impl rule__DeleteMessage__Group_3__1 ;
     public final void rule__DeleteMessage__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4798:1: ( rule__DeleteMessage__Group_3__0__Impl rule__DeleteMessage__Group_3__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4799:2: rule__DeleteMessage__Group_3__0__Impl rule__DeleteMessage__Group_3__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4862:1: ( rule__DeleteMessage__Group_3__0__Impl rule__DeleteMessage__Group_3__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4863:2: rule__DeleteMessage__Group_3__0__Impl rule__DeleteMessage__Group_3__1
             {
-            pushFollow(FOLLOW_rule__DeleteMessage__Group_3__0__Impl_in_rule__DeleteMessage__Group_3__09675);
+            pushFollow(FOLLOW_rule__DeleteMessage__Group_3__0__Impl_in_rule__DeleteMessage__Group_3__09803);
             rule__DeleteMessage__Group_3__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__DeleteMessage__Group_3__1_in_rule__DeleteMessage__Group_3__09678);
+            pushFollow(FOLLOW_rule__DeleteMessage__Group_3__1_in_rule__DeleteMessage__Group_3__09806);
             rule__DeleteMessage__Group_3__1();
 
             state._fsp--;
@@ -13968,30 +14138,30 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__DeleteMessage__Group_3__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4806:1: rule__DeleteMessage__Group_3__0__Impl : ( ( '(' ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4870:1: rule__DeleteMessage__Group_3__0__Impl : ( ( '.' ) ) ;
     public final void rule__DeleteMessage__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4810:1: ( ( ( '(' ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4811:1: ( ( '(' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4874:1: ( ( ( '.' ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4875:1: ( ( '.' ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4811:1: ( ( '(' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4812:1: ( '(' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4875:1: ( ( '.' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4876:1: ( '.' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDeleteMessageAccess().getLeftParenthesisKeyword_3_0()); 
+               before(grammarAccess.getDeleteMessageAccess().getFullStopKeyword_3_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4813:1: ( '(' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4814:2: '('
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4877:1: ( '.' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4878:2: '.'
             {
-            match(input,35,FOLLOW_35_in_rule__DeleteMessage__Group_3__0__Impl9707); if (state.failed) return ;
+            match(input,34,FOLLOW_34_in_rule__DeleteMessage__Group_3__0__Impl9835); if (state.failed) return ;
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDeleteMessageAccess().getLeftParenthesisKeyword_3_0()); 
+               after(grammarAccess.getDeleteMessageAccess().getFullStopKeyword_3_0()); 
             }
 
             }
@@ -14015,21 +14185,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__DeleteMessage__Group_3__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4825:1: rule__DeleteMessage__Group_3__1 : rule__DeleteMessage__Group_3__1__Impl rule__DeleteMessage__Group_3__2 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4889:1: rule__DeleteMessage__Group_3__1 : rule__DeleteMessage__Group_3__1__Impl rule__DeleteMessage__Group_3__2 ;
     public final void rule__DeleteMessage__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4829:1: ( rule__DeleteMessage__Group_3__1__Impl rule__DeleteMessage__Group_3__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4830:2: rule__DeleteMessage__Group_3__1__Impl rule__DeleteMessage__Group_3__2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4893:1: ( rule__DeleteMessage__Group_3__1__Impl rule__DeleteMessage__Group_3__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4894:2: rule__DeleteMessage__Group_3__1__Impl rule__DeleteMessage__Group_3__2
             {
-            pushFollow(FOLLOW_rule__DeleteMessage__Group_3__1__Impl_in_rule__DeleteMessage__Group_3__19739);
+            pushFollow(FOLLOW_rule__DeleteMessage__Group_3__1__Impl_in_rule__DeleteMessage__Group_3__19867);
             rule__DeleteMessage__Group_3__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__DeleteMessage__Group_3__2_in_rule__DeleteMessage__Group_3__19742);
+            pushFollow(FOLLOW_rule__DeleteMessage__Group_3__2_in_rule__DeleteMessage__Group_3__19870);
             rule__DeleteMessage__Group_3__2();
 
             state._fsp--;
@@ -14053,45 +14223,34 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__DeleteMessage__Group_3__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4837:1: rule__DeleteMessage__Group_3__1__Impl : ( ( rule__DeleteMessage__Group_3_1__0 )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4901:1: rule__DeleteMessage__Group_3__1__Impl : ( ( rule__DeleteMessage__NameAssignment_3_1 ) ) ;
     public final void rule__DeleteMessage__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4841:1: ( ( ( rule__DeleteMessage__Group_3_1__0 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4842:1: ( ( rule__DeleteMessage__Group_3_1__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4905:1: ( ( ( rule__DeleteMessage__NameAssignment_3_1 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4906:1: ( ( rule__DeleteMessage__NameAssignment_3_1 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4842:1: ( ( rule__DeleteMessage__Group_3_1__0 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4843:1: ( rule__DeleteMessage__Group_3_1__0 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4906:1: ( ( rule__DeleteMessage__NameAssignment_3_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4907:1: ( rule__DeleteMessage__NameAssignment_3_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDeleteMessageAccess().getGroup_3_1()); 
+               before(grammarAccess.getDeleteMessageAccess().getNameAssignment_3_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4844:1: ( rule__DeleteMessage__Group_3_1__0 )?
-            int alt45=2;
-            int LA45_0 = input.LA(1);
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4908:1: ( rule__DeleteMessage__NameAssignment_3_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4908:2: rule__DeleteMessage__NameAssignment_3_1
+            {
+            pushFollow(FOLLOW_rule__DeleteMessage__NameAssignment_3_1_in_rule__DeleteMessage__Group_3__1__Impl9897);
+            rule__DeleteMessage__NameAssignment_3_1();
 
-            if ( (LA45_0==RULE_ID) ) {
-                alt45=1;
-            }
-            switch (alt45) {
-                case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4844:2: rule__DeleteMessage__Group_3_1__0
-                    {
-                    pushFollow(FOLLOW_rule__DeleteMessage__Group_3_1__0_in_rule__DeleteMessage__Group_3__1__Impl9769);
-                    rule__DeleteMessage__Group_3_1__0();
-
-                    state._fsp--;
-                    if (state.failed) return ;
-
-                    }
-                    break;
+            state._fsp--;
+            if (state.failed) return ;
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDeleteMessageAccess().getGroup_3_1()); 
+               after(grammarAccess.getDeleteMessageAccess().getNameAssignment_3_1()); 
             }
 
             }
@@ -14115,16 +14274,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__DeleteMessage__Group_3__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4854:1: rule__DeleteMessage__Group_3__2 : rule__DeleteMessage__Group_3__2__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4918:1: rule__DeleteMessage__Group_3__2 : rule__DeleteMessage__Group_3__2__Impl ;
     public final void rule__DeleteMessage__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4858:1: ( rule__DeleteMessage__Group_3__2__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4859:2: rule__DeleteMessage__Group_3__2__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4922:1: ( rule__DeleteMessage__Group_3__2__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4923:2: rule__DeleteMessage__Group_3__2__Impl
             {
-            pushFollow(FOLLOW_rule__DeleteMessage__Group_3__2__Impl_in_rule__DeleteMessage__Group_3__29800);
+            pushFollow(FOLLOW_rule__DeleteMessage__Group_3__2__Impl_in_rule__DeleteMessage__Group_3__29927);
             rule__DeleteMessage__Group_3__2__Impl();
 
             state._fsp--;
@@ -14148,24 +14307,45 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__DeleteMessage__Group_3__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4865:1: rule__DeleteMessage__Group_3__2__Impl : ( ')' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4929:1: rule__DeleteMessage__Group_3__2__Impl : ( ( rule__DeleteMessage__Group_3_2__0 )? ) ;
     public final void rule__DeleteMessage__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4869:1: ( ( ')' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4870:1: ( ')' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4933:1: ( ( ( rule__DeleteMessage__Group_3_2__0 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4934:1: ( ( rule__DeleteMessage__Group_3_2__0 )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4870:1: ( ')' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4871:1: ')'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4934:1: ( ( rule__DeleteMessage__Group_3_2__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4935:1: ( rule__DeleteMessage__Group_3_2__0 )?
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDeleteMessageAccess().getRightParenthesisKeyword_3_2()); 
+               before(grammarAccess.getDeleteMessageAccess().getGroup_3_2()); 
             }
-            match(input,36,FOLLOW_36_in_rule__DeleteMessage__Group_3__2__Impl9828); if (state.failed) return ;
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4936:1: ( rule__DeleteMessage__Group_3_2__0 )?
+            int alt45=2;
+            int LA45_0 = input.LA(1);
+
+            if ( (LA45_0==35) ) {
+                alt45=1;
+            }
+            switch (alt45) {
+                case 1 :
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4936:2: rule__DeleteMessage__Group_3_2__0
+                    {
+                    pushFollow(FOLLOW_rule__DeleteMessage__Group_3_2__0_in_rule__DeleteMessage__Group_3__2__Impl9954);
+                    rule__DeleteMessage__Group_3_2__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDeleteMessageAccess().getRightParenthesisKeyword_3_2()); 
+               after(grammarAccess.getDeleteMessageAccess().getGroup_3_2()); 
             }
 
             }
@@ -14188,107 +14368,23 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
     // $ANTLR end "rule__DeleteMessage__Group_3__2__Impl"
 
 
-    // $ANTLR start "rule__DeleteMessage__Group_3_1__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4890:1: rule__DeleteMessage__Group_3_1__0 : rule__DeleteMessage__Group_3_1__0__Impl rule__DeleteMessage__Group_3_1__1 ;
-    public final void rule__DeleteMessage__Group_3_1__0() throws RecognitionException {
+    // $ANTLR start "rule__DeleteMessage__Group_3_2__0"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4952:1: rule__DeleteMessage__Group_3_2__0 : rule__DeleteMessage__Group_3_2__0__Impl rule__DeleteMessage__Group_3_2__1 ;
+    public final void rule__DeleteMessage__Group_3_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4894:1: ( rule__DeleteMessage__Group_3_1__0__Impl rule__DeleteMessage__Group_3_1__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4895:2: rule__DeleteMessage__Group_3_1__0__Impl rule__DeleteMessage__Group_3_1__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4956:1: ( rule__DeleteMessage__Group_3_2__0__Impl rule__DeleteMessage__Group_3_2__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4957:2: rule__DeleteMessage__Group_3_2__0__Impl rule__DeleteMessage__Group_3_2__1
             {
-            pushFollow(FOLLOW_rule__DeleteMessage__Group_3_1__0__Impl_in_rule__DeleteMessage__Group_3_1__09865);
-            rule__DeleteMessage__Group_3_1__0__Impl();
+            pushFollow(FOLLOW_rule__DeleteMessage__Group_3_2__0__Impl_in_rule__DeleteMessage__Group_3_2__09991);
+            rule__DeleteMessage__Group_3_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__DeleteMessage__Group_3_1__1_in_rule__DeleteMessage__Group_3_1__09868);
-            rule__DeleteMessage__Group_3_1__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DeleteMessage__Group_3_1__0"
-
-
-    // $ANTLR start "rule__DeleteMessage__Group_3_1__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4902:1: rule__DeleteMessage__Group_3_1__0__Impl : ( ( rule__DeleteMessage__ParameterAssignment_3_1_0 ) ) ;
-    public final void rule__DeleteMessage__Group_3_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4906:1: ( ( ( rule__DeleteMessage__ParameterAssignment_3_1_0 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4907:1: ( ( rule__DeleteMessage__ParameterAssignment_3_1_0 ) )
-            {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4907:1: ( ( rule__DeleteMessage__ParameterAssignment_3_1_0 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4908:1: ( rule__DeleteMessage__ParameterAssignment_3_1_0 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDeleteMessageAccess().getParameterAssignment_3_1_0()); 
-            }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4909:1: ( rule__DeleteMessage__ParameterAssignment_3_1_0 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4909:2: rule__DeleteMessage__ParameterAssignment_3_1_0
-            {
-            pushFollow(FOLLOW_rule__DeleteMessage__ParameterAssignment_3_1_0_in_rule__DeleteMessage__Group_3_1__0__Impl9895);
-            rule__DeleteMessage__ParameterAssignment_3_1_0();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDeleteMessageAccess().getParameterAssignment_3_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DeleteMessage__Group_3_1__0__Impl"
-
-
-    // $ANTLR start "rule__DeleteMessage__Group_3_1__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4919:1: rule__DeleteMessage__Group_3_1__1 : rule__DeleteMessage__Group_3_1__1__Impl ;
-    public final void rule__DeleteMessage__Group_3_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4923:1: ( rule__DeleteMessage__Group_3_1__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4924:2: rule__DeleteMessage__Group_3_1__1__Impl
-            {
-            pushFollow(FOLLOW_rule__DeleteMessage__Group_3_1__1__Impl_in_rule__DeleteMessage__Group_3_1__19925);
-            rule__DeleteMessage__Group_3_1__1__Impl();
+            pushFollow(FOLLOW_rule__DeleteMessage__Group_3_2__1_in_rule__DeleteMessage__Group_3_2__09994);
+            rule__DeleteMessage__Group_3_2__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -14307,42 +14403,385 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__DeleteMessage__Group_3_1__1"
+    // $ANTLR end "rule__DeleteMessage__Group_3_2__0"
 
 
-    // $ANTLR start "rule__DeleteMessage__Group_3_1__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4930:1: rule__DeleteMessage__Group_3_1__1__Impl : ( ( rule__DeleteMessage__Group_3_1_1__0 )* ) ;
-    public final void rule__DeleteMessage__Group_3_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__DeleteMessage__Group_3_2__0__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4964:1: rule__DeleteMessage__Group_3_2__0__Impl : ( ( '(' ) ) ;
+    public final void rule__DeleteMessage__Group_3_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4934:1: ( ( ( rule__DeleteMessage__Group_3_1_1__0 )* ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4935:1: ( ( rule__DeleteMessage__Group_3_1_1__0 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4968:1: ( ( ( '(' ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4969:1: ( ( '(' ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4935:1: ( ( rule__DeleteMessage__Group_3_1_1__0 )* )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4936:1: ( rule__DeleteMessage__Group_3_1_1__0 )*
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4969:1: ( ( '(' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4970:1: ( '(' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDeleteMessageAccess().getGroup_3_1_1()); 
+               before(grammarAccess.getDeleteMessageAccess().getLeftParenthesisKeyword_3_2_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4937:1: ( rule__DeleteMessage__Group_3_1_1__0 )*
-            loop46:
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4971:1: ( '(' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4972:2: '('
+            {
+            match(input,35,FOLLOW_35_in_rule__DeleteMessage__Group_3_2__0__Impl10023); if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDeleteMessageAccess().getLeftParenthesisKeyword_3_2_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DeleteMessage__Group_3_2__0__Impl"
+
+
+    // $ANTLR start "rule__DeleteMessage__Group_3_2__1"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4983:1: rule__DeleteMessage__Group_3_2__1 : rule__DeleteMessage__Group_3_2__1__Impl rule__DeleteMessage__Group_3_2__2 ;
+    public final void rule__DeleteMessage__Group_3_2__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4987:1: ( rule__DeleteMessage__Group_3_2__1__Impl rule__DeleteMessage__Group_3_2__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4988:2: rule__DeleteMessage__Group_3_2__1__Impl rule__DeleteMessage__Group_3_2__2
+            {
+            pushFollow(FOLLOW_rule__DeleteMessage__Group_3_2__1__Impl_in_rule__DeleteMessage__Group_3_2__110055);
+            rule__DeleteMessage__Group_3_2__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__DeleteMessage__Group_3_2__2_in_rule__DeleteMessage__Group_3_2__110058);
+            rule__DeleteMessage__Group_3_2__2();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DeleteMessage__Group_3_2__1"
+
+
+    // $ANTLR start "rule__DeleteMessage__Group_3_2__1__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4995:1: rule__DeleteMessage__Group_3_2__1__Impl : ( ( rule__DeleteMessage__Group_3_2_1__0 )? ) ;
+    public final void rule__DeleteMessage__Group_3_2__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4999:1: ( ( ( rule__DeleteMessage__Group_3_2_1__0 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5000:1: ( ( rule__DeleteMessage__Group_3_2_1__0 )? )
+            {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5000:1: ( ( rule__DeleteMessage__Group_3_2_1__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5001:1: ( rule__DeleteMessage__Group_3_2_1__0 )?
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDeleteMessageAccess().getGroup_3_2_1()); 
+            }
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5002:1: ( rule__DeleteMessage__Group_3_2_1__0 )?
+            int alt46=2;
+            int LA46_0 = input.LA(1);
+
+            if ( (LA46_0==RULE_ID) ) {
+                alt46=1;
+            }
+            switch (alt46) {
+                case 1 :
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5002:2: rule__DeleteMessage__Group_3_2_1__0
+                    {
+                    pushFollow(FOLLOW_rule__DeleteMessage__Group_3_2_1__0_in_rule__DeleteMessage__Group_3_2__1__Impl10085);
+                    rule__DeleteMessage__Group_3_2_1__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDeleteMessageAccess().getGroup_3_2_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DeleteMessage__Group_3_2__1__Impl"
+
+
+    // $ANTLR start "rule__DeleteMessage__Group_3_2__2"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5012:1: rule__DeleteMessage__Group_3_2__2 : rule__DeleteMessage__Group_3_2__2__Impl ;
+    public final void rule__DeleteMessage__Group_3_2__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5016:1: ( rule__DeleteMessage__Group_3_2__2__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5017:2: rule__DeleteMessage__Group_3_2__2__Impl
+            {
+            pushFollow(FOLLOW_rule__DeleteMessage__Group_3_2__2__Impl_in_rule__DeleteMessage__Group_3_2__210116);
+            rule__DeleteMessage__Group_3_2__2__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DeleteMessage__Group_3_2__2"
+
+
+    // $ANTLR start "rule__DeleteMessage__Group_3_2__2__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5023:1: rule__DeleteMessage__Group_3_2__2__Impl : ( ')' ) ;
+    public final void rule__DeleteMessage__Group_3_2__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5027:1: ( ( ')' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5028:1: ( ')' )
+            {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5028:1: ( ')' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5029:1: ')'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDeleteMessageAccess().getRightParenthesisKeyword_3_2_2()); 
+            }
+            match(input,36,FOLLOW_36_in_rule__DeleteMessage__Group_3_2__2__Impl10144); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDeleteMessageAccess().getRightParenthesisKeyword_3_2_2()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DeleteMessage__Group_3_2__2__Impl"
+
+
+    // $ANTLR start "rule__DeleteMessage__Group_3_2_1__0"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5048:1: rule__DeleteMessage__Group_3_2_1__0 : rule__DeleteMessage__Group_3_2_1__0__Impl rule__DeleteMessage__Group_3_2_1__1 ;
+    public final void rule__DeleteMessage__Group_3_2_1__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5052:1: ( rule__DeleteMessage__Group_3_2_1__0__Impl rule__DeleteMessage__Group_3_2_1__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5053:2: rule__DeleteMessage__Group_3_2_1__0__Impl rule__DeleteMessage__Group_3_2_1__1
+            {
+            pushFollow(FOLLOW_rule__DeleteMessage__Group_3_2_1__0__Impl_in_rule__DeleteMessage__Group_3_2_1__010181);
+            rule__DeleteMessage__Group_3_2_1__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__DeleteMessage__Group_3_2_1__1_in_rule__DeleteMessage__Group_3_2_1__010184);
+            rule__DeleteMessage__Group_3_2_1__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DeleteMessage__Group_3_2_1__0"
+
+
+    // $ANTLR start "rule__DeleteMessage__Group_3_2_1__0__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5060:1: rule__DeleteMessage__Group_3_2_1__0__Impl : ( ( rule__DeleteMessage__ParameterAssignment_3_2_1_0 ) ) ;
+    public final void rule__DeleteMessage__Group_3_2_1__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5064:1: ( ( ( rule__DeleteMessage__ParameterAssignment_3_2_1_0 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5065:1: ( ( rule__DeleteMessage__ParameterAssignment_3_2_1_0 ) )
+            {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5065:1: ( ( rule__DeleteMessage__ParameterAssignment_3_2_1_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5066:1: ( rule__DeleteMessage__ParameterAssignment_3_2_1_0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDeleteMessageAccess().getParameterAssignment_3_2_1_0()); 
+            }
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5067:1: ( rule__DeleteMessage__ParameterAssignment_3_2_1_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5067:2: rule__DeleteMessage__ParameterAssignment_3_2_1_0
+            {
+            pushFollow(FOLLOW_rule__DeleteMessage__ParameterAssignment_3_2_1_0_in_rule__DeleteMessage__Group_3_2_1__0__Impl10211);
+            rule__DeleteMessage__ParameterAssignment_3_2_1_0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDeleteMessageAccess().getParameterAssignment_3_2_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DeleteMessage__Group_3_2_1__0__Impl"
+
+
+    // $ANTLR start "rule__DeleteMessage__Group_3_2_1__1"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5077:1: rule__DeleteMessage__Group_3_2_1__1 : rule__DeleteMessage__Group_3_2_1__1__Impl ;
+    public final void rule__DeleteMessage__Group_3_2_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5081:1: ( rule__DeleteMessage__Group_3_2_1__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5082:2: rule__DeleteMessage__Group_3_2_1__1__Impl
+            {
+            pushFollow(FOLLOW_rule__DeleteMessage__Group_3_2_1__1__Impl_in_rule__DeleteMessage__Group_3_2_1__110241);
+            rule__DeleteMessage__Group_3_2_1__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DeleteMessage__Group_3_2_1__1"
+
+
+    // $ANTLR start "rule__DeleteMessage__Group_3_2_1__1__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5088:1: rule__DeleteMessage__Group_3_2_1__1__Impl : ( ( rule__DeleteMessage__Group_3_2_1_1__0 )* ) ;
+    public final void rule__DeleteMessage__Group_3_2_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5092:1: ( ( ( rule__DeleteMessage__Group_3_2_1_1__0 )* ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5093:1: ( ( rule__DeleteMessage__Group_3_2_1_1__0 )* )
+            {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5093:1: ( ( rule__DeleteMessage__Group_3_2_1_1__0 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5094:1: ( rule__DeleteMessage__Group_3_2_1_1__0 )*
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDeleteMessageAccess().getGroup_3_2_1_1()); 
+            }
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5095:1: ( rule__DeleteMessage__Group_3_2_1_1__0 )*
+            loop47:
             do {
-                int alt46=2;
-                int LA46_0 = input.LA(1);
+                int alt47=2;
+                int LA47_0 = input.LA(1);
 
-                if ( (LA46_0==21) ) {
-                    alt46=1;
+                if ( (LA47_0==21) ) {
+                    alt47=1;
                 }
 
 
-                switch (alt46) {
+                switch (alt47) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4937:2: rule__DeleteMessage__Group_3_1_1__0
+            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5095:2: rule__DeleteMessage__Group_3_2_1_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__DeleteMessage__Group_3_1_1__0_in_rule__DeleteMessage__Group_3_1__1__Impl9952);
-            	    rule__DeleteMessage__Group_3_1_1__0();
+            	    pushFollow(FOLLOW_rule__DeleteMessage__Group_3_2_1_1__0_in_rule__DeleteMessage__Group_3_2_1__1__Impl10268);
+            	    rule__DeleteMessage__Group_3_2_1_1__0();
 
             	    state._fsp--;
             	    if (state.failed) return ;
@@ -14351,12 +14790,12 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop46;
+            	    break loop47;
                 }
             } while (true);
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDeleteMessageAccess().getGroup_3_1_1()); 
+               after(grammarAccess.getDeleteMessageAccess().getGroup_3_2_1_1()); 
             }
 
             }
@@ -14376,100 +14815,26 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__DeleteMessage__Group_3_1__1__Impl"
+    // $ANTLR end "rule__DeleteMessage__Group_3_2_1__1__Impl"
 
 
-    // $ANTLR start "rule__DeleteMessage__Group_3_1_1__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4951:1: rule__DeleteMessage__Group_3_1_1__0 : rule__DeleteMessage__Group_3_1_1__0__Impl rule__DeleteMessage__Group_3_1_1__1 ;
-    public final void rule__DeleteMessage__Group_3_1_1__0() throws RecognitionException {
+    // $ANTLR start "rule__DeleteMessage__Group_3_2_1_1__0"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5109:1: rule__DeleteMessage__Group_3_2_1_1__0 : rule__DeleteMessage__Group_3_2_1_1__0__Impl rule__DeleteMessage__Group_3_2_1_1__1 ;
+    public final void rule__DeleteMessage__Group_3_2_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4955:1: ( rule__DeleteMessage__Group_3_1_1__0__Impl rule__DeleteMessage__Group_3_1_1__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4956:2: rule__DeleteMessage__Group_3_1_1__0__Impl rule__DeleteMessage__Group_3_1_1__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5113:1: ( rule__DeleteMessage__Group_3_2_1_1__0__Impl rule__DeleteMessage__Group_3_2_1_1__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5114:2: rule__DeleteMessage__Group_3_2_1_1__0__Impl rule__DeleteMessage__Group_3_2_1_1__1
             {
-            pushFollow(FOLLOW_rule__DeleteMessage__Group_3_1_1__0__Impl_in_rule__DeleteMessage__Group_3_1_1__09987);
-            rule__DeleteMessage__Group_3_1_1__0__Impl();
+            pushFollow(FOLLOW_rule__DeleteMessage__Group_3_2_1_1__0__Impl_in_rule__DeleteMessage__Group_3_2_1_1__010303);
+            rule__DeleteMessage__Group_3_2_1_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__DeleteMessage__Group_3_1_1__1_in_rule__DeleteMessage__Group_3_1_1__09990);
-            rule__DeleteMessage__Group_3_1_1__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DeleteMessage__Group_3_1_1__0"
-
-
-    // $ANTLR start "rule__DeleteMessage__Group_3_1_1__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4963:1: rule__DeleteMessage__Group_3_1_1__0__Impl : ( ',' ) ;
-    public final void rule__DeleteMessage__Group_3_1_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4967:1: ( ( ',' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4968:1: ( ',' )
-            {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4968:1: ( ',' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4969:1: ','
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDeleteMessageAccess().getCommaKeyword_3_1_1_0()); 
-            }
-            match(input,21,FOLLOW_21_in_rule__DeleteMessage__Group_3_1_1__0__Impl10018); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDeleteMessageAccess().getCommaKeyword_3_1_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DeleteMessage__Group_3_1_1__0__Impl"
-
-
-    // $ANTLR start "rule__DeleteMessage__Group_3_1_1__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4982:1: rule__DeleteMessage__Group_3_1_1__1 : rule__DeleteMessage__Group_3_1_1__1__Impl ;
-    public final void rule__DeleteMessage__Group_3_1_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4986:1: ( rule__DeleteMessage__Group_3_1_1__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4987:2: rule__DeleteMessage__Group_3_1_1__1__Impl
-            {
-            pushFollow(FOLLOW_rule__DeleteMessage__Group_3_1_1__1__Impl_in_rule__DeleteMessage__Group_3_1_1__110049);
-            rule__DeleteMessage__Group_3_1_1__1__Impl();
+            pushFollow(FOLLOW_rule__DeleteMessage__Group_3_2_1_1__1_in_rule__DeleteMessage__Group_3_2_1_1__010306);
+            rule__DeleteMessage__Group_3_2_1_1__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -14488,38 +14853,28 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__DeleteMessage__Group_3_1_1__1"
+    // $ANTLR end "rule__DeleteMessage__Group_3_2_1_1__0"
 
 
-    // $ANTLR start "rule__DeleteMessage__Group_3_1_1__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4993:1: rule__DeleteMessage__Group_3_1_1__1__Impl : ( ( rule__DeleteMessage__ParameterAssignment_3_1_1_1 ) ) ;
-    public final void rule__DeleteMessage__Group_3_1_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__DeleteMessage__Group_3_2_1_1__0__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5121:1: rule__DeleteMessage__Group_3_2_1_1__0__Impl : ( ',' ) ;
+    public final void rule__DeleteMessage__Group_3_2_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4997:1: ( ( ( rule__DeleteMessage__ParameterAssignment_3_1_1_1 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4998:1: ( ( rule__DeleteMessage__ParameterAssignment_3_1_1_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5125:1: ( ( ',' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5126:1: ( ',' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4998:1: ( ( rule__DeleteMessage__ParameterAssignment_3_1_1_1 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:4999:1: ( rule__DeleteMessage__ParameterAssignment_3_1_1_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5126:1: ( ',' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5127:1: ','
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDeleteMessageAccess().getParameterAssignment_3_1_1_1()); 
+               before(grammarAccess.getDeleteMessageAccess().getCommaKeyword_3_2_1_1_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5000:1: ( rule__DeleteMessage__ParameterAssignment_3_1_1_1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5000:2: rule__DeleteMessage__ParameterAssignment_3_1_1_1
-            {
-            pushFollow(FOLLOW_rule__DeleteMessage__ParameterAssignment_3_1_1_1_in_rule__DeleteMessage__Group_3_1_1__1__Impl10076);
-            rule__DeleteMessage__ParameterAssignment_3_1_1_1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
+            match(input,21,FOLLOW_21_in_rule__DeleteMessage__Group_3_2_1_1__0__Impl10334); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDeleteMessageAccess().getParameterAssignment_3_1_1_1()); 
+               after(grammarAccess.getDeleteMessageAccess().getCommaKeyword_3_2_1_1_0()); 
             }
 
             }
@@ -14539,25 +14894,109 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__DeleteMessage__Group_3_1_1__1__Impl"
+    // $ANTLR end "rule__DeleteMessage__Group_3_2_1_1__0__Impl"
+
+
+    // $ANTLR start "rule__DeleteMessage__Group_3_2_1_1__1"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5140:1: rule__DeleteMessage__Group_3_2_1_1__1 : rule__DeleteMessage__Group_3_2_1_1__1__Impl ;
+    public final void rule__DeleteMessage__Group_3_2_1_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5144:1: ( rule__DeleteMessage__Group_3_2_1_1__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5145:2: rule__DeleteMessage__Group_3_2_1_1__1__Impl
+            {
+            pushFollow(FOLLOW_rule__DeleteMessage__Group_3_2_1_1__1__Impl_in_rule__DeleteMessage__Group_3_2_1_1__110365);
+            rule__DeleteMessage__Group_3_2_1_1__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DeleteMessage__Group_3_2_1_1__1"
+
+
+    // $ANTLR start "rule__DeleteMessage__Group_3_2_1_1__1__Impl"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5151:1: rule__DeleteMessage__Group_3_2_1_1__1__Impl : ( ( rule__DeleteMessage__ParameterAssignment_3_2_1_1_1 ) ) ;
+    public final void rule__DeleteMessage__Group_3_2_1_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5155:1: ( ( ( rule__DeleteMessage__ParameterAssignment_3_2_1_1_1 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5156:1: ( ( rule__DeleteMessage__ParameterAssignment_3_2_1_1_1 ) )
+            {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5156:1: ( ( rule__DeleteMessage__ParameterAssignment_3_2_1_1_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5157:1: ( rule__DeleteMessage__ParameterAssignment_3_2_1_1_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDeleteMessageAccess().getParameterAssignment_3_2_1_1_1()); 
+            }
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5158:1: ( rule__DeleteMessage__ParameterAssignment_3_2_1_1_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5158:2: rule__DeleteMessage__ParameterAssignment_3_2_1_1_1
+            {
+            pushFollow(FOLLOW_rule__DeleteMessage__ParameterAssignment_3_2_1_1_1_in_rule__DeleteMessage__Group_3_2_1_1__1__Impl10392);
+            rule__DeleteMessage__ParameterAssignment_3_2_1_1_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDeleteMessageAccess().getParameterAssignment_3_2_1_1_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DeleteMessage__Group_3_2_1_1__1__Impl"
 
 
     // $ANTLR start "rule__SelfMessage__Group__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5014:1: rule__SelfMessage__Group__0 : rule__SelfMessage__Group__0__Impl rule__SelfMessage__Group__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5172:1: rule__SelfMessage__Group__0 : rule__SelfMessage__Group__0__Impl rule__SelfMessage__Group__1 ;
     public final void rule__SelfMessage__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5018:1: ( rule__SelfMessage__Group__0__Impl rule__SelfMessage__Group__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5019:2: rule__SelfMessage__Group__0__Impl rule__SelfMessage__Group__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5176:1: ( rule__SelfMessage__Group__0__Impl rule__SelfMessage__Group__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5177:2: rule__SelfMessage__Group__0__Impl rule__SelfMessage__Group__1
             {
-            pushFollow(FOLLOW_rule__SelfMessage__Group__0__Impl_in_rule__SelfMessage__Group__010110);
+            pushFollow(FOLLOW_rule__SelfMessage__Group__0__Impl_in_rule__SelfMessage__Group__010426);
             rule__SelfMessage__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SelfMessage__Group__1_in_rule__SelfMessage__Group__010113);
+            pushFollow(FOLLOW_rule__SelfMessage__Group__1_in_rule__SelfMessage__Group__010429);
             rule__SelfMessage__Group__1();
 
             state._fsp--;
@@ -14581,26 +15020,26 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5026:1: rule__SelfMessage__Group__0__Impl : ( ( rule__SelfMessage__SourceParticipantAssignment_0 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5184:1: rule__SelfMessage__Group__0__Impl : ( ( rule__SelfMessage__SourceAssignment_0 ) ) ;
     public final void rule__SelfMessage__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5030:1: ( ( ( rule__SelfMessage__SourceParticipantAssignment_0 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5031:1: ( ( rule__SelfMessage__SourceParticipantAssignment_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5188:1: ( ( ( rule__SelfMessage__SourceAssignment_0 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5189:1: ( ( rule__SelfMessage__SourceAssignment_0 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5031:1: ( ( rule__SelfMessage__SourceParticipantAssignment_0 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5032:1: ( rule__SelfMessage__SourceParticipantAssignment_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5189:1: ( ( rule__SelfMessage__SourceAssignment_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5190:1: ( rule__SelfMessage__SourceAssignment_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getSelfMessageAccess().getSourceParticipantAssignment_0()); 
+               before(grammarAccess.getSelfMessageAccess().getSourceAssignment_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5033:1: ( rule__SelfMessage__SourceParticipantAssignment_0 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5033:2: rule__SelfMessage__SourceParticipantAssignment_0
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5191:1: ( rule__SelfMessage__SourceAssignment_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5191:2: rule__SelfMessage__SourceAssignment_0
             {
-            pushFollow(FOLLOW_rule__SelfMessage__SourceParticipantAssignment_0_in_rule__SelfMessage__Group__0__Impl10140);
-            rule__SelfMessage__SourceParticipantAssignment_0();
+            pushFollow(FOLLOW_rule__SelfMessage__SourceAssignment_0_in_rule__SelfMessage__Group__0__Impl10456);
+            rule__SelfMessage__SourceAssignment_0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -14608,7 +15047,7 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getSelfMessageAccess().getSourceParticipantAssignment_0()); 
+               after(grammarAccess.getSelfMessageAccess().getSourceAssignment_0()); 
             }
 
             }
@@ -14632,21 +15071,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5043:1: rule__SelfMessage__Group__1 : rule__SelfMessage__Group__1__Impl rule__SelfMessage__Group__2 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5201:1: rule__SelfMessage__Group__1 : rule__SelfMessage__Group__1__Impl rule__SelfMessage__Group__2 ;
     public final void rule__SelfMessage__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5047:1: ( rule__SelfMessage__Group__1__Impl rule__SelfMessage__Group__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5048:2: rule__SelfMessage__Group__1__Impl rule__SelfMessage__Group__2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5205:1: ( rule__SelfMessage__Group__1__Impl rule__SelfMessage__Group__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5206:2: rule__SelfMessage__Group__1__Impl rule__SelfMessage__Group__2
             {
-            pushFollow(FOLLOW_rule__SelfMessage__Group__1__Impl_in_rule__SelfMessage__Group__110170);
+            pushFollow(FOLLOW_rule__SelfMessage__Group__1__Impl_in_rule__SelfMessage__Group__110486);
             rule__SelfMessage__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SelfMessage__Group__2_in_rule__SelfMessage__Group__110173);
+            pushFollow(FOLLOW_rule__SelfMessage__Group__2_in_rule__SelfMessage__Group__110489);
             rule__SelfMessage__Group__2();
 
             state._fsp--;
@@ -14670,22 +15109,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5055:1: rule__SelfMessage__Group__1__Impl : ( 'self' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5213:1: rule__SelfMessage__Group__1__Impl : ( 'self' ) ;
     public final void rule__SelfMessage__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5059:1: ( ( 'self' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5060:1: ( 'self' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5217:1: ( ( 'self' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5218:1: ( 'self' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5060:1: ( 'self' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5061:1: 'self'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5218:1: ( 'self' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5219:1: 'self'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getSelfKeyword_1()); 
             }
-            match(input,40,FOLLOW_40_in_rule__SelfMessage__Group__1__Impl10201); if (state.failed) return ;
+            match(input,40,FOLLOW_40_in_rule__SelfMessage__Group__1__Impl10517); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSelfMessageAccess().getSelfKeyword_1()); 
             }
@@ -14711,21 +15150,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5074:1: rule__SelfMessage__Group__2 : rule__SelfMessage__Group__2__Impl rule__SelfMessage__Group__3 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5232:1: rule__SelfMessage__Group__2 : rule__SelfMessage__Group__2__Impl rule__SelfMessage__Group__3 ;
     public final void rule__SelfMessage__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5078:1: ( rule__SelfMessage__Group__2__Impl rule__SelfMessage__Group__3 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5079:2: rule__SelfMessage__Group__2__Impl rule__SelfMessage__Group__3
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5236:1: ( rule__SelfMessage__Group__2__Impl rule__SelfMessage__Group__3 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5237:2: rule__SelfMessage__Group__2__Impl rule__SelfMessage__Group__3
             {
-            pushFollow(FOLLOW_rule__SelfMessage__Group__2__Impl_in_rule__SelfMessage__Group__210232);
+            pushFollow(FOLLOW_rule__SelfMessage__Group__2__Impl_in_rule__SelfMessage__Group__210548);
             rule__SelfMessage__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SelfMessage__Group__3_in_rule__SelfMessage__Group__210235);
+            pushFollow(FOLLOW_rule__SelfMessage__Group__3_in_rule__SelfMessage__Group__210551);
             rule__SelfMessage__Group__3();
 
             state._fsp--;
@@ -14749,22 +15188,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5086:1: rule__SelfMessage__Group__2__Impl : ( '.' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5244:1: rule__SelfMessage__Group__2__Impl : ( '.' ) ;
     public final void rule__SelfMessage__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5090:1: ( ( '.' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5091:1: ( '.' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5248:1: ( ( '.' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5249:1: ( '.' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5091:1: ( '.' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5092:1: '.'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5249:1: ( '.' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5250:1: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getFullStopKeyword_2()); 
             }
-            match(input,34,FOLLOW_34_in_rule__SelfMessage__Group__2__Impl10263); if (state.failed) return ;
+            match(input,34,FOLLOW_34_in_rule__SelfMessage__Group__2__Impl10579); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSelfMessageAccess().getFullStopKeyword_2()); 
             }
@@ -14790,21 +15229,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group__3"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5105:1: rule__SelfMessage__Group__3 : rule__SelfMessage__Group__3__Impl rule__SelfMessage__Group__4 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5263:1: rule__SelfMessage__Group__3 : rule__SelfMessage__Group__3__Impl rule__SelfMessage__Group__4 ;
     public final void rule__SelfMessage__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5109:1: ( rule__SelfMessage__Group__3__Impl rule__SelfMessage__Group__4 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5110:2: rule__SelfMessage__Group__3__Impl rule__SelfMessage__Group__4
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5267:1: ( rule__SelfMessage__Group__3__Impl rule__SelfMessage__Group__4 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5268:2: rule__SelfMessage__Group__3__Impl rule__SelfMessage__Group__4
             {
-            pushFollow(FOLLOW_rule__SelfMessage__Group__3__Impl_in_rule__SelfMessage__Group__310294);
+            pushFollow(FOLLOW_rule__SelfMessage__Group__3__Impl_in_rule__SelfMessage__Group__310610);
             rule__SelfMessage__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SelfMessage__Group__4_in_rule__SelfMessage__Group__310297);
+            pushFollow(FOLLOW_rule__SelfMessage__Group__4_in_rule__SelfMessage__Group__310613);
             rule__SelfMessage__Group__4();
 
             state._fsp--;
@@ -14828,25 +15267,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group__3__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5117:1: rule__SelfMessage__Group__3__Impl : ( ( rule__SelfMessage__NameAssignment_3 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5275:1: rule__SelfMessage__Group__3__Impl : ( ( rule__SelfMessage__NameAssignment_3 ) ) ;
     public final void rule__SelfMessage__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5121:1: ( ( ( rule__SelfMessage__NameAssignment_3 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5122:1: ( ( rule__SelfMessage__NameAssignment_3 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5279:1: ( ( ( rule__SelfMessage__NameAssignment_3 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5280:1: ( ( rule__SelfMessage__NameAssignment_3 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5122:1: ( ( rule__SelfMessage__NameAssignment_3 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5123:1: ( rule__SelfMessage__NameAssignment_3 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5280:1: ( ( rule__SelfMessage__NameAssignment_3 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5281:1: ( rule__SelfMessage__NameAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getNameAssignment_3()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5124:1: ( rule__SelfMessage__NameAssignment_3 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5124:2: rule__SelfMessage__NameAssignment_3
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5282:1: ( rule__SelfMessage__NameAssignment_3 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5282:2: rule__SelfMessage__NameAssignment_3
             {
-            pushFollow(FOLLOW_rule__SelfMessage__NameAssignment_3_in_rule__SelfMessage__Group__3__Impl10324);
+            pushFollow(FOLLOW_rule__SelfMessage__NameAssignment_3_in_rule__SelfMessage__Group__3__Impl10640);
             rule__SelfMessage__NameAssignment_3();
 
             state._fsp--;
@@ -14879,21 +15318,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group__4"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5134:1: rule__SelfMessage__Group__4 : rule__SelfMessage__Group__4__Impl rule__SelfMessage__Group__5 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5292:1: rule__SelfMessage__Group__4 : rule__SelfMessage__Group__4__Impl rule__SelfMessage__Group__5 ;
     public final void rule__SelfMessage__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5138:1: ( rule__SelfMessage__Group__4__Impl rule__SelfMessage__Group__5 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5139:2: rule__SelfMessage__Group__4__Impl rule__SelfMessage__Group__5
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5296:1: ( rule__SelfMessage__Group__4__Impl rule__SelfMessage__Group__5 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5297:2: rule__SelfMessage__Group__4__Impl rule__SelfMessage__Group__5
             {
-            pushFollow(FOLLOW_rule__SelfMessage__Group__4__Impl_in_rule__SelfMessage__Group__410354);
+            pushFollow(FOLLOW_rule__SelfMessage__Group__4__Impl_in_rule__SelfMessage__Group__410670);
             rule__SelfMessage__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SelfMessage__Group__5_in_rule__SelfMessage__Group__410357);
+            pushFollow(FOLLOW_rule__SelfMessage__Group__5_in_rule__SelfMessage__Group__410673);
             rule__SelfMessage__Group__5();
 
             state._fsp--;
@@ -14917,33 +15356,33 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group__4__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5146:1: rule__SelfMessage__Group__4__Impl : ( ( rule__SelfMessage__Group_4__0 )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5304:1: rule__SelfMessage__Group__4__Impl : ( ( rule__SelfMessage__Group_4__0 )? ) ;
     public final void rule__SelfMessage__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5150:1: ( ( ( rule__SelfMessage__Group_4__0 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5151:1: ( ( rule__SelfMessage__Group_4__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5308:1: ( ( ( rule__SelfMessage__Group_4__0 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5309:1: ( ( rule__SelfMessage__Group_4__0 )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5151:1: ( ( rule__SelfMessage__Group_4__0 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5152:1: ( rule__SelfMessage__Group_4__0 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5309:1: ( ( rule__SelfMessage__Group_4__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5310:1: ( rule__SelfMessage__Group_4__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getGroup_4()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5153:1: ( rule__SelfMessage__Group_4__0 )?
-            int alt47=2;
-            int LA47_0 = input.LA(1);
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5311:1: ( rule__SelfMessage__Group_4__0 )?
+            int alt48=2;
+            int LA48_0 = input.LA(1);
 
-            if ( (LA47_0==35) ) {
-                alt47=1;
+            if ( (LA48_0==35) ) {
+                alt48=1;
             }
-            switch (alt47) {
+            switch (alt48) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5153:2: rule__SelfMessage__Group_4__0
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5311:2: rule__SelfMessage__Group_4__0
                     {
-                    pushFollow(FOLLOW_rule__SelfMessage__Group_4__0_in_rule__SelfMessage__Group__4__Impl10384);
+                    pushFollow(FOLLOW_rule__SelfMessage__Group_4__0_in_rule__SelfMessage__Group__4__Impl10700);
                     rule__SelfMessage__Group_4__0();
 
                     state._fsp--;
@@ -14979,21 +15418,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group__5"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5163:1: rule__SelfMessage__Group__5 : rule__SelfMessage__Group__5__Impl rule__SelfMessage__Group__6 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5321:1: rule__SelfMessage__Group__5 : rule__SelfMessage__Group__5__Impl rule__SelfMessage__Group__6 ;
     public final void rule__SelfMessage__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5167:1: ( rule__SelfMessage__Group__5__Impl rule__SelfMessage__Group__6 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5168:2: rule__SelfMessage__Group__5__Impl rule__SelfMessage__Group__6
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5325:1: ( rule__SelfMessage__Group__5__Impl rule__SelfMessage__Group__6 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5326:2: rule__SelfMessage__Group__5__Impl rule__SelfMessage__Group__6
             {
-            pushFollow(FOLLOW_rule__SelfMessage__Group__5__Impl_in_rule__SelfMessage__Group__510415);
+            pushFollow(FOLLOW_rule__SelfMessage__Group__5__Impl_in_rule__SelfMessage__Group__510731);
             rule__SelfMessage__Group__5__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SelfMessage__Group__6_in_rule__SelfMessage__Group__510418);
+            pushFollow(FOLLOW_rule__SelfMessage__Group__6_in_rule__SelfMessage__Group__510734);
             rule__SelfMessage__Group__6();
 
             state._fsp--;
@@ -15017,33 +15456,33 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group__5__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5175:1: rule__SelfMessage__Group__5__Impl : ( ( rule__SelfMessage__ReturnAssignment_5 )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5333:1: rule__SelfMessage__Group__5__Impl : ( ( rule__SelfMessage__ReturnAssignment_5 )? ) ;
     public final void rule__SelfMessage__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5179:1: ( ( ( rule__SelfMessage__ReturnAssignment_5 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5180:1: ( ( rule__SelfMessage__ReturnAssignment_5 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5337:1: ( ( ( rule__SelfMessage__ReturnAssignment_5 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5338:1: ( ( rule__SelfMessage__ReturnAssignment_5 )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5180:1: ( ( rule__SelfMessage__ReturnAssignment_5 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5181:1: ( rule__SelfMessage__ReturnAssignment_5 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5338:1: ( ( rule__SelfMessage__ReturnAssignment_5 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5339:1: ( rule__SelfMessage__ReturnAssignment_5 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getReturnAssignment_5()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5182:1: ( rule__SelfMessage__ReturnAssignment_5 )?
-            int alt48=2;
-            int LA48_0 = input.LA(1);
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5340:1: ( rule__SelfMessage__ReturnAssignment_5 )?
+            int alt49=2;
+            int LA49_0 = input.LA(1);
 
-            if ( (LA48_0==38) ) {
-                alt48=1;
+            if ( (LA49_0==38) ) {
+                alt49=1;
             }
-            switch (alt48) {
+            switch (alt49) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5182:2: rule__SelfMessage__ReturnAssignment_5
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5340:2: rule__SelfMessage__ReturnAssignment_5
                     {
-                    pushFollow(FOLLOW_rule__SelfMessage__ReturnAssignment_5_in_rule__SelfMessage__Group__5__Impl10445);
+                    pushFollow(FOLLOW_rule__SelfMessage__ReturnAssignment_5_in_rule__SelfMessage__Group__5__Impl10761);
                     rule__SelfMessage__ReturnAssignment_5();
 
                     state._fsp--;
@@ -15079,16 +15518,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group__6"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5192:1: rule__SelfMessage__Group__6 : rule__SelfMessage__Group__6__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5350:1: rule__SelfMessage__Group__6 : rule__SelfMessage__Group__6__Impl ;
     public final void rule__SelfMessage__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5196:1: ( rule__SelfMessage__Group__6__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5197:2: rule__SelfMessage__Group__6__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5354:1: ( rule__SelfMessage__Group__6__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5355:2: rule__SelfMessage__Group__6__Impl
             {
-            pushFollow(FOLLOW_rule__SelfMessage__Group__6__Impl_in_rule__SelfMessage__Group__610476);
+            pushFollow(FOLLOW_rule__SelfMessage__Group__6__Impl_in_rule__SelfMessage__Group__610792);
             rule__SelfMessage__Group__6__Impl();
 
             state._fsp--;
@@ -15112,33 +15551,33 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group__6__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5203:1: rule__SelfMessage__Group__6__Impl : ( ( rule__SelfMessage__Group_6__0 )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5361:1: rule__SelfMessage__Group__6__Impl : ( ( rule__SelfMessage__Group_6__0 )? ) ;
     public final void rule__SelfMessage__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5207:1: ( ( ( rule__SelfMessage__Group_6__0 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5208:1: ( ( rule__SelfMessage__Group_6__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5365:1: ( ( ( rule__SelfMessage__Group_6__0 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5366:1: ( ( rule__SelfMessage__Group_6__0 )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5208:1: ( ( rule__SelfMessage__Group_6__0 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5209:1: ( rule__SelfMessage__Group_6__0 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5366:1: ( ( rule__SelfMessage__Group_6__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5367:1: ( rule__SelfMessage__Group_6__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getGroup_6()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5210:1: ( rule__SelfMessage__Group_6__0 )?
-            int alt49=2;
-            int LA49_0 = input.LA(1);
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5368:1: ( rule__SelfMessage__Group_6__0 )?
+            int alt50=2;
+            int LA50_0 = input.LA(1);
 
-            if ( (LA49_0==41) ) {
-                alt49=1;
+            if ( (LA50_0==41) ) {
+                alt50=1;
             }
-            switch (alt49) {
+            switch (alt50) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5210:2: rule__SelfMessage__Group_6__0
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5368:2: rule__SelfMessage__Group_6__0
                     {
-                    pushFollow(FOLLOW_rule__SelfMessage__Group_6__0_in_rule__SelfMessage__Group__6__Impl10503);
+                    pushFollow(FOLLOW_rule__SelfMessage__Group_6__0_in_rule__SelfMessage__Group__6__Impl10819);
                     rule__SelfMessage__Group_6__0();
 
                     state._fsp--;
@@ -15174,21 +15613,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_4__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5234:1: rule__SelfMessage__Group_4__0 : rule__SelfMessage__Group_4__0__Impl rule__SelfMessage__Group_4__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5392:1: rule__SelfMessage__Group_4__0 : rule__SelfMessage__Group_4__0__Impl rule__SelfMessage__Group_4__1 ;
     public final void rule__SelfMessage__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5238:1: ( rule__SelfMessage__Group_4__0__Impl rule__SelfMessage__Group_4__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5239:2: rule__SelfMessage__Group_4__0__Impl rule__SelfMessage__Group_4__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5396:1: ( rule__SelfMessage__Group_4__0__Impl rule__SelfMessage__Group_4__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5397:2: rule__SelfMessage__Group_4__0__Impl rule__SelfMessage__Group_4__1
             {
-            pushFollow(FOLLOW_rule__SelfMessage__Group_4__0__Impl_in_rule__SelfMessage__Group_4__010548);
+            pushFollow(FOLLOW_rule__SelfMessage__Group_4__0__Impl_in_rule__SelfMessage__Group_4__010864);
             rule__SelfMessage__Group_4__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SelfMessage__Group_4__1_in_rule__SelfMessage__Group_4__010551);
+            pushFollow(FOLLOW_rule__SelfMessage__Group_4__1_in_rule__SelfMessage__Group_4__010867);
             rule__SelfMessage__Group_4__1();
 
             state._fsp--;
@@ -15212,25 +15651,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_4__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5246:1: rule__SelfMessage__Group_4__0__Impl : ( ( '(' ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5404:1: rule__SelfMessage__Group_4__0__Impl : ( ( '(' ) ) ;
     public final void rule__SelfMessage__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5250:1: ( ( ( '(' ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5251:1: ( ( '(' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5408:1: ( ( ( '(' ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5409:1: ( ( '(' ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5251:1: ( ( '(' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5252:1: ( '(' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5409:1: ( ( '(' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5410:1: ( '(' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getLeftParenthesisKeyword_4_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5253:1: ( '(' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5254:2: '('
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5411:1: ( '(' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5412:2: '('
             {
-            match(input,35,FOLLOW_35_in_rule__SelfMessage__Group_4__0__Impl10580); if (state.failed) return ;
+            match(input,35,FOLLOW_35_in_rule__SelfMessage__Group_4__0__Impl10896); if (state.failed) return ;
 
             }
 
@@ -15259,21 +15698,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_4__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5265:1: rule__SelfMessage__Group_4__1 : rule__SelfMessage__Group_4__1__Impl rule__SelfMessage__Group_4__2 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5423:1: rule__SelfMessage__Group_4__1 : rule__SelfMessage__Group_4__1__Impl rule__SelfMessage__Group_4__2 ;
     public final void rule__SelfMessage__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5269:1: ( rule__SelfMessage__Group_4__1__Impl rule__SelfMessage__Group_4__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5270:2: rule__SelfMessage__Group_4__1__Impl rule__SelfMessage__Group_4__2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5427:1: ( rule__SelfMessage__Group_4__1__Impl rule__SelfMessage__Group_4__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5428:2: rule__SelfMessage__Group_4__1__Impl rule__SelfMessage__Group_4__2
             {
-            pushFollow(FOLLOW_rule__SelfMessage__Group_4__1__Impl_in_rule__SelfMessage__Group_4__110612);
+            pushFollow(FOLLOW_rule__SelfMessage__Group_4__1__Impl_in_rule__SelfMessage__Group_4__110928);
             rule__SelfMessage__Group_4__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SelfMessage__Group_4__2_in_rule__SelfMessage__Group_4__110615);
+            pushFollow(FOLLOW_rule__SelfMessage__Group_4__2_in_rule__SelfMessage__Group_4__110931);
             rule__SelfMessage__Group_4__2();
 
             state._fsp--;
@@ -15297,33 +15736,33 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_4__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5277:1: rule__SelfMessage__Group_4__1__Impl : ( ( rule__SelfMessage__Group_4_1__0 )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5435:1: rule__SelfMessage__Group_4__1__Impl : ( ( rule__SelfMessage__Group_4_1__0 )? ) ;
     public final void rule__SelfMessage__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5281:1: ( ( ( rule__SelfMessage__Group_4_1__0 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5282:1: ( ( rule__SelfMessage__Group_4_1__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5439:1: ( ( ( rule__SelfMessage__Group_4_1__0 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5440:1: ( ( rule__SelfMessage__Group_4_1__0 )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5282:1: ( ( rule__SelfMessage__Group_4_1__0 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5283:1: ( rule__SelfMessage__Group_4_1__0 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5440:1: ( ( rule__SelfMessage__Group_4_1__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5441:1: ( rule__SelfMessage__Group_4_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getGroup_4_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5284:1: ( rule__SelfMessage__Group_4_1__0 )?
-            int alt50=2;
-            int LA50_0 = input.LA(1);
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5442:1: ( rule__SelfMessage__Group_4_1__0 )?
+            int alt51=2;
+            int LA51_0 = input.LA(1);
 
-            if ( (LA50_0==RULE_ID) ) {
-                alt50=1;
+            if ( (LA51_0==RULE_ID) ) {
+                alt51=1;
             }
-            switch (alt50) {
+            switch (alt51) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5284:2: rule__SelfMessage__Group_4_1__0
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5442:2: rule__SelfMessage__Group_4_1__0
                     {
-                    pushFollow(FOLLOW_rule__SelfMessage__Group_4_1__0_in_rule__SelfMessage__Group_4__1__Impl10642);
+                    pushFollow(FOLLOW_rule__SelfMessage__Group_4_1__0_in_rule__SelfMessage__Group_4__1__Impl10958);
                     rule__SelfMessage__Group_4_1__0();
 
                     state._fsp--;
@@ -15359,16 +15798,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_4__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5294:1: rule__SelfMessage__Group_4__2 : rule__SelfMessage__Group_4__2__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5452:1: rule__SelfMessage__Group_4__2 : rule__SelfMessage__Group_4__2__Impl ;
     public final void rule__SelfMessage__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5298:1: ( rule__SelfMessage__Group_4__2__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5299:2: rule__SelfMessage__Group_4__2__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5456:1: ( rule__SelfMessage__Group_4__2__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5457:2: rule__SelfMessage__Group_4__2__Impl
             {
-            pushFollow(FOLLOW_rule__SelfMessage__Group_4__2__Impl_in_rule__SelfMessage__Group_4__210673);
+            pushFollow(FOLLOW_rule__SelfMessage__Group_4__2__Impl_in_rule__SelfMessage__Group_4__210989);
             rule__SelfMessage__Group_4__2__Impl();
 
             state._fsp--;
@@ -15392,22 +15831,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_4__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5305:1: rule__SelfMessage__Group_4__2__Impl : ( ')' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5463:1: rule__SelfMessage__Group_4__2__Impl : ( ')' ) ;
     public final void rule__SelfMessage__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5309:1: ( ( ')' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5310:1: ( ')' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5467:1: ( ( ')' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5468:1: ( ')' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5310:1: ( ')' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5311:1: ')'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5468:1: ( ')' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5469:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getRightParenthesisKeyword_4_2()); 
             }
-            match(input,36,FOLLOW_36_in_rule__SelfMessage__Group_4__2__Impl10701); if (state.failed) return ;
+            match(input,36,FOLLOW_36_in_rule__SelfMessage__Group_4__2__Impl11017); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSelfMessageAccess().getRightParenthesisKeyword_4_2()); 
             }
@@ -15433,21 +15872,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_4_1__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5330:1: rule__SelfMessage__Group_4_1__0 : rule__SelfMessage__Group_4_1__0__Impl rule__SelfMessage__Group_4_1__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5488:1: rule__SelfMessage__Group_4_1__0 : rule__SelfMessage__Group_4_1__0__Impl rule__SelfMessage__Group_4_1__1 ;
     public final void rule__SelfMessage__Group_4_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5334:1: ( rule__SelfMessage__Group_4_1__0__Impl rule__SelfMessage__Group_4_1__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5335:2: rule__SelfMessage__Group_4_1__0__Impl rule__SelfMessage__Group_4_1__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5492:1: ( rule__SelfMessage__Group_4_1__0__Impl rule__SelfMessage__Group_4_1__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5493:2: rule__SelfMessage__Group_4_1__0__Impl rule__SelfMessage__Group_4_1__1
             {
-            pushFollow(FOLLOW_rule__SelfMessage__Group_4_1__0__Impl_in_rule__SelfMessage__Group_4_1__010738);
+            pushFollow(FOLLOW_rule__SelfMessage__Group_4_1__0__Impl_in_rule__SelfMessage__Group_4_1__011054);
             rule__SelfMessage__Group_4_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SelfMessage__Group_4_1__1_in_rule__SelfMessage__Group_4_1__010741);
+            pushFollow(FOLLOW_rule__SelfMessage__Group_4_1__1_in_rule__SelfMessage__Group_4_1__011057);
             rule__SelfMessage__Group_4_1__1();
 
             state._fsp--;
@@ -15471,25 +15910,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_4_1__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5342:1: rule__SelfMessage__Group_4_1__0__Impl : ( ( rule__SelfMessage__ParameterAssignment_4_1_0 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5500:1: rule__SelfMessage__Group_4_1__0__Impl : ( ( rule__SelfMessage__ParameterAssignment_4_1_0 ) ) ;
     public final void rule__SelfMessage__Group_4_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5346:1: ( ( ( rule__SelfMessage__ParameterAssignment_4_1_0 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5347:1: ( ( rule__SelfMessage__ParameterAssignment_4_1_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5504:1: ( ( ( rule__SelfMessage__ParameterAssignment_4_1_0 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5505:1: ( ( rule__SelfMessage__ParameterAssignment_4_1_0 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5347:1: ( ( rule__SelfMessage__ParameterAssignment_4_1_0 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5348:1: ( rule__SelfMessage__ParameterAssignment_4_1_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5505:1: ( ( rule__SelfMessage__ParameterAssignment_4_1_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5506:1: ( rule__SelfMessage__ParameterAssignment_4_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getParameterAssignment_4_1_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5349:1: ( rule__SelfMessage__ParameterAssignment_4_1_0 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5349:2: rule__SelfMessage__ParameterAssignment_4_1_0
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5507:1: ( rule__SelfMessage__ParameterAssignment_4_1_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5507:2: rule__SelfMessage__ParameterAssignment_4_1_0
             {
-            pushFollow(FOLLOW_rule__SelfMessage__ParameterAssignment_4_1_0_in_rule__SelfMessage__Group_4_1__0__Impl10768);
+            pushFollow(FOLLOW_rule__SelfMessage__ParameterAssignment_4_1_0_in_rule__SelfMessage__Group_4_1__0__Impl11084);
             rule__SelfMessage__ParameterAssignment_4_1_0();
 
             state._fsp--;
@@ -15522,16 +15961,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_4_1__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5359:1: rule__SelfMessage__Group_4_1__1 : rule__SelfMessage__Group_4_1__1__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5517:1: rule__SelfMessage__Group_4_1__1 : rule__SelfMessage__Group_4_1__1__Impl ;
     public final void rule__SelfMessage__Group_4_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5363:1: ( rule__SelfMessage__Group_4_1__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5364:2: rule__SelfMessage__Group_4_1__1__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5521:1: ( rule__SelfMessage__Group_4_1__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5522:2: rule__SelfMessage__Group_4_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__SelfMessage__Group_4_1__1__Impl_in_rule__SelfMessage__Group_4_1__110798);
+            pushFollow(FOLLOW_rule__SelfMessage__Group_4_1__1__Impl_in_rule__SelfMessage__Group_4_1__111114);
             rule__SelfMessage__Group_4_1__1__Impl();
 
             state._fsp--;
@@ -15555,37 +15994,37 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_4_1__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5370:1: rule__SelfMessage__Group_4_1__1__Impl : ( ( rule__SelfMessage__Group_4_1_1__0 )* ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5528:1: rule__SelfMessage__Group_4_1__1__Impl : ( ( rule__SelfMessage__Group_4_1_1__0 )* ) ;
     public final void rule__SelfMessage__Group_4_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5374:1: ( ( ( rule__SelfMessage__Group_4_1_1__0 )* ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5375:1: ( ( rule__SelfMessage__Group_4_1_1__0 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5532:1: ( ( ( rule__SelfMessage__Group_4_1_1__0 )* ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5533:1: ( ( rule__SelfMessage__Group_4_1_1__0 )* )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5375:1: ( ( rule__SelfMessage__Group_4_1_1__0 )* )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5376:1: ( rule__SelfMessage__Group_4_1_1__0 )*
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5533:1: ( ( rule__SelfMessage__Group_4_1_1__0 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5534:1: ( rule__SelfMessage__Group_4_1_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getGroup_4_1_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5377:1: ( rule__SelfMessage__Group_4_1_1__0 )*
-            loop51:
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5535:1: ( rule__SelfMessage__Group_4_1_1__0 )*
+            loop52:
             do {
-                int alt51=2;
-                int LA51_0 = input.LA(1);
+                int alt52=2;
+                int LA52_0 = input.LA(1);
 
-                if ( (LA51_0==21) ) {
-                    alt51=1;
+                if ( (LA52_0==21) ) {
+                    alt52=1;
                 }
 
 
-                switch (alt51) {
+                switch (alt52) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5377:2: rule__SelfMessage__Group_4_1_1__0
+            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5535:2: rule__SelfMessage__Group_4_1_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__SelfMessage__Group_4_1_1__0_in_rule__SelfMessage__Group_4_1__1__Impl10825);
+            	    pushFollow(FOLLOW_rule__SelfMessage__Group_4_1_1__0_in_rule__SelfMessage__Group_4_1__1__Impl11141);
             	    rule__SelfMessage__Group_4_1_1__0();
 
             	    state._fsp--;
@@ -15595,7 +16034,7 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop51;
+            	    break loop52;
                 }
             } while (true);
 
@@ -15624,21 +16063,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_4_1_1__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5391:1: rule__SelfMessage__Group_4_1_1__0 : rule__SelfMessage__Group_4_1_1__0__Impl rule__SelfMessage__Group_4_1_1__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5549:1: rule__SelfMessage__Group_4_1_1__0 : rule__SelfMessage__Group_4_1_1__0__Impl rule__SelfMessage__Group_4_1_1__1 ;
     public final void rule__SelfMessage__Group_4_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5395:1: ( rule__SelfMessage__Group_4_1_1__0__Impl rule__SelfMessage__Group_4_1_1__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5396:2: rule__SelfMessage__Group_4_1_1__0__Impl rule__SelfMessage__Group_4_1_1__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5553:1: ( rule__SelfMessage__Group_4_1_1__0__Impl rule__SelfMessage__Group_4_1_1__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5554:2: rule__SelfMessage__Group_4_1_1__0__Impl rule__SelfMessage__Group_4_1_1__1
             {
-            pushFollow(FOLLOW_rule__SelfMessage__Group_4_1_1__0__Impl_in_rule__SelfMessage__Group_4_1_1__010860);
+            pushFollow(FOLLOW_rule__SelfMessage__Group_4_1_1__0__Impl_in_rule__SelfMessage__Group_4_1_1__011176);
             rule__SelfMessage__Group_4_1_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SelfMessage__Group_4_1_1__1_in_rule__SelfMessage__Group_4_1_1__010863);
+            pushFollow(FOLLOW_rule__SelfMessage__Group_4_1_1__1_in_rule__SelfMessage__Group_4_1_1__011179);
             rule__SelfMessage__Group_4_1_1__1();
 
             state._fsp--;
@@ -15662,22 +16101,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_4_1_1__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5403:1: rule__SelfMessage__Group_4_1_1__0__Impl : ( ',' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5561:1: rule__SelfMessage__Group_4_1_1__0__Impl : ( ',' ) ;
     public final void rule__SelfMessage__Group_4_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5407:1: ( ( ',' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5408:1: ( ',' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5565:1: ( ( ',' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5566:1: ( ',' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5408:1: ( ',' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5409:1: ','
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5566:1: ( ',' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5567:1: ','
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getCommaKeyword_4_1_1_0()); 
             }
-            match(input,21,FOLLOW_21_in_rule__SelfMessage__Group_4_1_1__0__Impl10891); if (state.failed) return ;
+            match(input,21,FOLLOW_21_in_rule__SelfMessage__Group_4_1_1__0__Impl11207); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSelfMessageAccess().getCommaKeyword_4_1_1_0()); 
             }
@@ -15703,16 +16142,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_4_1_1__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5422:1: rule__SelfMessage__Group_4_1_1__1 : rule__SelfMessage__Group_4_1_1__1__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5580:1: rule__SelfMessage__Group_4_1_1__1 : rule__SelfMessage__Group_4_1_1__1__Impl ;
     public final void rule__SelfMessage__Group_4_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5426:1: ( rule__SelfMessage__Group_4_1_1__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5427:2: rule__SelfMessage__Group_4_1_1__1__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5584:1: ( rule__SelfMessage__Group_4_1_1__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5585:2: rule__SelfMessage__Group_4_1_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__SelfMessage__Group_4_1_1__1__Impl_in_rule__SelfMessage__Group_4_1_1__110922);
+            pushFollow(FOLLOW_rule__SelfMessage__Group_4_1_1__1__Impl_in_rule__SelfMessage__Group_4_1_1__111238);
             rule__SelfMessage__Group_4_1_1__1__Impl();
 
             state._fsp--;
@@ -15736,25 +16175,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_4_1_1__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5433:1: rule__SelfMessage__Group_4_1_1__1__Impl : ( ( rule__SelfMessage__ParameterAssignment_4_1_1_1 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5591:1: rule__SelfMessage__Group_4_1_1__1__Impl : ( ( rule__SelfMessage__ParameterAssignment_4_1_1_1 ) ) ;
     public final void rule__SelfMessage__Group_4_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5437:1: ( ( ( rule__SelfMessage__ParameterAssignment_4_1_1_1 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5438:1: ( ( rule__SelfMessage__ParameterAssignment_4_1_1_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5595:1: ( ( ( rule__SelfMessage__ParameterAssignment_4_1_1_1 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5596:1: ( ( rule__SelfMessage__ParameterAssignment_4_1_1_1 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5438:1: ( ( rule__SelfMessage__ParameterAssignment_4_1_1_1 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5439:1: ( rule__SelfMessage__ParameterAssignment_4_1_1_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5596:1: ( ( rule__SelfMessage__ParameterAssignment_4_1_1_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5597:1: ( rule__SelfMessage__ParameterAssignment_4_1_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getParameterAssignment_4_1_1_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5440:1: ( rule__SelfMessage__ParameterAssignment_4_1_1_1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5440:2: rule__SelfMessage__ParameterAssignment_4_1_1_1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5598:1: ( rule__SelfMessage__ParameterAssignment_4_1_1_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5598:2: rule__SelfMessage__ParameterAssignment_4_1_1_1
             {
-            pushFollow(FOLLOW_rule__SelfMessage__ParameterAssignment_4_1_1_1_in_rule__SelfMessage__Group_4_1_1__1__Impl10949);
+            pushFollow(FOLLOW_rule__SelfMessage__ParameterAssignment_4_1_1_1_in_rule__SelfMessage__Group_4_1_1__1__Impl11265);
             rule__SelfMessage__ParameterAssignment_4_1_1_1();
 
             state._fsp--;
@@ -15787,21 +16226,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_6__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5454:1: rule__SelfMessage__Group_6__0 : rule__SelfMessage__Group_6__0__Impl rule__SelfMessage__Group_6__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5612:1: rule__SelfMessage__Group_6__0 : rule__SelfMessage__Group_6__0__Impl rule__SelfMessage__Group_6__1 ;
     public final void rule__SelfMessage__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5458:1: ( rule__SelfMessage__Group_6__0__Impl rule__SelfMessage__Group_6__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5459:2: rule__SelfMessage__Group_6__0__Impl rule__SelfMessage__Group_6__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5616:1: ( rule__SelfMessage__Group_6__0__Impl rule__SelfMessage__Group_6__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5617:2: rule__SelfMessage__Group_6__0__Impl rule__SelfMessage__Group_6__1
             {
-            pushFollow(FOLLOW_rule__SelfMessage__Group_6__0__Impl_in_rule__SelfMessage__Group_6__010983);
+            pushFollow(FOLLOW_rule__SelfMessage__Group_6__0__Impl_in_rule__SelfMessage__Group_6__011299);
             rule__SelfMessage__Group_6__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SelfMessage__Group_6__1_in_rule__SelfMessage__Group_6__010986);
+            pushFollow(FOLLOW_rule__SelfMessage__Group_6__1_in_rule__SelfMessage__Group_6__011302);
             rule__SelfMessage__Group_6__1();
 
             state._fsp--;
@@ -15825,25 +16264,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_6__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5466:1: rule__SelfMessage__Group_6__0__Impl : ( ( 'begin' ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5624:1: rule__SelfMessage__Group_6__0__Impl : ( ( 'begin' ) ) ;
     public final void rule__SelfMessage__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5470:1: ( ( ( 'begin' ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5471:1: ( ( 'begin' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5628:1: ( ( ( 'begin' ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5629:1: ( ( 'begin' ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5471:1: ( ( 'begin' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5472:1: ( 'begin' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5629:1: ( ( 'begin' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5630:1: ( 'begin' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getBeginKeyword_6_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5473:1: ( 'begin' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5474:2: 'begin'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5631:1: ( 'begin' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5632:2: 'begin'
             {
-            match(input,41,FOLLOW_41_in_rule__SelfMessage__Group_6__0__Impl11015); if (state.failed) return ;
+            match(input,41,FOLLOW_41_in_rule__SelfMessage__Group_6__0__Impl11331); if (state.failed) return ;
 
             }
 
@@ -15872,21 +16311,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_6__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5485:1: rule__SelfMessage__Group_6__1 : rule__SelfMessage__Group_6__1__Impl rule__SelfMessage__Group_6__2 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5643:1: rule__SelfMessage__Group_6__1 : rule__SelfMessage__Group_6__1__Impl rule__SelfMessage__Group_6__2 ;
     public final void rule__SelfMessage__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5489:1: ( rule__SelfMessage__Group_6__1__Impl rule__SelfMessage__Group_6__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5490:2: rule__SelfMessage__Group_6__1__Impl rule__SelfMessage__Group_6__2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5647:1: ( rule__SelfMessage__Group_6__1__Impl rule__SelfMessage__Group_6__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5648:2: rule__SelfMessage__Group_6__1__Impl rule__SelfMessage__Group_6__2
             {
-            pushFollow(FOLLOW_rule__SelfMessage__Group_6__1__Impl_in_rule__SelfMessage__Group_6__111047);
+            pushFollow(FOLLOW_rule__SelfMessage__Group_6__1__Impl_in_rule__SelfMessage__Group_6__111363);
             rule__SelfMessage__Group_6__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SelfMessage__Group_6__2_in_rule__SelfMessage__Group_6__111050);
+            pushFollow(FOLLOW_rule__SelfMessage__Group_6__2_in_rule__SelfMessage__Group_6__111366);
             rule__SelfMessage__Group_6__2();
 
             state._fsp--;
@@ -15910,37 +16349,37 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_6__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5497:1: rule__SelfMessage__Group_6__1__Impl : ( ( rule__SelfMessage__TransitionAssignment_6_1 )* ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5655:1: rule__SelfMessage__Group_6__1__Impl : ( ( rule__SelfMessage__TransitionAssignment_6_1 )* ) ;
     public final void rule__SelfMessage__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5501:1: ( ( ( rule__SelfMessage__TransitionAssignment_6_1 )* ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5502:1: ( ( rule__SelfMessage__TransitionAssignment_6_1 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5659:1: ( ( ( rule__SelfMessage__TransitionAssignment_6_1 )* ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5660:1: ( ( rule__SelfMessage__TransitionAssignment_6_1 )* )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5502:1: ( ( rule__SelfMessage__TransitionAssignment_6_1 )* )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5503:1: ( rule__SelfMessage__TransitionAssignment_6_1 )*
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5660:1: ( ( rule__SelfMessage__TransitionAssignment_6_1 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5661:1: ( rule__SelfMessage__TransitionAssignment_6_1 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getTransitionAssignment_6_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5504:1: ( rule__SelfMessage__TransitionAssignment_6_1 )*
-            loop52:
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5662:1: ( rule__SelfMessage__TransitionAssignment_6_1 )*
+            loop53:
             do {
-                int alt52=2;
-                int LA52_0 = input.LA(1);
+                int alt53=2;
+                int LA53_0 = input.LA(1);
 
-                if ( (LA52_0==RULE_ID||LA52_0==23||LA52_0==27||(LA52_0>=29 && LA52_0<=33)) ) {
-                    alt52=1;
+                if ( (LA53_0==RULE_ID||LA53_0==23||LA53_0==27||(LA53_0>=29 && LA53_0<=33)) ) {
+                    alt53=1;
                 }
 
 
-                switch (alt52) {
+                switch (alt53) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5504:2: rule__SelfMessage__TransitionAssignment_6_1
+            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5662:2: rule__SelfMessage__TransitionAssignment_6_1
             	    {
-            	    pushFollow(FOLLOW_rule__SelfMessage__TransitionAssignment_6_1_in_rule__SelfMessage__Group_6__1__Impl11077);
+            	    pushFollow(FOLLOW_rule__SelfMessage__TransitionAssignment_6_1_in_rule__SelfMessage__Group_6__1__Impl11393);
             	    rule__SelfMessage__TransitionAssignment_6_1();
 
             	    state._fsp--;
@@ -15950,7 +16389,7 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop52;
+            	    break loop53;
                 }
             } while (true);
 
@@ -15979,16 +16418,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_6__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5514:1: rule__SelfMessage__Group_6__2 : rule__SelfMessage__Group_6__2__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5672:1: rule__SelfMessage__Group_6__2 : rule__SelfMessage__Group_6__2__Impl ;
     public final void rule__SelfMessage__Group_6__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5518:1: ( rule__SelfMessage__Group_6__2__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5519:2: rule__SelfMessage__Group_6__2__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5676:1: ( rule__SelfMessage__Group_6__2__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5677:2: rule__SelfMessage__Group_6__2__Impl
             {
-            pushFollow(FOLLOW_rule__SelfMessage__Group_6__2__Impl_in_rule__SelfMessage__Group_6__211108);
+            pushFollow(FOLLOW_rule__SelfMessage__Group_6__2__Impl_in_rule__SelfMessage__Group_6__211424);
             rule__SelfMessage__Group_6__2__Impl();
 
             state._fsp--;
@@ -16012,22 +16451,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__Group_6__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5525:1: rule__SelfMessage__Group_6__2__Impl : ( 'end' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5683:1: rule__SelfMessage__Group_6__2__Impl : ( 'end' ) ;
     public final void rule__SelfMessage__Group_6__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5529:1: ( ( 'end' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5530:1: ( 'end' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5687:1: ( ( 'end' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5688:1: ( 'end' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5530:1: ( 'end' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5531:1: 'end'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5688:1: ( 'end' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5689:1: 'end'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getEndKeyword_6_2()); 
             }
-            match(input,20,FOLLOW_20_in_rule__SelfMessage__Group_6__2__Impl11136); if (state.failed) return ;
+            match(input,20,FOLLOW_20_in_rule__SelfMessage__Group_6__2__Impl11452); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSelfMessageAccess().getEndKeyword_6_2()); 
             }
@@ -16053,21 +16492,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Parameter__Group__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5550:1: rule__Parameter__Group__0 : rule__Parameter__Group__0__Impl rule__Parameter__Group__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5708:1: rule__Parameter__Group__0 : rule__Parameter__Group__0__Impl rule__Parameter__Group__1 ;
     public final void rule__Parameter__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5554:1: ( rule__Parameter__Group__0__Impl rule__Parameter__Group__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5555:2: rule__Parameter__Group__0__Impl rule__Parameter__Group__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5712:1: ( rule__Parameter__Group__0__Impl rule__Parameter__Group__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5713:2: rule__Parameter__Group__0__Impl rule__Parameter__Group__1
             {
-            pushFollow(FOLLOW_rule__Parameter__Group__0__Impl_in_rule__Parameter__Group__011173);
+            pushFollow(FOLLOW_rule__Parameter__Group__0__Impl_in_rule__Parameter__Group__011489);
             rule__Parameter__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Parameter__Group__1_in_rule__Parameter__Group__011176);
+            pushFollow(FOLLOW_rule__Parameter__Group__1_in_rule__Parameter__Group__011492);
             rule__Parameter__Group__1();
 
             state._fsp--;
@@ -16091,25 +16530,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Parameter__Group__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5562:1: rule__Parameter__Group__0__Impl : ( ( rule__Parameter__NameAssignment_0 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5720:1: rule__Parameter__Group__0__Impl : ( ( rule__Parameter__NameAssignment_0 ) ) ;
     public final void rule__Parameter__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5566:1: ( ( ( rule__Parameter__NameAssignment_0 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5567:1: ( ( rule__Parameter__NameAssignment_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5724:1: ( ( ( rule__Parameter__NameAssignment_0 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5725:1: ( ( rule__Parameter__NameAssignment_0 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5567:1: ( ( rule__Parameter__NameAssignment_0 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5568:1: ( rule__Parameter__NameAssignment_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5725:1: ( ( rule__Parameter__NameAssignment_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5726:1: ( rule__Parameter__NameAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParameterAccess().getNameAssignment_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5569:1: ( rule__Parameter__NameAssignment_0 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5569:2: rule__Parameter__NameAssignment_0
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5727:1: ( rule__Parameter__NameAssignment_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5727:2: rule__Parameter__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Parameter__NameAssignment_0_in_rule__Parameter__Group__0__Impl11203);
+            pushFollow(FOLLOW_rule__Parameter__NameAssignment_0_in_rule__Parameter__Group__0__Impl11519);
             rule__Parameter__NameAssignment_0();
 
             state._fsp--;
@@ -16142,16 +16581,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Parameter__Group__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5579:1: rule__Parameter__Group__1 : rule__Parameter__Group__1__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5737:1: rule__Parameter__Group__1 : rule__Parameter__Group__1__Impl ;
     public final void rule__Parameter__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5583:1: ( rule__Parameter__Group__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5584:2: rule__Parameter__Group__1__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5741:1: ( rule__Parameter__Group__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5742:2: rule__Parameter__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Parameter__Group__1__Impl_in_rule__Parameter__Group__111233);
+            pushFollow(FOLLOW_rule__Parameter__Group__1__Impl_in_rule__Parameter__Group__111549);
             rule__Parameter__Group__1__Impl();
 
             state._fsp--;
@@ -16175,33 +16614,33 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Parameter__Group__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5590:1: rule__Parameter__Group__1__Impl : ( ( rule__Parameter__Group_1__0 )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5748:1: rule__Parameter__Group__1__Impl : ( ( rule__Parameter__Group_1__0 )? ) ;
     public final void rule__Parameter__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5594:1: ( ( ( rule__Parameter__Group_1__0 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5595:1: ( ( rule__Parameter__Group_1__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5752:1: ( ( ( rule__Parameter__Group_1__0 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5753:1: ( ( rule__Parameter__Group_1__0 )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5595:1: ( ( rule__Parameter__Group_1__0 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5596:1: ( rule__Parameter__Group_1__0 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5753:1: ( ( rule__Parameter__Group_1__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5754:1: ( rule__Parameter__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParameterAccess().getGroup_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5597:1: ( rule__Parameter__Group_1__0 )?
-            int alt53=2;
-            int LA53_0 = input.LA(1);
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5755:1: ( rule__Parameter__Group_1__0 )?
+            int alt54=2;
+            int LA54_0 = input.LA(1);
 
-            if ( (LA53_0==22) ) {
-                alt53=1;
+            if ( (LA54_0==22) ) {
+                alt54=1;
             }
-            switch (alt53) {
+            switch (alt54) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5597:2: rule__Parameter__Group_1__0
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5755:2: rule__Parameter__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__Parameter__Group_1__0_in_rule__Parameter__Group__1__Impl11260);
+                    pushFollow(FOLLOW_rule__Parameter__Group_1__0_in_rule__Parameter__Group__1__Impl11576);
                     rule__Parameter__Group_1__0();
 
                     state._fsp--;
@@ -16237,21 +16676,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Parameter__Group_1__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5611:1: rule__Parameter__Group_1__0 : rule__Parameter__Group_1__0__Impl rule__Parameter__Group_1__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5769:1: rule__Parameter__Group_1__0 : rule__Parameter__Group_1__0__Impl rule__Parameter__Group_1__1 ;
     public final void rule__Parameter__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5615:1: ( rule__Parameter__Group_1__0__Impl rule__Parameter__Group_1__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5616:2: rule__Parameter__Group_1__0__Impl rule__Parameter__Group_1__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5773:1: ( rule__Parameter__Group_1__0__Impl rule__Parameter__Group_1__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5774:2: rule__Parameter__Group_1__0__Impl rule__Parameter__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Parameter__Group_1__0__Impl_in_rule__Parameter__Group_1__011295);
+            pushFollow(FOLLOW_rule__Parameter__Group_1__0__Impl_in_rule__Parameter__Group_1__011611);
             rule__Parameter__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Parameter__Group_1__1_in_rule__Parameter__Group_1__011298);
+            pushFollow(FOLLOW_rule__Parameter__Group_1__1_in_rule__Parameter__Group_1__011614);
             rule__Parameter__Group_1__1();
 
             state._fsp--;
@@ -16275,22 +16714,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Parameter__Group_1__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5623:1: rule__Parameter__Group_1__0__Impl : ( ':' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5781:1: rule__Parameter__Group_1__0__Impl : ( ':' ) ;
     public final void rule__Parameter__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5627:1: ( ( ':' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5628:1: ( ':' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5785:1: ( ( ':' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5786:1: ( ':' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5628:1: ( ':' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5629:1: ':'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5786:1: ( ':' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5787:1: ':'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParameterAccess().getColonKeyword_1_0()); 
             }
-            match(input,22,FOLLOW_22_in_rule__Parameter__Group_1__0__Impl11326); if (state.failed) return ;
+            match(input,22,FOLLOW_22_in_rule__Parameter__Group_1__0__Impl11642); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getParameterAccess().getColonKeyword_1_0()); 
             }
@@ -16316,16 +16755,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Parameter__Group_1__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5642:1: rule__Parameter__Group_1__1 : rule__Parameter__Group_1__1__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5800:1: rule__Parameter__Group_1__1 : rule__Parameter__Group_1__1__Impl ;
     public final void rule__Parameter__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5646:1: ( rule__Parameter__Group_1__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5647:2: rule__Parameter__Group_1__1__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5804:1: ( rule__Parameter__Group_1__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5805:2: rule__Parameter__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Parameter__Group_1__1__Impl_in_rule__Parameter__Group_1__111357);
+            pushFollow(FOLLOW_rule__Parameter__Group_1__1__Impl_in_rule__Parameter__Group_1__111673);
             rule__Parameter__Group_1__1__Impl();
 
             state._fsp--;
@@ -16349,25 +16788,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Parameter__Group_1__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5653:1: rule__Parameter__Group_1__1__Impl : ( ( rule__Parameter__TypeAssignment_1_1 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5811:1: rule__Parameter__Group_1__1__Impl : ( ( rule__Parameter__TypeAssignment_1_1 ) ) ;
     public final void rule__Parameter__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5657:1: ( ( ( rule__Parameter__TypeAssignment_1_1 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5658:1: ( ( rule__Parameter__TypeAssignment_1_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5815:1: ( ( ( rule__Parameter__TypeAssignment_1_1 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5816:1: ( ( rule__Parameter__TypeAssignment_1_1 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5658:1: ( ( rule__Parameter__TypeAssignment_1_1 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5659:1: ( rule__Parameter__TypeAssignment_1_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5816:1: ( ( rule__Parameter__TypeAssignment_1_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5817:1: ( rule__Parameter__TypeAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParameterAccess().getTypeAssignment_1_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5660:1: ( rule__Parameter__TypeAssignment_1_1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5660:2: rule__Parameter__TypeAssignment_1_1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5818:1: ( rule__Parameter__TypeAssignment_1_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5818:2: rule__Parameter__TypeAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Parameter__TypeAssignment_1_1_in_rule__Parameter__Group_1__1__Impl11384);
+            pushFollow(FOLLOW_rule__Parameter__TypeAssignment_1_1_in_rule__Parameter__Group_1__1__Impl11700);
             rule__Parameter__TypeAssignment_1_1();
 
             state._fsp--;
@@ -16400,21 +16839,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Reference__Group__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5674:1: rule__Reference__Group__0 : rule__Reference__Group__0__Impl rule__Reference__Group__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5832:1: rule__Reference__Group__0 : rule__Reference__Group__0__Impl rule__Reference__Group__1 ;
     public final void rule__Reference__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5678:1: ( rule__Reference__Group__0__Impl rule__Reference__Group__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5679:2: rule__Reference__Group__0__Impl rule__Reference__Group__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5836:1: ( rule__Reference__Group__0__Impl rule__Reference__Group__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5837:2: rule__Reference__Group__0__Impl rule__Reference__Group__1
             {
-            pushFollow(FOLLOW_rule__Reference__Group__0__Impl_in_rule__Reference__Group__011418);
+            pushFollow(FOLLOW_rule__Reference__Group__0__Impl_in_rule__Reference__Group__011734);
             rule__Reference__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Reference__Group__1_in_rule__Reference__Group__011421);
+            pushFollow(FOLLOW_rule__Reference__Group__1_in_rule__Reference__Group__011737);
             rule__Reference__Group__1();
 
             state._fsp--;
@@ -16438,25 +16877,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Reference__Group__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5686:1: rule__Reference__Group__0__Impl : ( ( rule__Reference__TypeAssignment_0 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5844:1: rule__Reference__Group__0__Impl : ( ( rule__Reference__TypeAssignment_0 ) ) ;
     public final void rule__Reference__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5690:1: ( ( ( rule__Reference__TypeAssignment_0 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5691:1: ( ( rule__Reference__TypeAssignment_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5848:1: ( ( ( rule__Reference__TypeAssignment_0 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5849:1: ( ( rule__Reference__TypeAssignment_0 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5691:1: ( ( rule__Reference__TypeAssignment_0 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5692:1: ( rule__Reference__TypeAssignment_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5849:1: ( ( rule__Reference__TypeAssignment_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5850:1: ( rule__Reference__TypeAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReferenceAccess().getTypeAssignment_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5693:1: ( rule__Reference__TypeAssignment_0 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5693:2: rule__Reference__TypeAssignment_0
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5851:1: ( rule__Reference__TypeAssignment_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5851:2: rule__Reference__TypeAssignment_0
             {
-            pushFollow(FOLLOW_rule__Reference__TypeAssignment_0_in_rule__Reference__Group__0__Impl11448);
+            pushFollow(FOLLOW_rule__Reference__TypeAssignment_0_in_rule__Reference__Group__0__Impl11764);
             rule__Reference__TypeAssignment_0();
 
             state._fsp--;
@@ -16489,16 +16928,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Reference__Group__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5703:1: rule__Reference__Group__1 : rule__Reference__Group__1__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5861:1: rule__Reference__Group__1 : rule__Reference__Group__1__Impl ;
     public final void rule__Reference__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5707:1: ( rule__Reference__Group__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5708:2: rule__Reference__Group__1__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5865:1: ( rule__Reference__Group__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5866:2: rule__Reference__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Reference__Group__1__Impl_in_rule__Reference__Group__111478);
+            pushFollow(FOLLOW_rule__Reference__Group__1__Impl_in_rule__Reference__Group__111794);
             rule__Reference__Group__1__Impl();
 
             state._fsp--;
@@ -16522,37 +16961,37 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Reference__Group__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5714:1: rule__Reference__Group__1__Impl : ( ( rule__Reference__ArrayAssignment_1 )* ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5872:1: rule__Reference__Group__1__Impl : ( ( rule__Reference__ArrayAssignment_1 )* ) ;
     public final void rule__Reference__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5718:1: ( ( ( rule__Reference__ArrayAssignment_1 )* ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5719:1: ( ( rule__Reference__ArrayAssignment_1 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5876:1: ( ( ( rule__Reference__ArrayAssignment_1 )* ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5877:1: ( ( rule__Reference__ArrayAssignment_1 )* )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5719:1: ( ( rule__Reference__ArrayAssignment_1 )* )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5720:1: ( rule__Reference__ArrayAssignment_1 )*
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5877:1: ( ( rule__Reference__ArrayAssignment_1 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5878:1: ( rule__Reference__ArrayAssignment_1 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReferenceAccess().getArrayAssignment_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5721:1: ( rule__Reference__ArrayAssignment_1 )*
-            loop54:
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5879:1: ( rule__Reference__ArrayAssignment_1 )*
+            loop55:
             do {
-                int alt54=2;
-                int LA54_0 = input.LA(1);
+                int alt55=2;
+                int LA55_0 = input.LA(1);
 
-                if ( (LA54_0==42) ) {
-                    alt54=1;
+                if ( (LA55_0==42) ) {
+                    alt55=1;
                 }
 
 
-                switch (alt54) {
+                switch (alt55) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5721:2: rule__Reference__ArrayAssignment_1
+            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5879:2: rule__Reference__ArrayAssignment_1
             	    {
-            	    pushFollow(FOLLOW_rule__Reference__ArrayAssignment_1_in_rule__Reference__Group__1__Impl11505);
+            	    pushFollow(FOLLOW_rule__Reference__ArrayAssignment_1_in_rule__Reference__Group__1__Impl11821);
             	    rule__Reference__ArrayAssignment_1();
 
             	    state._fsp--;
@@ -16562,7 +17001,7 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop54;
+            	    break loop55;
                 }
             } while (true);
 
@@ -16591,21 +17030,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Array__Group__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5735:1: rule__Array__Group__0 : rule__Array__Group__0__Impl rule__Array__Group__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5893:1: rule__Array__Group__0 : rule__Array__Group__0__Impl rule__Array__Group__1 ;
     public final void rule__Array__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5739:1: ( rule__Array__Group__0__Impl rule__Array__Group__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5740:2: rule__Array__Group__0__Impl rule__Array__Group__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5897:1: ( rule__Array__Group__0__Impl rule__Array__Group__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5898:2: rule__Array__Group__0__Impl rule__Array__Group__1
             {
-            pushFollow(FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__011540);
+            pushFollow(FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__011856);
             rule__Array__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Array__Group__1_in_rule__Array__Group__011543);
+            pushFollow(FOLLOW_rule__Array__Group__1_in_rule__Array__Group__011859);
             rule__Array__Group__1();
 
             state._fsp--;
@@ -16629,23 +17068,23 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Array__Group__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5747:1: rule__Array__Group__0__Impl : ( () ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5905:1: rule__Array__Group__0__Impl : ( () ) ;
     public final void rule__Array__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5751:1: ( ( () ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5752:1: ( () )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5909:1: ( ( () ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5910:1: ( () )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5752:1: ( () )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5753:1: ()
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5910:1: ( () )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5911:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getArrayAction_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5754:1: ()
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5756:1: 
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5912:1: ()
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5914:1: 
             {
             }
 
@@ -16670,21 +17109,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Array__Group__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5766:1: rule__Array__Group__1 : rule__Array__Group__1__Impl rule__Array__Group__2 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5924:1: rule__Array__Group__1 : rule__Array__Group__1__Impl rule__Array__Group__2 ;
     public final void rule__Array__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5770:1: ( rule__Array__Group__1__Impl rule__Array__Group__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5771:2: rule__Array__Group__1__Impl rule__Array__Group__2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5928:1: ( rule__Array__Group__1__Impl rule__Array__Group__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5929:2: rule__Array__Group__1__Impl rule__Array__Group__2
             {
-            pushFollow(FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__111601);
+            pushFollow(FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__111917);
             rule__Array__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Array__Group__2_in_rule__Array__Group__111604);
+            pushFollow(FOLLOW_rule__Array__Group__2_in_rule__Array__Group__111920);
             rule__Array__Group__2();
 
             state._fsp--;
@@ -16708,22 +17147,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Array__Group__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5778:1: rule__Array__Group__1__Impl : ( '[' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5936:1: rule__Array__Group__1__Impl : ( '[' ) ;
     public final void rule__Array__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5782:1: ( ( '[' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5783:1: ( '[' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5940:1: ( ( '[' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5941:1: ( '[' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5783:1: ( '[' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5784:1: '['
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5941:1: ( '[' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5942:1: '['
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getLeftSquareBracketKeyword_1()); 
             }
-            match(input,42,FOLLOW_42_in_rule__Array__Group__1__Impl11632); if (state.failed) return ;
+            match(input,42,FOLLOW_42_in_rule__Array__Group__1__Impl11948); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArrayAccess().getLeftSquareBracketKeyword_1()); 
             }
@@ -16749,21 +17188,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Array__Group__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5797:1: rule__Array__Group__2 : rule__Array__Group__2__Impl rule__Array__Group__3 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5955:1: rule__Array__Group__2 : rule__Array__Group__2__Impl rule__Array__Group__3 ;
     public final void rule__Array__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5801:1: ( rule__Array__Group__2__Impl rule__Array__Group__3 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5802:2: rule__Array__Group__2__Impl rule__Array__Group__3
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5959:1: ( rule__Array__Group__2__Impl rule__Array__Group__3 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5960:2: rule__Array__Group__2__Impl rule__Array__Group__3
             {
-            pushFollow(FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__211663);
+            pushFollow(FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__211979);
             rule__Array__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Array__Group__3_in_rule__Array__Group__211666);
+            pushFollow(FOLLOW_rule__Array__Group__3_in_rule__Array__Group__211982);
             rule__Array__Group__3();
 
             state._fsp--;
@@ -16787,33 +17226,33 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Array__Group__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5809:1: rule__Array__Group__2__Impl : ( ( rule__Array__SizeAssignment_2 )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5967:1: rule__Array__Group__2__Impl : ( ( rule__Array__SizeAssignment_2 )? ) ;
     public final void rule__Array__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5813:1: ( ( ( rule__Array__SizeAssignment_2 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5814:1: ( ( rule__Array__SizeAssignment_2 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5971:1: ( ( ( rule__Array__SizeAssignment_2 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5972:1: ( ( rule__Array__SizeAssignment_2 )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5814:1: ( ( rule__Array__SizeAssignment_2 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5815:1: ( rule__Array__SizeAssignment_2 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5972:1: ( ( rule__Array__SizeAssignment_2 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5973:1: ( rule__Array__SizeAssignment_2 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getSizeAssignment_2()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5816:1: ( rule__Array__SizeAssignment_2 )?
-            int alt55=2;
-            int LA55_0 = input.LA(1);
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5974:1: ( rule__Array__SizeAssignment_2 )?
+            int alt56=2;
+            int LA56_0 = input.LA(1);
 
-            if ( (LA55_0==RULE_NATURAL) ) {
-                alt55=1;
+            if ( (LA56_0==RULE_NATURAL) ) {
+                alt56=1;
             }
-            switch (alt55) {
+            switch (alt56) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5816:2: rule__Array__SizeAssignment_2
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5974:2: rule__Array__SizeAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__Array__SizeAssignment_2_in_rule__Array__Group__2__Impl11693);
+                    pushFollow(FOLLOW_rule__Array__SizeAssignment_2_in_rule__Array__Group__2__Impl12009);
                     rule__Array__SizeAssignment_2();
 
                     state._fsp--;
@@ -16849,16 +17288,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Array__Group__3"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5826:1: rule__Array__Group__3 : rule__Array__Group__3__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5984:1: rule__Array__Group__3 : rule__Array__Group__3__Impl ;
     public final void rule__Array__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5830:1: ( rule__Array__Group__3__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5831:2: rule__Array__Group__3__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5988:1: ( rule__Array__Group__3__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5989:2: rule__Array__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Array__Group__3__Impl_in_rule__Array__Group__311724);
+            pushFollow(FOLLOW_rule__Array__Group__3__Impl_in_rule__Array__Group__312040);
             rule__Array__Group__3__Impl();
 
             state._fsp--;
@@ -16882,22 +17321,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Array__Group__3__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5837:1: rule__Array__Group__3__Impl : ( ']' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5995:1: rule__Array__Group__3__Impl : ( ']' ) ;
     public final void rule__Array__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5841:1: ( ( ']' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5842:1: ( ']' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5999:1: ( ( ']' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6000:1: ( ']' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5842:1: ( ']' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5843:1: ']'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6000:1: ( ']' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6001:1: ']'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getRightSquareBracketKeyword_3()); 
             }
-            match(input,43,FOLLOW_43_in_rule__Array__Group__3__Impl11752); if (state.failed) return ;
+            match(input,43,FOLLOW_43_in_rule__Array__Group__3__Impl12068); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArrayAccess().getRightSquareBracketKeyword_3()); 
             }
@@ -16923,21 +17362,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ForeachExpression__Group__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5864:1: rule__ForeachExpression__Group__0 : rule__ForeachExpression__Group__0__Impl rule__ForeachExpression__Group__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6022:1: rule__ForeachExpression__Group__0 : rule__ForeachExpression__Group__0__Impl rule__ForeachExpression__Group__1 ;
     public final void rule__ForeachExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5868:1: ( rule__ForeachExpression__Group__0__Impl rule__ForeachExpression__Group__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5869:2: rule__ForeachExpression__Group__0__Impl rule__ForeachExpression__Group__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6026:1: ( rule__ForeachExpression__Group__0__Impl rule__ForeachExpression__Group__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6027:2: rule__ForeachExpression__Group__0__Impl rule__ForeachExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__ForeachExpression__Group__0__Impl_in_rule__ForeachExpression__Group__011791);
+            pushFollow(FOLLOW_rule__ForeachExpression__Group__0__Impl_in_rule__ForeachExpression__Group__012107);
             rule__ForeachExpression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ForeachExpression__Group__1_in_rule__ForeachExpression__Group__011794);
+            pushFollow(FOLLOW_rule__ForeachExpression__Group__1_in_rule__ForeachExpression__Group__012110);
             rule__ForeachExpression__Group__1();
 
             state._fsp--;
@@ -16961,22 +17400,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ForeachExpression__Group__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5876:1: rule__ForeachExpression__Group__0__Impl : ( RULE_ID ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6034:1: rule__ForeachExpression__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__ForeachExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5880:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5881:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6038:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6039:1: ( RULE_ID )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5881:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5882:1: RULE_ID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6039:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6040:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getForeachExpressionAccess().getIDTerminalRuleCall_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ForeachExpression__Group__0__Impl11821); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ForeachExpression__Group__0__Impl12137); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getForeachExpressionAccess().getIDTerminalRuleCall_0()); 
             }
@@ -17002,21 +17441,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ForeachExpression__Group__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5893:1: rule__ForeachExpression__Group__1 : rule__ForeachExpression__Group__1__Impl rule__ForeachExpression__Group__2 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6051:1: rule__ForeachExpression__Group__1 : rule__ForeachExpression__Group__1__Impl rule__ForeachExpression__Group__2 ;
     public final void rule__ForeachExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5897:1: ( rule__ForeachExpression__Group__1__Impl rule__ForeachExpression__Group__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5898:2: rule__ForeachExpression__Group__1__Impl rule__ForeachExpression__Group__2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6055:1: ( rule__ForeachExpression__Group__1__Impl rule__ForeachExpression__Group__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6056:2: rule__ForeachExpression__Group__1__Impl rule__ForeachExpression__Group__2
             {
-            pushFollow(FOLLOW_rule__ForeachExpression__Group__1__Impl_in_rule__ForeachExpression__Group__111850);
+            pushFollow(FOLLOW_rule__ForeachExpression__Group__1__Impl_in_rule__ForeachExpression__Group__112166);
             rule__ForeachExpression__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ForeachExpression__Group__2_in_rule__ForeachExpression__Group__111853);
+            pushFollow(FOLLOW_rule__ForeachExpression__Group__2_in_rule__ForeachExpression__Group__112169);
             rule__ForeachExpression__Group__2();
 
             state._fsp--;
@@ -17040,22 +17479,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ForeachExpression__Group__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5905:1: rule__ForeachExpression__Group__1__Impl : ( 'in' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6063:1: rule__ForeachExpression__Group__1__Impl : ( 'in' ) ;
     public final void rule__ForeachExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5909:1: ( ( 'in' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5910:1: ( 'in' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6067:1: ( ( 'in' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6068:1: ( 'in' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5910:1: ( 'in' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5911:1: 'in'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6068:1: ( 'in' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6069:1: 'in'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getForeachExpressionAccess().getInKeyword_1()); 
             }
-            match(input,44,FOLLOW_44_in_rule__ForeachExpression__Group__1__Impl11881); if (state.failed) return ;
+            match(input,44,FOLLOW_44_in_rule__ForeachExpression__Group__1__Impl12197); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getForeachExpressionAccess().getInKeyword_1()); 
             }
@@ -17081,16 +17520,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ForeachExpression__Group__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5924:1: rule__ForeachExpression__Group__2 : rule__ForeachExpression__Group__2__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6082:1: rule__ForeachExpression__Group__2 : rule__ForeachExpression__Group__2__Impl ;
     public final void rule__ForeachExpression__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5928:1: ( rule__ForeachExpression__Group__2__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5929:2: rule__ForeachExpression__Group__2__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6086:1: ( rule__ForeachExpression__Group__2__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6087:2: rule__ForeachExpression__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__ForeachExpression__Group__2__Impl_in_rule__ForeachExpression__Group__211912);
+            pushFollow(FOLLOW_rule__ForeachExpression__Group__2__Impl_in_rule__ForeachExpression__Group__212228);
             rule__ForeachExpression__Group__2__Impl();
 
             state._fsp--;
@@ -17114,25 +17553,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ForeachExpression__Group__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5935:1: rule__ForeachExpression__Group__2__Impl : ( ( rule__ForeachExpression__Alternatives_2 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6093:1: rule__ForeachExpression__Group__2__Impl : ( ( rule__ForeachExpression__Alternatives_2 ) ) ;
     public final void rule__ForeachExpression__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5939:1: ( ( ( rule__ForeachExpression__Alternatives_2 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5940:1: ( ( rule__ForeachExpression__Alternatives_2 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6097:1: ( ( ( rule__ForeachExpression__Alternatives_2 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6098:1: ( ( rule__ForeachExpression__Alternatives_2 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5940:1: ( ( rule__ForeachExpression__Alternatives_2 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5941:1: ( rule__ForeachExpression__Alternatives_2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6098:1: ( ( rule__ForeachExpression__Alternatives_2 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6099:1: ( rule__ForeachExpression__Alternatives_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getForeachExpressionAccess().getAlternatives_2()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5942:1: ( rule__ForeachExpression__Alternatives_2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5942:2: rule__ForeachExpression__Alternatives_2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6100:1: ( rule__ForeachExpression__Alternatives_2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6100:2: rule__ForeachExpression__Alternatives_2
             {
-            pushFollow(FOLLOW_rule__ForeachExpression__Alternatives_2_in_rule__ForeachExpression__Group__2__Impl11939);
+            pushFollow(FOLLOW_rule__ForeachExpression__Alternatives_2_in_rule__ForeachExpression__Group__2__Impl12255);
             rule__ForeachExpression__Alternatives_2();
 
             state._fsp--;
@@ -17165,21 +17604,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ForeachExpression__Group_2_0__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5958:1: rule__ForeachExpression__Group_2_0__0 : rule__ForeachExpression__Group_2_0__0__Impl rule__ForeachExpression__Group_2_0__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6116:1: rule__ForeachExpression__Group_2_0__0 : rule__ForeachExpression__Group_2_0__0__Impl rule__ForeachExpression__Group_2_0__1 ;
     public final void rule__ForeachExpression__Group_2_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5962:1: ( rule__ForeachExpression__Group_2_0__0__Impl rule__ForeachExpression__Group_2_0__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5963:2: rule__ForeachExpression__Group_2_0__0__Impl rule__ForeachExpression__Group_2_0__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6120:1: ( rule__ForeachExpression__Group_2_0__0__Impl rule__ForeachExpression__Group_2_0__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6121:2: rule__ForeachExpression__Group_2_0__0__Impl rule__ForeachExpression__Group_2_0__1
             {
-            pushFollow(FOLLOW_rule__ForeachExpression__Group_2_0__0__Impl_in_rule__ForeachExpression__Group_2_0__011975);
+            pushFollow(FOLLOW_rule__ForeachExpression__Group_2_0__0__Impl_in_rule__ForeachExpression__Group_2_0__012291);
             rule__ForeachExpression__Group_2_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ForeachExpression__Group_2_0__1_in_rule__ForeachExpression__Group_2_0__011978);
+            pushFollow(FOLLOW_rule__ForeachExpression__Group_2_0__1_in_rule__ForeachExpression__Group_2_0__012294);
             rule__ForeachExpression__Group_2_0__1();
 
             state._fsp--;
@@ -17203,22 +17642,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ForeachExpression__Group_2_0__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5970:1: rule__ForeachExpression__Group_2_0__0__Impl : ( RULE_NATURAL ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6128:1: rule__ForeachExpression__Group_2_0__0__Impl : ( RULE_NATURAL ) ;
     public final void rule__ForeachExpression__Group_2_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5974:1: ( ( RULE_NATURAL ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5975:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6132:1: ( ( RULE_NATURAL ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6133:1: ( RULE_NATURAL )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5975:1: ( RULE_NATURAL )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5976:1: RULE_NATURAL
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6133:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6134:1: RULE_NATURAL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getForeachExpressionAccess().getNATURALTerminalRuleCall_2_0_0()); 
             }
-            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__ForeachExpression__Group_2_0__0__Impl12005); if (state.failed) return ;
+            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__ForeachExpression__Group_2_0__0__Impl12321); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getForeachExpressionAccess().getNATURALTerminalRuleCall_2_0_0()); 
             }
@@ -17244,21 +17683,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ForeachExpression__Group_2_0__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5987:1: rule__ForeachExpression__Group_2_0__1 : rule__ForeachExpression__Group_2_0__1__Impl rule__ForeachExpression__Group_2_0__2 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6145:1: rule__ForeachExpression__Group_2_0__1 : rule__ForeachExpression__Group_2_0__1__Impl rule__ForeachExpression__Group_2_0__2 ;
     public final void rule__ForeachExpression__Group_2_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5991:1: ( rule__ForeachExpression__Group_2_0__1__Impl rule__ForeachExpression__Group_2_0__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5992:2: rule__ForeachExpression__Group_2_0__1__Impl rule__ForeachExpression__Group_2_0__2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6149:1: ( rule__ForeachExpression__Group_2_0__1__Impl rule__ForeachExpression__Group_2_0__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6150:2: rule__ForeachExpression__Group_2_0__1__Impl rule__ForeachExpression__Group_2_0__2
             {
-            pushFollow(FOLLOW_rule__ForeachExpression__Group_2_0__1__Impl_in_rule__ForeachExpression__Group_2_0__112034);
+            pushFollow(FOLLOW_rule__ForeachExpression__Group_2_0__1__Impl_in_rule__ForeachExpression__Group_2_0__112350);
             rule__ForeachExpression__Group_2_0__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ForeachExpression__Group_2_0__2_in_rule__ForeachExpression__Group_2_0__112037);
+            pushFollow(FOLLOW_rule__ForeachExpression__Group_2_0__2_in_rule__ForeachExpression__Group_2_0__112353);
             rule__ForeachExpression__Group_2_0__2();
 
             state._fsp--;
@@ -17282,22 +17721,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ForeachExpression__Group_2_0__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:5999:1: rule__ForeachExpression__Group_2_0__1__Impl : ( '..' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6157:1: rule__ForeachExpression__Group_2_0__1__Impl : ( '..' ) ;
     public final void rule__ForeachExpression__Group_2_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6003:1: ( ( '..' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6004:1: ( '..' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6161:1: ( ( '..' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6162:1: ( '..' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6004:1: ( '..' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6005:1: '..'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6162:1: ( '..' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6163:1: '..'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getForeachExpressionAccess().getFullStopFullStopKeyword_2_0_1()); 
             }
-            match(input,45,FOLLOW_45_in_rule__ForeachExpression__Group_2_0__1__Impl12065); if (state.failed) return ;
+            match(input,45,FOLLOW_45_in_rule__ForeachExpression__Group_2_0__1__Impl12381); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getForeachExpressionAccess().getFullStopFullStopKeyword_2_0_1()); 
             }
@@ -17323,16 +17762,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ForeachExpression__Group_2_0__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6018:1: rule__ForeachExpression__Group_2_0__2 : rule__ForeachExpression__Group_2_0__2__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6176:1: rule__ForeachExpression__Group_2_0__2 : rule__ForeachExpression__Group_2_0__2__Impl ;
     public final void rule__ForeachExpression__Group_2_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6022:1: ( rule__ForeachExpression__Group_2_0__2__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6023:2: rule__ForeachExpression__Group_2_0__2__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6180:1: ( rule__ForeachExpression__Group_2_0__2__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6181:2: rule__ForeachExpression__Group_2_0__2__Impl
             {
-            pushFollow(FOLLOW_rule__ForeachExpression__Group_2_0__2__Impl_in_rule__ForeachExpression__Group_2_0__212096);
+            pushFollow(FOLLOW_rule__ForeachExpression__Group_2_0__2__Impl_in_rule__ForeachExpression__Group_2_0__212412);
             rule__ForeachExpression__Group_2_0__2__Impl();
 
             state._fsp--;
@@ -17356,22 +17795,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ForeachExpression__Group_2_0__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6029:1: rule__ForeachExpression__Group_2_0__2__Impl : ( RULE_NATURAL ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6187:1: rule__ForeachExpression__Group_2_0__2__Impl : ( RULE_NATURAL ) ;
     public final void rule__ForeachExpression__Group_2_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6033:1: ( ( RULE_NATURAL ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6034:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6191:1: ( ( RULE_NATURAL ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6192:1: ( RULE_NATURAL )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6034:1: ( RULE_NATURAL )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6035:1: RULE_NATURAL
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6192:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6193:1: RULE_NATURAL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getForeachExpressionAccess().getNATURALTerminalRuleCall_2_0_2()); 
             }
-            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__ForeachExpression__Group_2_0__2__Impl12123); if (state.failed) return ;
+            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__ForeachExpression__Group_2_0__2__Impl12439); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getForeachExpressionAccess().getNATURALTerminalRuleCall_2_0_2()); 
             }
@@ -17397,21 +17836,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6052:1: rule__Annotation__Group__0 : rule__Annotation__Group__0__Impl rule__Annotation__Group__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6210:1: rule__Annotation__Group__0 : rule__Annotation__Group__0__Impl rule__Annotation__Group__1 ;
     public final void rule__Annotation__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6056:1: ( rule__Annotation__Group__0__Impl rule__Annotation__Group__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6057:2: rule__Annotation__Group__0__Impl rule__Annotation__Group__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6214:1: ( rule__Annotation__Group__0__Impl rule__Annotation__Group__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6215:2: rule__Annotation__Group__0__Impl rule__Annotation__Group__1
             {
-            pushFollow(FOLLOW_rule__Annotation__Group__0__Impl_in_rule__Annotation__Group__012158);
+            pushFollow(FOLLOW_rule__Annotation__Group__0__Impl_in_rule__Annotation__Group__012474);
             rule__Annotation__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Annotation__Group__1_in_rule__Annotation__Group__012161);
+            pushFollow(FOLLOW_rule__Annotation__Group__1_in_rule__Annotation__Group__012477);
             rule__Annotation__Group__1();
 
             state._fsp--;
@@ -17435,22 +17874,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6064:1: rule__Annotation__Group__0__Impl : ( '@' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6222:1: rule__Annotation__Group__0__Impl : ( '@' ) ;
     public final void rule__Annotation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6068:1: ( ( '@' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6069:1: ( '@' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6226:1: ( ( '@' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6227:1: ( '@' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6069:1: ( '@' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6070:1: '@'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6227:1: ( '@' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6228:1: '@'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnnotationAccess().getCommercialAtKeyword_0()); 
             }
-            match(input,46,FOLLOW_46_in_rule__Annotation__Group__0__Impl12189); if (state.failed) return ;
+            match(input,46,FOLLOW_46_in_rule__Annotation__Group__0__Impl12505); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAnnotationAccess().getCommercialAtKeyword_0()); 
             }
@@ -17476,21 +17915,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6083:1: rule__Annotation__Group__1 : rule__Annotation__Group__1__Impl rule__Annotation__Group__2 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6241:1: rule__Annotation__Group__1 : rule__Annotation__Group__1__Impl rule__Annotation__Group__2 ;
     public final void rule__Annotation__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6087:1: ( rule__Annotation__Group__1__Impl rule__Annotation__Group__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6088:2: rule__Annotation__Group__1__Impl rule__Annotation__Group__2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6245:1: ( rule__Annotation__Group__1__Impl rule__Annotation__Group__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6246:2: rule__Annotation__Group__1__Impl rule__Annotation__Group__2
             {
-            pushFollow(FOLLOW_rule__Annotation__Group__1__Impl_in_rule__Annotation__Group__112220);
+            pushFollow(FOLLOW_rule__Annotation__Group__1__Impl_in_rule__Annotation__Group__112536);
             rule__Annotation__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Annotation__Group__2_in_rule__Annotation__Group__112223);
+            pushFollow(FOLLOW_rule__Annotation__Group__2_in_rule__Annotation__Group__112539);
             rule__Annotation__Group__2();
 
             state._fsp--;
@@ -17514,25 +17953,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6095:1: rule__Annotation__Group__1__Impl : ( ( rule__Annotation__NameAssignment_1 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6253:1: rule__Annotation__Group__1__Impl : ( ( rule__Annotation__NameAssignment_1 ) ) ;
     public final void rule__Annotation__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6099:1: ( ( ( rule__Annotation__NameAssignment_1 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6100:1: ( ( rule__Annotation__NameAssignment_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6257:1: ( ( ( rule__Annotation__NameAssignment_1 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6258:1: ( ( rule__Annotation__NameAssignment_1 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6100:1: ( ( rule__Annotation__NameAssignment_1 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6101:1: ( rule__Annotation__NameAssignment_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6258:1: ( ( rule__Annotation__NameAssignment_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6259:1: ( rule__Annotation__NameAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnnotationAccess().getNameAssignment_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6102:1: ( rule__Annotation__NameAssignment_1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6102:2: rule__Annotation__NameAssignment_1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6260:1: ( rule__Annotation__NameAssignment_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6260:2: rule__Annotation__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Annotation__NameAssignment_1_in_rule__Annotation__Group__1__Impl12250);
+            pushFollow(FOLLOW_rule__Annotation__NameAssignment_1_in_rule__Annotation__Group__1__Impl12566);
             rule__Annotation__NameAssignment_1();
 
             state._fsp--;
@@ -17565,16 +18004,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6112:1: rule__Annotation__Group__2 : rule__Annotation__Group__2__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6270:1: rule__Annotation__Group__2 : rule__Annotation__Group__2__Impl ;
     public final void rule__Annotation__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6116:1: ( rule__Annotation__Group__2__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6117:2: rule__Annotation__Group__2__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6274:1: ( rule__Annotation__Group__2__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6275:2: rule__Annotation__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Annotation__Group__2__Impl_in_rule__Annotation__Group__212280);
+            pushFollow(FOLLOW_rule__Annotation__Group__2__Impl_in_rule__Annotation__Group__212596);
             rule__Annotation__Group__2__Impl();
 
             state._fsp--;
@@ -17598,33 +18037,33 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6123:1: rule__Annotation__Group__2__Impl : ( ( rule__Annotation__Group_2__0 )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6281:1: rule__Annotation__Group__2__Impl : ( ( rule__Annotation__Group_2__0 )? ) ;
     public final void rule__Annotation__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6127:1: ( ( ( rule__Annotation__Group_2__0 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6128:1: ( ( rule__Annotation__Group_2__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6285:1: ( ( ( rule__Annotation__Group_2__0 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6286:1: ( ( rule__Annotation__Group_2__0 )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6128:1: ( ( rule__Annotation__Group_2__0 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6129:1: ( rule__Annotation__Group_2__0 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6286:1: ( ( rule__Annotation__Group_2__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6287:1: ( rule__Annotation__Group_2__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnnotationAccess().getGroup_2()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6130:1: ( rule__Annotation__Group_2__0 )?
-            int alt56=2;
-            int LA56_0 = input.LA(1);
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6288:1: ( rule__Annotation__Group_2__0 )?
+            int alt57=2;
+            int LA57_0 = input.LA(1);
 
-            if ( (LA56_0==35) ) {
-                alt56=1;
+            if ( (LA57_0==35) ) {
+                alt57=1;
             }
-            switch (alt56) {
+            switch (alt57) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6130:2: rule__Annotation__Group_2__0
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6288:2: rule__Annotation__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__Annotation__Group_2__0_in_rule__Annotation__Group__2__Impl12307);
+                    pushFollow(FOLLOW_rule__Annotation__Group_2__0_in_rule__Annotation__Group__2__Impl12623);
                     rule__Annotation__Group_2__0();
 
                     state._fsp--;
@@ -17660,21 +18099,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group_2__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6146:1: rule__Annotation__Group_2__0 : rule__Annotation__Group_2__0__Impl rule__Annotation__Group_2__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6304:1: rule__Annotation__Group_2__0 : rule__Annotation__Group_2__0__Impl rule__Annotation__Group_2__1 ;
     public final void rule__Annotation__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6150:1: ( rule__Annotation__Group_2__0__Impl rule__Annotation__Group_2__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6151:2: rule__Annotation__Group_2__0__Impl rule__Annotation__Group_2__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6308:1: ( rule__Annotation__Group_2__0__Impl rule__Annotation__Group_2__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6309:2: rule__Annotation__Group_2__0__Impl rule__Annotation__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Annotation__Group_2__0__Impl_in_rule__Annotation__Group_2__012344);
+            pushFollow(FOLLOW_rule__Annotation__Group_2__0__Impl_in_rule__Annotation__Group_2__012660);
             rule__Annotation__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Annotation__Group_2__1_in_rule__Annotation__Group_2__012347);
+            pushFollow(FOLLOW_rule__Annotation__Group_2__1_in_rule__Annotation__Group_2__012663);
             rule__Annotation__Group_2__1();
 
             state._fsp--;
@@ -17698,22 +18137,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group_2__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6158:1: rule__Annotation__Group_2__0__Impl : ( '(' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6316:1: rule__Annotation__Group_2__0__Impl : ( '(' ) ;
     public final void rule__Annotation__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6162:1: ( ( '(' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6163:1: ( '(' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6320:1: ( ( '(' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6321:1: ( '(' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6163:1: ( '(' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6164:1: '('
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6321:1: ( '(' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6322:1: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnnotationAccess().getLeftParenthesisKeyword_2_0()); 
             }
-            match(input,35,FOLLOW_35_in_rule__Annotation__Group_2__0__Impl12375); if (state.failed) return ;
+            match(input,35,FOLLOW_35_in_rule__Annotation__Group_2__0__Impl12691); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAnnotationAccess().getLeftParenthesisKeyword_2_0()); 
             }
@@ -17739,21 +18178,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group_2__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6177:1: rule__Annotation__Group_2__1 : rule__Annotation__Group_2__1__Impl rule__Annotation__Group_2__2 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6335:1: rule__Annotation__Group_2__1 : rule__Annotation__Group_2__1__Impl rule__Annotation__Group_2__2 ;
     public final void rule__Annotation__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6181:1: ( rule__Annotation__Group_2__1__Impl rule__Annotation__Group_2__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6182:2: rule__Annotation__Group_2__1__Impl rule__Annotation__Group_2__2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6339:1: ( rule__Annotation__Group_2__1__Impl rule__Annotation__Group_2__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6340:2: rule__Annotation__Group_2__1__Impl rule__Annotation__Group_2__2
             {
-            pushFollow(FOLLOW_rule__Annotation__Group_2__1__Impl_in_rule__Annotation__Group_2__112406);
+            pushFollow(FOLLOW_rule__Annotation__Group_2__1__Impl_in_rule__Annotation__Group_2__112722);
             rule__Annotation__Group_2__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Annotation__Group_2__2_in_rule__Annotation__Group_2__112409);
+            pushFollow(FOLLOW_rule__Annotation__Group_2__2_in_rule__Annotation__Group_2__112725);
             rule__Annotation__Group_2__2();
 
             state._fsp--;
@@ -17777,25 +18216,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group_2__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6189:1: rule__Annotation__Group_2__1__Impl : ( ( rule__Annotation__PropertyAssignment_2_1 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6347:1: rule__Annotation__Group_2__1__Impl : ( ( rule__Annotation__PropertyAssignment_2_1 ) ) ;
     public final void rule__Annotation__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6193:1: ( ( ( rule__Annotation__PropertyAssignment_2_1 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6194:1: ( ( rule__Annotation__PropertyAssignment_2_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6351:1: ( ( ( rule__Annotation__PropertyAssignment_2_1 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6352:1: ( ( rule__Annotation__PropertyAssignment_2_1 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6194:1: ( ( rule__Annotation__PropertyAssignment_2_1 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6195:1: ( rule__Annotation__PropertyAssignment_2_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6352:1: ( ( rule__Annotation__PropertyAssignment_2_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6353:1: ( rule__Annotation__PropertyAssignment_2_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnnotationAccess().getPropertyAssignment_2_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6196:1: ( rule__Annotation__PropertyAssignment_2_1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6196:2: rule__Annotation__PropertyAssignment_2_1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6354:1: ( rule__Annotation__PropertyAssignment_2_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6354:2: rule__Annotation__PropertyAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Annotation__PropertyAssignment_2_1_in_rule__Annotation__Group_2__1__Impl12436);
+            pushFollow(FOLLOW_rule__Annotation__PropertyAssignment_2_1_in_rule__Annotation__Group_2__1__Impl12752);
             rule__Annotation__PropertyAssignment_2_1();
 
             state._fsp--;
@@ -17828,21 +18267,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group_2__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6206:1: rule__Annotation__Group_2__2 : rule__Annotation__Group_2__2__Impl rule__Annotation__Group_2__3 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6364:1: rule__Annotation__Group_2__2 : rule__Annotation__Group_2__2__Impl rule__Annotation__Group_2__3 ;
     public final void rule__Annotation__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6210:1: ( rule__Annotation__Group_2__2__Impl rule__Annotation__Group_2__3 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6211:2: rule__Annotation__Group_2__2__Impl rule__Annotation__Group_2__3
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6368:1: ( rule__Annotation__Group_2__2__Impl rule__Annotation__Group_2__3 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6369:2: rule__Annotation__Group_2__2__Impl rule__Annotation__Group_2__3
             {
-            pushFollow(FOLLOW_rule__Annotation__Group_2__2__Impl_in_rule__Annotation__Group_2__212466);
+            pushFollow(FOLLOW_rule__Annotation__Group_2__2__Impl_in_rule__Annotation__Group_2__212782);
             rule__Annotation__Group_2__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Annotation__Group_2__3_in_rule__Annotation__Group_2__212469);
+            pushFollow(FOLLOW_rule__Annotation__Group_2__3_in_rule__Annotation__Group_2__212785);
             rule__Annotation__Group_2__3();
 
             state._fsp--;
@@ -17866,37 +18305,37 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group_2__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6218:1: rule__Annotation__Group_2__2__Impl : ( ( rule__Annotation__Group_2_2__0 )* ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6376:1: rule__Annotation__Group_2__2__Impl : ( ( rule__Annotation__Group_2_2__0 )* ) ;
     public final void rule__Annotation__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6222:1: ( ( ( rule__Annotation__Group_2_2__0 )* ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6223:1: ( ( rule__Annotation__Group_2_2__0 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6380:1: ( ( ( rule__Annotation__Group_2_2__0 )* ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6381:1: ( ( rule__Annotation__Group_2_2__0 )* )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6223:1: ( ( rule__Annotation__Group_2_2__0 )* )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6224:1: ( rule__Annotation__Group_2_2__0 )*
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6381:1: ( ( rule__Annotation__Group_2_2__0 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6382:1: ( rule__Annotation__Group_2_2__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnnotationAccess().getGroup_2_2()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6225:1: ( rule__Annotation__Group_2_2__0 )*
-            loop57:
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6383:1: ( rule__Annotation__Group_2_2__0 )*
+            loop58:
             do {
-                int alt57=2;
-                int LA57_0 = input.LA(1);
+                int alt58=2;
+                int LA58_0 = input.LA(1);
 
-                if ( (LA57_0==21) ) {
-                    alt57=1;
+                if ( (LA58_0==21) ) {
+                    alt58=1;
                 }
 
 
-                switch (alt57) {
+                switch (alt58) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6225:2: rule__Annotation__Group_2_2__0
+            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6383:2: rule__Annotation__Group_2_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Annotation__Group_2_2__0_in_rule__Annotation__Group_2__2__Impl12496);
+            	    pushFollow(FOLLOW_rule__Annotation__Group_2_2__0_in_rule__Annotation__Group_2__2__Impl12812);
             	    rule__Annotation__Group_2_2__0();
 
             	    state._fsp--;
@@ -17906,7 +18345,7 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop57;
+            	    break loop58;
                 }
             } while (true);
 
@@ -17935,16 +18374,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group_2__3"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6235:1: rule__Annotation__Group_2__3 : rule__Annotation__Group_2__3__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6393:1: rule__Annotation__Group_2__3 : rule__Annotation__Group_2__3__Impl ;
     public final void rule__Annotation__Group_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6239:1: ( rule__Annotation__Group_2__3__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6240:2: rule__Annotation__Group_2__3__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6397:1: ( rule__Annotation__Group_2__3__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6398:2: rule__Annotation__Group_2__3__Impl
             {
-            pushFollow(FOLLOW_rule__Annotation__Group_2__3__Impl_in_rule__Annotation__Group_2__312527);
+            pushFollow(FOLLOW_rule__Annotation__Group_2__3__Impl_in_rule__Annotation__Group_2__312843);
             rule__Annotation__Group_2__3__Impl();
 
             state._fsp--;
@@ -17968,22 +18407,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group_2__3__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6246:1: rule__Annotation__Group_2__3__Impl : ( ')' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6404:1: rule__Annotation__Group_2__3__Impl : ( ')' ) ;
     public final void rule__Annotation__Group_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6250:1: ( ( ')' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6251:1: ( ')' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6408:1: ( ( ')' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6409:1: ( ')' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6251:1: ( ')' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6252:1: ')'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6409:1: ( ')' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6410:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnnotationAccess().getRightParenthesisKeyword_2_3()); 
             }
-            match(input,36,FOLLOW_36_in_rule__Annotation__Group_2__3__Impl12555); if (state.failed) return ;
+            match(input,36,FOLLOW_36_in_rule__Annotation__Group_2__3__Impl12871); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAnnotationAccess().getRightParenthesisKeyword_2_3()); 
             }
@@ -18009,21 +18448,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group_2_2__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6273:1: rule__Annotation__Group_2_2__0 : rule__Annotation__Group_2_2__0__Impl rule__Annotation__Group_2_2__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6431:1: rule__Annotation__Group_2_2__0 : rule__Annotation__Group_2_2__0__Impl rule__Annotation__Group_2_2__1 ;
     public final void rule__Annotation__Group_2_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6277:1: ( rule__Annotation__Group_2_2__0__Impl rule__Annotation__Group_2_2__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6278:2: rule__Annotation__Group_2_2__0__Impl rule__Annotation__Group_2_2__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6435:1: ( rule__Annotation__Group_2_2__0__Impl rule__Annotation__Group_2_2__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6436:2: rule__Annotation__Group_2_2__0__Impl rule__Annotation__Group_2_2__1
             {
-            pushFollow(FOLLOW_rule__Annotation__Group_2_2__0__Impl_in_rule__Annotation__Group_2_2__012594);
+            pushFollow(FOLLOW_rule__Annotation__Group_2_2__0__Impl_in_rule__Annotation__Group_2_2__012910);
             rule__Annotation__Group_2_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Annotation__Group_2_2__1_in_rule__Annotation__Group_2_2__012597);
+            pushFollow(FOLLOW_rule__Annotation__Group_2_2__1_in_rule__Annotation__Group_2_2__012913);
             rule__Annotation__Group_2_2__1();
 
             state._fsp--;
@@ -18047,22 +18486,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group_2_2__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6285:1: rule__Annotation__Group_2_2__0__Impl : ( ',' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6443:1: rule__Annotation__Group_2_2__0__Impl : ( ',' ) ;
     public final void rule__Annotation__Group_2_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6289:1: ( ( ',' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6290:1: ( ',' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6447:1: ( ( ',' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6448:1: ( ',' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6290:1: ( ',' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6291:1: ','
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6448:1: ( ',' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6449:1: ','
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnnotationAccess().getCommaKeyword_2_2_0()); 
             }
-            match(input,21,FOLLOW_21_in_rule__Annotation__Group_2_2__0__Impl12625); if (state.failed) return ;
+            match(input,21,FOLLOW_21_in_rule__Annotation__Group_2_2__0__Impl12941); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAnnotationAccess().getCommaKeyword_2_2_0()); 
             }
@@ -18088,16 +18527,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group_2_2__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6304:1: rule__Annotation__Group_2_2__1 : rule__Annotation__Group_2_2__1__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6462:1: rule__Annotation__Group_2_2__1 : rule__Annotation__Group_2_2__1__Impl ;
     public final void rule__Annotation__Group_2_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6308:1: ( rule__Annotation__Group_2_2__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6309:2: rule__Annotation__Group_2_2__1__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6466:1: ( rule__Annotation__Group_2_2__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6467:2: rule__Annotation__Group_2_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Annotation__Group_2_2__1__Impl_in_rule__Annotation__Group_2_2__112656);
+            pushFollow(FOLLOW_rule__Annotation__Group_2_2__1__Impl_in_rule__Annotation__Group_2_2__112972);
             rule__Annotation__Group_2_2__1__Impl();
 
             state._fsp--;
@@ -18121,25 +18560,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__Group_2_2__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6315:1: rule__Annotation__Group_2_2__1__Impl : ( ( rule__Annotation__PropertyAssignment_2_2_1 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6473:1: rule__Annotation__Group_2_2__1__Impl : ( ( rule__Annotation__PropertyAssignment_2_2_1 ) ) ;
     public final void rule__Annotation__Group_2_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6319:1: ( ( ( rule__Annotation__PropertyAssignment_2_2_1 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6320:1: ( ( rule__Annotation__PropertyAssignment_2_2_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6477:1: ( ( ( rule__Annotation__PropertyAssignment_2_2_1 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6478:1: ( ( rule__Annotation__PropertyAssignment_2_2_1 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6320:1: ( ( rule__Annotation__PropertyAssignment_2_2_1 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6321:1: ( rule__Annotation__PropertyAssignment_2_2_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6478:1: ( ( rule__Annotation__PropertyAssignment_2_2_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6479:1: ( rule__Annotation__PropertyAssignment_2_2_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnnotationAccess().getPropertyAssignment_2_2_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6322:1: ( rule__Annotation__PropertyAssignment_2_2_1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6322:2: rule__Annotation__PropertyAssignment_2_2_1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6480:1: ( rule__Annotation__PropertyAssignment_2_2_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6480:2: rule__Annotation__PropertyAssignment_2_2_1
             {
-            pushFollow(FOLLOW_rule__Annotation__PropertyAssignment_2_2_1_in_rule__Annotation__Group_2_2__1__Impl12683);
+            pushFollow(FOLLOW_rule__Annotation__PropertyAssignment_2_2_1_in_rule__Annotation__Group_2_2__1__Impl12999);
             rule__Annotation__PropertyAssignment_2_2_1();
 
             state._fsp--;
@@ -18172,21 +18611,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__AssignProperty__Group__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6336:1: rule__AssignProperty__Group__0 : rule__AssignProperty__Group__0__Impl rule__AssignProperty__Group__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6494:1: rule__AssignProperty__Group__0 : rule__AssignProperty__Group__0__Impl rule__AssignProperty__Group__1 ;
     public final void rule__AssignProperty__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6340:1: ( rule__AssignProperty__Group__0__Impl rule__AssignProperty__Group__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6341:2: rule__AssignProperty__Group__0__Impl rule__AssignProperty__Group__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6498:1: ( rule__AssignProperty__Group__0__Impl rule__AssignProperty__Group__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6499:2: rule__AssignProperty__Group__0__Impl rule__AssignProperty__Group__1
             {
-            pushFollow(FOLLOW_rule__AssignProperty__Group__0__Impl_in_rule__AssignProperty__Group__012717);
+            pushFollow(FOLLOW_rule__AssignProperty__Group__0__Impl_in_rule__AssignProperty__Group__013033);
             rule__AssignProperty__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__AssignProperty__Group__1_in_rule__AssignProperty__Group__012720);
+            pushFollow(FOLLOW_rule__AssignProperty__Group__1_in_rule__AssignProperty__Group__013036);
             rule__AssignProperty__Group__1();
 
             state._fsp--;
@@ -18210,25 +18649,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__AssignProperty__Group__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6348:1: rule__AssignProperty__Group__0__Impl : ( ( rule__AssignProperty__NameAssignment_0 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6506:1: rule__AssignProperty__Group__0__Impl : ( ( rule__AssignProperty__NameAssignment_0 ) ) ;
     public final void rule__AssignProperty__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6352:1: ( ( ( rule__AssignProperty__NameAssignment_0 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6353:1: ( ( rule__AssignProperty__NameAssignment_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6510:1: ( ( ( rule__AssignProperty__NameAssignment_0 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6511:1: ( ( rule__AssignProperty__NameAssignment_0 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6353:1: ( ( rule__AssignProperty__NameAssignment_0 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6354:1: ( rule__AssignProperty__NameAssignment_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6511:1: ( ( rule__AssignProperty__NameAssignment_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6512:1: ( rule__AssignProperty__NameAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignPropertyAccess().getNameAssignment_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6355:1: ( rule__AssignProperty__NameAssignment_0 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6355:2: rule__AssignProperty__NameAssignment_0
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6513:1: ( rule__AssignProperty__NameAssignment_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6513:2: rule__AssignProperty__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__AssignProperty__NameAssignment_0_in_rule__AssignProperty__Group__0__Impl12747);
+            pushFollow(FOLLOW_rule__AssignProperty__NameAssignment_0_in_rule__AssignProperty__Group__0__Impl13063);
             rule__AssignProperty__NameAssignment_0();
 
             state._fsp--;
@@ -18261,21 +18700,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__AssignProperty__Group__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6365:1: rule__AssignProperty__Group__1 : rule__AssignProperty__Group__1__Impl rule__AssignProperty__Group__2 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6523:1: rule__AssignProperty__Group__1 : rule__AssignProperty__Group__1__Impl rule__AssignProperty__Group__2 ;
     public final void rule__AssignProperty__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6369:1: ( rule__AssignProperty__Group__1__Impl rule__AssignProperty__Group__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6370:2: rule__AssignProperty__Group__1__Impl rule__AssignProperty__Group__2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6527:1: ( rule__AssignProperty__Group__1__Impl rule__AssignProperty__Group__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6528:2: rule__AssignProperty__Group__1__Impl rule__AssignProperty__Group__2
             {
-            pushFollow(FOLLOW_rule__AssignProperty__Group__1__Impl_in_rule__AssignProperty__Group__112777);
+            pushFollow(FOLLOW_rule__AssignProperty__Group__1__Impl_in_rule__AssignProperty__Group__113093);
             rule__AssignProperty__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__AssignProperty__Group__2_in_rule__AssignProperty__Group__112780);
+            pushFollow(FOLLOW_rule__AssignProperty__Group__2_in_rule__AssignProperty__Group__113096);
             rule__AssignProperty__Group__2();
 
             state._fsp--;
@@ -18299,22 +18738,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__AssignProperty__Group__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6377:1: rule__AssignProperty__Group__1__Impl : ( '=' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6535:1: rule__AssignProperty__Group__1__Impl : ( '=' ) ;
     public final void rule__AssignProperty__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6381:1: ( ( '=' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6382:1: ( '=' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6539:1: ( ( '=' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6540:1: ( '=' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6382:1: ( '=' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6383:1: '='
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6540:1: ( '=' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6541:1: '='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignPropertyAccess().getEqualsSignKeyword_1()); 
             }
-            match(input,47,FOLLOW_47_in_rule__AssignProperty__Group__1__Impl12808); if (state.failed) return ;
+            match(input,47,FOLLOW_47_in_rule__AssignProperty__Group__1__Impl13124); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAssignPropertyAccess().getEqualsSignKeyword_1()); 
             }
@@ -18340,16 +18779,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__AssignProperty__Group__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6396:1: rule__AssignProperty__Group__2 : rule__AssignProperty__Group__2__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6554:1: rule__AssignProperty__Group__2 : rule__AssignProperty__Group__2__Impl ;
     public final void rule__AssignProperty__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6400:1: ( rule__AssignProperty__Group__2__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6401:2: rule__AssignProperty__Group__2__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6558:1: ( rule__AssignProperty__Group__2__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6559:2: rule__AssignProperty__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__AssignProperty__Group__2__Impl_in_rule__AssignProperty__Group__212839);
+            pushFollow(FOLLOW_rule__AssignProperty__Group__2__Impl_in_rule__AssignProperty__Group__213155);
             rule__AssignProperty__Group__2__Impl();
 
             state._fsp--;
@@ -18373,25 +18812,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__AssignProperty__Group__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6407:1: rule__AssignProperty__Group__2__Impl : ( ( rule__AssignProperty__ValueAssignment_2 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6565:1: rule__AssignProperty__Group__2__Impl : ( ( rule__AssignProperty__ValueAssignment_2 ) ) ;
     public final void rule__AssignProperty__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6411:1: ( ( ( rule__AssignProperty__ValueAssignment_2 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6412:1: ( ( rule__AssignProperty__ValueAssignment_2 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6569:1: ( ( ( rule__AssignProperty__ValueAssignment_2 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6570:1: ( ( rule__AssignProperty__ValueAssignment_2 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6412:1: ( ( rule__AssignProperty__ValueAssignment_2 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6413:1: ( rule__AssignProperty__ValueAssignment_2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6570:1: ( ( rule__AssignProperty__ValueAssignment_2 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6571:1: ( rule__AssignProperty__ValueAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignPropertyAccess().getValueAssignment_2()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6414:1: ( rule__AssignProperty__ValueAssignment_2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6414:2: rule__AssignProperty__ValueAssignment_2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6572:1: ( rule__AssignProperty__ValueAssignment_2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6572:2: rule__AssignProperty__ValueAssignment_2
             {
-            pushFollow(FOLLOW_rule__AssignProperty__ValueAssignment_2_in_rule__AssignProperty__Group__2__Impl12866);
+            pushFollow(FOLLOW_rule__AssignProperty__ValueAssignment_2_in_rule__AssignProperty__Group__2__Impl13182);
             rule__AssignProperty__ValueAssignment_2();
 
             state._fsp--;
@@ -18424,21 +18863,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ExtendedID__Group__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6430:1: rule__ExtendedID__Group__0 : rule__ExtendedID__Group__0__Impl rule__ExtendedID__Group__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6588:1: rule__ExtendedID__Group__0 : rule__ExtendedID__Group__0__Impl rule__ExtendedID__Group__1 ;
     public final void rule__ExtendedID__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6434:1: ( rule__ExtendedID__Group__0__Impl rule__ExtendedID__Group__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6435:2: rule__ExtendedID__Group__0__Impl rule__ExtendedID__Group__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6592:1: ( rule__ExtendedID__Group__0__Impl rule__ExtendedID__Group__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6593:2: rule__ExtendedID__Group__0__Impl rule__ExtendedID__Group__1
             {
-            pushFollow(FOLLOW_rule__ExtendedID__Group__0__Impl_in_rule__ExtendedID__Group__012902);
+            pushFollow(FOLLOW_rule__ExtendedID__Group__0__Impl_in_rule__ExtendedID__Group__013218);
             rule__ExtendedID__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ExtendedID__Group__1_in_rule__ExtendedID__Group__012905);
+            pushFollow(FOLLOW_rule__ExtendedID__Group__1_in_rule__ExtendedID__Group__013221);
             rule__ExtendedID__Group__1();
 
             state._fsp--;
@@ -18462,22 +18901,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ExtendedID__Group__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6442:1: rule__ExtendedID__Group__0__Impl : ( RULE_ID ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6600:1: rule__ExtendedID__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__ExtendedID__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6446:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6447:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6604:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6605:1: ( RULE_ID )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6447:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6448:1: RULE_ID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6605:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6606:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExtendedIDAccess().getIDTerminalRuleCall_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ExtendedID__Group__0__Impl12932); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ExtendedID__Group__0__Impl13248); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getExtendedIDAccess().getIDTerminalRuleCall_0()); 
             }
@@ -18503,16 +18942,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ExtendedID__Group__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6459:1: rule__ExtendedID__Group__1 : rule__ExtendedID__Group__1__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6617:1: rule__ExtendedID__Group__1 : rule__ExtendedID__Group__1__Impl ;
     public final void rule__ExtendedID__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6463:1: ( rule__ExtendedID__Group__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6464:2: rule__ExtendedID__Group__1__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6621:1: ( rule__ExtendedID__Group__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6622:2: rule__ExtendedID__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__ExtendedID__Group__1__Impl_in_rule__ExtendedID__Group__112961);
+            pushFollow(FOLLOW_rule__ExtendedID__Group__1__Impl_in_rule__ExtendedID__Group__113277);
             rule__ExtendedID__Group__1__Impl();
 
             state._fsp--;
@@ -18536,37 +18975,37 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ExtendedID__Group__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6470:1: rule__ExtendedID__Group__1__Impl : ( ( rule__ExtendedID__Group_1__0 )* ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6628:1: rule__ExtendedID__Group__1__Impl : ( ( rule__ExtendedID__Group_1__0 )* ) ;
     public final void rule__ExtendedID__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6474:1: ( ( ( rule__ExtendedID__Group_1__0 )* ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6475:1: ( ( rule__ExtendedID__Group_1__0 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6632:1: ( ( ( rule__ExtendedID__Group_1__0 )* ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6633:1: ( ( rule__ExtendedID__Group_1__0 )* )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6475:1: ( ( rule__ExtendedID__Group_1__0 )* )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6476:1: ( rule__ExtendedID__Group_1__0 )*
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6633:1: ( ( rule__ExtendedID__Group_1__0 )* )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6634:1: ( rule__ExtendedID__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExtendedIDAccess().getGroup_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6477:1: ( rule__ExtendedID__Group_1__0 )*
-            loop58:
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6635:1: ( rule__ExtendedID__Group_1__0 )*
+            loop59:
             do {
-                int alt58=2;
-                int LA58_0 = input.LA(1);
+                int alt59=2;
+                int LA59_0 = input.LA(1);
 
-                if ( (LA58_0==34) ) {
-                    alt58=1;
+                if ( (LA59_0==34) ) {
+                    alt59=1;
                 }
 
 
-                switch (alt58) {
+                switch (alt59) {
             	case 1 :
-            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6477:2: rule__ExtendedID__Group_1__0
+            	    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6635:2: rule__ExtendedID__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__ExtendedID__Group_1__0_in_rule__ExtendedID__Group__1__Impl12988);
+            	    pushFollow(FOLLOW_rule__ExtendedID__Group_1__0_in_rule__ExtendedID__Group__1__Impl13304);
             	    rule__ExtendedID__Group_1__0();
 
             	    state._fsp--;
@@ -18576,7 +19015,7 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop58;
+            	    break loop59;
                 }
             } while (true);
 
@@ -18605,21 +19044,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ExtendedID__Group_1__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6491:1: rule__ExtendedID__Group_1__0 : rule__ExtendedID__Group_1__0__Impl rule__ExtendedID__Group_1__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6649:1: rule__ExtendedID__Group_1__0 : rule__ExtendedID__Group_1__0__Impl rule__ExtendedID__Group_1__1 ;
     public final void rule__ExtendedID__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6495:1: ( rule__ExtendedID__Group_1__0__Impl rule__ExtendedID__Group_1__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6496:2: rule__ExtendedID__Group_1__0__Impl rule__ExtendedID__Group_1__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6653:1: ( rule__ExtendedID__Group_1__0__Impl rule__ExtendedID__Group_1__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6654:2: rule__ExtendedID__Group_1__0__Impl rule__ExtendedID__Group_1__1
             {
-            pushFollow(FOLLOW_rule__ExtendedID__Group_1__0__Impl_in_rule__ExtendedID__Group_1__013023);
+            pushFollow(FOLLOW_rule__ExtendedID__Group_1__0__Impl_in_rule__ExtendedID__Group_1__013339);
             rule__ExtendedID__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ExtendedID__Group_1__1_in_rule__ExtendedID__Group_1__013026);
+            pushFollow(FOLLOW_rule__ExtendedID__Group_1__1_in_rule__ExtendedID__Group_1__013342);
             rule__ExtendedID__Group_1__1();
 
             state._fsp--;
@@ -18643,22 +19082,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ExtendedID__Group_1__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6503:1: rule__ExtendedID__Group_1__0__Impl : ( '.' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6661:1: rule__ExtendedID__Group_1__0__Impl : ( '.' ) ;
     public final void rule__ExtendedID__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6507:1: ( ( '.' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6508:1: ( '.' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6665:1: ( ( '.' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6666:1: ( '.' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6508:1: ( '.' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6509:1: '.'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6666:1: ( '.' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6667:1: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExtendedIDAccess().getFullStopKeyword_1_0()); 
             }
-            match(input,34,FOLLOW_34_in_rule__ExtendedID__Group_1__0__Impl13054); if (state.failed) return ;
+            match(input,34,FOLLOW_34_in_rule__ExtendedID__Group_1__0__Impl13370); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getExtendedIDAccess().getFullStopKeyword_1_0()); 
             }
@@ -18684,16 +19123,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ExtendedID__Group_1__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6522:1: rule__ExtendedID__Group_1__1 : rule__ExtendedID__Group_1__1__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6680:1: rule__ExtendedID__Group_1__1 : rule__ExtendedID__Group_1__1__Impl ;
     public final void rule__ExtendedID__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6526:1: ( rule__ExtendedID__Group_1__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6527:2: rule__ExtendedID__Group_1__1__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6684:1: ( rule__ExtendedID__Group_1__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6685:2: rule__ExtendedID__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__ExtendedID__Group_1__1__Impl_in_rule__ExtendedID__Group_1__113085);
+            pushFollow(FOLLOW_rule__ExtendedID__Group_1__1__Impl_in_rule__ExtendedID__Group_1__113401);
             rule__ExtendedID__Group_1__1__Impl();
 
             state._fsp--;
@@ -18717,22 +19156,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ExtendedID__Group_1__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6533:1: rule__ExtendedID__Group_1__1__Impl : ( RULE_ID ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6691:1: rule__ExtendedID__Group_1__1__Impl : ( RULE_ID ) ;
     public final void rule__ExtendedID__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6537:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6538:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6695:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6696:1: ( RULE_ID )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6538:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6539:1: RULE_ID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6696:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6697:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExtendedIDAccess().getIDTerminalRuleCall_1_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ExtendedID__Group_1__1__Impl13112); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ExtendedID__Group_1__1__Impl13428); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getExtendedIDAccess().getIDTerminalRuleCall_1_1()); 
             }
@@ -18758,21 +19197,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Real__Group__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6554:1: rule__Real__Group__0 : rule__Real__Group__0__Impl rule__Real__Group__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6712:1: rule__Real__Group__0 : rule__Real__Group__0__Impl rule__Real__Group__1 ;
     public final void rule__Real__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6558:1: ( rule__Real__Group__0__Impl rule__Real__Group__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6559:2: rule__Real__Group__0__Impl rule__Real__Group__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6716:1: ( rule__Real__Group__0__Impl rule__Real__Group__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6717:2: rule__Real__Group__0__Impl rule__Real__Group__1
             {
-            pushFollow(FOLLOW_rule__Real__Group__0__Impl_in_rule__Real__Group__013145);
+            pushFollow(FOLLOW_rule__Real__Group__0__Impl_in_rule__Real__Group__013461);
             rule__Real__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Real__Group__1_in_rule__Real__Group__013148);
+            pushFollow(FOLLOW_rule__Real__Group__1_in_rule__Real__Group__013464);
             rule__Real__Group__1();
 
             state._fsp--;
@@ -18796,33 +19235,33 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Real__Group__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6566:1: rule__Real__Group__0__Impl : ( ( '-' )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6724:1: rule__Real__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__Real__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6570:1: ( ( ( '-' )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6571:1: ( ( '-' )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6728:1: ( ( ( '-' )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6729:1: ( ( '-' )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6571:1: ( ( '-' )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6572:1: ( '-' )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6729:1: ( ( '-' )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6730:1: ( '-' )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRealAccess().getHyphenMinusKeyword_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6573:1: ( '-' )?
-            int alt59=2;
-            int LA59_0 = input.LA(1);
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6731:1: ( '-' )?
+            int alt60=2;
+            int LA60_0 = input.LA(1);
 
-            if ( (LA59_0==17) ) {
-                alt59=1;
+            if ( (LA60_0==17) ) {
+                alt60=1;
             }
-            switch (alt59) {
+            switch (alt60) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6574:2: '-'
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6732:2: '-'
                     {
-                    match(input,17,FOLLOW_17_in_rule__Real__Group__0__Impl13177); if (state.failed) return ;
+                    match(input,17,FOLLOW_17_in_rule__Real__Group__0__Impl13493); if (state.failed) return ;
 
                     }
                     break;
@@ -18854,21 +19293,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Real__Group__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6585:1: rule__Real__Group__1 : rule__Real__Group__1__Impl rule__Real__Group__2 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6743:1: rule__Real__Group__1 : rule__Real__Group__1__Impl rule__Real__Group__2 ;
     public final void rule__Real__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6589:1: ( rule__Real__Group__1__Impl rule__Real__Group__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6590:2: rule__Real__Group__1__Impl rule__Real__Group__2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6747:1: ( rule__Real__Group__1__Impl rule__Real__Group__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6748:2: rule__Real__Group__1__Impl rule__Real__Group__2
             {
-            pushFollow(FOLLOW_rule__Real__Group__1__Impl_in_rule__Real__Group__113210);
+            pushFollow(FOLLOW_rule__Real__Group__1__Impl_in_rule__Real__Group__113526);
             rule__Real__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Real__Group__2_in_rule__Real__Group__113213);
+            pushFollow(FOLLOW_rule__Real__Group__2_in_rule__Real__Group__113529);
             rule__Real__Group__2();
 
             state._fsp--;
@@ -18892,22 +19331,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Real__Group__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6597:1: rule__Real__Group__1__Impl : ( RULE_NATURAL ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6755:1: rule__Real__Group__1__Impl : ( RULE_NATURAL ) ;
     public final void rule__Real__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6601:1: ( ( RULE_NATURAL ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6602:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6759:1: ( ( RULE_NATURAL ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6760:1: ( RULE_NATURAL )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6602:1: ( RULE_NATURAL )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6603:1: RULE_NATURAL
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6760:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6761:1: RULE_NATURAL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_1()); 
             }
-            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Real__Group__1__Impl13240); if (state.failed) return ;
+            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Real__Group__1__Impl13556); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_1()); 
             }
@@ -18933,21 +19372,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Real__Group__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6614:1: rule__Real__Group__2 : rule__Real__Group__2__Impl rule__Real__Group__3 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6772:1: rule__Real__Group__2 : rule__Real__Group__2__Impl rule__Real__Group__3 ;
     public final void rule__Real__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6618:1: ( rule__Real__Group__2__Impl rule__Real__Group__3 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6619:2: rule__Real__Group__2__Impl rule__Real__Group__3
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6776:1: ( rule__Real__Group__2__Impl rule__Real__Group__3 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6777:2: rule__Real__Group__2__Impl rule__Real__Group__3
             {
-            pushFollow(FOLLOW_rule__Real__Group__2__Impl_in_rule__Real__Group__213269);
+            pushFollow(FOLLOW_rule__Real__Group__2__Impl_in_rule__Real__Group__213585);
             rule__Real__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Real__Group__3_in_rule__Real__Group__213272);
+            pushFollow(FOLLOW_rule__Real__Group__3_in_rule__Real__Group__213588);
             rule__Real__Group__3();
 
             state._fsp--;
@@ -18971,22 +19410,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Real__Group__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6626:1: rule__Real__Group__2__Impl : ( '.' ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6784:1: rule__Real__Group__2__Impl : ( '.' ) ;
     public final void rule__Real__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6630:1: ( ( '.' ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6631:1: ( '.' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6788:1: ( ( '.' ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6789:1: ( '.' )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6631:1: ( '.' )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6632:1: '.'
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6789:1: ( '.' )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6790:1: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRealAccess().getFullStopKeyword_2()); 
             }
-            match(input,34,FOLLOW_34_in_rule__Real__Group__2__Impl13300); if (state.failed) return ;
+            match(input,34,FOLLOW_34_in_rule__Real__Group__2__Impl13616); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRealAccess().getFullStopKeyword_2()); 
             }
@@ -19012,21 +19451,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Real__Group__3"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6645:1: rule__Real__Group__3 : rule__Real__Group__3__Impl rule__Real__Group__4 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6803:1: rule__Real__Group__3 : rule__Real__Group__3__Impl rule__Real__Group__4 ;
     public final void rule__Real__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6649:1: ( rule__Real__Group__3__Impl rule__Real__Group__4 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6650:2: rule__Real__Group__3__Impl rule__Real__Group__4
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6807:1: ( rule__Real__Group__3__Impl rule__Real__Group__4 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6808:2: rule__Real__Group__3__Impl rule__Real__Group__4
             {
-            pushFollow(FOLLOW_rule__Real__Group__3__Impl_in_rule__Real__Group__313331);
+            pushFollow(FOLLOW_rule__Real__Group__3__Impl_in_rule__Real__Group__313647);
             rule__Real__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Real__Group__4_in_rule__Real__Group__313334);
+            pushFollow(FOLLOW_rule__Real__Group__4_in_rule__Real__Group__313650);
             rule__Real__Group__4();
 
             state._fsp--;
@@ -19050,22 +19489,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Real__Group__3__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6657:1: rule__Real__Group__3__Impl : ( RULE_NATURAL ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6815:1: rule__Real__Group__3__Impl : ( RULE_NATURAL ) ;
     public final void rule__Real__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6661:1: ( ( RULE_NATURAL ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6662:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6819:1: ( ( RULE_NATURAL ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6820:1: ( RULE_NATURAL )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6662:1: ( RULE_NATURAL )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6663:1: RULE_NATURAL
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6820:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6821:1: RULE_NATURAL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_3()); 
             }
-            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Real__Group__3__Impl13361); if (state.failed) return ;
+            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Real__Group__3__Impl13677); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_3()); 
             }
@@ -19091,16 +19530,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Real__Group__4"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6674:1: rule__Real__Group__4 : rule__Real__Group__4__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6832:1: rule__Real__Group__4 : rule__Real__Group__4__Impl ;
     public final void rule__Real__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6678:1: ( rule__Real__Group__4__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6679:2: rule__Real__Group__4__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6836:1: ( rule__Real__Group__4__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6837:2: rule__Real__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Real__Group__4__Impl_in_rule__Real__Group__413390);
+            pushFollow(FOLLOW_rule__Real__Group__4__Impl_in_rule__Real__Group__413706);
             rule__Real__Group__4__Impl();
 
             state._fsp--;
@@ -19124,33 +19563,33 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Real__Group__4__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6685:1: rule__Real__Group__4__Impl : ( ( rule__Real__Group_4__0 )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6843:1: rule__Real__Group__4__Impl : ( ( rule__Real__Group_4__0 )? ) ;
     public final void rule__Real__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6689:1: ( ( ( rule__Real__Group_4__0 )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6690:1: ( ( rule__Real__Group_4__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6847:1: ( ( ( rule__Real__Group_4__0 )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6848:1: ( ( rule__Real__Group_4__0 )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6690:1: ( ( rule__Real__Group_4__0 )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6691:1: ( rule__Real__Group_4__0 )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6848:1: ( ( rule__Real__Group_4__0 )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6849:1: ( rule__Real__Group_4__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRealAccess().getGroup_4()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6692:1: ( rule__Real__Group_4__0 )?
-            int alt60=2;
-            int LA60_0 = input.LA(1);
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6850:1: ( rule__Real__Group_4__0 )?
+            int alt61=2;
+            int LA61_0 = input.LA(1);
 
-            if ( ((LA60_0>=14 && LA60_0<=15)) ) {
-                alt60=1;
+            if ( ((LA61_0>=14 && LA61_0<=15)) ) {
+                alt61=1;
             }
-            switch (alt60) {
+            switch (alt61) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6692:2: rule__Real__Group_4__0
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6850:2: rule__Real__Group_4__0
                     {
-                    pushFollow(FOLLOW_rule__Real__Group_4__0_in_rule__Real__Group__4__Impl13417);
+                    pushFollow(FOLLOW_rule__Real__Group_4__0_in_rule__Real__Group__4__Impl13733);
                     rule__Real__Group_4__0();
 
                     state._fsp--;
@@ -19186,21 +19625,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Real__Group_4__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6712:1: rule__Real__Group_4__0 : rule__Real__Group_4__0__Impl rule__Real__Group_4__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6870:1: rule__Real__Group_4__0 : rule__Real__Group_4__0__Impl rule__Real__Group_4__1 ;
     public final void rule__Real__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6716:1: ( rule__Real__Group_4__0__Impl rule__Real__Group_4__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6717:2: rule__Real__Group_4__0__Impl rule__Real__Group_4__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6874:1: ( rule__Real__Group_4__0__Impl rule__Real__Group_4__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6875:2: rule__Real__Group_4__0__Impl rule__Real__Group_4__1
             {
-            pushFollow(FOLLOW_rule__Real__Group_4__0__Impl_in_rule__Real__Group_4__013458);
+            pushFollow(FOLLOW_rule__Real__Group_4__0__Impl_in_rule__Real__Group_4__013774);
             rule__Real__Group_4__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Real__Group_4__1_in_rule__Real__Group_4__013461);
+            pushFollow(FOLLOW_rule__Real__Group_4__1_in_rule__Real__Group_4__013777);
             rule__Real__Group_4__1();
 
             state._fsp--;
@@ -19224,25 +19663,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Real__Group_4__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6724:1: rule__Real__Group_4__0__Impl : ( ( rule__Real__Alternatives_4_0 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6882:1: rule__Real__Group_4__0__Impl : ( ( rule__Real__Alternatives_4_0 ) ) ;
     public final void rule__Real__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6728:1: ( ( ( rule__Real__Alternatives_4_0 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6729:1: ( ( rule__Real__Alternatives_4_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6886:1: ( ( ( rule__Real__Alternatives_4_0 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6887:1: ( ( rule__Real__Alternatives_4_0 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6729:1: ( ( rule__Real__Alternatives_4_0 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6730:1: ( rule__Real__Alternatives_4_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6887:1: ( ( rule__Real__Alternatives_4_0 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6888:1: ( rule__Real__Alternatives_4_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRealAccess().getAlternatives_4_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6731:1: ( rule__Real__Alternatives_4_0 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6731:2: rule__Real__Alternatives_4_0
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6889:1: ( rule__Real__Alternatives_4_0 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6889:2: rule__Real__Alternatives_4_0
             {
-            pushFollow(FOLLOW_rule__Real__Alternatives_4_0_in_rule__Real__Group_4__0__Impl13488);
+            pushFollow(FOLLOW_rule__Real__Alternatives_4_0_in_rule__Real__Group_4__0__Impl13804);
             rule__Real__Alternatives_4_0();
 
             state._fsp--;
@@ -19275,21 +19714,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Real__Group_4__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6741:1: rule__Real__Group_4__1 : rule__Real__Group_4__1__Impl rule__Real__Group_4__2 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6899:1: rule__Real__Group_4__1 : rule__Real__Group_4__1__Impl rule__Real__Group_4__2 ;
     public final void rule__Real__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6745:1: ( rule__Real__Group_4__1__Impl rule__Real__Group_4__2 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6746:2: rule__Real__Group_4__1__Impl rule__Real__Group_4__2
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6903:1: ( rule__Real__Group_4__1__Impl rule__Real__Group_4__2 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6904:2: rule__Real__Group_4__1__Impl rule__Real__Group_4__2
             {
-            pushFollow(FOLLOW_rule__Real__Group_4__1__Impl_in_rule__Real__Group_4__113518);
+            pushFollow(FOLLOW_rule__Real__Group_4__1__Impl_in_rule__Real__Group_4__113834);
             rule__Real__Group_4__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Real__Group_4__2_in_rule__Real__Group_4__113521);
+            pushFollow(FOLLOW_rule__Real__Group_4__2_in_rule__Real__Group_4__113837);
             rule__Real__Group_4__2();
 
             state._fsp--;
@@ -19313,25 +19752,25 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Real__Group_4__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6753:1: rule__Real__Group_4__1__Impl : ( ( rule__Real__Alternatives_4_1 ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6911:1: rule__Real__Group_4__1__Impl : ( ( rule__Real__Alternatives_4_1 ) ) ;
     public final void rule__Real__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6757:1: ( ( ( rule__Real__Alternatives_4_1 ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6758:1: ( ( rule__Real__Alternatives_4_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6915:1: ( ( ( rule__Real__Alternatives_4_1 ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6916:1: ( ( rule__Real__Alternatives_4_1 ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6758:1: ( ( rule__Real__Alternatives_4_1 ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6759:1: ( rule__Real__Alternatives_4_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6916:1: ( ( rule__Real__Alternatives_4_1 ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6917:1: ( rule__Real__Alternatives_4_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRealAccess().getAlternatives_4_1()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6760:1: ( rule__Real__Alternatives_4_1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6760:2: rule__Real__Alternatives_4_1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6918:1: ( rule__Real__Alternatives_4_1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6918:2: rule__Real__Alternatives_4_1
             {
-            pushFollow(FOLLOW_rule__Real__Alternatives_4_1_in_rule__Real__Group_4__1__Impl13548);
+            pushFollow(FOLLOW_rule__Real__Alternatives_4_1_in_rule__Real__Group_4__1__Impl13864);
             rule__Real__Alternatives_4_1();
 
             state._fsp--;
@@ -19364,16 +19803,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Real__Group_4__2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6770:1: rule__Real__Group_4__2 : rule__Real__Group_4__2__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6928:1: rule__Real__Group_4__2 : rule__Real__Group_4__2__Impl ;
     public final void rule__Real__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6774:1: ( rule__Real__Group_4__2__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6775:2: rule__Real__Group_4__2__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6932:1: ( rule__Real__Group_4__2__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6933:2: rule__Real__Group_4__2__Impl
             {
-            pushFollow(FOLLOW_rule__Real__Group_4__2__Impl_in_rule__Real__Group_4__213578);
+            pushFollow(FOLLOW_rule__Real__Group_4__2__Impl_in_rule__Real__Group_4__213894);
             rule__Real__Group_4__2__Impl();
 
             state._fsp--;
@@ -19397,22 +19836,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Real__Group_4__2__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6781:1: rule__Real__Group_4__2__Impl : ( RULE_NATURAL ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6939:1: rule__Real__Group_4__2__Impl : ( RULE_NATURAL ) ;
     public final void rule__Real__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6785:1: ( ( RULE_NATURAL ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6786:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6943:1: ( ( RULE_NATURAL ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6944:1: ( RULE_NATURAL )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6786:1: ( RULE_NATURAL )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6787:1: RULE_NATURAL
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6944:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6945:1: RULE_NATURAL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_4_2()); 
             }
-            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Real__Group_4__2__Impl13605); if (state.failed) return ;
+            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Real__Group_4__2__Impl13921); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRealAccess().getNATURALTerminalRuleCall_4_2()); 
             }
@@ -19438,21 +19877,21 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Integer__Group__0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6804:1: rule__Integer__Group__0 : rule__Integer__Group__0__Impl rule__Integer__Group__1 ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6962:1: rule__Integer__Group__0 : rule__Integer__Group__0__Impl rule__Integer__Group__1 ;
     public final void rule__Integer__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6808:1: ( rule__Integer__Group__0__Impl rule__Integer__Group__1 )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6809:2: rule__Integer__Group__0__Impl rule__Integer__Group__1
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6966:1: ( rule__Integer__Group__0__Impl rule__Integer__Group__1 )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6967:2: rule__Integer__Group__0__Impl rule__Integer__Group__1
             {
-            pushFollow(FOLLOW_rule__Integer__Group__0__Impl_in_rule__Integer__Group__013640);
+            pushFollow(FOLLOW_rule__Integer__Group__0__Impl_in_rule__Integer__Group__013956);
             rule__Integer__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Integer__Group__1_in_rule__Integer__Group__013643);
+            pushFollow(FOLLOW_rule__Integer__Group__1_in_rule__Integer__Group__013959);
             rule__Integer__Group__1();
 
             state._fsp--;
@@ -19476,33 +19915,33 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Integer__Group__0__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6816:1: rule__Integer__Group__0__Impl : ( ( '-' )? ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6974:1: rule__Integer__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__Integer__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6820:1: ( ( ( '-' )? ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6821:1: ( ( '-' )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6978:1: ( ( ( '-' )? ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6979:1: ( ( '-' )? )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6821:1: ( ( '-' )? )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6822:1: ( '-' )?
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6979:1: ( ( '-' )? )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6980:1: ( '-' )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIntegerAccess().getHyphenMinusKeyword_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6823:1: ( '-' )?
-            int alt61=2;
-            int LA61_0 = input.LA(1);
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6981:1: ( '-' )?
+            int alt62=2;
+            int LA62_0 = input.LA(1);
 
-            if ( (LA61_0==17) ) {
-                alt61=1;
+            if ( (LA62_0==17) ) {
+                alt62=1;
             }
-            switch (alt61) {
+            switch (alt62) {
                 case 1 :
-                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6824:2: '-'
+                    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6982:2: '-'
                     {
-                    match(input,17,FOLLOW_17_in_rule__Integer__Group__0__Impl13672); if (state.failed) return ;
+                    match(input,17,FOLLOW_17_in_rule__Integer__Group__0__Impl13988); if (state.failed) return ;
 
                     }
                     break;
@@ -19534,16 +19973,16 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Integer__Group__1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6835:1: rule__Integer__Group__1 : rule__Integer__Group__1__Impl ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6993:1: rule__Integer__Group__1 : rule__Integer__Group__1__Impl ;
     public final void rule__Integer__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6839:1: ( rule__Integer__Group__1__Impl )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6840:2: rule__Integer__Group__1__Impl
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6997:1: ( rule__Integer__Group__1__Impl )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6998:2: rule__Integer__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Integer__Group__1__Impl_in_rule__Integer__Group__113705);
+            pushFollow(FOLLOW_rule__Integer__Group__1__Impl_in_rule__Integer__Group__114021);
             rule__Integer__Group__1__Impl();
 
             state._fsp--;
@@ -19567,22 +20006,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Integer__Group__1__Impl"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6846:1: rule__Integer__Group__1__Impl : ( RULE_NATURAL ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7004:1: rule__Integer__Group__1__Impl : ( RULE_NATURAL ) ;
     public final void rule__Integer__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6850:1: ( ( RULE_NATURAL ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6851:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7008:1: ( ( RULE_NATURAL ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7009:1: ( RULE_NATURAL )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6851:1: ( RULE_NATURAL )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6852:1: RULE_NATURAL
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7009:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7010:1: RULE_NATURAL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIntegerAccess().getNATURALTerminalRuleCall_1()); 
             }
-            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Integer__Group__1__Impl13732); if (state.failed) return ;
+            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Integer__Group__1__Impl14048); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIntegerAccess().getNATURALTerminalRuleCall_1()); 
             }
@@ -19608,22 +20047,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Model__ImportsAssignment_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6868:1: rule__Model__ImportsAssignment_0 : ( ruleImport ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7026:1: rule__Model__ImportsAssignment_0 : ( ruleImport ) ;
     public final void rule__Model__ImportsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6872:1: ( ( ruleImport ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6873:1: ( ruleImport )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7030:1: ( ( ruleImport ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7031:1: ( ruleImport )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6873:1: ( ruleImport )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6874:1: ruleImport
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7031:1: ( ruleImport )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7032:1: ruleImport
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModelAccess().getImportsImportParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleImport_in_rule__Model__ImportsAssignment_013770);
+            pushFollow(FOLLOW_ruleImport_in_rule__Model__ImportsAssignment_014086);
             ruleImport();
 
             state._fsp--;
@@ -19653,22 +20092,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Model__SequenceAssignment_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6883:1: rule__Model__SequenceAssignment_1 : ( ruleSequence ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7041:1: rule__Model__SequenceAssignment_1 : ( ruleSequence ) ;
     public final void rule__Model__SequenceAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6887:1: ( ( ruleSequence ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6888:1: ( ruleSequence )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7045:1: ( ( ruleSequence ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7046:1: ( ruleSequence )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6888:1: ( ruleSequence )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6889:1: ruleSequence
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7046:1: ( ruleSequence )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7047:1: ruleSequence
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModelAccess().getSequenceSequenceParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSequence_in_rule__Model__SequenceAssignment_113801);
+            pushFollow(FOLLOW_ruleSequence_in_rule__Model__SequenceAssignment_114117);
             ruleSequence();
 
             state._fsp--;
@@ -19698,22 +20137,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Import__ImportURIAssignment_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6898:1: rule__Import__ImportURIAssignment_1 : ( RULE_STRING ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7056:1: rule__Import__ImportURIAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Import__ImportURIAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6902:1: ( ( RULE_STRING ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6903:1: ( RULE_STRING )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7060:1: ( ( RULE_STRING ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7061:1: ( RULE_STRING )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6903:1: ( RULE_STRING )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6904:1: RULE_STRING
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7061:1: ( RULE_STRING )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7062:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getImportAccess().getImportURISTRINGTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Import__ImportURIAssignment_113832); if (state.failed) return ;
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Import__ImportURIAssignment_114148); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getImportAccess().getImportURISTRINGTerminalRuleCall_1_0()); 
             }
@@ -19739,22 +20178,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Sequence__AnnotationAssignment_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6913:1: rule__Sequence__AnnotationAssignment_0 : ( ruleAnnotation ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7071:1: rule__Sequence__AnnotationAssignment_0 : ( ruleAnnotation ) ;
     public final void rule__Sequence__AnnotationAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6917:1: ( ( ruleAnnotation ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6918:1: ( ruleAnnotation )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7075:1: ( ( ruleAnnotation ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7076:1: ( ruleAnnotation )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6918:1: ( ruleAnnotation )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6919:1: ruleAnnotation
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7076:1: ( ruleAnnotation )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7077:1: ruleAnnotation
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSequenceAccess().getAnnotationAnnotationParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleAnnotation_in_rule__Sequence__AnnotationAssignment_013863);
+            pushFollow(FOLLOW_ruleAnnotation_in_rule__Sequence__AnnotationAssignment_014179);
             ruleAnnotation();
 
             state._fsp--;
@@ -19784,22 +20223,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Sequence__NameAssignment_2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6928:1: rule__Sequence__NameAssignment_2 : ( RULE_ID ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7086:1: rule__Sequence__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__Sequence__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6932:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6933:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7090:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7091:1: ( RULE_ID )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6933:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6934:1: RULE_ID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7091:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7092:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSequenceAccess().getNameIDTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Sequence__NameAssignment_213894); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Sequence__NameAssignment_214210); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSequenceAccess().getNameIDTerminalRuleCall_2_0()); 
             }
@@ -19825,22 +20264,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Sequence__ParticipantAssignment_3"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6943:1: rule__Sequence__ParticipantAssignment_3 : ( ruleParticipant ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7101:1: rule__Sequence__ParticipantAssignment_3 : ( ruleParticipant ) ;
     public final void rule__Sequence__ParticipantAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6947:1: ( ( ruleParticipant ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6948:1: ( ruleParticipant )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7105:1: ( ( ruleParticipant ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7106:1: ( ruleParticipant )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6948:1: ( ruleParticipant )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6949:1: ruleParticipant
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7106:1: ( ruleParticipant )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7107:1: ruleParticipant
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSequenceAccess().getParticipantParticipantParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleParticipant_in_rule__Sequence__ParticipantAssignment_313925);
+            pushFollow(FOLLOW_ruleParticipant_in_rule__Sequence__ParticipantAssignment_314241);
             ruleParticipant();
 
             state._fsp--;
@@ -19870,22 +20309,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Sequence__ParticipantAssignment_4_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6958:1: rule__Sequence__ParticipantAssignment_4_1 : ( ruleParticipant ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7116:1: rule__Sequence__ParticipantAssignment_4_1 : ( ruleParticipant ) ;
     public final void rule__Sequence__ParticipantAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6962:1: ( ( ruleParticipant ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6963:1: ( ruleParticipant )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7120:1: ( ( ruleParticipant ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7121:1: ( ruleParticipant )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6963:1: ( ruleParticipant )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6964:1: ruleParticipant
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7121:1: ( ruleParticipant )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7122:1: ruleParticipant
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSequenceAccess().getParticipantParticipantParserRuleCall_4_1_0()); 
             }
-            pushFollow(FOLLOW_ruleParticipant_in_rule__Sequence__ParticipantAssignment_4_113956);
+            pushFollow(FOLLOW_ruleParticipant_in_rule__Sequence__ParticipantAssignment_4_114272);
             ruleParticipant();
 
             state._fsp--;
@@ -19915,22 +20354,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Sequence__TransitionAssignment_5"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6973:1: rule__Sequence__TransitionAssignment_5 : ( ruleTransition ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7131:1: rule__Sequence__TransitionAssignment_5 : ( ruleTransition ) ;
     public final void rule__Sequence__TransitionAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6977:1: ( ( ruleTransition ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6978:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7135:1: ( ( ruleTransition ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7136:1: ( ruleTransition )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6978:1: ( ruleTransition )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6979:1: ruleTransition
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7136:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7137:1: ruleTransition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSequenceAccess().getTransitionTransitionParserRuleCall_5_0()); 
             }
-            pushFollow(FOLLOW_ruleTransition_in_rule__Sequence__TransitionAssignment_513987);
+            pushFollow(FOLLOW_ruleTransition_in_rule__Sequence__TransitionAssignment_514303);
             ruleTransition();
 
             state._fsp--;
@@ -19960,22 +20399,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Participant__NameAssignment_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6988:1: rule__Participant__NameAssignment_0 : ( RULE_ID ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7146:1: rule__Participant__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__Participant__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6992:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6993:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7150:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7151:1: ( RULE_ID )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6993:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:6994:1: RULE_ID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7151:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7152:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParticipantAccess().getNameIDTerminalRuleCall_0_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Participant__NameAssignment_014018); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Participant__NameAssignment_014334); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getParticipantAccess().getNameIDTerminalRuleCall_0_0()); 
             }
@@ -20001,28 +20440,28 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Participant__ClassifierAssignment_1_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7003:1: rule__Participant__ClassifierAssignment_1_1 : ( ( ruleExtendedID ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7161:1: rule__Participant__ClassifierAssignment_1_1 : ( ( ruleExtendedID ) ) ;
     public final void rule__Participant__ClassifierAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7007:1: ( ( ( ruleExtendedID ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7008:1: ( ( ruleExtendedID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7165:1: ( ( ( ruleExtendedID ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7166:1: ( ( ruleExtendedID ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7008:1: ( ( ruleExtendedID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7009:1: ( ruleExtendedID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7166:1: ( ( ruleExtendedID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7167:1: ( ruleExtendedID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParticipantAccess().getClassifierEntityCrossReference_1_1_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7010:1: ( ruleExtendedID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7011:1: ruleExtendedID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7168:1: ( ruleExtendedID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7169:1: ruleExtendedID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParticipantAccess().getClassifierEntityExtendedIDParserRuleCall_1_1_0_1()); 
             }
-            pushFollow(FOLLOW_ruleExtendedID_in_rule__Participant__ClassifierAssignment_1_114053);
+            pushFollow(FOLLOW_ruleExtendedID_in_rule__Participant__ClassifierAssignment_1_114369);
             ruleExtendedID();
 
             state._fsp--;
@@ -20058,22 +20497,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__IfElseFragment__ExprAssignment_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7022:1: rule__IfElseFragment__ExprAssignment_1 : ( ruleValueWithSpaces ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7180:1: rule__IfElseFragment__ExprAssignment_1 : ( ruleValueWithSpaces ) ;
     public final void rule__IfElseFragment__ExprAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7026:1: ( ( ruleValueWithSpaces ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7027:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7184:1: ( ( ruleValueWithSpaces ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7185:1: ( ruleValueWithSpaces )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7027:1: ( ruleValueWithSpaces )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7028:1: ruleValueWithSpaces
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7185:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7186:1: ruleValueWithSpaces
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfElseFragmentAccess().getExprValueWithSpacesParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__IfElseFragment__ExprAssignment_114088);
+            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__IfElseFragment__ExprAssignment_114404);
             ruleValueWithSpaces();
 
             state._fsp--;
@@ -20103,22 +20542,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__IfElseFragment__TransitionAssignment_3"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7037:1: rule__IfElseFragment__TransitionAssignment_3 : ( ruleTransition ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7195:1: rule__IfElseFragment__TransitionAssignment_3 : ( ruleTransition ) ;
     public final void rule__IfElseFragment__TransitionAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7041:1: ( ( ruleTransition ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7042:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7199:1: ( ( ruleTransition ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7200:1: ( ruleTransition )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7042:1: ( ruleTransition )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7043:1: ruleTransition
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7200:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7201:1: ruleTransition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfElseFragmentAccess().getTransitionTransitionParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleTransition_in_rule__IfElseFragment__TransitionAssignment_314119);
+            pushFollow(FOLLOW_ruleTransition_in_rule__IfElseFragment__TransitionAssignment_314435);
             ruleTransition();
 
             state._fsp--;
@@ -20148,22 +20587,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__IfElseFragment__ElseIfExprAssignment_4_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7052:1: rule__IfElseFragment__ElseIfExprAssignment_4_1 : ( ruleValueWithSpaces ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7210:1: rule__IfElseFragment__ElseIfExprAssignment_4_1 : ( ruleValueWithSpaces ) ;
     public final void rule__IfElseFragment__ElseIfExprAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7056:1: ( ( ruleValueWithSpaces ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7057:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7214:1: ( ( ruleValueWithSpaces ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7215:1: ( ruleValueWithSpaces )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7057:1: ( ruleValueWithSpaces )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7058:1: ruleValueWithSpaces
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7215:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7216:1: ruleValueWithSpaces
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfElseFragmentAccess().getElseIfExprValueWithSpacesParserRuleCall_4_1_0()); 
             }
-            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__IfElseFragment__ElseIfExprAssignment_4_114150);
+            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__IfElseFragment__ElseIfExprAssignment_4_114466);
             ruleValueWithSpaces();
 
             state._fsp--;
@@ -20193,22 +20632,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__IfElseFragment__ElseIftransitionAssignment_4_3"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7067:1: rule__IfElseFragment__ElseIftransitionAssignment_4_3 : ( ruleTransition ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7225:1: rule__IfElseFragment__ElseIftransitionAssignment_4_3 : ( ruleTransition ) ;
     public final void rule__IfElseFragment__ElseIftransitionAssignment_4_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7071:1: ( ( ruleTransition ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7072:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7229:1: ( ( ruleTransition ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7230:1: ( ruleTransition )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7072:1: ( ruleTransition )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7073:1: ruleTransition
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7230:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7231:1: ruleTransition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfElseFragmentAccess().getElseIftransitionTransitionParserRuleCall_4_3_0()); 
             }
-            pushFollow(FOLLOW_ruleTransition_in_rule__IfElseFragment__ElseIftransitionAssignment_4_314181);
+            pushFollow(FOLLOW_ruleTransition_in_rule__IfElseFragment__ElseIftransitionAssignment_4_314497);
             ruleTransition();
 
             state._fsp--;
@@ -20238,22 +20677,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__IfElseFragment__ElseTransitionAssignment_5_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7082:1: rule__IfElseFragment__ElseTransitionAssignment_5_1 : ( ruleTransition ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7240:1: rule__IfElseFragment__ElseTransitionAssignment_5_1 : ( ruleTransition ) ;
     public final void rule__IfElseFragment__ElseTransitionAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7086:1: ( ( ruleTransition ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7087:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7244:1: ( ( ruleTransition ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7245:1: ( ruleTransition )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7087:1: ( ruleTransition )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7088:1: ruleTransition
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7245:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7246:1: ruleTransition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfElseFragmentAccess().getElseTransitionTransitionParserRuleCall_5_1_0()); 
             }
-            pushFollow(FOLLOW_ruleTransition_in_rule__IfElseFragment__ElseTransitionAssignment_5_114212);
+            pushFollow(FOLLOW_ruleTransition_in_rule__IfElseFragment__ElseTransitionAssignment_5_114528);
             ruleTransition();
 
             state._fsp--;
@@ -20283,22 +20722,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ForeachFragment__ExprAssignment_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7097:1: rule__ForeachFragment__ExprAssignment_1 : ( ruleForeachExpression ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7255:1: rule__ForeachFragment__ExprAssignment_1 : ( ruleForeachExpression ) ;
     public final void rule__ForeachFragment__ExprAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7101:1: ( ( ruleForeachExpression ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7102:1: ( ruleForeachExpression )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7259:1: ( ( ruleForeachExpression ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7260:1: ( ruleForeachExpression )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7102:1: ( ruleForeachExpression )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7103:1: ruleForeachExpression
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7260:1: ( ruleForeachExpression )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7261:1: ruleForeachExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getForeachFragmentAccess().getExprForeachExpressionParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleForeachExpression_in_rule__ForeachFragment__ExprAssignment_114243);
+            pushFollow(FOLLOW_ruleForeachExpression_in_rule__ForeachFragment__ExprAssignment_114559);
             ruleForeachExpression();
 
             state._fsp--;
@@ -20328,22 +20767,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ForeachFragment__TransitionAssignment_3"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7112:1: rule__ForeachFragment__TransitionAssignment_3 : ( ruleTransition ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7270:1: rule__ForeachFragment__TransitionAssignment_3 : ( ruleTransition ) ;
     public final void rule__ForeachFragment__TransitionAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7116:1: ( ( ruleTransition ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7117:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7274:1: ( ( ruleTransition ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7275:1: ( ruleTransition )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7117:1: ( ruleTransition )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7118:1: ruleTransition
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7275:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7276:1: ruleTransition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getForeachFragmentAccess().getTransitionTransitionParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleTransition_in_rule__ForeachFragment__TransitionAssignment_314274);
+            pushFollow(FOLLOW_ruleTransition_in_rule__ForeachFragment__TransitionAssignment_314590);
             ruleTransition();
 
             state._fsp--;
@@ -20373,22 +20812,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__LoopFragment__ExprAssignment_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7127:1: rule__LoopFragment__ExprAssignment_1 : ( ruleValueWithSpaces ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7285:1: rule__LoopFragment__ExprAssignment_1 : ( ruleValueWithSpaces ) ;
     public final void rule__LoopFragment__ExprAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7131:1: ( ( ruleValueWithSpaces ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7132:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7289:1: ( ( ruleValueWithSpaces ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7290:1: ( ruleValueWithSpaces )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7132:1: ( ruleValueWithSpaces )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7133:1: ruleValueWithSpaces
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7290:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7291:1: ruleValueWithSpaces
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLoopFragmentAccess().getExprValueWithSpacesParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__LoopFragment__ExprAssignment_114305);
+            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__LoopFragment__ExprAssignment_114621);
             ruleValueWithSpaces();
 
             state._fsp--;
@@ -20418,22 +20857,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__LoopFragment__TransitionAssignment_3"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7142:1: rule__LoopFragment__TransitionAssignment_3 : ( ruleTransition ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7300:1: rule__LoopFragment__TransitionAssignment_3 : ( ruleTransition ) ;
     public final void rule__LoopFragment__TransitionAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7146:1: ( ( ruleTransition ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7147:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7304:1: ( ( ruleTransition ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7305:1: ( ruleTransition )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7147:1: ( ruleTransition )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7148:1: ruleTransition
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7305:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7306:1: ruleTransition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLoopFragmentAccess().getTransitionTransitionParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleTransition_in_rule__LoopFragment__TransitionAssignment_314336);
+            pushFollow(FOLLOW_ruleTransition_in_rule__LoopFragment__TransitionAssignment_314652);
             ruleTransition();
 
             state._fsp--;
@@ -20463,22 +20902,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__AssertFragment__ExprAssignment_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7157:1: rule__AssertFragment__ExprAssignment_1 : ( ruleValueWithSpaces ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7315:1: rule__AssertFragment__ExprAssignment_1 : ( ruleValueWithSpaces ) ;
     public final void rule__AssertFragment__ExprAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7161:1: ( ( ruleValueWithSpaces ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7162:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7319:1: ( ( ruleValueWithSpaces ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7320:1: ( ruleValueWithSpaces )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7162:1: ( ruleValueWithSpaces )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7163:1: ruleValueWithSpaces
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7320:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7321:1: ruleValueWithSpaces
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssertFragmentAccess().getExprValueWithSpacesParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__AssertFragment__ExprAssignment_114367);
+            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__AssertFragment__ExprAssignment_114683);
             ruleValueWithSpaces();
 
             state._fsp--;
@@ -20508,22 +20947,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__AssertFragment__TransitionAssignment_3"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7172:1: rule__AssertFragment__TransitionAssignment_3 : ( ruleTransition ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7330:1: rule__AssertFragment__TransitionAssignment_3 : ( ruleTransition ) ;
     public final void rule__AssertFragment__TransitionAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7176:1: ( ( ruleTransition ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7177:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7334:1: ( ( ruleTransition ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7335:1: ( ruleTransition )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7177:1: ( ruleTransition )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7178:1: ruleTransition
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7335:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7336:1: ruleTransition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssertFragmentAccess().getTransitionTransitionParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleTransition_in_rule__AssertFragment__TransitionAssignment_314398);
+            pushFollow(FOLLOW_ruleTransition_in_rule__AssertFragment__TransitionAssignment_314714);
             ruleTransition();
 
             state._fsp--;
@@ -20553,22 +20992,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__BreakFragment__ExprAssignment_2_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7187:1: rule__BreakFragment__ExprAssignment_2_0 : ( ruleValueWithSpaces ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7345:1: rule__BreakFragment__ExprAssignment_2_0 : ( ruleValueWithSpaces ) ;
     public final void rule__BreakFragment__ExprAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7191:1: ( ( ruleValueWithSpaces ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7192:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7349:1: ( ( ruleValueWithSpaces ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7350:1: ( ruleValueWithSpaces )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7192:1: ( ruleValueWithSpaces )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7193:1: ruleValueWithSpaces
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7350:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7351:1: ruleValueWithSpaces
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBreakFragmentAccess().getExprValueWithSpacesParserRuleCall_2_0_0()); 
             }
-            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__BreakFragment__ExprAssignment_2_014429);
+            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__BreakFragment__ExprAssignment_2_014745);
             ruleValueWithSpaces();
 
             state._fsp--;
@@ -20598,22 +21037,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__BreakFragment__TransitionAssignment_2_2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7202:1: rule__BreakFragment__TransitionAssignment_2_2 : ( ruleTransition ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7360:1: rule__BreakFragment__TransitionAssignment_2_2 : ( ruleTransition ) ;
     public final void rule__BreakFragment__TransitionAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7206:1: ( ( ruleTransition ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7207:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7364:1: ( ( ruleTransition ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7365:1: ( ruleTransition )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7207:1: ( ruleTransition )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7208:1: ruleTransition
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7365:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7366:1: ruleTransition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBreakFragmentAccess().getTransitionTransitionParserRuleCall_2_2_0()); 
             }
-            pushFollow(FOLLOW_ruleTransition_in_rule__BreakFragment__TransitionAssignment_2_214460);
+            pushFollow(FOLLOW_ruleTransition_in_rule__BreakFragment__TransitionAssignment_2_214776);
             ruleTransition();
 
             state._fsp--;
@@ -20643,22 +21082,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__NextFragment__ExprAssignment_2_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7217:1: rule__NextFragment__ExprAssignment_2_0 : ( ruleValueWithSpaces ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7375:1: rule__NextFragment__ExprAssignment_2_0 : ( ruleValueWithSpaces ) ;
     public final void rule__NextFragment__ExprAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7221:1: ( ( ruleValueWithSpaces ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7222:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7379:1: ( ( ruleValueWithSpaces ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7380:1: ( ruleValueWithSpaces )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7222:1: ( ruleValueWithSpaces )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7223:1: ruleValueWithSpaces
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7380:1: ( ruleValueWithSpaces )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7381:1: ruleValueWithSpaces
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNextFragmentAccess().getExprValueWithSpacesParserRuleCall_2_0_0()); 
             }
-            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__NextFragment__ExprAssignment_2_014491);
+            pushFollow(FOLLOW_ruleValueWithSpaces_in_rule__NextFragment__ExprAssignment_2_014807);
             ruleValueWithSpaces();
 
             state._fsp--;
@@ -20688,22 +21127,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__NextFragment__TransitionAssignment_2_2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7232:1: rule__NextFragment__TransitionAssignment_2_2 : ( ruleTransition ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7390:1: rule__NextFragment__TransitionAssignment_2_2 : ( ruleTransition ) ;
     public final void rule__NextFragment__TransitionAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7236:1: ( ( ruleTransition ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7237:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7394:1: ( ( ruleTransition ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7395:1: ( ruleTransition )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7237:1: ( ruleTransition )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7238:1: ruleTransition
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7395:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7396:1: ruleTransition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNextFragmentAccess().getTransitionTransitionParserRuleCall_2_2_0()); 
             }
-            pushFollow(FOLLOW_ruleTransition_in_rule__NextFragment__TransitionAssignment_2_214522);
+            pushFollow(FOLLOW_ruleTransition_in_rule__NextFragment__TransitionAssignment_2_214838);
             ruleTransition();
 
             state._fsp--;
@@ -20733,28 +21172,28 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__FoundMessage__TargetParticipantAssignment_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7247:1: rule__FoundMessage__TargetParticipantAssignment_1 : ( ( RULE_ID ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7405:1: rule__FoundMessage__TargetParticipantAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__FoundMessage__TargetParticipantAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7251:1: ( ( ( RULE_ID ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7252:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7409:1: ( ( ( RULE_ID ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7410:1: ( ( RULE_ID ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7252:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7253:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7410:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7411:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFoundMessageAccess().getTargetParticipantParticipantCrossReference_1_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7254:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7255:1: RULE_ID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7412:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7413:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFoundMessageAccess().getTargetParticipantParticipantIDTerminalRuleCall_1_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FoundMessage__TargetParticipantAssignment_114557); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FoundMessage__TargetParticipantAssignment_114873); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFoundMessageAccess().getTargetParticipantParticipantIDTerminalRuleCall_1_0_1()); 
             }
@@ -20786,22 +21225,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__FoundMessage__NameAssignment_3"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7266:1: rule__FoundMessage__NameAssignment_3 : ( RULE_ID ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7424:1: rule__FoundMessage__NameAssignment_3 : ( RULE_ID ) ;
     public final void rule__FoundMessage__NameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7270:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7271:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7428:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7429:1: ( RULE_ID )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7271:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7272:1: RULE_ID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7429:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7430:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFoundMessageAccess().getNameIDTerminalRuleCall_3_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FoundMessage__NameAssignment_314592); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FoundMessage__NameAssignment_314908); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFoundMessageAccess().getNameIDTerminalRuleCall_3_0()); 
             }
@@ -20827,22 +21266,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__FoundMessage__ParameterAssignment_4_1_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7281:1: rule__FoundMessage__ParameterAssignment_4_1_0 : ( ruleParameter ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7439:1: rule__FoundMessage__ParameterAssignment_4_1_0 : ( ruleParameter ) ;
     public final void rule__FoundMessage__ParameterAssignment_4_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7285:1: ( ( ruleParameter ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7286:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7443:1: ( ( ruleParameter ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7444:1: ( ruleParameter )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7286:1: ( ruleParameter )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7287:1: ruleParameter
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7444:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7445:1: ruleParameter
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFoundMessageAccess().getParameterParameterParserRuleCall_4_1_0_0()); 
             }
-            pushFollow(FOLLOW_ruleParameter_in_rule__FoundMessage__ParameterAssignment_4_1_014623);
+            pushFollow(FOLLOW_ruleParameter_in_rule__FoundMessage__ParameterAssignment_4_1_014939);
             ruleParameter();
 
             state._fsp--;
@@ -20872,22 +21311,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__FoundMessage__ParameterAssignment_4_1_1_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7296:1: rule__FoundMessage__ParameterAssignment_4_1_1_1 : ( ruleParameter ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7454:1: rule__FoundMessage__ParameterAssignment_4_1_1_1 : ( ruleParameter ) ;
     public final void rule__FoundMessage__ParameterAssignment_4_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7300:1: ( ( ruleParameter ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7301:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7458:1: ( ( ruleParameter ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7459:1: ( ruleParameter )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7301:1: ( ruleParameter )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7302:1: ruleParameter
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7459:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7460:1: ruleParameter
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFoundMessageAccess().getParameterParameterParserRuleCall_4_1_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleParameter_in_rule__FoundMessage__ParameterAssignment_4_1_1_114654);
+            pushFollow(FOLLOW_ruleParameter_in_rule__FoundMessage__ParameterAssignment_4_1_1_114970);
             ruleParameter();
 
             state._fsp--;
@@ -20917,22 +21356,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__FoundMessage__ReturnAssignment_5"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7311:1: rule__FoundMessage__ReturnAssignment_5 : ( ruleReturnMessage ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7469:1: rule__FoundMessage__ReturnAssignment_5 : ( ruleReturnMessage ) ;
     public final void rule__FoundMessage__ReturnAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7315:1: ( ( ruleReturnMessage ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7316:1: ( ruleReturnMessage )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7473:1: ( ( ruleReturnMessage ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7474:1: ( ruleReturnMessage )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7316:1: ( ruleReturnMessage )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7317:1: ruleReturnMessage
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7474:1: ( ruleReturnMessage )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7475:1: ruleReturnMessage
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFoundMessageAccess().getReturnReturnMessageParserRuleCall_5_0()); 
             }
-            pushFollow(FOLLOW_ruleReturnMessage_in_rule__FoundMessage__ReturnAssignment_514685);
+            pushFollow(FOLLOW_ruleReturnMessage_in_rule__FoundMessage__ReturnAssignment_515001);
             ruleReturnMessage();
 
             state._fsp--;
@@ -20961,37 +21400,37 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
     // $ANTLR end "rule__FoundMessage__ReturnAssignment_5"
 
 
-    // $ANTLR start "rule__CallMessage__SourceParticipantAssignment_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7326:1: rule__CallMessage__SourceParticipantAssignment_0 : ( ( RULE_ID ) ) ;
-    public final void rule__CallMessage__SourceParticipantAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__CallMessage__SourceAssignment_0"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7484:1: rule__CallMessage__SourceAssignment_0 : ( ( RULE_ID ) ) ;
+    public final void rule__CallMessage__SourceAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7330:1: ( ( ( RULE_ID ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7331:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7488:1: ( ( ( RULE_ID ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7489:1: ( ( RULE_ID ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7331:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7332:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7489:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7490:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getSourceParticipantParticipantCrossReference_0_0()); 
+               before(grammarAccess.getCallMessageAccess().getSourceParticipantCrossReference_0_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7333:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7334:1: RULE_ID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7491:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7492:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getSourceParticipantParticipantIDTerminalRuleCall_0_0_1()); 
+               before(grammarAccess.getCallMessageAccess().getSourceParticipantIDTerminalRuleCall_0_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CallMessage__SourceParticipantAssignment_014720); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CallMessage__SourceAssignment_015036); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getSourceParticipantParticipantIDTerminalRuleCall_0_0_1()); 
+               after(grammarAccess.getCallMessageAccess().getSourceParticipantIDTerminalRuleCall_0_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getSourceParticipantParticipantCrossReference_0_0()); 
+               after(grammarAccess.getCallMessageAccess().getSourceParticipantCrossReference_0_0()); 
             }
 
             }
@@ -21011,40 +21450,40 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__CallMessage__SourceParticipantAssignment_0"
+    // $ANTLR end "rule__CallMessage__SourceAssignment_0"
 
 
-    // $ANTLR start "rule__CallMessage__TargetParticipantAssignment_2_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7345:1: rule__CallMessage__TargetParticipantAssignment_2_0 : ( ( RULE_ID ) ) ;
-    public final void rule__CallMessage__TargetParticipantAssignment_2_0() throws RecognitionException {
+    // $ANTLR start "rule__CallMessage__TargetAssignment_2"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7503:1: rule__CallMessage__TargetAssignment_2 : ( ( RULE_ID ) ) ;
+    public final void rule__CallMessage__TargetAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7349:1: ( ( ( RULE_ID ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7350:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7507:1: ( ( ( RULE_ID ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7508:1: ( ( RULE_ID ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7350:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7351:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7508:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7509:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getTargetParticipantParticipantCrossReference_2_0_0()); 
+               before(grammarAccess.getCallMessageAccess().getTargetParticipantCrossReference_2_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7352:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7353:1: RULE_ID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7510:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7511:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getTargetParticipantParticipantIDTerminalRuleCall_2_0_0_1()); 
+               before(grammarAccess.getCallMessageAccess().getTargetParticipantIDTerminalRuleCall_2_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CallMessage__TargetParticipantAssignment_2_014759); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CallMessage__TargetAssignment_215075); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getTargetParticipantParticipantIDTerminalRuleCall_2_0_0_1()); 
+               after(grammarAccess.getCallMessageAccess().getTargetParticipantIDTerminalRuleCall_2_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getTargetParticipantParticipantCrossReference_2_0_0()); 
+               after(grammarAccess.getCallMessageAccess().getTargetParticipantCrossReference_2_0()); 
             }
 
             }
@@ -21064,28 +21503,28 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__CallMessage__TargetParticipantAssignment_2_0"
+    // $ANTLR end "rule__CallMessage__TargetAssignment_2"
 
 
-    // $ANTLR start "rule__CallMessage__NameAssignment_3"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7364:1: rule__CallMessage__NameAssignment_3 : ( RULE_ID ) ;
-    public final void rule__CallMessage__NameAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__CallMessage__NameAssignment_4"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7522:1: rule__CallMessage__NameAssignment_4 : ( RULE_ID ) ;
+    public final void rule__CallMessage__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7368:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7369:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7526:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7527:1: ( RULE_ID )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7369:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7370:1: RULE_ID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7527:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7528:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getNameIDTerminalRuleCall_3_0()); 
+               before(grammarAccess.getCallMessageAccess().getNameIDTerminalRuleCall_4_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CallMessage__NameAssignment_314794); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CallMessage__NameAssignment_415110); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getNameIDTerminalRuleCall_3_0()); 
+               after(grammarAccess.getCallMessageAccess().getNameIDTerminalRuleCall_4_0()); 
             }
 
             }
@@ -21105,32 +21544,32 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__CallMessage__NameAssignment_3"
+    // $ANTLR end "rule__CallMessage__NameAssignment_4"
 
 
-    // $ANTLR start "rule__CallMessage__ParameterAssignment_4_1_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7379:1: rule__CallMessage__ParameterAssignment_4_1_0 : ( ruleParameter ) ;
-    public final void rule__CallMessage__ParameterAssignment_4_1_0() throws RecognitionException {
+    // $ANTLR start "rule__CallMessage__ParameterAssignment_5_1_0"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7537:1: rule__CallMessage__ParameterAssignment_5_1_0 : ( ruleParameter ) ;
+    public final void rule__CallMessage__ParameterAssignment_5_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7383:1: ( ( ruleParameter ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7384:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7541:1: ( ( ruleParameter ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7542:1: ( ruleParameter )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7384:1: ( ruleParameter )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7385:1: ruleParameter
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7542:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7543:1: ruleParameter
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getParameterParameterParserRuleCall_4_1_0_0()); 
+               before(grammarAccess.getCallMessageAccess().getParameterParameterParserRuleCall_5_1_0_0()); 
             }
-            pushFollow(FOLLOW_ruleParameter_in_rule__CallMessage__ParameterAssignment_4_1_014825);
+            pushFollow(FOLLOW_ruleParameter_in_rule__CallMessage__ParameterAssignment_5_1_015141);
             ruleParameter();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getParameterParameterParserRuleCall_4_1_0_0()); 
+               after(grammarAccess.getCallMessageAccess().getParameterParameterParserRuleCall_5_1_0_0()); 
             }
 
             }
@@ -21150,32 +21589,32 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__CallMessage__ParameterAssignment_4_1_0"
+    // $ANTLR end "rule__CallMessage__ParameterAssignment_5_1_0"
 
 
-    // $ANTLR start "rule__CallMessage__ParameterAssignment_4_1_1_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7394:1: rule__CallMessage__ParameterAssignment_4_1_1_1 : ( ruleParameter ) ;
-    public final void rule__CallMessage__ParameterAssignment_4_1_1_1() throws RecognitionException {
+    // $ANTLR start "rule__CallMessage__ParameterAssignment_5_1_1_1"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7552:1: rule__CallMessage__ParameterAssignment_5_1_1_1 : ( ruleParameter ) ;
+    public final void rule__CallMessage__ParameterAssignment_5_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7398:1: ( ( ruleParameter ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7399:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7556:1: ( ( ruleParameter ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7557:1: ( ruleParameter )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7399:1: ( ruleParameter )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7400:1: ruleParameter
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7557:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7558:1: ruleParameter
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getParameterParameterParserRuleCall_4_1_1_1_0()); 
+               before(grammarAccess.getCallMessageAccess().getParameterParameterParserRuleCall_5_1_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleParameter_in_rule__CallMessage__ParameterAssignment_4_1_1_114856);
+            pushFollow(FOLLOW_ruleParameter_in_rule__CallMessage__ParameterAssignment_5_1_1_115172);
             ruleParameter();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getParameterParameterParserRuleCall_4_1_1_1_0()); 
+               after(grammarAccess.getCallMessageAccess().getParameterParameterParserRuleCall_5_1_1_1_0()); 
             }
 
             }
@@ -21195,32 +21634,32 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__CallMessage__ParameterAssignment_4_1_1_1"
+    // $ANTLR end "rule__CallMessage__ParameterAssignment_5_1_1_1"
 
 
-    // $ANTLR start "rule__CallMessage__ReturnAssignment_5"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7409:1: rule__CallMessage__ReturnAssignment_5 : ( ruleReturnMessage ) ;
-    public final void rule__CallMessage__ReturnAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__CallMessage__ReturnAssignment_6"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7567:1: rule__CallMessage__ReturnAssignment_6 : ( ruleReturnMessage ) ;
+    public final void rule__CallMessage__ReturnAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7413:1: ( ( ruleReturnMessage ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7414:1: ( ruleReturnMessage )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7571:1: ( ( ruleReturnMessage ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7572:1: ( ruleReturnMessage )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7414:1: ( ruleReturnMessage )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7415:1: ruleReturnMessage
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7572:1: ( ruleReturnMessage )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7573:1: ruleReturnMessage
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCallMessageAccess().getReturnReturnMessageParserRuleCall_5_0()); 
+               before(grammarAccess.getCallMessageAccess().getReturnReturnMessageParserRuleCall_6_0()); 
             }
-            pushFollow(FOLLOW_ruleReturnMessage_in_rule__CallMessage__ReturnAssignment_514887);
+            pushFollow(FOLLOW_ruleReturnMessage_in_rule__CallMessage__ReturnAssignment_615203);
             ruleReturnMessage();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCallMessageAccess().getReturnReturnMessageParserRuleCall_5_0()); 
+               after(grammarAccess.getCallMessageAccess().getReturnReturnMessageParserRuleCall_6_0()); 
             }
 
             }
@@ -21240,40 +21679,40 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__CallMessage__ReturnAssignment_5"
+    // $ANTLR end "rule__CallMessage__ReturnAssignment_6"
 
 
-    // $ANTLR start "rule__NewMessage__SourceParticipantAssignment_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7424:1: rule__NewMessage__SourceParticipantAssignment_0 : ( ( RULE_ID ) ) ;
-    public final void rule__NewMessage__SourceParticipantAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__NewMessage__SourceAssignment_0"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7582:1: rule__NewMessage__SourceAssignment_0 : ( ( RULE_ID ) ) ;
+    public final void rule__NewMessage__SourceAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7428:1: ( ( ( RULE_ID ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7429:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7586:1: ( ( ( RULE_ID ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7587:1: ( ( RULE_ID ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7429:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7430:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7587:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7588:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewMessageAccess().getSourceParticipantParticipantCrossReference_0_0()); 
+               before(grammarAccess.getNewMessageAccess().getSourceParticipantCrossReference_0_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7431:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7432:1: RULE_ID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7589:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7590:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewMessageAccess().getSourceParticipantParticipantIDTerminalRuleCall_0_0_1()); 
+               before(grammarAccess.getNewMessageAccess().getSourceParticipantIDTerminalRuleCall_0_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NewMessage__SourceParticipantAssignment_014922); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NewMessage__SourceAssignment_015238); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewMessageAccess().getSourceParticipantParticipantIDTerminalRuleCall_0_0_1()); 
+               after(grammarAccess.getNewMessageAccess().getSourceParticipantIDTerminalRuleCall_0_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewMessageAccess().getSourceParticipantParticipantCrossReference_0_0()); 
+               after(grammarAccess.getNewMessageAccess().getSourceParticipantCrossReference_0_0()); 
             }
 
             }
@@ -21293,40 +21732,40 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__NewMessage__SourceParticipantAssignment_0"
+    // $ANTLR end "rule__NewMessage__SourceAssignment_0"
 
 
-    // $ANTLR start "rule__NewMessage__TargetParticipantAssignment_2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7443:1: rule__NewMessage__TargetParticipantAssignment_2 : ( ( RULE_ID ) ) ;
-    public final void rule__NewMessage__TargetParticipantAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__NewMessage__TargetAssignment_2"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7601:1: rule__NewMessage__TargetAssignment_2 : ( ( RULE_ID ) ) ;
+    public final void rule__NewMessage__TargetAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7447:1: ( ( ( RULE_ID ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7448:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7605:1: ( ( ( RULE_ID ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7606:1: ( ( RULE_ID ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7448:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7449:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7606:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7607:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewMessageAccess().getTargetParticipantParticipantCrossReference_2_0()); 
+               before(grammarAccess.getNewMessageAccess().getTargetParticipantCrossReference_2_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7450:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7451:1: RULE_ID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7608:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7609:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewMessageAccess().getTargetParticipantParticipantIDTerminalRuleCall_2_0_1()); 
+               before(grammarAccess.getNewMessageAccess().getTargetParticipantIDTerminalRuleCall_2_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NewMessage__TargetParticipantAssignment_214961); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NewMessage__TargetAssignment_215277); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewMessageAccess().getTargetParticipantParticipantIDTerminalRuleCall_2_0_1()); 
+               after(grammarAccess.getNewMessageAccess().getTargetParticipantIDTerminalRuleCall_2_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewMessageAccess().getTargetParticipantParticipantCrossReference_2_0()); 
+               after(grammarAccess.getNewMessageAccess().getTargetParticipantCrossReference_2_0()); 
             }
 
             }
@@ -21346,32 +21785,73 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__NewMessage__TargetParticipantAssignment_2"
+    // $ANTLR end "rule__NewMessage__TargetAssignment_2"
 
 
-    // $ANTLR start "rule__NewMessage__ParameterAssignment_3_1_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7462:1: rule__NewMessage__ParameterAssignment_3_1_0 : ( ruleParameter ) ;
-    public final void rule__NewMessage__ParameterAssignment_3_1_0() throws RecognitionException {
+    // $ANTLR start "rule__NewMessage__NameAssignment_3_1"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7620:1: rule__NewMessage__NameAssignment_3_1 : ( RULE_ID ) ;
+    public final void rule__NewMessage__NameAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7466:1: ( ( ruleParameter ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7467:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7624:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7625:1: ( RULE_ID )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7467:1: ( ruleParameter )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7468:1: ruleParameter
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7625:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7626:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewMessageAccess().getParameterParameterParserRuleCall_3_1_0_0()); 
+               before(grammarAccess.getNewMessageAccess().getNameIDTerminalRuleCall_3_1_0()); 
             }
-            pushFollow(FOLLOW_ruleParameter_in_rule__NewMessage__ParameterAssignment_3_1_014996);
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NewMessage__NameAssignment_3_115312); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getNewMessageAccess().getNameIDTerminalRuleCall_3_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NewMessage__NameAssignment_3_1"
+
+
+    // $ANTLR start "rule__NewMessage__ParameterAssignment_4_1_0"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7635:1: rule__NewMessage__ParameterAssignment_4_1_0 : ( ruleParameter ) ;
+    public final void rule__NewMessage__ParameterAssignment_4_1_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7639:1: ( ( ruleParameter ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7640:1: ( ruleParameter )
+            {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7640:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7641:1: ruleParameter
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getNewMessageAccess().getParameterParameterParserRuleCall_4_1_0_0()); 
+            }
+            pushFollow(FOLLOW_ruleParameter_in_rule__NewMessage__ParameterAssignment_4_1_015343);
             ruleParameter();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewMessageAccess().getParameterParameterParserRuleCall_3_1_0_0()); 
+               after(grammarAccess.getNewMessageAccess().getParameterParameterParserRuleCall_4_1_0_0()); 
             }
 
             }
@@ -21391,32 +21871,32 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__NewMessage__ParameterAssignment_3_1_0"
+    // $ANTLR end "rule__NewMessage__ParameterAssignment_4_1_0"
 
 
-    // $ANTLR start "rule__NewMessage__ParameterAssignment_3_1_1_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7477:1: rule__NewMessage__ParameterAssignment_3_1_1_1 : ( ruleParameter ) ;
-    public final void rule__NewMessage__ParameterAssignment_3_1_1_1() throws RecognitionException {
+    // $ANTLR start "rule__NewMessage__ParameterAssignment_4_1_1_1"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7650:1: rule__NewMessage__ParameterAssignment_4_1_1_1 : ( ruleParameter ) ;
+    public final void rule__NewMessage__ParameterAssignment_4_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7481:1: ( ( ruleParameter ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7482:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7654:1: ( ( ruleParameter ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7655:1: ( ruleParameter )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7482:1: ( ruleParameter )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7483:1: ruleParameter
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7655:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7656:1: ruleParameter
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewMessageAccess().getParameterParameterParserRuleCall_3_1_1_1_0()); 
+               before(grammarAccess.getNewMessageAccess().getParameterParameterParserRuleCall_4_1_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleParameter_in_rule__NewMessage__ParameterAssignment_3_1_1_115027);
+            pushFollow(FOLLOW_ruleParameter_in_rule__NewMessage__ParameterAssignment_4_1_1_115374);
             ruleParameter();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewMessageAccess().getParameterParameterParserRuleCall_3_1_1_1_0()); 
+               after(grammarAccess.getNewMessageAccess().getParameterParameterParserRuleCall_4_1_1_1_0()); 
             }
 
             }
@@ -21436,26 +21916,26 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__NewMessage__ParameterAssignment_3_1_1_1"
+    // $ANTLR end "rule__NewMessage__ParameterAssignment_4_1_1_1"
 
 
     // $ANTLR start "rule__ReturnMessage__NameAssignment_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7492:1: rule__ReturnMessage__NameAssignment_1 : ( ruleReference ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7665:1: rule__ReturnMessage__NameAssignment_1 : ( ruleReference ) ;
     public final void rule__ReturnMessage__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7496:1: ( ( ruleReference ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7497:1: ( ruleReference )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7669:1: ( ( ruleReference ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7670:1: ( ruleReference )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7497:1: ( ruleReference )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7498:1: ruleReference
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7670:1: ( ruleReference )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7671:1: ruleReference
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReturnMessageAccess().getNameReferenceParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleReference_in_rule__ReturnMessage__NameAssignment_115058);
+            pushFollow(FOLLOW_ruleReference_in_rule__ReturnMessage__NameAssignment_115405);
             ruleReference();
 
             state._fsp--;
@@ -21485,22 +21965,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__ParameterAssignment_2_1_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7507:1: rule__ReturnMessage__ParameterAssignment_2_1_0 : ( ruleParameter ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7680:1: rule__ReturnMessage__ParameterAssignment_2_1_0 : ( ruleParameter ) ;
     public final void rule__ReturnMessage__ParameterAssignment_2_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7511:1: ( ( ruleParameter ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7512:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7684:1: ( ( ruleParameter ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7685:1: ( ruleParameter )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7512:1: ( ruleParameter )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7513:1: ruleParameter
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7685:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7686:1: ruleParameter
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReturnMessageAccess().getParameterParameterParserRuleCall_2_1_0_0()); 
             }
-            pushFollow(FOLLOW_ruleParameter_in_rule__ReturnMessage__ParameterAssignment_2_1_015089);
+            pushFollow(FOLLOW_ruleParameter_in_rule__ReturnMessage__ParameterAssignment_2_1_015436);
             ruleParameter();
 
             state._fsp--;
@@ -21530,22 +22010,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ReturnMessage__ParameterAssignment_2_1_1_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7522:1: rule__ReturnMessage__ParameterAssignment_2_1_1_1 : ( ruleParameter ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7695:1: rule__ReturnMessage__ParameterAssignment_2_1_1_1 : ( ruleParameter ) ;
     public final void rule__ReturnMessage__ParameterAssignment_2_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7526:1: ( ( ruleParameter ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7527:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7699:1: ( ( ruleParameter ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7700:1: ( ruleParameter )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7527:1: ( ruleParameter )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7528:1: ruleParameter
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7700:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7701:1: ruleParameter
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReturnMessageAccess().getParameterParameterParserRuleCall_2_1_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleParameter_in_rule__ReturnMessage__ParameterAssignment_2_1_1_115120);
+            pushFollow(FOLLOW_ruleParameter_in_rule__ReturnMessage__ParameterAssignment_2_1_1_115467);
             ruleParameter();
 
             state._fsp--;
@@ -21574,37 +22054,37 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
     // $ANTLR end "rule__ReturnMessage__ParameterAssignment_2_1_1_1"
 
 
-    // $ANTLR start "rule__DeleteMessage__SourceParticipantAssignment_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7537:1: rule__DeleteMessage__SourceParticipantAssignment_0 : ( ( RULE_ID ) ) ;
-    public final void rule__DeleteMessage__SourceParticipantAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__DeleteMessage__SourceAssignment_0"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7710:1: rule__DeleteMessage__SourceAssignment_0 : ( ( RULE_ID ) ) ;
+    public final void rule__DeleteMessage__SourceAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7541:1: ( ( ( RULE_ID ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7542:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7714:1: ( ( ( RULE_ID ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7715:1: ( ( RULE_ID ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7542:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7543:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7715:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7716:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDeleteMessageAccess().getSourceParticipantParticipantCrossReference_0_0()); 
+               before(grammarAccess.getDeleteMessageAccess().getSourceParticipantCrossReference_0_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7544:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7545:1: RULE_ID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7717:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7718:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDeleteMessageAccess().getSourceParticipantParticipantIDTerminalRuleCall_0_0_1()); 
+               before(grammarAccess.getDeleteMessageAccess().getSourceParticipantIDTerminalRuleCall_0_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DeleteMessage__SourceParticipantAssignment_015155); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DeleteMessage__SourceAssignment_015502); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDeleteMessageAccess().getSourceParticipantParticipantIDTerminalRuleCall_0_0_1()); 
+               after(grammarAccess.getDeleteMessageAccess().getSourceParticipantIDTerminalRuleCall_0_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDeleteMessageAccess().getSourceParticipantParticipantCrossReference_0_0()); 
+               after(grammarAccess.getDeleteMessageAccess().getSourceParticipantCrossReference_0_0()); 
             }
 
             }
@@ -21624,40 +22104,40 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__DeleteMessage__SourceParticipantAssignment_0"
+    // $ANTLR end "rule__DeleteMessage__SourceAssignment_0"
 
 
-    // $ANTLR start "rule__DeleteMessage__TargetParticipantAssignment_2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7556:1: rule__DeleteMessage__TargetParticipantAssignment_2 : ( ( RULE_ID ) ) ;
-    public final void rule__DeleteMessage__TargetParticipantAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__DeleteMessage__TargetAssignment_2"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7729:1: rule__DeleteMessage__TargetAssignment_2 : ( ( RULE_ID ) ) ;
+    public final void rule__DeleteMessage__TargetAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7560:1: ( ( ( RULE_ID ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7561:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7733:1: ( ( ( RULE_ID ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7734:1: ( ( RULE_ID ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7561:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7562:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7734:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7735:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDeleteMessageAccess().getTargetParticipantParticipantCrossReference_2_0()); 
+               before(grammarAccess.getDeleteMessageAccess().getTargetParticipantCrossReference_2_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7563:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7564:1: RULE_ID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7736:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7737:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDeleteMessageAccess().getTargetParticipantParticipantIDTerminalRuleCall_2_0_1()); 
+               before(grammarAccess.getDeleteMessageAccess().getTargetParticipantIDTerminalRuleCall_2_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DeleteMessage__TargetParticipantAssignment_215194); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DeleteMessage__TargetAssignment_215541); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDeleteMessageAccess().getTargetParticipantParticipantIDTerminalRuleCall_2_0_1()); 
+               after(grammarAccess.getDeleteMessageAccess().getTargetParticipantIDTerminalRuleCall_2_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDeleteMessageAccess().getTargetParticipantParticipantCrossReference_2_0()); 
+               after(grammarAccess.getDeleteMessageAccess().getTargetParticipantCrossReference_2_0()); 
             }
 
             }
@@ -21677,32 +22157,73 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__DeleteMessage__TargetParticipantAssignment_2"
+    // $ANTLR end "rule__DeleteMessage__TargetAssignment_2"
 
 
-    // $ANTLR start "rule__DeleteMessage__ParameterAssignment_3_1_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7575:1: rule__DeleteMessage__ParameterAssignment_3_1_0 : ( ruleParameter ) ;
-    public final void rule__DeleteMessage__ParameterAssignment_3_1_0() throws RecognitionException {
+    // $ANTLR start "rule__DeleteMessage__NameAssignment_3_1"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7748:1: rule__DeleteMessage__NameAssignment_3_1 : ( RULE_ID ) ;
+    public final void rule__DeleteMessage__NameAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7579:1: ( ( ruleParameter ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7580:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7752:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7753:1: ( RULE_ID )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7580:1: ( ruleParameter )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7581:1: ruleParameter
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7753:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7754:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDeleteMessageAccess().getParameterParameterParserRuleCall_3_1_0_0()); 
+               before(grammarAccess.getDeleteMessageAccess().getNameIDTerminalRuleCall_3_1_0()); 
             }
-            pushFollow(FOLLOW_ruleParameter_in_rule__DeleteMessage__ParameterAssignment_3_1_015229);
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DeleteMessage__NameAssignment_3_115576); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDeleteMessageAccess().getNameIDTerminalRuleCall_3_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DeleteMessage__NameAssignment_3_1"
+
+
+    // $ANTLR start "rule__DeleteMessage__ParameterAssignment_3_2_1_0"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7763:1: rule__DeleteMessage__ParameterAssignment_3_2_1_0 : ( ruleParameter ) ;
+    public final void rule__DeleteMessage__ParameterAssignment_3_2_1_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7767:1: ( ( ruleParameter ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7768:1: ( ruleParameter )
+            {
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7768:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7769:1: ruleParameter
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDeleteMessageAccess().getParameterParameterParserRuleCall_3_2_1_0_0()); 
+            }
+            pushFollow(FOLLOW_ruleParameter_in_rule__DeleteMessage__ParameterAssignment_3_2_1_015607);
             ruleParameter();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDeleteMessageAccess().getParameterParameterParserRuleCall_3_1_0_0()); 
+               after(grammarAccess.getDeleteMessageAccess().getParameterParameterParserRuleCall_3_2_1_0_0()); 
             }
 
             }
@@ -21722,32 +22243,32 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__DeleteMessage__ParameterAssignment_3_1_0"
+    // $ANTLR end "rule__DeleteMessage__ParameterAssignment_3_2_1_0"
 
 
-    // $ANTLR start "rule__DeleteMessage__ParameterAssignment_3_1_1_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7590:1: rule__DeleteMessage__ParameterAssignment_3_1_1_1 : ( ruleParameter ) ;
-    public final void rule__DeleteMessage__ParameterAssignment_3_1_1_1() throws RecognitionException {
+    // $ANTLR start "rule__DeleteMessage__ParameterAssignment_3_2_1_1_1"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7778:1: rule__DeleteMessage__ParameterAssignment_3_2_1_1_1 : ( ruleParameter ) ;
+    public final void rule__DeleteMessage__ParameterAssignment_3_2_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7594:1: ( ( ruleParameter ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7595:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7782:1: ( ( ruleParameter ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7783:1: ( ruleParameter )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7595:1: ( ruleParameter )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7596:1: ruleParameter
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7783:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7784:1: ruleParameter
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDeleteMessageAccess().getParameterParameterParserRuleCall_3_1_1_1_0()); 
+               before(grammarAccess.getDeleteMessageAccess().getParameterParameterParserRuleCall_3_2_1_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleParameter_in_rule__DeleteMessage__ParameterAssignment_3_1_1_115260);
+            pushFollow(FOLLOW_ruleParameter_in_rule__DeleteMessage__ParameterAssignment_3_2_1_1_115638);
             ruleParameter();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDeleteMessageAccess().getParameterParameterParserRuleCall_3_1_1_1_0()); 
+               after(grammarAccess.getDeleteMessageAccess().getParameterParameterParserRuleCall_3_2_1_1_1_0()); 
             }
 
             }
@@ -21767,40 +22288,40 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__DeleteMessage__ParameterAssignment_3_1_1_1"
+    // $ANTLR end "rule__DeleteMessage__ParameterAssignment_3_2_1_1_1"
 
 
-    // $ANTLR start "rule__SelfMessage__SourceParticipantAssignment_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7605:1: rule__SelfMessage__SourceParticipantAssignment_0 : ( ( RULE_ID ) ) ;
-    public final void rule__SelfMessage__SourceParticipantAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__SelfMessage__SourceAssignment_0"
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7793:1: rule__SelfMessage__SourceAssignment_0 : ( ( RULE_ID ) ) ;
+    public final void rule__SelfMessage__SourceAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7609:1: ( ( ( RULE_ID ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7610:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7797:1: ( ( ( RULE_ID ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7798:1: ( ( RULE_ID ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7610:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7611:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7798:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7799:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getSelfMessageAccess().getSourceParticipantParticipantCrossReference_0_0()); 
+               before(grammarAccess.getSelfMessageAccess().getSourceParticipantCrossReference_0_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7612:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7613:1: RULE_ID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7800:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7801:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getSelfMessageAccess().getSourceParticipantParticipantIDTerminalRuleCall_0_0_1()); 
+               before(grammarAccess.getSelfMessageAccess().getSourceParticipantIDTerminalRuleCall_0_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SelfMessage__SourceParticipantAssignment_015295); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SelfMessage__SourceAssignment_015673); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getSelfMessageAccess().getSourceParticipantParticipantIDTerminalRuleCall_0_0_1()); 
+               after(grammarAccess.getSelfMessageAccess().getSourceParticipantIDTerminalRuleCall_0_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getSelfMessageAccess().getSourceParticipantParticipantCrossReference_0_0()); 
+               after(grammarAccess.getSelfMessageAccess().getSourceParticipantCrossReference_0_0()); 
             }
 
             }
@@ -21820,26 +22341,26 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SelfMessage__SourceParticipantAssignment_0"
+    // $ANTLR end "rule__SelfMessage__SourceAssignment_0"
 
 
     // $ANTLR start "rule__SelfMessage__NameAssignment_3"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7624:1: rule__SelfMessage__NameAssignment_3 : ( RULE_ID ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7812:1: rule__SelfMessage__NameAssignment_3 : ( RULE_ID ) ;
     public final void rule__SelfMessage__NameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7628:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7629:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7816:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7817:1: ( RULE_ID )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7629:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7630:1: RULE_ID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7817:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7818:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getNameIDTerminalRuleCall_3_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SelfMessage__NameAssignment_315330); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SelfMessage__NameAssignment_315708); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSelfMessageAccess().getNameIDTerminalRuleCall_3_0()); 
             }
@@ -21865,22 +22386,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__ParameterAssignment_4_1_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7639:1: rule__SelfMessage__ParameterAssignment_4_1_0 : ( ruleParameter ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7827:1: rule__SelfMessage__ParameterAssignment_4_1_0 : ( ruleParameter ) ;
     public final void rule__SelfMessage__ParameterAssignment_4_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7643:1: ( ( ruleParameter ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7644:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7831:1: ( ( ruleParameter ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7832:1: ( ruleParameter )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7644:1: ( ruleParameter )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7645:1: ruleParameter
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7832:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7833:1: ruleParameter
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getParameterParameterParserRuleCall_4_1_0_0()); 
             }
-            pushFollow(FOLLOW_ruleParameter_in_rule__SelfMessage__ParameterAssignment_4_1_015361);
+            pushFollow(FOLLOW_ruleParameter_in_rule__SelfMessage__ParameterAssignment_4_1_015739);
             ruleParameter();
 
             state._fsp--;
@@ -21910,22 +22431,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__ParameterAssignment_4_1_1_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7654:1: rule__SelfMessage__ParameterAssignment_4_1_1_1 : ( ruleParameter ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7842:1: rule__SelfMessage__ParameterAssignment_4_1_1_1 : ( ruleParameter ) ;
     public final void rule__SelfMessage__ParameterAssignment_4_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7658:1: ( ( ruleParameter ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7659:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7846:1: ( ( ruleParameter ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7847:1: ( ruleParameter )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7659:1: ( ruleParameter )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7660:1: ruleParameter
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7847:1: ( ruleParameter )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7848:1: ruleParameter
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getParameterParameterParserRuleCall_4_1_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleParameter_in_rule__SelfMessage__ParameterAssignment_4_1_1_115392);
+            pushFollow(FOLLOW_ruleParameter_in_rule__SelfMessage__ParameterAssignment_4_1_1_115770);
             ruleParameter();
 
             state._fsp--;
@@ -21955,22 +22476,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__ReturnAssignment_5"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7669:1: rule__SelfMessage__ReturnAssignment_5 : ( ruleReturnMessage ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7857:1: rule__SelfMessage__ReturnAssignment_5 : ( ruleReturnMessage ) ;
     public final void rule__SelfMessage__ReturnAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7673:1: ( ( ruleReturnMessage ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7674:1: ( ruleReturnMessage )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7861:1: ( ( ruleReturnMessage ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7862:1: ( ruleReturnMessage )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7674:1: ( ruleReturnMessage )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7675:1: ruleReturnMessage
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7862:1: ( ruleReturnMessage )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7863:1: ruleReturnMessage
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getReturnReturnMessageParserRuleCall_5_0()); 
             }
-            pushFollow(FOLLOW_ruleReturnMessage_in_rule__SelfMessage__ReturnAssignment_515423);
+            pushFollow(FOLLOW_ruleReturnMessage_in_rule__SelfMessage__ReturnAssignment_515801);
             ruleReturnMessage();
 
             state._fsp--;
@@ -22000,22 +22521,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__SelfMessage__TransitionAssignment_6_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7684:1: rule__SelfMessage__TransitionAssignment_6_1 : ( ruleTransition ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7872:1: rule__SelfMessage__TransitionAssignment_6_1 : ( ruleTransition ) ;
     public final void rule__SelfMessage__TransitionAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7688:1: ( ( ruleTransition ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7689:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7876:1: ( ( ruleTransition ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7877:1: ( ruleTransition )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7689:1: ( ruleTransition )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7690:1: ruleTransition
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7877:1: ( ruleTransition )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7878:1: ruleTransition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfMessageAccess().getTransitionTransitionParserRuleCall_6_1_0()); 
             }
-            pushFollow(FOLLOW_ruleTransition_in_rule__SelfMessage__TransitionAssignment_6_115454);
+            pushFollow(FOLLOW_ruleTransition_in_rule__SelfMessage__TransitionAssignment_6_115832);
             ruleTransition();
 
             state._fsp--;
@@ -22045,22 +22566,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Parameter__NameAssignment_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7699:1: rule__Parameter__NameAssignment_0 : ( RULE_ID ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7887:1: rule__Parameter__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__Parameter__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7703:1: ( ( RULE_ID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7704:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7891:1: ( ( RULE_ID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7892:1: ( RULE_ID )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7704:1: ( RULE_ID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7705:1: RULE_ID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7892:1: ( RULE_ID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7893:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParameterAccess().getNameIDTerminalRuleCall_0_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Parameter__NameAssignment_015485); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Parameter__NameAssignment_015863); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getParameterAccess().getNameIDTerminalRuleCall_0_0()); 
             }
@@ -22086,22 +22607,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Parameter__TypeAssignment_1_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7714:1: rule__Parameter__TypeAssignment_1_1 : ( ruleReference ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7902:1: rule__Parameter__TypeAssignment_1_1 : ( ruleReference ) ;
     public final void rule__Parameter__TypeAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7718:1: ( ( ruleReference ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7719:1: ( ruleReference )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7906:1: ( ( ruleReference ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7907:1: ( ruleReference )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7719:1: ( ruleReference )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7720:1: ruleReference
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7907:1: ( ruleReference )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7908:1: ruleReference
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParameterAccess().getTypeReferenceParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleReference_in_rule__Parameter__TypeAssignment_1_115516);
+            pushFollow(FOLLOW_ruleReference_in_rule__Parameter__TypeAssignment_1_115894);
             ruleReference();
 
             state._fsp--;
@@ -22131,28 +22652,28 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Reference__TypeAssignment_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7729:1: rule__Reference__TypeAssignment_0 : ( ( ruleExtendedID ) ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7917:1: rule__Reference__TypeAssignment_0 : ( ( ruleExtendedID ) ) ;
     public final void rule__Reference__TypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7733:1: ( ( ( ruleExtendedID ) ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7734:1: ( ( ruleExtendedID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7921:1: ( ( ( ruleExtendedID ) ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7922:1: ( ( ruleExtendedID ) )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7734:1: ( ( ruleExtendedID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7735:1: ( ruleExtendedID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7922:1: ( ( ruleExtendedID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7923:1: ( ruleExtendedID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReferenceAccess().getTypeEntityCrossReference_0_0()); 
             }
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7736:1: ( ruleExtendedID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7737:1: ruleExtendedID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7924:1: ( ruleExtendedID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7925:1: ruleExtendedID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReferenceAccess().getTypeEntityExtendedIDParserRuleCall_0_0_1()); 
             }
-            pushFollow(FOLLOW_ruleExtendedID_in_rule__Reference__TypeAssignment_015551);
+            pushFollow(FOLLOW_ruleExtendedID_in_rule__Reference__TypeAssignment_015929);
             ruleExtendedID();
 
             state._fsp--;
@@ -22188,22 +22709,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Reference__ArrayAssignment_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7748:1: rule__Reference__ArrayAssignment_1 : ( ruleArray ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7936:1: rule__Reference__ArrayAssignment_1 : ( ruleArray ) ;
     public final void rule__Reference__ArrayAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7752:1: ( ( ruleArray ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7753:1: ( ruleArray )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7940:1: ( ( ruleArray ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7941:1: ( ruleArray )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7753:1: ( ruleArray )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7754:1: ruleArray
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7941:1: ( ruleArray )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7942:1: ruleArray
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReferenceAccess().getArrayArrayParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleArray_in_rule__Reference__ArrayAssignment_115586);
+            pushFollow(FOLLOW_ruleArray_in_rule__Reference__ArrayAssignment_115964);
             ruleArray();
 
             state._fsp--;
@@ -22233,22 +22754,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Array__SizeAssignment_2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7763:1: rule__Array__SizeAssignment_2 : ( RULE_NATURAL ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7951:1: rule__Array__SizeAssignment_2 : ( RULE_NATURAL ) ;
     public final void rule__Array__SizeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7767:1: ( ( RULE_NATURAL ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7768:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7955:1: ( ( RULE_NATURAL ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7956:1: ( RULE_NATURAL )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7768:1: ( RULE_NATURAL )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7769:1: RULE_NATURAL
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7956:1: ( RULE_NATURAL )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7957:1: RULE_NATURAL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getSizeNATURALTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Array__SizeAssignment_215617); if (state.failed) return ;
+            match(input,RULE_NATURAL,FOLLOW_RULE_NATURAL_in_rule__Array__SizeAssignment_215995); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArrayAccess().getSizeNATURALTerminalRuleCall_2_0()); 
             }
@@ -22274,22 +22795,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__NameAssignment_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7778:1: rule__Annotation__NameAssignment_1 : ( ruleExtendedID ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7966:1: rule__Annotation__NameAssignment_1 : ( ruleExtendedID ) ;
     public final void rule__Annotation__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7782:1: ( ( ruleExtendedID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7783:1: ( ruleExtendedID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7970:1: ( ( ruleExtendedID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7971:1: ( ruleExtendedID )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7783:1: ( ruleExtendedID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7784:1: ruleExtendedID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7971:1: ( ruleExtendedID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7972:1: ruleExtendedID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnnotationAccess().getNameExtendedIDParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExtendedID_in_rule__Annotation__NameAssignment_115648);
+            pushFollow(FOLLOW_ruleExtendedID_in_rule__Annotation__NameAssignment_116026);
             ruleExtendedID();
 
             state._fsp--;
@@ -22319,22 +22840,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__PropertyAssignment_2_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7793:1: rule__Annotation__PropertyAssignment_2_1 : ( ruleProperty ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7981:1: rule__Annotation__PropertyAssignment_2_1 : ( ruleProperty ) ;
     public final void rule__Annotation__PropertyAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7797:1: ( ( ruleProperty ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7798:1: ( ruleProperty )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7985:1: ( ( ruleProperty ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7986:1: ( ruleProperty )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7798:1: ( ruleProperty )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7799:1: ruleProperty
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7986:1: ( ruleProperty )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7987:1: ruleProperty
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnnotationAccess().getPropertyPropertyParserRuleCall_2_1_0()); 
             }
-            pushFollow(FOLLOW_ruleProperty_in_rule__Annotation__PropertyAssignment_2_115679);
+            pushFollow(FOLLOW_ruleProperty_in_rule__Annotation__PropertyAssignment_2_116057);
             ruleProperty();
 
             state._fsp--;
@@ -22364,22 +22885,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Annotation__PropertyAssignment_2_2_1"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7808:1: rule__Annotation__PropertyAssignment_2_2_1 : ( ruleProperty ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7996:1: rule__Annotation__PropertyAssignment_2_2_1 : ( ruleProperty ) ;
     public final void rule__Annotation__PropertyAssignment_2_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7812:1: ( ( ruleProperty ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7813:1: ( ruleProperty )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8000:1: ( ( ruleProperty ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8001:1: ( ruleProperty )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7813:1: ( ruleProperty )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7814:1: ruleProperty
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8001:1: ( ruleProperty )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8002:1: ruleProperty
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnnotationAccess().getPropertyPropertyParserRuleCall_2_2_1_0()); 
             }
-            pushFollow(FOLLOW_ruleProperty_in_rule__Annotation__PropertyAssignment_2_2_115710);
+            pushFollow(FOLLOW_ruleProperty_in_rule__Annotation__PropertyAssignment_2_2_116088);
             ruleProperty();
 
             state._fsp--;
@@ -22409,22 +22930,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__AssignProperty__NameAssignment_0"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7823:1: rule__AssignProperty__NameAssignment_0 : ( ruleExtendedID ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8011:1: rule__AssignProperty__NameAssignment_0 : ( ruleExtendedID ) ;
     public final void rule__AssignProperty__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7827:1: ( ( ruleExtendedID ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7828:1: ( ruleExtendedID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8015:1: ( ( ruleExtendedID ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8016:1: ( ruleExtendedID )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7828:1: ( ruleExtendedID )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7829:1: ruleExtendedID
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8016:1: ( ruleExtendedID )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8017:1: ruleExtendedID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignPropertyAccess().getNameExtendedIDParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleExtendedID_in_rule__AssignProperty__NameAssignment_015741);
+            pushFollow(FOLLOW_ruleExtendedID_in_rule__AssignProperty__NameAssignment_016119);
             ruleExtendedID();
 
             state._fsp--;
@@ -22454,22 +22975,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__AssignProperty__ValueAssignment_2"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7838:1: rule__AssignProperty__ValueAssignment_2 : ( ruleValue ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8026:1: rule__AssignProperty__ValueAssignment_2 : ( ruleValue ) ;
     public final void rule__AssignProperty__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7842:1: ( ( ruleValue ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7843:1: ( ruleValue )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8030:1: ( ( ruleValue ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8031:1: ( ruleValue )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7843:1: ( ruleValue )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7844:1: ruleValue
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8031:1: ( ruleValue )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8032:1: ruleValue
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignPropertyAccess().getValueValueParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleValue_in_rule__AssignProperty__ValueAssignment_215772);
+            pushFollow(FOLLOW_ruleValue_in_rule__AssignProperty__ValueAssignment_216150);
             ruleValue();
 
             state._fsp--;
@@ -22499,22 +23020,22 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__ValueProperty__ValueAssignment"
-    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7853:1: rule__ValueProperty__ValueAssignment : ( ruleValue ) ;
+    // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8041:1: rule__ValueProperty__ValueAssignment : ( ruleValue ) ;
     public final void rule__ValueProperty__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7857:1: ( ( ruleValue ) )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7858:1: ( ruleValue )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8045:1: ( ( ruleValue ) )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8046:1: ( ruleValue )
             {
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7858:1: ( ruleValue )
-            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:7859:1: ruleValue
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8046:1: ( ruleValue )
+            // ../cz.cvut.earlgrey.sequencemodel.ui/src-gen/cz/cvut/earlgrey/sequencemodel/ui/contentassist/antlr/internal/InternalSequencemodel.g:8047:1: ruleValue
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getValuePropertyAccess().getValueValueParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleValue_in_rule__ValueProperty__ValueAssignment15803);
+            pushFollow(FOLLOW_ruleValue_in_rule__ValueProperty__ValueAssignment16181);
             ruleValue();
 
             state._fsp--;
@@ -22925,347 +23446,363 @@ public class InternalSequencemodelParser extends AbstractInternalContentAssistPa
     public static final BitSet FOLLOW_rule__FoundMessage__ParameterAssignment_4_1_1_1_in_rule__FoundMessage__Group_4_1_1__1__Impl7157 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__CallMessage__Group__0__Impl_in_rule__CallMessage__Group__07191 = new BitSet(new long[]{0x0000000200000000L});
     public static final BitSet FOLLOW_rule__CallMessage__Group__1_in_rule__CallMessage__Group__07194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__SourceParticipantAssignment_0_in_rule__CallMessage__Group__0__Impl7221 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__SourceAssignment_0_in_rule__CallMessage__Group__0__Impl7221 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__CallMessage__Group__1__Impl_in_rule__CallMessage__Group__17251 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_rule__CallMessage__Group__2_in_rule__CallMessage__Group__17254 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_33_in_rule__CallMessage__Group__1__Impl7282 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group__2__Impl_in_rule__CallMessage__Group__27313 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group__2__Impl_in_rule__CallMessage__Group__27313 = new BitSet(new long[]{0x0000000400000000L});
     public static final BitSet FOLLOW_rule__CallMessage__Group__3_in_rule__CallMessage__Group__27316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_2__0_in_rule__CallMessage__Group__2__Impl7343 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group__3__Impl_in_rule__CallMessage__Group__37374 = new BitSet(new long[]{0x0000004800000000L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group__4_in_rule__CallMessage__Group__37377 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__NameAssignment_3_in_rule__CallMessage__Group__3__Impl7404 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group__4__Impl_in_rule__CallMessage__Group__47434 = new BitSet(new long[]{0x0000004800000000L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group__5_in_rule__CallMessage__Group__47437 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_4__0_in_rule__CallMessage__Group__4__Impl7464 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group__5__Impl_in_rule__CallMessage__Group__57495 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__ReturnAssignment_5_in_rule__CallMessage__Group__5__Impl7522 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_2__0__Impl_in_rule__CallMessage__Group_2__07565 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_2__1_in_rule__CallMessage__Group_2__07568 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__TargetParticipantAssignment_2_0_in_rule__CallMessage__Group_2__0__Impl7595 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_2__1__Impl_in_rule__CallMessage__Group_2__17625 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__CallMessage__Group_2__1__Impl7653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_4__0__Impl_in_rule__CallMessage__Group_4__07688 = new BitSet(new long[]{0x0000001000000010L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_4__1_in_rule__CallMessage__Group_4__07691 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__CallMessage__Group_4__0__Impl7720 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_4__1__Impl_in_rule__CallMessage__Group_4__17752 = new BitSet(new long[]{0x0000001000000010L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_4__2_in_rule__CallMessage__Group_4__17755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_4_1__0_in_rule__CallMessage__Group_4__1__Impl7782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_4__2__Impl_in_rule__CallMessage__Group_4__27813 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__CallMessage__Group_4__2__Impl7841 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_4_1__0__Impl_in_rule__CallMessage__Group_4_1__07878 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_4_1__1_in_rule__CallMessage__Group_4_1__07881 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__ParameterAssignment_4_1_0_in_rule__CallMessage__Group_4_1__0__Impl7908 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_4_1__1__Impl_in_rule__CallMessage__Group_4_1__17938 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_4_1_1__0_in_rule__CallMessage__Group_4_1__1__Impl7965 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_4_1_1__0__Impl_in_rule__CallMessage__Group_4_1_1__08000 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_4_1_1__1_in_rule__CallMessage__Group_4_1_1__08003 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__CallMessage__Group_4_1_1__0__Impl8031 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__Group_4_1_1__1__Impl_in_rule__CallMessage__Group_4_1_1__18062 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallMessage__ParameterAssignment_4_1_1_1_in_rule__CallMessage__Group_4_1_1__1__Impl8089 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group__0__Impl_in_rule__NewMessage__Group__08123 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group__1_in_rule__NewMessage__Group__08126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewMessage__SourceParticipantAssignment_0_in_rule__NewMessage__Group__0__Impl8153 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group__1__Impl_in_rule__NewMessage__Group__18183 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group__2_in_rule__NewMessage__Group__18186 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__NewMessage__Group__1__Impl8214 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group__2__Impl_in_rule__NewMessage__Group__28245 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group__3_in_rule__NewMessage__Group__28248 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewMessage__TargetParticipantAssignment_2_in_rule__NewMessage__Group__2__Impl8275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group__3__Impl_in_rule__NewMessage__Group__38305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group_3__0_in_rule__NewMessage__Group__3__Impl8332 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group_3__0__Impl_in_rule__NewMessage__Group_3__08371 = new BitSet(new long[]{0x0000001000000010L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group_3__1_in_rule__NewMessage__Group_3__08374 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__NewMessage__Group_3__0__Impl8403 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group_3__1__Impl_in_rule__NewMessage__Group_3__18435 = new BitSet(new long[]{0x0000001000000010L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group_3__2_in_rule__NewMessage__Group_3__18438 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group_3_1__0_in_rule__NewMessage__Group_3__1__Impl8465 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group_3__2__Impl_in_rule__NewMessage__Group_3__28496 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__NewMessage__Group_3__2__Impl8524 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group_3_1__0__Impl_in_rule__NewMessage__Group_3_1__08561 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group_3_1__1_in_rule__NewMessage__Group_3_1__08564 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewMessage__ParameterAssignment_3_1_0_in_rule__NewMessage__Group_3_1__0__Impl8591 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group_3_1__1__Impl_in_rule__NewMessage__Group_3_1__18621 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group_3_1_1__0_in_rule__NewMessage__Group_3_1__1__Impl8648 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group_3_1_1__0__Impl_in_rule__NewMessage__Group_3_1_1__08683 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group_3_1_1__1_in_rule__NewMessage__Group_3_1_1__08686 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__NewMessage__Group_3_1_1__0__Impl8714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewMessage__Group_3_1_1__1__Impl_in_rule__NewMessage__Group_3_1_1__18745 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewMessage__ParameterAssignment_3_1_1_1_in_rule__NewMessage__Group_3_1_1__1__Impl8772 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group__0__Impl_in_rule__ReturnMessage__Group__08806 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group__1_in_rule__ReturnMessage__Group__08809 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__ReturnMessage__Group__0__Impl8837 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group__1__Impl_in_rule__ReturnMessage__Group__18868 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group__2_in_rule__ReturnMessage__Group__18871 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__NameAssignment_1_in_rule__ReturnMessage__Group__1__Impl8898 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group__2__Impl_in_rule__ReturnMessage__Group__28928 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2__0_in_rule__ReturnMessage__Group__2__Impl8955 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2__0__Impl_in_rule__ReturnMessage__Group_2__08992 = new BitSet(new long[]{0x0000001000000010L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2__1_in_rule__ReturnMessage__Group_2__08995 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__ReturnMessage__Group_2__0__Impl9024 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2__1__Impl_in_rule__ReturnMessage__Group_2__19056 = new BitSet(new long[]{0x0000001000000010L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2__2_in_rule__ReturnMessage__Group_2__19059 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2_1__0_in_rule__ReturnMessage__Group_2__1__Impl9086 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2__2__Impl_in_rule__ReturnMessage__Group_2__29117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__ReturnMessage__Group_2__2__Impl9145 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2_1__0__Impl_in_rule__ReturnMessage__Group_2_1__09182 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2_1__1_in_rule__ReturnMessage__Group_2_1__09185 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__ParameterAssignment_2_1_0_in_rule__ReturnMessage__Group_2_1__0__Impl9212 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2_1__1__Impl_in_rule__ReturnMessage__Group_2_1__19242 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2_1_1__0_in_rule__ReturnMessage__Group_2_1__1__Impl9269 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2_1_1__0__Impl_in_rule__ReturnMessage__Group_2_1_1__09304 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2_1_1__1_in_rule__ReturnMessage__Group_2_1_1__09307 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__ReturnMessage__Group_2_1_1__0__Impl9335 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2_1_1__1__Impl_in_rule__ReturnMessage__Group_2_1_1__19366 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReturnMessage__ParameterAssignment_2_1_1_1_in_rule__ReturnMessage__Group_2_1_1__1__Impl9393 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group__0__Impl_in_rule__DeleteMessage__Group__09427 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group__1_in_rule__DeleteMessage__Group__09430 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__SourceParticipantAssignment_0_in_rule__DeleteMessage__Group__0__Impl9457 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group__1__Impl_in_rule__DeleteMessage__Group__19487 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group__2_in_rule__DeleteMessage__Group__19490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__DeleteMessage__Group__1__Impl9518 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group__2__Impl_in_rule__DeleteMessage__Group__29549 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group__3_in_rule__DeleteMessage__Group__29552 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__TargetParticipantAssignment_2_in_rule__DeleteMessage__Group__2__Impl9579 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group__3__Impl_in_rule__DeleteMessage__Group__39609 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3__0_in_rule__DeleteMessage__Group__3__Impl9636 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3__0__Impl_in_rule__DeleteMessage__Group_3__09675 = new BitSet(new long[]{0x0000001000000010L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3__1_in_rule__DeleteMessage__Group_3__09678 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__DeleteMessage__Group_3__0__Impl9707 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3__1__Impl_in_rule__DeleteMessage__Group_3__19739 = new BitSet(new long[]{0x0000001000000010L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3__2_in_rule__DeleteMessage__Group_3__19742 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_1__0_in_rule__DeleteMessage__Group_3__1__Impl9769 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3__2__Impl_in_rule__DeleteMessage__Group_3__29800 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__DeleteMessage__Group_3__2__Impl9828 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_1__0__Impl_in_rule__DeleteMessage__Group_3_1__09865 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_1__1_in_rule__DeleteMessage__Group_3_1__09868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__ParameterAssignment_3_1_0_in_rule__DeleteMessage__Group_3_1__0__Impl9895 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_1__1__Impl_in_rule__DeleteMessage__Group_3_1__19925 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_1_1__0_in_rule__DeleteMessage__Group_3_1__1__Impl9952 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_1_1__0__Impl_in_rule__DeleteMessage__Group_3_1_1__09987 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_1_1__1_in_rule__DeleteMessage__Group_3_1_1__09990 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__DeleteMessage__Group_3_1_1__0__Impl10018 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_1_1__1__Impl_in_rule__DeleteMessage__Group_3_1_1__110049 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DeleteMessage__ParameterAssignment_3_1_1_1_in_rule__DeleteMessage__Group_3_1_1__1__Impl10076 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group__0__Impl_in_rule__SelfMessage__Group__010110 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group__1_in_rule__SelfMessage__Group__010113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__SourceParticipantAssignment_0_in_rule__SelfMessage__Group__0__Impl10140 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group__1__Impl_in_rule__SelfMessage__Group__110170 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group__2_in_rule__SelfMessage__Group__110173 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__SelfMessage__Group__1__Impl10201 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group__2__Impl_in_rule__SelfMessage__Group__210232 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group__3_in_rule__SelfMessage__Group__210235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__SelfMessage__Group__2__Impl10263 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group__3__Impl_in_rule__SelfMessage__Group__310294 = new BitSet(new long[]{0x0000024800000000L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group__4_in_rule__SelfMessage__Group__310297 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__NameAssignment_3_in_rule__SelfMessage__Group__3__Impl10324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group__4__Impl_in_rule__SelfMessage__Group__410354 = new BitSet(new long[]{0x0000024800000000L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group__5_in_rule__SelfMessage__Group__410357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_4__0_in_rule__SelfMessage__Group__4__Impl10384 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group__5__Impl_in_rule__SelfMessage__Group__510415 = new BitSet(new long[]{0x0000024800000000L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group__6_in_rule__SelfMessage__Group__510418 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__ReturnAssignment_5_in_rule__SelfMessage__Group__5__Impl10445 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group__6__Impl_in_rule__SelfMessage__Group__610476 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_6__0_in_rule__SelfMessage__Group__6__Impl10503 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_4__0__Impl_in_rule__SelfMessage__Group_4__010548 = new BitSet(new long[]{0x0000001000000010L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_4__1_in_rule__SelfMessage__Group_4__010551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__SelfMessage__Group_4__0__Impl10580 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_4__1__Impl_in_rule__SelfMessage__Group_4__110612 = new BitSet(new long[]{0x0000001000000010L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_4__2_in_rule__SelfMessage__Group_4__110615 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_4_1__0_in_rule__SelfMessage__Group_4__1__Impl10642 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_4__2__Impl_in_rule__SelfMessage__Group_4__210673 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__SelfMessage__Group_4__2__Impl10701 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_4_1__0__Impl_in_rule__SelfMessage__Group_4_1__010738 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_4_1__1_in_rule__SelfMessage__Group_4_1__010741 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__ParameterAssignment_4_1_0_in_rule__SelfMessage__Group_4_1__0__Impl10768 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_4_1__1__Impl_in_rule__SelfMessage__Group_4_1__110798 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_4_1_1__0_in_rule__SelfMessage__Group_4_1__1__Impl10825 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_4_1_1__0__Impl_in_rule__SelfMessage__Group_4_1_1__010860 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_4_1_1__1_in_rule__SelfMessage__Group_4_1_1__010863 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__SelfMessage__Group_4_1_1__0__Impl10891 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_4_1_1__1__Impl_in_rule__SelfMessage__Group_4_1_1__110922 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__ParameterAssignment_4_1_1_1_in_rule__SelfMessage__Group_4_1_1__1__Impl10949 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_6__0__Impl_in_rule__SelfMessage__Group_6__010983 = new BitSet(new long[]{0x00000003E8900010L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_6__1_in_rule__SelfMessage__Group_6__010986 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__SelfMessage__Group_6__0__Impl11015 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_6__1__Impl_in_rule__SelfMessage__Group_6__111047 = new BitSet(new long[]{0x00000003E8900010L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_6__2_in_rule__SelfMessage__Group_6__111050 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SelfMessage__TransitionAssignment_6_1_in_rule__SelfMessage__Group_6__1__Impl11077 = new BitSet(new long[]{0x00000003E8800012L});
-    public static final BitSet FOLLOW_rule__SelfMessage__Group_6__2__Impl_in_rule__SelfMessage__Group_6__211108 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__SelfMessage__Group_6__2__Impl11136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Parameter__Group__0__Impl_in_rule__Parameter__Group__011173 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__Parameter__Group__1_in_rule__Parameter__Group__011176 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Parameter__NameAssignment_0_in_rule__Parameter__Group__0__Impl11203 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Parameter__Group__1__Impl_in_rule__Parameter__Group__111233 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Parameter__Group_1__0_in_rule__Parameter__Group__1__Impl11260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Parameter__Group_1__0__Impl_in_rule__Parameter__Group_1__011295 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Parameter__Group_1__1_in_rule__Parameter__Group_1__011298 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__Parameter__Group_1__0__Impl11326 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Parameter__Group_1__1__Impl_in_rule__Parameter__Group_1__111357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Parameter__TypeAssignment_1_1_in_rule__Parameter__Group_1__1__Impl11384 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Reference__Group__0__Impl_in_rule__Reference__Group__011418 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_rule__Reference__Group__1_in_rule__Reference__Group__011421 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Reference__TypeAssignment_0_in_rule__Reference__Group__0__Impl11448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Reference__Group__1__Impl_in_rule__Reference__Group__111478 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Reference__ArrayAssignment_1_in_rule__Reference__Group__1__Impl11505 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__011540 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_rule__Array__Group__1_in_rule__Array__Group__011543 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__111601 = new BitSet(new long[]{0x0000080000000800L});
-    public static final BitSet FOLLOW_rule__Array__Group__2_in_rule__Array__Group__111604 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__Array__Group__1__Impl11632 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__211663 = new BitSet(new long[]{0x0000080000000800L});
-    public static final BitSet FOLLOW_rule__Array__Group__3_in_rule__Array__Group__211666 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__SizeAssignment_2_in_rule__Array__Group__2__Impl11693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group__3__Impl_in_rule__Array__Group__311724 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_rule__Array__Group__3__Impl11752 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ForeachExpression__Group__0__Impl_in_rule__ForeachExpression__Group__011791 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_rule__ForeachExpression__Group__1_in_rule__ForeachExpression__Group__011794 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ForeachExpression__Group__0__Impl11821 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ForeachExpression__Group__1__Impl_in_rule__ForeachExpression__Group__111850 = new BitSet(new long[]{0x0000000000000810L});
-    public static final BitSet FOLLOW_rule__ForeachExpression__Group__2_in_rule__ForeachExpression__Group__111853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_rule__ForeachExpression__Group__1__Impl11881 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ForeachExpression__Group__2__Impl_in_rule__ForeachExpression__Group__211912 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ForeachExpression__Alternatives_2_in_rule__ForeachExpression__Group__2__Impl11939 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ForeachExpression__Group_2_0__0__Impl_in_rule__ForeachExpression__Group_2_0__011975 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_rule__ForeachExpression__Group_2_0__1_in_rule__ForeachExpression__Group_2_0__011978 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__ForeachExpression__Group_2_0__0__Impl12005 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ForeachExpression__Group_2_0__1__Impl_in_rule__ForeachExpression__Group_2_0__112034 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_rule__ForeachExpression__Group_2_0__2_in_rule__ForeachExpression__Group_2_0__112037 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_rule__ForeachExpression__Group_2_0__1__Impl12065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ForeachExpression__Group_2_0__2__Impl_in_rule__ForeachExpression__Group_2_0__212096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__ForeachExpression__Group_2_0__2__Impl12123 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group__0__Impl_in_rule__Annotation__Group__012158 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Annotation__Group__1_in_rule__Annotation__Group__012161 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_rule__Annotation__Group__0__Impl12189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group__1__Impl_in_rule__Annotation__Group__112220 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_rule__Annotation__Group__2_in_rule__Annotation__Group__112223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__NameAssignment_1_in_rule__Annotation__Group__1__Impl12250 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group__2__Impl_in_rule__Annotation__Group__212280 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__0_in_rule__Annotation__Group__2__Impl12307 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__0__Impl_in_rule__Annotation__Group_2__012344 = new BitSet(new long[]{0x0000000000020F10L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__1_in_rule__Annotation__Group_2__012347 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__Annotation__Group_2__0__Impl12375 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__1__Impl_in_rule__Annotation__Group_2__112406 = new BitSet(new long[]{0x0000001000200000L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__2_in_rule__Annotation__Group_2__112409 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__PropertyAssignment_2_1_in_rule__Annotation__Group_2__1__Impl12436 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__2__Impl_in_rule__Annotation__Group_2__212466 = new BitSet(new long[]{0x0000001000200000L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__3_in_rule__Annotation__Group_2__212469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2_2__0_in_rule__Annotation__Group_2__2__Impl12496 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__3__Impl_in_rule__Annotation__Group_2__312527 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__Annotation__Group_2__3__Impl12555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2_2__0__Impl_in_rule__Annotation__Group_2_2__012594 = new BitSet(new long[]{0x0000000000020F10L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2_2__1_in_rule__Annotation__Group_2_2__012597 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Annotation__Group_2_2__0__Impl12625 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2_2__1__Impl_in_rule__Annotation__Group_2_2__112656 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__PropertyAssignment_2_2_1_in_rule__Annotation__Group_2_2__1__Impl12683 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignProperty__Group__0__Impl_in_rule__AssignProperty__Group__012717 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_rule__AssignProperty__Group__1_in_rule__AssignProperty__Group__012720 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignProperty__NameAssignment_0_in_rule__AssignProperty__Group__0__Impl12747 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignProperty__Group__1__Impl_in_rule__AssignProperty__Group__112777 = new BitSet(new long[]{0x0000000000020F10L});
-    public static final BitSet FOLLOW_rule__AssignProperty__Group__2_in_rule__AssignProperty__Group__112780 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__AssignProperty__Group__1__Impl12808 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignProperty__Group__2__Impl_in_rule__AssignProperty__Group__212839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignProperty__ValueAssignment_2_in_rule__AssignProperty__Group__2__Impl12866 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExtendedID__Group__0__Impl_in_rule__ExtendedID__Group__012902 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_rule__ExtendedID__Group__1_in_rule__ExtendedID__Group__012905 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ExtendedID__Group__0__Impl12932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExtendedID__Group__1__Impl_in_rule__ExtendedID__Group__112961 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExtendedID__Group_1__0_in_rule__ExtendedID__Group__1__Impl12988 = new BitSet(new long[]{0x0000000400000002L});
-    public static final BitSet FOLLOW_rule__ExtendedID__Group_1__0__Impl_in_rule__ExtendedID__Group_1__013023 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ExtendedID__Group_1__1_in_rule__ExtendedID__Group_1__013026 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__ExtendedID__Group_1__0__Impl13054 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExtendedID__Group_1__1__Impl_in_rule__ExtendedID__Group_1__113085 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ExtendedID__Group_1__1__Impl13112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group__0__Impl_in_rule__Real__Group__013145 = new BitSet(new long[]{0x0000000000020F10L});
-    public static final BitSet FOLLOW_rule__Real__Group__1_in_rule__Real__Group__013148 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Real__Group__0__Impl13177 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group__1__Impl_in_rule__Real__Group__113210 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_rule__Real__Group__2_in_rule__Real__Group__113213 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Real__Group__1__Impl13240 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group__2__Impl_in_rule__Real__Group__213269 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_rule__Real__Group__3_in_rule__Real__Group__213272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Real__Group__2__Impl13300 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group__3__Impl_in_rule__Real__Group__313331 = new BitSet(new long[]{0x000000000000C000L});
-    public static final BitSet FOLLOW_rule__Real__Group__4_in_rule__Real__Group__313334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Real__Group__3__Impl13361 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group__4__Impl_in_rule__Real__Group__413390 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group_4__0_in_rule__Real__Group__4__Impl13417 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group_4__0__Impl_in_rule__Real__Group_4__013458 = new BitSet(new long[]{0x0000000000030000L});
-    public static final BitSet FOLLOW_rule__Real__Group_4__1_in_rule__Real__Group_4__013461 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Alternatives_4_0_in_rule__Real__Group_4__0__Impl13488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group_4__1__Impl_in_rule__Real__Group_4__113518 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_rule__Real__Group_4__2_in_rule__Real__Group_4__113521 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Alternatives_4_1_in_rule__Real__Group_4__1__Impl13548 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Real__Group_4__2__Impl_in_rule__Real__Group_4__213578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Real__Group_4__2__Impl13605 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Integer__Group__0__Impl_in_rule__Integer__Group__013640 = new BitSet(new long[]{0x0000000000020800L});
-    public static final BitSet FOLLOW_rule__Integer__Group__1_in_rule__Integer__Group__013643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Integer__Group__0__Impl13672 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Integer__Group__1__Impl_in_rule__Integer__Group__113705 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Integer__Group__1__Impl13732 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImport_in_rule__Model__ImportsAssignment_013770 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSequence_in_rule__Model__SequenceAssignment_113801 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Import__ImportURIAssignment_113832 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_rule__Sequence__AnnotationAssignment_013863 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Sequence__NameAssignment_213894 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParticipant_in_rule__Sequence__ParticipantAssignment_313925 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParticipant_in_rule__Sequence__ParticipantAssignment_4_113956 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_rule__Sequence__TransitionAssignment_513987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Participant__NameAssignment_014018 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExtendedID_in_rule__Participant__ClassifierAssignment_1_114053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__IfElseFragment__ExprAssignment_114088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_rule__IfElseFragment__TransitionAssignment_314119 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__IfElseFragment__ElseIfExprAssignment_4_114150 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_rule__IfElseFragment__ElseIftransitionAssignment_4_314181 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_rule__IfElseFragment__ElseTransitionAssignment_5_114212 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleForeachExpression_in_rule__ForeachFragment__ExprAssignment_114243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_rule__ForeachFragment__TransitionAssignment_314274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__LoopFragment__ExprAssignment_114305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_rule__LoopFragment__TransitionAssignment_314336 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__AssertFragment__ExprAssignment_114367 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_rule__AssertFragment__TransitionAssignment_314398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__BreakFragment__ExprAssignment_2_014429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_rule__BreakFragment__TransitionAssignment_2_214460 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__NextFragment__ExprAssignment_2_014491 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_rule__NextFragment__TransitionAssignment_2_214522 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__FoundMessage__TargetParticipantAssignment_114557 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__FoundMessage__NameAssignment_314592 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_rule__FoundMessage__ParameterAssignment_4_1_014623 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_rule__FoundMessage__ParameterAssignment_4_1_1_114654 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReturnMessage_in_rule__FoundMessage__ReturnAssignment_514685 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CallMessage__SourceParticipantAssignment_014720 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CallMessage__TargetParticipantAssignment_2_014759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CallMessage__NameAssignment_314794 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_rule__CallMessage__ParameterAssignment_4_1_014825 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_rule__CallMessage__ParameterAssignment_4_1_1_114856 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReturnMessage_in_rule__CallMessage__ReturnAssignment_514887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__NewMessage__SourceParticipantAssignment_014922 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__NewMessage__TargetParticipantAssignment_214961 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_rule__NewMessage__ParameterAssignment_3_1_014996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_rule__NewMessage__ParameterAssignment_3_1_1_115027 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReference_in_rule__ReturnMessage__NameAssignment_115058 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_rule__ReturnMessage__ParameterAssignment_2_1_015089 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_rule__ReturnMessage__ParameterAssignment_2_1_1_115120 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DeleteMessage__SourceParticipantAssignment_015155 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DeleteMessage__TargetParticipantAssignment_215194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_rule__DeleteMessage__ParameterAssignment_3_1_015229 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_rule__DeleteMessage__ParameterAssignment_3_1_1_115260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SelfMessage__SourceParticipantAssignment_015295 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SelfMessage__NameAssignment_315330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_rule__SelfMessage__ParameterAssignment_4_1_015361 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameter_in_rule__SelfMessage__ParameterAssignment_4_1_1_115392 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReturnMessage_in_rule__SelfMessage__ReturnAssignment_515423 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_rule__SelfMessage__TransitionAssignment_6_115454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Parameter__NameAssignment_015485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReference_in_rule__Parameter__TypeAssignment_1_115516 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExtendedID_in_rule__Reference__TypeAssignment_015551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArray_in_rule__Reference__ArrayAssignment_115586 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Array__SizeAssignment_215617 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExtendedID_in_rule__Annotation__NameAssignment_115648 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProperty_in_rule__Annotation__PropertyAssignment_2_115679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProperty_in_rule__Annotation__PropertyAssignment_2_2_115710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExtendedID_in_rule__AssignProperty__NameAssignment_015741 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__AssignProperty__ValueAssignment_215772 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__ValueProperty__ValueAssignment15803 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__TargetAssignment_2_in_rule__CallMessage__Group__2__Impl7343 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group__3__Impl_in_rule__CallMessage__Group__37373 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group__4_in_rule__CallMessage__Group__37376 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__CallMessage__Group__3__Impl7404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group__4__Impl_in_rule__CallMessage__Group__47435 = new BitSet(new long[]{0x0000004800000000L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group__5_in_rule__CallMessage__Group__47438 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__NameAssignment_4_in_rule__CallMessage__Group__4__Impl7465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group__5__Impl_in_rule__CallMessage__Group__57495 = new BitSet(new long[]{0x0000004800000000L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group__6_in_rule__CallMessage__Group__57498 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group_5__0_in_rule__CallMessage__Group__5__Impl7525 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group__6__Impl_in_rule__CallMessage__Group__67556 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__ReturnAssignment_6_in_rule__CallMessage__Group__6__Impl7583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group_5__0__Impl_in_rule__CallMessage__Group_5__07628 = new BitSet(new long[]{0x0000001000000010L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group_5__1_in_rule__CallMessage__Group_5__07631 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__CallMessage__Group_5__0__Impl7660 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group_5__1__Impl_in_rule__CallMessage__Group_5__17692 = new BitSet(new long[]{0x0000001000000010L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group_5__2_in_rule__CallMessage__Group_5__17695 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group_5_1__0_in_rule__CallMessage__Group_5__1__Impl7722 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group_5__2__Impl_in_rule__CallMessage__Group_5__27753 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__CallMessage__Group_5__2__Impl7781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group_5_1__0__Impl_in_rule__CallMessage__Group_5_1__07818 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group_5_1__1_in_rule__CallMessage__Group_5_1__07821 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__ParameterAssignment_5_1_0_in_rule__CallMessage__Group_5_1__0__Impl7848 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group_5_1__1__Impl_in_rule__CallMessage__Group_5_1__17878 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group_5_1_1__0_in_rule__CallMessage__Group_5_1__1__Impl7905 = new BitSet(new long[]{0x0000000000200002L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group_5_1_1__0__Impl_in_rule__CallMessage__Group_5_1_1__07940 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group_5_1_1__1_in_rule__CallMessage__Group_5_1_1__07943 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__CallMessage__Group_5_1_1__0__Impl7971 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__Group_5_1_1__1__Impl_in_rule__CallMessage__Group_5_1_1__18002 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallMessage__ParameterAssignment_5_1_1_1_in_rule__CallMessage__Group_5_1_1__1__Impl8029 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group__0__Impl_in_rule__NewMessage__Group__08063 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group__1_in_rule__NewMessage__Group__08066 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__SourceAssignment_0_in_rule__NewMessage__Group__0__Impl8093 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group__1__Impl_in_rule__NewMessage__Group__18123 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group__2_in_rule__NewMessage__Group__18126 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__NewMessage__Group__1__Impl8154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group__2__Impl_in_rule__NewMessage__Group__28185 = new BitSet(new long[]{0x0000000C00000000L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group__3_in_rule__NewMessage__Group__28188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__TargetAssignment_2_in_rule__NewMessage__Group__2__Impl8215 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group__3__Impl_in_rule__NewMessage__Group__38245 = new BitSet(new long[]{0x0000000C00000000L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group__4_in_rule__NewMessage__Group__38248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_3__0_in_rule__NewMessage__Group__3__Impl8275 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group__4__Impl_in_rule__NewMessage__Group__48306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_4__0_in_rule__NewMessage__Group__4__Impl8333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_3__0__Impl_in_rule__NewMessage__Group_3__08374 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_3__1_in_rule__NewMessage__Group_3__08377 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__NewMessage__Group_3__0__Impl8406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_3__1__Impl_in_rule__NewMessage__Group_3__18438 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__NameAssignment_3_1_in_rule__NewMessage__Group_3__1__Impl8465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_4__0__Impl_in_rule__NewMessage__Group_4__08499 = new BitSet(new long[]{0x0000001000000010L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_4__1_in_rule__NewMessage__Group_4__08502 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__NewMessage__Group_4__0__Impl8531 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_4__1__Impl_in_rule__NewMessage__Group_4__18563 = new BitSet(new long[]{0x0000001000000010L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_4__2_in_rule__NewMessage__Group_4__18566 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_4_1__0_in_rule__NewMessage__Group_4__1__Impl8593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_4__2__Impl_in_rule__NewMessage__Group_4__28624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__NewMessage__Group_4__2__Impl8652 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_4_1__0__Impl_in_rule__NewMessage__Group_4_1__08689 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_4_1__1_in_rule__NewMessage__Group_4_1__08692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__ParameterAssignment_4_1_0_in_rule__NewMessage__Group_4_1__0__Impl8719 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_4_1__1__Impl_in_rule__NewMessage__Group_4_1__18749 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_4_1_1__0_in_rule__NewMessage__Group_4_1__1__Impl8776 = new BitSet(new long[]{0x0000000000200002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_4_1_1__0__Impl_in_rule__NewMessage__Group_4_1_1__08811 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_4_1_1__1_in_rule__NewMessage__Group_4_1_1__08814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__NewMessage__Group_4_1_1__0__Impl8842 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__Group_4_1_1__1__Impl_in_rule__NewMessage__Group_4_1_1__18873 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewMessage__ParameterAssignment_4_1_1_1_in_rule__NewMessage__Group_4_1_1__1__Impl8900 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group__0__Impl_in_rule__ReturnMessage__Group__08934 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group__1_in_rule__ReturnMessage__Group__08937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__ReturnMessage__Group__0__Impl8965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group__1__Impl_in_rule__ReturnMessage__Group__18996 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group__2_in_rule__ReturnMessage__Group__18999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__NameAssignment_1_in_rule__ReturnMessage__Group__1__Impl9026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group__2__Impl_in_rule__ReturnMessage__Group__29056 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2__0_in_rule__ReturnMessage__Group__2__Impl9083 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2__0__Impl_in_rule__ReturnMessage__Group_2__09120 = new BitSet(new long[]{0x0000001000000010L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2__1_in_rule__ReturnMessage__Group_2__09123 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__ReturnMessage__Group_2__0__Impl9152 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2__1__Impl_in_rule__ReturnMessage__Group_2__19184 = new BitSet(new long[]{0x0000001000000010L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2__2_in_rule__ReturnMessage__Group_2__19187 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2_1__0_in_rule__ReturnMessage__Group_2__1__Impl9214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2__2__Impl_in_rule__ReturnMessage__Group_2__29245 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__ReturnMessage__Group_2__2__Impl9273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2_1__0__Impl_in_rule__ReturnMessage__Group_2_1__09310 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2_1__1_in_rule__ReturnMessage__Group_2_1__09313 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__ParameterAssignment_2_1_0_in_rule__ReturnMessage__Group_2_1__0__Impl9340 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2_1__1__Impl_in_rule__ReturnMessage__Group_2_1__19370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2_1_1__0_in_rule__ReturnMessage__Group_2_1__1__Impl9397 = new BitSet(new long[]{0x0000000000200002L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2_1_1__0__Impl_in_rule__ReturnMessage__Group_2_1_1__09432 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2_1_1__1_in_rule__ReturnMessage__Group_2_1_1__09435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__ReturnMessage__Group_2_1_1__0__Impl9463 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__Group_2_1_1__1__Impl_in_rule__ReturnMessage__Group_2_1_1__19494 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReturnMessage__ParameterAssignment_2_1_1_1_in_rule__ReturnMessage__Group_2_1_1__1__Impl9521 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group__0__Impl_in_rule__DeleteMessage__Group__09555 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group__1_in_rule__DeleteMessage__Group__09558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__SourceAssignment_0_in_rule__DeleteMessage__Group__0__Impl9585 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group__1__Impl_in_rule__DeleteMessage__Group__19615 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group__2_in_rule__DeleteMessage__Group__19618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__DeleteMessage__Group__1__Impl9646 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group__2__Impl_in_rule__DeleteMessage__Group__29677 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group__3_in_rule__DeleteMessage__Group__29680 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__TargetAssignment_2_in_rule__DeleteMessage__Group__2__Impl9707 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group__3__Impl_in_rule__DeleteMessage__Group__39737 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3__0_in_rule__DeleteMessage__Group__3__Impl9764 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3__0__Impl_in_rule__DeleteMessage__Group_3__09803 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3__1_in_rule__DeleteMessage__Group_3__09806 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__DeleteMessage__Group_3__0__Impl9835 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3__1__Impl_in_rule__DeleteMessage__Group_3__19867 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3__2_in_rule__DeleteMessage__Group_3__19870 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__NameAssignment_3_1_in_rule__DeleteMessage__Group_3__1__Impl9897 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3__2__Impl_in_rule__DeleteMessage__Group_3__29927 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_2__0_in_rule__DeleteMessage__Group_3__2__Impl9954 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_2__0__Impl_in_rule__DeleteMessage__Group_3_2__09991 = new BitSet(new long[]{0x0000001000000010L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_2__1_in_rule__DeleteMessage__Group_3_2__09994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__DeleteMessage__Group_3_2__0__Impl10023 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_2__1__Impl_in_rule__DeleteMessage__Group_3_2__110055 = new BitSet(new long[]{0x0000001000000010L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_2__2_in_rule__DeleteMessage__Group_3_2__110058 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_2_1__0_in_rule__DeleteMessage__Group_3_2__1__Impl10085 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_2__2__Impl_in_rule__DeleteMessage__Group_3_2__210116 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__DeleteMessage__Group_3_2__2__Impl10144 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_2_1__0__Impl_in_rule__DeleteMessage__Group_3_2_1__010181 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_2_1__1_in_rule__DeleteMessage__Group_3_2_1__010184 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__ParameterAssignment_3_2_1_0_in_rule__DeleteMessage__Group_3_2_1__0__Impl10211 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_2_1__1__Impl_in_rule__DeleteMessage__Group_3_2_1__110241 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_2_1_1__0_in_rule__DeleteMessage__Group_3_2_1__1__Impl10268 = new BitSet(new long[]{0x0000000000200002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_2_1_1__0__Impl_in_rule__DeleteMessage__Group_3_2_1_1__010303 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_2_1_1__1_in_rule__DeleteMessage__Group_3_2_1_1__010306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__DeleteMessage__Group_3_2_1_1__0__Impl10334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__Group_3_2_1_1__1__Impl_in_rule__DeleteMessage__Group_3_2_1_1__110365 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DeleteMessage__ParameterAssignment_3_2_1_1_1_in_rule__DeleteMessage__Group_3_2_1_1__1__Impl10392 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group__0__Impl_in_rule__SelfMessage__Group__010426 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group__1_in_rule__SelfMessage__Group__010429 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__SourceAssignment_0_in_rule__SelfMessage__Group__0__Impl10456 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group__1__Impl_in_rule__SelfMessage__Group__110486 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group__2_in_rule__SelfMessage__Group__110489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__SelfMessage__Group__1__Impl10517 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group__2__Impl_in_rule__SelfMessage__Group__210548 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group__3_in_rule__SelfMessage__Group__210551 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__SelfMessage__Group__2__Impl10579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group__3__Impl_in_rule__SelfMessage__Group__310610 = new BitSet(new long[]{0x0000024800000000L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group__4_in_rule__SelfMessage__Group__310613 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__NameAssignment_3_in_rule__SelfMessage__Group__3__Impl10640 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group__4__Impl_in_rule__SelfMessage__Group__410670 = new BitSet(new long[]{0x0000024800000000L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group__5_in_rule__SelfMessage__Group__410673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_4__0_in_rule__SelfMessage__Group__4__Impl10700 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group__5__Impl_in_rule__SelfMessage__Group__510731 = new BitSet(new long[]{0x0000024800000000L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group__6_in_rule__SelfMessage__Group__510734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__ReturnAssignment_5_in_rule__SelfMessage__Group__5__Impl10761 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group__6__Impl_in_rule__SelfMessage__Group__610792 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_6__0_in_rule__SelfMessage__Group__6__Impl10819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_4__0__Impl_in_rule__SelfMessage__Group_4__010864 = new BitSet(new long[]{0x0000001000000010L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_4__1_in_rule__SelfMessage__Group_4__010867 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__SelfMessage__Group_4__0__Impl10896 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_4__1__Impl_in_rule__SelfMessage__Group_4__110928 = new BitSet(new long[]{0x0000001000000010L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_4__2_in_rule__SelfMessage__Group_4__110931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_4_1__0_in_rule__SelfMessage__Group_4__1__Impl10958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_4__2__Impl_in_rule__SelfMessage__Group_4__210989 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__SelfMessage__Group_4__2__Impl11017 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_4_1__0__Impl_in_rule__SelfMessage__Group_4_1__011054 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_4_1__1_in_rule__SelfMessage__Group_4_1__011057 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__ParameterAssignment_4_1_0_in_rule__SelfMessage__Group_4_1__0__Impl11084 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_4_1__1__Impl_in_rule__SelfMessage__Group_4_1__111114 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_4_1_1__0_in_rule__SelfMessage__Group_4_1__1__Impl11141 = new BitSet(new long[]{0x0000000000200002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_4_1_1__0__Impl_in_rule__SelfMessage__Group_4_1_1__011176 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_4_1_1__1_in_rule__SelfMessage__Group_4_1_1__011179 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__SelfMessage__Group_4_1_1__0__Impl11207 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_4_1_1__1__Impl_in_rule__SelfMessage__Group_4_1_1__111238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__ParameterAssignment_4_1_1_1_in_rule__SelfMessage__Group_4_1_1__1__Impl11265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_6__0__Impl_in_rule__SelfMessage__Group_6__011299 = new BitSet(new long[]{0x00000003E8900010L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_6__1_in_rule__SelfMessage__Group_6__011302 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__SelfMessage__Group_6__0__Impl11331 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_6__1__Impl_in_rule__SelfMessage__Group_6__111363 = new BitSet(new long[]{0x00000003E8900010L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_6__2_in_rule__SelfMessage__Group_6__111366 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SelfMessage__TransitionAssignment_6_1_in_rule__SelfMessage__Group_6__1__Impl11393 = new BitSet(new long[]{0x00000003E8800012L});
+    public static final BitSet FOLLOW_rule__SelfMessage__Group_6__2__Impl_in_rule__SelfMessage__Group_6__211424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__SelfMessage__Group_6__2__Impl11452 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Parameter__Group__0__Impl_in_rule__Parameter__Group__011489 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__Parameter__Group__1_in_rule__Parameter__Group__011492 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Parameter__NameAssignment_0_in_rule__Parameter__Group__0__Impl11519 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Parameter__Group__1__Impl_in_rule__Parameter__Group__111549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Parameter__Group_1__0_in_rule__Parameter__Group__1__Impl11576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Parameter__Group_1__0__Impl_in_rule__Parameter__Group_1__011611 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Parameter__Group_1__1_in_rule__Parameter__Group_1__011614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__Parameter__Group_1__0__Impl11642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Parameter__Group_1__1__Impl_in_rule__Parameter__Group_1__111673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Parameter__TypeAssignment_1_1_in_rule__Parameter__Group_1__1__Impl11700 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Reference__Group__0__Impl_in_rule__Reference__Group__011734 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_rule__Reference__Group__1_in_rule__Reference__Group__011737 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Reference__TypeAssignment_0_in_rule__Reference__Group__0__Impl11764 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Reference__Group__1__Impl_in_rule__Reference__Group__111794 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Reference__ArrayAssignment_1_in_rule__Reference__Group__1__Impl11821 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__011856 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_rule__Array__Group__1_in_rule__Array__Group__011859 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__111917 = new BitSet(new long[]{0x0000080000000800L});
+    public static final BitSet FOLLOW_rule__Array__Group__2_in_rule__Array__Group__111920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__Array__Group__1__Impl11948 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__211979 = new BitSet(new long[]{0x0000080000000800L});
+    public static final BitSet FOLLOW_rule__Array__Group__3_in_rule__Array__Group__211982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__SizeAssignment_2_in_rule__Array__Group__2__Impl12009 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group__3__Impl_in_rule__Array__Group__312040 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_rule__Array__Group__3__Impl12068 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ForeachExpression__Group__0__Impl_in_rule__ForeachExpression__Group__012107 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_rule__ForeachExpression__Group__1_in_rule__ForeachExpression__Group__012110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ForeachExpression__Group__0__Impl12137 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ForeachExpression__Group__1__Impl_in_rule__ForeachExpression__Group__112166 = new BitSet(new long[]{0x0000000000000810L});
+    public static final BitSet FOLLOW_rule__ForeachExpression__Group__2_in_rule__ForeachExpression__Group__112169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_rule__ForeachExpression__Group__1__Impl12197 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ForeachExpression__Group__2__Impl_in_rule__ForeachExpression__Group__212228 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ForeachExpression__Alternatives_2_in_rule__ForeachExpression__Group__2__Impl12255 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ForeachExpression__Group_2_0__0__Impl_in_rule__ForeachExpression__Group_2_0__012291 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_rule__ForeachExpression__Group_2_0__1_in_rule__ForeachExpression__Group_2_0__012294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__ForeachExpression__Group_2_0__0__Impl12321 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ForeachExpression__Group_2_0__1__Impl_in_rule__ForeachExpression__Group_2_0__112350 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_rule__ForeachExpression__Group_2_0__2_in_rule__ForeachExpression__Group_2_0__112353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_rule__ForeachExpression__Group_2_0__1__Impl12381 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ForeachExpression__Group_2_0__2__Impl_in_rule__ForeachExpression__Group_2_0__212412 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__ForeachExpression__Group_2_0__2__Impl12439 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group__0__Impl_in_rule__Annotation__Group__012474 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Annotation__Group__1_in_rule__Annotation__Group__012477 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_rule__Annotation__Group__0__Impl12505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group__1__Impl_in_rule__Annotation__Group__112536 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__Annotation__Group__2_in_rule__Annotation__Group__112539 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__NameAssignment_1_in_rule__Annotation__Group__1__Impl12566 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group__2__Impl_in_rule__Annotation__Group__212596 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2__0_in_rule__Annotation__Group__2__Impl12623 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2__0__Impl_in_rule__Annotation__Group_2__012660 = new BitSet(new long[]{0x0000000000020F10L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2__1_in_rule__Annotation__Group_2__012663 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Annotation__Group_2__0__Impl12691 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2__1__Impl_in_rule__Annotation__Group_2__112722 = new BitSet(new long[]{0x0000001000200000L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2__2_in_rule__Annotation__Group_2__112725 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__PropertyAssignment_2_1_in_rule__Annotation__Group_2__1__Impl12752 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2__2__Impl_in_rule__Annotation__Group_2__212782 = new BitSet(new long[]{0x0000001000200000L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2__3_in_rule__Annotation__Group_2__212785 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2_2__0_in_rule__Annotation__Group_2__2__Impl12812 = new BitSet(new long[]{0x0000000000200002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2__3__Impl_in_rule__Annotation__Group_2__312843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__Annotation__Group_2__3__Impl12871 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2_2__0__Impl_in_rule__Annotation__Group_2_2__012910 = new BitSet(new long[]{0x0000000000020F10L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2_2__1_in_rule__Annotation__Group_2_2__012913 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__Annotation__Group_2_2__0__Impl12941 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_2_2__1__Impl_in_rule__Annotation__Group_2_2__112972 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__PropertyAssignment_2_2_1_in_rule__Annotation__Group_2_2__1__Impl12999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignProperty__Group__0__Impl_in_rule__AssignProperty__Group__013033 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_rule__AssignProperty__Group__1_in_rule__AssignProperty__Group__013036 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignProperty__NameAssignment_0_in_rule__AssignProperty__Group__0__Impl13063 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignProperty__Group__1__Impl_in_rule__AssignProperty__Group__113093 = new BitSet(new long[]{0x0000000000020F10L});
+    public static final BitSet FOLLOW_rule__AssignProperty__Group__2_in_rule__AssignProperty__Group__113096 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__AssignProperty__Group__1__Impl13124 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignProperty__Group__2__Impl_in_rule__AssignProperty__Group__213155 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AssignProperty__ValueAssignment_2_in_rule__AssignProperty__Group__2__Impl13182 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExtendedID__Group__0__Impl_in_rule__ExtendedID__Group__013218 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_rule__ExtendedID__Group__1_in_rule__ExtendedID__Group__013221 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ExtendedID__Group__0__Impl13248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExtendedID__Group__1__Impl_in_rule__ExtendedID__Group__113277 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExtendedID__Group_1__0_in_rule__ExtendedID__Group__1__Impl13304 = new BitSet(new long[]{0x0000000400000002L});
+    public static final BitSet FOLLOW_rule__ExtendedID__Group_1__0__Impl_in_rule__ExtendedID__Group_1__013339 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ExtendedID__Group_1__1_in_rule__ExtendedID__Group_1__013342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__ExtendedID__Group_1__0__Impl13370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExtendedID__Group_1__1__Impl_in_rule__ExtendedID__Group_1__113401 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ExtendedID__Group_1__1__Impl13428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group__0__Impl_in_rule__Real__Group__013461 = new BitSet(new long[]{0x0000000000020F10L});
+    public static final BitSet FOLLOW_rule__Real__Group__1_in_rule__Real__Group__013464 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Real__Group__0__Impl13493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group__1__Impl_in_rule__Real__Group__113526 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_rule__Real__Group__2_in_rule__Real__Group__113529 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Real__Group__1__Impl13556 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group__2__Impl_in_rule__Real__Group__213585 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_rule__Real__Group__3_in_rule__Real__Group__213588 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__Real__Group__2__Impl13616 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group__3__Impl_in_rule__Real__Group__313647 = new BitSet(new long[]{0x000000000000C000L});
+    public static final BitSet FOLLOW_rule__Real__Group__4_in_rule__Real__Group__313650 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Real__Group__3__Impl13677 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group__4__Impl_in_rule__Real__Group__413706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group_4__0_in_rule__Real__Group__4__Impl13733 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group_4__0__Impl_in_rule__Real__Group_4__013774 = new BitSet(new long[]{0x0000000000030000L});
+    public static final BitSet FOLLOW_rule__Real__Group_4__1_in_rule__Real__Group_4__013777 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Alternatives_4_0_in_rule__Real__Group_4__0__Impl13804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group_4__1__Impl_in_rule__Real__Group_4__113834 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_rule__Real__Group_4__2_in_rule__Real__Group_4__113837 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Alternatives_4_1_in_rule__Real__Group_4__1__Impl13864 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Real__Group_4__2__Impl_in_rule__Real__Group_4__213894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Real__Group_4__2__Impl13921 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Integer__Group__0__Impl_in_rule__Integer__Group__013956 = new BitSet(new long[]{0x0000000000020800L});
+    public static final BitSet FOLLOW_rule__Integer__Group__1_in_rule__Integer__Group__013959 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Integer__Group__0__Impl13988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Integer__Group__1__Impl_in_rule__Integer__Group__114021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Integer__Group__1__Impl14048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImport_in_rule__Model__ImportsAssignment_014086 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSequence_in_rule__Model__SequenceAssignment_114117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Import__ImportURIAssignment_114148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_rule__Sequence__AnnotationAssignment_014179 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Sequence__NameAssignment_214210 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParticipant_in_rule__Sequence__ParticipantAssignment_314241 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParticipant_in_rule__Sequence__ParticipantAssignment_4_114272 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_rule__Sequence__TransitionAssignment_514303 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Participant__NameAssignment_014334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExtendedID_in_rule__Participant__ClassifierAssignment_1_114369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__IfElseFragment__ExprAssignment_114404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_rule__IfElseFragment__TransitionAssignment_314435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__IfElseFragment__ElseIfExprAssignment_4_114466 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_rule__IfElseFragment__ElseIftransitionAssignment_4_314497 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_rule__IfElseFragment__ElseTransitionAssignment_5_114528 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleForeachExpression_in_rule__ForeachFragment__ExprAssignment_114559 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_rule__ForeachFragment__TransitionAssignment_314590 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__LoopFragment__ExprAssignment_114621 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_rule__LoopFragment__TransitionAssignment_314652 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__AssertFragment__ExprAssignment_114683 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_rule__AssertFragment__TransitionAssignment_314714 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__BreakFragment__ExprAssignment_2_014745 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_rule__BreakFragment__TransitionAssignment_2_214776 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueWithSpaces_in_rule__NextFragment__ExprAssignment_2_014807 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_rule__NextFragment__TransitionAssignment_2_214838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__FoundMessage__TargetParticipantAssignment_114873 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__FoundMessage__NameAssignment_314908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameter_in_rule__FoundMessage__ParameterAssignment_4_1_014939 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameter_in_rule__FoundMessage__ParameterAssignment_4_1_1_114970 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleReturnMessage_in_rule__FoundMessage__ReturnAssignment_515001 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__CallMessage__SourceAssignment_015036 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__CallMessage__TargetAssignment_215075 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__CallMessage__NameAssignment_415110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameter_in_rule__CallMessage__ParameterAssignment_5_1_015141 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameter_in_rule__CallMessage__ParameterAssignment_5_1_1_115172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleReturnMessage_in_rule__CallMessage__ReturnAssignment_615203 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__NewMessage__SourceAssignment_015238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__NewMessage__TargetAssignment_215277 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__NewMessage__NameAssignment_3_115312 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameter_in_rule__NewMessage__ParameterAssignment_4_1_015343 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameter_in_rule__NewMessage__ParameterAssignment_4_1_1_115374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleReference_in_rule__ReturnMessage__NameAssignment_115405 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameter_in_rule__ReturnMessage__ParameterAssignment_2_1_015436 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameter_in_rule__ReturnMessage__ParameterAssignment_2_1_1_115467 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DeleteMessage__SourceAssignment_015502 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DeleteMessage__TargetAssignment_215541 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DeleteMessage__NameAssignment_3_115576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameter_in_rule__DeleteMessage__ParameterAssignment_3_2_1_015607 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameter_in_rule__DeleteMessage__ParameterAssignment_3_2_1_1_115638 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SelfMessage__SourceAssignment_015673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SelfMessage__NameAssignment_315708 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameter_in_rule__SelfMessage__ParameterAssignment_4_1_015739 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameter_in_rule__SelfMessage__ParameterAssignment_4_1_1_115770 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleReturnMessage_in_rule__SelfMessage__ReturnAssignment_515801 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_rule__SelfMessage__TransitionAssignment_6_115832 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Parameter__NameAssignment_015863 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleReference_in_rule__Parameter__TypeAssignment_1_115894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExtendedID_in_rule__Reference__TypeAssignment_015929 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArray_in_rule__Reference__ArrayAssignment_115964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NATURAL_in_rule__Array__SizeAssignment_215995 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExtendedID_in_rule__Annotation__NameAssignment_116026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperty_in_rule__Annotation__PropertyAssignment_2_116057 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperty_in_rule__Annotation__PropertyAssignment_2_2_116088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExtendedID_in_rule__AssignProperty__NameAssignment_016119 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__AssignProperty__ValueAssignment_216150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__ValueProperty__ValueAssignment16181 = new BitSet(new long[]{0x0000000000000002L});
 
 }

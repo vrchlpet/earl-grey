@@ -15,9 +15,8 @@ package cz.cvut.earlgrey.sequencemodel.sequencemodel;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getSourceParticipant <em>Source Participant</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getTargetParticipant <em>Target Participant</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getSource <em>Source</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getTarget <em>Target</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getReturn <em>Return</em>}</li>
  * </ul>
  * </p>
@@ -29,82 +28,56 @@ package cz.cvut.earlgrey.sequencemodel.sequencemodel;
 public interface CallMessage extends Message
 {
   /**
-   * Returns the value of the '<em><b>Source Participant</b></em>' reference.
+   * Returns the value of the '<em><b>Source</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Source Participant</em>' reference isn't clear,
+   * If the meaning of the '<em>Source</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Source Participant</em>' reference.
-   * @see #setSourceParticipant(Participant)
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getCallMessage_SourceParticipant()
+   * @return the value of the '<em>Source</em>' reference.
+   * @see #setSource(Participant)
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getCallMessage_Source()
    * @model
    * @generated
    */
-  Participant getSourceParticipant();
+  Participant getSource();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getSourceParticipant <em>Source Participant</em>}' reference.
+   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getSource <em>Source</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Source Participant</em>' reference.
-   * @see #getSourceParticipant()
+   * @param value the new value of the '<em>Source</em>' reference.
+   * @see #getSource()
    * @generated
    */
-  void setSourceParticipant(Participant value);
+  void setSource(Participant value);
 
   /**
-   * Returns the value of the '<em><b>Target Participant</b></em>' reference.
+   * Returns the value of the '<em><b>Target</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Target Participant</em>' reference isn't clear,
+   * If the meaning of the '<em>Target</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Target Participant</em>' reference.
-   * @see #setTargetParticipant(Participant)
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getCallMessage_TargetParticipant()
+   * @return the value of the '<em>Target</em>' reference.
+   * @see #setTarget(Participant)
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getCallMessage_Target()
    * @model
    * @generated
    */
-  Participant getTargetParticipant();
+  Participant getTarget();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getTargetParticipant <em>Target Participant</em>}' reference.
+   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getTarget <em>Target</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Target Participant</em>' reference.
-   * @see #getTargetParticipant()
+   * @param value the new value of the '<em>Target</em>' reference.
+   * @see #getTarget()
    * @generated
    */
-  void setTargetParticipant(Participant value);
-
-  /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getCallMessage_Name()
-   * @model
-   * @generated
-   */
-  String getName();
-
-  /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
+  void setTarget(Participant value);
 
   /**
    * Returns the value of the '<em><b>Return</b></em>' containment reference.

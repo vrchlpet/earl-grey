@@ -113,14 +113,14 @@ FoundMessage:
 
 // e.g.: Handler calls Node.getChild()
 CallMessage:
-    sourceParticipant=[Participant|ID] 'calls' (targetParticipant=[Participant|ID] '.')? => name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? 
+    source=[Participant|ID] 'calls' target=[Participant|ID] '.' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? 
     return=ReturnMessage?
 ;
 
 // e.g.: new Node
 // TODO: implicitValues? "new Node(null, 5, 8)" -- child, x, y
 NewMessage:
-    sourceParticipant=[Participant|ID] 'creates' targetParticipant=[Participant|ID] (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
+    source=[Participant|ID] 'creates' target=[Participant|ID] (=> '.' name=ID)? (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
 ;
 
 // e.g.: return childs
@@ -129,12 +129,12 @@ ReturnMessage:
 ;
 
 DeleteMessage:
-    sourceParticipant=[Participant|ID] 'destroys' targetParticipant=[Participant|ID] (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')?
+    source=[Participant|ID] 'destroys' target=[Participant|ID] (=> '.' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? )?
 ;
 
 //TODO: rewrite this rule, do we really need begin-end?
 SelfMessage:
-    sourceParticipant=[Participant|ID] 'self' '.' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? return=ReturnMessage?
+    source=[Participant|ID] 'self' '.' name=ID (=> '(' (=> parameter+=Parameter (',' parameter+=Parameter)*)? ')')? return=ReturnMessage?
     (=>  'begin'
         transition+=Transition*
     'end')?

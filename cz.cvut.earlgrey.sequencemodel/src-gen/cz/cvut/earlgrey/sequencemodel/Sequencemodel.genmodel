@@ -42,34 +42,32 @@
     <genClasses ecoreClass="Sequencemodel.ecore#//BreakFragment"/>
     <genClasses ecoreClass="Sequencemodel.ecore#//NextFragment"/>
     <genClasses ecoreClass="Sequencemodel.ecore#//Message">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//Message/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//Message/parameter"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//FoundMessage">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//FoundMessage/targetParticipant"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//FoundMessage/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//FoundMessage/return"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//CallMessage">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//CallMessage/sourceParticipant"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//CallMessage/targetParticipant"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//CallMessage/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//CallMessage/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//CallMessage/target"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//CallMessage/return"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//NewMessage">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//NewMessage/sourceParticipant"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//NewMessage/targetParticipant"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//NewMessage/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//NewMessage/target"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//ReturnMessage">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//ReturnMessage/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//ReturnMessage/parameter"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//DeleteMessage">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//DeleteMessage/sourceParticipant"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//DeleteMessage/targetParticipant"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//DeleteMessage/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//DeleteMessage/target"/>
     </genClasses>
     <genClasses ecoreClass="Sequencemodel.ecore#//SelfMessage">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//SelfMessage/sourceParticipant"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Sequencemodel.ecore#//SelfMessage/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//SelfMessage/source"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//SelfMessage/return"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Sequencemodel.ecore#//SelfMessage/transition"/>
     </genClasses>

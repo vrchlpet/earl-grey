@@ -24,8 +24,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.DeleteMessageImpl#getSourceParticipant <em>Source Participant</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.DeleteMessageImpl#getTargetParticipant <em>Target Participant</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.DeleteMessageImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.DeleteMessageImpl#getTarget <em>Target</em>}</li>
  * </ul>
  * </p>
  *
@@ -34,24 +34,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
 {
   /**
-   * The cached value of the '{@link #getSourceParticipant() <em>Source Participant</em>}' reference.
+   * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSourceParticipant()
+   * @see #getSource()
    * @generated
    * @ordered
    */
-  protected Participant sourceParticipant;
+  protected Participant source;
 
   /**
-   * The cached value of the '{@link #getTargetParticipant() <em>Target Participant</em>}' reference.
+   * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTargetParticipant()
+   * @see #getTarget()
    * @generated
    * @ordered
    */
-  protected Participant targetParticipant;
+  protected Participant target;
 
   /**
    * <!-- begin-user-doc -->
@@ -79,19 +79,19 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public Participant getSourceParticipant()
+  public Participant getSource()
   {
-    if (sourceParticipant != null && sourceParticipant.eIsProxy())
+    if (source != null && source.eIsProxy())
     {
-      InternalEObject oldSourceParticipant = (InternalEObject)sourceParticipant;
-      sourceParticipant = (Participant)eResolveProxy(oldSourceParticipant);
-      if (sourceParticipant != oldSourceParticipant)
+      InternalEObject oldSource = (InternalEObject)source;
+      source = (Participant)eResolveProxy(oldSource);
+      if (source != oldSource)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SequencemodelPackage.DELETE_MESSAGE__SOURCE_PARTICIPANT, oldSourceParticipant, sourceParticipant));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SequencemodelPackage.DELETE_MESSAGE__SOURCE, oldSource, source));
       }
     }
-    return sourceParticipant;
+    return source;
   }
 
   /**
@@ -99,9 +99,9 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public Participant basicGetSourceParticipant()
+  public Participant basicGetSource()
   {
-    return sourceParticipant;
+    return source;
   }
 
   /**
@@ -109,12 +109,12 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSourceParticipant(Participant newSourceParticipant)
+  public void setSource(Participant newSource)
   {
-    Participant oldSourceParticipant = sourceParticipant;
-    sourceParticipant = newSourceParticipant;
+    Participant oldSource = source;
+    source = newSource;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.DELETE_MESSAGE__SOURCE_PARTICIPANT, oldSourceParticipant, sourceParticipant));
+      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.DELETE_MESSAGE__SOURCE, oldSource, source));
   }
 
   /**
@@ -122,19 +122,19 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public Participant getTargetParticipant()
+  public Participant getTarget()
   {
-    if (targetParticipant != null && targetParticipant.eIsProxy())
+    if (target != null && target.eIsProxy())
     {
-      InternalEObject oldTargetParticipant = (InternalEObject)targetParticipant;
-      targetParticipant = (Participant)eResolveProxy(oldTargetParticipant);
-      if (targetParticipant != oldTargetParticipant)
+      InternalEObject oldTarget = (InternalEObject)target;
+      target = (Participant)eResolveProxy(oldTarget);
+      if (target != oldTarget)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SequencemodelPackage.DELETE_MESSAGE__TARGET_PARTICIPANT, oldTargetParticipant, targetParticipant));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SequencemodelPackage.DELETE_MESSAGE__TARGET, oldTarget, target));
       }
     }
-    return targetParticipant;
+    return target;
   }
 
   /**
@@ -142,9 +142,9 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public Participant basicGetTargetParticipant()
+  public Participant basicGetTarget()
   {
-    return targetParticipant;
+    return target;
   }
 
   /**
@@ -152,12 +152,12 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTargetParticipant(Participant newTargetParticipant)
+  public void setTarget(Participant newTarget)
   {
-    Participant oldTargetParticipant = targetParticipant;
-    targetParticipant = newTargetParticipant;
+    Participant oldTarget = target;
+    target = newTarget;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.DELETE_MESSAGE__TARGET_PARTICIPANT, oldTargetParticipant, targetParticipant));
+      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.DELETE_MESSAGE__TARGET, oldTarget, target));
   }
 
   /**
@@ -170,12 +170,12 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
   {
     switch (featureID)
     {
-      case SequencemodelPackage.DELETE_MESSAGE__SOURCE_PARTICIPANT:
-        if (resolve) return getSourceParticipant();
-        return basicGetSourceParticipant();
-      case SequencemodelPackage.DELETE_MESSAGE__TARGET_PARTICIPANT:
-        if (resolve) return getTargetParticipant();
-        return basicGetTargetParticipant();
+      case SequencemodelPackage.DELETE_MESSAGE__SOURCE:
+        if (resolve) return getSource();
+        return basicGetSource();
+      case SequencemodelPackage.DELETE_MESSAGE__TARGET:
+        if (resolve) return getTarget();
+        return basicGetTarget();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -190,11 +190,11 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
   {
     switch (featureID)
     {
-      case SequencemodelPackage.DELETE_MESSAGE__SOURCE_PARTICIPANT:
-        setSourceParticipant((Participant)newValue);
+      case SequencemodelPackage.DELETE_MESSAGE__SOURCE:
+        setSource((Participant)newValue);
         return;
-      case SequencemodelPackage.DELETE_MESSAGE__TARGET_PARTICIPANT:
-        setTargetParticipant((Participant)newValue);
+      case SequencemodelPackage.DELETE_MESSAGE__TARGET:
+        setTarget((Participant)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -210,11 +210,11 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
   {
     switch (featureID)
     {
-      case SequencemodelPackage.DELETE_MESSAGE__SOURCE_PARTICIPANT:
-        setSourceParticipant((Participant)null);
+      case SequencemodelPackage.DELETE_MESSAGE__SOURCE:
+        setSource((Participant)null);
         return;
-      case SequencemodelPackage.DELETE_MESSAGE__TARGET_PARTICIPANT:
-        setTargetParticipant((Participant)null);
+      case SequencemodelPackage.DELETE_MESSAGE__TARGET:
+        setTarget((Participant)null);
         return;
     }
     super.eUnset(featureID);
@@ -230,10 +230,10 @@ public class DeleteMessageImpl extends MessageImpl implements DeleteMessage
   {
     switch (featureID)
     {
-      case SequencemodelPackage.DELETE_MESSAGE__SOURCE_PARTICIPANT:
-        return sourceParticipant != null;
-      case SequencemodelPackage.DELETE_MESSAGE__TARGET_PARTICIPANT:
-        return targetParticipant != null;
+      case SequencemodelPackage.DELETE_MESSAGE__SOURCE:
+        return source != null;
+      case SequencemodelPackage.DELETE_MESSAGE__TARGET:
+        return target != null;
     }
     return super.eIsSet(featureID);
   }

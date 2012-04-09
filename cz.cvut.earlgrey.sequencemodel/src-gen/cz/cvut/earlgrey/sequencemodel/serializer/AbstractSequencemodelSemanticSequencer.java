@@ -282,13 +282,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         sourceParticipant=[Participant|ID] 
-	 *         targetParticipant=[Participant|ID]? 
-	 *         name=ID 
-	 *         (parameter+=Parameter parameter+=Parameter*)? 
-	 *         return=ReturnMessage?
-	 *     )
+	 *     (source=[Participant|ID] target=[Participant|ID] name=ID (parameter+=Parameter parameter+=Parameter*)? return=ReturnMessage?)
 	 */
 	protected void sequence_CallMessage(EObject context, CallMessage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -297,7 +291,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (sourceParticipant=[Participant|ID] targetParticipant=[Participant|ID] (parameter+=Parameter parameter+=Parameter*)?)
+	 *     (source=[Participant|ID] target=[Participant|ID] (name=ID (parameter+=Parameter parameter+=Parameter*)?)?)
 	 */
 	protected void sequence_DeleteMessage(EObject context, DeleteMessage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -367,7 +361,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (sourceParticipant=[Participant|ID] targetParticipant=[Participant|ID] (parameter+=Parameter parameter+=Parameter*)?)
+	 *     (source=[Participant|ID] target=[Participant|ID] name=ID? (parameter+=Parameter parameter+=Parameter*)?)
 	 */
 	protected void sequence_NewMessage(EObject context, NewMessage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -430,7 +424,7 @@ public class AbstractSequencemodelSemanticSequencer extends AbstractSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (sourceParticipant=[Participant|ID] name=ID (parameter+=Parameter parameter+=Parameter*)? return=ReturnMessage? transition+=Transition*)
+	 *     (source=[Participant|ID] name=ID (parameter+=Parameter parameter+=Parameter*)? return=ReturnMessage? transition+=Transition*)
 	 */
 	protected void sequence_SelfMessage(EObject context, SelfMessage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

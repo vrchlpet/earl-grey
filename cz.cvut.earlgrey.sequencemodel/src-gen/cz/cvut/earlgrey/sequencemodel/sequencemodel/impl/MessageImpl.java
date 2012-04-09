@@ -12,12 +12,15 @@ import cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -29,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.MessageImpl#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.MessageImpl#getParameter <em>Parameter</em>}</li>
  * </ul>
  * </p>
@@ -37,6 +41,26 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class MessageImpl extends TransitionImpl implements Message
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getParameter() <em>Parameter</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -66,6 +90,29 @@ public class MessageImpl extends TransitionImpl implements Message
   protected EClass eStaticClass()
   {
     return SequencemodelPackage.Literals.MESSAGE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.MESSAGE__NAME, oldName, name));
   }
 
   /**
@@ -108,6 +155,8 @@ public class MessageImpl extends TransitionImpl implements Message
   {
     switch (featureID)
     {
+      case SequencemodelPackage.MESSAGE__NAME:
+        return getName();
       case SequencemodelPackage.MESSAGE__PARAMETER:
         return getParameter();
     }
@@ -125,6 +174,9 @@ public class MessageImpl extends TransitionImpl implements Message
   {
     switch (featureID)
     {
+      case SequencemodelPackage.MESSAGE__NAME:
+        setName((String)newValue);
+        return;
       case SequencemodelPackage.MESSAGE__PARAMETER:
         getParameter().clear();
         getParameter().addAll((Collection<? extends Parameter>)newValue);
@@ -143,6 +195,9 @@ public class MessageImpl extends TransitionImpl implements Message
   {
     switch (featureID)
     {
+      case SequencemodelPackage.MESSAGE__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case SequencemodelPackage.MESSAGE__PARAMETER:
         getParameter().clear();
         return;
@@ -160,10 +215,29 @@ public class MessageImpl extends TransitionImpl implements Message
   {
     switch (featureID)
     {
+      case SequencemodelPackage.MESSAGE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case SequencemodelPackage.MESSAGE__PARAMETER:
         return parameter != null && !parameter.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
   }
 
 } //MessageImpl

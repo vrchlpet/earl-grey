@@ -533,13 +533,22 @@ public interface SequencemodelPackage extends EPackage
   int MESSAGE = 12;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MESSAGE__NAME = TRANSITION_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MESSAGE__PARAMETER = TRANSITION_FEATURE_COUNT + 0;
+  int MESSAGE__PARAMETER = TRANSITION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Message</em>' class.
@@ -548,7 +557,7 @@ public interface SequencemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MESSAGE_FEATURE_COUNT = TRANSITION_FEATURE_COUNT + 1;
+  int MESSAGE_FEATURE_COUNT = TRANSITION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.FoundMessageImpl <em>Found Message</em>}' class.
@@ -559,6 +568,15 @@ public interface SequencemodelPackage extends EPackage
    * @generated
    */
   int FOUND_MESSAGE = 13;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOUND_MESSAGE__NAME = MESSAGE__NAME;
 
   /**
    * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
@@ -579,22 +597,13 @@ public interface SequencemodelPackage extends EPackage
   int FOUND_MESSAGE__TARGET_PARTICIPANT = MESSAGE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FOUND_MESSAGE__NAME = MESSAGE_FEATURE_COUNT + 1;
-
-  /**
    * The feature id for the '<em><b>Return</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FOUND_MESSAGE__RETURN = MESSAGE_FEATURE_COUNT + 2;
+  int FOUND_MESSAGE__RETURN = MESSAGE_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Found Message</em>' class.
@@ -603,7 +612,7 @@ public interface SequencemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FOUND_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 3;
+  int FOUND_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.CallMessageImpl <em>Call Message</em>}' class.
@@ -616,6 +625,15 @@ public interface SequencemodelPackage extends EPackage
   int CALL_MESSAGE = 14;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CALL_MESSAGE__NAME = MESSAGE__NAME;
+
+  /**
    * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -625,31 +643,22 @@ public interface SequencemodelPackage extends EPackage
   int CALL_MESSAGE__PARAMETER = MESSAGE__PARAMETER;
 
   /**
-   * The feature id for the '<em><b>Source Participant</b></em>' reference.
+   * The feature id for the '<em><b>Source</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CALL_MESSAGE__SOURCE_PARTICIPANT = MESSAGE_FEATURE_COUNT + 0;
+  int CALL_MESSAGE__SOURCE = MESSAGE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Target Participant</b></em>' reference.
+   * The feature id for the '<em><b>Target</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CALL_MESSAGE__TARGET_PARTICIPANT = MESSAGE_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_MESSAGE__NAME = MESSAGE_FEATURE_COUNT + 2;
+  int CALL_MESSAGE__TARGET = MESSAGE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -658,7 +667,7 @@ public interface SequencemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALL_MESSAGE__RETURN = MESSAGE_FEATURE_COUNT + 3;
+  int CALL_MESSAGE__RETURN = MESSAGE_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Call Message</em>' class.
@@ -667,7 +676,7 @@ public interface SequencemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALL_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 4;
+  int CALL_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.NewMessageImpl <em>New Message</em>}' class.
@@ -680,6 +689,15 @@ public interface SequencemodelPackage extends EPackage
   int NEW_MESSAGE = 15;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NEW_MESSAGE__NAME = MESSAGE__NAME;
+
+  /**
    * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -689,22 +707,22 @@ public interface SequencemodelPackage extends EPackage
   int NEW_MESSAGE__PARAMETER = MESSAGE__PARAMETER;
 
   /**
-   * The feature id for the '<em><b>Source Participant</b></em>' reference.
+   * The feature id for the '<em><b>Source</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NEW_MESSAGE__SOURCE_PARTICIPANT = MESSAGE_FEATURE_COUNT + 0;
+  int NEW_MESSAGE__SOURCE = MESSAGE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Target Participant</b></em>' reference.
+   * The feature id for the '<em><b>Target</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NEW_MESSAGE__TARGET_PARTICIPANT = MESSAGE_FEATURE_COUNT + 1;
+  int NEW_MESSAGE__TARGET = MESSAGE_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>New Message</em>' class.
@@ -763,6 +781,15 @@ public interface SequencemodelPackage extends EPackage
   int DELETE_MESSAGE = 17;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DELETE_MESSAGE__NAME = MESSAGE__NAME;
+
+  /**
    * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -772,22 +799,22 @@ public interface SequencemodelPackage extends EPackage
   int DELETE_MESSAGE__PARAMETER = MESSAGE__PARAMETER;
 
   /**
-   * The feature id for the '<em><b>Source Participant</b></em>' reference.
+   * The feature id for the '<em><b>Source</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DELETE_MESSAGE__SOURCE_PARTICIPANT = MESSAGE_FEATURE_COUNT + 0;
+  int DELETE_MESSAGE__SOURCE = MESSAGE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Target Participant</b></em>' reference.
+   * The feature id for the '<em><b>Target</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DELETE_MESSAGE__TARGET_PARTICIPANT = MESSAGE_FEATURE_COUNT + 1;
+  int DELETE_MESSAGE__TARGET = MESSAGE_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Delete Message</em>' class.
@@ -809,6 +836,15 @@ public interface SequencemodelPackage extends EPackage
   int SELF_MESSAGE = 18;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELF_MESSAGE__NAME = MESSAGE__NAME;
+
+  /**
    * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -818,22 +854,13 @@ public interface SequencemodelPackage extends EPackage
   int SELF_MESSAGE__PARAMETER = MESSAGE__PARAMETER;
 
   /**
-   * The feature id for the '<em><b>Source Participant</b></em>' reference.
+   * The feature id for the '<em><b>Source</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SELF_MESSAGE__SOURCE_PARTICIPANT = MESSAGE_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SELF_MESSAGE__NAME = MESSAGE_FEATURE_COUNT + 1;
+  int SELF_MESSAGE__SOURCE = MESSAGE_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -842,7 +869,7 @@ public interface SequencemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELF_MESSAGE__RETURN = MESSAGE_FEATURE_COUNT + 2;
+  int SELF_MESSAGE__RETURN = MESSAGE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Transition</b></em>' containment reference list.
@@ -851,7 +878,7 @@ public interface SequencemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELF_MESSAGE__TRANSITION = MESSAGE_FEATURE_COUNT + 3;
+  int SELF_MESSAGE__TRANSITION = MESSAGE_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Self Message</em>' class.
@@ -860,7 +887,7 @@ public interface SequencemodelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELF_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 4;
+  int SELF_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ParameterImpl <em>Parameter</em>}' class.
@@ -1250,6 +1277,17 @@ public interface SequencemodelPackage extends EPackage
   EClass getMessage();
 
   /**
+   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Message#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.Message#getName()
+   * @see #getMessage()
+   * @generated
+   */
+  EAttribute getMessage_Name();
+
+  /**
    * Returns the meta object for the containment reference list '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.Message#getParameter <em>Parameter</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1282,17 +1320,6 @@ public interface SequencemodelPackage extends EPackage
   EReference getFoundMessage_TargetParticipant();
 
   /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.FoundMessage#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.FoundMessage#getName()
-   * @see #getFoundMessage()
-   * @generated
-   */
-  EAttribute getFoundMessage_Name();
-
-  /**
    * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.FoundMessage#getReturn <em>Return</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1314,37 +1341,26 @@ public interface SequencemodelPackage extends EPackage
   EClass getCallMessage();
 
   /**
-   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getSourceParticipant <em>Source Participant</em>}'.
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getSource <em>Source</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Source Participant</em>'.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getSourceParticipant()
+   * @return the meta object for the reference '<em>Source</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getSource()
    * @see #getCallMessage()
    * @generated
    */
-  EReference getCallMessage_SourceParticipant();
+  EReference getCallMessage_Source();
 
   /**
-   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getTargetParticipant <em>Target Participant</em>}'.
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getTarget <em>Target</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Target Participant</em>'.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getTargetParticipant()
+   * @return the meta object for the reference '<em>Target</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getTarget()
    * @see #getCallMessage()
    * @generated
    */
-  EReference getCallMessage_TargetParticipant();
-
-  /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getName()
-   * @see #getCallMessage()
-   * @generated
-   */
-  EAttribute getCallMessage_Name();
+  EReference getCallMessage_Target();
 
   /**
    * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.CallMessage#getReturn <em>Return</em>}'.
@@ -1368,26 +1384,26 @@ public interface SequencemodelPackage extends EPackage
   EClass getNewMessage();
 
   /**
-   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.NewMessage#getSourceParticipant <em>Source Participant</em>}'.
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.NewMessage#getSource <em>Source</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Source Participant</em>'.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.NewMessage#getSourceParticipant()
+   * @return the meta object for the reference '<em>Source</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.NewMessage#getSource()
    * @see #getNewMessage()
    * @generated
    */
-  EReference getNewMessage_SourceParticipant();
+  EReference getNewMessage_Source();
 
   /**
-   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.NewMessage#getTargetParticipant <em>Target Participant</em>}'.
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.NewMessage#getTarget <em>Target</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Target Participant</em>'.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.NewMessage#getTargetParticipant()
+   * @return the meta object for the reference '<em>Target</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.NewMessage#getTarget()
    * @see #getNewMessage()
    * @generated
    */
-  EReference getNewMessage_TargetParticipant();
+  EReference getNewMessage_Target();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.ReturnMessage <em>Return Message</em>}'.
@@ -1432,26 +1448,26 @@ public interface SequencemodelPackage extends EPackage
   EClass getDeleteMessage();
 
   /**
-   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.DeleteMessage#getSourceParticipant <em>Source Participant</em>}'.
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.DeleteMessage#getSource <em>Source</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Source Participant</em>'.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.DeleteMessage#getSourceParticipant()
+   * @return the meta object for the reference '<em>Source</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.DeleteMessage#getSource()
    * @see #getDeleteMessage()
    * @generated
    */
-  EReference getDeleteMessage_SourceParticipant();
+  EReference getDeleteMessage_Source();
 
   /**
-   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.DeleteMessage#getTargetParticipant <em>Target Participant</em>}'.
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.DeleteMessage#getTarget <em>Target</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Target Participant</em>'.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.DeleteMessage#getTargetParticipant()
+   * @return the meta object for the reference '<em>Target</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.DeleteMessage#getTarget()
    * @see #getDeleteMessage()
    * @generated
    */
-  EReference getDeleteMessage_TargetParticipant();
+  EReference getDeleteMessage_Target();
 
   /**
    * Returns the meta object for class '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage <em>Self Message</em>}'.
@@ -1464,26 +1480,15 @@ public interface SequencemodelPackage extends EPackage
   EClass getSelfMessage();
 
   /**
-   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getSourceParticipant <em>Source Participant</em>}'.
+   * Returns the meta object for the reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getSource <em>Source</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Source Participant</em>'.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getSourceParticipant()
+   * @return the meta object for the reference '<em>Source</em>'.
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getSource()
    * @see #getSelfMessage()
    * @generated
    */
-  EReference getSelfMessage_SourceParticipant();
-
-  /**
-   * Returns the meta object for the attribute '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getName()
-   * @see #getSelfMessage()
-   * @generated
-   */
-  EAttribute getSelfMessage_Name();
+  EReference getSelfMessage_Source();
 
   /**
    * Returns the meta object for the containment reference '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getReturn <em>Return</em>}'.
@@ -1858,6 +1863,14 @@ public interface SequencemodelPackage extends EPackage
     EClass MESSAGE = eINSTANCE.getMessage();
 
     /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MESSAGE__NAME = eINSTANCE.getMessage_Name();
+
+    /**
      * The meta object literal for the '<em><b>Parameter</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1884,14 +1897,6 @@ public interface SequencemodelPackage extends EPackage
     EReference FOUND_MESSAGE__TARGET_PARTICIPANT = eINSTANCE.getFoundMessage_TargetParticipant();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FOUND_MESSAGE__NAME = eINSTANCE.getFoundMessage_Name();
-
-    /**
      * The meta object literal for the '<em><b>Return</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1910,28 +1915,20 @@ public interface SequencemodelPackage extends EPackage
     EClass CALL_MESSAGE = eINSTANCE.getCallMessage();
 
     /**
-     * The meta object literal for the '<em><b>Source Participant</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Source</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CALL_MESSAGE__SOURCE_PARTICIPANT = eINSTANCE.getCallMessage_SourceParticipant();
+    EReference CALL_MESSAGE__SOURCE = eINSTANCE.getCallMessage_Source();
 
     /**
-     * The meta object literal for the '<em><b>Target Participant</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Target</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CALL_MESSAGE__TARGET_PARTICIPANT = eINSTANCE.getCallMessage_TargetParticipant();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CALL_MESSAGE__NAME = eINSTANCE.getCallMessage_Name();
+    EReference CALL_MESSAGE__TARGET = eINSTANCE.getCallMessage_Target();
 
     /**
      * The meta object literal for the '<em><b>Return</b></em>' containment reference feature.
@@ -1952,20 +1949,20 @@ public interface SequencemodelPackage extends EPackage
     EClass NEW_MESSAGE = eINSTANCE.getNewMessage();
 
     /**
-     * The meta object literal for the '<em><b>Source Participant</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Source</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference NEW_MESSAGE__SOURCE_PARTICIPANT = eINSTANCE.getNewMessage_SourceParticipant();
+    EReference NEW_MESSAGE__SOURCE = eINSTANCE.getNewMessage_Source();
 
     /**
-     * The meta object literal for the '<em><b>Target Participant</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Target</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference NEW_MESSAGE__TARGET_PARTICIPANT = eINSTANCE.getNewMessage_TargetParticipant();
+    EReference NEW_MESSAGE__TARGET = eINSTANCE.getNewMessage_Target();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.ReturnMessageImpl <em>Return Message</em>}' class.
@@ -2004,20 +2001,20 @@ public interface SequencemodelPackage extends EPackage
     EClass DELETE_MESSAGE = eINSTANCE.getDeleteMessage();
 
     /**
-     * The meta object literal for the '<em><b>Source Participant</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Source</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DELETE_MESSAGE__SOURCE_PARTICIPANT = eINSTANCE.getDeleteMessage_SourceParticipant();
+    EReference DELETE_MESSAGE__SOURCE = eINSTANCE.getDeleteMessage_Source();
 
     /**
-     * The meta object literal for the '<em><b>Target Participant</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Target</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DELETE_MESSAGE__TARGET_PARTICIPANT = eINSTANCE.getDeleteMessage_TargetParticipant();
+    EReference DELETE_MESSAGE__TARGET = eINSTANCE.getDeleteMessage_Target();
 
     /**
      * The meta object literal for the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.SelfMessageImpl <em>Self Message</em>}' class.
@@ -2030,20 +2027,12 @@ public interface SequencemodelPackage extends EPackage
     EClass SELF_MESSAGE = eINSTANCE.getSelfMessage();
 
     /**
-     * The meta object literal for the '<em><b>Source Participant</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Source</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SELF_MESSAGE__SOURCE_PARTICIPANT = eINSTANCE.getSelfMessage_SourceParticipant();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SELF_MESSAGE__NAME = eINSTANCE.getSelfMessage_Name();
+    EReference SELF_MESSAGE__SOURCE = eINSTANCE.getSelfMessage_Source();
 
     /**
      * The meta object literal for the '<em><b>Return</b></em>' containment reference feature.

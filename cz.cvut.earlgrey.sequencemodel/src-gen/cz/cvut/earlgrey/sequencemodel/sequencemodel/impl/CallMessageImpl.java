@@ -26,9 +26,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.CallMessageImpl#getSourceParticipant <em>Source Participant</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.CallMessageImpl#getTargetParticipant <em>Target Participant</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.CallMessageImpl#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.CallMessageImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.CallMessageImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.CallMessageImpl#getReturn <em>Return</em>}</li>
  * </ul>
  * </p>
@@ -38,44 +37,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class CallMessageImpl extends MessageImpl implements CallMessage
 {
   /**
-   * The cached value of the '{@link #getSourceParticipant() <em>Source Participant</em>}' reference.
+   * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSourceParticipant()
+   * @see #getSource()
    * @generated
    * @ordered
    */
-  protected Participant sourceParticipant;
+  protected Participant source;
 
   /**
-   * The cached value of the '{@link #getTargetParticipant() <em>Target Participant</em>}' reference.
+   * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTargetParticipant()
+   * @see #getTarget()
    * @generated
    * @ordered
    */
-  protected Participant targetParticipant;
-
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected Participant target;
 
   /**
    * The cached value of the '{@link #getReturn() <em>Return</em>}' containment reference.
@@ -113,19 +92,19 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public Participant getSourceParticipant()
+  public Participant getSource()
   {
-    if (sourceParticipant != null && sourceParticipant.eIsProxy())
+    if (source != null && source.eIsProxy())
     {
-      InternalEObject oldSourceParticipant = (InternalEObject)sourceParticipant;
-      sourceParticipant = (Participant)eResolveProxy(oldSourceParticipant);
-      if (sourceParticipant != oldSourceParticipant)
+      InternalEObject oldSource = (InternalEObject)source;
+      source = (Participant)eResolveProxy(oldSource);
+      if (source != oldSource)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SequencemodelPackage.CALL_MESSAGE__SOURCE_PARTICIPANT, oldSourceParticipant, sourceParticipant));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SequencemodelPackage.CALL_MESSAGE__SOURCE, oldSource, source));
       }
     }
-    return sourceParticipant;
+    return source;
   }
 
   /**
@@ -133,9 +112,9 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public Participant basicGetSourceParticipant()
+  public Participant basicGetSource()
   {
-    return sourceParticipant;
+    return source;
   }
 
   /**
@@ -143,12 +122,12 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSourceParticipant(Participant newSourceParticipant)
+  public void setSource(Participant newSource)
   {
-    Participant oldSourceParticipant = sourceParticipant;
-    sourceParticipant = newSourceParticipant;
+    Participant oldSource = source;
+    source = newSource;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.CALL_MESSAGE__SOURCE_PARTICIPANT, oldSourceParticipant, sourceParticipant));
+      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.CALL_MESSAGE__SOURCE, oldSource, source));
   }
 
   /**
@@ -156,19 +135,19 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public Participant getTargetParticipant()
+  public Participant getTarget()
   {
-    if (targetParticipant != null && targetParticipant.eIsProxy())
+    if (target != null && target.eIsProxy())
     {
-      InternalEObject oldTargetParticipant = (InternalEObject)targetParticipant;
-      targetParticipant = (Participant)eResolveProxy(oldTargetParticipant);
-      if (targetParticipant != oldTargetParticipant)
+      InternalEObject oldTarget = (InternalEObject)target;
+      target = (Participant)eResolveProxy(oldTarget);
+      if (target != oldTarget)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SequencemodelPackage.CALL_MESSAGE__TARGET_PARTICIPANT, oldTargetParticipant, targetParticipant));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SequencemodelPackage.CALL_MESSAGE__TARGET, oldTarget, target));
       }
     }
-    return targetParticipant;
+    return target;
   }
 
   /**
@@ -176,9 +155,9 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public Participant basicGetTargetParticipant()
+  public Participant basicGetTarget()
   {
-    return targetParticipant;
+    return target;
   }
 
   /**
@@ -186,35 +165,12 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTargetParticipant(Participant newTargetParticipant)
+  public void setTarget(Participant newTarget)
   {
-    Participant oldTargetParticipant = targetParticipant;
-    targetParticipant = newTargetParticipant;
+    Participant oldTarget = target;
+    target = newTarget;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.CALL_MESSAGE__TARGET_PARTICIPANT, oldTargetParticipant, targetParticipant));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.CALL_MESSAGE__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.CALL_MESSAGE__TARGET, oldTarget, target));
   }
 
   /**
@@ -291,14 +247,12 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
   {
     switch (featureID)
     {
-      case SequencemodelPackage.CALL_MESSAGE__SOURCE_PARTICIPANT:
-        if (resolve) return getSourceParticipant();
-        return basicGetSourceParticipant();
-      case SequencemodelPackage.CALL_MESSAGE__TARGET_PARTICIPANT:
-        if (resolve) return getTargetParticipant();
-        return basicGetTargetParticipant();
-      case SequencemodelPackage.CALL_MESSAGE__NAME:
-        return getName();
+      case SequencemodelPackage.CALL_MESSAGE__SOURCE:
+        if (resolve) return getSource();
+        return basicGetSource();
+      case SequencemodelPackage.CALL_MESSAGE__TARGET:
+        if (resolve) return getTarget();
+        return basicGetTarget();
       case SequencemodelPackage.CALL_MESSAGE__RETURN:
         return getReturn();
     }
@@ -315,14 +269,11 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
   {
     switch (featureID)
     {
-      case SequencemodelPackage.CALL_MESSAGE__SOURCE_PARTICIPANT:
-        setSourceParticipant((Participant)newValue);
+      case SequencemodelPackage.CALL_MESSAGE__SOURCE:
+        setSource((Participant)newValue);
         return;
-      case SequencemodelPackage.CALL_MESSAGE__TARGET_PARTICIPANT:
-        setTargetParticipant((Participant)newValue);
-        return;
-      case SequencemodelPackage.CALL_MESSAGE__NAME:
-        setName((String)newValue);
+      case SequencemodelPackage.CALL_MESSAGE__TARGET:
+        setTarget((Participant)newValue);
         return;
       case SequencemodelPackage.CALL_MESSAGE__RETURN:
         setReturn((ReturnMessage)newValue);
@@ -341,14 +292,11 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
   {
     switch (featureID)
     {
-      case SequencemodelPackage.CALL_MESSAGE__SOURCE_PARTICIPANT:
-        setSourceParticipant((Participant)null);
+      case SequencemodelPackage.CALL_MESSAGE__SOURCE:
+        setSource((Participant)null);
         return;
-      case SequencemodelPackage.CALL_MESSAGE__TARGET_PARTICIPANT:
-        setTargetParticipant((Participant)null);
-        return;
-      case SequencemodelPackage.CALL_MESSAGE__NAME:
-        setName(NAME_EDEFAULT);
+      case SequencemodelPackage.CALL_MESSAGE__TARGET:
+        setTarget((Participant)null);
         return;
       case SequencemodelPackage.CALL_MESSAGE__RETURN:
         setReturn((ReturnMessage)null);
@@ -367,33 +315,14 @@ public class CallMessageImpl extends MessageImpl implements CallMessage
   {
     switch (featureID)
     {
-      case SequencemodelPackage.CALL_MESSAGE__SOURCE_PARTICIPANT:
-        return sourceParticipant != null;
-      case SequencemodelPackage.CALL_MESSAGE__TARGET_PARTICIPANT:
-        return targetParticipant != null;
-      case SequencemodelPackage.CALL_MESSAGE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case SequencemodelPackage.CALL_MESSAGE__SOURCE:
+        return source != null;
+      case SequencemodelPackage.CALL_MESSAGE__TARGET:
+        return target != null;
       case SequencemodelPackage.CALL_MESSAGE__RETURN:
         return return_ != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //CallMessageImpl

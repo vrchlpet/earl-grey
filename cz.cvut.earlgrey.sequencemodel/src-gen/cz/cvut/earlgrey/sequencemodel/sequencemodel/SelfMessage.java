@@ -16,8 +16,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getSourceParticipant <em>Source Participant</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getName <em>Name</em>}</li>
+ *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getSource <em>Source</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getReturn <em>Return</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getTransition <em>Transition</em>}</li>
  * </ul>
@@ -30,56 +29,30 @@ import org.eclipse.emf.common.util.EList;
 public interface SelfMessage extends Message
 {
   /**
-   * Returns the value of the '<em><b>Source Participant</b></em>' reference.
+   * Returns the value of the '<em><b>Source</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Source Participant</em>' reference isn't clear,
+   * If the meaning of the '<em>Source</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Source Participant</em>' reference.
-   * @see #setSourceParticipant(Participant)
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getSelfMessage_SourceParticipant()
+   * @return the value of the '<em>Source</em>' reference.
+   * @see #setSource(Participant)
+   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getSelfMessage_Source()
    * @model
    * @generated
    */
-  Participant getSourceParticipant();
+  Participant getSource();
 
   /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getSourceParticipant <em>Source Participant</em>}' reference.
+   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getSource <em>Source</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Source Participant</em>' reference.
-   * @see #getSourceParticipant()
+   * @param value the new value of the '<em>Source</em>' reference.
+   * @see #getSource()
    * @generated
    */
-  void setSourceParticipant(Participant value);
-
-  /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see cz.cvut.earlgrey.sequencemodel.sequencemodel.SequencemodelPackage#getSelfMessage_Name()
-   * @model
-   * @generated
-   */
-  String getName();
-
-  /**
-   * Sets the value of the '{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.SelfMessage#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
+  void setSource(Participant value);
 
   /**
    * Returns the value of the '<em><b>Return</b></em>' containment reference.

@@ -27,7 +27,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.FoundMessageImpl#getTargetParticipant <em>Target Participant</em>}</li>
- *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.FoundMessageImpl#getName <em>Name</em>}</li>
  *   <li>{@link cz.cvut.earlgrey.sequencemodel.sequencemodel.impl.FoundMessageImpl#getReturn <em>Return</em>}</li>
  * </ul>
  * </p>
@@ -45,26 +44,6 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
    * @ordered
    */
   protected Participant targetParticipant;
-
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getReturn() <em>Return</em>}' containment reference.
@@ -145,29 +124,6 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SequencemodelPackage.FOUND_MESSAGE__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public ReturnMessage getReturn()
   {
     return return_;
@@ -240,8 +196,6 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
       case SequencemodelPackage.FOUND_MESSAGE__TARGET_PARTICIPANT:
         if (resolve) return getTargetParticipant();
         return basicGetTargetParticipant();
-      case SequencemodelPackage.FOUND_MESSAGE__NAME:
-        return getName();
       case SequencemodelPackage.FOUND_MESSAGE__RETURN:
         return getReturn();
     }
@@ -260,9 +214,6 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
     {
       case SequencemodelPackage.FOUND_MESSAGE__TARGET_PARTICIPANT:
         setTargetParticipant((Participant)newValue);
-        return;
-      case SequencemodelPackage.FOUND_MESSAGE__NAME:
-        setName((String)newValue);
         return;
       case SequencemodelPackage.FOUND_MESSAGE__RETURN:
         setReturn((ReturnMessage)newValue);
@@ -284,9 +235,6 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
       case SequencemodelPackage.FOUND_MESSAGE__TARGET_PARTICIPANT:
         setTargetParticipant((Participant)null);
         return;
-      case SequencemodelPackage.FOUND_MESSAGE__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case SequencemodelPackage.FOUND_MESSAGE__RETURN:
         setReturn((ReturnMessage)null);
         return;
@@ -306,29 +254,10 @@ public class FoundMessageImpl extends MessageImpl implements FoundMessage
     {
       case SequencemodelPackage.FOUND_MESSAGE__TARGET_PARTICIPANT:
         return targetParticipant != null;
-      case SequencemodelPackage.FOUND_MESSAGE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case SequencemodelPackage.FOUND_MESSAGE__RETURN:
         return return_ != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //FoundMessageImpl
